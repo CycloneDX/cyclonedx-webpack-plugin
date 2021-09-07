@@ -21,7 +21,7 @@
 	"main": "index.js",
 	"devDependencies": {
 		"webpack": "4.46.0",
-		"webpack-cli": "3.3.12"
+		"webpack-cli": "4.8.0"
 	},
 	"dependencies": {
 		"@cyclonedx/bom": "^3.0.7",
