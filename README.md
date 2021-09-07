@@ -38,7 +38,7 @@ module.exports = {
   plugins: [
     new CycloneDxWebpackPlugin({
       context: '../',
-      bomLocation: '../'
+      outputLocation: './artifacts'
     })
   ]
 };
