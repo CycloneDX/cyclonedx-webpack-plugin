@@ -1,0 +1,31 @@
+{
+	"name": "@cyclonedx/webpack-plugin",
+	"version": "1.0.0-SNAPSHOT",
+	"description": "Creates CycloneDX Software Bill of Materials (SBOM) from webpack projects",
+	"homepage": "http://github.com/CycloneDX/cyclonedx-webpack-plugin",
+	"copyright": "Copyright OWASP Foundation",
+	"license": "Apache-2.0",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git"
+	},
+	"bugs": {
+		"url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues"
+	},
+	"keywords": [
+		"cyclonedx",
+		"webpack",
+		"sbom",
+		"bom"
+	],
+	"main": "index.js",
+	"devDependencies": {
+		"webpack": "4.46.0",
+		"webpack-cli": "3.3.12"
+	},
+	"dependencies": {
+		"@cyclonedx/bom": "^3.0.4",
+		"package-json": "6.5.0",
+		"read-pkg-up": "6.0.0"
+	}
+}
