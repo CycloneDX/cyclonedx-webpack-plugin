@@ -41,6 +41,8 @@ class CycloneDxWebpackPlugin {
 		moduleName,
 		moduleVersion,
 		outputLocation = './cyclonedx',
+		includeWellknown = true,
+		wellknownLocation = './.well-known/sbom',
 		componentType = 'application',
 		emitStats = false
 	} = {}) {
@@ -48,6 +50,8 @@ class CycloneDxWebpackPlugin {
 		this.moduleName = moduleName;
 		this.moduleVersion = moduleVersion;
 		this.outputLocation = outputLocation;
+		this.includeWellknown = includeWellknown;
+		this.wellknownLocation = wellknownLocation;
 		this.componentType = componentType;
 		this.emitStats = emitStats;
 	}
@@ -88,6 +92,13 @@ class CycloneDxWebpackPlugin {
 					source: () => output.toXML(),
 					size: () => output.length
 				};
+				if (this.includeWellknown) {
+					// eslint-disable-next-line no-param-reassign
+					compilation.assets[this.wellknownLocation] = {
+						source: () => output.toJSON(),
+						size: () => output.length
+					};
+				}
 
 				// emit webpack's stats if they were requested
 				if (this.emitStats) {

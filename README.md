@@ -46,6 +46,31 @@ module.exports = {
 };
 ```
 
+#### Support for IETF /.well-known/sbom
+The CycloneDX Webpack plugin supports placing the CycloneDX SBOM in a pre-defined location, specifically in
+`/.well-known/sbom`. This option is enabled by default. The behavior can be changed by overriding the values 
+of `includeWellknown` and `wellknownLocation`.
+
+> See [draft-lear-opsawg-sbom-access](https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-sbom-access) for more 
+> information on the specification, currently an IETF draft.
+
+In your [webpack config](https://webpack.js.org/configuration/) add the CycloneDX plugin:
+```js
+const { CycloneDxWebpackPlugin } = require('@cyclonedx/webpack-plugin');
+
+module.exports = {
+  ...
+
+  plugins: [
+    new CycloneDxWebpackPlugin({
+      context: '../',
+      outputLocation: './artifacts',
+      includeWellknown: true,
+      wellknownLocation: './.well-known/sbom'
+    })
+  ]
+};
+```
 
 License
 -------------------
