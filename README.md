@@ -66,7 +66,7 @@ module.exports = {
       context: '../',
       outputLocation: './artifacts',
       includeWellknown: true,
-      wellknownLocation: './.well-known/sbom'
+      wellknownLocation: './.well-known'
     })
   ]
 };

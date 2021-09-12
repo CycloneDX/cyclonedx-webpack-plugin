@@ -42,7 +42,7 @@ class CycloneDxWebpackPlugin {
 		moduleVersion,
 		outputLocation = './cyclonedx',
 		includeWellknown = true,
-		wellknownLocation = './.well-known/sbom',
+		wellknownLocation = './.well-known',
 		componentType = 'application',
 		emitStats = false
 	} = {}) {
@@ -81,6 +81,7 @@ class CycloneDxWebpackPlugin {
 
 				const jsonBom = path.join(this.outputLocation, './bom.json');
 				const xmlBom = path.join(this.outputLocation, './bom.xml');
+				const wellknownBom = path.join(this.wellknownLocation, './sbom');
 
 				// eslint-disable-next-line no-param-reassign
 				compilation.assets[jsonBom] = {
@@ -94,7 +95,7 @@ class CycloneDxWebpackPlugin {
 				};
 				if (this.includeWellknown) {
 					// eslint-disable-next-line no-param-reassign
-					compilation.assets[this.wellknownLocation] = {
+					compilation.assets[wellknownBom] = {
 						source: () => output.toJSON(),
 						size: () => output.length
 					};
