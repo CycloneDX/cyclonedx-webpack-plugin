@@ -55,11 +55,11 @@ const resolveComponents = async function(modules = [], defaultModule = {}) {
             }
 
             const {issuer: {resource: requester}, resource: dependency} = moduleData;
-            const ignoredMatcher = /^ignored|^external/g;
+            const ignoredMatcher = /^ignored|^external|^data:/g;
             // If there's no requester or the dependency or requester is ignored or marked as external by webpack
             // or issue #45 dependency is an data: url containing an image or ?
             // then this dependency is skipped.
-            if (!requester || !dependency || ignoredMatcher.test(requester) || ignoredMatcher.test(requester) || dependency.startsWith("data:"))
+            if (!requester || !dependency || ignoredMatcher.test(requester) || ignoredMatcher.test(dependency))
                 continue;
 
             // Get the requester package.json and dependency package.json
