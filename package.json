@@ -1,6 +1,6 @@
 {
 	"name": "@cyclonedx/webpack-plugin",
-	"version": "1.0.2",
+	"version": "1.0.1",
 	"description": "Creates CycloneDX Software Bill of Materials (SBOM) from webpack projects",
 	"homepage": "http://github.com/CycloneDX/cyclonedx-webpack-plugin",
 	"copyright": "Copyright OWASP Foundation",
