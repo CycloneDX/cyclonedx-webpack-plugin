@@ -23,6 +23,14 @@ Run to have a proper test suite pass:
 npm test
 ```
 
+## Coding Style guide & standard
+
+Apply the coding style via:
+
+```shell
+npm run cs-fix
+```
+
 ## Sign your commits
 
 Please sign your commits,

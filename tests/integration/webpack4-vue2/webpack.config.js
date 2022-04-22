@@ -12,7 +12,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './src/index.html'
     }),
     new HtmlInlineScriptPlugin(),
     new CycloneDxWebpackPlugin({
@@ -25,7 +25,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      vue$: 'vue/dist/vue.esm.js'
     }
   }
 }

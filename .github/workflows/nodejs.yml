@@ -56,3 +56,22 @@ jobs:
         run: npm run setup-tests
       - name: test
         run: npm run test:jest
+  standards:
+    name: Standards
+    timeout-minutes: 30
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: Checkout
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+          cache: "npm"
+          cache-dependency-path: "**/package-lock.json"
+      - name: install project
+        run: npm ci
+      - name: run tests
+        run: npm run test:standard

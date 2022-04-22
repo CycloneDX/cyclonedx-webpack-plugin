@@ -16,26 +16,28 @@
  * SPDX-License-Identifier: Apache-2.0
  * Copyright (c) OWASP Foundation. All Rights Reserved.
  */
-const {resolveComponents} = require('../webpack-plugin/bomGenerator');
+
+const { resolveComponents } = require('../webpack-plugin/bomGenerator')
 
 /**
  * Main entry to process webpack module information and generate the resulting SBOM.
+ *
  * @param {{
  *            modules: any[],
  *            context: string,
  *        }} param0
+ *
  * @returns {any} final Bom object
  */
 const generateBom = async ({
-	modules,
-	context,
-	moduleName,
-	moduleVersion,
-	componentType,
+  modules,
+  context,
+  moduleName,
+  moduleVersion,
+  componentType
 }) => {
-	const defaultModule = {moduleName, moduleVersion, componentType};
-	return resolveComponents(modules, defaultModule);
-};
+  const defaultModule = { moduleName, moduleVersion, componentType }
+  return resolveComponents(modules, defaultModule)
+}
 
-
-module.exports = {generateBom};
+module.exports = { generateBom }

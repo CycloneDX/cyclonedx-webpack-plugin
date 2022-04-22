@@ -1,14 +1,14 @@
-import Vue from "vue";
+import Vue from 'vue'
 
 const app = new Vue({
   data: {},
-  methods: {},
+  methods: {}
 })
 
 document.addEventListener(
   'DOMContentLoaded',
   function () {
-    app.$mount('#app');
+    app.$mount('#app')
   },
   false
-);
+)
