@@ -1,3 +1,7 @@
+/reports/
+/CI_reports/
+/release_assets/
+
 ## taken from https://github.com/github/gitignore/blob/main/Node.gitignore
 
 # Logs
