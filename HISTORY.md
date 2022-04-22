@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 1.0.2 - 2922-04-22
+
 * Fixed
   * `data:`-urls are no longer exported. ([#45] via [#46])
 
