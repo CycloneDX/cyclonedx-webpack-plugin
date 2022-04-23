@@ -1,0 +1,554 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`integration webpack4 with vue2 generated json file: dist/.bom/bom.json 1`] = `
+"{
+  \\"bomFormat\\": \\"CycloneDX\\",
+  \\"specVersion\\": \\"1.3\\",
+  \\"version\\": 1,
+  \\"metadata\\": {
+    \\"tools\\": [
+      {
+        \\"vendor\\": \\"CycloneDX\\",
+        \\"name\\": \\"webpack-plugin\\",
+        \\"version\\": \\"TESTING\\"
+      }
+    ]
+  },
+  \\"components\\": [
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/process@0.11.10\\",
+      \\"author\\": \\"Roman Shtylman\\",
+      \\"name\\": \\"process\\",
+      \\"version\\": \\"0.11.10\\",
+      \\"description\\": \\"process information for node.js and browsers\\",
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/process@0.11.10\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://github.com/shtylman/node-process#readme\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/shtylman/node-process/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git://github.com/shtylman/node-process.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/setimmediate@1.0.5\\",
+      \\"author\\": \\"YuzuJS\\",
+      \\"name\\": \\"setimmediate\\",
+      \\"version\\": \\"1.0.5\\",
+      \\"description\\": \\"A shim for the setImmediate efficient script yielding API\\",
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/setimmediate@1.0.5\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://github.com/YuzuJS/setImmediate#readme\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/YuzuJS/setImmediate/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/YuzuJS/setImmediate.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/timers-browserify@2.0.12\\",
+      \\"author\\": \\"J. Ryan Stinnett\\",
+      \\"name\\": \\"timers-browserify\\",
+      \\"version\\": \\"2.0.12\\",
+      \\"description\\": \\"timers module for browserify\\",
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/timers-browserify@2.0.12\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://github.com/jryans/timers-browserify\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/jryans/timers-browserify/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git://github.com/jryans/timers-browserify.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/vue@2.6.14\\",
+      \\"author\\": \\"Evan You\\",
+      \\"name\\": \\"vue\\",
+      \\"version\\": \\"2.6.14\\",
+      \\"description\\": \\"Reactive, component-oriented view layer for modern web interfaces.\\",
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/vue@2.6.14\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://github.com/vuejs/vue#readme\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/vuejs/vue/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/vuejs/vue.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/webpack@4.46.0\\",
+      \\"author\\": \\"Tobias Koppers @sokra\\",
+      \\"name\\": \\"webpack\\",
+      \\"version\\": \\"4.46.0\\",
+      \\"description\\": \\"Packs CommonJs/AMD modules for the browser. Allows to split your codebase into multiple bundles, which can be loaded on demand. Support loaders to preprocess files, i.e. json, jsx, es7, css, less, ... and your custom stuff.\\",
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/webpack@4.46.0\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://github.com/webpack/webpack\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/webpack/webpack/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/webpack/webpack.git\\"
+        }
+      ]
+    }
+  ],
+  \\"dependencies\\": [
+    {
+      \\"ref\\": \\"pkg:npm/vue@2.6.14\\",
+      \\"dependsOn\\": [
+        \\"pkg:npm/webpack@4.46.0\\",
+        \\"pkg:npm/timers-browserify@2.0.12\\"
+      ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/webpack@4.46.0\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack4-vue2\\",
+      \\"dependsOn\\": [
+        \\"pkg:npm/vue@2.6.14\\"
+      ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/timers-browserify@2.0.12\\",
+      \\"dependsOn\\": [
+        \\"pkg:npm/setimmediate@1.0.5\\"
+      ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/setimmediate@1.0.5\\",
+      \\"dependsOn\\": [
+        \\"pkg:npm/process@0.11.10\\"
+      ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/process@0.11.10\\"
+    }
+  ]
+}"
+`;
+
+exports[`integration webpack4 with vue2 generated json file: dist/.well-known/sbom 1`] = `
+"{
+  \\"bomFormat\\": \\"CycloneDX\\",
+  \\"specVersion\\": \\"1.3\\",
+  \\"version\\": 1,
+  \\"metadata\\": {
+    \\"tools\\": [
+      {
+        \\"vendor\\": \\"CycloneDX\\",
+        \\"name\\": \\"webpack-plugin\\",
+        \\"version\\": \\"TESTING\\"
+      }
+    ]
+  },
+  \\"components\\": [
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/process@0.11.10\\",
+      \\"author\\": \\"Roman Shtylman\\",
+      \\"name\\": \\"process\\",
+      \\"version\\": \\"0.11.10\\",
+      \\"description\\": \\"process information for node.js and browsers\\",
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/process@0.11.10\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://github.com/shtylman/node-process#readme\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/shtylman/node-process/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git://github.com/shtylman/node-process.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/setimmediate@1.0.5\\",
+      \\"author\\": \\"YuzuJS\\",
+      \\"name\\": \\"setimmediate\\",
+      \\"version\\": \\"1.0.5\\",
+      \\"description\\": \\"A shim for the setImmediate efficient script yielding API\\",
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/setimmediate@1.0.5\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://github.com/YuzuJS/setImmediate#readme\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/YuzuJS/setImmediate/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/YuzuJS/setImmediate.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/timers-browserify@2.0.12\\",
+      \\"author\\": \\"J. Ryan Stinnett\\",
+      \\"name\\": \\"timers-browserify\\",
+      \\"version\\": \\"2.0.12\\",
+      \\"description\\": \\"timers module for browserify\\",
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/timers-browserify@2.0.12\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://github.com/jryans/timers-browserify\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/jryans/timers-browserify/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git://github.com/jryans/timers-browserify.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/vue@2.6.14\\",
+      \\"author\\": \\"Evan You\\",
+      \\"name\\": \\"vue\\",
+      \\"version\\": \\"2.6.14\\",
+      \\"description\\": \\"Reactive, component-oriented view layer for modern web interfaces.\\",
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/vue@2.6.14\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://github.com/vuejs/vue#readme\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/vuejs/vue/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/vuejs/vue.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/webpack@4.46.0\\",
+      \\"author\\": \\"Tobias Koppers @sokra\\",
+      \\"name\\": \\"webpack\\",
+      \\"version\\": \\"4.46.0\\",
+      \\"description\\": \\"Packs CommonJs/AMD modules for the browser. Allows to split your codebase into multiple bundles, which can be loaded on demand. Support loaders to preprocess files, i.e. json, jsx, es7, css, less, ... and your custom stuff.\\",
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/webpack@4.46.0\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://github.com/webpack/webpack\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/webpack/webpack/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/webpack/webpack.git\\"
+        }
+      ]
+    }
+  ],
+  \\"dependencies\\": [
+    {
+      \\"ref\\": \\"pkg:npm/vue@2.6.14\\",
+      \\"dependsOn\\": [
+        \\"pkg:npm/webpack@4.46.0\\",
+        \\"pkg:npm/timers-browserify@2.0.12\\"
+      ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/webpack@4.46.0\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack4-vue2\\",
+      \\"dependsOn\\": [
+        \\"pkg:npm/vue@2.6.14\\"
+      ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/timers-browserify@2.0.12\\",
+      \\"dependsOn\\": [
+        \\"pkg:npm/setimmediate@1.0.5\\"
+      ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/setimmediate@1.0.5\\",
+      \\"dependsOn\\": [
+        \\"pkg:npm/process@0.11.10\\"
+      ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/process@0.11.10\\"
+    }
+  ]
+}"
+`;
+
+exports[`integration webpack4 with vue2 generated xml file: dist/.bom/bom.xml 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"utf-8\\"?>
+<bom xmlns=\\"http://cyclonedx.org/schema/bom/1.3\\" version=\\"1\\">
+  <metadata>
+    <tools>
+      <tool>
+        <vendor>CycloneDX</vendor>
+        <name>webpack-plugin</name>
+        <version>TESTING</version>
+      </tool>
+    </tools>
+  </metadata>
+  <components>
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/process@0.11.10\\">
+      <author>Roman Shtylman</author>
+      <name>process</name>
+      <version>0.11.10</version>
+      <description><![CDATA[process information for node.js and browsers]]></description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/process@0.11.10</purl>
+      <externalReferences>
+        <reference type=\\"website\\">
+          <url>https://github.com/shtylman/node-process#readme</url>
+        </reference>
+        <reference type=\\"issue-tracker\\">
+          <url>https://github.com/shtylman/node-process/issues</url>
+        </reference>
+        <reference type=\\"vcs\\">
+          <url>git://github.com/shtylman/node-process.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/setimmediate@1.0.5\\">
+      <author>YuzuJS</author>
+      <name>setimmediate</name>
+      <version>1.0.5</version>
+      <description><![CDATA[A shim for the setImmediate efficient script yielding API]]></description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/setimmediate@1.0.5</purl>
+      <externalReferences>
+        <reference type=\\"website\\">
+          <url>https://github.com/YuzuJS/setImmediate#readme</url>
+        </reference>
+        <reference type=\\"issue-tracker\\">
+          <url>https://github.com/YuzuJS/setImmediate/issues</url>
+        </reference>
+        <reference type=\\"vcs\\">
+          <url>git+https://github.com/YuzuJS/setImmediate.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/timers-browserify@2.0.12\\">
+      <author>J. Ryan Stinnett</author>
+      <name>timers-browserify</name>
+      <version>2.0.12</version>
+      <description><![CDATA[timers module for browserify]]></description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/timers-browserify@2.0.12</purl>
+      <externalReferences>
+        <reference type=\\"website\\">
+          <url>https://github.com/jryans/timers-browserify</url>
+        </reference>
+        <reference type=\\"issue-tracker\\">
+          <url>https://github.com/jryans/timers-browserify/issues</url>
+        </reference>
+        <reference type=\\"vcs\\">
+          <url>git://github.com/jryans/timers-browserify.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/vue@2.6.14\\">
+      <author>Evan You</author>
+      <name>vue</name>
+      <version>2.6.14</version>
+      <description><![CDATA[Reactive, component-oriented view layer for modern web interfaces.]]></description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/vue@2.6.14</purl>
+      <externalReferences>
+        <reference type=\\"website\\">
+          <url>https://github.com/vuejs/vue#readme</url>
+        </reference>
+        <reference type=\\"issue-tracker\\">
+          <url>https://github.com/vuejs/vue/issues</url>
+        </reference>
+        <reference type=\\"vcs\\">
+          <url>git+https://github.com/vuejs/vue.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/webpack@4.46.0\\">
+      <author>Tobias Koppers @sokra</author>
+      <name>webpack</name>
+      <version>4.46.0</version>
+      <description><![CDATA[Packs CommonJs/AMD modules for the browser. Allows to split your codebase into multiple bundles, which can be loaded on demand. Support loaders to preprocess files, i.e. json, jsx, es7, css, less, ... and your custom stuff.]]></description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/webpack@4.46.0</purl>
+      <externalReferences>
+        <reference type=\\"website\\">
+          <url>https://github.com/webpack/webpack</url>
+        </reference>
+        <reference type=\\"issue-tracker\\">
+          <url>https://github.com/webpack/webpack/issues</url>
+        </reference>
+        <reference type=\\"vcs\\">
+          <url>git+https://github.com/webpack/webpack.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+  </components>
+  <dependencies>
+    <dependency ref=\\"pkg:npm/vue@2.6.14\\">
+      <dependency ref=\\"pkg:npm/webpack@4.46.0\\"/>
+      <dependency ref=\\"pkg:npm/timers-browserify@2.0.12\\"/>
+    </dependency>
+    <dependency ref=\\"pkg:npm/webpack@4.46.0\\"/>
+    <dependency ref=\\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack4-vue2\\">
+      <dependency ref=\\"pkg:npm/vue@2.6.14\\"/>
+    </dependency>
+    <dependency ref=\\"pkg:npm/timers-browserify@2.0.12\\">
+      <dependency ref=\\"pkg:npm/setimmediate@1.0.5\\"/>
+    </dependency>
+    <dependency ref=\\"pkg:npm/setimmediate@1.0.5\\">
+      <dependency ref=\\"pkg:npm/process@0.11.10\\"/>
+    </dependency>
+    <dependency ref=\\"pkg:npm/process@0.11.10\\"/>
+  </dependencies>
+</bom>"
+`;

@@ -2,6 +2,8 @@
 /CI_reports/
 /release_assets/
 
+*.cache
+
 ## taken from https://github.com/github/gitignore/blob/main/Node.gitignore
 
 # Logs
