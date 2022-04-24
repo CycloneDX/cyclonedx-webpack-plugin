@@ -16,8 +16,9 @@
  * SPDX-License-Identifier: Apache-2.0
  * Copyright (c) OWASP Foundation. All Rights Reserved.
  */
-const {generateBom} = require('../bom');
-const path = require('path');
+
+const { generateBom } = require('../bom')
+const path = require('path')
 
 /**
  * Webpack plugin for generating CycloneDX Software Bill of Materials (SBOM).
@@ -26,103 +27,102 @@ const path = require('path');
  * SBOM to be a subset of the dependencies defined in `package.json`.
  */
 class CycloneDxWebpackPlugin {
-	/**
-	 * CycloneDX Webpack Plugin
-	 * @param {{ context: string,
-	 *           outputLocation: string,
-	 *           emitStats: boolean,
-	 * 	         moduleName: string,
-	 *           moduleVersion: string
-	 *        }} param0 options for plugin execution
-	 */
-	constructor({
-		// Default options
-		context,
-		moduleName,
-		moduleVersion,
-		outputLocation = './cyclonedx',
-		includeWellknown = true,
-		wellknownLocation = './.well-known',
-		componentType = 'application',
-		emitStats = false
-	} = {}) {
-		this.context = context;
-		this.moduleName = moduleName;
-		this.moduleVersion = moduleVersion;
-		this.outputLocation = outputLocation;
-		this.includeWellknown = includeWellknown;
-		this.wellknownLocation = wellknownLocation;
-		this.componentType = componentType;
-		this.emitStats = emitStats;
-	}
+  /**
+   * CycloneDX Webpack Plugin
+   *
+   * @param {{ context: string,
+   *           outputLocation: string,
+   *           emitStats: boolean,
+   *            moduleName: string,
+   *           moduleVersion: string
+   *        }} param0 options for plugin execution
+   */
+  constructor ({
+    // Default options
+    context,
+    moduleName,
+    moduleVersion,
+    outputLocation = './cyclonedx',
+    includeWellknown = true,
+    wellknownLocation = './.well-known',
+    componentType = 'application',
+    emitStats = false
+  } = {}) {
+    this.context = context
+    this.moduleName = moduleName
+    this.moduleVersion = moduleVersion
+    this.outputLocation = outputLocation
+    this.includeWellknown = includeWellknown
+    this.wellknownLocation = wellknownLocation
+    this.componentType = componentType
+    this.emitStats = emitStats
+  }
 
-	// Apply the plugin to a promise hook in webpack (only available in webpack 4+)
-	// Uses the emit hook because the plugin needs to generate a file after it's complete
-	apply(compiler) {
-		if (compiler.hooks)
-			compiler.hooks.emit.tapPromise('cyclonedx-webpack-plugin', this.emitBom.bind(this));
-		else
-			throw new Error(`Webpack 4+ required to use ${this.constructor.name}`);
-	}
+  // Apply the plugin to a promise hook in webpack (only available in webpack 4+)
+  // Uses the emit hook because the plugin needs to generate a file after it's complete
+  apply (compiler) {
+    if (compiler.hooks) { compiler.hooks.emit.tapPromise('cyclonedx-webpack-plugin', this.emitBom.bind(this)) } else { throw new Error(`Webpack 4+ required to use ${this.constructor.name}`) }
+  }
 
-	// Setup SBOM generation and emit the file
-	emitBom(compilation) {
-		return new Promise(async resolve => {
-			try {
-				const output = await generateBom({
-					// Needed for inspecting the webpack code linkages
-					modules: compilation.modules,
-					// Context from webpack config or defaults to process.cwd()
-					context: this.context || compilation.options.context,
-					moduleName: this.moduleName,
-					moduleVersion: this.moduleVersion,
-					componentType: this.componentType
-				});
+  // Setup SBOM generation and emit the file
+  emitBom (compilation) {
+    /* eslint-disable-next-line no-async-promise-executor */
+    return new Promise(async resolve => {
+      try {
+        const output = await generateBom({
+          // Needed for inspecting the webpack code linkages
+          modules: compilation.modules,
+          // Context from webpack config or defaults to process.cwd()
+          context: this.context || compilation.options.context,
+          moduleName: this.moduleName,
+          moduleVersion: this.moduleVersion,
+          componentType: this.componentType
+        })
 
-				const jsonBom = path.join(this.outputLocation, './bom.json');
-				const xmlBom = path.join(this.outputLocation, './bom.xml');
-				const wellknownBom = path.join(this.wellknownLocation, './sbom');
+        const jsonBom = path.join(this.outputLocation, './bom.json')
+        const xmlBom = path.join(this.outputLocation, './bom.xml')
+        const wellknownBom = path.join(this.wellknownLocation, './sbom')
 
-				// eslint-disable-next-line no-param-reassign
-				compilation.assets[jsonBom] = {
-					source: () => output.toJSON(),
-					size: () => output.length
-				};
-				// eslint-disable-next-line no-param-reassign
-				compilation.assets[xmlBom] = {
-					source: () => output.toXML(),
-					size: () => output.length
-				};
-				if (this.includeWellknown) {
-					// eslint-disable-next-line no-param-reassign
-					compilation.assets[wellknownBom] = {
-						source: () => output.toJSON(),
-						size: () => output.length
-					};
-				}
+        /* eslint-disable-next-line no-param-reassign */
+        compilation.assets[jsonBom] = {
+          source: () => output.toJSON(),
+          size: () => output.length
+        }
+        /* eslint-disable-next-line no-param-reassign */
+        compilation.assets[xmlBom] = {
+          source: () => output.toXML(),
+          size: () => output.length
+        }
+        if (this.includeWellknown) {
+          /* eslint-disable-next-line no-param-reassign */
+          compilation.assets[wellknownBom] = {
+            source: () => output.toJSON(),
+            size: () => output.length
+          }
+        }
 
-				// emit webpack's stats if they were requested
-				if (this.emitStats) {
-					const jsonDevModules = JSON.stringify(compilation.getStats().toJson({
-						chunkModules: true
-					}), null, 2);
-					const statsFilePath = path.join(this.outputLocation, './stats.json');
-					// this is how the webpack documentation says to emit files.
-					// eslint-disable-next-line no-param-reassign
-					compilation.assets[statsFilePath] = {
-						source: () => jsonDevModules,
-						size: () => jsonDevModules.length
-					};
-				}
-			} catch (err) {
-				// Catch all errors and log it. This plugin shouldn't block the build process.
-				// eslint-disable-next-line no-console
-				console.error(err);
-			}
-			// Tell webpack the plugin is done.
-			resolve();
-		});
-	}
+        // emit webpack's stats if they were requested
+        if (this.emitStats) {
+          const jsonDevModules = JSON.stringify(compilation.getStats().toJson({
+            chunkModules: true
+          }), null, 2)
+          const statsFilePath = path.join(this.outputLocation, './stats.json')
+          // this is how the webpack documentation says to emit files.
+          /* eslint-disable-next-line no-param-reassign */
+          compilation.assets[statsFilePath] = {
+            source: () => jsonDevModules,
+            size: () => jsonDevModules.length
+          }
+        }
+      } catch (err) {
+        // Catch all errors and log it. This plugin shouldn't block the build process.
+        /* eslint-disable-next-line no-console */
+        console.error(err)
+      }
+      // Tell webpack the plugin is done.
+      resolve()
+    })
+  }
 }
 
-module.exports = {CycloneDxWebpackPlugin};
+module.exports = { CycloneDxWebpackPlugin }

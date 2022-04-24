@@ -16,5 +16,6 @@
  * SPDX-License-Identifier: Apache-2.0
  * Copyright (c) OWASP Foundation. All Rights Reserved.
  */
-const {CycloneDxWebpackPlugin} = require('./src/webpack-plugin');
-module.exports = {CycloneDxWebpackPlugin};
+
+const { CycloneDxWebpackPlugin } = require('./src/webpack-plugin')
+module.exports = { CycloneDxWebpackPlugin }

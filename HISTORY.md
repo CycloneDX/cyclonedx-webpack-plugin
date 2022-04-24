@@ -6,12 +6,15 @@ All notable changes to this project will be documented in this file.
 
 * BREAKING changes
   * Requires node `>= 12.0.0` now, was `8.0.0`. (via [#51])
+  * Requires `webpack` version `>=4` as a `peerDependency`, like it was documented in the README. (via [#49])
 * Changed
   * Requires `@cyclonedx/bom` version`^3.8.0` now, was `^3.1.1`. (via [#51])
 * Misc
   * Added reproducible test environments for unit an integration tests. (via [#51]) 
+  * Applied coding standards. (via [#49])
 
 [#51]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/51
+[#49]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/49
 
 ## 1.0.2 - 2922-04-22
 

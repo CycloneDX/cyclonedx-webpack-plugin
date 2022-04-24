@@ -47,7 +47,6 @@ describe('integration', () => {
       }
     ]
   )('$purpose', ({ dir, results }) => {
-
     const built = spawnSync(
       'npm', ['run', 'build'], {
         cwd: path.resolve(__dirname, dir),
@@ -75,7 +74,6 @@ describe('integration', () => {
       const resultReproducible = makeReproducible(format, resultBuffer.toString())
       expect(resultReproducible).toMatchSnapshot()
     })
-
   })
 })
 
