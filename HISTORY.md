@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 2.0.0 - 2022-04-24
+
 * BREAKING changes
   * Requires node `>= 12.0.0` now, was `8.0.0`. (via [#51])
   * Requires `webpack` version `>=4` as a `peerDependency`, like it was documented in the README. (via [#49])
@@ -16,7 +18,7 @@ All notable changes to this project will be documented in this file.
 [#51]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/51
 [#49]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/49
 
-## 1.0.2 - 2922-04-22
+## 1.0.2 - 2022-04-22
 
 * Fixed
   * `data:`-urls are no longer exported. ([#45] via [#46])
@@ -24,7 +26,7 @@ All notable changes to this project will be documented in this file.
 [#45]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/45
 [#46]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/46
 
-## 1.0.1 - 2921-12-07
+## 1.0.1 - 2021-12-07
 
 * Fixed
   * Fixes related to `bom-ref` and internal flows.
