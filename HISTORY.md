@@ -4,9 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* BREAKING changes
+  * Requires node `>= 12.0.0` now, was `8.0.0`. (via [#51])
 * Changed
-  * Requires node `>= 12.0.0` now, was `8.0.0`. (via [#287])
-  * Requires `@cyclonedx/bom` `^3.8.0` now, was `^3.1.1`. (via [#287])
+  * Requires `@cyclonedx/bom` version`^3.8.0` now, was `^3.1.1`. (via [#51])
 * Misc
   * Added reproducible test environments for unit an integration tests. (via [#51]) 
 
