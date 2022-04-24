@@ -19,14 +19,29 @@
 		"bom"
 	],
 	"main": "index.js",
+	"engines": {
+		"node": ">=12.0.0"
+	},
 	"devDependencies": {
+		"jest": "27.5.1",
+		"jest-junit": "13.2.0",
 		"webpack": "4.46.0",
 		"webpack-cli": "3.3.12"
 	},
 	"dependencies": {
-		"@cyclonedx/bom": "^3.1.1",
+		"@cyclonedx/bom": "^3.8.0",
 		"package-json": "6.5.0",
 		"parse-packagejson-name": "^1.0.1",
 		"read-pkg-up": "6.0.0"
+	},
+	"scripts": {
+		"setup-tests": "node tests/integration/setup.js",
+		"test": "npm run test:jest",
+		"test:jest": "jest"
+	},
+	"jest-junit": {
+		"suiteName": "jest tests",
+		"outputDirectory": "reports/jest",
+		"outputName": "tests.junit.xml"
 	}
 }

@@ -14,8 +14,8 @@ env:
   NODE_ACTIVE_LTS: "16"
 
 jobs:
-  unit-test:
-    name: UnitTest (node${{ matrix.node-version }}, ${{ matrix.os }})
+  test-jest:
+    name: test:Jest (node${{ matrix.node-version }}, ${{ matrix.os }})
     timeout-minutes: 30
     runs-on: ${{ matrix.os }}
     strategy:
@@ -29,8 +29,6 @@ jobs:
           - "16"      # active LTS
           - "14"
           - "12"
-          - "10"
-          - "8"       # lowest supported
     env:
       REPORTS_ARTIFACT: tests-reports
     steps:
@@ -44,11 +42,17 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
           cache-dependency-path: "**/package-lock.json"
-      - name: display node version
-        run: node --version
+      - name: update npm
+        run: npm i -g npm
+      - name: display version
+        run: |-
+          node --version
+          npm --version
       - name: install project
         run: npm ci
       - name: build
         run: npm run build --if-present
-      - name: run tests
-        run: npm test --if-present
+      - name: set up tests
+        run: npm run setup-tests
+      - name: test
+        run: npm run test:jest
