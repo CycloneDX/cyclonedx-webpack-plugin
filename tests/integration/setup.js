@@ -19,10 +19,48 @@
 
 const { spawnSync } = require('child_process')
 const path = require('path')
+const fs = require('fs')
 
 const REQUIRES_NPM_INSTALL = [
-  'webpack4-vue2'
+  'webpack4-vue2',
+  'webpack5-vue2',
+  'webpack5-angular13'
 ]
+
+const ROOT_DIR = path.resolve(__dirname, '../..')
+
+console.log('>>> build...')
+const built = spawnSync(
+  'npm', ['run', '--if-present', 'build'], {
+    cwd: ROOT_DIR,
+    stdio: 'inherit',
+    shell: true
+  }
+)
+if (built.status !== 0) {
+  console.error(built)
+  throw new Error('build failed')
+}
+
+console.log('>>> pack...')
+const SUT_DIR = path.resolve(__dirname, '_SUT/')
+const packed = spawnSync(
+  'npm', ['pack', '--json', '--pack-destination', SUT_DIR], {
+    cwd: ROOT_DIR,
+    stdio: ['inherit', 'pipe', 'inherit'],
+    shell: true
+  }
+)
+if (packed.status !== 0) {
+  console.error(built)
+  throw new Error('pack failed')
+}
+
+console.log('>>> move packed...')
+fs.renameSync(
+  path.join(SUT_DIR, `cyclonedx-webpack-plugin-${JSON.parse(packed.stdout)[0].version}.tgz`),
+  path.join(SUT_DIR, 'cyclonedx-webpack-plugin.indev.tgz')
+)
 
 console.warn(`
 WILL SETUP INTEGRATION TEST BEDS 
