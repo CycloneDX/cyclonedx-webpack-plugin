@@ -141,15 +141,34 @@ dist
 .pnp.*
 
 
-### additions and customs
+#### customs and additions below
 
-## all dot files
-/.*
+# ignore dot-files/-folders
+.*
 
-## tests
+# project internals can be ignored
+/CODEOWNERS
+/CONTRIBUTING.*
+
+# these files are part of the license
+!/LICENSE
+!/NOTICE
+
+# never ignore the build results - these are intended to be shipped
+!/dist/
+!/dist.*/
+
 /test/
 /tests/
-/jest*
+/examples/
 
-## project configs
-CODEOWNERS
+## target of JSDoc
+/out/
+/docs/jsdoc/
+
+## target or reportings, tests, etc
+/reports/
+/CI_reports/
+
+## caches
+/.*.cache
