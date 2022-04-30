@@ -27,7 +27,7 @@
 		"jest-junit": "13.2.0",
 		"standard": "17.0.0",
 		"webpack": "4.46.0",
-		"@types/webpack": "^4.41.32"
+		"@types/webpack": "^5.28.0"
 	},
 	"dependencies": {
 		"@cyclonedx/bom": "^3.8.0",
