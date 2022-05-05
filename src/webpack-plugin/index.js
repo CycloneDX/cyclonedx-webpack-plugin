@@ -17,8 +17,27 @@
  * Copyright (c) OWASP Foundation. All Rights Reserved.
  */
 
-const { generateBom } = require('../bom')
 const path = require('path')
+const { CompatSource } = require('webpack').sources || {} /* available in webpack>=5 */
+
+const { generateBom } = require('../bom')
+
+/** @typedef {import('webpack').Compiler} Compiler */
+
+/** @typedef {import('webpack').Compilation} Compilation */
+
+/**
+ * @param {Compilation} compilation
+ * @param {string} filePath
+ * @param {function:string} sourceCallBack
+ */
+const webpackAddAsset = CompatSource
+  ? /* webpack >= 5.0.0 */ function (compilation, filePath, sourceCallBack) {
+    compilation.emitAsset(filePath, CompatSource.from({ source: sourceCallBack }))
+  }
+  : /* webpack < 5 */ function (compilation, filePath, sourceCallBack) {
+    compilation.assets[filePath] = { source: sourceCallBack, size: () => undefined }
+  }
 
 /**
  * Webpack plugin for generating CycloneDX Software Bill of Materials (SBOM).
@@ -58,70 +77,78 @@ class CycloneDxWebpackPlugin {
     this.emitStats = emitStats
   }
 
-  // Apply the plugin to a promise hook in webpack (only available in webpack 4+)
-  // Uses the emit hook because the plugin needs to generate a file after it's complete
+  /**
+   * @param {Compiler} compiler
+   */
   apply (compiler) {
-    if (compiler.hooks) { compiler.hooks.emit.tapPromise('cyclonedx-webpack-plugin', this.emitBom.bind(this)) } else { throw new Error(`Webpack 4+ required to use ${this.constructor.name}`) }
+    if (typeof compiler.hooks !== 'object') {
+      throw new Error(`Webpack 4+ required to use ${this.constructor.name}`)
+    }
+
+    /** see https://webpack.js.org/api/compiler-hooks/#thiscompilation */
+    compiler.hooks.emit.tapAsync(
+      'cyclonedx-webpack-plugin',
+      /**
+       * @param {Compilation} compilation
+       * @param {function} callback
+       */
+      async (compilation, callback) => {
+        try {
+          await this.#emitBom(compilation)
+        } catch (err) {
+          // Catch all errors and log it. This plugin shouldn't block the build process.
+          /* eslint-disable-next-line no-console */
+          console.error(err)
+        }
+        callback()
+      }
+    )
   }
 
-  // Setup SBOM generation and emit the file
-  emitBom (compilation) {
-    /* eslint-disable-next-line no-async-promise-executor */
-    return new Promise(async resolve => {
-      try {
-        const output = await generateBom({
-          // Needed for inspecting the webpack code linkages
-          modules: compilation.modules,
-          // Context from webpack config or defaults to process.cwd()
-          context: this.context || compilation.options.context,
-          moduleName: this.moduleName,
-          moduleVersion: this.moduleVersion,
-          componentType: this.componentType
-        })
-
-        const jsonBom = path.join(this.outputLocation, './bom.json')
-        const xmlBom = path.join(this.outputLocation, './bom.xml')
-        const wellknownBom = path.join(this.wellknownLocation, './sbom')
-
-        /* eslint-disable-next-line no-param-reassign */
-        compilation.assets[jsonBom] = {
-          source: () => output.toJSON(),
-          size: () => output.length
-        }
-        /* eslint-disable-next-line no-param-reassign */
-        compilation.assets[xmlBom] = {
-          source: () => output.toXML(),
-          size: () => output.length
-        }
-        if (this.includeWellknown) {
-          /* eslint-disable-next-line no-param-reassign */
-          compilation.assets[wellknownBom] = {
-            source: () => output.toJSON(),
-            size: () => output.length
-          }
-        }
-
-        // emit webpack's stats if they were requested
-        if (this.emitStats) {
-          const jsonDevModules = JSON.stringify(compilation.getStats().toJson({
-            chunkModules: true
-          }), null, 2)
-          const statsFilePath = path.join(this.outputLocation, './stats.json')
-          // this is how the webpack documentation says to emit files.
-          /* eslint-disable-next-line no-param-reassign */
-          compilation.assets[statsFilePath] = {
-            source: () => jsonDevModules,
-            size: () => jsonDevModules.length
-          }
-        }
-      } catch (err) {
-        // Catch all errors and log it. This plugin shouldn't block the build process.
-        /* eslint-disable-next-line no-console */
-        console.error(err)
-      }
-      // Tell webpack the plugin is done.
-      resolve()
+  /**
+   * Setup SBOM generation and emit the file.
+   *
+   * @param {Compilation} compilation
+   */
+  #emitBom = async function (compilation) {
+    const output = await generateBom({
+      // Needed for inspecting the webpack code linkages
+      modules: compilation.modules,
+      // Context from webpack config or defaults to process.cwd()
+      context: this.context || compilation.options.context,
+      moduleName: this.moduleName,
+      moduleVersion: this.moduleVersion,
+      componentType: this.componentType
     })
+
+    webpackAddAsset(
+      compilation,
+      path.join(this.outputLocation, './bom.json'),
+      () => output.toJSON()
+    )
+    webpackAddAsset(
+      compilation,
+      path.join(this.outputLocation, './bom.xml'),
+      () => output.toXML()
+    )
+    if (this.includeWellknown) {
+      webpackAddAsset(
+        compilation,
+        path.join(this.wellknownLocation, './sbom'),
+        () => output.toJSON()
+      )
+    }
+    if (this.emitStats) {
+      webpackAddAsset(
+        compilation,
+        path.join(this.outputLocation, './stats.json'),
+        () => JSON.stringify(
+          compilation.getStats().toJson({ chunkModules: true }),
+          null,
+          2
+        )
+      )
+    }
   }
 }
 

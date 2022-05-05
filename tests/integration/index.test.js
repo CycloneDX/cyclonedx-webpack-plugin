@@ -25,11 +25,60 @@ const { spawnSync } = require('child_process')
 const program = require('../../package.json')
 
 describe('integration', () => {
+  if (process.env.TEST_INTEGRATION_SKIP_SETUP) {
+    console.log('> skip set up')
+  } else {
+    console.log('> run set up')
+    spawnSync(
+      'node', ['setup.js'], {
+        cwd: __dirname,
+        stdio: 'inherit',
+        shell: true
+      }
+    )
+  }
+
   describe.each(
     [
       {
         dir: 'webpack4-vue2',
         purpose: 'webpack4 with vue2',
+        results: [ // paths relative to `dir`
+          {
+            format: 'xml',
+            file: 'dist/.bom/bom.xml'
+          },
+          {
+            format: 'json',
+            file: 'dist/.bom/bom.json'
+          },
+          {
+            format: 'json',
+            file: 'dist/.well-known/sbom'
+          }
+        ]
+      },
+      {
+        dir: 'webpack5-vue2',
+        purpose: 'webpack5 with vue2',
+        results: [ // paths relative to `dir`
+          {
+            format: 'xml',
+            file: 'dist/.bom/bom.xml'
+          },
+          {
+            format: 'json',
+            file: 'dist/.bom/bom.json'
+          },
+          {
+            format: 'json',
+            file: 'dist/.well-known/sbom'
+          }
+        ]
+      },
+      {
+        dir: 'webpack5-angular13',
+        purpose: 'webpack5 with angular13',
         results: [ // paths relative to `dir`
           {
             format: 'xml',
@@ -55,7 +104,8 @@ describe('integration', () => {
         shell: true,
         env: {
           PATH: process.env.PATH,
-          BOM_REPRODUCIBLE: '1'
+          CI: '1',
+          BOM_REPRODUCIBLE: '1' // handled by `@cyclonedx/bom` on render time.
         }
       }
     )
