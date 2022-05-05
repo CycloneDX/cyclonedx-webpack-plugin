@@ -6,8 +6,10 @@ All notable changes to this project will be documented in this file.
 
 * Misc
   * Removed dev-files from release package, like `tests`. (via [#54])
+  * Fixed use of internals from foreign packages. (via [#60])
 
 [#54]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/54
+[#60]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/60
 
 ## 2.0.0 - 2022-04-24
 

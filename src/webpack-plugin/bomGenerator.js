@@ -98,22 +98,22 @@ const resolveComponents = async function (modules = [], defaultModule = {}) {
         // Add the dependency relationships
         // requester -depends on-> dependency
         // dependency -is required by-> requester
-        if (dd && dr && dd._ref !== dr._ref) {
+        if (dd && dr && dd.ref !== dr.ref) {
           let b = false
-          for (const d of dr._dependencies) {
-            if (d._ref === dd._ref) b = true
+          for (const d of dr.dependencies) {
+            if (d.ref === dd.ref) b = true
           }
           if (!b) { // prevent duplicates
-            dr._dependencies.push(dd)
+            dr.dependencies.push(dd)
           }
         }
 
         // Determine 'root' module by identifying dependencies that are not required
         // by a requester or which do not have a 'node_modules' directory
         if (dd) {
-          if (!requiredByLookup[dd._ref]) requiredByLookup[dd._ref] = 0
-          if ((dr && dd._ref !== dr._ref) || dependencyPath.includes('node_modules')) {
-            requiredByLookup[dd._ref]++
+          if (!requiredByLookup[dd.ref]) requiredByLookup[dd.ref] = 0
+          if ((dr && dd.ref !== dr.ref) || dependencyPath.includes('node_modules')) {
+            ++requiredByLookup[dd.ref]
           }
         }
 
