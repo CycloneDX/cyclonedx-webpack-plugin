@@ -4,14 +4,18 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 2.0.1 - 2022-05-05
+
 * Fixed
-  * Fixed support for Webpack5. (via [#55])
+  * Fixed support for Webpack5. ([#33],[#47] via [#55])
 * Misc
   * Removed dev-files from release package, like `tests`. (via [#54])
   * Fixed use of internals from foreign packages. (via [#60])
 
 [#54]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/54
 [#60]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/60
+[#33]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/33
+[#47]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/47
 [#55]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/55 
 
 ## 2.0.0 - 2022-04-24
