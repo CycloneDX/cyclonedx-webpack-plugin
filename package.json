@@ -24,7 +24,7 @@
 	},
 	"devDependencies": {
 		"@types/webpack": "^4.0.0 || ^5.0.0",
-		"jest": "27.5.1",
+		"jest": "28.1.0",
 		"jest-junit": "13.2.0",
 		"standard": "17.0.0",
 		"webpack": "^4.0.0 || ^5.0.0"
