@@ -17,6 +17,7 @@
  * Copyright (c) OWASP Foundation. All Rights Reserved.
  */
 
+const path = require('path')
 const readPkgUp = require('read-pkg-up')
 const { PackageURL } = require('packageurl-js')
 const parsePackageJsonName = require('parse-packagejson-name')
@@ -66,8 +67,17 @@ const resolveComponents = async function (modules = [], defaultModule = {}) {
       // Get the requester package.json and dependency package.json
       let requesterPkg, dependencyPkg
       try {
-        requesterPkg = await readPkgUp({ cwd: requester })
-        dependencyPkg = await readPkgUp({ cwd: dependency })
+        requesterPkg = await readPkgUp({ cwd: path.dirname(requester) })
+        while (requesterPkg && !requesterPkg.package.name) {
+          // some packages include partial package.json files in sub directories  (e.g. only containing type=module)
+          requesterPkg = await readPkgUp({ cwd: path.resolve(path.dirname(requesterPkg.path), '../') })
+        }
+
+        dependencyPkg = await readPkgUp({ cwd: path.dirname(dependency) })
+        while (dependencyPkg && !dependencyPkg.package.name) {
+          // some packages include partial package.json files in sub directories (e.g. only containing type=module)
+          dependencyPkg = await readPkgUp({ cwd: path.resolve(path.dirname(dependencyPkg.path), '../') })
+        }
       } catch (err) {
         // eslint-disable-next-line no-console
         console.info(err)
@@ -99,12 +109,17 @@ const resolveComponents = async function (modules = [], defaultModule = {}) {
         // requester -depends on-> dependency
         // dependency -is required by-> requester
         if (dd && dr && dd.ref !== dr.ref) {
-          let b = false
-          for (const d of dr.dependencies) {
-            if (d.ref === dd.ref) b = true
-          }
-          if (!b) { // prevent duplicates
-            dr.dependencies.push(dd)
+          if (!dd.ref) {
+            // When dd.ref is empty the resulting bom has an invalid format (null or empty entries in dependencies)
+            console.info('Unable to find package info for: ' + dependency)
+          } else {
+            let b = false
+            for (const d of dr.dependencies) {
+              if (d.ref === dd.ref) b = true
+            }
+            if (!b) { // prevent duplicates
+              dr.dependencies.push(dd)
+            }
           }
         }
 
