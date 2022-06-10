@@ -1481,3 +1481,658 @@ exports[`integration webpack5 with vue2 generated xml file: dist/.bom/bom.xml 1`
   </dependencies>
 </bom>"
 `;
+
+exports[`integration webpack5 with react generated json file: dist/.bom/bom.json 1`] = `
+"{
+  \\"bomFormat\\": \\"CycloneDX\\",
+  \\"specVersion\\": \\"1.3\\",
+  \\"version\\": 1,
+  \\"metadata\\": {
+    \\"tools\\": [
+      {
+        \\"vendor\\": \\"CycloneDX\\",
+        \\"name\\": \\"webpack-plugin\\",
+        \\"version\\": \\"2.0.1\\"
+      }
+    ],
+    \\"component\\": {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react@0.0.1\\",
+      \\"group\\": \\"@cyclonedx-webpack-plugin-tests\\",
+      \\"name\\": \\"example-webpack5-react\\",
+      \\"version\\": \\"0.0.1\\",
+      \\"description\\": \\"example setup with react and webpack5\\",
+      \\"purl\\": \\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react@0.0.1\\"
+    }
+  },
+  \\"components\\": [
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/%40babel/runtime@7.18.3\\",
+      \\"author\\": \\"The Babel Team\\",
+      \\"group\\": \\"@babel\\",
+      \\"name\\": \\"runtime\\",
+      \\"version\\": \\"7.18.3\\",
+      \\"description\\": \\"babel's modular runtime helpers\\",
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/%40babel/runtime@7.18.3\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://babel.dev/docs/en/next/babel-runtime\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/babel/babel/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/babel/babel.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/css-loader@6.7.1\\",
+      \\"author\\": \\"Tobias Koppers @sokra\\",
+      \\"name\\": \\"css-loader\\",
+      \\"version\\": \\"6.7.1\\",
+      \\"description\\": \\"css loader module for webpack\\",
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/css-loader@6.7.1\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://github.com/webpack-contrib/css-loader\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/webpack-contrib/css-loader/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/webpack-contrib/css-loader.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/react-dom@18.1.0\\",
+      \\"name\\": \\"react-dom\\",
+      \\"version\\": \\"18.1.0\\",
+      \\"description\\": \\"React package for working with the DOM.\\",
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/react-dom@18.1.0\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://reactjs.org/\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/facebook/react/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/facebook/react.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/react@18.1.0\\",
+      \\"name\\": \\"react\\",
+      \\"version\\": \\"18.1.0\\",
+      \\"description\\": \\"React is a JavaScript library for building user interfaces.\\",
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/react@18.1.0\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://reactjs.org/\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/facebook/react/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/facebook/react.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/scheduler@0.22.0\\",
+      \\"name\\": \\"scheduler\\",
+      \\"version\\": \\"0.22.0\\",
+      \\"description\\": \\"Cooperative scheduler for the browser environment.\\",
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/scheduler@0.22.0\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://reactjs.org/\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/facebook/react/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/facebook/react.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/web-vitals@2.1.4\\",
+      \\"author\\": \\"Philip Walton\\",
+      \\"name\\": \\"web-vitals\\",
+      \\"version\\": \\"2.1.4\\",
+      \\"description\\": \\"Easily measure performance metrics in JavaScript\\",
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"Apache-2.0\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/web-vitals@2.1.4\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://github.com/GoogleChrome/web-vitals#readme\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/GoogleChrome/web-vitals/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/GoogleChrome/web-vitals.git\\"
+        }
+      ]
+    }
+  ],
+  \\"dependencies\\": [
+    {
+      \\"ref\\": \\"pkg:npm/%40babel/runtime@7.18.3\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react@0.0.1\\",
+      \\"dependsOn\\": [
+        \\"pkg:npm/%40babel/runtime@7.18.3\\",
+        \\"pkg:npm/css-loader@6.7.1\\",
+        \\"pkg:npm/react-dom@18.1.0\\",
+        \\"pkg:npm/react@18.1.0\\",
+        \\"pkg:npm/web-vitals@2.1.4\\"
+      ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/css-loader@6.7.1\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/react-dom@18.1.0\\",
+      \\"dependsOn\\": [
+        \\"pkg:npm/scheduler@0.22.0\\"
+      ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/react@18.1.0\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/scheduler@0.22.0\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/web-vitals@2.1.4\\"
+    }
+  ]
+}"
+`;
+
+exports[`integration webpack5 with react generated json file: dist/.well-known/sbom 1`] = `
+"{
+  \\"bomFormat\\": \\"CycloneDX\\",
+  \\"specVersion\\": \\"1.3\\",
+  \\"version\\": 1,
+  \\"metadata\\": {
+    \\"tools\\": [
+      {
+        \\"vendor\\": \\"CycloneDX\\",
+        \\"name\\": \\"webpack-plugin\\",
+        \\"version\\": \\"2.0.1\\"
+      }
+    ],
+    \\"component\\": {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react@0.0.1\\",
+      \\"group\\": \\"@cyclonedx-webpack-plugin-tests\\",
+      \\"name\\": \\"example-webpack5-react\\",
+      \\"version\\": \\"0.0.1\\",
+      \\"description\\": \\"example setup with react and webpack5\\",
+      \\"purl\\": \\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react@0.0.1\\"
+    }
+  },
+  \\"components\\": [
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/%40babel/runtime@7.18.3\\",
+      \\"author\\": \\"The Babel Team\\",
+      \\"group\\": \\"@babel\\",
+      \\"name\\": \\"runtime\\",
+      \\"version\\": \\"7.18.3\\",
+      \\"description\\": \\"babel's modular runtime helpers\\",
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/%40babel/runtime@7.18.3\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://babel.dev/docs/en/next/babel-runtime\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/babel/babel/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/babel/babel.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/css-loader@6.7.1\\",
+      \\"author\\": \\"Tobias Koppers @sokra\\",
+      \\"name\\": \\"css-loader\\",
+      \\"version\\": \\"6.7.1\\",
+      \\"description\\": \\"css loader module for webpack\\",
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/css-loader@6.7.1\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://github.com/webpack-contrib/css-loader\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/webpack-contrib/css-loader/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/webpack-contrib/css-loader.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/react-dom@18.1.0\\",
+      \\"name\\": \\"react-dom\\",
+      \\"version\\": \\"18.1.0\\",
+      \\"description\\": \\"React package for working with the DOM.\\",
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/react-dom@18.1.0\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://reactjs.org/\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/facebook/react/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/facebook/react.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/react@18.1.0\\",
+      \\"name\\": \\"react\\",
+      \\"version\\": \\"18.1.0\\",
+      \\"description\\": \\"React is a JavaScript library for building user interfaces.\\",
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/react@18.1.0\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://reactjs.org/\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/facebook/react/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/facebook/react.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/scheduler@0.22.0\\",
+      \\"name\\": \\"scheduler\\",
+      \\"version\\": \\"0.22.0\\",
+      \\"description\\": \\"Cooperative scheduler for the browser environment.\\",
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/scheduler@0.22.0\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://reactjs.org/\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/facebook/react/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/facebook/react.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/web-vitals@2.1.4\\",
+      \\"author\\": \\"Philip Walton\\",
+      \\"name\\": \\"web-vitals\\",
+      \\"version\\": \\"2.1.4\\",
+      \\"description\\": \\"Easily measure performance metrics in JavaScript\\",
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"Apache-2.0\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/web-vitals@2.1.4\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://github.com/GoogleChrome/web-vitals#readme\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/GoogleChrome/web-vitals/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/GoogleChrome/web-vitals.git\\"
+        }
+      ]
+    }
+  ],
+  \\"dependencies\\": [
+    {
+      \\"ref\\": \\"pkg:npm/%40babel/runtime@7.18.3\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react@0.0.1\\",
+      \\"dependsOn\\": [
+        \\"pkg:npm/%40babel/runtime@7.18.3\\",
+        \\"pkg:npm/css-loader@6.7.1\\",
+        \\"pkg:npm/react-dom@18.1.0\\",
+        \\"pkg:npm/react@18.1.0\\",
+        \\"pkg:npm/web-vitals@2.1.4\\"
+      ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/css-loader@6.7.1\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/react-dom@18.1.0\\",
+      \\"dependsOn\\": [
+        \\"pkg:npm/scheduler@0.22.0\\"
+      ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/react@18.1.0\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/scheduler@0.22.0\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/web-vitals@2.1.4\\"
+    }
+  ]
+}"
+`;
+
+exports[`integration webpack5 with react generated xml file: dist/.bom/bom.xml 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"utf-8\\"?>
+<bom xmlns=\\"http://cyclonedx.org/schema/bom/1.3\\" version=\\"1\\">
+  <metadata>
+    <tools>
+      <tool>
+        <vendor>CycloneDX</vendor>
+        <name>webpack-plugin</name>
+        <version>TESTING</version>
+      </tool>
+    </tools>
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react@0.0.1\\">
+      <group>@cyclonedx-webpack-plugin-tests</group>
+      <name>example-webpack5-react</name>
+      <version>0.0.1</version>
+      <description><![CDATA[example setup with react and webpack5]]></description>
+      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react@0.0.1</purl>
+    </component>
+  </metadata>
+  <components>
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/%40babel/runtime@7.18.3\\">
+      <author>The Babel Team</author>
+      <group>@babel</group>
+      <name>runtime</name>
+      <version>7.18.3</version>
+      <description><![CDATA[babel's modular runtime helpers]]></description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/%40babel/runtime@7.18.3</purl>
+      <externalReferences>
+        <reference type=\\"website\\">
+          <url>https://babel.dev/docs/en/next/babel-runtime</url>
+        </reference>
+        <reference type=\\"issue-tracker\\">
+          <url>https://github.com/babel/babel/issues</url>
+        </reference>
+        <reference type=\\"vcs\\">
+          <url>git+https://github.com/babel/babel.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/css-loader@6.7.1\\">
+      <author>Tobias Koppers @sokra</author>
+      <name>css-loader</name>
+      <version>6.7.1</version>
+      <description><![CDATA[css loader module for webpack]]></description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/css-loader@6.7.1</purl>
+      <externalReferences>
+        <reference type=\\"website\\">
+          <url>https://github.com/webpack-contrib/css-loader</url>
+        </reference>
+        <reference type=\\"issue-tracker\\">
+          <url>https://github.com/webpack-contrib/css-loader/issues</url>
+        </reference>
+        <reference type=\\"vcs\\">
+          <url>git+https://github.com/webpack-contrib/css-loader.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/react-dom@18.1.0\\">
+      <name>react-dom</name>
+      <version>18.1.0</version>
+      <description><![CDATA[React package for working with the DOM.]]></description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/react-dom@18.1.0</purl>
+      <externalReferences>
+        <reference type=\\"website\\">
+          <url>https://reactjs.org/</url>
+        </reference>
+        <reference type=\\"issue-tracker\\">
+          <url>https://github.com/facebook/react/issues</url>
+        </reference>
+        <reference type=\\"vcs\\">
+          <url>git+https://github.com/facebook/react.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/react@18.1.0\\">
+      <name>react</name>
+      <version>18.1.0</version>
+      <description><![CDATA[React is a JavaScript library for building user interfaces.]]></description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/react@18.1.0</purl>
+      <externalReferences>
+        <reference type=\\"website\\">
+          <url>https://reactjs.org/</url>
+        </reference>
+        <reference type=\\"issue-tracker\\">
+          <url>https://github.com/facebook/react/issues</url>
+        </reference>
+        <reference type=\\"vcs\\">
+          <url>git+https://github.com/facebook/react.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/scheduler@0.22.0\\">
+      <name>scheduler</name>
+      <version>0.22.0</version>
+      <description><![CDATA[Cooperative scheduler for the browser environment.]]></description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/scheduler@0.22.0</purl>
+      <externalReferences>
+        <reference type=\\"website\\">
+          <url>https://reactjs.org/</url>
+        </reference>
+        <reference type=\\"issue-tracker\\">
+          <url>https://github.com/facebook/react/issues</url>
+        </reference>
+        <reference type=\\"vcs\\">
+          <url>git+https://github.com/facebook/react.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/web-vitals@2.1.4\\">
+      <author>Philip Walton</author>
+      <name>web-vitals</name>
+      <version>2.1.4</version>
+      <description><![CDATA[Easily measure performance metrics in JavaScript]]></description>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/web-vitals@2.1.4</purl>
+      <externalReferences>
+        <reference type=\\"website\\">
+          <url>https://github.com/GoogleChrome/web-vitals#readme</url>
+        </reference>
+        <reference type=\\"issue-tracker\\">
+          <url>https://github.com/GoogleChrome/web-vitals/issues</url>
+        </reference>
+        <reference type=\\"vcs\\">
+          <url>git+https://github.com/GoogleChrome/web-vitals.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+  </components>
+  <dependencies>
+    <dependency ref=\\"pkg:npm/%40babel/runtime@7.18.3\\"/>
+    <dependency ref=\\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react@0.0.1\\">
+      <dependency ref=\\"pkg:npm/%40babel/runtime@7.18.3\\"/>
+      <dependency ref=\\"pkg:npm/css-loader@6.7.1\\"/>
+      <dependency ref=\\"pkg:npm/react-dom@18.1.0\\"/>
+      <dependency ref=\\"pkg:npm/react@18.1.0\\"/>
+      <dependency ref=\\"pkg:npm/web-vitals@2.1.4\\"/>
+    </dependency>
+    <dependency ref=\\"pkg:npm/css-loader@6.7.1\\"/>
+    <dependency ref=\\"pkg:npm/react-dom@18.1.0\\">
+      <dependency ref=\\"pkg:npm/scheduler@0.22.0\\"/>
+    </dependency>
+    <dependency ref=\\"pkg:npm/react@18.1.0\\"/>
+    <dependency ref=\\"pkg:npm/scheduler@0.22.0\\"/>
+    <dependency ref=\\"pkg:npm/web-vitals@2.1.4\\"/>
+  </dependencies>
+</bom>"
+`;
