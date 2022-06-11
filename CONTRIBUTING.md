@@ -7,7 +7,19 @@ first.
 
 ## Setup
 
-To start developing simply run `npm ci` to install dev-dependencies and tools.
+To start developing simply run to install dev-dependencies and tools:
+
+```shell
+npm ci
+```
+
+This will install process automatically build the project from source.
+
+## Build from source
+
+```shell
+npm run build
+```
 
 ## Testing
 

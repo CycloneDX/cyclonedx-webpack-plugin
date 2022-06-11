@@ -749,8 +749,8 @@ module.exports = function (webpackEnv) {
           }
         }),
       new CycloneDxWebpackPlugin({
-        context: '../',
-        outputLocation: '.bom'
+        outputLocation: '.bom',
+        reproducibleResults: true
       })
     ].filter(Boolean),
     // Turn off performance processing because we utilize

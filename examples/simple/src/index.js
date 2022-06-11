@@ -1,3 +1,5 @@
+'use strict'
+
 /*!
 This file is part of CycloneDX Webpack plugin.
 
@@ -17,19 +19,10 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-/**
- * @see {@link https://eslint.org/}
- * @type {import('eslint').Linter.Config}
- */
-module.exports = {
-  root: true,
-  // see https://github.com/standard/ts-standard
-  extends: 'standard-with-typescript',
-  parserOptions: {
-    project: './tsconfig.json'
-  },
-  env: {
-    node: true,
-    browser: false
-  }
-}
+const { Tooltip, Toast, Popover } = require('bootstrap')
+
+// no real world use, but showcase
+
+console.log('Tooltip version', Tooltip.VERSION)
+console.log('Toast version', Toast.VERSION)
+console.log('Popover version', Popover.VERSION)

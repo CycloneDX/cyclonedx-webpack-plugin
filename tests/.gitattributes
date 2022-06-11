@@ -1,1 +1,1 @@
-*.snap  linguist-generated
+*.js.snap  linguist-generated linguist-language=JavaScript diff=javascript

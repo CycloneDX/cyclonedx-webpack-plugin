@@ -4,20 +4,21 @@
   "private": true,
   "main": "index.html",
   "scripts": {
-    "build": "webpack"
+    "prebuild:node": "node -r fs -e 'fs.rmSync(\"dist\",{recursive:true,force:true})'",
+    "build": "webpack build"
   },
   "dependencies": {
     "vue": "^2.6.14"
   },
   "devDependencies": {
-    "@cyclonedx/webpack-plugin": "file:../_SUT/cyclonedx-webpack-plugin.indev.tgz",
+    "@cyclonedx/webpack-plugin": "file:../../..",
     "html-inline-script-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.72.0",
     "webpack-cli": "^4.9.2"
   },
   "engines": {
-    "node": ">=12.0.0",
+    "node": ">=14.0.0",
     "npm": ">=8"
   }
 }

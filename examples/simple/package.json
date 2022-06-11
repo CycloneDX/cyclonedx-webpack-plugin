@@ -1,0 +1,21 @@
+{
+  "name": "simple",
+  "version": "0.1.0-dev",
+  "description": "demo",
+  "private": true,
+  "main": "./dist/app.js",
+  "dependencies": {
+    "@popperjs/core": "^2",
+    "blueimp-gallery": "^3",
+    "bootstrap": "^5"
+  },
+  "devDependencies": {
+    "@cyclonedx/webpack-plugin": "file:../..",
+    "webpack": "^5",
+    "webpack-cli": "^4"
+  },
+  "scripts": {
+    "prebuild": "node -r fs -e 'fs.rmSync(\"dist\",{recursive:true,force:true})'",
+    "build": "webpack build"
+  }
+}

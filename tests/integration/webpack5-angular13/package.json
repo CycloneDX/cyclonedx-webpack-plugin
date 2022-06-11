@@ -27,7 +27,7 @@
     "@angular-devkit/build-angular": "~13.3.3",
     "@angular/cli": "~13.3.3",
     "@angular/compiler-cli": "~13.3.0",
-    "@cyclonedx/webpack-plugin": "file:../_SUT/cyclonedx-webpack-plugin.indev.tgz",
+    "@cyclonedx/webpack-plugin": "file:../../..",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
     "jasmine-core": "~4.0.0",
@@ -38,5 +38,9 @@
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.6.2",
     "webpack": "^5.72.0"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=8"
   }
 }

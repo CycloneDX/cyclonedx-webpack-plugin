@@ -4,6 +4,32 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 3.0.0 - 2022-06-20
+
+This is a reboot, written in _TypeScript_ and compiled to _JavaScript_.
+
+* BREAKING changes
+  * Requires _Node.js_ `>= 14.0.0` now, was `>= 12.0.0`.
+  * Requires _webpack_ version `^5` as a `peerDependency`, was `>=4 <6`.
+* Changed:
+  * The optional configuration options changed in name and meaning. Consult the `README` for details.
+* Added
+  * Added an optional switch to select the desired CycloneDX spec version for the output.  
+    The value currently defaults to `'1.4'`. (fixes [#53] via [#70])
+  * Full support for typing. This will make the configuration of this plugin easier.
+  * Lots of small features got added due to the fact that the data processing is managed by  `@cyclonedx/cyclonedx-library` now.
+* Fixed
+  * Dependency graph no longer has `null` or `undefined` values. (fixes [#31] via [#70])
+* Removed
+  * The optional config option `emitStats` and its functionality were dropped.
+    You may use _webpack_'s `--stats` switch instead.
+* Misc
+  * Uses `@cyclonedx/cyclonedx-library` now, instead of `@cyclonedx/bom`.
+
+[#31]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/31
+[#53]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/53
+[#70]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/70
+
 ## 2.0.2 - 2022-06-11
 
 * Fixed

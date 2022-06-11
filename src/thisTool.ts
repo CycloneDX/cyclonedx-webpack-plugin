@@ -17,19 +17,12 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-/**
- * @see {@link https://eslint.org/}
- * @type {import('eslint').Linter.Config}
- */
-module.exports = {
-  root: true,
-  // see https://github.com/standard/ts-standard
-  extends: 'standard-with-typescript',
-  parserOptions: {
-    project: './tsconfig.json'
-  },
-  env: {
-    node: true,
-    browser: false
-  }
+import { sync as readPackageUpSync } from 'read-pkg-up'
+import * as CDX from '@cyclonedx/cyclonedx-library'
+
+export function makeThisTool (builder: CDX.Builders.FromPackageJson.ToolBuilder): CDX.Models.Tool | undefined {
+  const packageJson = readPackageUpSync({ cwd: __dirname, normalize: false })
+  return packageJson === undefined
+    ? undefined
+    : builder.makeTool(packageJson.packageJson)
 }
