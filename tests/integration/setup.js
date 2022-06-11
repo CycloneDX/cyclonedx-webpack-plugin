@@ -25,7 +25,7 @@ const REQUIRES_NPM_INSTALL = [
   'webpack4-vue2',
   'webpack5-vue2',
   'webpack5-angular13',
-  'webpack5-react'
+  'webpack5-react18'
 ]
 
 const ROOT_DIR = path.resolve(__dirname, '../..')

@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+# Test: react18 with webpack5
+
+This setup is intended to create reproducible results (SBoM).  
+It might install outdated, unmaintained or vulnerable components, for showcasing purposes.
+
+----
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

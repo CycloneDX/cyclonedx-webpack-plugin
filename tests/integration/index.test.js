@@ -95,7 +95,7 @@ describe('integration', () => {
         ]
       },
       {
-        dir: 'webpack5-react',
+        dir: 'webpack5-react18',
         purpose: 'webpack5 with react',
         results: [ // paths relative to `dir`
           {
