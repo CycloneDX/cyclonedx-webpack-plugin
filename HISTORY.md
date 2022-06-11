@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 2.0.2 - 2022-06-11
+
+* Fixed
+  * Fix invalid format of generated bom by incomplete `package.json` files in subdirectories of npm packages. ([#31] via [#68])
+* Misc
+  * Add integration test for react18 with webpack5 and babel-runtime dependency. (via [#68])
+
+[#31]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/31
+[#68]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/68
+
 ## 2.0.1 - 2022-05-05
 
 * Fixed
