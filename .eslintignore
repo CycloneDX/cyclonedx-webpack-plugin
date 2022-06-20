@@ -1,0 +1,11 @@
+/node_modules/**
+
+/tests/integration/*/
+
+/examples/*/dist
+/examples/*/dist.*/**
+
+/dist/**
+/dist.*/**
+
+!/src/**

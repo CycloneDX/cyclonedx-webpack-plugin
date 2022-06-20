@@ -5,7 +5,7 @@ name: Node CI
 
 on: 
   push:
-    branches: ["master"]
+    branches: [ "master" ]
   pull_request:
   workflow_dispatch:
 
@@ -14,7 +14,53 @@ env:
   NODE_ACTIVE_LTS: "16" # https://nodejs.org/en/about/releases/
 
 jobs:
+  build:
+    name: build ${{ matrix.target }}
+    runs-on: "ubuntu-latest"
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+          cache: "npm"
+          cache-dependency-path: "**/package-lock.json"
+      - name: setup project
+        run: npm ci --ignore-scripts
+      - name: build ${{ matrix.target }}
+        run: npm run build
+      - name: artifact build result
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: dist
+          if-no-files-found: error
+  test-standard:
+    name: test standard
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+          cache: "npm"
+          cache-dependency-path: "**/package-lock.json"
+      - name: setup project
+        run: npm ci --ignore-scripts
+      - name: test
+        run: npm run test:standard
   test-jest:
+    needs: [ 'build' ]
     name: test:Jest (node${{ matrix.node-version }}, ${{ matrix.os }})
     timeout-minutes: 30
     runs-on: ${{ matrix.os }}
@@ -28,7 +74,7 @@ jobs:
           - "18"      # current
           - "16"      # active LTS
           - "14"
-          - "12"
+          - "14.0.0"  # lowest supported
     env:
       REPORTS_ARTIFACT: tests-reports
     steps:
@@ -42,34 +88,22 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
           cache-dependency-path: "**/package-lock.json"
-      - name: update npm
-        run: npm i -g npm
+      - # some integration tests require a certain npm version to be installable
+        name: update npm
+        run: npm i -g npm@^8
       - name: display version
         run: |-
           node --version
           npm --version
       - name: install project
-        run: npm ci
-      - name: build
-        run: npm run build --if-present
+        run: npm ci --ignore-scripts
+      - name: fetch build artifact
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: dist
+          path: dist
+      - name: setup test beds
+        run: npm run setup-tests
       - name: test
         run: npm run test:jest
-  standards:
-    name: Standards
-    timeout-minutes: 30
-    runs-on: "ubuntu-latest"
-    steps:
-      - name: Checkout
-        # see https://github.com/actions/checkout
-        uses: actions/checkout@v3
-      - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
-        # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ env.NODE_ACTIVE_LTS }}
-          cache: "npm"
-          cache-dependency-path: "**/package-lock.json"
-      - name: install project
-        run: npm ci
-      - name: run tests
-        run: npm run test:standard

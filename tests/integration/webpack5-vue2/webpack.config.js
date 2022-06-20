@@ -15,13 +15,15 @@ module.exports = {
       template: './src/index.html'
     }),
     new HtmlInlineScriptPlugin(),
-    new CycloneDxWebpackPlugin({
-      context: '../',
-      outputLocation: '.bom'
-    })
+    new CycloneDxWebpackPlugin(
+      {
+        outputLocation: '.bom',
+        reproducibleResults: true
+      }
+    )
   ],
   externals: {
-    //     vue: 'Vue'
+    // vue: 'Vue'
   },
   resolve: {
     alias: {

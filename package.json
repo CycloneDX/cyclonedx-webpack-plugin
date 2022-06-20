@@ -1,53 +1,75 @@
 {
-	"name": "@cyclonedx/webpack-plugin",
-	"version": "2.0.2",
-	"description": "Creates CycloneDX Software Bill of Materials (SBOM) from webpack projects",
-	"homepage": "http://github.com/CycloneDX/cyclonedx-webpack-plugin",
-	"copyright": "Copyright OWASP Foundation",
-	"license": "Apache-2.0",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git"
-	},
-	"bugs": {
-		"url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues"
-	},
-	"keywords": [
-		"cyclonedx",
-		"webpack",
-		"sbom",
-		"bom"
-	],
-	"main": "index.js",
-	"engines": {
-		"node": ">=12.0.0"
-	},
-	"devDependencies": {
-		"@types/webpack": "^4.0.0 || ^5.0.0",
-		"jest": "27.5.1",
-		"jest-junit": "13.2.0",
-		"standard": "17.0.0",
-		"webpack": "^4.0.0 || ^5.0.0"
-	},
-	"dependencies": {
-		"@cyclonedx/bom": "^3.8.0",
-		"package-json": "6.5.0",
-		"parse-packagejson-name": "^1.0.1",
-		"read-pkg-up": "6.0.0"
-	},
-	"peerDependencies": {
-		"webpack": "^4.0.0 || ^5.0.0"
-	},
-	"scripts": {
-		"setup-tests": "node tests/integration/setup.js",
-		"test": "npm run test:jest && npm run test:standard",
-		"test:jest": "jest",
-		"test:standard": "standard -v",
-		"cs-fix": "standard --fix"
-	},
-	"jest-junit": {
-		"suiteName": "jest tests",
-		"outputDirectory": "reports/jest",
-		"outputName": "tests.junit.xml"
-	}
+  "name": "@cyclonedx/webpack-plugin",
+  "version": "3.0.0-dev",
+  "description": "Creates CycloneDX Software Bill of Materials (SBoM) from webpack projects",
+  "homepage": "https://github.com/CycloneDX/cyclonedx-webpack-plugin",
+  "copyright": "Copyright OWASP Foundation",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Jan Kowalleck",
+    "email": "jan.kowalleck@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Jan Kowalleck",
+      "email": "jan.kowalleck@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues"
+  },
+  "keywords": [
+    "cyclonedx",
+    "webpack",
+    "sbom",
+    "bom"
+  ],
+  "type": "commonjs",
+  "engines": {
+    "node": ">=14"
+  },
+  "dependencies": {
+    "@cyclonedx/cyclonedx-library": "^1.0.0",
+    "read-pkg-up": "^7.0.0",
+    "xmlbuilder2": "^3.0.2"
+  },
+  "peerDependencies": {
+    "webpack": "^5"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.42",
+    "@types/webpack": "^5.28.0",
+    "eslint-config-standard-with-typescript": "^21.0.1",
+    "jest": "27.5.1",
+    "jest-junit": "13.2.0",
+    "npm-run-all": "^4.1.5",
+    "ts-standard": "^11.0.0",
+    "typescript": "^4.7.3",
+    "webpack": "^5.0.0"
+  },
+  "types": "./dist/plugin.d.ts",
+  "main": "./dist/plugin.js",
+  "exports": "./dist/plugin.js",
+  "scripts": {
+    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
+    "lint": "tsc --noEmit",
+    "build": "run-p --aggregate-output -l build:*",
+    "prebuild:node": "node -r fs -e 'fs.rmSync(\"dist\",{recursive:true,force:true})'",
+    "build:node": "tsc -b ./tsconfig.json",
+    "setup-tests": "node tests/integration/setup.js",
+    "test": "run-p --aggregate-output -lc test:*",
+    "test:jest": "jest",
+    "test:standard": "eslint .",
+    "cs-fix": "ts-standard --fix"
+  },
+  "jest-junit": {
+    "suiteName": "jest tests",
+    "outputDirectory": "reports/jest",
+    "outputName": "tests.junit.xml"
+  }
 }
