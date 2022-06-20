@@ -11,7 +11,7 @@ This is a reboot, written in _TypeScript_ and compiled to _JavaScript_.
 * BREAKING changes
   * Requires _Node.js_ `>= 14.0.0` now, was `>= 12.0.0`.
   * Requires _webpack_ version `^5` as a `peerDependency`, was `>=4 <6`.
-* Changed:
+* Changed
   * The optional configuration options changed in name and meaning. Consult the `README` for details.
 * Added
   * Added an optional switch to select the desired CycloneDX spec version for the output.  
