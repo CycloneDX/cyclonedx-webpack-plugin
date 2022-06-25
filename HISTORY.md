@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 3.0.1 - 2022-06-20
+
+* Docs
+  * Added the configuration options to the `README`. (via [#75])
+
+[#75]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/75
+
 ## 3.0.0 - 2022-06-20
 
 This is a reboot, written in _TypeScript_ and compiled to _JavaScript_.
