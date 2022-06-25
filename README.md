@@ -33,10 +33,25 @@ yarn add -D @cyclonedx/webpack-plugin
 
 ## Usage
 
-### Configuration
+```javascript
+new CycloneDxWebpackPlugin(options?: object)
+```
 
-For configuration and options, please consult the shipped `CycloneDxWebpackPluginOptions` interface definition,
-or see one of the examples.
+### Options & Configuration
+
+<!-- the following table is based on `src/plugin.ts`::`CycloneDxWebpackPluginOptions` -->
+
+| Name | Type | Default | Description |
+|:-----|:----:|:-------:|:------------|
+| **`specVersion`** | `{string}`<br/>one of: `"1.2"`, `"1.3"`, `"1.4"` | `"1.4"` |  Which version of [CycloneDX-spec] to use.<br/> Supported values depend on the installed dependency [CycloneDX-javascript-library]. |
+| **`reproducibleResults`** | `{boolean}` | `false` | Whether to go the extra mile and make the output reproducible.<br/> Reproducibility might result in loss of time- and random-based-values. |
+| **`outputLocation`** | `{string}` | `"./cyclonedx"` | Path to write the output to. The path is relative to _webpack_'s overall output path. |
+| **`includeWellknown`** | `{boolean}` | `true` | Whether to write the Wellknowns. |
+| **`wellknownLocation`** | `{string}` | `"./.well-known"` | Path to write the Wellknowns to. The path is relative to _webpack_'s overall output path. | 
+| **`rootComponentAutodetect`** | `{boolean}` | `true` | Whether to try auto-detection of the RootComponent.<br/> Tries to find the nearest `package.json` and build a CycloneDX component from it, so it can be assigned to `bom.metadata.component`. |
+| **`rootComponentType`** | `{string}` | `"application"` | Set the RootComponent's type.<br/>See [the list of valid values](https://cyclonedx.org/docs/1.4/json/#metadata_component_type). Supported values depend on [CycloneDX-javascript-library]'s enum `ComponentType`. |
+| **`rootComponentName`** | optional `{string}` | `undefined` | If `rootComponentAutodetect` is disabled, then this value is assumed as the "name" of the `package.json`. |
+| **`rootComponentVersion`** | optional `{string}` | `undefined` | If `rootComponentAutodetect` is disabled, then this value is assumed as the "version" of the `package.json`. |
 
 ### Example
 
@@ -107,9 +122,13 @@ Permission to modify and redistribute is granted under the terms of the Apache 2
 See the [LICENSE][license_file] file for the full license.
 
 [CycloneDX]: https://cyclonedx.org/
+[CycloneDX-spec]: https://github.com/CycloneDX/
+
 [webpack]: https://webpack.js.org/
 [webpack config]: https://webpack.js.org/configuration/
 [draft-lear-opsawg-sbom-access]: https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-sbom-access
+
+[CycloneDX-javascript-library]: https://github.com/CycloneDX/cyclonedx-javascript-library/
 
 [license_file]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/blob/master/LICENSE
 [contributing_file]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/blob/master/CONTRIBUTING.md

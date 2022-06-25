@@ -27,9 +27,11 @@ import { Extractor } from './extractor'
 import { makeThisTool } from './thisTool'
 
 export interface CycloneDxWebpackPluginOptions {
+  // IMPORTANT: keep the table in the `README` in sync!
+
   /**
    * Which version of {@link https://github.com/CycloneDX/specification CycloneDX spec} to use.
-   * Defaults to one that is the latest supported if this application.
+   * Defaults to one that is the latest supported of this application.
    */
   specVersion?: CycloneDxWebpackPlugin['specVersion']
   /**
