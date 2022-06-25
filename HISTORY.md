@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
-## 3.0.1 - 2022-06-20
+## 3.0.1 - 2022-06-25
 
 * Docs
   * Added the configuration options to the `README`. (via [#75])
