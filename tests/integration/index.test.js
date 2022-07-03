@@ -82,6 +82,24 @@ describe('integration', () => {
             file: 'dist/.well-known/sbom'
           }
         ]
+      },
+      {
+        dir: 'webpack5-CopyWebpackPlugin',
+        purpose: 'webpack5 with CopyWebpackPlugin',
+        results: [ // paths relative to `dir`
+          {
+            format: 'xml',
+            file: 'dist/.bom/bom.xml'
+          },
+          {
+            format: 'json',
+            file: 'dist/.bom/bom.json'
+          },
+          {
+            format: 'json',
+            file: 'dist/.well-known/sbom'
+          }
+        ]
       }
     ]
   )('$purpose', ({ dir, results }) => {
