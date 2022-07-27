@@ -17,11 +17,12 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-/*
+/**
  * For a detailed explanation regarding each configuration property, visit:
- * https://jestjs.io/docs/configuration
+ * {@link https://jestjs.io/docs/configuration}
+ *
+ * @type {import('jest').Config}
  */
-
 module.exports = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
