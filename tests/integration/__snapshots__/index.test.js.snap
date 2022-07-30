@@ -35,7 +35,6 @@ exports[`integration webpack5 with angular13 generated json file: dist/.bom/bom.
       \\"type\\": \\"application\\",
       \\"name\\": \\"example-webpack5-angular13\\",
       \\"group\\": \\"@cyclonedx-weboack-plugin-tests\\",
-      \\"version\\": \\"\\",
       \\"bom-ref\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?\\",
       \\"description\\": \\"example setup witch Angular13 in WebPack5\\",
       \\"purl\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?\\"
@@ -326,7 +325,6 @@ exports[`integration webpack5 with angular13 generated json file: dist/.well-kno
       \\"type\\": \\"application\\",
       \\"name\\": \\"example-webpack5-angular13\\",
       \\"group\\": \\"@cyclonedx-weboack-plugin-tests\\",
-      \\"version\\": \\"\\",
       \\"bom-ref\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?\\",
       \\"description\\": \\"example setup witch Angular13 in WebPack5\\",
       \\"purl\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?\\"
@@ -610,7 +608,6 @@ exports[`integration webpack5 with angular13 generated xml file: dist/.bom/bom.x
     <component type=\\"application\\" bom-ref=\\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?\\">
       <group>@cyclonedx-weboack-plugin-tests</group>
       <name>example-webpack5-angular13</name>
-      <version/>
       <description>example setup witch Angular13 in WebPack5</description>
       <purl>pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?</purl>
     </component>
@@ -1477,7 +1474,6 @@ exports[`integration webpack5 with vue2 generated json file: dist/.bom/bom.json 
       \\"type\\": \\"application\\",
       \\"name\\": \\"example-webpack5-vue2\\",
       \\"group\\": \\"@cyclonedx-weboack-plugin-tests\\",
-      \\"version\\": \\"\\",
       \\"bom-ref\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2?\\",
       \\"description\\": \\"example setup witch Vue2 in WebPack5\\",
       \\"purl\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2?\\"
@@ -1567,7 +1563,6 @@ exports[`integration webpack5 with vue2 generated json file: dist/.well-known/sb
       \\"type\\": \\"application\\",
       \\"name\\": \\"example-webpack5-vue2\\",
       \\"group\\": \\"@cyclonedx-weboack-plugin-tests\\",
-      \\"version\\": \\"\\",
       \\"bom-ref\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2?\\",
       \\"description\\": \\"example setup witch Vue2 in WebPack5\\",
       \\"purl\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2?\\"
@@ -1650,7 +1645,6 @@ exports[`integration webpack5 with vue2 generated xml file: dist/.bom/bom.xml 1`
     <component type=\\"application\\" bom-ref=\\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2?\\">
       <group>@cyclonedx-weboack-plugin-tests</group>
       <name>example-webpack5-vue2</name>
-      <version/>
       <description>example setup witch Vue2 in WebPack5</description>
       <purl>pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2?</purl>
     </component>
