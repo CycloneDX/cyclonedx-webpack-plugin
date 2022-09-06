@@ -29,7 +29,20 @@ module.exports = {
     project: './tsconfig.json'
   },
   env: {
-    node: true,
-    browser: false
-  }
+    commonjs: true,
+    node: true
+  },
+  overrides: [
+    {
+      files: [
+        '*.spec.*',
+        '*.test.*'
+      ],
+      env: {
+        jest: true,
+        commonjs: true,
+        node: true
+      }
+    }
+  ]
 }
