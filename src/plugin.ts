@@ -146,11 +146,11 @@ export class CycloneDxWebpackPlugin {
     }
 
     const logger = compilation.getLogger(pluginName)
-    const cdxExternalReferenceFactory = new CDX.Factories.FromPackageJson.ExternalReferenceFactory()
+    const cdxExternalReferenceFactory = new CDX.Factories.FromNodePackageJson.ExternalReferenceFactory()
     const cdxLicenseFactory = new CDX.Factories.LicenseFactory()
-    const cdxPurlFactory = new CDX.Factories.PackageUrlFactory('npm')
-    const cdxToolBuilder = new CDX.Builders.FromPackageJson.ToolBuilder(cdxExternalReferenceFactory)
-    const cdxComponentBuilder = new CDX.Builders.FromPackageJson.ComponentBuilder(cdxExternalReferenceFactory, cdxLicenseFactory)
+    const cdxPurlFactory = new CDX.Factories.FromNodePackageJson.PackageUrlFactory('npm')
+    const cdxToolBuilder = new CDX.Builders.FromNodePackageJson.ToolBuilder(cdxExternalReferenceFactory)
+    const cdxComponentBuilder = new CDX.Builders.FromNodePackageJson.ComponentBuilder(cdxExternalReferenceFactory, cdxLicenseFactory)
 
     const bom = new CDX.Models.Bom()
     bom.metadata.component = this.#makeRootComponent(compilation.compiler.context, cdxComponentBuilder)
@@ -231,7 +231,7 @@ export class CycloneDxWebpackPlugin {
     )
   }
 
-  #makeRootComponent (cwd: string, builder: CDX.Builders.FromPackageJson.ComponentBuilder): CDX.Models.Component | undefined {
+  #makeRootComponent (cwd: string, builder: CDX.Builders.FromNodePackageJson.ComponentBuilder): CDX.Models.Component | undefined {
     const thisPackage = this.rootComponentAutodetect
       ? readPackageUpSync({ cwd, normalize: false })
       : { packageJson: { name: this.rootComponentName, version: this.rootComponentVersion } }
@@ -242,8 +242,8 @@ export class CycloneDxWebpackPlugin {
 
   #finalizeBom (
     bom: CDX.Models.Bom,
-    cdxToolBuilder: CDX.Builders.FromPackageJson.ToolBuilder,
-    cdxPurlFactory: CDX.Factories.PackageUrlFactory
+    cdxToolBuilder: CDX.Builders.FromNodePackageJson.ToolBuilder,
+    cdxPurlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory
   ): void {
     bom.metadata.timestamp = this.reproducibleResults
       ? undefined

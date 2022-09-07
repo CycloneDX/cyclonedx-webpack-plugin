@@ -33,7 +33,7 @@
     "node": ">=14"
   },
   "dependencies": {
-    "@cyclonedx/cyclonedx-library": "^1.0.0",
+    "@cyclonedx/cyclonedx-library": "^1.4.0",
     "read-pkg-up": "^7.0.0",
     "xmlbuilder2": "^3.0.2"
   },

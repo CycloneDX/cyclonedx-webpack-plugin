@@ -25,13 +25,13 @@ type WebpackLogger = Compilation['logger']
 
 export class Extractor {
   readonly #compilation: Compilation
-  readonly #componentBuilder: CDX.Builders.FromPackageJson.ComponentBuilder
-  readonly #purlFactory: CDX.Factories.PackageUrlFactory
+  readonly #componentBuilder: CDX.Builders.FromNodePackageJson.ComponentBuilder
+  readonly #purlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory
 
   constructor (
     compilation: Compilation,
-    componentBuilder: CDX.Builders.FromPackageJson.ComponentBuilder,
-    purlFactory: CDX.Factories.PackageUrlFactory
+    componentBuilder: CDX.Builders.FromNodePackageJson.ComponentBuilder,
+    purlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory
   ) {
     this.#compilation = compilation
     this.#componentBuilder = componentBuilder
