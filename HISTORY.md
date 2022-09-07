@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 3.1.0 - 2022-09-07
+
 * Changed
   * PackageUrl(PURL) in JSON and XML results are as short as possible, but still precise. (via [#285])
 * Misc
