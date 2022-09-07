@@ -4,10 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Changed
+  * PackageUrl(PURL) in JSON and XML results are as short as possible, but still precise. (via [#285])
+* Misc
+  * Raised dependency `@cyclonedx/cyclonedx-library@^1.4.0`, was `@^1.0.0`. (via [#285])
 * Build
   * Use _TypeScript_ `v4.8.2` now, was `v4.7.4`. (via [#284])
 
 [#284]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/284
+[#285]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/285
 
 ## 3.0.1 - 2022-06-25
 

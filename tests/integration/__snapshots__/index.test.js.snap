@@ -35,9 +35,9 @@ exports[`integration webpack5 with angular13 generated json file: dist/.bom/bom.
       \\"type\\": \\"application\\",
       \\"name\\": \\"example-webpack5-angular13\\",
       \\"group\\": \\"@cyclonedx-weboack-plugin-tests\\",
-      \\"bom-ref\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?\\",
+      \\"bom-ref\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13\\",
       \\"description\\": \\"example setup witch Angular13 in WebPack5\\",
-      \\"purl\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?\\"
+      \\"purl\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13\\"
     }
   },
   \\"components\\": [
@@ -262,7 +262,7 @@ exports[`integration webpack5 with angular13 generated json file: dist/.bom/bom.
       ]
     },
     {
-      \\"ref\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?\\",
+      \\"ref\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13\\",
       \\"dependsOn\\": [
         \\"pkg:npm/%40angular/common@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/common\\",
         \\"pkg:npm/%40angular/core@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/core\\",
@@ -325,9 +325,9 @@ exports[`integration webpack5 with angular13 generated json file: dist/.well-kno
       \\"type\\": \\"application\\",
       \\"name\\": \\"example-webpack5-angular13\\",
       \\"group\\": \\"@cyclonedx-weboack-plugin-tests\\",
-      \\"bom-ref\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?\\",
+      \\"bom-ref\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13\\",
       \\"description\\": \\"example setup witch Angular13 in WebPack5\\",
-      \\"purl\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?\\"
+      \\"purl\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13\\"
     }
   },
   \\"components\\": [
@@ -552,7 +552,7 @@ exports[`integration webpack5 with angular13 generated json file: dist/.well-kno
       ]
     },
     {
-      \\"ref\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?\\",
+      \\"ref\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13\\",
       \\"dependsOn\\": [
         \\"pkg:npm/%40angular/common@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/common\\",
         \\"pkg:npm/%40angular/core@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/core\\",
@@ -605,11 +605,11 @@ exports[`integration webpack5 with angular13 generated xml file: dist/.bom/bom.x
         </externalReferences>
       </tool>
     </tools>
-    <component type=\\"application\\" bom-ref=\\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?\\">
+    <component type=\\"application\\" bom-ref=\\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13\\">
       <group>@cyclonedx-weboack-plugin-tests</group>
       <name>example-webpack5-angular13</name>
       <description>example setup witch Angular13 in WebPack5</description>
-      <purl>pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?</purl>
+      <purl>pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13</purl>
     </component>
   </metadata>
   <components>
@@ -782,7 +782,7 @@ exports[`integration webpack5 with angular13 generated xml file: dist/.bom/bom.x
       <dependency ref=\\"pkg:npm/%40angular/common@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/common\\"/>
       <dependency ref=\\"pkg:npm/%40angular/core@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/core\\"/>
     </dependency>
-    <dependency ref=\\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?\\">
+    <dependency ref=\\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13\\">
       <dependency ref=\\"pkg:npm/%40angular/common@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/common\\"/>
       <dependency ref=\\"pkg:npm/%40angular/core@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/core\\"/>
       <dependency ref=\\"pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/platform-browser\\"/>
@@ -835,9 +835,9 @@ exports[`integration webpack5 with react18 generated json file: dist/.bom/bom.js
       \\"name\\": \\"example-webpack5-react18\\",
       \\"group\\": \\"@cyclonedx-webpack-plugin-tests\\",
       \\"version\\": \\"0.0.1\\",
-      \\"bom-ref\\": \\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?\\",
+      \\"bom-ref\\": \\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1\\",
       \\"description\\": \\"example setup with react and webpack5\\",
-      \\"purl\\": \\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?\\"
+      \\"purl\\": \\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1\\"
     }
   },
   \\"components\\": [
@@ -1001,7 +1001,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.bom/bom.js
   ],
   \\"dependencies\\": [
     {
-      \\"ref\\": \\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?\\",
+      \\"ref\\": \\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1\\",
       \\"dependsOn\\": [
         \\"pkg:npm/css-loader@6.7.1?vcs_url=webpack-contrib/css-loader\\",
         \\"pkg:npm/react-dom@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react-dom\\",
@@ -1067,9 +1067,9 @@ exports[`integration webpack5 with react18 generated json file: dist/.well-known
       \\"name\\": \\"example-webpack5-react18\\",
       \\"group\\": \\"@cyclonedx-webpack-plugin-tests\\",
       \\"version\\": \\"0.0.1\\",
-      \\"bom-ref\\": \\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?\\",
+      \\"bom-ref\\": \\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1\\",
       \\"description\\": \\"example setup with react and webpack5\\",
-      \\"purl\\": \\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?\\"
+      \\"purl\\": \\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1\\"
     }
   },
   \\"components\\": [
@@ -1233,7 +1233,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.well-known
   ],
   \\"dependencies\\": [
     {
-      \\"ref\\": \\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?\\",
+      \\"ref\\": \\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1\\",
       \\"dependsOn\\": [
         \\"pkg:npm/css-loader@6.7.1?vcs_url=webpack-contrib/css-loader\\",
         \\"pkg:npm/react-dom@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react-dom\\",
@@ -1288,12 +1288,12 @@ exports[`integration webpack5 with react18 generated xml file: dist/.bom/bom.xml
         </externalReferences>
       </tool>
     </tools>
-    <component type=\\"application\\" bom-ref=\\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?\\">
+    <component type=\\"application\\" bom-ref=\\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1\\">
       <group>@cyclonedx-webpack-plugin-tests</group>
       <name>example-webpack5-react18</name>
       <version>0.0.1</version>
       <description>example setup with react and webpack5</description>
-      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?</purl>
+      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1</purl>
     </component>
   </metadata>
   <components>
@@ -1422,7 +1422,7 @@ exports[`integration webpack5 with react18 generated xml file: dist/.bom/bom.xml
     </component>
   </components>
   <dependencies>
-    <dependency ref=\\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?\\">
+    <dependency ref=\\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1\\">
       <dependency ref=\\"pkg:npm/css-loader@6.7.1?vcs_url=webpack-contrib/css-loader\\"/>
       <dependency ref=\\"pkg:npm/react-dom@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react-dom\\"/>
       <dependency ref=\\"pkg:npm/react@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react\\"/>
@@ -1474,9 +1474,9 @@ exports[`integration webpack5 with vue2 generated json file: dist/.bom/bom.json 
       \\"type\\": \\"application\\",
       \\"name\\": \\"example-webpack5-vue2\\",
       \\"group\\": \\"@cyclonedx-weboack-plugin-tests\\",
-      \\"bom-ref\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2?\\",
+      \\"bom-ref\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2\\",
       \\"description\\": \\"example setup witch Vue2 in WebPack5\\",
-      \\"purl\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2?\\"
+      \\"purl\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2\\"
     }
   },
   \\"components\\": [
@@ -1516,7 +1516,7 @@ exports[`integration webpack5 with vue2 generated json file: dist/.bom/bom.json 
   ],
   \\"dependencies\\": [
     {
-      \\"ref\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2?\\",
+      \\"ref\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2\\",
       \\"dependsOn\\": [
         \\"pkg:npm/vue@2.6.14?vcs_url=git+https://github.com/vuejs/vue.git\\"
       ]
@@ -1563,9 +1563,9 @@ exports[`integration webpack5 with vue2 generated json file: dist/.well-known/sb
       \\"type\\": \\"application\\",
       \\"name\\": \\"example-webpack5-vue2\\",
       \\"group\\": \\"@cyclonedx-weboack-plugin-tests\\",
-      \\"bom-ref\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2?\\",
+      \\"bom-ref\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2\\",
       \\"description\\": \\"example setup witch Vue2 in WebPack5\\",
-      \\"purl\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2?\\"
+      \\"purl\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2\\"
     }
   },
   \\"components\\": [
@@ -1605,7 +1605,7 @@ exports[`integration webpack5 with vue2 generated json file: dist/.well-known/sb
   ],
   \\"dependencies\\": [
     {
-      \\"ref\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2?\\",
+      \\"ref\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2\\",
       \\"dependsOn\\": [
         \\"pkg:npm/vue@2.6.14?vcs_url=git+https://github.com/vuejs/vue.git\\"
       ]
@@ -1642,11 +1642,11 @@ exports[`integration webpack5 with vue2 generated xml file: dist/.bom/bom.xml 1`
         </externalReferences>
       </tool>
     </tools>
-    <component type=\\"application\\" bom-ref=\\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2?\\">
+    <component type=\\"application\\" bom-ref=\\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2\\">
       <group>@cyclonedx-weboack-plugin-tests</group>
       <name>example-webpack5-vue2</name>
       <description>example setup witch Vue2 in WebPack5</description>
-      <purl>pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2?</purl>
+      <purl>pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2</purl>
     </component>
   </metadata>
   <components>
@@ -1678,7 +1678,7 @@ exports[`integration webpack5 with vue2 generated xml file: dist/.bom/bom.xml 1`
     </component>
   </components>
   <dependencies>
-    <dependency ref=\\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2?\\">
+    <dependency ref=\\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2\\">
       <dependency ref=\\"pkg:npm/vue@2.6.14?vcs_url=git+https://github.com/vuejs/vue.git\\"/>
     </dependency>
     <dependency ref=\\"pkg:npm/vue@2.6.14?vcs_url=git+https://github.com/vuejs/vue.git\\"/>
