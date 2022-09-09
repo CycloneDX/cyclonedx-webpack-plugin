@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Misc
+  * Style: imports are sorted, now. (via [#286])
+
+[#286]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/286
+
 ## 3.1.0 - 2022-09-07
 
 * Changed

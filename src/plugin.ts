@@ -17,11 +17,10 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
+import * as CDX from '@cyclonedx/cyclonedx-library'
 import { join as joinPath } from 'path'
-
 import { sync as readPackageUpSync } from 'read-pkg-up'
 import { Compilation, Compiler, sources } from 'webpack'
-import * as CDX from '@cyclonedx/cyclonedx-library'
 
 import { Extractor } from './extractor'
 import { makeThisTool } from './thisTool'
