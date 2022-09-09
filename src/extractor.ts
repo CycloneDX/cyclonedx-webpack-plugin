@@ -17,9 +17,9 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
+import * as CDX from '@cyclonedx/cyclonedx-library'
 import { sync as readPackageUpSync } from 'read-pkg-up'
 import { Compilation, Module } from 'webpack'
-import * as CDX from '@cyclonedx/cyclonedx-library'
 
 type WebpackLogger = Compilation['logger']
 
