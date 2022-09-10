@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 3.1.1 - 2022-09-10
+
+Maintenance release.
+
 * Misc
   * Style: imports are sorted, now. (via [#286])
 * Build
