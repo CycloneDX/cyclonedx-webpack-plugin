@@ -6,8 +6,11 @@ All notable changes to this project will be documented in this file.
 
 * Misc
   * Style: imports are sorted, now. (via [#286])
+* Build
+  * Use _TypeScript_ `v4.8.3` now, was `v4.8.2`. (via [#288])
 
 [#286]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/286
+[#288]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/288
 
 ## 3.1.0 - 2022-09-07
 
