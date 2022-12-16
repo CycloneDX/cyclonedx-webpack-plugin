@@ -8,10 +8,13 @@ All notable changes to this project will be documented in this file.
   * fix CI/CT shield ([badges/shields#8671] via [#515])
 * Build
   * Use _TypeScript_ `v4.9.4` now, was `v4.9.3`. (via [#508])
+* Misc
+  * Use `eslint-config-standard-with-typescript@24.0.0` now, was `@23.0.0`. (via [#519])
 
 [badges/shields#8671]: https://github.com/badges/shields/issues/8671
 [#508]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/508
 [#515]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/515
+[#519]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/519
 
 ## 3.1.2 - 2022-11-19
 

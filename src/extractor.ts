@@ -39,7 +39,7 @@ export class Extractor {
   }
 
   generateComponents (modules: Iterable<Module>, logger?: WebpackLogger): Iterable<CDX.Models.Component> {
-    const pkgs: { [path: string]: CDX.Models.Component | undefined } = {}
+    const pkgs: Record<string, CDX.Models.Component | undefined> = {}
     const components = new Map<Module, CDX.Models.Component>()
 
     logger?.log('start building Components from modules...')
