@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Docs
+  * fix CI/CT shield ([badges/shields#8671] via [#515])
+* Build
+  * Use _TypeScript_ `v4.9.4` now, was `v4.9.3`. (via [#508])
+
+[badges/shields#8671]: https://github.com/badges/shields/issues/8671
+[#508]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/508
+[#515]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/515
+
 ## 3.1.2 - 2022-11-19
 
 Maintenance release.
