@@ -16,11 +16,3 @@ limitations under the License.
 SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
-
-const { Tooltip, Toast, Popover } = require('bootstrap')
-
-// no real world use, but showcase
-
-console.log('Tooltip version', Tooltip.VERSION)
-console.log('Toast version', Toast.VERSION)
-console.log('Popover version', Popover.VERSION)

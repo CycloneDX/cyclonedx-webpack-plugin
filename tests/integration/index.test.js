@@ -1,6 +1,3 @@
-'use strict'
-/* eslint-env jest */
-
 /*!
 This file is part of CycloneDX Webpack plugin.
 
