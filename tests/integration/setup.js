@@ -1,4 +1,3 @@
-'use strict'
 /*!
 This file is part of CycloneDX Webpack plugin.
 
