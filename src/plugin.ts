@@ -20,7 +20,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 import * as CDX from '@cyclonedx/cyclonedx-library'
 import { join as joinPath } from 'path'
 import { sync as readPackageUpSync } from 'read-pkg-up'
-import { type Compiler, Compilation, sources } from 'webpack'
+import { Compilation, type Compiler, sources } from 'webpack'
 
 import { Extractor } from './extractor'
 import { makeThisTool } from './thisTool'
