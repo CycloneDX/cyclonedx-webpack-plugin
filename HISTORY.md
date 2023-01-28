@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Misc
+  * Use `eslint-config-standard-with-typescript@33.0.0` now, was `@24.0.0`. (via [#596])
+
+[#596]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/596
+
 ## 3.1.3 - 2022-12-16
 
 Maintenance release.
