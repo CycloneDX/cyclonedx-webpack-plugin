@@ -20,7 +20,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 import * as CDX from '@cyclonedx/cyclonedx-library'
 import { join as joinPath } from 'path'
 import { sync as readPackageUpSync } from 'read-pkg-up'
-import { Compilation, Compiler, sources } from 'webpack'
+import { type Compiler, Compilation, sources } from 'webpack'
 
 import { Extractor } from './extractor'
 import { makeThisTool } from './thisTool'
@@ -218,15 +218,19 @@ export class CycloneDxWebpackPlugin {
         name: pluginName,
         stage: Compilation.PROCESS_ASSETS_STAGE_ADDITIONAL
       },
-      () => toBeSerialized.forEach(
-        (serializer: CDX.Serialize.Types.Serializer, file: string) => compilation[
-          (compilation.getAsset(file) === undefined)
-            ? 'emitAsset'
-            : 'updateAsset'
-        ](file, sources.CompatSource.from({
-          source: () => serializer.serialize(bom, serializeOptions)
-        }))
-      )
+      () => {
+        toBeSerialized.forEach(
+          (serializer: CDX.Serialize.Types.Serializer, file: string) => {
+            compilation[
+              (compilation.getAsset(file) === undefined)
+                ? 'emitAsset'
+                : 'updateAsset'
+            ](file, sources.CompatSource.from({
+              source: () => serializer.serialize(bom, serializeOptions)
+            }))
+          }
+        )
+      }
     )
   }
 

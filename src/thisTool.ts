@@ -17,7 +17,7 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import * as CDX from '@cyclonedx/cyclonedx-library'
+import type * as CDX from '@cyclonedx/cyclonedx-library'
 import { sync as readPackageUpSync } from 'read-pkg-up'
 
 export function makeThisTool (builder: CDX.Builders.FromPackageJson.ToolBuilder): CDX.Models.Tool | undefined {
