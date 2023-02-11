@@ -4,9 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Build
+  * Use _TypeScript_ `v4.9.5` now, was `v4.9.4`. (via [#619])
 * Misc
   * Use `eslint-config-standard-with-typescript@34.0.0` now, was `@24.0.0`. (via [#596], [#613])
 
+[#619]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/619
 [#596]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/596
 [#613]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/613
 
