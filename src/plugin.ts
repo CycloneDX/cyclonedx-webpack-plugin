@@ -18,13 +18,14 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import * as CDX from '@cyclonedx/cyclonedx-library'
-import { join as joinPath } from 'path'
+import { existsSync } from 'fs'
+import { join as joinPath, resolve } from 'path'
 import { sync as readPackageUpSync } from 'read-pkg-up'
 import { Compilation, type Compiler, sources } from 'webpack'
 
 import { Extractor } from './extractor'
-import { makeThisTool } from './thisTool'
 
+/** @public */
 export interface CycloneDxWebpackPluginOptions {
   // IMPORTANT: keep the table in the `README` in sync!
 
@@ -94,6 +95,7 @@ export interface CycloneDxWebpackPluginOptions {
   rootComponentVersion?: CycloneDxWebpackPlugin['rootComponentVersion']
 }
 
+/** @public */
 export class CycloneDxWebpackPlugin {
   specVersion: CDX.Spec.Version
   reproducibleResults: boolean
@@ -252,15 +254,44 @@ export class CycloneDxWebpackPlugin {
       ? undefined
       : new Date()
 
-    const thisTool = makeThisTool(cdxToolBuilder)
-    if (thisTool !== undefined) {
-      bom.metadata.tools.add(thisTool)
+    for (const tool of this.#makeTools(cdxToolBuilder)) {
+      bom.metadata.tools.add(tool)
     }
 
     if (bom.metadata.component !== undefined) {
       bom.metadata.component.type = this.rootComponentType
       bom.metadata.component.purl = cdxPurlFactory.makeFromComponent(bom.metadata.component)
       bom.metadata.component.bomRef.value = bom.metadata.component.purl?.toString()
+    }
+  }
+
+  * #makeTools (builder: CDX.Builders.FromNodePackageJson.ToolBuilder): Generator<CDX.Models.Tool> {
+    /* eslint-disable-next-line @typescript-eslint/no-var-requires */
+    const packageJsonPaths = ['../package.json']
+
+    const libs = [
+      '@cyclonedx/cyclonedx-library'
+    ].map(s => s.split('/', 2))
+    const nodeModulePaths = require.resolve.paths('__some_none-native_package__') ?? []
+    /* eslint-disable no-labels */
+    libsLoop:
+    for (const lib of libs) {
+      for (const nodeModulePath of nodeModulePaths) {
+        const packageJsonPath = resolve(nodeModulePath, ...lib, 'package.json')
+        if (existsSync(packageJsonPath)) {
+          packageJsonPaths.push(packageJsonPath)
+          continue libsLoop
+        }
+      }
+    }
+    /* eslint-enable no-labels */
+
+    for (const packageJsonPath of packageJsonPaths) {
+      /* eslint-disable-next-line @typescript-eslint/no-var-requires */
+      const tool = builder.makeTool(require(packageJsonPath))
+      if (tool !== undefined) {
+        yield tool
+      }
     }
   }
 }

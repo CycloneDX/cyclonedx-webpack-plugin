@@ -21,7 +21,9 @@ const fs = require('fs')
 const path = require('path')
 const { spawnSync } = require('child_process')
 
-const program = require('../../package.json')
+const { describe, expect, it } = require('@jest/globals')
+
+const { version: thisVersion } = require('../../package.json')
 
 describe('integration', () => {
   describe.each(
@@ -143,35 +145,47 @@ function makeReproducible (format, data) {
 function makeJsonReproducible (json) {
   return json
     .replace(
-      `
-    "tools": [
-      {
-        "vendor": "@cyclonedx",
-        "name": "webpack-plugin",
-        "version": "${program.version}"`,
-      `
-    "tools": [
-      {
-        "vendor": "@cyclonedx",
-        "name": "webpack-plugin",
-        "version": "TESTING"`
+      // replace metadata.tools.version
+      '        "vendor": "@cyclonedx",\n' +
+      '        "name": "cyclonedx-npm",\n' +
+      `        "version": ${JSON.stringify(thisVersion)},\n`,
+      '        "vendor": "@cyclonedx",\n' +
+      '        "name": "cyclonedx-npm",\n' +
+      '        "version": "thisVersion-testing",\n'
+    ).replace(
+      // replace metadata.tools.version
+      new RegExp(
+        '        "vendor": "@cyclonedx",\n' +
+        '        "name": "cyclonedx-library",\n' +
+        '        "version": ".+?",\n'
+      ),
+      '        "vendor": "@cyclonedx",\n' +
+      '        "name": "cyclonedx-library",\n' +
+      '        "version": "libVersion-testing",\n'
     )
 }
 
 /**
  * @param {string} xml
  * @returns {string}
+ *
+ * eslint-disable-next-line no-unused-vars
  */
 function makeXmlReproducible (xml) {
   return xml
-    .replace(`
-      <tool>
-        <vendor>@cyclonedx</vendor>
-        <name>webpack-plugin</name>
-        <version>${program.version}</version>`,
-      `
-      <tool>
-        <vendor>@cyclonedx</vendor>
-        <name>webpack-plugin</name>
-        <version>TESTING</version>`)
+    .replace(
+      '        <vendor>@cyclonedx</vendor>' +
+      '        <name>cyclonedx-npm</name>' +
+      `        <version>${thisVersion}</version>`,
+      '        <vendor>@cyclonedx</vendor>' +
+      '        <name>cyclonedx-library</name>' +
+      '        <version>thisVersion-testing</version>'
+    ).replace(new RegExp(
+      '        <vendor>@cyclonedx</vendor>' +
+        '        <name>cyclonedx-npm</name>' +
+        '        <version>.+?</version>'),
+    '        <vendor>@cyclonedx</vendor>' +
+      '        <name>cyclonedx-library</name>' +
+      '        <version>libVersion-testing</version>'
+    )
 }

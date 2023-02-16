@@ -111,6 +111,13 @@ Angular uses Webpack under the hood. Therefore, it is possible to integrate this
 
 React uses Webpack under the hood. Therefore, it is possible to integrate this plugin.
 
+## Internals
+
+This _webpack_ plugin utilizes the [CycloneDX library][CycloneDX-javascript-library] to generate the actual data structures.
+
+Besides the class `CycloneDxWebpackPlugin` and the interface `CycloneDxWebpackPluginOptions`,  
+this _webpack_ plugin does **not** expose any additional _public_ API or classes - all code is intended to be internal and might change without any notice during version upgrades.
+
 ## Development & Contributing
 
 Feel free to open issues, bugreports or pull requests.  
