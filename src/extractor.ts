@@ -18,8 +18,9 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import type * as CDX from '@cyclonedx/cyclonedx-library'
-import { sync as readPackageUpSync } from 'read-pkg-up'
 import { type Compilation, type Module } from 'webpack'
+
+import { getPackageDescription } from './_helpers'
 
 type WebpackLogger = Compilation['logger']
 
@@ -48,7 +49,7 @@ export class Extractor {
         logger?.debug('skipping', module)
         continue
       }
-      const pkg = readPackageUpSync({ cwd: module.context, normalize: false })
+      const pkg = getPackageDescription(module.context)
       if (pkg === undefined) {
         logger?.debug('np package for', module.context)
         continue

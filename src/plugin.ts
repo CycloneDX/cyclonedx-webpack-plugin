@@ -20,9 +20,9 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 import * as CDX from '@cyclonedx/cyclonedx-library'
 import { existsSync } from 'fs'
 import { join as joinPath, resolve } from 'path'
-import { sync as readPackageUpSync } from 'read-pkg-up'
 import { Compilation, type Compiler, sources } from 'webpack'
 
+import { getPackageDescription } from './_helpers'
 import { Extractor } from './extractor'
 
 /** @public */
@@ -165,14 +165,14 @@ export class CycloneDxWebpackPlugin {
     try {
       xmlSerializer = new CDX.Serialize.XmlSerializer(new CDX.Serialize.XML.Normalize.Factory(spec))
     } catch {
-      // pass
+      /* pass */
     }
 
     let jsonSerializer: CDX.Serialize.JsonSerializer | undefined
     try {
       jsonSerializer = new CDX.Serialize.JsonSerializer(new CDX.Serialize.JSON.Normalize.Factory(spec))
     } catch {
-      // pass
+      /* pass */
     }
 
     const toBeSerialized = new Map<string, CDX.Serialize.Types.Serializer>()
@@ -236,13 +236,13 @@ export class CycloneDxWebpackPlugin {
     )
   }
 
-  #makeRootComponent (cwd: string, builder: CDX.Builders.FromNodePackageJson.ComponentBuilder): CDX.Models.Component | undefined {
-    const thisPackage = this.rootComponentAutodetect
-      ? readPackageUpSync({ cwd, normalize: false })
-      : { packageJson: { name: this.rootComponentName, version: this.rootComponentVersion } }
-    return thisPackage === undefined
+  #makeRootComponent (path: string, builder: CDX.Builders.FromNodePackageJson.ComponentBuilder): CDX.Models.Component | undefined {
+    const thisPackageJson = this.rootComponentAutodetect
+      ? getPackageDescription(path)?.packageJson
+      : { name: this.rootComponentName, version: this.rootComponentVersion }
+    return thisPackageJson === undefined
       ? undefined
-      : builder.makeComponent(thisPackage.packageJson)
+      : builder.makeComponent(thisPackageJson)
   }
 
   #finalizeBom (

@@ -6,9 +6,13 @@ All notable changes to this project will be documented in this file.
 
 * Added
   * SBOM result might have additional items in `metadata.tools` populated ([#637] via [#638])
+* Misc
+  * Dropped outdated dependency `read-pkg-up` ([#647] via [#648])
 
 [#637]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/637
 [#638]: https://github.com/CycloneDX/cyclonedx-node-npm/pull/638
+[#647]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/647
+[#648]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/648
 
 ## 3.1.4 - 2023-02-11
 
