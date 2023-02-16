@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 3.2.0 - 2023-02-16
+
 * Added
   * SBOM result might have additional items in `metadata.tools` populated ([#637] via [#638])
 * Misc
