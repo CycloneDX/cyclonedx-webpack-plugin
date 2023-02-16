@@ -33,7 +33,7 @@ exports[`integration webpack5 with angular13 generated json file: dist/.bom/bom.
       {
         \\"vendor\\": \\"@cyclonedx\\",
         \\"name\\": \\"webpack-plugin\\",
-        \\"version\\": \\"3.1.4\\",
+        \\"version\\": \\"thisVersion-testing\\",
         \\"externalReferences\\": [
           {
             \\"url\\": \\"https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues\\",
@@ -345,7 +345,7 @@ exports[`integration webpack5 with angular13 generated json file: dist/.well-kno
       {
         \\"vendor\\": \\"@cyclonedx\\",
         \\"name\\": \\"webpack-plugin\\",
-        \\"version\\": \\"3.1.4\\",
+        \\"version\\": \\"thisVersion-testing\\",
         \\"externalReferences\\": [
           {
             \\"url\\": \\"https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues\\",
@@ -895,7 +895,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.bom/bom.js
       {
         \\"vendor\\": \\"@cyclonedx\\",
         \\"name\\": \\"webpack-plugin\\",
-        \\"version\\": \\"3.1.4\\",
+        \\"version\\": \\"thisVersion-testing\\",
         \\"externalReferences\\": [
           {
             \\"url\\": \\"https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues\\",
@@ -1149,7 +1149,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.well-known
       {
         \\"vendor\\": \\"@cyclonedx\\",
         \\"name\\": \\"webpack-plugin\\",
-        \\"version\\": \\"3.1.4\\",
+        \\"version\\": \\"thisVersion-testing\\",
         \\"externalReferences\\": [
           {
             \\"url\\": \\"https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues\\",
@@ -1598,7 +1598,7 @@ exports[`integration webpack5 with vue2 generated json file: dist/.bom/bom.json 
       {
         \\"vendor\\": \\"@cyclonedx\\",
         \\"name\\": \\"webpack-plugin\\",
-        \\"version\\": \\"3.1.4\\",
+        \\"version\\": \\"thisVersion-testing\\",
         \\"externalReferences\\": [
           {
             \\"url\\": \\"https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues\\",
@@ -1709,7 +1709,7 @@ exports[`integration webpack5 with vue2 generated json file: dist/.well-known/sb
       {
         \\"vendor\\": \\"@cyclonedx\\",
         \\"name\\": \\"webpack-plugin\\",
-        \\"version\\": \\"3.1.4\\",
+        \\"version\\": \\"thisVersion-testing\\",
         \\"externalReferences\\": [
           {
             \\"url\\": \\"https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues\\",

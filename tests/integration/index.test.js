@@ -147,10 +147,10 @@ function makeJsonReproducible (json) {
     .replace(
       // replace metadata.tools.version
       '        "vendor": "@cyclonedx",\n' +
-      '        "name": "cyclonedx-npm",\n' +
+      '        "name": "webpack-plugin",\n' +
       `        "version": ${JSON.stringify(thisVersion)},\n`,
       '        "vendor": "@cyclonedx",\n' +
-      '        "name": "cyclonedx-npm",\n' +
+      '        "name": "webpack-plugin",\n' +
       '        "version": "thisVersion-testing",\n'
     ).replace(
       // replace metadata.tools.version
@@ -175,14 +175,14 @@ function makeXmlReproducible (xml) {
   return xml
     .replace(
       '        <vendor>@cyclonedx</vendor>' +
-      '        <name>cyclonedx-npm</name>' +
+      '        <name>webpack-plugin</name>' +
       `        <version>${thisVersion}</version>`,
       '        <vendor>@cyclonedx</vendor>' +
-      '        <name>cyclonedx-library</name>' +
+      '        <name>webpack-plugin</name>' +
       '        <version>thisVersion-testing</version>'
     ).replace(new RegExp(
       '        <vendor>@cyclonedx</vendor>' +
-        '        <name>cyclonedx-npm</name>' +
+        '        <name>cyclonedx-library</name>' +
         '        <version>.+?</version>'),
     '        <vendor>@cyclonedx</vendor>' +
       '        <name>cyclonedx-library</name>' +

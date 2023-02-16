@@ -275,15 +275,15 @@ export class CycloneDxWebpackPlugin {
     const nodeModulePaths = require.resolve.paths('__some_none-native_package__') ?? []
     /* eslint-disable no-labels */
     libsLoop:
-      for (const lib of libs) {
-        for (const nodeModulePath of nodeModulePaths) {
-          const packageJsonPath = resolve(nodeModulePath, ...lib, 'package.json')
-          if (existsSync(packageJsonPath)) {
-            packageJsonPaths.push(packageJsonPath)
-            continue libsLoop
-          }
+    for (const lib of libs) {
+      for (const nodeModulePath of nodeModulePaths) {
+        const packageJsonPath = resolve(nodeModulePath, ...lib, 'package.json')
+        if (existsSync(packageJsonPath)) {
+          packageJsonPaths.push(packageJsonPath)
+          continue libsLoop
         }
       }
+    }
     /* eslint-enable no-labels */
 
     for (const packageJsonPath of packageJsonPaths) {
