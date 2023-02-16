@@ -632,7 +632,7 @@ exports[`integration webpack5 with angular13 generated xml file: dist/.bom/bom.x
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-library</name>
-        <version>1.11.0</version>
+        <version>libVersion-testing</version>
         <externalReferences>
           <reference type=\\"issue-tracker\\">
             <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
@@ -651,7 +651,7 @@ exports[`integration webpack5 with angular13 generated xml file: dist/.bom/bom.x
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>webpack-plugin</name>
-        <version>3.1.4</version>
+        <version>thisVersion-testing</version>
         <externalReferences>
           <reference type=\\"issue-tracker\\">
             <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
@@ -1378,7 +1378,7 @@ exports[`integration webpack5 with react18 generated xml file: dist/.bom/bom.xml
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-library</name>
-        <version>1.11.0</version>
+        <version>libVersion-testing</version>
         <externalReferences>
           <reference type=\\"issue-tracker\\">
             <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
@@ -1397,7 +1397,7 @@ exports[`integration webpack5 with react18 generated xml file: dist/.bom/bom.xml
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>webpack-plugin</name>
-        <version>3.1.4</version>
+        <version>thisVersion-testing</version>
         <externalReferences>
           <reference type=\\"issue-tracker\\">
             <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
@@ -1795,7 +1795,7 @@ exports[`integration webpack5 with vue2 generated xml file: dist/.bom/bom.xml 1`
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>cyclonedx-library</name>
-        <version>1.11.0</version>
+        <version>libVersion-testing</version>
         <externalReferences>
           <reference type=\\"issue-tracker\\">
             <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
@@ -1814,7 +1814,7 @@ exports[`integration webpack5 with vue2 generated xml file: dist/.bom/bom.xml 1`
       <tool>
         <vendor>@cyclonedx</vendor>
         <name>webpack-plugin</name>
-        <version>3.1.4</version>
+        <version>thisVersion-testing</version>
         <externalReferences>
           <reference type=\\"issue-tracker\\">
             <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
