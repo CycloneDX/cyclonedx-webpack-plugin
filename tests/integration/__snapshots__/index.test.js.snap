@@ -10,8 +10,30 @@ exports[`integration webpack5 with angular13 generated json file: dist/.bom/bom.
     \\"tools\\": [
       {
         \\"vendor\\": \\"@cyclonedx\\",
+        \\"name\\": \\"cyclonedx-library\\",
+        \\"version\\": \\"libVersion-testing\\",
+        \\"externalReferences\\": [
+          {
+            \\"url\\": \\"https://github.com/CycloneDX/cyclonedx-javascript-library/issues\\",
+            \\"type\\": \\"issue-tracker\\",
+            \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
+          },
+          {
+            \\"url\\": \\"git+https://github.com/CycloneDX/cyclonedx-javascript-library.git\\",
+            \\"type\\": \\"vcs\\",
+            \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\"\\"
+          },
+          {
+            \\"url\\": \\"https://github.com/CycloneDX/cyclonedx-javascript-library#readme\\",
+            \\"type\\": \\"website\\",
+            \\"comment\\": \\"as detected from PackageJson property \\\\\\"homepage\\\\\\"\\"
+          }
+        ]
+      },
+      {
+        \\"vendor\\": \\"@cyclonedx\\",
         \\"name\\": \\"webpack-plugin\\",
-        \\"version\\": \\"TESTING\\",
+        \\"version\\": \\"thisVersion-testing\\",
         \\"externalReferences\\": [
           {
             \\"url\\": \\"https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues\\",
@@ -300,8 +322,30 @@ exports[`integration webpack5 with angular13 generated json file: dist/.well-kno
     \\"tools\\": [
       {
         \\"vendor\\": \\"@cyclonedx\\",
+        \\"name\\": \\"cyclonedx-library\\",
+        \\"version\\": \\"libVersion-testing\\",
+        \\"externalReferences\\": [
+          {
+            \\"url\\": \\"https://github.com/CycloneDX/cyclonedx-javascript-library/issues\\",
+            \\"type\\": \\"issue-tracker\\",
+            \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
+          },
+          {
+            \\"url\\": \\"git+https://github.com/CycloneDX/cyclonedx-javascript-library.git\\",
+            \\"type\\": \\"vcs\\",
+            \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\"\\"
+          },
+          {
+            \\"url\\": \\"https://github.com/CycloneDX/cyclonedx-javascript-library#readme\\",
+            \\"type\\": \\"website\\",
+            \\"comment\\": \\"as detected from PackageJson property \\\\\\"homepage\\\\\\"\\"
+          }
+        ]
+      },
+      {
+        \\"vendor\\": \\"@cyclonedx\\",
         \\"name\\": \\"webpack-plugin\\",
-        \\"version\\": \\"TESTING\\",
+        \\"version\\": \\"thisVersion-testing\\",
         \\"externalReferences\\": [
           {
             \\"url\\": \\"https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues\\",
@@ -587,8 +631,27 @@ exports[`integration webpack5 with angular13 generated xml file: dist/.bom/bom.x
     <tools>
       <tool>
         <vendor>@cyclonedx</vendor>
+        <name>cyclonedx-library</name>
+        <version>libVersion-testing</version>
+        <externalReferences>
+          <reference type=\\"issue-tracker\\">
+            <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
+            <comment>as detected from PackageJson property \\"bugs.url\\"</comment>
+          </reference>
+          <reference type=\\"vcs\\">
+            <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
+            <comment>as detected from PackageJson property \\"repository.url\\"</comment>
+          </reference>
+          <reference type=\\"website\\">
+            <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+            <comment>as detected from PackageJson property \\"homepage\\"</comment>
+          </reference>
+        </externalReferences>
+      </tool>
+      <tool>
+        <vendor>@cyclonedx</vendor>
         <name>webpack-plugin</name>
-        <version>TESTING</version>
+        <version>thisVersion-testing</version>
         <externalReferences>
           <reference type=\\"issue-tracker\\">
             <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
@@ -809,8 +872,30 @@ exports[`integration webpack5 with react18 generated json file: dist/.bom/bom.js
     \\"tools\\": [
       {
         \\"vendor\\": \\"@cyclonedx\\",
+        \\"name\\": \\"cyclonedx-library\\",
+        \\"version\\": \\"libVersion-testing\\",
+        \\"externalReferences\\": [
+          {
+            \\"url\\": \\"https://github.com/CycloneDX/cyclonedx-javascript-library/issues\\",
+            \\"type\\": \\"issue-tracker\\",
+            \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
+          },
+          {
+            \\"url\\": \\"git+https://github.com/CycloneDX/cyclonedx-javascript-library.git\\",
+            \\"type\\": \\"vcs\\",
+            \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\"\\"
+          },
+          {
+            \\"url\\": \\"https://github.com/CycloneDX/cyclonedx-javascript-library#readme\\",
+            \\"type\\": \\"website\\",
+            \\"comment\\": \\"as detected from PackageJson property \\\\\\"homepage\\\\\\"\\"
+          }
+        ]
+      },
+      {
+        \\"vendor\\": \\"@cyclonedx\\",
         \\"name\\": \\"webpack-plugin\\",
-        \\"version\\": \\"TESTING\\",
+        \\"version\\": \\"thisVersion-testing\\",
         \\"externalReferences\\": [
           {
             \\"url\\": \\"https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues\\",
@@ -1041,8 +1126,30 @@ exports[`integration webpack5 with react18 generated json file: dist/.well-known
     \\"tools\\": [
       {
         \\"vendor\\": \\"@cyclonedx\\",
+        \\"name\\": \\"cyclonedx-library\\",
+        \\"version\\": \\"libVersion-testing\\",
+        \\"externalReferences\\": [
+          {
+            \\"url\\": \\"https://github.com/CycloneDX/cyclonedx-javascript-library/issues\\",
+            \\"type\\": \\"issue-tracker\\",
+            \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
+          },
+          {
+            \\"url\\": \\"git+https://github.com/CycloneDX/cyclonedx-javascript-library.git\\",
+            \\"type\\": \\"vcs\\",
+            \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\"\\"
+          },
+          {
+            \\"url\\": \\"https://github.com/CycloneDX/cyclonedx-javascript-library#readme\\",
+            \\"type\\": \\"website\\",
+            \\"comment\\": \\"as detected from PackageJson property \\\\\\"homepage\\\\\\"\\"
+          }
+        ]
+      },
+      {
+        \\"vendor\\": \\"@cyclonedx\\",
         \\"name\\": \\"webpack-plugin\\",
-        \\"version\\": \\"TESTING\\",
+        \\"version\\": \\"thisVersion-testing\\",
         \\"externalReferences\\": [
           {
             \\"url\\": \\"https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues\\",
@@ -1270,8 +1377,27 @@ exports[`integration webpack5 with react18 generated xml file: dist/.bom/bom.xml
     <tools>
       <tool>
         <vendor>@cyclonedx</vendor>
+        <name>cyclonedx-library</name>
+        <version>libVersion-testing</version>
+        <externalReferences>
+          <reference type=\\"issue-tracker\\">
+            <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
+            <comment>as detected from PackageJson property \\"bugs.url\\"</comment>
+          </reference>
+          <reference type=\\"vcs\\">
+            <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
+            <comment>as detected from PackageJson property \\"repository.url\\"</comment>
+          </reference>
+          <reference type=\\"website\\">
+            <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+            <comment>as detected from PackageJson property \\"homepage\\"</comment>
+          </reference>
+        </externalReferences>
+      </tool>
+      <tool>
+        <vendor>@cyclonedx</vendor>
         <name>webpack-plugin</name>
-        <version>TESTING</version>
+        <version>thisVersion-testing</version>
         <externalReferences>
           <reference type=\\"issue-tracker\\">
             <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
@@ -1449,8 +1575,30 @@ exports[`integration webpack5 with vue2 generated json file: dist/.bom/bom.json 
     \\"tools\\": [
       {
         \\"vendor\\": \\"@cyclonedx\\",
+        \\"name\\": \\"cyclonedx-library\\",
+        \\"version\\": \\"libVersion-testing\\",
+        \\"externalReferences\\": [
+          {
+            \\"url\\": \\"https://github.com/CycloneDX/cyclonedx-javascript-library/issues\\",
+            \\"type\\": \\"issue-tracker\\",
+            \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
+          },
+          {
+            \\"url\\": \\"git+https://github.com/CycloneDX/cyclonedx-javascript-library.git\\",
+            \\"type\\": \\"vcs\\",
+            \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\"\\"
+          },
+          {
+            \\"url\\": \\"https://github.com/CycloneDX/cyclonedx-javascript-library#readme\\",
+            \\"type\\": \\"website\\",
+            \\"comment\\": \\"as detected from PackageJson property \\\\\\"homepage\\\\\\"\\"
+          }
+        ]
+      },
+      {
+        \\"vendor\\": \\"@cyclonedx\\",
         \\"name\\": \\"webpack-plugin\\",
-        \\"version\\": \\"TESTING\\",
+        \\"version\\": \\"thisVersion-testing\\",
         \\"externalReferences\\": [
           {
             \\"url\\": \\"https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues\\",
@@ -1538,8 +1686,30 @@ exports[`integration webpack5 with vue2 generated json file: dist/.well-known/sb
     \\"tools\\": [
       {
         \\"vendor\\": \\"@cyclonedx\\",
+        \\"name\\": \\"cyclonedx-library\\",
+        \\"version\\": \\"libVersion-testing\\",
+        \\"externalReferences\\": [
+          {
+            \\"url\\": \\"https://github.com/CycloneDX/cyclonedx-javascript-library/issues\\",
+            \\"type\\": \\"issue-tracker\\",
+            \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
+          },
+          {
+            \\"url\\": \\"git+https://github.com/CycloneDX/cyclonedx-javascript-library.git\\",
+            \\"type\\": \\"vcs\\",
+            \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\"\\"
+          },
+          {
+            \\"url\\": \\"https://github.com/CycloneDX/cyclonedx-javascript-library#readme\\",
+            \\"type\\": \\"website\\",
+            \\"comment\\": \\"as detected from PackageJson property \\\\\\"homepage\\\\\\"\\"
+          }
+        ]
+      },
+      {
+        \\"vendor\\": \\"@cyclonedx\\",
         \\"name\\": \\"webpack-plugin\\",
-        \\"version\\": \\"TESTING\\",
+        \\"version\\": \\"thisVersion-testing\\",
         \\"externalReferences\\": [
           {
             \\"url\\": \\"https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues\\",
@@ -1624,8 +1794,27 @@ exports[`integration webpack5 with vue2 generated xml file: dist/.bom/bom.xml 1`
     <tools>
       <tool>
         <vendor>@cyclonedx</vendor>
+        <name>cyclonedx-library</name>
+        <version>libVersion-testing</version>
+        <externalReferences>
+          <reference type=\\"issue-tracker\\">
+            <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
+            <comment>as detected from PackageJson property \\"bugs.url\\"</comment>
+          </reference>
+          <reference type=\\"vcs\\">
+            <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
+            <comment>as detected from PackageJson property \\"repository.url\\"</comment>
+          </reference>
+          <reference type=\\"website\\">
+            <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+            <comment>as detected from PackageJson property \\"homepage\\"</comment>
+          </reference>
+        </externalReferences>
+      </tool>
+      <tool>
+        <vendor>@cyclonedx</vendor>
         <name>webpack-plugin</name>
-        <version>TESTING</version>
+        <version>thisVersion-testing</version>
         <externalReferences>
           <reference type=\\"issue-tracker\\">
             <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
