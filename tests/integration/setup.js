@@ -24,7 +24,8 @@ const path = require('path');
   const REQUIRES_NPM_INSTALL = [
     'webpack5-vue2',
     'webpack5-angular13',
-    'webpack5-react18'
+    'webpack5-react18',
+    'webpack5-CopyWebpackPlugin'
   ]
 
   console.warn(`

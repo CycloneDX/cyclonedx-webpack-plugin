@@ -186,6 +186,8 @@ export class CycloneDxWebpackPlugin {
       }
     }
 
+    compilation.fileDependencies
+
     compilation.hooks.afterOptimizeTree.tap(
       pluginName,
       (_, modules) => {

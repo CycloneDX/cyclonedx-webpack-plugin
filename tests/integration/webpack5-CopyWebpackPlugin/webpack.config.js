@@ -18,35 +18,29 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const HtmlInlineScriptPlugin = require('html-inline-script-webpack-plugin')
 
+const CopyPlugin = require("copy-webpack-plugin");
 const { CycloneDxWebpackPlugin } = require('@cyclonedx/webpack-plugin')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/js/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/index.html'
+    new CopyPlugin({
+      patterns: [
+        { from: "./src/css/index.css", to: "css/index.css" },
+        { from: "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js", to: "bootstrap/bs.js" },
+        { from: "./node_modules/bootstrap/dist/css/bootstrap.min.css", to: "bootstrap/bs.css" },
+      ],
     }),
-    new HtmlInlineScriptPlugin(),
     new CycloneDxWebpackPlugin(
       {
         outputLocation: '.bom',
         reproducibleResults: true
       }
     )
-  ],
-  externals: {
-    // vue: 'Vue'
-  },
-  resolve: {
-    alias: {
-      vue$: 'vue/dist/vue.esm.js'
-    }
-  }
+  ]
 }
