@@ -750,7 +750,10 @@ module.exports = function (webpackEnv) {
         }),
       new CycloneDxWebpackPlugin({
         outputLocation: '.bom',
-        reproducibleResults: true
+        reproducibleResults: true,
+        postProcess: (bom) => {
+          bom.metadata.component.author = 'testing-post-process-option'
+        }
       })
     ].filter(Boolean),
     // Turn off performance processing because we utilize

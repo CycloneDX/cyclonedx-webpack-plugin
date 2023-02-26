@@ -52,6 +52,7 @@ new CycloneDxWebpackPlugin(options?: object)
 | **`rootComponentType`** | `{string}` | `"application"` | Set the RootComponent's type.<br/>See [the list of valid values](https://cyclonedx.org/docs/1.4/json/#metadata_component_type). Supported values depend on [CycloneDX-javascript-library]'s enum `ComponentType`. |
 | **`rootComponentName`** | optional `{string}` | `undefined` | If `rootComponentAutodetect` is disabled, then this value is assumed as the "name" of the `package.json`. |
 | **`rootComponentVersion`** | optional `{string}` | `undefined` | If `rootComponentAutodetect` is disabled, then this value is assumed as the "version" of the `package.json`. |
+| **`postProcess`** | optional `(bom: BOM)=>void` | `undefined` | If `postProcess` is given, bom will be passed to it and can be altered prior to serialization. |
 
 ### Example
 
