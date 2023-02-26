@@ -921,6 +921,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.bom/bom.js
       \\"group\\": \\"@cyclonedx-webpack-plugin-tests\\",
       \\"version\\": \\"0.0.1\\",
       \\"bom-ref\\": \\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1\\",
+      \\"author\\": \\"testing-post-process-option\\",
       \\"description\\": \\"example setup with react and webpack5\\",
       \\"purl\\": \\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1\\"
     }
@@ -1175,6 +1176,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.well-known
       \\"group\\": \\"@cyclonedx-webpack-plugin-tests\\",
       \\"version\\": \\"0.0.1\\",
       \\"bom-ref\\": \\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1\\",
+      \\"author\\": \\"testing-post-process-option\\",
       \\"description\\": \\"example setup with react and webpack5\\",
       \\"purl\\": \\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1\\"
     }
@@ -1415,6 +1417,7 @@ exports[`integration webpack5 with react18 generated xml file: dist/.bom/bom.xml
       </tool>
     </tools>
     <component type=\\"application\\" bom-ref=\\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1\\">
+      <author>testing-post-process-option</author>
       <group>@cyclonedx-webpack-plugin-tests</group>
       <name>example-webpack5-react18</name>
       <version>0.0.1</version>

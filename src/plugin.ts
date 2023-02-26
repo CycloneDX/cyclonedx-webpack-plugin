@@ -93,6 +93,13 @@ export interface CycloneDxWebpackPluginOptions {
    * @default undefined
    */
   rootComponentVersion?: CycloneDxWebpackPlugin['rootComponentVersion']
+
+  /**
+   * If this function is given, bom will be passed to it and can be altered prior to serialization.
+   *
+   * @default undefined
+   */
+  postProcess?: (bom: CDX.Models.Bom) => void
 }
 
 /** @public */
@@ -108,6 +115,7 @@ export class CycloneDxWebpackPlugin {
   rootComponentType: CDX.Models.Component['type']
   rootComponentName: CDX.Models.Component['name'] | undefined
   rootComponentVersion: CDX.Models.Component['version'] | undefined
+  postProcess: ((bom: CDX.Models.Bom) => void) | undefined
 
   constructor ({
     specVersion = CDX.Spec.Version.v1dot4,
@@ -118,7 +126,8 @@ export class CycloneDxWebpackPlugin {
     rootComponentAutodetect = true,
     rootComponentType = CDX.Enums.ComponentType.Application,
     rootComponentName = undefined,
-    rootComponentVersion = undefined
+    rootComponentVersion = undefined,
+    postProcess = undefined
   }: CycloneDxWebpackPluginOptions = {}) {
     this.specVersion = specVersion
     this.reproducibleResults = reproducibleResults
@@ -131,6 +140,7 @@ export class CycloneDxWebpackPlugin {
     this.rootComponentType = rootComponentType
     this.rootComponentName = rootComponentName
     this.rootComponentVersion = rootComponentVersion
+    this.postProcess = postProcess
   }
 
   apply (compiler: Compiler): void {
@@ -262,6 +272,10 @@ export class CycloneDxWebpackPlugin {
       bom.metadata.component.type = this.rootComponentType
       bom.metadata.component.purl = cdxPurlFactory.makeFromComponent(bom.metadata.component)
       bom.metadata.component.bomRef.value = bom.metadata.component.purl?.toString()
+    }
+
+    if (typeof this.postProcess === 'function') {
+      this.postProcess(bom)
     }
   }
 
