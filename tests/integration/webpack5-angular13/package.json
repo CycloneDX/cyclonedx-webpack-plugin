@@ -2,6 +2,27 @@
   "name": "@cyclonedx-weboack-plugin-tests/example-webpack5-angular13",
   "description": "example setup witch Angular13 in WebPack5",
   "private": true,
+  "homepage": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/webpack5-angular13#readme",
+  "copyright": "Copyright OWASP Foundation",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Jan Kowalleck",
+    "email": "jan.kowalleck@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Jan Kowalleck",
+      "email": "jan.kowalleck@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
+    "directory": "tests/integration/webpack5-angular13"
+  },
+  "bugs": {
+    "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
