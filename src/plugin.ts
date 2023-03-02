@@ -19,11 +19,14 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 import * as CDX from '@cyclonedx/cyclonedx-library'
 import { existsSync } from 'fs'
+import normalizePackageJson from 'normalize-package-data'
 import { join as joinPath, resolve } from 'path'
 import { Compilation, type Compiler, sources } from 'webpack'
 
 import { getPackageDescription } from './_helpers'
 import { Extractor } from './extractor'
+
+type WebpackLogger = Compilation['logger']
 
 /** @public */
 export interface CycloneDxWebpackPluginOptions {
@@ -154,7 +157,7 @@ export class CycloneDxWebpackPlugin {
     const cdxComponentBuilder = new CDX.Builders.FromNodePackageJson.ComponentBuilder(cdxExternalReferenceFactory, cdxLicenseFactory)
 
     const bom = new CDX.Models.Bom()
-    bom.metadata.component = this.#makeRootComponent(compilation.compiler.context, cdxComponentBuilder)
+    bom.metadata.component = this.#makeRootComponent(compilation.compiler.context, cdxComponentBuilder, logger.getChildLogger('RootComponentBuilder'))
 
     const serializeOptions: CDX.Serialize.Types.SerializerOptions & CDX.Serialize.Types.NormalizerOptions = {
       sortLists: this.reproducibleResults,
@@ -208,11 +211,11 @@ export class CycloneDxWebpackPlugin {
             bom.components.add(component)
           }
         }
-        thisLogger.log('generated components...')
+        thisLogger.log('generated components.')
 
         thisLogger.log('finalizing BOM...')
-        this.#finalizeBom(bom, cdxToolBuilder, cdxPurlFactory)
-        thisLogger.log('finalizes BOM.')
+        this.#finalizeBom(bom, cdxToolBuilder, cdxPurlFactory, logger.getChildLogger('BomFinalizer'))
+        thisLogger.log('finalized BOM.')
       })
 
     compilation.hooks.processAssets.tap(
@@ -236,25 +239,30 @@ export class CycloneDxWebpackPlugin {
     )
   }
 
-  #makeRootComponent (path: string, builder: CDX.Builders.FromNodePackageJson.ComponentBuilder): CDX.Models.Component | undefined {
+  #makeRootComponent (
+    path: string,
+    builder: CDX.Builders.FromNodePackageJson.ComponentBuilder,
+    logger: WebpackLogger
+  ): CDX.Models.Component | undefined {
     const thisPackageJson = this.rootComponentAutodetect
       ? getPackageDescription(path)?.packageJson
       : { name: this.rootComponentName, version: this.rootComponentVersion }
-    return thisPackageJson === undefined
-      ? undefined
-      : builder.makeComponent(thisPackageJson)
+    if (thisPackageJson === undefined) { return undefined }
+    normalizePackageJson(thisPackageJson, w => { logger.debug('normalizePackageJson from PkgPath', path, 'caused:', w) })
+    return builder.makeComponent(thisPackageJson)
   }
 
   #finalizeBom (
     bom: CDX.Models.Bom,
     cdxToolBuilder: CDX.Builders.FromNodePackageJson.ToolBuilder,
-    cdxPurlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory
+    cdxPurlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory,
+    logger: WebpackLogger
   ): void {
     bom.metadata.timestamp = this.reproducibleResults
       ? undefined
       : new Date()
 
-    for (const tool of this.#makeTools(cdxToolBuilder)) {
+    for (const tool of this.#makeTools(cdxToolBuilder, logger.getChildLogger('ToolMaker'))) {
       bom.metadata.tools.add(tool)
     }
 
@@ -265,7 +273,7 @@ export class CycloneDxWebpackPlugin {
     }
   }
 
-  * #makeTools (builder: CDX.Builders.FromNodePackageJson.ToolBuilder): Generator<CDX.Models.Tool> {
+  * #makeTools (builder: CDX.Builders.FromNodePackageJson.ToolBuilder, logger: WebpackLogger): Generator<CDX.Models.Tool> {
     /* eslint-disable-next-line @typescript-eslint/no-var-requires */
     const packageJsonPaths = ['../package.json']
 
@@ -287,8 +295,11 @@ export class CycloneDxWebpackPlugin {
     /* eslint-enable no-labels */
 
     for (const packageJsonPath of packageJsonPaths) {
+      logger.log('try to build new Tool from PkgPath', packageJsonPath)
       /* eslint-disable-next-line @typescript-eslint/no-var-requires */
-      const tool = builder.makeTool(require(packageJsonPath))
+      const packageJson = require(packageJsonPath)
+      normalizePackageJson(packageJson, w => { logger.debug('normalizePackageJson from PkgPath', packageJsonPath, 'caused:', w) })
+      const tool = builder.makeTool(packageJson)
       if (tool !== undefined) {
         yield tool
       }
