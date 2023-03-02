@@ -18,6 +18,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import type * as CDX from '@cyclonedx/cyclonedx-library'
+import normalizePackageJson from 'normalize-package-data'
 import { type Compilation, type Module } from 'webpack'
 
 import { getPackageDescription } from './_helpers'
@@ -51,12 +52,13 @@ export class Extractor {
       }
       const pkg = getPackageDescription(module.context)
       if (pkg === undefined) {
-        logger?.debug('np package for', module.context)
+        logger?.debug('no package for', module.context)
         continue
       }
       let component = pkgs[pkg.path]
       if (component === undefined) {
         logger?.log('try to build new Component from PkgPath', pkg.path)
+        normalizePackageJson(pkg.packageJson, w => logger?.debug('normalizePackageJson from PkgPath', pkg.path, 'caused:', w))
         component = pkgs[pkg.path] = this.#componentBuilder.makeComponent(pkg.packageJson)
         logger?.debug('built', component, 'based on', pkg, 'for module', module)
       }

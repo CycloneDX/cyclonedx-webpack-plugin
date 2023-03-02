@@ -93,7 +93,7 @@ exports[`integration webpack5 with angular13 generated json file: dist/.bom/bom.
       \\"name\\": \\"common\\",
       \\"group\\": \\"@angular\\",
       \\"version\\": \\"13.3.11\\",
-      \\"bom-ref\\": \\"pkg:npm/%40angular/common@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/common\\",
+      \\"bom-ref\\": \\"pkg:npm/%40angular/common@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/common\\",
       \\"author\\": \\"angular\\",
       \\"description\\": \\"Angular - commonly needed directives and services\\",
       \\"licenses\\": [
@@ -103,12 +103,22 @@ exports[`integration webpack5 with angular13 generated json file: dist/.bom/bom.
           }
         }
       ],
-      \\"purl\\": \\"pkg:npm/%40angular/common@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/common\\",
+      \\"purl\\": \\"pkg:npm/%40angular/common@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/common\\",
       \\"externalReferences\\": [
         {
-          \\"url\\": \\"https://github.com/angular/angular.git#packages/common\\",
+          \\"url\\": \\"https://github.com/angular/angular/issues\\",
+          \\"type\\": \\"issue-tracker\\",
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
+        },
+        {
+          \\"url\\": \\"git+https://github.com/angular/angular.git#packages/common\\",
           \\"type\\": \\"vcs\\",
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\" and \\\\\\"repository.directory\\\\\\"\\"
+        },
+        {
+          \\"url\\": \\"https://github.com/angular/angular#readme\\",
+          \\"type\\": \\"website\\",
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"homepage\\\\\\"\\"
         }
       ]
     },
@@ -117,7 +127,7 @@ exports[`integration webpack5 with angular13 generated json file: dist/.bom/bom.
       \\"name\\": \\"core\\",
       \\"group\\": \\"@angular\\",
       \\"version\\": \\"13.3.11\\",
-      \\"bom-ref\\": \\"pkg:npm/%40angular/core@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/core\\",
+      \\"bom-ref\\": \\"pkg:npm/%40angular/core@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/core\\",
       \\"author\\": \\"angular\\",
       \\"description\\": \\"Angular - the core framework\\",
       \\"licenses\\": [
@@ -127,12 +137,22 @@ exports[`integration webpack5 with angular13 generated json file: dist/.bom/bom.
           }
         }
       ],
-      \\"purl\\": \\"pkg:npm/%40angular/core@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/core\\",
+      \\"purl\\": \\"pkg:npm/%40angular/core@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/core\\",
       \\"externalReferences\\": [
         {
-          \\"url\\": \\"https://github.com/angular/angular.git#packages/core\\",
+          \\"url\\": \\"https://github.com/angular/angular/issues\\",
+          \\"type\\": \\"issue-tracker\\",
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
+        },
+        {
+          \\"url\\": \\"git+https://github.com/angular/angular.git#packages/core\\",
           \\"type\\": \\"vcs\\",
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\" and \\\\\\"repository.directory\\\\\\"\\"
+        },
+        {
+          \\"url\\": \\"https://github.com/angular/angular#readme\\",
+          \\"type\\": \\"website\\",
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"homepage\\\\\\"\\"
         }
       ]
     },
@@ -141,7 +161,7 @@ exports[`integration webpack5 with angular13 generated json file: dist/.bom/bom.
       \\"name\\": \\"platform-browser\\",
       \\"group\\": \\"@angular\\",
       \\"version\\": \\"13.3.11\\",
-      \\"bom-ref\\": \\"pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/platform-browser\\",
+      \\"bom-ref\\": \\"pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/platform-browser\\",
       \\"author\\": \\"angular\\",
       \\"description\\": \\"Angular - library for using Angular in a web browser\\",
       \\"licenses\\": [
@@ -151,12 +171,22 @@ exports[`integration webpack5 with angular13 generated json file: dist/.bom/bom.
           }
         }
       ],
-      \\"purl\\": \\"pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/platform-browser\\",
+      \\"purl\\": \\"pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/platform-browser\\",
       \\"externalReferences\\": [
         {
-          \\"url\\": \\"https://github.com/angular/angular.git#packages/platform-browser\\",
+          \\"url\\": \\"https://github.com/angular/angular/issues\\",
+          \\"type\\": \\"issue-tracker\\",
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
+        },
+        {
+          \\"url\\": \\"git+https://github.com/angular/angular.git#packages/platform-browser\\",
           \\"type\\": \\"vcs\\",
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\" and \\\\\\"repository.directory\\\\\\"\\"
+        },
+        {
+          \\"url\\": \\"https://github.com/angular/angular#readme\\",
+          \\"type\\": \\"website\\",
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"homepage\\\\\\"\\"
         }
       ]
     },
@@ -164,7 +194,7 @@ exports[`integration webpack5 with angular13 generated json file: dist/.bom/bom.
       \\"type\\": \\"library\\",
       \\"name\\": \\"css-loader\\",
       \\"version\\": \\"6.5.1\\",
-      \\"bom-ref\\": \\"pkg:npm/css-loader@6.5.1?vcs_url=webpack-contrib/css-loader\\",
+      \\"bom-ref\\": \\"pkg:npm/css-loader@6.5.1?vcs_url=git+https://github.com/webpack-contrib/css-loader.git\\",
       \\"author\\": \\"Tobias Koppers @sokra\\",
       \\"description\\": \\"css loader module for webpack\\",
       \\"licenses\\": [
@@ -174,17 +204,17 @@ exports[`integration webpack5 with angular13 generated json file: dist/.bom/bom.
           }
         }
       ],
-      \\"purl\\": \\"pkg:npm/css-loader@6.5.1?vcs_url=webpack-contrib/css-loader\\",
+      \\"purl\\": \\"pkg:npm/css-loader@6.5.1?vcs_url=git+https://github.com/webpack-contrib/css-loader.git\\",
       \\"externalReferences\\": [
         {
           \\"url\\": \\"https://github.com/webpack-contrib/css-loader/issues\\",
           \\"type\\": \\"issue-tracker\\",
-          \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs\\\\\\"\\"
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
         },
         {
-          \\"url\\": \\"webpack-contrib/css-loader\\",
+          \\"url\\": \\"git+https://github.com/webpack-contrib/css-loader.git\\",
           \\"type\\": \\"vcs\\",
-          \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository\\\\\\"\\"
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\"\\"
         },
         {
           \\"url\\": \\"https://github.com/webpack-contrib/css-loader\\",
@@ -197,8 +227,8 @@ exports[`integration webpack5 with angular13 generated json file: dist/.bom/bom.
       \\"type\\": \\"library\\",
       \\"name\\": \\"rxjs\\",
       \\"version\\": \\"7.5.5\\",
-      \\"bom-ref\\": \\"pkg:npm/rxjs@7.5.5?vcs_url=https://github.com/reactivex/rxjs.git\\",
-      \\"author\\": \\"Ben Lesh <ben@benlesh.com>\\",
+      \\"bom-ref\\": \\"pkg:npm/rxjs@7.5.5?vcs_url=git+https://github.com/reactivex/rxjs.git\\",
+      \\"author\\": \\"Ben Lesh\\",
       \\"description\\": \\"Reactive Extensions for modern JavaScript\\",
       \\"licenses\\": [
         {
@@ -207,7 +237,7 @@ exports[`integration webpack5 with angular13 generated json file: dist/.bom/bom.
           }
         }
       ],
-      \\"purl\\": \\"pkg:npm/rxjs@7.5.5?vcs_url=https://github.com/reactivex/rxjs.git\\",
+      \\"purl\\": \\"pkg:npm/rxjs@7.5.5?vcs_url=git+https://github.com/reactivex/rxjs.git\\",
       \\"externalReferences\\": [
         {
           \\"url\\": \\"https://github.com/ReactiveX/RxJS/issues\\",
@@ -215,7 +245,7 @@ exports[`integration webpack5 with angular13 generated json file: dist/.bom/bom.
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
         },
         {
-          \\"url\\": \\"https://github.com/reactivex/rxjs.git\\",
+          \\"url\\": \\"git+https://github.com/reactivex/rxjs.git\\",
           \\"type\\": \\"vcs\\",
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\"\\"
         },
@@ -230,7 +260,7 @@ exports[`integration webpack5 with angular13 generated json file: dist/.bom/bom.
       \\"type\\": \\"library\\",
       \\"name\\": \\"tslib\\",
       \\"version\\": \\"2.4.0\\",
-      \\"bom-ref\\": \\"pkg:npm/tslib@2.4.0?vcs_url=https://github.com/Microsoft/tslib.git\\",
+      \\"bom-ref\\": \\"pkg:npm/tslib@2.4.0?vcs_url=git+https://github.com/Microsoft/tslib.git\\",
       \\"author\\": \\"Microsoft Corp.\\",
       \\"description\\": \\"Runtime library for TypeScript helper functions\\",
       \\"licenses\\": [
@@ -240,7 +270,7 @@ exports[`integration webpack5 with angular13 generated json file: dist/.bom/bom.
           }
         }
       ],
-      \\"purl\\": \\"pkg:npm/tslib@2.4.0?vcs_url=https://github.com/Microsoft/tslib.git\\",
+      \\"purl\\": \\"pkg:npm/tslib@2.4.0?vcs_url=git+https://github.com/Microsoft/tslib.git\\",
       \\"externalReferences\\": [
         {
           \\"url\\": \\"https://github.com/Microsoft/TypeScript/issues\\",
@@ -248,7 +278,7 @@ exports[`integration webpack5 with angular13 generated json file: dist/.bom/bom.
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
         },
         {
-          \\"url\\": \\"https://github.com/Microsoft/tslib.git\\",
+          \\"url\\": \\"git+https://github.com/Microsoft/tslib.git\\",
           \\"type\\": \\"vcs\\",
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\"\\"
         },
@@ -284,51 +314,56 @@ exports[`integration webpack5 with angular13 generated json file: dist/.bom/bom.
           \\"url\\": \\"git://github.com/angular/angular.git#packages/zone.js\\",
           \\"type\\": \\"vcs\\",
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\" and \\\\\\"repository.directory\\\\\\"\\"
+        },
+        {
+          \\"url\\": \\"https://github.com/angular/angular#readme\\",
+          \\"type\\": \\"website\\",
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"homepage\\\\\\"\\"
         }
       ]
     }
   ],
   \\"dependencies\\": [
     {
-      \\"ref\\": \\"pkg:npm/%40angular/common@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/common\\",
+      \\"ref\\": \\"pkg:npm/%40angular/common@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/common\\",
       \\"dependsOn\\": [
-        \\"pkg:npm/%40angular/core@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/core\\"
+        \\"pkg:npm/%40angular/core@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/core\\"
       ]
     },
     {
-      \\"ref\\": \\"pkg:npm/%40angular/core@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/core\\",
+      \\"ref\\": \\"pkg:npm/%40angular/core@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/core\\",
       \\"dependsOn\\": [
-        \\"pkg:npm/rxjs@7.5.5?vcs_url=https://github.com/reactivex/rxjs.git\\"
+        \\"pkg:npm/rxjs@7.5.5?vcs_url=git+https://github.com/reactivex/rxjs.git\\"
       ]
     },
     {
-      \\"ref\\": \\"pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/platform-browser\\",
+      \\"ref\\": \\"pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/platform-browser\\",
       \\"dependsOn\\": [
-        \\"pkg:npm/%40angular/common@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/common\\",
-        \\"pkg:npm/%40angular/core@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/core\\"
+        \\"pkg:npm/%40angular/common@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/common\\",
+        \\"pkg:npm/%40angular/core@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/core\\"
       ]
     },
     {
       \\"ref\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?vcs_url=git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13\\",
       \\"dependsOn\\": [
-        \\"pkg:npm/%40angular/common@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/common\\",
-        \\"pkg:npm/%40angular/core@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/core\\",
-        \\"pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/platform-browser\\",
-        \\"pkg:npm/css-loader@6.5.1?vcs_url=webpack-contrib/css-loader\\",
+        \\"pkg:npm/%40angular/common@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/common\\",
+        \\"pkg:npm/%40angular/core@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/core\\",
+        \\"pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/platform-browser\\",
+        \\"pkg:npm/css-loader@6.5.1?vcs_url=git+https://github.com/webpack-contrib/css-loader.git\\",
         \\"pkg:npm/zone.js@0.11.6?vcs_url=git://github.com/angular/angular.git#packages/zone.js\\"
       ]
     },
     {
-      \\"ref\\": \\"pkg:npm/css-loader@6.5.1?vcs_url=webpack-contrib/css-loader\\"
+      \\"ref\\": \\"pkg:npm/css-loader@6.5.1?vcs_url=git+https://github.com/webpack-contrib/css-loader.git\\"
     },
     {
-      \\"ref\\": \\"pkg:npm/rxjs@7.5.5?vcs_url=https://github.com/reactivex/rxjs.git\\",
+      \\"ref\\": \\"pkg:npm/rxjs@7.5.5?vcs_url=git+https://github.com/reactivex/rxjs.git\\",
       \\"dependsOn\\": [
-        \\"pkg:npm/tslib@2.4.0?vcs_url=https://github.com/Microsoft/tslib.git\\"
+        \\"pkg:npm/tslib@2.4.0?vcs_url=git+https://github.com/Microsoft/tslib.git\\"
       ]
     },
     {
-      \\"ref\\": \\"pkg:npm/tslib@2.4.0?vcs_url=https://github.com/Microsoft/tslib.git\\"
+      \\"ref\\": \\"pkg:npm/tslib@2.4.0?vcs_url=git+https://github.com/Microsoft/tslib.git\\"
     },
     {
       \\"ref\\": \\"pkg:npm/zone.js@0.11.6?vcs_url=git://github.com/angular/angular.git#packages/zone.js\\"
@@ -430,7 +465,7 @@ exports[`integration webpack5 with angular13 generated json file: dist/.well-kno
       \\"name\\": \\"common\\",
       \\"group\\": \\"@angular\\",
       \\"version\\": \\"13.3.11\\",
-      \\"bom-ref\\": \\"pkg:npm/%40angular/common@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/common\\",
+      \\"bom-ref\\": \\"pkg:npm/%40angular/common@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/common\\",
       \\"author\\": \\"angular\\",
       \\"description\\": \\"Angular - commonly needed directives and services\\",
       \\"licenses\\": [
@@ -440,12 +475,22 @@ exports[`integration webpack5 with angular13 generated json file: dist/.well-kno
           }
         }
       ],
-      \\"purl\\": \\"pkg:npm/%40angular/common@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/common\\",
+      \\"purl\\": \\"pkg:npm/%40angular/common@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/common\\",
       \\"externalReferences\\": [
         {
-          \\"url\\": \\"https://github.com/angular/angular.git#packages/common\\",
+          \\"url\\": \\"https://github.com/angular/angular/issues\\",
+          \\"type\\": \\"issue-tracker\\",
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
+        },
+        {
+          \\"url\\": \\"git+https://github.com/angular/angular.git#packages/common\\",
           \\"type\\": \\"vcs\\",
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\" and \\\\\\"repository.directory\\\\\\"\\"
+        },
+        {
+          \\"url\\": \\"https://github.com/angular/angular#readme\\",
+          \\"type\\": \\"website\\",
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"homepage\\\\\\"\\"
         }
       ]
     },
@@ -454,7 +499,7 @@ exports[`integration webpack5 with angular13 generated json file: dist/.well-kno
       \\"name\\": \\"core\\",
       \\"group\\": \\"@angular\\",
       \\"version\\": \\"13.3.11\\",
-      \\"bom-ref\\": \\"pkg:npm/%40angular/core@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/core\\",
+      \\"bom-ref\\": \\"pkg:npm/%40angular/core@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/core\\",
       \\"author\\": \\"angular\\",
       \\"description\\": \\"Angular - the core framework\\",
       \\"licenses\\": [
@@ -464,12 +509,22 @@ exports[`integration webpack5 with angular13 generated json file: dist/.well-kno
           }
         }
       ],
-      \\"purl\\": \\"pkg:npm/%40angular/core@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/core\\",
+      \\"purl\\": \\"pkg:npm/%40angular/core@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/core\\",
       \\"externalReferences\\": [
         {
-          \\"url\\": \\"https://github.com/angular/angular.git#packages/core\\",
+          \\"url\\": \\"https://github.com/angular/angular/issues\\",
+          \\"type\\": \\"issue-tracker\\",
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
+        },
+        {
+          \\"url\\": \\"git+https://github.com/angular/angular.git#packages/core\\",
           \\"type\\": \\"vcs\\",
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\" and \\\\\\"repository.directory\\\\\\"\\"
+        },
+        {
+          \\"url\\": \\"https://github.com/angular/angular#readme\\",
+          \\"type\\": \\"website\\",
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"homepage\\\\\\"\\"
         }
       ]
     },
@@ -478,7 +533,7 @@ exports[`integration webpack5 with angular13 generated json file: dist/.well-kno
       \\"name\\": \\"platform-browser\\",
       \\"group\\": \\"@angular\\",
       \\"version\\": \\"13.3.11\\",
-      \\"bom-ref\\": \\"pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/platform-browser\\",
+      \\"bom-ref\\": \\"pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/platform-browser\\",
       \\"author\\": \\"angular\\",
       \\"description\\": \\"Angular - library for using Angular in a web browser\\",
       \\"licenses\\": [
@@ -488,12 +543,22 @@ exports[`integration webpack5 with angular13 generated json file: dist/.well-kno
           }
         }
       ],
-      \\"purl\\": \\"pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/platform-browser\\",
+      \\"purl\\": \\"pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/platform-browser\\",
       \\"externalReferences\\": [
         {
-          \\"url\\": \\"https://github.com/angular/angular.git#packages/platform-browser\\",
+          \\"url\\": \\"https://github.com/angular/angular/issues\\",
+          \\"type\\": \\"issue-tracker\\",
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
+        },
+        {
+          \\"url\\": \\"git+https://github.com/angular/angular.git#packages/platform-browser\\",
           \\"type\\": \\"vcs\\",
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\" and \\\\\\"repository.directory\\\\\\"\\"
+        },
+        {
+          \\"url\\": \\"https://github.com/angular/angular#readme\\",
+          \\"type\\": \\"website\\",
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"homepage\\\\\\"\\"
         }
       ]
     },
@@ -501,7 +566,7 @@ exports[`integration webpack5 with angular13 generated json file: dist/.well-kno
       \\"type\\": \\"library\\",
       \\"name\\": \\"css-loader\\",
       \\"version\\": \\"6.5.1\\",
-      \\"bom-ref\\": \\"pkg:npm/css-loader@6.5.1?vcs_url=webpack-contrib/css-loader\\",
+      \\"bom-ref\\": \\"pkg:npm/css-loader@6.5.1?vcs_url=git+https://github.com/webpack-contrib/css-loader.git\\",
       \\"author\\": \\"Tobias Koppers @sokra\\",
       \\"description\\": \\"css loader module for webpack\\",
       \\"licenses\\": [
@@ -511,17 +576,17 @@ exports[`integration webpack5 with angular13 generated json file: dist/.well-kno
           }
         }
       ],
-      \\"purl\\": \\"pkg:npm/css-loader@6.5.1?vcs_url=webpack-contrib/css-loader\\",
+      \\"purl\\": \\"pkg:npm/css-loader@6.5.1?vcs_url=git+https://github.com/webpack-contrib/css-loader.git\\",
       \\"externalReferences\\": [
         {
           \\"url\\": \\"https://github.com/webpack-contrib/css-loader/issues\\",
           \\"type\\": \\"issue-tracker\\",
-          \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs\\\\\\"\\"
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
         },
         {
-          \\"url\\": \\"webpack-contrib/css-loader\\",
+          \\"url\\": \\"git+https://github.com/webpack-contrib/css-loader.git\\",
           \\"type\\": \\"vcs\\",
-          \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository\\\\\\"\\"
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\"\\"
         },
         {
           \\"url\\": \\"https://github.com/webpack-contrib/css-loader\\",
@@ -534,8 +599,8 @@ exports[`integration webpack5 with angular13 generated json file: dist/.well-kno
       \\"type\\": \\"library\\",
       \\"name\\": \\"rxjs\\",
       \\"version\\": \\"7.5.5\\",
-      \\"bom-ref\\": \\"pkg:npm/rxjs@7.5.5?vcs_url=https://github.com/reactivex/rxjs.git\\",
-      \\"author\\": \\"Ben Lesh <ben@benlesh.com>\\",
+      \\"bom-ref\\": \\"pkg:npm/rxjs@7.5.5?vcs_url=git+https://github.com/reactivex/rxjs.git\\",
+      \\"author\\": \\"Ben Lesh\\",
       \\"description\\": \\"Reactive Extensions for modern JavaScript\\",
       \\"licenses\\": [
         {
@@ -544,7 +609,7 @@ exports[`integration webpack5 with angular13 generated json file: dist/.well-kno
           }
         }
       ],
-      \\"purl\\": \\"pkg:npm/rxjs@7.5.5?vcs_url=https://github.com/reactivex/rxjs.git\\",
+      \\"purl\\": \\"pkg:npm/rxjs@7.5.5?vcs_url=git+https://github.com/reactivex/rxjs.git\\",
       \\"externalReferences\\": [
         {
           \\"url\\": \\"https://github.com/ReactiveX/RxJS/issues\\",
@@ -552,7 +617,7 @@ exports[`integration webpack5 with angular13 generated json file: dist/.well-kno
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
         },
         {
-          \\"url\\": \\"https://github.com/reactivex/rxjs.git\\",
+          \\"url\\": \\"git+https://github.com/reactivex/rxjs.git\\",
           \\"type\\": \\"vcs\\",
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\"\\"
         },
@@ -567,7 +632,7 @@ exports[`integration webpack5 with angular13 generated json file: dist/.well-kno
       \\"type\\": \\"library\\",
       \\"name\\": \\"tslib\\",
       \\"version\\": \\"2.4.0\\",
-      \\"bom-ref\\": \\"pkg:npm/tslib@2.4.0?vcs_url=https://github.com/Microsoft/tslib.git\\",
+      \\"bom-ref\\": \\"pkg:npm/tslib@2.4.0?vcs_url=git+https://github.com/Microsoft/tslib.git\\",
       \\"author\\": \\"Microsoft Corp.\\",
       \\"description\\": \\"Runtime library for TypeScript helper functions\\",
       \\"licenses\\": [
@@ -577,7 +642,7 @@ exports[`integration webpack5 with angular13 generated json file: dist/.well-kno
           }
         }
       ],
-      \\"purl\\": \\"pkg:npm/tslib@2.4.0?vcs_url=https://github.com/Microsoft/tslib.git\\",
+      \\"purl\\": \\"pkg:npm/tslib@2.4.0?vcs_url=git+https://github.com/Microsoft/tslib.git\\",
       \\"externalReferences\\": [
         {
           \\"url\\": \\"https://github.com/Microsoft/TypeScript/issues\\",
@@ -585,7 +650,7 @@ exports[`integration webpack5 with angular13 generated json file: dist/.well-kno
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
         },
         {
-          \\"url\\": \\"https://github.com/Microsoft/tslib.git\\",
+          \\"url\\": \\"git+https://github.com/Microsoft/tslib.git\\",
           \\"type\\": \\"vcs\\",
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\"\\"
         },
@@ -621,51 +686,56 @@ exports[`integration webpack5 with angular13 generated json file: dist/.well-kno
           \\"url\\": \\"git://github.com/angular/angular.git#packages/zone.js\\",
           \\"type\\": \\"vcs\\",
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\" and \\\\\\"repository.directory\\\\\\"\\"
+        },
+        {
+          \\"url\\": \\"https://github.com/angular/angular#readme\\",
+          \\"type\\": \\"website\\",
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"homepage\\\\\\"\\"
         }
       ]
     }
   ],
   \\"dependencies\\": [
     {
-      \\"ref\\": \\"pkg:npm/%40angular/common@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/common\\",
+      \\"ref\\": \\"pkg:npm/%40angular/common@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/common\\",
       \\"dependsOn\\": [
-        \\"pkg:npm/%40angular/core@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/core\\"
+        \\"pkg:npm/%40angular/core@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/core\\"
       ]
     },
     {
-      \\"ref\\": \\"pkg:npm/%40angular/core@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/core\\",
+      \\"ref\\": \\"pkg:npm/%40angular/core@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/core\\",
       \\"dependsOn\\": [
-        \\"pkg:npm/rxjs@7.5.5?vcs_url=https://github.com/reactivex/rxjs.git\\"
+        \\"pkg:npm/rxjs@7.5.5?vcs_url=git+https://github.com/reactivex/rxjs.git\\"
       ]
     },
     {
-      \\"ref\\": \\"pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/platform-browser\\",
+      \\"ref\\": \\"pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/platform-browser\\",
       \\"dependsOn\\": [
-        \\"pkg:npm/%40angular/common@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/common\\",
-        \\"pkg:npm/%40angular/core@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/core\\"
+        \\"pkg:npm/%40angular/common@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/common\\",
+        \\"pkg:npm/%40angular/core@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/core\\"
       ]
     },
     {
       \\"ref\\": \\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?vcs_url=git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13\\",
       \\"dependsOn\\": [
-        \\"pkg:npm/%40angular/common@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/common\\",
-        \\"pkg:npm/%40angular/core@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/core\\",
-        \\"pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/platform-browser\\",
-        \\"pkg:npm/css-loader@6.5.1?vcs_url=webpack-contrib/css-loader\\",
+        \\"pkg:npm/%40angular/common@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/common\\",
+        \\"pkg:npm/%40angular/core@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/core\\",
+        \\"pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/platform-browser\\",
+        \\"pkg:npm/css-loader@6.5.1?vcs_url=git+https://github.com/webpack-contrib/css-loader.git\\",
         \\"pkg:npm/zone.js@0.11.6?vcs_url=git://github.com/angular/angular.git#packages/zone.js\\"
       ]
     },
     {
-      \\"ref\\": \\"pkg:npm/css-loader@6.5.1?vcs_url=webpack-contrib/css-loader\\"
+      \\"ref\\": \\"pkg:npm/css-loader@6.5.1?vcs_url=git+https://github.com/webpack-contrib/css-loader.git\\"
     },
     {
-      \\"ref\\": \\"pkg:npm/rxjs@7.5.5?vcs_url=https://github.com/reactivex/rxjs.git\\",
+      \\"ref\\": \\"pkg:npm/rxjs@7.5.5?vcs_url=git+https://github.com/reactivex/rxjs.git\\",
       \\"dependsOn\\": [
-        \\"pkg:npm/tslib@2.4.0?vcs_url=https://github.com/Microsoft/tslib.git\\"
+        \\"pkg:npm/tslib@2.4.0?vcs_url=git+https://github.com/Microsoft/tslib.git\\"
       ]
     },
     {
-      \\"ref\\": \\"pkg:npm/tslib@2.4.0?vcs_url=https://github.com/Microsoft/tslib.git\\"
+      \\"ref\\": \\"pkg:npm/tslib@2.4.0?vcs_url=git+https://github.com/Microsoft/tslib.git\\"
     },
     {
       \\"ref\\": \\"pkg:npm/zone.js@0.11.6?vcs_url=git://github.com/angular/angular.git#packages/zone.js\\"
@@ -746,7 +816,7 @@ exports[`integration webpack5 with angular13 generated xml file: dist/.bom/bom.x
     </component>
   </metadata>
   <components>
-    <component type=\\"library\\" bom-ref=\\"pkg:npm/%40angular/common@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/common\\">
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/%40angular/common@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/common\\">
       <author>angular</author>
       <group>@angular</group>
       <name>common</name>
@@ -757,15 +827,23 @@ exports[`integration webpack5 with angular13 generated xml file: dist/.bom/bom.x
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40angular/common@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/common</purl>
+      <purl>pkg:npm/%40angular/common@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/common</purl>
       <externalReferences>
+        <reference type=\\"issue-tracker\\">
+          <url>https://github.com/angular/angular/issues</url>
+          <comment>as detected from PackageJson property \\"bugs.url\\"</comment>
+        </reference>
         <reference type=\\"vcs\\">
-          <url>https://github.com/angular/angular.git#packages/common</url>
+          <url>git+https://github.com/angular/angular.git#packages/common</url>
           <comment>as detected from PackageJson property \\"repository.url\\" and \\"repository.directory\\"</comment>
+        </reference>
+        <reference type=\\"website\\">
+          <url>https://github.com/angular/angular#readme</url>
+          <comment>as detected from PackageJson property \\"homepage\\"</comment>
         </reference>
       </externalReferences>
     </component>
-    <component type=\\"library\\" bom-ref=\\"pkg:npm/%40angular/core@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/core\\">
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/%40angular/core@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/core\\">
       <author>angular</author>
       <group>@angular</group>
       <name>core</name>
@@ -776,15 +854,23 @@ exports[`integration webpack5 with angular13 generated xml file: dist/.bom/bom.x
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40angular/core@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/core</purl>
+      <purl>pkg:npm/%40angular/core@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/core</purl>
       <externalReferences>
+        <reference type=\\"issue-tracker\\">
+          <url>https://github.com/angular/angular/issues</url>
+          <comment>as detected from PackageJson property \\"bugs.url\\"</comment>
+        </reference>
         <reference type=\\"vcs\\">
-          <url>https://github.com/angular/angular.git#packages/core</url>
+          <url>git+https://github.com/angular/angular.git#packages/core</url>
           <comment>as detected from PackageJson property \\"repository.url\\" and \\"repository.directory\\"</comment>
+        </reference>
+        <reference type=\\"website\\">
+          <url>https://github.com/angular/angular#readme</url>
+          <comment>as detected from PackageJson property \\"homepage\\"</comment>
         </reference>
       </externalReferences>
     </component>
-    <component type=\\"library\\" bom-ref=\\"pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/platform-browser\\">
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/platform-browser\\">
       <author>angular</author>
       <group>@angular</group>
       <name>platform-browser</name>
@@ -795,15 +881,23 @@ exports[`integration webpack5 with angular13 generated xml file: dist/.bom/bom.x
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/platform-browser</purl>
+      <purl>pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/platform-browser</purl>
       <externalReferences>
+        <reference type=\\"issue-tracker\\">
+          <url>https://github.com/angular/angular/issues</url>
+          <comment>as detected from PackageJson property \\"bugs.url\\"</comment>
+        </reference>
         <reference type=\\"vcs\\">
-          <url>https://github.com/angular/angular.git#packages/platform-browser</url>
+          <url>git+https://github.com/angular/angular.git#packages/platform-browser</url>
           <comment>as detected from PackageJson property \\"repository.url\\" and \\"repository.directory\\"</comment>
+        </reference>
+        <reference type=\\"website\\">
+          <url>https://github.com/angular/angular#readme</url>
+          <comment>as detected from PackageJson property \\"homepage\\"</comment>
         </reference>
       </externalReferences>
     </component>
-    <component type=\\"library\\" bom-ref=\\"pkg:npm/css-loader@6.5.1?vcs_url=webpack-contrib/css-loader\\">
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/css-loader@6.5.1?vcs_url=git+https://github.com/webpack-contrib/css-loader.git\\">
       <author>Tobias Koppers @sokra</author>
       <name>css-loader</name>
       <version>6.5.1</version>
@@ -813,15 +907,15 @@ exports[`integration webpack5 with angular13 generated xml file: dist/.bom/bom.x
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/css-loader@6.5.1?vcs_url=webpack-contrib/css-loader</purl>
+      <purl>pkg:npm/css-loader@6.5.1?vcs_url=git+https://github.com/webpack-contrib/css-loader.git</purl>
       <externalReferences>
         <reference type=\\"issue-tracker\\">
           <url>https://github.com/webpack-contrib/css-loader/issues</url>
-          <comment>as detected from PackageJson property \\"bugs\\"</comment>
+          <comment>as detected from PackageJson property \\"bugs.url\\"</comment>
         </reference>
         <reference type=\\"vcs\\">
-          <url>webpack-contrib/css-loader</url>
-          <comment>as detected from PackageJson property \\"repository\\"</comment>
+          <url>git+https://github.com/webpack-contrib/css-loader.git</url>
+          <comment>as detected from PackageJson property \\"repository.url\\"</comment>
         </reference>
         <reference type=\\"website\\">
           <url>https://github.com/webpack-contrib/css-loader</url>
@@ -829,8 +923,8 @@ exports[`integration webpack5 with angular13 generated xml file: dist/.bom/bom.x
         </reference>
       </externalReferences>
     </component>
-    <component type=\\"library\\" bom-ref=\\"pkg:npm/rxjs@7.5.5?vcs_url=https://github.com/reactivex/rxjs.git\\">
-      <author>Ben Lesh &lt;ben@benlesh.com&gt;</author>
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/rxjs@7.5.5?vcs_url=git+https://github.com/reactivex/rxjs.git\\">
+      <author>Ben Lesh</author>
       <name>rxjs</name>
       <version>7.5.5</version>
       <description>Reactive Extensions for modern JavaScript</description>
@@ -839,14 +933,14 @@ exports[`integration webpack5 with angular13 generated xml file: dist/.bom/bom.x
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/rxjs@7.5.5?vcs_url=https://github.com/reactivex/rxjs.git</purl>
+      <purl>pkg:npm/rxjs@7.5.5?vcs_url=git+https://github.com/reactivex/rxjs.git</purl>
       <externalReferences>
         <reference type=\\"issue-tracker\\">
           <url>https://github.com/ReactiveX/RxJS/issues</url>
           <comment>as detected from PackageJson property \\"bugs.url\\"</comment>
         </reference>
         <reference type=\\"vcs\\">
-          <url>https://github.com/reactivex/rxjs.git</url>
+          <url>git+https://github.com/reactivex/rxjs.git</url>
           <comment>as detected from PackageJson property \\"repository.url\\"</comment>
         </reference>
         <reference type=\\"website\\">
@@ -855,7 +949,7 @@ exports[`integration webpack5 with angular13 generated xml file: dist/.bom/bom.x
         </reference>
       </externalReferences>
     </component>
-    <component type=\\"library\\" bom-ref=\\"pkg:npm/tslib@2.4.0?vcs_url=https://github.com/Microsoft/tslib.git\\">
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/tslib@2.4.0?vcs_url=git+https://github.com/Microsoft/tslib.git\\">
       <author>Microsoft Corp.</author>
       <name>tslib</name>
       <version>2.4.0</version>
@@ -865,14 +959,14 @@ exports[`integration webpack5 with angular13 generated xml file: dist/.bom/bom.x
           <id>0BSD</id>
         </license>
       </licenses>
-      <purl>pkg:npm/tslib@2.4.0?vcs_url=https://github.com/Microsoft/tslib.git</purl>
+      <purl>pkg:npm/tslib@2.4.0?vcs_url=git+https://github.com/Microsoft/tslib.git</purl>
       <externalReferences>
         <reference type=\\"issue-tracker\\">
           <url>https://github.com/Microsoft/TypeScript/issues</url>
           <comment>as detected from PackageJson property \\"bugs.url\\"</comment>
         </reference>
         <reference type=\\"vcs\\">
-          <url>https://github.com/Microsoft/tslib.git</url>
+          <url>git+https://github.com/Microsoft/tslib.git</url>
           <comment>as detected from PackageJson property \\"repository.url\\"</comment>
         </reference>
         <reference type=\\"website\\">
@@ -901,32 +995,36 @@ exports[`integration webpack5 with angular13 generated xml file: dist/.bom/bom.x
           <url>git://github.com/angular/angular.git#packages/zone.js</url>
           <comment>as detected from PackageJson property \\"repository.url\\" and \\"repository.directory\\"</comment>
         </reference>
+        <reference type=\\"website\\">
+          <url>https://github.com/angular/angular#readme</url>
+          <comment>as detected from PackageJson property \\"homepage\\"</comment>
+        </reference>
       </externalReferences>
     </component>
   </components>
   <dependencies>
-    <dependency ref=\\"pkg:npm/%40angular/common@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/common\\">
-      <dependency ref=\\"pkg:npm/%40angular/core@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/core\\"/>
+    <dependency ref=\\"pkg:npm/%40angular/common@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/common\\">
+      <dependency ref=\\"pkg:npm/%40angular/core@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/core\\"/>
     </dependency>
-    <dependency ref=\\"pkg:npm/%40angular/core@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/core\\">
-      <dependency ref=\\"pkg:npm/rxjs@7.5.5?vcs_url=https://github.com/reactivex/rxjs.git\\"/>
+    <dependency ref=\\"pkg:npm/%40angular/core@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/core\\">
+      <dependency ref=\\"pkg:npm/rxjs@7.5.5?vcs_url=git+https://github.com/reactivex/rxjs.git\\"/>
     </dependency>
-    <dependency ref=\\"pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/platform-browser\\">
-      <dependency ref=\\"pkg:npm/%40angular/common@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/common\\"/>
-      <dependency ref=\\"pkg:npm/%40angular/core@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/core\\"/>
+    <dependency ref=\\"pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/platform-browser\\">
+      <dependency ref=\\"pkg:npm/%40angular/common@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/common\\"/>
+      <dependency ref=\\"pkg:npm/%40angular/core@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/core\\"/>
     </dependency>
     <dependency ref=\\"pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?vcs_url=git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13\\">
-      <dependency ref=\\"pkg:npm/%40angular/common@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/common\\"/>
-      <dependency ref=\\"pkg:npm/%40angular/core@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/core\\"/>
-      <dependency ref=\\"pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=https://github.com/angular/angular.git#packages/platform-browser\\"/>
-      <dependency ref=\\"pkg:npm/css-loader@6.5.1?vcs_url=webpack-contrib/css-loader\\"/>
+      <dependency ref=\\"pkg:npm/%40angular/common@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/common\\"/>
+      <dependency ref=\\"pkg:npm/%40angular/core@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/core\\"/>
+      <dependency ref=\\"pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=git+https://github.com/angular/angular.git#packages/platform-browser\\"/>
+      <dependency ref=\\"pkg:npm/css-loader@6.5.1?vcs_url=git+https://github.com/webpack-contrib/css-loader.git\\"/>
       <dependency ref=\\"pkg:npm/zone.js@0.11.6?vcs_url=git://github.com/angular/angular.git#packages/zone.js\\"/>
     </dependency>
-    <dependency ref=\\"pkg:npm/css-loader@6.5.1?vcs_url=webpack-contrib/css-loader\\"/>
-    <dependency ref=\\"pkg:npm/rxjs@7.5.5?vcs_url=https://github.com/reactivex/rxjs.git\\">
-      <dependency ref=\\"pkg:npm/tslib@2.4.0?vcs_url=https://github.com/Microsoft/tslib.git\\"/>
+    <dependency ref=\\"pkg:npm/css-loader@6.5.1?vcs_url=git+https://github.com/webpack-contrib/css-loader.git\\"/>
+    <dependency ref=\\"pkg:npm/rxjs@7.5.5?vcs_url=git+https://github.com/reactivex/rxjs.git\\">
+      <dependency ref=\\"pkg:npm/tslib@2.4.0?vcs_url=git+https://github.com/Microsoft/tslib.git\\"/>
     </dependency>
-    <dependency ref=\\"pkg:npm/tslib@2.4.0?vcs_url=https://github.com/Microsoft/tslib.git\\"/>
+    <dependency ref=\\"pkg:npm/tslib@2.4.0?vcs_url=git+https://github.com/Microsoft/tslib.git\\"/>
     <dependency ref=\\"pkg:npm/zone.js@0.11.6?vcs_url=git://github.com/angular/angular.git#packages/zone.js\\"/>
   </dependencies>
 </bom>"
@@ -1025,7 +1123,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.bom/bom.js
       \\"type\\": \\"library\\",
       \\"name\\": \\"css-loader\\",
       \\"version\\": \\"6.7.1\\",
-      \\"bom-ref\\": \\"pkg:npm/css-loader@6.7.1?vcs_url=webpack-contrib/css-loader\\",
+      \\"bom-ref\\": \\"pkg:npm/css-loader@6.7.1?vcs_url=git+https://github.com/webpack-contrib/css-loader.git\\",
       \\"author\\": \\"Tobias Koppers @sokra\\",
       \\"description\\": \\"css loader module for webpack\\",
       \\"licenses\\": [
@@ -1035,17 +1133,17 @@ exports[`integration webpack5 with react18 generated json file: dist/.bom/bom.js
           }
         }
       ],
-      \\"purl\\": \\"pkg:npm/css-loader@6.7.1?vcs_url=webpack-contrib/css-loader\\",
+      \\"purl\\": \\"pkg:npm/css-loader@6.7.1?vcs_url=git+https://github.com/webpack-contrib/css-loader.git\\",
       \\"externalReferences\\": [
         {
           \\"url\\": \\"https://github.com/webpack-contrib/css-loader/issues\\",
           \\"type\\": \\"issue-tracker\\",
-          \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs\\\\\\"\\"
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
         },
         {
-          \\"url\\": \\"webpack-contrib/css-loader\\",
+          \\"url\\": \\"git+https://github.com/webpack-contrib/css-loader.git\\",
           \\"type\\": \\"vcs\\",
-          \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository\\\\\\"\\"
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\"\\"
         },
         {
           \\"url\\": \\"https://github.com/webpack-contrib/css-loader\\",
@@ -1058,7 +1156,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.bom/bom.js
       \\"type\\": \\"library\\",
       \\"name\\": \\"react-dom\\",
       \\"version\\": \\"18.2.0\\",
-      \\"bom-ref\\": \\"pkg:npm/react-dom@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react-dom\\",
+      \\"bom-ref\\": \\"pkg:npm/react-dom@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react-dom\\",
       \\"description\\": \\"React package for working with the DOM.\\",
       \\"licenses\\": [
         {
@@ -1067,7 +1165,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.bom/bom.js
           }
         }
       ],
-      \\"purl\\": \\"pkg:npm/react-dom@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react-dom\\",
+      \\"purl\\": \\"pkg:npm/react-dom@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react-dom\\",
       \\"externalReferences\\": [
         {
           \\"url\\": \\"https://github.com/facebook/react/issues\\",
@@ -1075,7 +1173,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.bom/bom.js
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
         },
         {
-          \\"url\\": \\"https://github.com/facebook/react.git#packages/react-dom\\",
+          \\"url\\": \\"git+https://github.com/facebook/react.git#packages/react-dom\\",
           \\"type\\": \\"vcs\\",
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\" and \\\\\\"repository.directory\\\\\\"\\"
         },
@@ -1090,7 +1188,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.bom/bom.js
       \\"type\\": \\"library\\",
       \\"name\\": \\"react\\",
       \\"version\\": \\"18.2.0\\",
-      \\"bom-ref\\": \\"pkg:npm/react@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react\\",
+      \\"bom-ref\\": \\"pkg:npm/react@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react\\",
       \\"description\\": \\"React is a JavaScript library for building user interfaces.\\",
       \\"licenses\\": [
         {
@@ -1099,15 +1197,15 @@ exports[`integration webpack5 with react18 generated json file: dist/.bom/bom.js
           }
         }
       ],
-      \\"purl\\": \\"pkg:npm/react@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react\\",
+      \\"purl\\": \\"pkg:npm/react@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react\\",
       \\"externalReferences\\": [
         {
           \\"url\\": \\"https://github.com/facebook/react/issues\\",
           \\"type\\": \\"issue-tracker\\",
-          \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs\\\\\\"\\"
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
         },
         {
-          \\"url\\": \\"https://github.com/facebook/react.git#packages/react\\",
+          \\"url\\": \\"git+https://github.com/facebook/react.git#packages/react\\",
           \\"type\\": \\"vcs\\",
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\" and \\\\\\"repository.directory\\\\\\"\\"
         },
@@ -1122,7 +1220,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.bom/bom.js
       \\"type\\": \\"library\\",
       \\"name\\": \\"scheduler\\",
       \\"version\\": \\"0.23.0\\",
-      \\"bom-ref\\": \\"pkg:npm/scheduler@0.23.0?vcs_url=https://github.com/facebook/react.git#packages/scheduler\\",
+      \\"bom-ref\\": \\"pkg:npm/scheduler@0.23.0?vcs_url=git+https://github.com/facebook/react.git#packages/scheduler\\",
       \\"description\\": \\"Cooperative scheduler for the browser environment.\\",
       \\"licenses\\": [
         {
@@ -1131,7 +1229,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.bom/bom.js
           }
         }
       ],
-      \\"purl\\": \\"pkg:npm/scheduler@0.23.0?vcs_url=https://github.com/facebook/react.git#packages/scheduler\\",
+      \\"purl\\": \\"pkg:npm/scheduler@0.23.0?vcs_url=git+https://github.com/facebook/react.git#packages/scheduler\\",
       \\"externalReferences\\": [
         {
           \\"url\\": \\"https://github.com/facebook/react/issues\\",
@@ -1139,7 +1237,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.bom/bom.js
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
         },
         {
-          \\"url\\": \\"https://github.com/facebook/react.git#packages/scheduler\\",
+          \\"url\\": \\"git+https://github.com/facebook/react.git#packages/scheduler\\",
           \\"type\\": \\"vcs\\",
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\" and \\\\\\"repository.directory\\\\\\"\\"
         },
@@ -1154,7 +1252,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.bom/bom.js
       \\"type\\": \\"library\\",
       \\"name\\": \\"web-vitals\\",
       \\"version\\": \\"2.1.4\\",
-      \\"bom-ref\\": \\"pkg:npm/web-vitals@2.1.4?vcs_url=https://github.com/GoogleChrome/web-vitals.git\\",
+      \\"bom-ref\\": \\"pkg:npm/web-vitals@2.1.4?vcs_url=git+https://github.com/GoogleChrome/web-vitals.git\\",
       \\"author\\": \\"Philip Walton\\",
       \\"description\\": \\"Easily measure performance metrics in JavaScript\\",
       \\"licenses\\": [
@@ -1164,7 +1262,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.bom/bom.js
           }
         }
       ],
-      \\"purl\\": \\"pkg:npm/web-vitals@2.1.4?vcs_url=https://github.com/GoogleChrome/web-vitals.git\\",
+      \\"purl\\": \\"pkg:npm/web-vitals@2.1.4?vcs_url=git+https://github.com/GoogleChrome/web-vitals.git\\",
       \\"externalReferences\\": [
         {
           \\"url\\": \\"https://github.com/GoogleChrome/web-vitals/issues\\",
@@ -1172,9 +1270,14 @@ exports[`integration webpack5 with react18 generated json file: dist/.bom/bom.js
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
         },
         {
-          \\"url\\": \\"https://github.com/GoogleChrome/web-vitals.git\\",
+          \\"url\\": \\"git+https://github.com/GoogleChrome/web-vitals.git\\",
           \\"type\\": \\"vcs\\",
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\"\\"
+        },
+        {
+          \\"url\\": \\"https://github.com/GoogleChrome/web-vitals#readme\\",
+          \\"type\\": \\"website\\",
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"homepage\\\\\\"\\"
         }
       ]
     }
@@ -1183,29 +1286,29 @@ exports[`integration webpack5 with react18 generated json file: dist/.bom/bom.js
     {
       \\"ref\\": \\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18\\",
       \\"dependsOn\\": [
-        \\"pkg:npm/css-loader@6.7.1?vcs_url=webpack-contrib/css-loader\\",
-        \\"pkg:npm/react-dom@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react-dom\\",
-        \\"pkg:npm/react@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react\\"
+        \\"pkg:npm/css-loader@6.7.1?vcs_url=git+https://github.com/webpack-contrib/css-loader.git\\",
+        \\"pkg:npm/react-dom@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react-dom\\",
+        \\"pkg:npm/react@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react\\"
       ]
     },
     {
-      \\"ref\\": \\"pkg:npm/css-loader@6.7.1?vcs_url=webpack-contrib/css-loader\\"
+      \\"ref\\": \\"pkg:npm/css-loader@6.7.1?vcs_url=git+https://github.com/webpack-contrib/css-loader.git\\"
     },
     {
-      \\"ref\\": \\"pkg:npm/react-dom@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react-dom\\",
+      \\"ref\\": \\"pkg:npm/react-dom@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react-dom\\",
       \\"dependsOn\\": [
-        \\"pkg:npm/react@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react\\",
-        \\"pkg:npm/scheduler@0.23.0?vcs_url=https://github.com/facebook/react.git#packages/scheduler\\"
+        \\"pkg:npm/react@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react\\",
+        \\"pkg:npm/scheduler@0.23.0?vcs_url=git+https://github.com/facebook/react.git#packages/scheduler\\"
       ]
     },
     {
-      \\"ref\\": \\"pkg:npm/react@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react\\"
+      \\"ref\\": \\"pkg:npm/react@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react\\"
     },
     {
-      \\"ref\\": \\"pkg:npm/scheduler@0.23.0?vcs_url=https://github.com/facebook/react.git#packages/scheduler\\"
+      \\"ref\\": \\"pkg:npm/scheduler@0.23.0?vcs_url=git+https://github.com/facebook/react.git#packages/scheduler\\"
     },
     {
-      \\"ref\\": \\"pkg:npm/web-vitals@2.1.4?vcs_url=https://github.com/GoogleChrome/web-vitals.git\\"
+      \\"ref\\": \\"pkg:npm/web-vitals@2.1.4?vcs_url=git+https://github.com/GoogleChrome/web-vitals.git\\"
     }
   ]
 }"
@@ -1304,7 +1407,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.well-known
       \\"type\\": \\"library\\",
       \\"name\\": \\"css-loader\\",
       \\"version\\": \\"6.7.1\\",
-      \\"bom-ref\\": \\"pkg:npm/css-loader@6.7.1?vcs_url=webpack-contrib/css-loader\\",
+      \\"bom-ref\\": \\"pkg:npm/css-loader@6.7.1?vcs_url=git+https://github.com/webpack-contrib/css-loader.git\\",
       \\"author\\": \\"Tobias Koppers @sokra\\",
       \\"description\\": \\"css loader module for webpack\\",
       \\"licenses\\": [
@@ -1314,17 +1417,17 @@ exports[`integration webpack5 with react18 generated json file: dist/.well-known
           }
         }
       ],
-      \\"purl\\": \\"pkg:npm/css-loader@6.7.1?vcs_url=webpack-contrib/css-loader\\",
+      \\"purl\\": \\"pkg:npm/css-loader@6.7.1?vcs_url=git+https://github.com/webpack-contrib/css-loader.git\\",
       \\"externalReferences\\": [
         {
           \\"url\\": \\"https://github.com/webpack-contrib/css-loader/issues\\",
           \\"type\\": \\"issue-tracker\\",
-          \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs\\\\\\"\\"
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
         },
         {
-          \\"url\\": \\"webpack-contrib/css-loader\\",
+          \\"url\\": \\"git+https://github.com/webpack-contrib/css-loader.git\\",
           \\"type\\": \\"vcs\\",
-          \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository\\\\\\"\\"
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\"\\"
         },
         {
           \\"url\\": \\"https://github.com/webpack-contrib/css-loader\\",
@@ -1337,7 +1440,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.well-known
       \\"type\\": \\"library\\",
       \\"name\\": \\"react-dom\\",
       \\"version\\": \\"18.2.0\\",
-      \\"bom-ref\\": \\"pkg:npm/react-dom@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react-dom\\",
+      \\"bom-ref\\": \\"pkg:npm/react-dom@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react-dom\\",
       \\"description\\": \\"React package for working with the DOM.\\",
       \\"licenses\\": [
         {
@@ -1346,7 +1449,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.well-known
           }
         }
       ],
-      \\"purl\\": \\"pkg:npm/react-dom@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react-dom\\",
+      \\"purl\\": \\"pkg:npm/react-dom@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react-dom\\",
       \\"externalReferences\\": [
         {
           \\"url\\": \\"https://github.com/facebook/react/issues\\",
@@ -1354,7 +1457,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.well-known
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
         },
         {
-          \\"url\\": \\"https://github.com/facebook/react.git#packages/react-dom\\",
+          \\"url\\": \\"git+https://github.com/facebook/react.git#packages/react-dom\\",
           \\"type\\": \\"vcs\\",
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\" and \\\\\\"repository.directory\\\\\\"\\"
         },
@@ -1369,7 +1472,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.well-known
       \\"type\\": \\"library\\",
       \\"name\\": \\"react\\",
       \\"version\\": \\"18.2.0\\",
-      \\"bom-ref\\": \\"pkg:npm/react@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react\\",
+      \\"bom-ref\\": \\"pkg:npm/react@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react\\",
       \\"description\\": \\"React is a JavaScript library for building user interfaces.\\",
       \\"licenses\\": [
         {
@@ -1378,15 +1481,15 @@ exports[`integration webpack5 with react18 generated json file: dist/.well-known
           }
         }
       ],
-      \\"purl\\": \\"pkg:npm/react@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react\\",
+      \\"purl\\": \\"pkg:npm/react@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react\\",
       \\"externalReferences\\": [
         {
           \\"url\\": \\"https://github.com/facebook/react/issues\\",
           \\"type\\": \\"issue-tracker\\",
-          \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs\\\\\\"\\"
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
         },
         {
-          \\"url\\": \\"https://github.com/facebook/react.git#packages/react\\",
+          \\"url\\": \\"git+https://github.com/facebook/react.git#packages/react\\",
           \\"type\\": \\"vcs\\",
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\" and \\\\\\"repository.directory\\\\\\"\\"
         },
@@ -1401,7 +1504,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.well-known
       \\"type\\": \\"library\\",
       \\"name\\": \\"scheduler\\",
       \\"version\\": \\"0.23.0\\",
-      \\"bom-ref\\": \\"pkg:npm/scheduler@0.23.0?vcs_url=https://github.com/facebook/react.git#packages/scheduler\\",
+      \\"bom-ref\\": \\"pkg:npm/scheduler@0.23.0?vcs_url=git+https://github.com/facebook/react.git#packages/scheduler\\",
       \\"description\\": \\"Cooperative scheduler for the browser environment.\\",
       \\"licenses\\": [
         {
@@ -1410,7 +1513,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.well-known
           }
         }
       ],
-      \\"purl\\": \\"pkg:npm/scheduler@0.23.0?vcs_url=https://github.com/facebook/react.git#packages/scheduler\\",
+      \\"purl\\": \\"pkg:npm/scheduler@0.23.0?vcs_url=git+https://github.com/facebook/react.git#packages/scheduler\\",
       \\"externalReferences\\": [
         {
           \\"url\\": \\"https://github.com/facebook/react/issues\\",
@@ -1418,7 +1521,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.well-known
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
         },
         {
-          \\"url\\": \\"https://github.com/facebook/react.git#packages/scheduler\\",
+          \\"url\\": \\"git+https://github.com/facebook/react.git#packages/scheduler\\",
           \\"type\\": \\"vcs\\",
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\" and \\\\\\"repository.directory\\\\\\"\\"
         },
@@ -1433,7 +1536,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.well-known
       \\"type\\": \\"library\\",
       \\"name\\": \\"web-vitals\\",
       \\"version\\": \\"2.1.4\\",
-      \\"bom-ref\\": \\"pkg:npm/web-vitals@2.1.4?vcs_url=https://github.com/GoogleChrome/web-vitals.git\\",
+      \\"bom-ref\\": \\"pkg:npm/web-vitals@2.1.4?vcs_url=git+https://github.com/GoogleChrome/web-vitals.git\\",
       \\"author\\": \\"Philip Walton\\",
       \\"description\\": \\"Easily measure performance metrics in JavaScript\\",
       \\"licenses\\": [
@@ -1443,7 +1546,7 @@ exports[`integration webpack5 with react18 generated json file: dist/.well-known
           }
         }
       ],
-      \\"purl\\": \\"pkg:npm/web-vitals@2.1.4?vcs_url=https://github.com/GoogleChrome/web-vitals.git\\",
+      \\"purl\\": \\"pkg:npm/web-vitals@2.1.4?vcs_url=git+https://github.com/GoogleChrome/web-vitals.git\\",
       \\"externalReferences\\": [
         {
           \\"url\\": \\"https://github.com/GoogleChrome/web-vitals/issues\\",
@@ -1451,9 +1554,14 @@ exports[`integration webpack5 with react18 generated json file: dist/.well-known
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"bugs.url\\\\\\"\\"
         },
         {
-          \\"url\\": \\"https://github.com/GoogleChrome/web-vitals.git\\",
+          \\"url\\": \\"git+https://github.com/GoogleChrome/web-vitals.git\\",
           \\"type\\": \\"vcs\\",
           \\"comment\\": \\"as detected from PackageJson property \\\\\\"repository.url\\\\\\"\\"
+        },
+        {
+          \\"url\\": \\"https://github.com/GoogleChrome/web-vitals#readme\\",
+          \\"type\\": \\"website\\",
+          \\"comment\\": \\"as detected from PackageJson property \\\\\\"homepage\\\\\\"\\"
         }
       ]
     }
@@ -1462,29 +1570,29 @@ exports[`integration webpack5 with react18 generated json file: dist/.well-known
     {
       \\"ref\\": \\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18\\",
       \\"dependsOn\\": [
-        \\"pkg:npm/css-loader@6.7.1?vcs_url=webpack-contrib/css-loader\\",
-        \\"pkg:npm/react-dom@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react-dom\\",
-        \\"pkg:npm/react@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react\\"
+        \\"pkg:npm/css-loader@6.7.1?vcs_url=git+https://github.com/webpack-contrib/css-loader.git\\",
+        \\"pkg:npm/react-dom@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react-dom\\",
+        \\"pkg:npm/react@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react\\"
       ]
     },
     {
-      \\"ref\\": \\"pkg:npm/css-loader@6.7.1?vcs_url=webpack-contrib/css-loader\\"
+      \\"ref\\": \\"pkg:npm/css-loader@6.7.1?vcs_url=git+https://github.com/webpack-contrib/css-loader.git\\"
     },
     {
-      \\"ref\\": \\"pkg:npm/react-dom@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react-dom\\",
+      \\"ref\\": \\"pkg:npm/react-dom@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react-dom\\",
       \\"dependsOn\\": [
-        \\"pkg:npm/react@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react\\",
-        \\"pkg:npm/scheduler@0.23.0?vcs_url=https://github.com/facebook/react.git#packages/scheduler\\"
+        \\"pkg:npm/react@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react\\",
+        \\"pkg:npm/scheduler@0.23.0?vcs_url=git+https://github.com/facebook/react.git#packages/scheduler\\"
       ]
     },
     {
-      \\"ref\\": \\"pkg:npm/react@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react\\"
+      \\"ref\\": \\"pkg:npm/react@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react\\"
     },
     {
-      \\"ref\\": \\"pkg:npm/scheduler@0.23.0?vcs_url=https://github.com/facebook/react.git#packages/scheduler\\"
+      \\"ref\\": \\"pkg:npm/scheduler@0.23.0?vcs_url=git+https://github.com/facebook/react.git#packages/scheduler\\"
     },
     {
-      \\"ref\\": \\"pkg:npm/web-vitals@2.1.4?vcs_url=https://github.com/GoogleChrome/web-vitals.git\\"
+      \\"ref\\": \\"pkg:npm/web-vitals@2.1.4?vcs_url=git+https://github.com/GoogleChrome/web-vitals.git\\"
     }
   ]
 }"
@@ -1563,7 +1671,7 @@ exports[`integration webpack5 with react18 generated xml file: dist/.bom/bom.xml
     </component>
   </metadata>
   <components>
-    <component type=\\"library\\" bom-ref=\\"pkg:npm/css-loader@6.7.1?vcs_url=webpack-contrib/css-loader\\">
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/css-loader@6.7.1?vcs_url=git+https://github.com/webpack-contrib/css-loader.git\\">
       <author>Tobias Koppers @sokra</author>
       <name>css-loader</name>
       <version>6.7.1</version>
@@ -1573,15 +1681,15 @@ exports[`integration webpack5 with react18 generated xml file: dist/.bom/bom.xml
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/css-loader@6.7.1?vcs_url=webpack-contrib/css-loader</purl>
+      <purl>pkg:npm/css-loader@6.7.1?vcs_url=git+https://github.com/webpack-contrib/css-loader.git</purl>
       <externalReferences>
         <reference type=\\"issue-tracker\\">
           <url>https://github.com/webpack-contrib/css-loader/issues</url>
-          <comment>as detected from PackageJson property \\"bugs\\"</comment>
+          <comment>as detected from PackageJson property \\"bugs.url\\"</comment>
         </reference>
         <reference type=\\"vcs\\">
-          <url>webpack-contrib/css-loader</url>
-          <comment>as detected from PackageJson property \\"repository\\"</comment>
+          <url>git+https://github.com/webpack-contrib/css-loader.git</url>
+          <comment>as detected from PackageJson property \\"repository.url\\"</comment>
         </reference>
         <reference type=\\"website\\">
           <url>https://github.com/webpack-contrib/css-loader</url>
@@ -1589,7 +1697,7 @@ exports[`integration webpack5 with react18 generated xml file: dist/.bom/bom.xml
         </reference>
       </externalReferences>
     </component>
-    <component type=\\"library\\" bom-ref=\\"pkg:npm/react-dom@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react-dom\\">
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/react-dom@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react-dom\\">
       <name>react-dom</name>
       <version>18.2.0</version>
       <description>React package for working with the DOM.</description>
@@ -1598,14 +1706,14 @@ exports[`integration webpack5 with react18 generated xml file: dist/.bom/bom.xml
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/react-dom@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react-dom</purl>
+      <purl>pkg:npm/react-dom@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react-dom</purl>
       <externalReferences>
         <reference type=\\"issue-tracker\\">
           <url>https://github.com/facebook/react/issues</url>
           <comment>as detected from PackageJson property \\"bugs.url\\"</comment>
         </reference>
         <reference type=\\"vcs\\">
-          <url>https://github.com/facebook/react.git#packages/react-dom</url>
+          <url>git+https://github.com/facebook/react.git#packages/react-dom</url>
           <comment>as detected from PackageJson property \\"repository.url\\" and \\"repository.directory\\"</comment>
         </reference>
         <reference type=\\"website\\">
@@ -1614,7 +1722,7 @@ exports[`integration webpack5 with react18 generated xml file: dist/.bom/bom.xml
         </reference>
       </externalReferences>
     </component>
-    <component type=\\"library\\" bom-ref=\\"pkg:npm/react@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react\\">
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/react@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react\\">
       <name>react</name>
       <version>18.2.0</version>
       <description>React is a JavaScript library for building user interfaces.</description>
@@ -1623,14 +1731,14 @@ exports[`integration webpack5 with react18 generated xml file: dist/.bom/bom.xml
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/react@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react</purl>
+      <purl>pkg:npm/react@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react</purl>
       <externalReferences>
         <reference type=\\"issue-tracker\\">
           <url>https://github.com/facebook/react/issues</url>
-          <comment>as detected from PackageJson property \\"bugs\\"</comment>
+          <comment>as detected from PackageJson property \\"bugs.url\\"</comment>
         </reference>
         <reference type=\\"vcs\\">
-          <url>https://github.com/facebook/react.git#packages/react</url>
+          <url>git+https://github.com/facebook/react.git#packages/react</url>
           <comment>as detected from PackageJson property \\"repository.url\\" and \\"repository.directory\\"</comment>
         </reference>
         <reference type=\\"website\\">
@@ -1639,7 +1747,7 @@ exports[`integration webpack5 with react18 generated xml file: dist/.bom/bom.xml
         </reference>
       </externalReferences>
     </component>
-    <component type=\\"library\\" bom-ref=\\"pkg:npm/scheduler@0.23.0?vcs_url=https://github.com/facebook/react.git#packages/scheduler\\">
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/scheduler@0.23.0?vcs_url=git+https://github.com/facebook/react.git#packages/scheduler\\">
       <name>scheduler</name>
       <version>0.23.0</version>
       <description>Cooperative scheduler for the browser environment.</description>
@@ -1648,14 +1756,14 @@ exports[`integration webpack5 with react18 generated xml file: dist/.bom/bom.xml
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/scheduler@0.23.0?vcs_url=https://github.com/facebook/react.git#packages/scheduler</purl>
+      <purl>pkg:npm/scheduler@0.23.0?vcs_url=git+https://github.com/facebook/react.git#packages/scheduler</purl>
       <externalReferences>
         <reference type=\\"issue-tracker\\">
           <url>https://github.com/facebook/react/issues</url>
           <comment>as detected from PackageJson property \\"bugs.url\\"</comment>
         </reference>
         <reference type=\\"vcs\\">
-          <url>https://github.com/facebook/react.git#packages/scheduler</url>
+          <url>git+https://github.com/facebook/react.git#packages/scheduler</url>
           <comment>as detected from PackageJson property \\"repository.url\\" and \\"repository.directory\\"</comment>
         </reference>
         <reference type=\\"website\\">
@@ -1664,7 +1772,7 @@ exports[`integration webpack5 with react18 generated xml file: dist/.bom/bom.xml
         </reference>
       </externalReferences>
     </component>
-    <component type=\\"library\\" bom-ref=\\"pkg:npm/web-vitals@2.1.4?vcs_url=https://github.com/GoogleChrome/web-vitals.git\\">
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/web-vitals@2.1.4?vcs_url=git+https://github.com/GoogleChrome/web-vitals.git\\">
       <author>Philip Walton</author>
       <name>web-vitals</name>
       <version>2.1.4</version>
@@ -1674,33 +1782,37 @@ exports[`integration webpack5 with react18 generated xml file: dist/.bom/bom.xml
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/web-vitals@2.1.4?vcs_url=https://github.com/GoogleChrome/web-vitals.git</purl>
+      <purl>pkg:npm/web-vitals@2.1.4?vcs_url=git+https://github.com/GoogleChrome/web-vitals.git</purl>
       <externalReferences>
         <reference type=\\"issue-tracker\\">
           <url>https://github.com/GoogleChrome/web-vitals/issues</url>
           <comment>as detected from PackageJson property \\"bugs.url\\"</comment>
         </reference>
         <reference type=\\"vcs\\">
-          <url>https://github.com/GoogleChrome/web-vitals.git</url>
+          <url>git+https://github.com/GoogleChrome/web-vitals.git</url>
           <comment>as detected from PackageJson property \\"repository.url\\"</comment>
+        </reference>
+        <reference type=\\"website\\">
+          <url>https://github.com/GoogleChrome/web-vitals#readme</url>
+          <comment>as detected from PackageJson property \\"homepage\\"</comment>
         </reference>
       </externalReferences>
     </component>
   </components>
   <dependencies>
     <dependency ref=\\"pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18\\">
-      <dependency ref=\\"pkg:npm/css-loader@6.7.1?vcs_url=webpack-contrib/css-loader\\"/>
-      <dependency ref=\\"pkg:npm/react-dom@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react-dom\\"/>
-      <dependency ref=\\"pkg:npm/react@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react\\"/>
+      <dependency ref=\\"pkg:npm/css-loader@6.7.1?vcs_url=git+https://github.com/webpack-contrib/css-loader.git\\"/>
+      <dependency ref=\\"pkg:npm/react-dom@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react-dom\\"/>
+      <dependency ref=\\"pkg:npm/react@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react\\"/>
     </dependency>
-    <dependency ref=\\"pkg:npm/css-loader@6.7.1?vcs_url=webpack-contrib/css-loader\\"/>
-    <dependency ref=\\"pkg:npm/react-dom@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react-dom\\">
-      <dependency ref=\\"pkg:npm/react@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react\\"/>
-      <dependency ref=\\"pkg:npm/scheduler@0.23.0?vcs_url=https://github.com/facebook/react.git#packages/scheduler\\"/>
+    <dependency ref=\\"pkg:npm/css-loader@6.7.1?vcs_url=git+https://github.com/webpack-contrib/css-loader.git\\"/>
+    <dependency ref=\\"pkg:npm/react-dom@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react-dom\\">
+      <dependency ref=\\"pkg:npm/react@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react\\"/>
+      <dependency ref=\\"pkg:npm/scheduler@0.23.0?vcs_url=git+https://github.com/facebook/react.git#packages/scheduler\\"/>
     </dependency>
-    <dependency ref=\\"pkg:npm/react@18.2.0?vcs_url=https://github.com/facebook/react.git#packages/react\\"/>
-    <dependency ref=\\"pkg:npm/scheduler@0.23.0?vcs_url=https://github.com/facebook/react.git#packages/scheduler\\"/>
-    <dependency ref=\\"pkg:npm/web-vitals@2.1.4?vcs_url=https://github.com/GoogleChrome/web-vitals.git\\"/>
+    <dependency ref=\\"pkg:npm/react@18.2.0?vcs_url=git+https://github.com/facebook/react.git#packages/react\\"/>
+    <dependency ref=\\"pkg:npm/scheduler@0.23.0?vcs_url=git+https://github.com/facebook/react.git#packages/scheduler\\"/>
+    <dependency ref=\\"pkg:npm/web-vitals@2.1.4?vcs_url=git+https://github.com/GoogleChrome/web-vitals.git\\"/>
   </dependencies>
 </bom>"
 `;
