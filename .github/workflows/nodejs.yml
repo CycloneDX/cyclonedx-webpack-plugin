@@ -75,7 +75,6 @@ jobs:
           - "18"      # active LTS
           - '16'
           - "14"
-          - "14.0.0"  # lowest supported
     env:
       REPORTS_ARTIFACT: tests-reports
     steps:

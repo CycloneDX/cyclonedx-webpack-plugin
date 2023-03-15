@@ -2,9 +2,40 @@
   "name": "@cyclonedx/webpack-plugin",
   "version": "3.3.0",
   "description": "Creates CycloneDX Software Bill of Materials (SBoM) from webpack projects",
-  "homepage": "https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme",
-  "copyright": "Copyright OWASP Foundation",
   "license": "Apache-2.0",
+  "copyright": "Copyright OWASP Foundation",
+  "keywords": [
+    "webpack",
+    "CycloneDX",
+    "bill-of-materials",
+    "BOM",
+    "software-bill-of-materials",
+    "SBOM",
+    "inventory",
+    "component",
+    "dependency",
+    "package-url",
+    "PURL",
+    "SPDX"
+  ],
+  "homepage": "https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues"
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/jkowalleck"
+    },
+    {
+      "type": "individual",
+      "url": "https://owasp.org/donate/?reponame=www-project-cyclonedx&title=OWASP+CycloneDX"
+    }
+  ],
   "author": {
     "name": "Jan Kowalleck",
     "email": "jan.kowalleck@gmail.com"
@@ -14,19 +45,6 @@
       "name": "Jan Kowalleck",
       "email": "jan.kowalleck@gmail.com"
     }
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git"
-  },
-  "bugs": {
-    "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues"
-  },
-  "keywords": [
-    "cyclonedx",
-    "webpack",
-    "sbom",
-    "bom"
   ],
   "type": "commonjs",
   "engines": {
