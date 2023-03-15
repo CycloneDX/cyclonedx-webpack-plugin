@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 3.3.1 - 2023-03-15
+
+Maintenance release.
+
 ## 3.3.0 - 2023-03-02
 
 * Changed
