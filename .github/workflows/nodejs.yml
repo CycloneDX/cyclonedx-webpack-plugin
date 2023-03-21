@@ -9,6 +9,10 @@ on:
   pull_request:
   workflow_dispatch:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 env:
   REPORTS_DIR: CI_reports
   NODE_ACTIVE_LTS: "18" # https://nodejs.org/en/about/releases/
