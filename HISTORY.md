@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Added
+  * SBOM result might have `serialNumber` populated ([#747] via [#])
+
+[#747]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/747
+[#]:
+
 ## 3.3.1 - 2023-03-15
 
 Maintenance release.
