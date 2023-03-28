@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 3.4.0 - 2023-03-28
+
 * Added
   * SBOM result might have `serialNumber` populated ([#747] via [#748])
 
