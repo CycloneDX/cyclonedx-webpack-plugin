@@ -258,6 +258,9 @@ export class CycloneDxWebpackPlugin {
     cdxPurlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory,
     logger: WebpackLogger
   ): void {
+    bom.serialNumber = this.reproducibleResults
+      ? undefined
+      : CDX.Utils.BomUtility.randomSerialNumber()
     bom.metadata.timestamp = this.reproducibleResults
       ? undefined
       : new Date()
