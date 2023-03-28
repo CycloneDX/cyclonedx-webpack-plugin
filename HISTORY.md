@@ -5,10 +5,10 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 * Added
-  * SBOM result might have `serialNumber` populated ([#747] via [#])
+  * SBOM result might have `serialNumber` populated ([#747] via [#748])
 
 [#747]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/747
-[#]:
+[#748]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/748
 
 ## 3.3.1 - 2023-03-15
 
