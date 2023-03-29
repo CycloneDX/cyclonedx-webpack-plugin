@@ -28,9 +28,10 @@ const { version: thisVersion } = require('../../package.json')
 describe('integration', () => {
   describe.each(
     [
+      // region functional
       {
         dir: 'webpack5-vue2',
-        purpose: 'webpack5 with vue2',
+        purpose: 'functional: webpack5 with vue2',
         results: [ // paths relative to `dir`
           {
             format: 'xml',
@@ -48,7 +49,7 @@ describe('integration', () => {
       },
       {
         dir: 'webpack5-angular13',
-        purpose: 'webpack5 with angular13',
+        purpose: 'functional: webpack5 with angular13',
         results: [ // paths relative to `dir`
           {
             format: 'xml',
@@ -66,7 +67,27 @@ describe('integration', () => {
       },
       {
         dir: 'webpack5-react18',
-        purpose: 'webpack5 with react18',
+        purpose: 'functional: webpack5 with react18',
+        results: [ // paths relative to `dir`
+          {
+            format: 'xml',
+            file: 'dist/.bom/bom.xml'
+          },
+          {
+            format: 'json',
+            file: 'dist/.bom/bom.json'
+          },
+          {
+            format: 'json',
+            file: 'dist/.well-known/sbom'
+          }
+        ]
+      },
+      // endregion functional
+      // region regression
+      {
+        dir: 'regression-issue745',
+        purpose: 'regression: issue#745',
         results: [ // paths relative to `dir`
           {
             format: 'xml',
@@ -82,6 +103,7 @@ describe('integration', () => {
           }
         ]
       }
+      // endregion regression
     ]
   )('$purpose', ({ dir, results }) => {
     const built = spawnSync(
