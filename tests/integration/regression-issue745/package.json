@@ -33,7 +33,8 @@
     "build": "webpack build"
   },
   "dependencies": {
-    "@apollo/client": "3.7.10"
+    "@apollo/client": "3.7.10",
+    "react": "^18.2.0"
   },
   "devDependencies": {
     "@cyclonedx/webpack-plugin": "file:../../..",

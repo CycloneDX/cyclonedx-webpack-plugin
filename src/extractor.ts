@@ -58,7 +58,14 @@ export class Extractor {
       let component = pkgs[pkg.path]
       if (component === undefined) {
         logger?.log('try to build new Component from PkgPath', pkg.path)
-        normalizePackageJson(pkg.packageJson, w => logger?.debug('normalizePackageJson from PkgPath', pkg.path, 'caused:', w))
+        try {
+          normalizePackageJson(
+            pkg.packageJson,
+            w => logger?.debug('normalizePackageJson from PkgPath', pkg.path, 'caused:', w)
+          )
+        } catch (e) {
+          logger?.warn('normalizePackageJson from PkgPath', pkg.path, 'caused:', e)
+        }
         component = pkgs[pkg.path] = this.#componentBuilder.makeComponent(pkg.packageJson)
         logger?.debug('built', component, 'based on', pkg, 'for module', module)
       }
