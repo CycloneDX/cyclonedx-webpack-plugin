@@ -2289,90 +2289,6 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
       "type": "library",
       "name": "client",
       "group": "@apollo",
-      "bom-ref": "BomRef.1v6i7c2p2d.o6oj54aujq",
-      "purl": "pkg:npm/%40apollo/client"
-    },
-    {
-      "type": "library",
-      "name": "client",
-      "group": "@apollo",
-      "bom-ref": "BomRef.2uuhgjkqm4.44rbt5qa92",
-      "purl": "pkg:npm/%40apollo/client"
-    },
-    {
-      "type": "library",
-      "name": "client",
-      "group": "@apollo",
-      "bom-ref": "BomRef.574bgaaihho.ra6niip10oo",
-      "purl": "pkg:npm/%40apollo/client"
-    },
-    {
-      "type": "library",
-      "name": "client",
-      "group": "@apollo",
-      "bom-ref": "BomRef.9nfeuv9mls8.fknbfl7qqio",
-      "purl": "pkg:npm/%40apollo/client"
-    },
-    {
-      "type": "library",
-      "name": "client",
-      "group": "@apollo",
-      "bom-ref": "BomRef.a4pdmbhdu4o.gr9hlr64lk",
-      "purl": "pkg:npm/%40apollo/client"
-    },
-    {
-      "type": "library",
-      "name": "client",
-      "group": "@apollo",
-      "bom-ref": "BomRef.bsjllu46o3g.6n1jcl11nt8",
-      "purl": "pkg:npm/%40apollo/client"
-    },
-    {
-      "type": "library",
-      "name": "client",
-      "group": "@apollo",
-      "bom-ref": "BomRef.cujqv1hiht.k61uu3mgbjo",
-      "purl": "pkg:npm/%40apollo/client"
-    },
-    {
-      "type": "library",
-      "name": "client",
-      "group": "@apollo",
-      "bom-ref": "BomRef.deq9qishqr.aranrud11po",
-      "purl": "pkg:npm/%40apollo/client"
-    },
-    {
-      "type": "library",
-      "name": "client",
-      "group": "@apollo",
-      "bom-ref": "BomRef.estn8etubf8.d3tbol05nqo",
-      "purl": "pkg:npm/%40apollo/client"
-    },
-    {
-      "type": "library",
-      "name": "client",
-      "group": "@apollo",
-      "bom-ref": "BomRef.snpcft3603.8567r648g4",
-      "purl": "pkg:npm/%40apollo/client"
-    },
-    {
-      "type": "library",
-      "name": "client",
-      "group": "@apollo",
-      "bom-ref": "BomRef.vkrv75rojg.kp7bht4v6u8",
-      "purl": "pkg:npm/%40apollo/client"
-    },
-    {
-      "type": "library",
-      "name": "client",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client",
-      "purl": "pkg:npm/%40apollo/client"
-    },
-    {
-      "type": "library",
-      "name": "client",
-      "group": "@apollo",
       "version": "3.7.10",
       "bom-ref": "pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git",
       "author": "packages@apollographql.com",
@@ -2402,6 +2318,90 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
           "comment": "as detected from PackageJson property \\"homepage\\""
         }
       ]
+    },
+    {
+      "type": "library",
+      "name": "client/cache",
+      "group": "@apollo",
+      "bom-ref": "pkg:npm/%40apollo/client%2Fcache",
+      "purl": "pkg:npm/%40apollo/client%2Fcache"
+    },
+    {
+      "type": "library",
+      "name": "client/core",
+      "group": "@apollo",
+      "bom-ref": "pkg:npm/%40apollo/client%2Fcore",
+      "purl": "pkg:npm/%40apollo/client%2Fcore"
+    },
+    {
+      "type": "library",
+      "name": "client/errors",
+      "group": "@apollo",
+      "bom-ref": "pkg:npm/%40apollo/client%2Ferrors",
+      "purl": "pkg:npm/%40apollo/client%2Ferrors"
+    },
+    {
+      "type": "library",
+      "name": "client/link/core",
+      "group": "@apollo",
+      "bom-ref": "pkg:npm/%40apollo/client%2Flink%2Fcore",
+      "purl": "pkg:npm/%40apollo/client%2Flink%2Fcore"
+    },
+    {
+      "type": "library",
+      "name": "client/link/http",
+      "group": "@apollo",
+      "bom-ref": "pkg:npm/%40apollo/client%2Flink%2Fhttp",
+      "purl": "pkg:npm/%40apollo/client%2Flink%2Fhttp"
+    },
+    {
+      "type": "library",
+      "name": "client/link/utils",
+      "group": "@apollo",
+      "bom-ref": "pkg:npm/%40apollo/client%2Flink%2Futils",
+      "purl": "pkg:npm/%40apollo/client%2Flink%2Futils"
+    },
+    {
+      "type": "library",
+      "name": "client/react",
+      "group": "@apollo",
+      "bom-ref": "pkg:npm/%40apollo/client%2Freact",
+      "purl": "pkg:npm/%40apollo/client%2Freact"
+    },
+    {
+      "type": "library",
+      "name": "client/react/context",
+      "group": "@apollo",
+      "bom-ref": "pkg:npm/%40apollo/client%2Freact%2Fcontext",
+      "purl": "pkg:npm/%40apollo/client%2Freact%2Fcontext"
+    },
+    {
+      "type": "library",
+      "name": "client/react/hooks",
+      "group": "@apollo",
+      "bom-ref": "pkg:npm/%40apollo/client%2Freact%2Fhooks",
+      "purl": "pkg:npm/%40apollo/client%2Freact%2Fhooks"
+    },
+    {
+      "type": "library",
+      "name": "client/react/parser",
+      "group": "@apollo",
+      "bom-ref": "pkg:npm/%40apollo/client%2Freact%2Fparser",
+      "purl": "pkg:npm/%40apollo/client%2Freact%2Fparser"
+    },
+    {
+      "type": "library",
+      "name": "client/utilities",
+      "group": "@apollo",
+      "bom-ref": "pkg:npm/%40apollo/client%2Futilities",
+      "purl": "pkg:npm/%40apollo/client%2Futilities"
+    },
+    {
+      "type": "library",
+      "name": "client/utilities/globals",
+      "group": "@apollo",
+      "bom-ref": "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
+      "purl": "pkg:npm/%40apollo/client%2Futilities%2Fglobals"
     },
     {
       "type": "library",
@@ -2774,94 +2774,17 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
   ],
   "dependencies": [
     {
-      "ref": "BomRef.1v6i7c2p2d.o6oj54aujq",
+      "ref": "pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git",
       "dependsOn": [
-        "BomRef.a4pdmbhdu4o.gr9hlr64lk",
-        "BomRef.cujqv1hiht.k61uu3mgbjo",
-        "pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react"
+        "pkg:npm/%40apollo/client%2Fcore",
+        "pkg:npm/%40apollo/client%2Freact"
       ]
     },
     {
-      "ref": "BomRef.2uuhgjkqm4.44rbt5qa92",
+      "ref": "pkg:npm/%40apollo/client%2Fcache",
       "dependsOn": [
-        "BomRef.a4pdmbhdu4o.gr9hlr64lk",
-        "BomRef.cujqv1hiht.k61uu3mgbjo",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
-        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
-      ]
-    },
-    {
-      "ref": "BomRef.574bgaaihho.ra6niip10oo",
-      "dependsOn": [
-        "BomRef.a4pdmbhdu4o.gr9hlr64lk"
-      ]
-    },
-    {
-      "ref": "BomRef.9nfeuv9mls8.fknbfl7qqio",
-      "dependsOn": [
-        "BomRef.2uuhgjkqm4.44rbt5qa92",
-        "BomRef.a4pdmbhdu4o.gr9hlr64lk",
-        "BomRef.cujqv1hiht.k61uu3mgbjo",
-        "BomRef.vkrv75rojg.kp7bht4v6u8",
-        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
-        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
-      ]
-    },
-    {
-      "ref": "BomRef.a4pdmbhdu4o.gr9hlr64lk",
-      "dependsOn": [
-        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
-        "pkg:npm/ts-invariant@0.10.3?vcs_url=git%2Bhttps%3A//github.com/apollographql/invariant-packages.git",
-        "pkg:npm/ts-invariant%2Fprocess"
-      ]
-    },
-    {
-      "ref": "BomRef.bsjllu46o3g.6n1jcl11nt8",
-      "dependsOn": [
-        "BomRef.1v6i7c2p2d.o6oj54aujq",
-        "BomRef.574bgaaihho.ra6niip10oo",
-        "BomRef.a4pdmbhdu4o.gr9hlr64lk",
-        "BomRef.deq9qishqr.aranrud11po"
-      ]
-    },
-    {
-      "ref": "BomRef.cujqv1hiht.k61uu3mgbjo",
-      "dependsOn": [
-        "BomRef.a4pdmbhdu4o.gr9hlr64lk",
-        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
-        "pkg:npm/symbol-observable@4.0.0?vcs_url=git%2Bhttps%3A//github.com/blesh/symbol-observable.git",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
-        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
-      ]
-    },
-    {
-      "ref": "BomRef.deq9qishqr.aranrud11po",
-      "dependsOn": [
-        "BomRef.1v6i7c2p2d.o6oj54aujq",
-        "BomRef.574bgaaihho.ra6niip10oo",
-        "BomRef.a4pdmbhdu4o.gr9hlr64lk",
-        "BomRef.cujqv1hiht.k61uu3mgbjo",
-        "BomRef.estn8etubf8.d3tbol05nqo",
-        "pkg:npm/%40apollo/client",
-        "pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
-        "pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
-      ]
-    },
-    {
-      "ref": "BomRef.estn8etubf8.d3tbol05nqo",
-      "dependsOn": [
-        "BomRef.a4pdmbhdu4o.gr9hlr64lk",
-        "BomRef.cujqv1hiht.k61uu3mgbjo",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
-      ]
-    },
-    {
-      "ref": "BomRef.snpcft3603.8567r648g4",
-      "dependsOn": [
-        "BomRef.a4pdmbhdu4o.gr9hlr64lk",
-        "BomRef.cujqv1hiht.k61uu3mgbjo",
+        "pkg:npm/%40apollo/client%2Futilities",
+        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
         "pkg:npm/%40wry/context@0.7.0?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
         "pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
         "pkg:npm/%40wry/trie@0.3.2?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
@@ -2871,26 +2794,16 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
       ]
     },
     {
-      "ref": "BomRef.vkrv75rojg.kp7bht4v6u8",
+      "ref": "pkg:npm/%40apollo/client%2Fcore",
       "dependsOn": [
-        "BomRef.2uuhgjkqm4.44rbt5qa92",
-        "BomRef.a4pdmbhdu4o.gr9hlr64lk",
-        "BomRef.cujqv1hiht.k61uu3mgbjo",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
-        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client",
-      "dependsOn": [
-        "BomRef.2uuhgjkqm4.44rbt5qa92",
-        "BomRef.9nfeuv9mls8.fknbfl7qqio",
-        "BomRef.a4pdmbhdu4o.gr9hlr64lk",
-        "BomRef.cujqv1hiht.k61uu3mgbjo",
-        "BomRef.estn8etubf8.d3tbol05nqo",
-        "BomRef.snpcft3603.8567r648g4",
-        "BomRef.vkrv75rojg.kp7bht4v6u8",
         "pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git",
+        "pkg:npm/%40apollo/client%2Fcache",
+        "pkg:npm/%40apollo/client%2Ferrors",
+        "pkg:npm/%40apollo/client%2Flink%2Fcore",
+        "pkg:npm/%40apollo/client%2Flink%2Fhttp",
+        "pkg:npm/%40apollo/client%2Flink%2Futils",
+        "pkg:npm/%40apollo/client%2Futilities",
+        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
         "pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
         "pkg:npm/graphql-tag@2.12.6?vcs_url=git%2Bhttps%3A//github.com/apollographql/graphql-tag.git",
         "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
@@ -2900,10 +2813,97 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
       ]
     },
     {
-      "ref": "pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git",
+      "ref": "pkg:npm/%40apollo/client%2Ferrors",
       "dependsOn": [
-        "BomRef.bsjllu46o3g.6n1jcl11nt8",
-        "pkg:npm/%40apollo/client"
+        "pkg:npm/%40apollo/client%2Futilities",
+        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
+        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40apollo/client%2Flink%2Fcore",
+      "dependsOn": [
+        "pkg:npm/%40apollo/client%2Flink%2Futils",
+        "pkg:npm/%40apollo/client%2Futilities",
+        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
+        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
+        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40apollo/client%2Flink%2Fhttp",
+      "dependsOn": [
+        "pkg:npm/%40apollo/client%2Flink%2Fcore",
+        "pkg:npm/%40apollo/client%2Flink%2Futils",
+        "pkg:npm/%40apollo/client%2Futilities",
+        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
+        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
+        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
+        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40apollo/client%2Flink%2Futils",
+      "dependsOn": [
+        "pkg:npm/%40apollo/client%2Futilities",
+        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
+        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
+        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40apollo/client%2Freact",
+      "dependsOn": [
+        "pkg:npm/%40apollo/client%2Freact%2Fcontext",
+        "pkg:npm/%40apollo/client%2Freact%2Fhooks",
+        "pkg:npm/%40apollo/client%2Freact%2Fparser",
+        "pkg:npm/%40apollo/client%2Futilities%2Fglobals"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40apollo/client%2Freact%2Fcontext",
+      "dependsOn": [
+        "pkg:npm/%40apollo/client%2Futilities",
+        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
+        "pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40apollo/client%2Freact%2Fhooks",
+      "dependsOn": [
+        "pkg:npm/%40apollo/client%2Fcore",
+        "pkg:npm/%40apollo/client%2Ferrors",
+        "pkg:npm/%40apollo/client%2Freact%2Fcontext",
+        "pkg:npm/%40apollo/client%2Freact%2Fparser",
+        "pkg:npm/%40apollo/client%2Futilities",
+        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
+        "pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
+        "pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react",
+        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40apollo/client%2Freact%2Fparser",
+      "dependsOn": [
+        "pkg:npm/%40apollo/client%2Futilities%2Fglobals"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40apollo/client%2Futilities",
+      "dependsOn": [
+        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
+        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
+        "pkg:npm/symbol-observable@4.0.0?vcs_url=git%2Bhttps%3A//github.com/blesh/symbol-observable.git",
+        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
+        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
+      "dependsOn": [
+        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
+        "pkg:npm/ts-invariant@0.10.3?vcs_url=git%2Bhttps%3A//github.com/apollographql/invariant-packages.git",
+        "pkg:npm/ts-invariant%2Fprocess"
       ]
     },
     {
@@ -3055,90 +3055,6 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
       "type": "library",
       "name": "client",
       "group": "@apollo",
-      "bom-ref": "BomRef.1qqa5gucsr8.m004ottvl2o",
-      "purl": "pkg:npm/%40apollo/client"
-    },
-    {
-      "type": "library",
-      "name": "client",
-      "group": "@apollo",
-      "bom-ref": "BomRef.303qa2m92h.9ugke721j48",
-      "purl": "pkg:npm/%40apollo/client"
-    },
-    {
-      "type": "library",
-      "name": "client",
-      "group": "@apollo",
-      "bom-ref": "BomRef.5jvbn6rdado.2leb9vrajdo",
-      "purl": "pkg:npm/%40apollo/client"
-    },
-    {
-      "type": "library",
-      "name": "client",
-      "group": "@apollo",
-      "bom-ref": "BomRef.8jiivt537hg.r634smm6lto",
-      "purl": "pkg:npm/%40apollo/client"
-    },
-    {
-      "type": "library",
-      "name": "client",
-      "group": "@apollo",
-      "bom-ref": "BomRef.b47547ah6u8.8obnf9068qo",
-      "purl": "pkg:npm/%40apollo/client"
-    },
-    {
-      "type": "library",
-      "name": "client",
-      "group": "@apollo",
-      "bom-ref": "BomRef.hf4dtphovdo.4i4nr20p5dg",
-      "purl": "pkg:npm/%40apollo/client"
-    },
-    {
-      "type": "library",
-      "name": "client",
-      "group": "@apollo",
-      "bom-ref": "BomRef.iecpj4e1vr.dd6kdf9kv8g",
-      "purl": "pkg:npm/%40apollo/client"
-    },
-    {
-      "type": "library",
-      "name": "client",
-      "group": "@apollo",
-      "bom-ref": "BomRef.in07cbh914g.tt3pobvo9pg",
-      "purl": "pkg:npm/%40apollo/client"
-    },
-    {
-      "type": "library",
-      "name": "client",
-      "group": "@apollo",
-      "bom-ref": "BomRef.kn8sqe77nk8.46sq28j9048",
-      "purl": "pkg:npm/%40apollo/client"
-    },
-    {
-      "type": "library",
-      "name": "client",
-      "group": "@apollo",
-      "bom-ref": "BomRef.t8spi8bsjio.gllnu01au48",
-      "purl": "pkg:npm/%40apollo/client"
-    },
-    {
-      "type": "library",
-      "name": "client",
-      "group": "@apollo",
-      "bom-ref": "BomRef.tung50etti.dltr2j5rav8",
-      "purl": "pkg:npm/%40apollo/client"
-    },
-    {
-      "type": "library",
-      "name": "client",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client",
-      "purl": "pkg:npm/%40apollo/client"
-    },
-    {
-      "type": "library",
-      "name": "client",
-      "group": "@apollo",
       "version": "3.7.10",
       "bom-ref": "pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git",
       "author": "packages@apollographql.com",
@@ -3168,6 +3084,90 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
           "comment": "as detected from PackageJson property \\"homepage\\""
         }
       ]
+    },
+    {
+      "type": "library",
+      "name": "client/cache",
+      "group": "@apollo",
+      "bom-ref": "pkg:npm/%40apollo/client%2Fcache",
+      "purl": "pkg:npm/%40apollo/client%2Fcache"
+    },
+    {
+      "type": "library",
+      "name": "client/core",
+      "group": "@apollo",
+      "bom-ref": "pkg:npm/%40apollo/client%2Fcore",
+      "purl": "pkg:npm/%40apollo/client%2Fcore"
+    },
+    {
+      "type": "library",
+      "name": "client/errors",
+      "group": "@apollo",
+      "bom-ref": "pkg:npm/%40apollo/client%2Ferrors",
+      "purl": "pkg:npm/%40apollo/client%2Ferrors"
+    },
+    {
+      "type": "library",
+      "name": "client/link/core",
+      "group": "@apollo",
+      "bom-ref": "pkg:npm/%40apollo/client%2Flink%2Fcore",
+      "purl": "pkg:npm/%40apollo/client%2Flink%2Fcore"
+    },
+    {
+      "type": "library",
+      "name": "client/link/http",
+      "group": "@apollo",
+      "bom-ref": "pkg:npm/%40apollo/client%2Flink%2Fhttp",
+      "purl": "pkg:npm/%40apollo/client%2Flink%2Fhttp"
+    },
+    {
+      "type": "library",
+      "name": "client/link/utils",
+      "group": "@apollo",
+      "bom-ref": "pkg:npm/%40apollo/client%2Flink%2Futils",
+      "purl": "pkg:npm/%40apollo/client%2Flink%2Futils"
+    },
+    {
+      "type": "library",
+      "name": "client/react",
+      "group": "@apollo",
+      "bom-ref": "pkg:npm/%40apollo/client%2Freact",
+      "purl": "pkg:npm/%40apollo/client%2Freact"
+    },
+    {
+      "type": "library",
+      "name": "client/react/context",
+      "group": "@apollo",
+      "bom-ref": "pkg:npm/%40apollo/client%2Freact%2Fcontext",
+      "purl": "pkg:npm/%40apollo/client%2Freact%2Fcontext"
+    },
+    {
+      "type": "library",
+      "name": "client/react/hooks",
+      "group": "@apollo",
+      "bom-ref": "pkg:npm/%40apollo/client%2Freact%2Fhooks",
+      "purl": "pkg:npm/%40apollo/client%2Freact%2Fhooks"
+    },
+    {
+      "type": "library",
+      "name": "client/react/parser",
+      "group": "@apollo",
+      "bom-ref": "pkg:npm/%40apollo/client%2Freact%2Fparser",
+      "purl": "pkg:npm/%40apollo/client%2Freact%2Fparser"
+    },
+    {
+      "type": "library",
+      "name": "client/utilities",
+      "group": "@apollo",
+      "bom-ref": "pkg:npm/%40apollo/client%2Futilities",
+      "purl": "pkg:npm/%40apollo/client%2Futilities"
+    },
+    {
+      "type": "library",
+      "name": "client/utilities/globals",
+      "group": "@apollo",
+      "bom-ref": "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
+      "purl": "pkg:npm/%40apollo/client%2Futilities%2Fglobals"
     },
     {
       "type": "library",
@@ -3540,104 +3540,17 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
   ],
   "dependencies": [
     {
-      "ref": "BomRef.1qqa5gucsr8.m004ottvl2o",
+      "ref": "pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git",
       "dependsOn": [
-        "BomRef.in07cbh914g.tt3pobvo9pg",
-        "BomRef.t8spi8bsjio.gllnu01au48",
-        "pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react"
+        "pkg:npm/%40apollo/client%2Fcore",
+        "pkg:npm/%40apollo/client%2Freact"
       ]
     },
     {
-      "ref": "BomRef.303qa2m92h.9ugke721j48",
+      "ref": "pkg:npm/%40apollo/client%2Fcache",
       "dependsOn": [
-        "BomRef.t8spi8bsjio.gllnu01au48"
-      ]
-    },
-    {
-      "ref": "BomRef.5jvbn6rdado.2leb9vrajdo",
-      "dependsOn": [
-        "BomRef.in07cbh914g.tt3pobvo9pg",
-        "BomRef.t8spi8bsjio.gllnu01au48",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
-        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
-      ]
-    },
-    {
-      "ref": "BomRef.8jiivt537hg.r634smm6lto",
-      "dependsOn": [
-        "BomRef.1qqa5gucsr8.m004ottvl2o",
-        "BomRef.303qa2m92h.9ugke721j48",
-        "BomRef.hf4dtphovdo.4i4nr20p5dg",
-        "BomRef.in07cbh914g.tt3pobvo9pg",
-        "BomRef.t8spi8bsjio.gllnu01au48",
-        "pkg:npm/%40apollo/client",
-        "pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
-        "pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
-      ]
-    },
-    {
-      "ref": "BomRef.b47547ah6u8.8obnf9068qo",
-      "dependsOn": [
-        "BomRef.5jvbn6rdado.2leb9vrajdo",
-        "BomRef.in07cbh914g.tt3pobvo9pg",
-        "BomRef.kn8sqe77nk8.46sq28j9048",
-        "BomRef.t8spi8bsjio.gllnu01au48",
-        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
-        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
-      ]
-    },
-    {
-      "ref": "BomRef.hf4dtphovdo.4i4nr20p5dg",
-      "dependsOn": [
-        "BomRef.in07cbh914g.tt3pobvo9pg",
-        "BomRef.t8spi8bsjio.gllnu01au48",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
-      ]
-    },
-    {
-      "ref": "BomRef.iecpj4e1vr.dd6kdf9kv8g",
-      "dependsOn": [
-        "BomRef.1qqa5gucsr8.m004ottvl2o",
-        "BomRef.303qa2m92h.9ugke721j48",
-        "BomRef.8jiivt537hg.r634smm6lto",
-        "BomRef.t8spi8bsjio.gllnu01au48"
-      ]
-    },
-    {
-      "ref": "BomRef.in07cbh914g.tt3pobvo9pg",
-      "dependsOn": [
-        "BomRef.t8spi8bsjio.gllnu01au48",
-        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
-        "pkg:npm/symbol-observable@4.0.0?vcs_url=git%2Bhttps%3A//github.com/blesh/symbol-observable.git",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
-        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
-      ]
-    },
-    {
-      "ref": "BomRef.kn8sqe77nk8.46sq28j9048",
-      "dependsOn": [
-        "BomRef.5jvbn6rdado.2leb9vrajdo",
-        "BomRef.in07cbh914g.tt3pobvo9pg",
-        "BomRef.t8spi8bsjio.gllnu01au48",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
-        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
-      ]
-    },
-    {
-      "ref": "BomRef.t8spi8bsjio.gllnu01au48",
-      "dependsOn": [
-        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
-        "pkg:npm/ts-invariant@0.10.3?vcs_url=git%2Bhttps%3A//github.com/apollographql/invariant-packages.git",
-        "pkg:npm/ts-invariant%2Fprocess"
-      ]
-    },
-    {
-      "ref": "BomRef.tung50etti.dltr2j5rav8",
-      "dependsOn": [
-        "BomRef.in07cbh914g.tt3pobvo9pg",
-        "BomRef.t8spi8bsjio.gllnu01au48",
+        "pkg:npm/%40apollo/client%2Futilities",
+        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
         "pkg:npm/%40wry/context@0.7.0?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
         "pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
         "pkg:npm/%40wry/trie@0.3.2?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
@@ -3647,16 +3560,16 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
       ]
     },
     {
-      "ref": "pkg:npm/%40apollo/client",
+      "ref": "pkg:npm/%40apollo/client%2Fcore",
       "dependsOn": [
-        "BomRef.5jvbn6rdado.2leb9vrajdo",
-        "BomRef.b47547ah6u8.8obnf9068qo",
-        "BomRef.hf4dtphovdo.4i4nr20p5dg",
-        "BomRef.in07cbh914g.tt3pobvo9pg",
-        "BomRef.kn8sqe77nk8.46sq28j9048",
-        "BomRef.t8spi8bsjio.gllnu01au48",
-        "BomRef.tung50etti.dltr2j5rav8",
         "pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git",
+        "pkg:npm/%40apollo/client%2Fcache",
+        "pkg:npm/%40apollo/client%2Ferrors",
+        "pkg:npm/%40apollo/client%2Flink%2Fcore",
+        "pkg:npm/%40apollo/client%2Flink%2Fhttp",
+        "pkg:npm/%40apollo/client%2Flink%2Futils",
+        "pkg:npm/%40apollo/client%2Futilities",
+        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
         "pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
         "pkg:npm/graphql-tag@2.12.6?vcs_url=git%2Bhttps%3A//github.com/apollographql/graphql-tag.git",
         "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
@@ -3666,10 +3579,97 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
       ]
     },
     {
-      "ref": "pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git",
+      "ref": "pkg:npm/%40apollo/client%2Ferrors",
       "dependsOn": [
-        "BomRef.iecpj4e1vr.dd6kdf9kv8g",
-        "pkg:npm/%40apollo/client"
+        "pkg:npm/%40apollo/client%2Futilities",
+        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
+        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40apollo/client%2Flink%2Fcore",
+      "dependsOn": [
+        "pkg:npm/%40apollo/client%2Flink%2Futils",
+        "pkg:npm/%40apollo/client%2Futilities",
+        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
+        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
+        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40apollo/client%2Flink%2Fhttp",
+      "dependsOn": [
+        "pkg:npm/%40apollo/client%2Flink%2Fcore",
+        "pkg:npm/%40apollo/client%2Flink%2Futils",
+        "pkg:npm/%40apollo/client%2Futilities",
+        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
+        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
+        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
+        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40apollo/client%2Flink%2Futils",
+      "dependsOn": [
+        "pkg:npm/%40apollo/client%2Futilities",
+        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
+        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
+        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40apollo/client%2Freact",
+      "dependsOn": [
+        "pkg:npm/%40apollo/client%2Freact%2Fcontext",
+        "pkg:npm/%40apollo/client%2Freact%2Fhooks",
+        "pkg:npm/%40apollo/client%2Freact%2Fparser",
+        "pkg:npm/%40apollo/client%2Futilities%2Fglobals"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40apollo/client%2Freact%2Fcontext",
+      "dependsOn": [
+        "pkg:npm/%40apollo/client%2Futilities",
+        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
+        "pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40apollo/client%2Freact%2Fhooks",
+      "dependsOn": [
+        "pkg:npm/%40apollo/client%2Fcore",
+        "pkg:npm/%40apollo/client%2Ferrors",
+        "pkg:npm/%40apollo/client%2Freact%2Fcontext",
+        "pkg:npm/%40apollo/client%2Freact%2Fparser",
+        "pkg:npm/%40apollo/client%2Futilities",
+        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
+        "pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
+        "pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react",
+        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40apollo/client%2Freact%2Fparser",
+      "dependsOn": [
+        "pkg:npm/%40apollo/client%2Futilities%2Fglobals"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40apollo/client%2Futilities",
+      "dependsOn": [
+        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
+        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
+        "pkg:npm/symbol-observable@4.0.0?vcs_url=git%2Bhttps%3A//github.com/blesh/symbol-observable.git",
+        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
+        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
+      "dependsOn": [
+        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
+        "pkg:npm/ts-invariant@0.10.3?vcs_url=git%2Bhttps%3A//github.com/apollographql/invariant-packages.git",
+        "pkg:npm/ts-invariant%2Fprocess"
       ]
     },
     {
@@ -3801,66 +3801,6 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
     </component>
   </metadata>
   <components>
-    <component type="library" bom-ref="BomRef.0bg0jc9bg0g.l8p1v5626p8">
-      <group>@apollo</group>
-      <name>client</name>
-      <purl>pkg:npm/%40apollo/client</purl>
-    </component>
-    <component type="library" bom-ref="BomRef.45hfu10oka.98iijunc7bg">
-      <group>@apollo</group>
-      <name>client</name>
-      <purl>pkg:npm/%40apollo/client</purl>
-    </component>
-    <component type="library" bom-ref="BomRef.6lfmvv9rggo.ioop0bposb8">
-      <group>@apollo</group>
-      <name>client</name>
-      <purl>pkg:npm/%40apollo/client</purl>
-    </component>
-    <component type="library" bom-ref="BomRef.6pik6fbe0ao.4hro6s214fo">
-      <group>@apollo</group>
-      <name>client</name>
-      <purl>pkg:npm/%40apollo/client</purl>
-    </component>
-    <component type="library" bom-ref="BomRef.ce89fl1bfq.83qbpvv2amg">
-      <group>@apollo</group>
-      <name>client</name>
-      <purl>pkg:npm/%40apollo/client</purl>
-    </component>
-    <component type="library" bom-ref="BomRef.fcdblkggsso.gi923dvudto">
-      <group>@apollo</group>
-      <name>client</name>
-      <purl>pkg:npm/%40apollo/client</purl>
-    </component>
-    <component type="library" bom-ref="BomRef.fi6v6n7lqgg.nf11dk5f7dg">
-      <group>@apollo</group>
-      <name>client</name>
-      <purl>pkg:npm/%40apollo/client</purl>
-    </component>
-    <component type="library" bom-ref="BomRef.fnnm3t4qakg.lsc13rq842o">
-      <group>@apollo</group>
-      <name>client</name>
-      <purl>pkg:npm/%40apollo/client</purl>
-    </component>
-    <component type="library" bom-ref="BomRef.kbok9enj81o.4l9ko1j0egg">
-      <group>@apollo</group>
-      <name>client</name>
-      <purl>pkg:npm/%40apollo/client</purl>
-    </component>
-    <component type="library" bom-ref="BomRef.n339j9o2un8.capjq851t1">
-      <group>@apollo</group>
-      <name>client</name>
-      <purl>pkg:npm/%40apollo/client</purl>
-    </component>
-    <component type="library" bom-ref="BomRef.qk87495vt1.biahsp4eje8">
-      <group>@apollo</group>
-      <name>client</name>
-      <purl>pkg:npm/%40apollo/client</purl>
-    </component>
-    <component type="library" bom-ref="pkg:npm/%40apollo/client">
-      <group>@apollo</group>
-      <name>client</name>
-      <purl>pkg:npm/%40apollo/client</purl>
-    </component>
     <component type="library" bom-ref="pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git">
       <author>packages@apollographql.com</author>
       <group>@apollo</group>
@@ -3887,6 +3827,66 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:npm/%40apollo/client%2Fcache">
+      <group>@apollo</group>
+      <name>client/cache</name>
+      <purl>pkg:npm/%40apollo/client%2Fcache</purl>
+    </component>
+    <component type="library" bom-ref="pkg:npm/%40apollo/client%2Fcore">
+      <group>@apollo</group>
+      <name>client/core</name>
+      <purl>pkg:npm/%40apollo/client%2Fcore</purl>
+    </component>
+    <component type="library" bom-ref="pkg:npm/%40apollo/client%2Ferrors">
+      <group>@apollo</group>
+      <name>client/errors</name>
+      <purl>pkg:npm/%40apollo/client%2Ferrors</purl>
+    </component>
+    <component type="library" bom-ref="pkg:npm/%40apollo/client%2Flink%2Fcore">
+      <group>@apollo</group>
+      <name>client/link/core</name>
+      <purl>pkg:npm/%40apollo/client%2Flink%2Fcore</purl>
+    </component>
+    <component type="library" bom-ref="pkg:npm/%40apollo/client%2Flink%2Fhttp">
+      <group>@apollo</group>
+      <name>client/link/http</name>
+      <purl>pkg:npm/%40apollo/client%2Flink%2Fhttp</purl>
+    </component>
+    <component type="library" bom-ref="pkg:npm/%40apollo/client%2Flink%2Futils">
+      <group>@apollo</group>
+      <name>client/link/utils</name>
+      <purl>pkg:npm/%40apollo/client%2Flink%2Futils</purl>
+    </component>
+    <component type="library" bom-ref="pkg:npm/%40apollo/client%2Freact">
+      <group>@apollo</group>
+      <name>client/react</name>
+      <purl>pkg:npm/%40apollo/client%2Freact</purl>
+    </component>
+    <component type="library" bom-ref="pkg:npm/%40apollo/client%2Freact%2Fcontext">
+      <group>@apollo</group>
+      <name>client/react/context</name>
+      <purl>pkg:npm/%40apollo/client%2Freact%2Fcontext</purl>
+    </component>
+    <component type="library" bom-ref="pkg:npm/%40apollo/client%2Freact%2Fhooks">
+      <group>@apollo</group>
+      <name>client/react/hooks</name>
+      <purl>pkg:npm/%40apollo/client%2Freact%2Fhooks</purl>
+    </component>
+    <component type="library" bom-ref="pkg:npm/%40apollo/client%2Freact%2Fparser">
+      <group>@apollo</group>
+      <name>client/react/parser</name>
+      <purl>pkg:npm/%40apollo/client%2Freact%2Fparser</purl>
+    </component>
+    <component type="library" bom-ref="pkg:npm/%40apollo/client%2Futilities">
+      <group>@apollo</group>
+      <name>client/utilities</name>
+      <purl>pkg:npm/%40apollo/client%2Futilities</purl>
+    </component>
+    <component type="library" bom-ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals">
+      <group>@apollo</group>
+      <name>client/utilities/globals</name>
+      <purl>pkg:npm/%40apollo/client%2Futilities%2Fglobals</purl>
     </component>
     <component type="library" bom-ref="pkg:npm/%40wry/context@0.7.0?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git">
       <author>Ben Newman</author>
@@ -4179,67 +4179,13 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
     </component>
   </components>
   <dependencies>
-    <dependency ref="BomRef.0bg0jc9bg0g.l8p1v5626p8">
-      <dependency ref="BomRef.6pik6fbe0ao.4hro6s214fo"/>
-      <dependency ref="pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git"/>
-      <dependency ref="pkg:npm/symbol-observable@4.0.0?vcs_url=git%2Bhttps%3A//github.com/blesh/symbol-observable.git"/>
-      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
-      <dependency ref="pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"/>
+    <dependency ref="pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git">
+      <dependency ref="pkg:npm/%40apollo/client%2Fcore"/>
+      <dependency ref="pkg:npm/%40apollo/client%2Freact"/>
     </dependency>
-    <dependency ref="BomRef.45hfu10oka.98iijunc7bg">
-      <dependency ref="BomRef.0bg0jc9bg0g.l8p1v5626p8"/>
-      <dependency ref="BomRef.6pik6fbe0ao.4hro6s214fo"/>
-      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
-    </dependency>
-    <dependency ref="BomRef.6lfmvv9rggo.ioop0bposb8">
-      <dependency ref="BomRef.6pik6fbe0ao.4hro6s214fo"/>
-      <dependency ref="BomRef.fcdblkggsso.gi923dvudto"/>
-      <dependency ref="BomRef.fnnm3t4qakg.lsc13rq842o"/>
-      <dependency ref="BomRef.kbok9enj81o.4l9ko1j0egg"/>
-    </dependency>
-    <dependency ref="BomRef.6pik6fbe0ao.4hro6s214fo">
-      <dependency ref="pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git"/>
-      <dependency ref="pkg:npm/ts-invariant@0.10.3?vcs_url=git%2Bhttps%3A//github.com/apollographql/invariant-packages.git"/>
-      <dependency ref="pkg:npm/ts-invariant%2Fprocess"/>
-    </dependency>
-    <dependency ref="BomRef.ce89fl1bfq.83qbpvv2amg">
-      <dependency ref="BomRef.0bg0jc9bg0g.l8p1v5626p8"/>
-      <dependency ref="BomRef.6pik6fbe0ao.4hro6s214fo"/>
-      <dependency ref="BomRef.qk87495vt1.biahsp4eje8"/>
-      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
-      <dependency ref="pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"/>
-    </dependency>
-    <dependency ref="BomRef.fcdblkggsso.gi923dvudto">
-      <dependency ref="BomRef.0bg0jc9bg0g.l8p1v5626p8"/>
-      <dependency ref="BomRef.6pik6fbe0ao.4hro6s214fo"/>
-      <dependency ref="pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react"/>
-    </dependency>
-    <dependency ref="BomRef.fi6v6n7lqgg.nf11dk5f7dg">
-      <dependency ref="BomRef.0bg0jc9bg0g.l8p1v5626p8"/>
-      <dependency ref="BomRef.6pik6fbe0ao.4hro6s214fo"/>
-      <dependency ref="BomRef.ce89fl1bfq.83qbpvv2amg"/>
-      <dependency ref="BomRef.qk87495vt1.biahsp4eje8"/>
-      <dependency ref="pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git"/>
-      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
-      <dependency ref="pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"/>
-    </dependency>
-    <dependency ref="BomRef.fnnm3t4qakg.lsc13rq842o">
-      <dependency ref="BomRef.6pik6fbe0ao.4hro6s214fo"/>
-    </dependency>
-    <dependency ref="BomRef.kbok9enj81o.4l9ko1j0egg">
-      <dependency ref="BomRef.0bg0jc9bg0g.l8p1v5626p8"/>
-      <dependency ref="BomRef.45hfu10oka.98iijunc7bg"/>
-      <dependency ref="BomRef.6pik6fbe0ao.4hro6s214fo"/>
-      <dependency ref="BomRef.fcdblkggsso.gi923dvudto"/>
-      <dependency ref="BomRef.fnnm3t4qakg.lsc13rq842o"/>
-      <dependency ref="pkg:npm/%40apollo/client"/>
-      <dependency ref="pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git"/>
-      <dependency ref="pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react"/>
-      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
-    </dependency>
-    <dependency ref="BomRef.n339j9o2un8.capjq851t1">
-      <dependency ref="BomRef.0bg0jc9bg0g.l8p1v5626p8"/>
-      <dependency ref="BomRef.6pik6fbe0ao.4hro6s214fo"/>
+    <dependency ref="pkg:npm/%40apollo/client%2Fcache">
+      <dependency ref="pkg:npm/%40apollo/client%2Futilities"/>
+      <dependency ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals"/>
       <dependency ref="pkg:npm/%40wry/context@0.7.0?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git"/>
       <dependency ref="pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git"/>
       <dependency ref="pkg:npm/%40wry/trie@0.3.2?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git"/>
@@ -4247,21 +4193,15 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
       <dependency ref="pkg:npm/optimism@0.16.2?vcs_url=git%2Bhttps%3A//github.com/benjamn/optimism.git"/>
       <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
     </dependency>
-    <dependency ref="BomRef.qk87495vt1.biahsp4eje8">
-      <dependency ref="BomRef.0bg0jc9bg0g.l8p1v5626p8"/>
-      <dependency ref="BomRef.6pik6fbe0ao.4hro6s214fo"/>
-      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
-      <dependency ref="pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"/>
-    </dependency>
-    <dependency ref="pkg:npm/%40apollo/client">
-      <dependency ref="BomRef.0bg0jc9bg0g.l8p1v5626p8"/>
-      <dependency ref="BomRef.45hfu10oka.98iijunc7bg"/>
-      <dependency ref="BomRef.6pik6fbe0ao.4hro6s214fo"/>
-      <dependency ref="BomRef.ce89fl1bfq.83qbpvv2amg"/>
-      <dependency ref="BomRef.fi6v6n7lqgg.nf11dk5f7dg"/>
-      <dependency ref="BomRef.n339j9o2un8.capjq851t1"/>
-      <dependency ref="BomRef.qk87495vt1.biahsp4eje8"/>
+    <dependency ref="pkg:npm/%40apollo/client%2Fcore">
       <dependency ref="pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git"/>
+      <dependency ref="pkg:npm/%40apollo/client%2Fcache"/>
+      <dependency ref="pkg:npm/%40apollo/client%2Ferrors"/>
+      <dependency ref="pkg:npm/%40apollo/client%2Flink%2Fcore"/>
+      <dependency ref="pkg:npm/%40apollo/client%2Flink%2Fhttp"/>
+      <dependency ref="pkg:npm/%40apollo/client%2Flink%2Futils"/>
+      <dependency ref="pkg:npm/%40apollo/client%2Futilities"/>
+      <dependency ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals"/>
       <dependency ref="pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git"/>
       <dependency ref="pkg:npm/graphql-tag@2.12.6?vcs_url=git%2Bhttps%3A//github.com/apollographql/graphql-tag.git"/>
       <dependency ref="pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git"/>
@@ -4269,9 +4209,69 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
       <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
       <dependency ref="pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"/>
     </dependency>
-    <dependency ref="pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git">
-      <dependency ref="BomRef.6lfmvv9rggo.ioop0bposb8"/>
-      <dependency ref="pkg:npm/%40apollo/client"/>
+    <dependency ref="pkg:npm/%40apollo/client%2Ferrors">
+      <dependency ref="pkg:npm/%40apollo/client%2Futilities"/>
+      <dependency ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals"/>
+      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
+    </dependency>
+    <dependency ref="pkg:npm/%40apollo/client%2Flink%2Fcore">
+      <dependency ref="pkg:npm/%40apollo/client%2Flink%2Futils"/>
+      <dependency ref="pkg:npm/%40apollo/client%2Futilities"/>
+      <dependency ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals"/>
+      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
+      <dependency ref="pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"/>
+    </dependency>
+    <dependency ref="pkg:npm/%40apollo/client%2Flink%2Fhttp">
+      <dependency ref="pkg:npm/%40apollo/client%2Flink%2Fcore"/>
+      <dependency ref="pkg:npm/%40apollo/client%2Flink%2Futils"/>
+      <dependency ref="pkg:npm/%40apollo/client%2Futilities"/>
+      <dependency ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals"/>
+      <dependency ref="pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git"/>
+      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
+      <dependency ref="pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"/>
+    </dependency>
+    <dependency ref="pkg:npm/%40apollo/client%2Flink%2Futils">
+      <dependency ref="pkg:npm/%40apollo/client%2Futilities"/>
+      <dependency ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals"/>
+      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
+      <dependency ref="pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"/>
+    </dependency>
+    <dependency ref="pkg:npm/%40apollo/client%2Freact">
+      <dependency ref="pkg:npm/%40apollo/client%2Freact%2Fcontext"/>
+      <dependency ref="pkg:npm/%40apollo/client%2Freact%2Fhooks"/>
+      <dependency ref="pkg:npm/%40apollo/client%2Freact%2Fparser"/>
+      <dependency ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals"/>
+    </dependency>
+    <dependency ref="pkg:npm/%40apollo/client%2Freact%2Fcontext">
+      <dependency ref="pkg:npm/%40apollo/client%2Futilities"/>
+      <dependency ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals"/>
+      <dependency ref="pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react"/>
+    </dependency>
+    <dependency ref="pkg:npm/%40apollo/client%2Freact%2Fhooks">
+      <dependency ref="pkg:npm/%40apollo/client%2Fcore"/>
+      <dependency ref="pkg:npm/%40apollo/client%2Ferrors"/>
+      <dependency ref="pkg:npm/%40apollo/client%2Freact%2Fcontext"/>
+      <dependency ref="pkg:npm/%40apollo/client%2Freact%2Fparser"/>
+      <dependency ref="pkg:npm/%40apollo/client%2Futilities"/>
+      <dependency ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals"/>
+      <dependency ref="pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git"/>
+      <dependency ref="pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react"/>
+      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
+    </dependency>
+    <dependency ref="pkg:npm/%40apollo/client%2Freact%2Fparser">
+      <dependency ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals"/>
+    </dependency>
+    <dependency ref="pkg:npm/%40apollo/client%2Futilities">
+      <dependency ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals"/>
+      <dependency ref="pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git"/>
+      <dependency ref="pkg:npm/symbol-observable@4.0.0?vcs_url=git%2Bhttps%3A//github.com/blesh/symbol-observable.git"/>
+      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
+      <dependency ref="pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"/>
+    </dependency>
+    <dependency ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals">
+      <dependency ref="pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git"/>
+      <dependency ref="pkg:npm/ts-invariant@0.10.3?vcs_url=git%2Bhttps%3A//github.com/apollographql/invariant-packages.git"/>
+      <dependency ref="pkg:npm/ts-invariant%2Fprocess"/>
     </dependency>
     <dependency ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue745?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue745">
       <dependency ref="pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git"/>

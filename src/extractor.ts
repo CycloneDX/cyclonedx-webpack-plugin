@@ -65,6 +65,8 @@ export class Extractor {
           )
         } catch (e) {
           logger?.warn('normalizePackageJson from PkgPath', pkg.path, 'caused:', e)
+          // reset data, and try to run with it...
+          pkg.packageJson = require(pkg.path)
         }
         component = pkgs[pkg.path] = this.#componentBuilder.makeComponent(pkg.packageJson)
         logger?.debug('built', component, 'based on', pkg, 'for module', module)
