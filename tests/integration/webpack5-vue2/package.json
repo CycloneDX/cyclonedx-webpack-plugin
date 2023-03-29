@@ -1,5 +1,5 @@
 {
-  "name": "@cyclonedx-weboack-plugin-tests/example-webpack5-vue2",
+  "name": "@cyclonedx-webpack-plugin-tests/example-webpack5-vue2",
   "description": "example setup witch Vue2 in WebPack5",
   "private": true,
   "homepage": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/webpack5-vue2#readme",

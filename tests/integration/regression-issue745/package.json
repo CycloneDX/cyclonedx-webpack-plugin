@@ -1,5 +1,5 @@
 {
-  "name": "@cyclonedx-weboack-plugin-tests/regression-issue745",
+  "name": "@cyclonedx-webpack-plugin-tests/regression-issue745",
   "description": "example setup for issue#745",
   "private": true,
   "type": "commonjs",

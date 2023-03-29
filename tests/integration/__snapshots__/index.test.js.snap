@@ -56,8 +56,8 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
     "component": {
       "type": "application",
       "name": "example-webpack5-angular13",
-      "group": "@cyclonedx-weboack-plugin-tests",
-      "bom-ref": "pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13",
+      "group": "@cyclonedx-webpack-plugin-tests",
+      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13",
       "author": "Jan Kowalleck",
       "description": "example setup witch Angular13 in WebPack5",
       "licenses": [
@@ -67,7 +67,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13",
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -344,7 +344,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
       ]
     },
     {
-      "ref": "pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13",
+      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13",
       "dependsOn": [
         "pkg:npm/%40angular/common@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
         "pkg:npm/%40angular/core@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
@@ -428,8 +428,8 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
     "component": {
       "type": "application",
       "name": "example-webpack5-angular13",
-      "group": "@cyclonedx-weboack-plugin-tests",
-      "bom-ref": "pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13",
+      "group": "@cyclonedx-webpack-plugin-tests",
+      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13",
       "author": "Jan Kowalleck",
       "description": "example setup witch Angular13 in WebPack5",
       "licenses": [
@@ -439,7 +439,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13",
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -716,7 +716,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
       ]
     },
     {
-      "ref": "pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13",
+      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13",
       "dependsOn": [
         "pkg:npm/%40angular/common@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
         "pkg:npm/%40angular/core@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
@@ -788,9 +788,9 @@ exports[`integration functional: webpack5 with angular13 generated xml file: dis
         </externalReferences>
       </tool>
     </tools>
-    <component type="application" bom-ref="pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13">
+    <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13">
       <author>Jan Kowalleck</author>
-      <group>@cyclonedx-weboack-plugin-tests</group>
+      <group>@cyclonedx-webpack-plugin-tests</group>
       <name>example-webpack5-angular13</name>
       <description>example setup witch Angular13 in WebPack5</description>
       <licenses>
@@ -798,7 +798,7 @@ exports[`integration functional: webpack5 with angular13 generated xml file: dis
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13</purl>
+      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
@@ -1013,7 +1013,7 @@ exports[`integration functional: webpack5 with angular13 generated xml file: dis
       <dependency ref="pkg:npm/%40angular/common@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common"/>
       <dependency ref="pkg:npm/%40angular/core@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core"/>
     </dependency>
-    <dependency ref="pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13">
+    <dependency ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13">
       <dependency ref="pkg:npm/%40angular/common@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common"/>
       <dependency ref="pkg:npm/%40angular/core@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core"/>
       <dependency ref="pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser"/>
@@ -1873,8 +1873,8 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.b
     "component": {
       "type": "application",
       "name": "example-webpack5-vue2",
-      "group": "@cyclonedx-weboack-plugin-tests",
-      "bom-ref": "pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
+      "group": "@cyclonedx-webpack-plugin-tests",
+      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
       "author": "Jan Kowalleck",
       "description": "example setup witch Vue2 in WebPack5",
       "licenses": [
@@ -1884,7 +1884,7 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.b
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -1941,7 +1941,7 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.b
   ],
   "dependencies": [
     {
-      "ref": "pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
+      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
       "dependsOn": [
         "pkg:npm/vue@2.6.14?vcs_url=git%2Bhttps%3A//github.com/vuejs/vue.git"
       ]
@@ -2009,8 +2009,8 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.w
     "component": {
       "type": "application",
       "name": "example-webpack5-vue2",
-      "group": "@cyclonedx-weboack-plugin-tests",
-      "bom-ref": "pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
+      "group": "@cyclonedx-webpack-plugin-tests",
+      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
       "author": "Jan Kowalleck",
       "description": "example setup witch Vue2 in WebPack5",
       "licenses": [
@@ -2020,7 +2020,7 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.w
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -2077,7 +2077,7 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.w
   ],
   "dependencies": [
     {
-      "ref": "pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
+      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
       "dependsOn": [
         "pkg:npm/vue@2.6.14?vcs_url=git%2Bhttps%3A//github.com/vuejs/vue.git"
       ]
@@ -2133,9 +2133,9 @@ exports[`integration functional: webpack5 with vue2 generated xml file: dist/.bo
         </externalReferences>
       </tool>
     </tools>
-    <component type="application" bom-ref="pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2">
+    <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2">
       <author>Jan Kowalleck</author>
-      <group>@cyclonedx-weboack-plugin-tests</group>
+      <group>@cyclonedx-webpack-plugin-tests</group>
       <name>example-webpack5-vue2</name>
       <description>example setup witch Vue2 in WebPack5</description>
       <licenses>
@@ -2143,7 +2143,7 @@ exports[`integration functional: webpack5 with vue2 generated xml file: dist/.bo
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2</purl>
+      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
@@ -2189,7 +2189,7 @@ exports[`integration functional: webpack5 with vue2 generated xml file: dist/.bo
     </component>
   </components>
   <dependencies>
-    <dependency ref="pkg:npm/%40cyclonedx-weboack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2">
+    <dependency ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2">
       <dependency ref="pkg:npm/vue@2.6.14?vcs_url=git%2Bhttps%3A//github.com/vuejs/vue.git"/>
     </dependency>
     <dependency ref="pkg:npm/vue@2.6.14?vcs_url=git%2Bhttps%3A//github.com/vuejs/vue.git"/>
@@ -2253,8 +2253,8 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
     "component": {
       "type": "application",
       "name": "regression-issue745",
-      "group": "@cyclonedx-weboack-plugin-tests",
-      "bom-ref": "pkg:npm/%40cyclonedx-weboack-plugin-tests/regression-issue745?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue745",
+      "group": "@cyclonedx-webpack-plugin-tests",
+      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue745?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue745",
       "author": "Jan Kowalleck",
       "description": "example setup for issue#745",
       "licenses": [
@@ -2264,7 +2264,7 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx-weboack-plugin-tests/regression-issue745?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue745",
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue745?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue745",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -2289,77 +2289,77 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
       "type": "library",
       "name": "client",
       "group": "@apollo",
-      "bom-ref": "BomRef.36940ldpu6.f6ncunh9bio",
+      "bom-ref": "BomRef.1v6i7c2p2d.o6oj54aujq",
       "purl": "pkg:npm/%40apollo/client"
     },
     {
       "type": "library",
       "name": "client",
       "group": "@apollo",
-      "bom-ref": "BomRef.4buj11o6t5.ssv71vuetgg",
+      "bom-ref": "BomRef.2uuhgjkqm4.44rbt5qa92",
       "purl": "pkg:npm/%40apollo/client"
     },
     {
       "type": "library",
       "name": "client",
       "group": "@apollo",
-      "bom-ref": "BomRef.5deb55m03co.kkl8vrthmqg",
+      "bom-ref": "BomRef.574bgaaihho.ra6niip10oo",
       "purl": "pkg:npm/%40apollo/client"
     },
     {
       "type": "library",
       "name": "client",
       "group": "@apollo",
-      "bom-ref": "BomRef.5lj43v71ke8.aet8potatb8",
+      "bom-ref": "BomRef.9nfeuv9mls8.fknbfl7qqio",
       "purl": "pkg:npm/%40apollo/client"
     },
     {
       "type": "library",
       "name": "client",
       "group": "@apollo",
-      "bom-ref": "BomRef.626mu8poa.3h80f6ebc7",
+      "bom-ref": "BomRef.a4pdmbhdu4o.gr9hlr64lk",
       "purl": "pkg:npm/%40apollo/client"
     },
     {
       "type": "library",
       "name": "client",
       "group": "@apollo",
-      "bom-ref": "BomRef.84kqf7lvnfg.s0sb023nqj8",
+      "bom-ref": "BomRef.bsjllu46o3g.6n1jcl11nt8",
       "purl": "pkg:npm/%40apollo/client"
     },
     {
       "type": "library",
       "name": "client",
       "group": "@apollo",
-      "bom-ref": "BomRef.9tr0efifegg.6gjdn1e8r68",
+      "bom-ref": "BomRef.cujqv1hiht.k61uu3mgbjo",
       "purl": "pkg:npm/%40apollo/client"
     },
     {
       "type": "library",
       "name": "client",
       "group": "@apollo",
-      "bom-ref": "BomRef.d7ihsbjjr28.n6qcm1umh7o",
+      "bom-ref": "BomRef.deq9qishqr.aranrud11po",
       "purl": "pkg:npm/%40apollo/client"
     },
     {
       "type": "library",
       "name": "client",
       "group": "@apollo",
-      "bom-ref": "BomRef.q59kca90p48.ersa509b3qg",
+      "bom-ref": "BomRef.estn8etubf8.d3tbol05nqo",
       "purl": "pkg:npm/%40apollo/client"
     },
     {
       "type": "library",
       "name": "client",
       "group": "@apollo",
-      "bom-ref": "BomRef.rgfl1tr9psg.1s4qiius3jo",
+      "bom-ref": "BomRef.snpcft3603.8567r648g4",
       "purl": "pkg:npm/%40apollo/client"
     },
     {
       "type": "library",
       "name": "client",
       "group": "@apollo",
-      "bom-ref": "BomRef.vhjem3jc2gg.psk4k3mg7ko",
+      "bom-ref": "BomRef.vkrv75rojg.kp7bht4v6u8",
       "purl": "pkg:npm/%40apollo/client"
     },
     {
@@ -2774,24 +2774,122 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
   ],
   "dependencies": [
     {
-      "ref": "BomRef.36940ldpu6.f6ncunh9bio",
+      "ref": "BomRef.1v6i7c2p2d.o6oj54aujq",
       "dependsOn": [
-        "BomRef.5lj43v71ke8.aet8potatb8",
-        "BomRef.d7ihsbjjr28.n6qcm1umh7o",
+        "BomRef.a4pdmbhdu4o.gr9hlr64lk",
+        "BomRef.cujqv1hiht.k61uu3mgbjo",
+        "pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react"
+      ]
+    },
+    {
+      "ref": "BomRef.2uuhgjkqm4.44rbt5qa92",
+      "dependsOn": [
+        "BomRef.a4pdmbhdu4o.gr9hlr64lk",
+        "BomRef.cujqv1hiht.k61uu3mgbjo",
         "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
         "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
       ]
     },
     {
-      "ref": "BomRef.4buj11o6t5.ssv71vuetgg",
+      "ref": "BomRef.574bgaaihho.ra6niip10oo",
       "dependsOn": [
-        "BomRef.36940ldpu6.f6ncunh9bio",
-        "BomRef.5lj43v71ke8.aet8potatb8",
-        "BomRef.9tr0efifegg.6gjdn1e8r68",
-        "BomRef.d7ihsbjjr28.n6qcm1umh7o",
-        "BomRef.q59kca90p48.ersa509b3qg",
-        "BomRef.rgfl1tr9psg.1s4qiius3jo",
-        "BomRef.vhjem3jc2gg.psk4k3mg7ko",
+        "BomRef.a4pdmbhdu4o.gr9hlr64lk"
+      ]
+    },
+    {
+      "ref": "BomRef.9nfeuv9mls8.fknbfl7qqio",
+      "dependsOn": [
+        "BomRef.2uuhgjkqm4.44rbt5qa92",
+        "BomRef.a4pdmbhdu4o.gr9hlr64lk",
+        "BomRef.cujqv1hiht.k61uu3mgbjo",
+        "BomRef.vkrv75rojg.kp7bht4v6u8",
+        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
+        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
+        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
+      ]
+    },
+    {
+      "ref": "BomRef.a4pdmbhdu4o.gr9hlr64lk",
+      "dependsOn": [
+        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
+        "pkg:npm/ts-invariant@0.10.3?vcs_url=git%2Bhttps%3A//github.com/apollographql/invariant-packages.git",
+        "pkg:npm/ts-invariant%2Fprocess"
+      ]
+    },
+    {
+      "ref": "BomRef.bsjllu46o3g.6n1jcl11nt8",
+      "dependsOn": [
+        "BomRef.1v6i7c2p2d.o6oj54aujq",
+        "BomRef.574bgaaihho.ra6niip10oo",
+        "BomRef.a4pdmbhdu4o.gr9hlr64lk",
+        "BomRef.deq9qishqr.aranrud11po"
+      ]
+    },
+    {
+      "ref": "BomRef.cujqv1hiht.k61uu3mgbjo",
+      "dependsOn": [
+        "BomRef.a4pdmbhdu4o.gr9hlr64lk",
+        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
+        "pkg:npm/symbol-observable@4.0.0?vcs_url=git%2Bhttps%3A//github.com/blesh/symbol-observable.git",
+        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
+        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
+      ]
+    },
+    {
+      "ref": "BomRef.deq9qishqr.aranrud11po",
+      "dependsOn": [
+        "BomRef.1v6i7c2p2d.o6oj54aujq",
+        "BomRef.574bgaaihho.ra6niip10oo",
+        "BomRef.a4pdmbhdu4o.gr9hlr64lk",
+        "BomRef.cujqv1hiht.k61uu3mgbjo",
+        "BomRef.estn8etubf8.d3tbol05nqo",
+        "pkg:npm/%40apollo/client",
+        "pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
+        "pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react",
+        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
+      ]
+    },
+    {
+      "ref": "BomRef.estn8etubf8.d3tbol05nqo",
+      "dependsOn": [
+        "BomRef.a4pdmbhdu4o.gr9hlr64lk",
+        "BomRef.cujqv1hiht.k61uu3mgbjo",
+        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
+      ]
+    },
+    {
+      "ref": "BomRef.snpcft3603.8567r648g4",
+      "dependsOn": [
+        "BomRef.a4pdmbhdu4o.gr9hlr64lk",
+        "BomRef.cujqv1hiht.k61uu3mgbjo",
+        "pkg:npm/%40wry/context@0.7.0?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
+        "pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
+        "pkg:npm/%40wry/trie@0.3.2?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
+        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
+        "pkg:npm/optimism@0.16.2?vcs_url=git%2Bhttps%3A//github.com/benjamn/optimism.git",
+        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
+      ]
+    },
+    {
+      "ref": "BomRef.vkrv75rojg.kp7bht4v6u8",
+      "dependsOn": [
+        "BomRef.2uuhgjkqm4.44rbt5qa92",
+        "BomRef.a4pdmbhdu4o.gr9hlr64lk",
+        "BomRef.cujqv1hiht.k61uu3mgbjo",
+        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
+        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40apollo/client",
+      "dependsOn": [
+        "BomRef.2uuhgjkqm4.44rbt5qa92",
+        "BomRef.9nfeuv9mls8.fknbfl7qqio",
+        "BomRef.a4pdmbhdu4o.gr9hlr64lk",
+        "BomRef.cujqv1hiht.k61uu3mgbjo",
+        "BomRef.estn8etubf8.d3tbol05nqo",
+        "BomRef.snpcft3603.8567r648g4",
+        "BomRef.vkrv75rojg.kp7bht4v6u8",
         "pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git",
         "pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
         "pkg:npm/graphql-tag@2.12.6?vcs_url=git%2Bhttps%3A//github.com/apollographql/graphql-tag.git",
@@ -2802,112 +2900,14 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
       ]
     },
     {
-      "ref": "BomRef.5deb55m03co.kkl8vrthmqg",
-      "dependsOn": [
-        "BomRef.5lj43v71ke8.aet8potatb8",
-        "BomRef.d7ihsbjjr28.n6qcm1umh7o",
-        "pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react"
-      ]
-    },
-    {
-      "ref": "BomRef.5lj43v71ke8.aet8potatb8",
-      "dependsOn": [
-        "BomRef.d7ihsbjjr28.n6qcm1umh7o",
-        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
-        "pkg:npm/symbol-observable@4.0.0?vcs_url=git%2Bhttps%3A//github.com/blesh/symbol-observable.git",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
-        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
-      ]
-    },
-    {
-      "ref": "BomRef.626mu8poa.3h80f6ebc7",
-      "dependsOn": [
-        "BomRef.d7ihsbjjr28.n6qcm1umh7o"
-      ]
-    },
-    {
-      "ref": "BomRef.84kqf7lvnfg.s0sb023nqj8",
-      "dependsOn": [
-        "BomRef.4buj11o6t5.ssv71vuetgg",
-        "BomRef.5deb55m03co.kkl8vrthmqg",
-        "BomRef.5lj43v71ke8.aet8potatb8",
-        "BomRef.626mu8poa.3h80f6ebc7",
-        "BomRef.d7ihsbjjr28.n6qcm1umh7o",
-        "BomRef.q59kca90p48.ersa509b3qg",
-        "pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
-        "pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
-      ]
-    },
-    {
-      "ref": "BomRef.9tr0efifegg.6gjdn1e8r68",
-      "dependsOn": [
-        "BomRef.36940ldpu6.f6ncunh9bio",
-        "BomRef.5lj43v71ke8.aet8potatb8",
-        "BomRef.d7ihsbjjr28.n6qcm1umh7o",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
-        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
-      ]
-    },
-    {
-      "ref": "BomRef.d7ihsbjjr28.n6qcm1umh7o",
-      "dependsOn": [
-        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
-        "pkg:npm/ts-invariant@0.10.3?vcs_url=git%2Bhttps%3A//github.com/apollographql/invariant-packages.git",
-        "pkg:npm/ts-invariant%2Fprocess"
-      ]
-    },
-    {
-      "ref": "BomRef.q59kca90p48.ersa509b3qg",
-      "dependsOn": [
-        "BomRef.5lj43v71ke8.aet8potatb8",
-        "BomRef.d7ihsbjjr28.n6qcm1umh7o",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
-      ]
-    },
-    {
-      "ref": "BomRef.rgfl1tr9psg.1s4qiius3jo",
-      "dependsOn": [
-        "BomRef.5lj43v71ke8.aet8potatb8",
-        "BomRef.d7ihsbjjr28.n6qcm1umh7o",
-        "pkg:npm/%40wry/context@0.7.0?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
-        "pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
-        "pkg:npm/%40wry/trie@0.3.2?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
-        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
-        "pkg:npm/optimism@0.16.2?vcs_url=git%2Bhttps%3A//github.com/benjamn/optimism.git",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
-      ]
-    },
-    {
-      "ref": "BomRef.vhjem3jc2gg.psk4k3mg7ko",
-      "dependsOn": [
-        "BomRef.36940ldpu6.f6ncunh9bio",
-        "BomRef.5lj43v71ke8.aet8potatb8",
-        "BomRef.9tr0efifegg.6gjdn1e8r68",
-        "BomRef.d7ihsbjjr28.n6qcm1umh7o",
-        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
-        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client",
-      "dependsOn": [
-        "BomRef.5deb55m03co.kkl8vrthmqg",
-        "BomRef.626mu8poa.3h80f6ebc7",
-        "BomRef.84kqf7lvnfg.s0sb023nqj8",
-        "BomRef.d7ihsbjjr28.n6qcm1umh7o"
-      ]
-    },
-    {
       "ref": "pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git",
       "dependsOn": [
-        "BomRef.4buj11o6t5.ssv71vuetgg",
+        "BomRef.bsjllu46o3g.6n1jcl11nt8",
         "pkg:npm/%40apollo/client"
       ]
     },
     {
-      "ref": "pkg:npm/%40cyclonedx-weboack-plugin-tests/regression-issue745?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue745",
+      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue745?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue745",
       "dependsOn": [
         "pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git"
       ]
@@ -3019,8 +3019,8 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
     "component": {
       "type": "application",
       "name": "regression-issue745",
-      "group": "@cyclonedx-weboack-plugin-tests",
-      "bom-ref": "pkg:npm/%40cyclonedx-weboack-plugin-tests/regression-issue745?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue745",
+      "group": "@cyclonedx-webpack-plugin-tests",
+      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue745?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue745",
       "author": "Jan Kowalleck",
       "description": "example setup for issue#745",
       "licenses": [
@@ -3030,7 +3030,7 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx-weboack-plugin-tests/regression-issue745?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue745",
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue745?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue745",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -3055,77 +3055,77 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
       "type": "library",
       "name": "client",
       "group": "@apollo",
-      "bom-ref": "BomRef.4tr145qmr6.h37d6puhmrg",
+      "bom-ref": "BomRef.1qqa5gucsr8.m004ottvl2o",
       "purl": "pkg:npm/%40apollo/client"
     },
     {
       "type": "library",
       "name": "client",
       "group": "@apollo",
-      "bom-ref": "BomRef.c49mpkd3av8.2b96ig8fht",
+      "bom-ref": "BomRef.303qa2m92h.9ugke721j48",
       "purl": "pkg:npm/%40apollo/client"
     },
     {
       "type": "library",
       "name": "client",
       "group": "@apollo",
-      "bom-ref": "BomRef.clc590ats4g.1t3ctsrldoo",
+      "bom-ref": "BomRef.5jvbn6rdado.2leb9vrajdo",
       "purl": "pkg:npm/%40apollo/client"
     },
     {
       "type": "library",
       "name": "client",
       "group": "@apollo",
-      "bom-ref": "BomRef.ddr00cbef2.8r5g0vmule",
+      "bom-ref": "BomRef.8jiivt537hg.r634smm6lto",
       "purl": "pkg:npm/%40apollo/client"
     },
     {
       "type": "library",
       "name": "client",
       "group": "@apollo",
-      "bom-ref": "BomRef.g0udgt6fms8.bkfe7epe6ig",
+      "bom-ref": "BomRef.b47547ah6u8.8obnf9068qo",
       "purl": "pkg:npm/%40apollo/client"
     },
     {
       "type": "library",
       "name": "client",
       "group": "@apollo",
-      "bom-ref": "BomRef.i8j9uhc2i98.lhc3kojg9a",
+      "bom-ref": "BomRef.hf4dtphovdo.4i4nr20p5dg",
       "purl": "pkg:npm/%40apollo/client"
     },
     {
       "type": "library",
       "name": "client",
       "group": "@apollo",
-      "bom-ref": "BomRef.jmn9l08pju8.ll7otmvv5so",
+      "bom-ref": "BomRef.iecpj4e1vr.dd6kdf9kv8g",
       "purl": "pkg:npm/%40apollo/client"
     },
     {
       "type": "library",
       "name": "client",
       "group": "@apollo",
-      "bom-ref": "BomRef.nbn3ubl6ad8.02qm3u9084g",
+      "bom-ref": "BomRef.in07cbh914g.tt3pobvo9pg",
       "purl": "pkg:npm/%40apollo/client"
     },
     {
       "type": "library",
       "name": "client",
       "group": "@apollo",
-      "bom-ref": "BomRef.oc4prune9u8.sq9224s7c8g",
+      "bom-ref": "BomRef.kn8sqe77nk8.46sq28j9048",
       "purl": "pkg:npm/%40apollo/client"
     },
     {
       "type": "library",
       "name": "client",
       "group": "@apollo",
-      "bom-ref": "BomRef.q2o6bg52qe.ul3d64bi1m",
+      "bom-ref": "BomRef.t8spi8bsjio.gllnu01au48",
       "purl": "pkg:npm/%40apollo/client"
     },
     {
       "type": "library",
       "name": "client",
       "group": "@apollo",
-      "bom-ref": "BomRef.ra25hqjpjj.qd39m0goeco",
+      "bom-ref": "BomRef.tung50etti.dltr2j5rav8",
       "purl": "pkg:npm/%40apollo/client"
     },
     {
@@ -3540,15 +3540,122 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
   ],
   "dependencies": [
     {
-      "ref": "BomRef.4tr145qmr6.h37d6puhmrg",
+      "ref": "BomRef.1qqa5gucsr8.m004ottvl2o",
       "dependsOn": [
-        "BomRef.c49mpkd3av8.2b96ig8fht",
-        "BomRef.ddr00cbef2.8r5g0vmule",
-        "BomRef.g0udgt6fms8.bkfe7epe6ig",
-        "BomRef.jmn9l08pju8.ll7otmvv5so",
-        "BomRef.nbn3ubl6ad8.02qm3u9084g",
-        "BomRef.q2o6bg52qe.ul3d64bi1m",
-        "BomRef.ra25hqjpjj.qd39m0goeco",
+        "BomRef.in07cbh914g.tt3pobvo9pg",
+        "BomRef.t8spi8bsjio.gllnu01au48",
+        "pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react"
+      ]
+    },
+    {
+      "ref": "BomRef.303qa2m92h.9ugke721j48",
+      "dependsOn": [
+        "BomRef.t8spi8bsjio.gllnu01au48"
+      ]
+    },
+    {
+      "ref": "BomRef.5jvbn6rdado.2leb9vrajdo",
+      "dependsOn": [
+        "BomRef.in07cbh914g.tt3pobvo9pg",
+        "BomRef.t8spi8bsjio.gllnu01au48",
+        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
+        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
+      ]
+    },
+    {
+      "ref": "BomRef.8jiivt537hg.r634smm6lto",
+      "dependsOn": [
+        "BomRef.1qqa5gucsr8.m004ottvl2o",
+        "BomRef.303qa2m92h.9ugke721j48",
+        "BomRef.hf4dtphovdo.4i4nr20p5dg",
+        "BomRef.in07cbh914g.tt3pobvo9pg",
+        "BomRef.t8spi8bsjio.gllnu01au48",
+        "pkg:npm/%40apollo/client",
+        "pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
+        "pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react",
+        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
+      ]
+    },
+    {
+      "ref": "BomRef.b47547ah6u8.8obnf9068qo",
+      "dependsOn": [
+        "BomRef.5jvbn6rdado.2leb9vrajdo",
+        "BomRef.in07cbh914g.tt3pobvo9pg",
+        "BomRef.kn8sqe77nk8.46sq28j9048",
+        "BomRef.t8spi8bsjio.gllnu01au48",
+        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
+        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
+        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
+      ]
+    },
+    {
+      "ref": "BomRef.hf4dtphovdo.4i4nr20p5dg",
+      "dependsOn": [
+        "BomRef.in07cbh914g.tt3pobvo9pg",
+        "BomRef.t8spi8bsjio.gllnu01au48",
+        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
+      ]
+    },
+    {
+      "ref": "BomRef.iecpj4e1vr.dd6kdf9kv8g",
+      "dependsOn": [
+        "BomRef.1qqa5gucsr8.m004ottvl2o",
+        "BomRef.303qa2m92h.9ugke721j48",
+        "BomRef.8jiivt537hg.r634smm6lto",
+        "BomRef.t8spi8bsjio.gllnu01au48"
+      ]
+    },
+    {
+      "ref": "BomRef.in07cbh914g.tt3pobvo9pg",
+      "dependsOn": [
+        "BomRef.t8spi8bsjio.gllnu01au48",
+        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
+        "pkg:npm/symbol-observable@4.0.0?vcs_url=git%2Bhttps%3A//github.com/blesh/symbol-observable.git",
+        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
+        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
+      ]
+    },
+    {
+      "ref": "BomRef.kn8sqe77nk8.46sq28j9048",
+      "dependsOn": [
+        "BomRef.5jvbn6rdado.2leb9vrajdo",
+        "BomRef.in07cbh914g.tt3pobvo9pg",
+        "BomRef.t8spi8bsjio.gllnu01au48",
+        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
+        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
+      ]
+    },
+    {
+      "ref": "BomRef.t8spi8bsjio.gllnu01au48",
+      "dependsOn": [
+        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
+        "pkg:npm/ts-invariant@0.10.3?vcs_url=git%2Bhttps%3A//github.com/apollographql/invariant-packages.git",
+        "pkg:npm/ts-invariant%2Fprocess"
+      ]
+    },
+    {
+      "ref": "BomRef.tung50etti.dltr2j5rav8",
+      "dependsOn": [
+        "BomRef.in07cbh914g.tt3pobvo9pg",
+        "BomRef.t8spi8bsjio.gllnu01au48",
+        "pkg:npm/%40wry/context@0.7.0?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
+        "pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
+        "pkg:npm/%40wry/trie@0.3.2?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
+        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
+        "pkg:npm/optimism@0.16.2?vcs_url=git%2Bhttps%3A//github.com/benjamn/optimism.git",
+        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40apollo/client",
+      "dependsOn": [
+        "BomRef.5jvbn6rdado.2leb9vrajdo",
+        "BomRef.b47547ah6u8.8obnf9068qo",
+        "BomRef.hf4dtphovdo.4i4nr20p5dg",
+        "BomRef.in07cbh914g.tt3pobvo9pg",
+        "BomRef.kn8sqe77nk8.46sq28j9048",
+        "BomRef.t8spi8bsjio.gllnu01au48",
+        "BomRef.tung50etti.dltr2j5rav8",
         "pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git",
         "pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
         "pkg:npm/graphql-tag@2.12.6?vcs_url=git%2Bhttps%3A//github.com/apollographql/graphql-tag.git",
@@ -3559,121 +3666,14 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
       ]
     },
     {
-      "ref": "BomRef.c49mpkd3av8.2b96ig8fht",
-      "dependsOn": [
-        "BomRef.ddr00cbef2.8r5g0vmule",
-        "BomRef.nbn3ubl6ad8.02qm3u9084g",
-        "pkg:npm/%40wry/context@0.7.0?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
-        "pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
-        "pkg:npm/%40wry/trie@0.3.2?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
-        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
-        "pkg:npm/optimism@0.16.2?vcs_url=git%2Bhttps%3A//github.com/benjamn/optimism.git",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
-      ]
-    },
-    {
-      "ref": "BomRef.clc590ats4g.1t3ctsrldoo",
-      "dependsOn": [
-        "BomRef.ddr00cbef2.8r5g0vmule",
-        "BomRef.nbn3ubl6ad8.02qm3u9084g",
-        "pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react"
-      ]
-    },
-    {
-      "ref": "BomRef.ddr00cbef2.8r5g0vmule",
-      "dependsOn": [
-        "BomRef.nbn3ubl6ad8.02qm3u9084g",
-        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
-        "pkg:npm/symbol-observable@4.0.0?vcs_url=git%2Bhttps%3A//github.com/blesh/symbol-observable.git",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
-        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
-      ]
-    },
-    {
-      "ref": "BomRef.g0udgt6fms8.bkfe7epe6ig",
-      "dependsOn": [
-        "BomRef.ddr00cbef2.8r5g0vmule",
-        "BomRef.nbn3ubl6ad8.02qm3u9084g",
-        "BomRef.q2o6bg52qe.ul3d64bi1m",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
-        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
-      ]
-    },
-    {
-      "ref": "BomRef.i8j9uhc2i98.lhc3kojg9a",
-      "dependsOn": [
-        "BomRef.4tr145qmr6.h37d6puhmrg",
-        "BomRef.clc590ats4g.1t3ctsrldoo",
-        "BomRef.ddr00cbef2.8r5g0vmule",
-        "BomRef.nbn3ubl6ad8.02qm3u9084g",
-        "BomRef.oc4prune9u8.sq9224s7c8g",
-        "BomRef.ra25hqjpjj.qd39m0goeco",
-        "pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
-        "pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
-      ]
-    },
-    {
-      "ref": "BomRef.jmn9l08pju8.ll7otmvv5so",
-      "dependsOn": [
-        "BomRef.ddr00cbef2.8r5g0vmule",
-        "BomRef.g0udgt6fms8.bkfe7epe6ig",
-        "BomRef.nbn3ubl6ad8.02qm3u9084g",
-        "BomRef.q2o6bg52qe.ul3d64bi1m",
-        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
-        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
-      ]
-    },
-    {
-      "ref": "BomRef.nbn3ubl6ad8.02qm3u9084g",
-      "dependsOn": [
-        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
-        "pkg:npm/ts-invariant@0.10.3?vcs_url=git%2Bhttps%3A//github.com/apollographql/invariant-packages.git",
-        "pkg:npm/ts-invariant%2Fprocess"
-      ]
-    },
-    {
-      "ref": "BomRef.oc4prune9u8.sq9224s7c8g",
-      "dependsOn": [
-        "BomRef.nbn3ubl6ad8.02qm3u9084g"
-      ]
-    },
-    {
-      "ref": "BomRef.q2o6bg52qe.ul3d64bi1m",
-      "dependsOn": [
-        "BomRef.ddr00cbef2.8r5g0vmule",
-        "BomRef.nbn3ubl6ad8.02qm3u9084g",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
-        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
-      ]
-    },
-    {
-      "ref": "BomRef.ra25hqjpjj.qd39m0goeco",
-      "dependsOn": [
-        "BomRef.ddr00cbef2.8r5g0vmule",
-        "BomRef.nbn3ubl6ad8.02qm3u9084g",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client",
-      "dependsOn": [
-        "BomRef.clc590ats4g.1t3ctsrldoo",
-        "BomRef.i8j9uhc2i98.lhc3kojg9a",
-        "BomRef.nbn3ubl6ad8.02qm3u9084g",
-        "BomRef.oc4prune9u8.sq9224s7c8g"
-      ]
-    },
-    {
       "ref": "pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git",
       "dependsOn": [
-        "BomRef.4tr145qmr6.h37d6puhmrg",
+        "BomRef.iecpj4e1vr.dd6kdf9kv8g",
         "pkg:npm/%40apollo/client"
       ]
     },
     {
-      "ref": "pkg:npm/%40cyclonedx-weboack-plugin-tests/regression-issue745?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue745",
+      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue745?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue745",
       "dependsOn": [
         "pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git"
       ]
@@ -3773,9 +3773,9 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
         </externalReferences>
       </tool>
     </tools>
-    <component type="application" bom-ref="pkg:npm/%40cyclonedx-weboack-plugin-tests/regression-issue745?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue745">
+    <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue745?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue745">
       <author>Jan Kowalleck</author>
-      <group>@cyclonedx-weboack-plugin-tests</group>
+      <group>@cyclonedx-webpack-plugin-tests</group>
       <name>regression-issue745</name>
       <description>example setup for issue#745</description>
       <licenses>
@@ -3783,7 +3783,7 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40cyclonedx-weboack-plugin-tests/regression-issue745?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue745</purl>
+      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue745?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue745</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
@@ -3801,57 +3801,57 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
     </component>
   </metadata>
   <components>
-    <component type="library" bom-ref="BomRef.2coo4jadono.f3462oemnko">
+    <component type="library" bom-ref="BomRef.0bg0jc9bg0g.l8p1v5626p8">
       <group>@apollo</group>
       <name>client</name>
       <purl>pkg:npm/%40apollo/client</purl>
     </component>
-    <component type="library" bom-ref="BomRef.am4lm237ol.g4raeovugog">
+    <component type="library" bom-ref="BomRef.45hfu10oka.98iijunc7bg">
       <group>@apollo</group>
       <name>client</name>
       <purl>pkg:npm/%40apollo/client</purl>
     </component>
-    <component type="library" bom-ref="BomRef.joepd1q1eko.64qp3m29sd8">
+    <component type="library" bom-ref="BomRef.6lfmvv9rggo.ioop0bposb8">
       <group>@apollo</group>
       <name>client</name>
       <purl>pkg:npm/%40apollo/client</purl>
     </component>
-    <component type="library" bom-ref="BomRef.kskhg402i6g.44l26rjdoc">
+    <component type="library" bom-ref="BomRef.6pik6fbe0ao.4hro6s214fo">
       <group>@apollo</group>
       <name>client</name>
       <purl>pkg:npm/%40apollo/client</purl>
     </component>
-    <component type="library" bom-ref="BomRef.mjt7cod22s.cl0ae3fb5ug">
+    <component type="library" bom-ref="BomRef.ce89fl1bfq.83qbpvv2amg">
       <group>@apollo</group>
       <name>client</name>
       <purl>pkg:npm/%40apollo/client</purl>
     </component>
-    <component type="library" bom-ref="BomRef.qdi0hames6o.at7jeig2pco">
+    <component type="library" bom-ref="BomRef.fcdblkggsso.gi923dvudto">
       <group>@apollo</group>
       <name>client</name>
       <purl>pkg:npm/%40apollo/client</purl>
     </component>
-    <component type="library" bom-ref="BomRef.rdd0ted4bc8.n8i7k3j6nvg">
+    <component type="library" bom-ref="BomRef.fi6v6n7lqgg.nf11dk5f7dg">
       <group>@apollo</group>
       <name>client</name>
       <purl>pkg:npm/%40apollo/client</purl>
     </component>
-    <component type="library" bom-ref="BomRef.s72ha53pguo.cp6nbvk0j9g">
+    <component type="library" bom-ref="BomRef.fnnm3t4qakg.lsc13rq842o">
       <group>@apollo</group>
       <name>client</name>
       <purl>pkg:npm/%40apollo/client</purl>
     </component>
-    <component type="library" bom-ref="BomRef.tq2q7rrh9r.rc9dj91ocp">
+    <component type="library" bom-ref="BomRef.kbok9enj81o.4l9ko1j0egg">
       <group>@apollo</group>
       <name>client</name>
       <purl>pkg:npm/%40apollo/client</purl>
     </component>
-    <component type="library" bom-ref="BomRef.u29qci2oc2o.u6g8u00bdm">
+    <component type="library" bom-ref="BomRef.n339j9o2un8.capjq851t1">
       <group>@apollo</group>
       <name>client</name>
       <purl>pkg:npm/%40apollo/client</purl>
     </component>
-    <component type="library" bom-ref="BomRef.vqr4bvoar0g.su5krk9r04o">
+    <component type="library" bom-ref="BomRef.qk87495vt1.biahsp4eje8">
       <group>@apollo</group>
       <name>client</name>
       <purl>pkg:npm/%40apollo/client</purl>
@@ -4179,24 +4179,88 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
     </component>
   </components>
   <dependencies>
-    <dependency ref="BomRef.2coo4jadono.f3462oemnko">
-      <dependency ref="BomRef.am4lm237ol.g4raeovugog"/>
-      <dependency ref="BomRef.mjt7cod22s.cl0ae3fb5ug"/>
-      <dependency ref="pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react"/>
+    <dependency ref="BomRef.0bg0jc9bg0g.l8p1v5626p8">
+      <dependency ref="BomRef.6pik6fbe0ao.4hro6s214fo"/>
+      <dependency ref="pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git"/>
+      <dependency ref="pkg:npm/symbol-observable@4.0.0?vcs_url=git%2Bhttps%3A//github.com/blesh/symbol-observable.git"/>
+      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
+      <dependency ref="pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"/>
     </dependency>
-    <dependency ref="BomRef.am4lm237ol.g4raeovugog">
+    <dependency ref="BomRef.45hfu10oka.98iijunc7bg">
+      <dependency ref="BomRef.0bg0jc9bg0g.l8p1v5626p8"/>
+      <dependency ref="BomRef.6pik6fbe0ao.4hro6s214fo"/>
+      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
+    </dependency>
+    <dependency ref="BomRef.6lfmvv9rggo.ioop0bposb8">
+      <dependency ref="BomRef.6pik6fbe0ao.4hro6s214fo"/>
+      <dependency ref="BomRef.fcdblkggsso.gi923dvudto"/>
+      <dependency ref="BomRef.fnnm3t4qakg.lsc13rq842o"/>
+      <dependency ref="BomRef.kbok9enj81o.4l9ko1j0egg"/>
+    </dependency>
+    <dependency ref="BomRef.6pik6fbe0ao.4hro6s214fo">
       <dependency ref="pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git"/>
       <dependency ref="pkg:npm/ts-invariant@0.10.3?vcs_url=git%2Bhttps%3A//github.com/apollographql/invariant-packages.git"/>
       <dependency ref="pkg:npm/ts-invariant%2Fprocess"/>
     </dependency>
-    <dependency ref="BomRef.joepd1q1eko.64qp3m29sd8">
-      <dependency ref="BomRef.am4lm237ol.g4raeovugog"/>
-      <dependency ref="BomRef.kskhg402i6g.44l26rjdoc"/>
-      <dependency ref="BomRef.mjt7cod22s.cl0ae3fb5ug"/>
-      <dependency ref="BomRef.qdi0hames6o.at7jeig2pco"/>
-      <dependency ref="BomRef.tq2q7rrh9r.rc9dj91ocp"/>
-      <dependency ref="BomRef.u29qci2oc2o.u6g8u00bdm"/>
-      <dependency ref="BomRef.vqr4bvoar0g.su5krk9r04o"/>
+    <dependency ref="BomRef.ce89fl1bfq.83qbpvv2amg">
+      <dependency ref="BomRef.0bg0jc9bg0g.l8p1v5626p8"/>
+      <dependency ref="BomRef.6pik6fbe0ao.4hro6s214fo"/>
+      <dependency ref="BomRef.qk87495vt1.biahsp4eje8"/>
+      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
+      <dependency ref="pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"/>
+    </dependency>
+    <dependency ref="BomRef.fcdblkggsso.gi923dvudto">
+      <dependency ref="BomRef.0bg0jc9bg0g.l8p1v5626p8"/>
+      <dependency ref="BomRef.6pik6fbe0ao.4hro6s214fo"/>
+      <dependency ref="pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react"/>
+    </dependency>
+    <dependency ref="BomRef.fi6v6n7lqgg.nf11dk5f7dg">
+      <dependency ref="BomRef.0bg0jc9bg0g.l8p1v5626p8"/>
+      <dependency ref="BomRef.6pik6fbe0ao.4hro6s214fo"/>
+      <dependency ref="BomRef.ce89fl1bfq.83qbpvv2amg"/>
+      <dependency ref="BomRef.qk87495vt1.biahsp4eje8"/>
+      <dependency ref="pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git"/>
+      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
+      <dependency ref="pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"/>
+    </dependency>
+    <dependency ref="BomRef.fnnm3t4qakg.lsc13rq842o">
+      <dependency ref="BomRef.6pik6fbe0ao.4hro6s214fo"/>
+    </dependency>
+    <dependency ref="BomRef.kbok9enj81o.4l9ko1j0egg">
+      <dependency ref="BomRef.0bg0jc9bg0g.l8p1v5626p8"/>
+      <dependency ref="BomRef.45hfu10oka.98iijunc7bg"/>
+      <dependency ref="BomRef.6pik6fbe0ao.4hro6s214fo"/>
+      <dependency ref="BomRef.fcdblkggsso.gi923dvudto"/>
+      <dependency ref="BomRef.fnnm3t4qakg.lsc13rq842o"/>
+      <dependency ref="pkg:npm/%40apollo/client"/>
+      <dependency ref="pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git"/>
+      <dependency ref="pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react"/>
+      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
+    </dependency>
+    <dependency ref="BomRef.n339j9o2un8.capjq851t1">
+      <dependency ref="BomRef.0bg0jc9bg0g.l8p1v5626p8"/>
+      <dependency ref="BomRef.6pik6fbe0ao.4hro6s214fo"/>
+      <dependency ref="pkg:npm/%40wry/context@0.7.0?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git"/>
+      <dependency ref="pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git"/>
+      <dependency ref="pkg:npm/%40wry/trie@0.3.2?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git"/>
+      <dependency ref="pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git"/>
+      <dependency ref="pkg:npm/optimism@0.16.2?vcs_url=git%2Bhttps%3A//github.com/benjamn/optimism.git"/>
+      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
+    </dependency>
+    <dependency ref="BomRef.qk87495vt1.biahsp4eje8">
+      <dependency ref="BomRef.0bg0jc9bg0g.l8p1v5626p8"/>
+      <dependency ref="BomRef.6pik6fbe0ao.4hro6s214fo"/>
+      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
+      <dependency ref="pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"/>
+    </dependency>
+    <dependency ref="pkg:npm/%40apollo/client">
+      <dependency ref="BomRef.0bg0jc9bg0g.l8p1v5626p8"/>
+      <dependency ref="BomRef.45hfu10oka.98iijunc7bg"/>
+      <dependency ref="BomRef.6pik6fbe0ao.4hro6s214fo"/>
+      <dependency ref="BomRef.ce89fl1bfq.83qbpvv2amg"/>
+      <dependency ref="BomRef.fi6v6n7lqgg.nf11dk5f7dg"/>
+      <dependency ref="BomRef.n339j9o2un8.capjq851t1"/>
+      <dependency ref="BomRef.qk87495vt1.biahsp4eje8"/>
       <dependency ref="pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git"/>
       <dependency ref="pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git"/>
       <dependency ref="pkg:npm/graphql-tag@2.12.6?vcs_url=git%2Bhttps%3A//github.com/apollographql/graphql-tag.git"/>
@@ -4205,75 +4269,11 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
       <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
       <dependency ref="pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"/>
     </dependency>
-    <dependency ref="BomRef.kskhg402i6g.44l26rjdoc">
-      <dependency ref="BomRef.am4lm237ol.g4raeovugog"/>
-      <dependency ref="BomRef.mjt7cod22s.cl0ae3fb5ug"/>
-      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
-    </dependency>
-    <dependency ref="BomRef.mjt7cod22s.cl0ae3fb5ug">
-      <dependency ref="BomRef.am4lm237ol.g4raeovugog"/>
-      <dependency ref="pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git"/>
-      <dependency ref="pkg:npm/symbol-observable@4.0.0?vcs_url=git%2Bhttps%3A//github.com/blesh/symbol-observable.git"/>
-      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
-      <dependency ref="pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"/>
-    </dependency>
-    <dependency ref="BomRef.qdi0hames6o.at7jeig2pco">
-      <dependency ref="BomRef.am4lm237ol.g4raeovugog"/>
-      <dependency ref="BomRef.mjt7cod22s.cl0ae3fb5ug"/>
-      <dependency ref="pkg:npm/%40wry/context@0.7.0?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git"/>
-      <dependency ref="pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git"/>
-      <dependency ref="pkg:npm/%40wry/trie@0.3.2?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git"/>
-      <dependency ref="pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git"/>
-      <dependency ref="pkg:npm/optimism@0.16.2?vcs_url=git%2Bhttps%3A//github.com/benjamn/optimism.git"/>
-      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
-    </dependency>
-    <dependency ref="BomRef.rdd0ted4bc8.n8i7k3j6nvg">
-      <dependency ref="BomRef.am4lm237ol.g4raeovugog"/>
-    </dependency>
-    <dependency ref="BomRef.s72ha53pguo.cp6nbvk0j9g">
-      <dependency ref="BomRef.2coo4jadono.f3462oemnko"/>
-      <dependency ref="BomRef.am4lm237ol.g4raeovugog"/>
-      <dependency ref="BomRef.joepd1q1eko.64qp3m29sd8"/>
-      <dependency ref="BomRef.kskhg402i6g.44l26rjdoc"/>
-      <dependency ref="BomRef.mjt7cod22s.cl0ae3fb5ug"/>
-      <dependency ref="BomRef.rdd0ted4bc8.n8i7k3j6nvg"/>
-      <dependency ref="pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git"/>
-      <dependency ref="pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react"/>
-      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
-    </dependency>
-    <dependency ref="BomRef.tq2q7rrh9r.rc9dj91ocp">
-      <dependency ref="BomRef.am4lm237ol.g4raeovugog"/>
-      <dependency ref="BomRef.mjt7cod22s.cl0ae3fb5ug"/>
-      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
-      <dependency ref="pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"/>
-    </dependency>
-    <dependency ref="BomRef.u29qci2oc2o.u6g8u00bdm">
-      <dependency ref="BomRef.am4lm237ol.g4raeovugog"/>
-      <dependency ref="BomRef.mjt7cod22s.cl0ae3fb5ug"/>
-      <dependency ref="BomRef.tq2q7rrh9r.rc9dj91ocp"/>
-      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
-      <dependency ref="pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"/>
-    </dependency>
-    <dependency ref="BomRef.vqr4bvoar0g.su5krk9r04o">
-      <dependency ref="BomRef.am4lm237ol.g4raeovugog"/>
-      <dependency ref="BomRef.mjt7cod22s.cl0ae3fb5ug"/>
-      <dependency ref="BomRef.tq2q7rrh9r.rc9dj91ocp"/>
-      <dependency ref="BomRef.u29qci2oc2o.u6g8u00bdm"/>
-      <dependency ref="pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git"/>
-      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
-      <dependency ref="pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"/>
-    </dependency>
-    <dependency ref="pkg:npm/%40apollo/client">
-      <dependency ref="BomRef.2coo4jadono.f3462oemnko"/>
-      <dependency ref="BomRef.am4lm237ol.g4raeovugog"/>
-      <dependency ref="BomRef.rdd0ted4bc8.n8i7k3j6nvg"/>
-      <dependency ref="BomRef.s72ha53pguo.cp6nbvk0j9g"/>
-    </dependency>
     <dependency ref="pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git">
-      <dependency ref="BomRef.joepd1q1eko.64qp3m29sd8"/>
+      <dependency ref="BomRef.6lfmvv9rggo.ioop0bposb8"/>
       <dependency ref="pkg:npm/%40apollo/client"/>
     </dependency>
-    <dependency ref="pkg:npm/%40cyclonedx-weboack-plugin-tests/regression-issue745?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue745">
+    <dependency ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue745?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue745">
       <dependency ref="pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git"/>
     </dependency>
     <dependency ref="pkg:npm/%40wry/context@0.7.0?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git"/>
