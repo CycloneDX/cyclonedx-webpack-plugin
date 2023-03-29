@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Fixed:
+  * If packages' metadata [normalization](https://www.npmjs.com/package/normalize-package-data)
+    fails, then this results no longer in a crash but in a warning message. ([#745] via [#])
+
+[#745]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/745
+[#]: 
+
 ## 3.4.0 - 2023-03-28
 
 * Added
