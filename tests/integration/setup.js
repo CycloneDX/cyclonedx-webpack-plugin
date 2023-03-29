@@ -22,9 +22,14 @@ const path = require('path');
 
 (function () {
   const REQUIRES_NPM_INSTALL = [
-    'webpack5-vue2',
+    // region functional tests
     'webpack5-angular13',
-    'webpack5-react18'
+    'webpack5-react18',
+    'webpack5-vue2',
+    // endregion functional tests
+    // region regression tests
+    'regression-issue745'
+    // endregion regression tests
   ]
 
   console.warn(`
