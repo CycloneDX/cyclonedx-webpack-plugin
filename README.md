@@ -105,11 +105,13 @@ module.exports = {
 ### Use with Angular
 
 _Angular_ uses _webpack_ under the hood. Therefore, it is possible to integrate this plugin by utilizing
-[@angular-builders/custom-webpack](https://www.npmjs.com/package/@angular-builders/custom-webpack).
+[@angular-builders/custom-webpack](https://www.npmjs.com/package/@angular-builders/custom-webpack).  
+See an example here: [integration with Angular13/webpack5](https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/webpack5-angular13).
 
 ### Use with React
 
-_React_ uses _webpack_ under the hood. Therefore, it is possible to integrate this plugin.
+_React_ uses _webpack_ under the hood. Therefore, it is possible to integrate this plugin.  
+See an example here: [integration with React18/webpack5](https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/webpack5-react18).
 
 ## Internals
 
