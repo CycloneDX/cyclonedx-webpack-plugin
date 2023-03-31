@@ -58,7 +58,19 @@ export class Extractor {
       let component = pkgs[pkg.path]
       if (component === undefined) {
         logger?.log('try to build new Component from PkgPath', pkg.path)
-        normalizePackageJson(pkg.packageJson, w => logger?.debug('normalizePackageJson from PkgPath', pkg.path, 'caused:', w))
+        try {
+          const _packageJson = structuredClonePolyfill(pkg.packageJson)
+          normalizePackageJson(_packageJson /* add debug for warnings? */)
+          // region fix normalizations
+          if (typeof pkg.packageJson === 'string') {
+            // allow non-SemVer strings
+            _packageJson.version = pkg.packageJson.trim()
+          }
+          // endregion fix normalizations
+          pkg.packageJson = _packageJson
+        } catch (e) {
+          logger?.warn('normalizePackageJson from PkgPath', pkg.path, 'failed:', e)
+        }
         component = pkgs[pkg.path] = this.#componentBuilder.makeComponent(pkg.packageJson)
         logger?.debug('built', component, 'based on', pkg, 'for module', module)
       }
@@ -91,3 +103,7 @@ export class Extractor {
     }
   }
 }
+
+const structuredClonePolyfill: <T>(value: T) => T = typeof structuredClone === 'function'
+  ? structuredClone
+  : function (value) { return JSON.parse(JSON.stringify(value)) }
