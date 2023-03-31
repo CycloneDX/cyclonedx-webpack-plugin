@@ -4,9 +4,16 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 3.4.1 - 2023-03-31
+
 * Fixed:
   * If packages' metadata [normalization](https://www.npmjs.com/package/normalize-package-data)
     fails, then this results no longer in an unhandled crash but causes a warning message ([#745] via [#754])
+* Misc
+  * Packages' metadata [normalization](https://www.npmjs.com/package/normalize-package-data)
+    is less verbose (via [#754])  
+    If failed, then a warning is sent to _webpack_'s log, now. No additional debug messeges anymore.  
+    As always, you can controll the display of these messages via [webpack stats](https://webpack.js.org/configuration/stats/).
 
 [#745]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/745
 [#754]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/754
