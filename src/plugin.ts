@@ -37,6 +37,7 @@ export interface CycloneDxWebpackPluginOptions {
    * Defaults to one that is the latest supported of this application.
    */
   specVersion?: CycloneDxWebpackPlugin['specVersion']
+
   /**
    * Whether to go the extra mile and make the output reproducible.
    * Reproducibility might result in loss of time- and random-based-values.
@@ -44,6 +45,13 @@ export interface CycloneDxWebpackPluginOptions {
    * @default false
    */
   reproducibleResults?: CycloneDxWebpackPlugin['reproducibleResults']
+  /**
+   * Whether to validate the BOM result.
+   * Might require {@link https://github.com/CycloneDX/cyclonedx-javascript-library#optional-dependencies optional dependencies}.
+   *
+   * @default true
+   */
+  validateResults?: CycloneDxWebpackPlugin['validateResults']
 
   /**
    * Path to write the output to.
@@ -98,10 +106,19 @@ export interface CycloneDxWebpackPluginOptions {
   rootComponentVersion?: CycloneDxWebpackPlugin['rootComponentVersion']
 }
 
+class ValidationError extends Error {
+  readonly details: any
+  constructor (message: string, details: any) {
+    super(message)
+    this.details = details
+  }
+}
+
 /** @public */
 export class CycloneDxWebpackPlugin {
   specVersion: CDX.Spec.Version
   reproducibleResults: boolean
+  validateResults: boolean
 
   resultXml: string
   resultJson: string
@@ -115,6 +132,7 @@ export class CycloneDxWebpackPlugin {
   constructor ({
     specVersion = CDX.Spec.Version.v1dot4,
     reproducibleResults = false,
+    validateResults = true,
     outputLocation = './cyclonedx',
     includeWellknown = true,
     wellknownLocation = './.well-known',
@@ -125,6 +143,7 @@ export class CycloneDxWebpackPlugin {
   }: CycloneDxWebpackPluginOptions = {}) {
     this.specVersion = specVersion
     this.reproducibleResults = reproducibleResults
+    this.validateResults = validateResults
     this.resultXml = joinPath(outputLocation, './bom.xml')
     this.resultJson = joinPath(outputLocation, './bom.json')
     this.resultWellknown = includeWellknown
@@ -170,6 +189,9 @@ export class CycloneDxWebpackPlugin {
     } catch {
       /* pass */
     }
+    const xmlValidator = this.validateResults && xmlSerializer !== undefined
+      ? new CDX.Validation.XmlValidator(spec.version)
+      : undefined
 
     let jsonSerializer: CDX.Serialize.JsonSerializer | undefined
     try {
@@ -177,15 +199,18 @@ export class CycloneDxWebpackPlugin {
     } catch {
       /* pass */
     }
+    const jsonValidator = this.validateResults && jsonSerializer !== undefined
+      ? new CDX.Validation.JsonStrictValidator(spec.version)
+      : undefined
 
-    const toBeSerialized = new Map<string, CDX.Serialize.Types.Serializer>()
+    const toBeSerialized = new Map<string, [CDX.Serialize.Types.Serializer, undefined | CDX.Validation.Types.Validator]>()
     if (xmlSerializer !== undefined) {
-      toBeSerialized.set(this.resultXml, xmlSerializer)
+      toBeSerialized.set(this.resultXml, [xmlSerializer, xmlValidator])
     }
     if (jsonSerializer !== undefined) {
-      toBeSerialized.set(this.resultJson, jsonSerializer)
+      toBeSerialized.set(this.resultJson, [jsonSerializer, jsonValidator])
       if (this.resultWellknown !== undefined) {
-        toBeSerialized.set(this.resultWellknown, jsonSerializer)
+        toBeSerialized.set(this.resultWellknown, [jsonSerializer, jsonValidator])
       }
     }
 
@@ -218,23 +243,51 @@ export class CycloneDxWebpackPlugin {
         thisLogger.log('finalized BOM.')
       })
 
-    compilation.hooks.processAssets.tap(
+    compilation.hooks.processAssets.tapPromise(
       {
         name: pluginName,
         stage: Compilation.PROCESS_ASSETS_STAGE_ADDITIONAL
       },
-      () => {
+      async () => {
+        const compileBomAsset = async function (file: string, serializer: CDX.Serialize.Types.Serializer, validator?: CDX.Validation.Types.Validator): Promise<boolean> {
+          const thisLogger = logger.getChildLogger('BomAssetCompiler')
+          const serialized = serializer.serialize(bom, serializeOptions)
+          if (undefined !== validator) {
+            try {
+              const validationErrors = await validator.validate(serialized)
+              if (validationErrors !== null) {
+                thisLogger.debug('BOM result invalid. details: ', validationErrors)
+                throw new ValidationError(
+                  `Failed to generate valid BOM "${file}"\n` +
+                  'Please report the issue and provide the npm lock file of the current project to:\n' +
+                  'https://github.com/CycloneDX/cyclonedx-node-npm/issues/new?template=ValidationError-report.md&labels=ValidationError&title=%5BValidationError%5D',
+                  validationErrors
+                )
+              }
+            } catch (err) {
+              if (err instanceof CDX.Validation.MissingOptionalDependencyError) {
+                thisLogger.info('skipped validate BOM:', err.message)
+              } else {
+                thisLogger.error('unexpected error')
+                throw err
+              }
+            }
+          }
+          const assetAction = compilation.getAsset(file) === undefined
+            ? 'emitAsset'
+            : 'updateAsset'
+          compilation[assetAction](file, sources.CompatSource.from({
+            source: () => serialized
+          }))
+          return true
+        }
+        const promises: Array<Promise<unknown>> = []
         toBeSerialized.forEach(
-          (serializer: CDX.Serialize.Types.Serializer, file: string) => {
-            compilation[
-              (compilation.getAsset(file) === undefined)
-                ? 'emitAsset'
-                : 'updateAsset'
-            ](file, sources.CompatSource.from({
-              source: () => serializer.serialize(bom, serializeOptions)
-            }))
+          ([serializer, validator], file) => {
+            promises.push(compileBomAsset(file, serializer, validator))
           }
         )
+        await Promise.all(promises)
       }
     )
   }
