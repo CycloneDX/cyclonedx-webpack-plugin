@@ -260,7 +260,7 @@ export class CycloneDxWebpackPlugin {
                 throw new ValidationError(
                   `Failed to generate valid BOM "${file}"\n` +
                   'Please report the issue and provide the npm lock file of the current project to:\n' +
-                  'https://github.com/CycloneDX/cyclonedx-node-npm/issues/new?template=ValidationError-report.md&labels=ValidationError&title=%5BValidationError%5D',
+                  'https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/new?template=ValidationError-report.md&labels=ValidationError&title=%5BValidationError%5D',
                   validationErrors
                 )
               }
