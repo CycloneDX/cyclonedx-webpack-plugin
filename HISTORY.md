@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Added
+  * sbom validation (via [#825])   
+    @TODO write hstory
+
+[#825]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/825
+
 ## 3.4.1 - 2023-03-31
 
 * Fixed
