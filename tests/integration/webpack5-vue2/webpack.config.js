@@ -18,7 +18,8 @@ module.exports = {
     new CycloneDxWebpackPlugin(
       {
         outputLocation: '.bom',
-        reproducibleResults: true
+        reproducibleResults: true,
+        validateResults: true
       }
     )
   ],

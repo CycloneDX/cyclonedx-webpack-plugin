@@ -4,7 +4,8 @@ module.exports = {
   plugins: [
     new CycloneDxWebpackPlugin({
       outputLocation: '.bom',
-      reproducibleResults: true
+      reproducibleResults: true,
+      validateResults: true
     })
   ]
 }
