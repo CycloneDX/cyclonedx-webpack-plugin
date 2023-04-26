@@ -15,7 +15,7 @@ concurrency:
 
 env:
   REPORTS_DIR: CI_reports
-  NODE_ACTIVE_LTS: "18" # https://nodejs.org/en/about/releases/
+  NODE_ACTIVE_LTS: "20" # https://nodejs.org/en/about/releases/
 
 jobs:
   build:
@@ -75,7 +75,7 @@ jobs:
         node-version: 
           # action based on https://github.com/actions/node-versions/releases
           # see also: https://nodejs.org/en/about/releases/
-          - "19"      # current
+          - "20"      # current
           - "18"      # active LTS
           - '16'
           - "14"
