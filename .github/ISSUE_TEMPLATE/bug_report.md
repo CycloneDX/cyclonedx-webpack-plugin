@@ -25,8 +25,8 @@ If applicable, add screenshots or past the output to help explain your problem.
 
 ## Environment
 
-- _@cyclonedx/webpack-plugin version: <!-- e.g. `v3.2.0`. -->
-- NPM version: <!-- get via `npm --version` -->
+- _@cyclonedx/webpack-plugin_ version: <!-- e.g. `v3.2.0`. -->
+- webpack version: <!-- e.g. `5.79.0` -->
 - Node version: <!-- get via `node --version` -->
 - OS: <!-- e.g. windows 11, ubuntu linux, ... -->
 
