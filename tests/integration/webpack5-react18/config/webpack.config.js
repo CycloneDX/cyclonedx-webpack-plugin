@@ -750,7 +750,8 @@ module.exports = function (webpackEnv) {
         }),
       new CycloneDxWebpackPlugin({
         outputLocation: '.bom',
-        reproducibleResults: true
+        reproducibleResults: true,
+        validateResults: true
       })
     ].filter(Boolean),
     // Turn off performance processing because we utilize
