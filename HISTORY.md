@@ -5,8 +5,10 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 * Added
-  * sbom validation (via [#825])   
-    @TODO write hstory
+  * SBOM results might be validated (via [#825])  
+    This feature is enabled per default and can be controlled via the new option `validateResults`.  
+    Validation is skipped, if dependencies are missing or not met.
+    Requires [transitive optional dependencies](https://github.com/CycloneDX/cyclonedx-javascript-library/blob/main/README.md#optional-dependencies)
 
 [#825]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/825
 
