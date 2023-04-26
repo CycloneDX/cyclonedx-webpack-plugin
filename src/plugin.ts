@@ -47,7 +47,7 @@ export interface CycloneDxWebpackPluginOptions {
   reproducibleResults?: CycloneDxWebpackPlugin['reproducibleResults']
   /**
    * Whether to validate the BOM result.
-   * Might require {@link https://github.com/CycloneDX/cyclonedx-javascript-library#optional-dependencies optional dependencies}.
+   * Validation is skipped, if requirements not met. Requires {@link https://github.com/CycloneDX/cyclonedx-javascript-library#optional-dependencies transitive optional dependencies}.
    *
    * @default true
    */
