@@ -4,16 +4,18 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 3.5.0 - 2023-04-27
+
 * Added
   * SBOM results might be validated (via [#825])  
     This feature is enabled per default and can be controlled via the new option `validateResults`.  
-    Validation is skipped, if dependencies are missing or not met.
+    Validation is skipped, if requirements are not met.
     Requires [transitive optional dependencies](https://github.com/CycloneDX/cyclonedx-javascript-library/blob/main/README.md#optional-dependencies)
 * Build
   * Use _TypeScript_ `v5.0.4` now, was `v4.9.5`. (via [#790])
 
-[#825]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/825
 [#790]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/790
+[#825]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/825
 
 ## 3.4.1 - 2023-03-31
 
