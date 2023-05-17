@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Changes
+  * SPDX license expression detection improved (via [#881])  
+    Previously, some expressions were not properly detected, so they were marked as named-license in the SBOM results.
+    They should be marked as expression, now.
+* Misc
+  * Raised dependency `@cyclonedx/cyclonedx-library@^2.0.0`, was `@^1.14.0` (via [#881])
+
+[#881]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/881
+
 ## 3.5.0 - 2023-04-27
 
 * Added
