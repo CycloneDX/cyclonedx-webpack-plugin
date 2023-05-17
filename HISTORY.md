@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Changes
+  * BOM results' license detection more specific for SPDX expression detection (via [#])  
+    Previously, some expressions were not properly detected, so they were marked as named-license in the results.
+    They should be marked as expression, now.
+* Misc
+  * Raised dependency `@cyclonedx/cyclonedx-library@^2.0.0`, was `@^1.14.0` (via [#])
+
+[#]: 
+
 ## 3.5.0 - 2023-04-27
 
 * Added
