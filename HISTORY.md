@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 3.6.0 - 2023-05-17
+
 * Changes
   * SPDX license expression detection improved (via [#881])  
     Previously, some expressions were not properly detected, so they were marked as named-license in the SBOM results.
