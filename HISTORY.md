@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Build
+  * Disabled TypeScript compilerOption `esModuleInterop` (via [#892])
+  * Disabled TypeScript compilerOption `allowSyntheticDefaultImports` (via [#892])
+
+[#892]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/892
+
 ## 3.6.0 - 2023-05-17
 
 * Changes
