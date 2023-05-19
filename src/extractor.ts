@@ -18,7 +18,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import type * as CDX from '@cyclonedx/cyclonedx-library'
-import normalizePackageJson from 'normalize-package-data'
+import * as normalizePackageJson from 'normalize-package-data'
 import { type Compilation, type Module } from 'webpack'
 
 import { getPackageDescription } from './_helpers'

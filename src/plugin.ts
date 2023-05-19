@@ -19,7 +19,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 import * as CDX from '@cyclonedx/cyclonedx-library'
 import { existsSync } from 'fs'
-import normalizePackageJson from 'normalize-package-data'
+import * as normalizePackageJson from 'normalize-package-data'
 import { join as joinPath, resolve } from 'path'
 import { Compilation, type Compiler, sources } from 'webpack'
 
