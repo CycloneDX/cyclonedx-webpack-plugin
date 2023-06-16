@@ -94,7 +94,7 @@ export class Extractor {
 
   #linkDependencies (modulesComponents: Map<Module, CDX.Models.Component>): void {
     for (const [module, component] of modulesComponents) {
-      for (const dependencyModule of module.dependencies.map(d => this.#compilation.moduleGraph.getModule(d))) {
+      for (const dependencyModule of module.dependencies.map(d => this.#compilation.moduleGraph.getModule(d)).filter(isNonNullable)) {
         const dependencyBomRef = modulesComponents.get(dependencyModule)?.bomRef
         if (dependencyBomRef !== undefined) {
           component.dependencies.add(dependencyBomRef)
@@ -102,6 +102,11 @@ export class Extractor {
       }
     }
   }
+}
+
+function isNonNullable<T> (value: T): value is NonNullable<T> {
+  // NonNullable: not null and not undefined
+  return value !== null && value !== undefined
 }
 
 const structuredClonePolyfill: <T>(value: T) => T = typeof structuredClone === 'function'

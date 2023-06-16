@@ -5,12 +5,15 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 * Build
-  * Use _TypeScript_ `v5.1.3` now, was `v5.0.4`. (via [#934])
+  * Use _TypeScript_ `v5.1.3` now, was `v5.0.4` (via [#934])
   * Disabled TypeScript compilerOption `esModuleInterop` (via [#892])
   * Disabled TypeScript compilerOption `allowSyntheticDefaultImports` (via [#892])
+* Misc
+  * Improved internal type-compatibility to _webpack_ (via [#980])
 
 [#892]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/892
 [#934]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/934
+[#980]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/980
 
 ## 3.6.0 - 2023-05-17
 
@@ -31,7 +34,7 @@ All notable changes to this project will be documented in this file.
     Validation is skipped, if requirements are not met.
     Requires [transitive optional dependencies](https://github.com/CycloneDX/cyclonedx-javascript-library/blob/main/README.md#optional-dependencies)
 * Build
-  * Use _TypeScript_ `v5.0.4` now, was `v4.9.5`. (via [#790])
+  * Use _TypeScript_ `v5.0.4` now, was `v4.9.5` (via [#790])
 
 [#790]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/790
 [#825]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/825
@@ -65,7 +68,7 @@ Maintenance release.
 ## 3.3.0 - 2023-03-02
 
 * Changed
-  * Detected node packages' metadata are now [normalized](https://www.npmjs.com/package/normalize-package-data), before translation to SBOM components happens. ([#678] via [#679])  
+  * Detected node packages' metadata are now [normalized](https://www.npmjs.com/package/normalize-package-data), before translation to SBOM components happens ([#678] via [#679])  
     This might increase the quality of SBOM results.
   
 [#678]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/678
@@ -88,9 +91,9 @@ Maintenance release.
 Maintenance release.
 
 * Build
-  * Use _TypeScript_ `v4.9.5` now, was `v4.9.4`. (via [#619])
+  * Use _TypeScript_ `v4.9.5` now, was `v4.9.4` (via [#619])
 * Misc
-  * Use `eslint-config-standard-with-typescript@34.0.0` now, was `@24.0.0`. (via [#596], [#613])
+  * Use `eslint-config-standard-with-typescript@34.0.0` now, was `@24.0.0` (via [#596], [#613])
 
 [#596]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/596
 [#613]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/613
@@ -103,9 +106,9 @@ Maintenance release.
 * Docs
   * fix CI/CT shield ([badges/shields#8671] via [#515])
 * Build
-  * Use _TypeScript_ `v4.9.4` now, was `v4.9.3`. (via [#508])
+  * Use _TypeScript_ `v4.9.4` now, was `v4.9.3` (via [#508])
 * Misc
-  * Use `eslint-config-standard-with-typescript@24.0.0` now, was `@23.0.0`. (via [#519])
+  * Use `eslint-config-standard-with-typescript@24.0.0` now, was `@23.0.0` (via [#519])
 
 [badges/shields#8671]: https://github.com/badges/shields/issues/8671
 [#508]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/508
@@ -117,7 +120,7 @@ Maintenance release.
 Maintenance release.
 
 * Build
-  * Use _TypeScript_ `v4.9.3` now, was `v4.8.3`. (via [#466])
+  * Use _TypeScript_ `v4.9.3` now, was `v4.8.3` (via [#466])
 
 [#466]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/466
 
@@ -126,9 +129,9 @@ Maintenance release.
 Maintenance release.
 
 * Misc
-  * Style: imports are sorted, now. (via [#286])
+  * Style: imports are sorted, now (via [#286])
 * Build
-  * Use _TypeScript_ `v4.8.3` now, was `v4.8.2`. (via [#288])
+  * Use _TypeScript_ `v4.8.3` now, was `v4.8.2` (via [#288])
 
 [#286]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/286
 [#288]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/288
@@ -136,11 +139,11 @@ Maintenance release.
 ## 3.1.0 - 2022-09-07
 
 * Changed
-  * PackageUrl(PURL) in JSON and XML results are as short as possible, but still precise. (via [#285])
+  * PackageUrl(PURL) in JSON and XML results are as short as possible, but still precise (via [#285])
 * Misc
-  * Raised dependency `@cyclonedx/cyclonedx-library@^1.4.0`, was `@^1.0.0`. (via [#285])
+  * Raised dependency `@cyclonedx/cyclonedx-library@^1.4.0`, was `@^1.0.0` (via [#285])
 * Build
-  * Use _TypeScript_ `v4.8.2` now, was `v4.7.4`. (via [#284])
+  * Use _TypeScript_ `v4.8.2` now, was `v4.7.4` (via [#284])
 
 [#284]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/284
 [#285]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/285
@@ -148,7 +151,7 @@ Maintenance release.
 ## 3.0.1 - 2022-06-25
 
 * Docs
-  * Added the configuration options to the `README`. (via [#75])
+  * Added the configuration options to the `README` (via [#75])
 
 [#75]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/75
 
@@ -163,11 +166,11 @@ This is a reboot, written in _TypeScript_ and compiled to _JavaScript_.
   * The optional configuration options changed in name and meaning. Consult the `README` for details.
 * Added
   * Added an optional switch to select the desired CycloneDX spec version for the output.  
-    The value currently defaults to `'1.4'`. (fixes [#53] via [#70])
+    The value currently defaults to `'1.4'` (fixes [#53] via [#70])
   * Full support for typing. This will make the configuration of this plugin easier.
   * Lots of small features got added due to the fact that the data processing is managed by  `@cyclonedx/cyclonedx-library` now.
 * Fixed
-  * Dependency graph no longer has `null` or `undefined` values. (fixes [#31] via [#70])
+  * Dependency graph no longer has `null` or `undefined` values (fixes [#31] via [#70])
 * Removed
   * The optional config option `emitStats` and its functionality were dropped.
     You may use _webpack_'s `--stats` switch instead.
@@ -181,9 +184,9 @@ This is a reboot, written in _TypeScript_ and compiled to _JavaScript_.
 ## 2.0.2 - 2022-06-11
 
 * Fixed
-  * Fix invalid format of generated bom by incomplete `package.json` files in subdirectories of npm packages. ([#31] via [#68])
+  * Fix invalid format of generated bom by incomplete `package.json` files in subdirectories of npm packages ([#31] via [#68])
 * Misc
-  * Add integration test for react18 with webpack5 and babel-runtime dependency. (via [#68])
+  * Add integration test for react18 with webpack5 and babel-runtime dependency (via [#68])
 
 [#31]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/31
 [#68]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/68
@@ -191,10 +194,10 @@ This is a reboot, written in _TypeScript_ and compiled to _JavaScript_.
 ## 2.0.1 - 2022-05-05
 
 * Fixed
-  * Fixed support for Webpack5. ([#33],[#47] via [#55])
+  * Fixed support for Webpack5 ([#33],[#47] via [#55])
 * Misc
-  * Removed dev-files from release package, like `tests`. (via [#54])
-  * Fixed use of internals from foreign packages. (via [#60])
+  * Removed dev-files from release package, like `tests` (via [#54])
+  * Fixed use of internals from foreign packages (via [#60])
 
 [#54]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/54
 [#60]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/60
@@ -205,13 +208,13 @@ This is a reboot, written in _TypeScript_ and compiled to _JavaScript_.
 ## 2.0.0 - 2022-04-24
 
 * BREAKING changes
-  * Requires node `>= 12.0.0` now, was `8.0.0`. (via [#51])
-  * Requires `webpack` version `>=4` as a `peerDependency`, like it was documented in the README. (via [#49])
+  * Requires node `>= 12.0.0` now, was `8.0.0` (via [#51])
+  * Requires `webpack` version `>=4` as a `peerDependency`, like it was documented in the README (via [#49])
 * Changed
-  * Requires `@cyclonedx/bom` version`^3.8.0` now, was `^3.1.1`. (via [#51])
+  * Requires `@cyclonedx/bom` version`^3.8.0` now, was `^3.1.1` (via [#51])
 * Misc
-  * Added reproducible test environments for unit an integration tests. (via [#51]) 
-  * Applied coding standards. (via [#49])
+  * Added reproducible test environments for unit an integration tests (via [#51]) 
+  * Applied coding standards (via [#49])
 
 [#51]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/51
 [#49]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/49
@@ -219,7 +222,7 @@ This is a reboot, written in _TypeScript_ and compiled to _JavaScript_.
 ## 1.0.2 - 2022-04-22
 
 * Fixed
-  * `data:`-urls are no longer exported. ([#45] via [#46])
+  * `data:`-urls are no longer exported ([#45] via [#46])
 
 [#45]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/45
 [#46]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/46
