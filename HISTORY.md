@@ -9,7 +9,7 @@ All notable changes to this project will be documented in this file.
   * Disabled TypeScript compilerOption `esModuleInterop` (via [#892])
   * Disabled TypeScript compilerOption `allowSyntheticDefaultImports` (via [#892])
 * Misc
-  * Fixed internal type-compatibility to _webpack_ (via [#980])
+  * Improved internal type-compatibility to _webpack_ (via [#980])
 
 [#892]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/892
 [#934]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/934
