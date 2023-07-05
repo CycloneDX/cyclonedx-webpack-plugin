@@ -10,7 +10,7 @@ Added support for [_CycloneDX_ Specification-1.5](https://github.com/CycloneDX/s
 
 * Changed
   * This tool supports _CycloneDX_ Specification-1.5 now ([#1001] via [#1021])
-  * This tool warns now, if SBOM generation is skipped due to an unsupported value for option `specVersion` via [#1021])  
+  * This tool warns now, if SBOM generation is skipped due to an unsupported value for option `specVersion` (via [#1021])  
     Previous behaviour was a silent skip.
 * Added
   * Option `specVersion` now supports value `1.5` to reflect _CycloneDX_ Specification-1.5 ([#1001] via [#1021])  
