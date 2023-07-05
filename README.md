@@ -43,7 +43,7 @@ new CycloneDxWebpackPlugin(options?: object)
 
 | Name | Type | Default | Description |
 |:-----|:----:|:-------:|:------------|
-| **`specVersion`** | `{string}`<br/>one of: `"1.2"`, `"1.3"`, `"1.4"` | `"1.4"` |  Which version of [CycloneDX-spec] to use.<br/> Supported values depend on the installed dependency [CycloneDX-javascript-library]. |
+| **`specVersion`** | `{string}`<br/>one of: `"1.2"`, `"1.3"`, `"1.4"`, `"1.5"` | `"1.4"` |  Which version of [CycloneDX-spec] to use.<br/> Supported values depend on the installed dependency [CycloneDX-javascript-library]. |
 | **`reproducibleResults`** | `{boolean}` | `false` | Whether to go the extra mile and make the output reproducible.<br/> Reproducibility might result in loss of time- and random-based-values. |
 | **`validateResults`** | `{boolean}` | `true` | Whether to validate the BOM result.<br/>Validation is skipped, if requirements not met. Requires [transitive optional dependencies](https://github.com/CycloneDX/cyclonedx-javascript-library#optional-dependencies). |
 | **`outputLocation`** | `{string}` | `"./cyclonedx"` | Path to write the output to. The path is relative to _webpack_'s overall output path. |

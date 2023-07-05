@@ -23,9 +23,9 @@ const { CycloneDxWebpackPlugin } = require('@cyclonedx/webpack-plugin')
 
 /** @type {import('@cyclonedx/webpack-plugin').CycloneDxWebpackPluginOptions} */
 const cycloneDxWebpackPluginOptions = {
-  specVersion: '1.4',
+  specVersion: '1.5',
   reproducibleResults: false,
-  outputLocation: './cyclonedx',
+  outputLocation: './sbom',
   includeWellknown: true,
   wellknownLocation: './.well-known',
   rootComponentAutodetect: true,
