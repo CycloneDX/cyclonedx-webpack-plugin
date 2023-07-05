@@ -113,7 +113,7 @@ jobs:
           name: dist
           path: dist
       - name: setup test beds
-        run: npm run setup-tests
+        run: npm run -- setup-tests --install-links
       - name: test
         run: npm run test:jest
   test-examples:

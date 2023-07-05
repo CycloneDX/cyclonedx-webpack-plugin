@@ -41,10 +41,14 @@ const path = require('path');
   process.exitCode = 0
   let done
 
+  const npmCmd = 'npm'
+  const npmArgs = ['ci', ...process.argv.slice(2)]
+
   for (const DIR of REQUIRES_NPM_INSTALL) {
     console.log('>>> setup with NPM:', DIR)
+    console.info('    > ', npmCmd, ...npmArgs)
     done = spawnSync(
-      'npm', ['ci'], {
+      npmCmd, npmArgs, {
         cwd: path.resolve(__dirname, DIR),
         stdio: 'inherit',
         shell: true
