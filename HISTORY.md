@@ -13,10 +13,13 @@ Added support for [_CycloneDX_ Specification-1.5](https://github.com/CycloneDX/s
 * Added
   * Option `specVersion` now supports value `1.5` to reflect _CycloneDX_ Specification-1.5 ([#1001] via [#1021])  
     Default value for that option is unchanged - still `1.4`.
+* Build
+  * Use _TypeScript_ `v5.1.6` now, was `v5.1.3` (via [#1017])
 * Misc
   * Raised dependency `@cyclonedx/cyclonedx-library@^3||^4`, was `@^2.0.0` ([#1001] via [#1021])
 
 [#1001]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1001
+[#1017]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1017
 [#1021]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1021
 
 ## 3.6.1 - 2023-06-16
