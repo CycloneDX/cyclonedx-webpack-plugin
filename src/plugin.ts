@@ -85,7 +85,7 @@ export interface CycloneDxWebpackPluginOptions {
   rootComponentAutodetect?: CycloneDxWebpackPlugin['rootComponentAutodetect']
   /**
    * Set the RootComponent's type.
-   * See {@link https://cyclonedx.org/docs/1.4/json/#metadata_component_type the list of valid values}.
+   * See {@link https://cyclonedx.org/docs/1.5/json/#metadata_component_type the list of valid values}.
    *
    * @default 'application'
    */
@@ -162,13 +162,15 @@ export class CycloneDxWebpackPlugin {
 
   #compilationHook (compilation: Compilation): void {
     const pluginName = this.constructor.name
+    const logger = compilation.getLogger(pluginName)
 
     const spec = CDX.Spec.SpecVersionDict[this.specVersion]
     if (spec === undefined) {
+      logger.warn('Skip CycloneDX SBOM generation due to unknown specVersion: %j Expected one of: %j',
+        this.specVersion, Object.keys(CDX.Spec.SpecVersionDict))
       return
     }
 
-    const logger = compilation.getLogger(pluginName)
     const cdxExternalReferenceFactory = new CDX.Factories.FromNodePackageJson.ExternalReferenceFactory()
     const cdxLicenseFactory = new CDX.Factories.LicenseFactory()
     const cdxPurlFactory = new CDX.Factories.FromNodePackageJson.PackageUrlFactory('npm')

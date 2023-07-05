@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+Added support for [_CycloneDX_ Specification-1.5](https://github.com/CycloneDX/specification/releases/tag/1.5).
+
+* Changed
+  * This tool supports _CycloneDX_ Specification-1.5 now ([#1001] via [#1021])
+  * This tool warns now, if SBOM generation is skipped due to an unsupported value for option `specVersion` via [#1021])  
+    Previous behaviour was a silent skip.
+* Added
+  * Option `specVersion` now supports value `1.5` to reflect _CycloneDX_ Specification-1.5 ([#1001] via [#1021])  
+    Default value for that option is unchanged - still `1.4`.
+* Misc
+  * Raised dependency `@cyclonedx/cyclonedx-library@^3||^4`, was `@^2.0.0` ([#1001] via [#1021])
+
+[#1001]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1001
+[#1021]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1021
+
 ## 3.6.1 - 2023-06-16
 
 * Build
