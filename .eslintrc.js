@@ -23,11 +23,6 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
  */
 module.exports = {
   root: true,
-  /** @see https://github.com/standard/ts-standard */
-  extends: 'standard-with-typescript',
-  parserOptions: {
-    project: './tsconfig.json'
-  },
   plugins: [
     /* see https://github.com/lydell/eslint-plugin-simple-import-sort#readme */
     'simple-import-sort',
@@ -38,30 +33,44 @@ module.exports = {
     commonjs: true,
     node: true
   },
-  overrides: [
-    {
-      files: [
-        '*.spec.*',
-        '*.test.*'
-      ],
-      env: {
-        jest: true,
-        commonjs: true,
-        node: true
-      }
-    }
-  ],
   rules: {
     // region sort imports/exports
     /** disable other sorters in favour of `simple-import-sort` **/
     'import/order': 0,
     'sort-imports': 0,
-    /** @see https://github.com/lydell/eslint-plugin-simple-import-sort/ */
+    /* @see https://github.com/lydell/eslint-plugin-simple-import-sort/ */
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
     // endregion sort imports/exports
     /* see https://github.com/Stuk/eslint-plugin-header#readme */
     'header/header': ['error', '.license-header.js']
     // endregion license-header
-  }
+  },
+  overrides: [
+    {
+      files: ['*.spec.*', '*.test.*'],
+      env: {
+        jest: true,
+        commonjs: true,
+        node: true
+      }
+    },
+    {
+      files: ['*.ts'],
+      extends: [
+        /* @see https://github.com/standard/ts-standard */
+        'standard-with-typescript'
+      ],
+      parserOptions: {
+        project: './tsconfig.json'
+      }
+    },
+    {
+      files: ['*.js', '*.mjs', '*.cjs'],
+      extends: [
+        /* see https://www.npmjs.com/package/eslint-config-standard */
+        'standard'
+      ]
+    }
+  ]
 }
