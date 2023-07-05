@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Misc
+  * Raised dependency `@cyclonedx/cyclonedx-library@^3||^4`, was `@^2.0.0` (via [#])
+
 ## 3.6.1 - 2023-06-16
 
 * Build
