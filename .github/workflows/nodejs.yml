@@ -116,3 +116,38 @@ jobs:
         run: npm run setup-tests
       - name: test
         run: npm run test:jest
+  test-examples:
+    needs: [ 'build' ]
+    name: Example ${{ matrix.scope }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        scope:
+          - simple
+    env:
+      EXAMPLE_DIR: examples/${{ matrix.scope }}
+    steps:
+      - name: Checkout
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+          cache: "npm"
+          cache-dependency-path: "**/package-lock.json"
+      - name: fetch build artifact
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: dist
+          path: dist
+      - name: setup example
+        working-directory: ${{ env.EXAMPLE_DIR }}
+        run: npm i --install-links --loglevel=silly
+      - name: build example
+        working-directory: ${{ env.EXAMPLE_DIR }}
+        run: npm run build

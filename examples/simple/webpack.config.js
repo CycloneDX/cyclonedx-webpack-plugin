@@ -47,5 +47,6 @@ module.exports = {
   },
   plugins: [
     new CycloneDxWebpackPlugin(cycloneDxWebpackPluginOptions)
-  ]
+  ],
+  stats: 'detailed'
 }
