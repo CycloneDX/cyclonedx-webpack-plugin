@@ -15,6 +15,81 @@ updates:
       prefix: 'chore'  ## prefix maximum string length of 15
       include: 'scope'
     open-pull-requests-limit: 999
+    groups:
+      cyclonedx:
+        patterns:
+          - '@cyclonedx/*'
+      spdx:
+        patterns:
+          - 'spdx-*'
+          - '@types/spdx-*'
+      ajv:
+        patterns:
+          - 'ajv'
+          - 'ajv-*'
+      typescript:
+        patterns:
+          - 'typescript'
+          - '@types/node'
+          - 'typedoc'
+          - 'typedoc-*'
+          - '@microsoft/tsdoc'
+          - '@microsoft/tsdoc-*'
+          - 'ts-loader'
+          - 'tslib'
+      eslint:
+        patterns:
+          - 'eslint'
+          - '@eslint/*'
+          - '@types/eslint'
+          - 'eslint-*'
+          - '@types/eslint-*'
+          - '@eslint-community/*'
+          - '@typescript-eslint/*'
+      webpack:
+        patterns:
+          - 'webpack'
+          - 'webpack-*'
+          - '@webpack-cli/*'
+          - '@webassemblyjs/*'
+          - 'browserslist'
+          - 'caniuse-*'
+          - 'ts-loader'
+          - '*-webpack-plugin'
+      jest:
+        patterns:
+          - 'jest'
+          - '@types/jest'
+          - '@jest/*'
+          - 'jest-'
+          - 'babel-jest'
+      babel:
+        patterns:
+          - 'babel'
+          - '@babel/'
+          - 'babel-*'
+          - '@types/babel*'
+      angular:
+        patterns:
+          - '@angular/*'
+          - '@angular-*/*'
+      karma:
+        patterns:
+          - 'karma'
+          - 'karma-*'
+      jasmine:
+        patterns:
+          - 'jasmine'
+          - '@types/jasmine'
+          - 'jasmine-*'
+      react:
+        patterns:
+          - 'react'
+          - 'react-*'
+      postcss:
+        patterns:
+          - 'postcss'
+          - 'postcss-*'
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
