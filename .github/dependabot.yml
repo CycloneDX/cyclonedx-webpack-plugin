@@ -41,11 +41,11 @@ updates:
         patterns:
           - 'eslint'
           - '@eslint/*'
-          - '@types/eslint'
           - 'eslint-*'
-          - '@types/eslint-*'
           - '@eslint-community/*'
           - '@typescript-eslint/*'
+          - '@types/eslint'
+          - '@types/eslint*'
       webpack:
         patterns:
           - 'webpack'
@@ -59,14 +59,15 @@ updates:
       jest:
         patterns:
           - 'jest'
-          - '@types/jest'
           - '@jest/*'
-          - 'jest-'
+          - 'jest-*'
           - 'babel-jest'
+          - '@types/jest'
+          - '@types/jest*'
       babel:
         patterns:
           - 'babel'
-          - '@babel/'
+          - '@babel/*'
           - 'babel-*'
           - '@types/babel*'
       angular:
@@ -80,8 +81,9 @@ updates:
       jasmine:
         patterns:
           - 'jasmine'
-          - '@types/jasmine'
           - 'jasmine-*'
+          - '@types/jasmine'
+          - '@types/jasmine*'
       react:
         patterns:
           - 'react'
