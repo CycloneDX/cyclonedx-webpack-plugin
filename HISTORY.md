@@ -5,12 +5,12 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 * Added
-  * SBOM results ar marked to be produced in lifecycle phase "build" ([#1173] via [#]) 
+  * SBOM results are marked to be produced in lifecycle phase "build" ([#1173] via [#1188]) 
 * Misc
-  * Raised dependency `@cyclonedx/cyclonedx-library@^5`, was `@^3||^4` (via [#])
+  * Raised dependency `@cyclonedx/cyclonedx-library@^5`, was `@^3||^4` (via [#1188])
 
 [#1173]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1173
-[#]:
+[#1188]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1188
 
 ## 3.7.0 - 2023-07-05
 
