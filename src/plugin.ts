@@ -178,6 +178,7 @@ export class CycloneDxWebpackPlugin {
     const cdxComponentBuilder = new CDX.Builders.FromNodePackageJson.ComponentBuilder(cdxExternalReferenceFactory, cdxLicenseFactory)
 
     const bom = new CDX.Models.Bom()
+    bom.metadata.lifecycles.add(CDX.Enums.LifecyclePhase.Build)
     bom.metadata.component = this.#makeRootComponent(compilation.compiler.context, cdxComponentBuilder, logger.getChildLogger('RootComponentBuilder'))
 
     const serializeOptions: CDX.Serialize.Types.SerializerOptions & CDX.Serialize.Types.NormalizerOptions = {
