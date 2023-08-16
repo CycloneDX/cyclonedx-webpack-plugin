@@ -2,11 +2,16 @@
 
 exports[`integration functional: webpack5 with angular13 generated json file: dist/.bom/bom.json 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.4",
+  "specVersion": "1.5",
   "version": 1,
   "metadata": {
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
     "tools": [
       {
         "vendor": "@cyclonedx",
@@ -374,11 +379,16 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
 
 exports[`integration functional: webpack5 with angular13 generated json file: dist/.well-known/sbom 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.4",
+  "specVersion": "1.5",
   "version": 1,
   "metadata": {
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
     "tools": [
       {
         "vendor": "@cyclonedx",
@@ -746,8 +756,13 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
 
 exports[`integration functional: webpack5 with angular13 generated xml file: dist/.bom/bom.xml 1`] = `
 "<?xml version="1.0" encoding="UTF-8"?>
-<bom xmlns="http://cyclonedx.org/schema/bom/1.4" version="1">
+<bom xmlns="http://cyclonedx.org/schema/bom/1.5" version="1">
   <metadata>
+    <lifecycles>
+      <lifecycle>
+        <phase>build</phase>
+      </lifecycle>
+    </lifecycles>
     <tools>
       <tool>
         <vendor>@cyclonedx</vendor>
@@ -1032,11 +1047,16 @@ exports[`integration functional: webpack5 with angular13 generated xml file: dis
 
 exports[`integration functional: webpack5 with react18 generated json file: dist/.bom/bom.json 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.4",
+  "specVersion": "1.5",
   "version": 1,
   "metadata": {
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
     "tools": [
       {
         "vendor": "@cyclonedx",
@@ -1316,11 +1336,16 @@ exports[`integration functional: webpack5 with react18 generated json file: dist
 
 exports[`integration functional: webpack5 with react18 generated json file: dist/.well-known/sbom 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.4",
+  "specVersion": "1.5",
   "version": 1,
   "metadata": {
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
     "tools": [
       {
         "vendor": "@cyclonedx",
@@ -1600,8 +1625,13 @@ exports[`integration functional: webpack5 with react18 generated json file: dist
 
 exports[`integration functional: webpack5 with react18 generated xml file: dist/.bom/bom.xml 1`] = `
 "<?xml version="1.0" encoding="UTF-8"?>
-<bom xmlns="http://cyclonedx.org/schema/bom/1.4" version="1">
+<bom xmlns="http://cyclonedx.org/schema/bom/1.5" version="1">
   <metadata>
+    <lifecycles>
+      <lifecycle>
+        <phase>build</phase>
+      </lifecycle>
+    </lifecycles>
     <tools>
       <tool>
         <vendor>@cyclonedx</vendor>
@@ -1819,11 +1849,16 @@ exports[`integration functional: webpack5 with react18 generated xml file: dist/
 
 exports[`integration functional: webpack5 with vue2 generated json file: dist/.bom/bom.json 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.4",
+  "specVersion": "1.5",
   "version": 1,
   "metadata": {
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
     "tools": [
       {
         "vendor": "@cyclonedx",
@@ -1955,11 +1990,16 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.b
 
 exports[`integration functional: webpack5 with vue2 generated json file: dist/.well-known/sbom 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.4",
+  "specVersion": "1.5",
   "version": 1,
   "metadata": {
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
     "tools": [
       {
         "vendor": "@cyclonedx",
@@ -2091,8 +2131,13 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.w
 
 exports[`integration functional: webpack5 with vue2 generated xml file: dist/.bom/bom.xml 1`] = `
 "<?xml version="1.0" encoding="UTF-8"?>
-<bom xmlns="http://cyclonedx.org/schema/bom/1.4" version="1">
+<bom xmlns="http://cyclonedx.org/schema/bom/1.5" version="1">
   <metadata>
+    <lifecycles>
+      <lifecycle>
+        <phase>build</phase>
+      </lifecycle>
+    </lifecycles>
     <tools>
       <tool>
         <vendor>@cyclonedx</vendor>
