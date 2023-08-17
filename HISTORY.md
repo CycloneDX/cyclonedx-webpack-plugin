@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 3.8.0 - 2023-08-17
+
 * Added
   * SBOM results are marked to be produced in lifecycle phase "build" ([#1173] via [#1188]) 
 * Misc
