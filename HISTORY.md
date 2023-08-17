@@ -5,9 +5,9 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 * Misc
-  * Raised dependency `normalize-package-data@^3||^4||^5||^6`, was `@^3||^4||^5` (via [#])
+  * Raised dependency `normalize-package-data@^3||^4||^5||^6`, was `@^3||^4||^5` (via [#1194])
 
-[#]: 
+[#1194]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1194
 
 ## 3.8.0 - 2023-08-17
 
