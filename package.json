@@ -51,7 +51,7 @@
     "node": ">=14"
   },
   "dependencies": {
-    "@cyclonedx/cyclonedx-library": "^5.0.0",
+    "@cyclonedx/cyclonedx-library": "^5||^6",
     "normalize-package-data": "^3||^4||^5||^6",
     "xmlbuilder2": "^3.0.2"
   },
