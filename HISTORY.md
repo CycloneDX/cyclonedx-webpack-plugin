@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
-## 3.8.2 - 2023-08-27
+## 3.8.2 - 2023-08-28
 
 * Misc
   * Raised dependency `@cyclonedx/cyclonedx-library@^5||^6`, was `@^5`
