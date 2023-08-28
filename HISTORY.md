@@ -5,9 +5,13 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 ## 3.8.2 - 2023-08-28
-
+* Build
+  * Use _TypeScript_ `v5.2.2` now, was `v5.1.6` (via [#1218])
 * Misc
-  * Raised dependency `@cyclonedx/cyclonedx-library@^5||^6`, was `@^5`
+  * Raised dependency `@cyclonedx/cyclonedx-library@^5||^6`, was `@^5` (via [#1214])
+
+[#1214]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1214
+[#1218]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1218
 
 ## 3.8.1 - 2023-08-17
 
