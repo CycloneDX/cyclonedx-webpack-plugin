@@ -77,7 +77,7 @@
   "exports": "./dist/plugin.js",
   "scripts": {
     "prepublish": "npm run build",
-    "prepublishOnly": "run-s -lc build test",
+    "prepublishOnly": "run-s -lc build setup-tests test",
     "lint": "tsc --noEmit",
     "build": "run-p --aggregate-output -l build:*",
     "prebuild:node": "node -r fs -e 'fs.rmSync(\"dist\",{recursive:true,force:true})'",
