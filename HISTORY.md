@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 ## 3.8.2 - 2023-08-28
+
 * Build
   * Use _TypeScript_ `v5.2.2` now, was `v5.1.6` (via [#1218])
 * Misc
