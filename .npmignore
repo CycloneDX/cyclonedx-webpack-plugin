@@ -176,6 +176,5 @@ dist
 ## target or reportings, tests, etc
 /reports/
 /CI_reports/
-
-## caches
-/.*.cache
+/packed/
+/CI_packed/

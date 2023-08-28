@@ -8,6 +8,10 @@ on:
     branches: [ "master" ]
   pull_request:
   workflow_dispatch:
+  schedule:
+    # schedule weekly tests, since dependencies are not intended to be locked
+    # this means: at 23:42 on Fridays
+    - cron: '42 23 * * 5'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -31,10 +35,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
-          cache: "npm"
-          cache-dependency-path: "**/package-lock.json"
+          # cache: "npm"
+          # cache-dependency-path: "**/package-lock.json"
       - name: setup project
-        run: npm ci --ignore-scripts
+        run: npm i --ignore-scripts
       - name: build ${{ matrix.target }}
         run: npm run build
       - name: artifact build result
@@ -57,10 +61,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
-          cache: "npm"
-          cache-dependency-path: "**/package-lock.json"
+          # cache: "npm"
+          # cache-dependency-path: "**/package-lock.json"
       - name: setup project
-        run: npm ci --ignore-scripts
+        run: npm i --ignore-scripts
       - name: test
         run: npm run test:standard
   test-jest:
@@ -90,8 +94,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm"
-          cache-dependency-path: "**/package-lock.json"
+          # cache: "npm"
+          # cache-dependency-path: "**/package-lock.json"
       - # some integration tests require a certain npm version to be installable
         name: update npm
         run: npm i -g npm@^8
@@ -103,9 +107,12 @@ jobs:
         shell: bash
         run: |
           set -ex
-          npm ci --ignore-scripts --loglevel=silly
+          ## dont install all the dev-packages, especially since some are not runnable on node 14.0.0
+          npm i --ignore-scripts --omit=peer --omit=dev --only=prod --loglevel=silly
           ## rebuild deps for which scripts were ignored, or partially installed - since "ignore-scripts" was used
           npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2
+          ## install the needed dev-deps
+          npm i --no-save jest jest-junit
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v3
@@ -137,8 +144,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
-          cache: "npm"
-          cache-dependency-path: "**/package-lock.json"
+          # cache: "npm"
+          # cache-dependency-path: "**/package-lock.json"
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v3
