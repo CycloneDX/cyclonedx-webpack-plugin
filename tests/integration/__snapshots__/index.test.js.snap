@@ -97,8 +97,8 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
       "type": "library",
       "name": "common",
       "group": "@angular",
-      "version": "13.3.11",
-      "bom-ref": "pkg:npm/%40angular/common@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
+      "version": "13.3.12",
+      "bom-ref": "pkg:npm/%40angular/common@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
       "author": "angular",
       "description": "Angular - commonly needed directives and services",
       "licenses": [
@@ -108,7 +108,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
           }
         }
       ],
-      "purl": "pkg:npm/%40angular/common@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
+      "purl": "pkg:npm/%40angular/common@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
       "externalReferences": [
         {
           "url": "https://github.com/angular/angular/issues",
@@ -131,8 +131,8 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
       "type": "library",
       "name": "core",
       "group": "@angular",
-      "version": "13.3.11",
-      "bom-ref": "pkg:npm/%40angular/core@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
+      "version": "13.3.12",
+      "bom-ref": "pkg:npm/%40angular/core@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
       "author": "angular",
       "description": "Angular - the core framework",
       "licenses": [
@@ -142,7 +142,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
           }
         }
       ],
-      "purl": "pkg:npm/%40angular/core@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
+      "purl": "pkg:npm/%40angular/core@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
       "externalReferences": [
         {
           "url": "https://github.com/angular/angular/issues",
@@ -165,8 +165,8 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
       "type": "library",
       "name": "platform-browser",
       "group": "@angular",
-      "version": "13.3.11",
-      "bom-ref": "pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser",
+      "version": "13.3.12",
+      "bom-ref": "pkg:npm/%40angular/platform-browser@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser",
       "author": "angular",
       "description": "Angular - library for using Angular in a web browser",
       "licenses": [
@@ -176,7 +176,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
           }
         }
       ],
-      "purl": "pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser",
+      "purl": "pkg:npm/%40angular/platform-browser@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser",
       "externalReferences": [
         {
           "url": "https://github.com/angular/angular/issues",
@@ -297,8 +297,8 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
     {
       "type": "library",
       "name": "zone.js",
-      "version": "0.11.6",
-      "bom-ref": "pkg:npm/zone.js@0.11.6?vcs_url=git%3A//github.com/angular/angular.git#packages/zone.js",
+      "version": "0.11.8",
+      "bom-ref": "pkg:npm/zone.js@0.11.8?vcs_url=git%3A//github.com/angular/angular.git#packages/zone.js",
       "author": "Brian Ford",
       "description": "Zones for JavaScript",
       "licenses": [
@@ -308,7 +308,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
           }
         }
       ],
-      "purl": "pkg:npm/zone.js@0.11.6?vcs_url=git%3A//github.com/angular/angular.git#packages/zone.js",
+      "purl": "pkg:npm/zone.js@0.11.8?vcs_url=git%3A//github.com/angular/angular.git#packages/zone.js",
       "externalReferences": [
         {
           "url": "https://github.com/angular/angular/issues",
@@ -330,32 +330,32 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
   ],
   "dependencies": [
     {
-      "ref": "pkg:npm/%40angular/common@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
+      "ref": "pkg:npm/%40angular/common@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
       "dependsOn": [
-        "pkg:npm/%40angular/core@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core"
+        "pkg:npm/%40angular/core@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core"
       ]
     },
     {
-      "ref": "pkg:npm/%40angular/core@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
+      "ref": "pkg:npm/%40angular/core@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
       "dependsOn": [
         "pkg:npm/rxjs@7.5.7?vcs_url=git%2Bhttps%3A//github.com/reactivex/rxjs.git"
       ]
     },
     {
-      "ref": "pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser",
+      "ref": "pkg:npm/%40angular/platform-browser@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser",
       "dependsOn": [
-        "pkg:npm/%40angular/common@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
-        "pkg:npm/%40angular/core@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core"
+        "pkg:npm/%40angular/common@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
+        "pkg:npm/%40angular/core@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core"
       ]
     },
     {
       "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13",
       "dependsOn": [
-        "pkg:npm/%40angular/common@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
-        "pkg:npm/%40angular/core@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
-        "pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser",
+        "pkg:npm/%40angular/common@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
+        "pkg:npm/%40angular/core@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
+        "pkg:npm/%40angular/platform-browser@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser",
         "pkg:npm/css-loader@6.5.1?vcs_url=git%2Bhttps%3A//github.com/webpack-contrib/css-loader.git",
-        "pkg:npm/zone.js@0.11.6?vcs_url=git%3A//github.com/angular/angular.git#packages/zone.js"
+        "pkg:npm/zone.js@0.11.8?vcs_url=git%3A//github.com/angular/angular.git#packages/zone.js"
       ]
     },
     {
@@ -371,7 +371,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
       "ref": "pkg:npm/tslib@2.3.1?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
     },
     {
-      "ref": "pkg:npm/zone.js@0.11.6?vcs_url=git%3A//github.com/angular/angular.git#packages/zone.js"
+      "ref": "pkg:npm/zone.js@0.11.8?vcs_url=git%3A//github.com/angular/angular.git#packages/zone.js"
     }
   ]
 }"
@@ -474,8 +474,8 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
       "type": "library",
       "name": "common",
       "group": "@angular",
-      "version": "13.3.11",
-      "bom-ref": "pkg:npm/%40angular/common@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
+      "version": "13.3.12",
+      "bom-ref": "pkg:npm/%40angular/common@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
       "author": "angular",
       "description": "Angular - commonly needed directives and services",
       "licenses": [
@@ -485,7 +485,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
           }
         }
       ],
-      "purl": "pkg:npm/%40angular/common@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
+      "purl": "pkg:npm/%40angular/common@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
       "externalReferences": [
         {
           "url": "https://github.com/angular/angular/issues",
@@ -508,8 +508,8 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
       "type": "library",
       "name": "core",
       "group": "@angular",
-      "version": "13.3.11",
-      "bom-ref": "pkg:npm/%40angular/core@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
+      "version": "13.3.12",
+      "bom-ref": "pkg:npm/%40angular/core@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
       "author": "angular",
       "description": "Angular - the core framework",
       "licenses": [
@@ -519,7 +519,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
           }
         }
       ],
-      "purl": "pkg:npm/%40angular/core@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
+      "purl": "pkg:npm/%40angular/core@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
       "externalReferences": [
         {
           "url": "https://github.com/angular/angular/issues",
@@ -542,8 +542,8 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
       "type": "library",
       "name": "platform-browser",
       "group": "@angular",
-      "version": "13.3.11",
-      "bom-ref": "pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser",
+      "version": "13.3.12",
+      "bom-ref": "pkg:npm/%40angular/platform-browser@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser",
       "author": "angular",
       "description": "Angular - library for using Angular in a web browser",
       "licenses": [
@@ -553,7 +553,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
           }
         }
       ],
-      "purl": "pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser",
+      "purl": "pkg:npm/%40angular/platform-browser@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser",
       "externalReferences": [
         {
           "url": "https://github.com/angular/angular/issues",
@@ -674,8 +674,8 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
     {
       "type": "library",
       "name": "zone.js",
-      "version": "0.11.6",
-      "bom-ref": "pkg:npm/zone.js@0.11.6?vcs_url=git%3A//github.com/angular/angular.git#packages/zone.js",
+      "version": "0.11.8",
+      "bom-ref": "pkg:npm/zone.js@0.11.8?vcs_url=git%3A//github.com/angular/angular.git#packages/zone.js",
       "author": "Brian Ford",
       "description": "Zones for JavaScript",
       "licenses": [
@@ -685,7 +685,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
           }
         }
       ],
-      "purl": "pkg:npm/zone.js@0.11.6?vcs_url=git%3A//github.com/angular/angular.git#packages/zone.js",
+      "purl": "pkg:npm/zone.js@0.11.8?vcs_url=git%3A//github.com/angular/angular.git#packages/zone.js",
       "externalReferences": [
         {
           "url": "https://github.com/angular/angular/issues",
@@ -707,32 +707,32 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
   ],
   "dependencies": [
     {
-      "ref": "pkg:npm/%40angular/common@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
+      "ref": "pkg:npm/%40angular/common@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
       "dependsOn": [
-        "pkg:npm/%40angular/core@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core"
+        "pkg:npm/%40angular/core@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core"
       ]
     },
     {
-      "ref": "pkg:npm/%40angular/core@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
+      "ref": "pkg:npm/%40angular/core@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
       "dependsOn": [
         "pkg:npm/rxjs@7.5.7?vcs_url=git%2Bhttps%3A//github.com/reactivex/rxjs.git"
       ]
     },
     {
-      "ref": "pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser",
+      "ref": "pkg:npm/%40angular/platform-browser@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser",
       "dependsOn": [
-        "pkg:npm/%40angular/common@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
-        "pkg:npm/%40angular/core@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core"
+        "pkg:npm/%40angular/common@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
+        "pkg:npm/%40angular/core@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core"
       ]
     },
     {
       "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13",
       "dependsOn": [
-        "pkg:npm/%40angular/common@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
-        "pkg:npm/%40angular/core@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
-        "pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser",
+        "pkg:npm/%40angular/common@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
+        "pkg:npm/%40angular/core@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
+        "pkg:npm/%40angular/platform-browser@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser",
         "pkg:npm/css-loader@6.5.1?vcs_url=git%2Bhttps%3A//github.com/webpack-contrib/css-loader.git",
-        "pkg:npm/zone.js@0.11.6?vcs_url=git%3A//github.com/angular/angular.git#packages/zone.js"
+        "pkg:npm/zone.js@0.11.8?vcs_url=git%3A//github.com/angular/angular.git#packages/zone.js"
       ]
     },
     {
@@ -748,7 +748,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
       "ref": "pkg:npm/tslib@2.3.1?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
     },
     {
-      "ref": "pkg:npm/zone.js@0.11.6?vcs_url=git%3A//github.com/angular/angular.git#packages/zone.js"
+      "ref": "pkg:npm/zone.js@0.11.8?vcs_url=git%3A//github.com/angular/angular.git#packages/zone.js"
     }
   ]
 }"
@@ -831,18 +831,18 @@ exports[`integration functional: webpack5 with angular13 generated xml file: dis
     </component>
   </metadata>
   <components>
-    <component type="library" bom-ref="pkg:npm/%40angular/common@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common">
+    <component type="library" bom-ref="pkg:npm/%40angular/common@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common">
       <author>angular</author>
       <group>@angular</group>
       <name>common</name>
-      <version>13.3.11</version>
+      <version>13.3.12</version>
       <description>Angular - commonly needed directives and services</description>
       <licenses>
         <license>
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40angular/common@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common</purl>
+      <purl>pkg:npm/%40angular/common@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/angular/angular/issues</url>
@@ -858,18 +858,18 @@ exports[`integration functional: webpack5 with angular13 generated xml file: dis
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="pkg:npm/%40angular/core@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core">
+    <component type="library" bom-ref="pkg:npm/%40angular/core@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core">
       <author>angular</author>
       <group>@angular</group>
       <name>core</name>
-      <version>13.3.11</version>
+      <version>13.3.12</version>
       <description>Angular - the core framework</description>
       <licenses>
         <license>
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40angular/core@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core</purl>
+      <purl>pkg:npm/%40angular/core@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/angular/angular/issues</url>
@@ -885,18 +885,18 @@ exports[`integration functional: webpack5 with angular13 generated xml file: dis
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser">
+    <component type="library" bom-ref="pkg:npm/%40angular/platform-browser@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser">
       <author>angular</author>
       <group>@angular</group>
       <name>platform-browser</name>
-      <version>13.3.11</version>
+      <version>13.3.12</version>
       <description>Angular - library for using Angular in a web browser</description>
       <licenses>
         <license>
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser</purl>
+      <purl>pkg:npm/%40angular/platform-browser@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/angular/angular/issues</url>
@@ -990,17 +990,17 @@ exports[`integration functional: webpack5 with angular13 generated xml file: dis
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="pkg:npm/zone.js@0.11.6?vcs_url=git%3A//github.com/angular/angular.git#packages/zone.js">
+    <component type="library" bom-ref="pkg:npm/zone.js@0.11.8?vcs_url=git%3A//github.com/angular/angular.git#packages/zone.js">
       <author>Brian Ford</author>
       <name>zone.js</name>
-      <version>0.11.6</version>
+      <version>0.11.8</version>
       <description>Zones for JavaScript</description>
       <licenses>
         <license>
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/zone.js@0.11.6?vcs_url=git%3A//github.com/angular/angular.git#packages/zone.js</purl>
+      <purl>pkg:npm/zone.js@0.11.8?vcs_url=git%3A//github.com/angular/angular.git#packages/zone.js</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/angular/angular/issues</url>
@@ -1018,29 +1018,29 @@ exports[`integration functional: webpack5 with angular13 generated xml file: dis
     </component>
   </components>
   <dependencies>
-    <dependency ref="pkg:npm/%40angular/common@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common">
-      <dependency ref="pkg:npm/%40angular/core@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core"/>
+    <dependency ref="pkg:npm/%40angular/common@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common">
+      <dependency ref="pkg:npm/%40angular/core@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core"/>
     </dependency>
-    <dependency ref="pkg:npm/%40angular/core@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core">
+    <dependency ref="pkg:npm/%40angular/core@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core">
       <dependency ref="pkg:npm/rxjs@7.5.7?vcs_url=git%2Bhttps%3A//github.com/reactivex/rxjs.git"/>
     </dependency>
-    <dependency ref="pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser">
-      <dependency ref="pkg:npm/%40angular/common@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common"/>
-      <dependency ref="pkg:npm/%40angular/core@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core"/>
+    <dependency ref="pkg:npm/%40angular/platform-browser@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser">
+      <dependency ref="pkg:npm/%40angular/common@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common"/>
+      <dependency ref="pkg:npm/%40angular/core@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core"/>
     </dependency>
     <dependency ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13">
-      <dependency ref="pkg:npm/%40angular/common@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common"/>
-      <dependency ref="pkg:npm/%40angular/core@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core"/>
-      <dependency ref="pkg:npm/%40angular/platform-browser@13.3.11?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser"/>
+      <dependency ref="pkg:npm/%40angular/common@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common"/>
+      <dependency ref="pkg:npm/%40angular/core@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core"/>
+      <dependency ref="pkg:npm/%40angular/platform-browser@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser"/>
       <dependency ref="pkg:npm/css-loader@6.5.1?vcs_url=git%2Bhttps%3A//github.com/webpack-contrib/css-loader.git"/>
-      <dependency ref="pkg:npm/zone.js@0.11.6?vcs_url=git%3A//github.com/angular/angular.git#packages/zone.js"/>
+      <dependency ref="pkg:npm/zone.js@0.11.8?vcs_url=git%3A//github.com/angular/angular.git#packages/zone.js"/>
     </dependency>
     <dependency ref="pkg:npm/css-loader@6.5.1?vcs_url=git%2Bhttps%3A//github.com/webpack-contrib/css-loader.git"/>
     <dependency ref="pkg:npm/rxjs@7.5.7?vcs_url=git%2Bhttps%3A//github.com/reactivex/rxjs.git">
       <dependency ref="pkg:npm/tslib@2.3.1?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
     </dependency>
     <dependency ref="pkg:npm/tslib@2.3.1?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
-    <dependency ref="pkg:npm/zone.js@0.11.6?vcs_url=git%3A//github.com/angular/angular.git#packages/zone.js"/>
+    <dependency ref="pkg:npm/zone.js@0.11.8?vcs_url=git%3A//github.com/angular/angular.git#packages/zone.js"/>
   </dependencies>
 </bom>"
 `;
