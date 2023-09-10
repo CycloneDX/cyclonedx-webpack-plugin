@@ -82,7 +82,7 @@ See extended [examples].
 The CycloneDX _webpack_ plugin supports placing the CycloneDX SBOM in a pre-defined location, specifically in
 `/.well-known/sbom`. This option is enabled by default. The behavior can be changed by overriding the values 
 of `includeWellknown` and `wellknownLocation`.  
-See [draft-lear-opsawg-sbom-access] for more information on the specification, currently an IETF draft.
+See [draft-ietf-opsawg-sbom-access] for more information on the specification, currently an IETF draft.
 
 In your [webpack config] add the CycloneDX plugin:
 
@@ -136,7 +136,7 @@ See the [LICENSE][license_file] file for the full license.
 
 [webpack]: https://webpack.js.org/
 [webpack config]: https://webpack.js.org/configuration/
-[draft-lear-opsawg-sbom-access]: https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-sbom-access
+[draft-ietf-opsawg-sbom-access]: https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-sbom-access
 
 [CycloneDX-javascript-library]: https://github.com/CycloneDX/cyclonedx-javascript-library/
 
