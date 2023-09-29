@@ -1,5 +1,6 @@
 [![shield_npm-version]][link_npm]
 [![shield_gh-workflow-test]][link_gh-workflow-test]
+[![shield_ossf-best-practices]][link_ossf-best-practices]
 [![shield_license]][license_file]  
 [![shield_website]][link_website]
 [![shield_slack]][link_slack]
@@ -147,6 +148,7 @@ See the [LICENSE][license_file] file for the full license.
 [shield_gh-workflow-test]: https://img.shields.io/github/actions/workflow/status/CycloneDX/cyclonedx-webpack-plugin/nodejs.yml?branch=master&logo=GitHub&logoColor=white "tests"
 [shield_npm-version]: https://img.shields.io/npm/v/@cyclonedx/webpack-plugin?logo=npm&logoColor=white "npm"
 [shield_license]: https://img.shields.io/github/license/CycloneDX/cyclonedx-webpack-plugin?logo=open%20source%20initiative&logoColor=white "license"
+[shield_ossf-best-practices]: https://img.shields.io/cii/level/7884?label=OpenSSF%20best%20practices "OpenSSF best practices"
 [shield_website]: https://img.shields.io/badge/https://-cyclonedx.org-blue.svg "homepage"
 [shield_slack]: https://img.shields.io/badge/slack-join-blue?logo=Slack&logoColor=white "slack join"
 [shield_groups]: https://img.shields.io/badge/discussion-groups.io-blue.svg "groups discussion"
@@ -154,6 +156,7 @@ See the [LICENSE][license_file] file for the full license.
 
 [link_website]: https://cyclonedx.org/
 [link_gh-workflow-test]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/actions/workflows/nodejs.yml?query=branch%3Amaster
+[link_ossf-best-practices]: https://www.bestpractices.dev/projects/7884
 [link_npm]: https://www.npmjs.com/package/@cyclonedx/webpack-plugin
 [link_slack]: https://cyclonedx.org/slack/invite
 [link_discussion]: https://groups.io/g/CycloneDX
