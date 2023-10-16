@@ -194,18 +194,10 @@ jobs:
           path: ${{ env.REPORTS_DIR }}
       - name: Run codacy-coverage-reporter
         env:
-          CODACY_PROJECT_TOKEN:  ${{ secrets.CODACY_PROJECT_TOKEN }}
+          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
         if: ${{ env.CODACY_PROJECT_TOKEN != '' }} ## see https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-using-secrets
-        # see https://github.com/codacy/codacy-coverage-reporter-action/blob/8a27d704d4ea6890aee42477b231c4fbbebac2ae/action.yml#L59
-        run: |
-          set -eux
-          auth="--project-token '$CODACY_PROJECT_TOKEN'"
-          reports=''
-          for report in $REPORTS_DIR/coverage/*/*
-          do
-            reports="$reports -r '$report'"
-          done
-          bash <(curl -Ls https://raw.githubusercontent.com/codacy/codacy-coverage-reporter/master/get.sh) report $auth $reports --partial -l TypeScript &&\
-          bash <(curl -Ls https://raw.githubusercontent.com/codacy/codacy-coverage-reporter/master/get.sh) report $auth $reports --partial -l Javascript &&\
-          bash <(curl -Ls https://raw.githubusercontent.com/codacy/codacy-coverage-reporter/master/get.sh) final $auth
-
+        # see https://github.com/codacy/codacy-coverage-reporter-action
+        uses: codacy/codacy-coverage-reporter-action@v1
+        with:
+          project-token: ${{ env.CODACY_PROJECT_TOKEN }}
+          coverage-reports: ${{ env.REPORTS_DIR }}/coverage/*/*
