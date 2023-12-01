@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Build
+  * Use _TypeScript_ `v5.2.2` now, was `v5.1.6` (via [#1238])
+
+[#1238]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1238
+
 ## 3.8.2 - 2023-08-28
 
 * Build
