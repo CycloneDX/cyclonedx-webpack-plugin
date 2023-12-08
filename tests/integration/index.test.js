@@ -104,15 +104,13 @@ const testSetups = [
   // endregion regression
 ]
 
-let compareSnapshots = true
 // for testing purposes, some outdated jest version must be used.
 // this version has a different format for snapshots ...
+let compareSnapshots
 try {
-  /* eslint-disable-next-line quotes -- as this is generated code */
-  expect('"testing\\').toMatchInlineSnapshot(`""testing\\"`)
+  compareSnapshots = Number(require('jest/package.json').version.split('.')[0]) >= 29
 } catch {
-  compareSnapshots = false
-  console.warn('!!! WILL SKIP SNAPSHOT COMPARISONS !!!')
+  compareSnapshots = null
 }
 
 describe('integration', () => {
