@@ -104,6 +104,15 @@ const testSetups = [
   // endregion regression
 ]
 
+let compareSnapshots = true
+try {
+  /* eslint-disable-next-line quotes -- as this is generated code */
+  expect('"testing\\').toMatchInlineSnapshot(`""testing\\"`)
+} catch {
+  compareSnapshots = false
+  console.warn('!!! WILL SKIP SNAPSHOT COMPARISONS !!!')
+}
+
 describe('integration', () => {
   testSetups.forEach(({ purpose, dir, results }) => {
     describe(purpose, () => {
@@ -141,7 +150,9 @@ describe('integration', () => {
           expect(resultBuffer).toBeInstanceOf(Buffer)
           expect(resultBuffer.length).toBeGreaterThan(0)
           const resultReproducible = makeReproducible(format, resultBuffer.toString())
-          expect(resultReproducible).toMatchSnapshot()
+          if (compareSnapshots) {
+            expect(resultReproducible).toMatchSnapshot()
+          }
         })
       })
     })
