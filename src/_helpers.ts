@@ -17,7 +17,7 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { existsSync } from 'fs'
+import { existsSync, readFileSync } from 'fs'
 import { dirname, isAbsolute, join } from 'path'
 
 export interface PackageDescription {
@@ -32,7 +32,7 @@ export function getPackageDescription (path: string): PackageDescription | undef
       try {
         return {
           path: packageJson,
-          packageJson: require(packageJson)
+          packageJson: loadJsonFile(packageJson)
         }
       } catch {
         return undefined
@@ -46,4 +46,11 @@ export function getPackageDescription (path: string): PackageDescription | undef
     path = nextPath
   }
   return undefined
+}
+
+export function loadJsonFile (path: string): any {
+  return JSON.parse(readFileSync(path, 'utf8'))
+  // may be replaced by `require(f, { with: { type: "json" } })`
+  // as soon as this spec is properly implemented.
+  // see https://github.com/tc39/proposal-import-attributes
 }

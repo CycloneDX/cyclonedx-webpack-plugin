@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Changed
+    * Hardened JSON imports (via [#1242])
+
+[#1242]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1242
+
 ## 3.8.3 - 2023-12-01
 
 * Build
