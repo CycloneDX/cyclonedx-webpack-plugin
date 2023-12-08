@@ -25,121 +25,136 @@ const { describe, expect, it } = require('@jest/globals')
 
 const { version: thisVersion } = require('../../package.json')
 
-describe('integration', () => {
-  describe.each(
-    [
-      // region functional
+const testSetups = [
+  // region functional
+  {
+    dir: 'webpack5-vue2',
+    purpose: 'functional: webpack5 with vue2',
+    results: [ // paths relative to `dir`
       {
-        dir: 'webpack5-vue2',
-        purpose: 'functional: webpack5 with vue2',
-        results: [ // paths relative to `dir`
-          {
-            format: 'xml',
-            file: 'dist/.bom/bom.xml'
-          },
-          {
-            format: 'json',
-            file: 'dist/.bom/bom.json'
-          },
-          {
-            format: 'json',
-            file: 'dist/.well-known/sbom'
-          }
-        ]
+        format: 'xml',
+        file: 'dist/.bom/bom.xml'
       },
       {
-        dir: 'webpack5-angular13',
-        purpose: 'functional: webpack5 with angular13',
-        results: [ // paths relative to `dir`
-          {
-            format: 'xml',
-            file: 'dist/.bom/bom.xml'
-          },
-          {
-            format: 'json',
-            file: 'dist/.bom/bom.json'
-          },
-          {
-            format: 'json',
-            file: 'dist/.well-known/sbom'
-          }
-        ]
+        format: 'json',
+        file: 'dist/.bom/bom.json'
       },
       {
-        dir: 'webpack5-react18',
-        purpose: 'functional: webpack5 with react18',
-        results: [ // paths relative to `dir`
-          {
-            format: 'xml',
-            file: 'dist/.bom/bom.xml'
-          },
-          {
-            format: 'json',
-            file: 'dist/.bom/bom.json'
-          },
-          {
-            format: 'json',
-            file: 'dist/.well-known/sbom'
-          }
-        ]
-      },
-      // endregion functional
-      // region regression
-      {
-        dir: 'regression-issue745',
-        purpose: 'regression: issue#745',
-        results: [ // paths relative to `dir`
-          {
-            format: 'xml',
-            file: 'dist/.bom/bom.xml'
-          },
-          {
-            format: 'json',
-            file: 'dist/.bom/bom.json'
-          },
-          {
-            format: 'json',
-            file: 'dist/.well-known/sbom'
-          }
-        ]
+        format: 'json',
+        file: 'dist/.well-known/sbom'
       }
-      // endregion regression
     ]
-  )('$purpose', ({ dir, results }) => {
-    const built = spawnSync(
-      'npm', ['run', 'build'], {
-        cwd: path.resolve(__dirname, dir),
-        stdio: ['ignore', 'pipe', 'pipe'],
-        encoding: 'utf8',
-        shell: true,
-        env: {
-          PATH: process.env.PATH,
-          CI: '1'
+  },
+  {
+    dir: 'webpack5-angular13',
+    purpose: 'functional: webpack5 with angular13',
+    results: [ // paths relative to `dir`
+      {
+        format: 'xml',
+        file: 'dist/.bom/bom.xml'
+      },
+      {
+        format: 'json',
+        file: 'dist/.bom/bom.json'
+      },
+      {
+        format: 'json',
+        file: 'dist/.well-known/sbom'
+      }
+    ]
+  },
+  {
+    dir: 'webpack5-react18',
+    purpose: 'functional: webpack5 with react18',
+    results: [ // paths relative to `dir`
+      {
+        format: 'xml',
+        file: 'dist/.bom/bom.xml'
+      },
+      {
+        format: 'json',
+        file: 'dist/.bom/bom.json'
+      },
+      {
+        format: 'json',
+        file: 'dist/.well-known/sbom'
+      }
+    ]
+  },
+  // endregion functional
+  // region regression
+  {
+    dir: 'regression-issue745',
+    purpose: 'regression: issue#745',
+    results: [ // paths relative to `dir`
+      {
+        format: 'xml',
+        file: 'dist/.bom/bom.xml'
+      },
+      {
+        format: 'json',
+        file: 'dist/.bom/bom.json'
+      },
+      {
+        format: 'json',
+        file: 'dist/.well-known/sbom'
+      }
+    ]
+  }
+  // endregion regression
+]
+
+// for testing purposes, some outdated jest version must be used.
+// this version has a different format for snapshots ...
+let compareSnapshots
+try {
+  compareSnapshots = Number(require('jest/package.json').version.split('.')[0]) >= 29
+} catch {
+  compareSnapshots = null
+}
+
+describe('integration', () => {
+  testSetups.forEach(({ purpose, dir, results }) => {
+    describe(purpose, () => {
+      const built = spawnSync(
+        'npm', ['run', 'build'], {
+          cwd: path.resolve(module.path, dir),
+          stdio: ['ignore', 'pipe', 'pipe'],
+          encoding: 'utf8',
+          shell: true,
+          env: {
+            PATH: process.env.PATH,
+            CI: '1'
+          }
+        }
+      )
+      let skipTests = false
+      try {
+        expect(built.status).toBe(0)
+      } catch (err) {
+        if (/should not be used for production|Angular CLI requires a minimum|does not support Node\.js v/.test(built.stderr.toString())) {
+          skipTests = true
+        } else {
+          console.log(built, '\n')
+          throw err
         }
       }
-    )
-    let skipTests = false
-    try {
-      expect(built.status).toBe(0)
-    } catch (err) {
-      if (/should not be used for production|Angular CLI requires a minimum|does not support Node\.js v/.test(built.stderr.toString())) {
-        skipTests = true
-      } else {
-        console.log(built, '\n')
-        throw err
-      }
-    }
 
-    (skipTests
-      ? it.skip
-      : it
-    ).each(results)('generated $format file: $file', ({ format, file }) => {
-      const resultFile = path.resolve(__dirname, dir, file)
-      const resultBuffer = fs.readFileSync(resultFile)
-      expect(resultBuffer).toBeInstanceOf(Buffer)
-      expect(resultBuffer.length).toBeGreaterThan(0)
-      const resultReproducible = makeReproducible(format, resultBuffer.toString())
-      expect(resultReproducible).toMatchSnapshot()
+      results.forEach(({ format, file }) => {
+        (skipTests
+          ? it.skip
+          : it
+        )(`generated ${format} file: ${file}`, () => {
+          const resultFile = path.resolve(module.path, dir, file)
+          const resultBuffer = fs.readFileSync(resultFile)
+          expect(resultBuffer).toBeInstanceOf(Buffer)
+          expect(resultBuffer.length).toBeGreaterThan(0)
+          const resultReproducible = makeReproducible(format, resultBuffer.toString())
+          if (compareSnapshots) {
+            expect(resultReproducible).toMatchSnapshot()
+          }
+        })
+      })
     })
   })
 })
