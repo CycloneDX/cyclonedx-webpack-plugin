@@ -333,7 +333,6 @@ export class CycloneDxWebpackPlugin {
   }
 
   * #makeTools (builder: CDX.Builders.FromNodePackageJson.ToolBuilder, logger: WebpackLogger): Generator<CDX.Models.Tool> {
-    /* eslint-disable-next-line @typescript-eslint/no-var-requires */
     const packageJsonPaths = [resolve(module.path, '..', 'package.json')]
 
     const libs = [
