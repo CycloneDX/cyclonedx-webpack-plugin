@@ -23,7 +23,7 @@ import * as normalizePackageJson from 'normalize-package-data'
 import { join as joinPath, resolve } from 'path'
 import { Compilation, type Compiler, sources } from 'webpack'
 
-import { getPackageDescription } from './_helpers'
+import { getPackageDescription, loadJsonFile } from './_helpers'
 import { Extractor } from './extractor'
 
 type WebpackLogger = Compilation['logger']
@@ -333,8 +333,7 @@ export class CycloneDxWebpackPlugin {
   }
 
   * #makeTools (builder: CDX.Builders.FromNodePackageJson.ToolBuilder, logger: WebpackLogger): Generator<CDX.Models.Tool> {
-    /* eslint-disable-next-line @typescript-eslint/no-var-requires */
-    const packageJsonPaths = ['../package.json']
+    const packageJsonPaths = [resolve(module.path, '..', 'package.json')]
 
     const libs = [
       '@cyclonedx/cyclonedx-library'
@@ -355,8 +354,7 @@ export class CycloneDxWebpackPlugin {
 
     for (const packageJsonPath of packageJsonPaths) {
       logger.log('try to build new Tool from PkgPath', packageJsonPath)
-      /* eslint-disable-next-line @typescript-eslint/no-var-requires */
-      const packageJson = require(packageJsonPath)
+      const packageJson = loadJsonFile(packageJsonPath)
       normalizePackageJson(packageJson, w => { logger.debug('normalizePackageJson from PkgPath', packageJsonPath, 'caused:', w) })
       const tool = builder.makeTool(packageJson)
       if (tool !== undefined) {
