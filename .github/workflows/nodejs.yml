@@ -141,9 +141,7 @@ jobs:
       - name: setup test beds
         run: npm run setup-tests
       - name: test
-        run: >
-          npm run test:jest --
-          --ci
+        run: npm run test:jest
         env:
           JEST_JUNIT_OUTPUT_DIR: ${{ env.REPORTS_DIR }}/${{ matrix.os }}_node${{ matrix.node-version }}
       - name: collect coverage
