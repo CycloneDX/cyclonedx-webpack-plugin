@@ -105,6 +105,8 @@ const testSetups = [
 ]
 
 let compareSnapshots = true
+// for testing purposes, some outdated jest version must be used.
+// this version has a different format for snapshots ...
 try {
   /* eslint-disable-next-line quotes -- as this is generated code */
   expect('"testing\\').toMatchInlineSnapshot(`""testing\\"`)
