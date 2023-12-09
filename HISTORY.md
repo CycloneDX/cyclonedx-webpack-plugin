@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 * Changed
-    * Hardened JSON imports (via [#1242])
+  * Hardened JSON imports (via [#1242])
+* Build
+  * Use _TypeScript_ `v5.3.3` now, was `v5.3.2` (via [#1244])
 
 [#1242]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1242
+[#1244]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1244
 
 ## 3.8.3 - 2023-12-01
 
