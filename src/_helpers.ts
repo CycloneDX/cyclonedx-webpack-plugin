@@ -32,7 +32,7 @@ export function getPackageDescription (path: string): PackageDescription | undef
       try {
         return {
           path: packageJson,
-          packageJson: loadJsonFile(packageJson)
+          packageJson: loadJsonFile(packageJson) ?? {}
         }
       } catch {
         return undefined

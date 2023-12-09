@@ -300,7 +300,7 @@ export class CycloneDxWebpackPlugin {
     builder: CDX.Builders.FromNodePackageJson.ComponentBuilder,
     logger: WebpackLogger
   ): CDX.Models.Component | undefined {
-    const thisPackageJson = this.rootComponentAutodetect
+    const thisPackageJson: object = this.rootComponentAutodetect
       ? getPackageDescription(path)?.packageJson
       : { name: this.rootComponentName, version: this.rootComponentVersion }
     if (thisPackageJson === undefined) { return undefined }
@@ -354,7 +354,7 @@ export class CycloneDxWebpackPlugin {
 
     for (const packageJsonPath of packageJsonPaths) {
       logger.log('try to build new Tool from PkgPath', packageJsonPath)
-      const packageJson = loadJsonFile(packageJsonPath)
+      const packageJson: object = loadJsonFile(packageJsonPath) ?? {}
       normalizePackageJson(packageJson, w => { logger.debug('normalizePackageJson from PkgPath', packageJsonPath, 'caused:', w) })
       const tool = builder.makeTool(packageJson)
       if (tool !== undefined) {
