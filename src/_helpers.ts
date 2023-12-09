@@ -22,7 +22,7 @@ import { dirname, isAbsolute, join } from 'path'
 
 export interface PackageDescription {
   path: string
-  packageJson: any
+  packageJson: NonNullable<any>
 }
 
 export function getPackageDescription (path: string): PackageDescription | undefined {
@@ -32,7 +32,7 @@ export function getPackageDescription (path: string): PackageDescription | undef
       try {
         return {
           path: packageJson,
-          packageJson: loadJsonFile(packageJson)
+          packageJson: loadJsonFile(packageJson) ?? {}
         }
       } catch {
         return undefined
