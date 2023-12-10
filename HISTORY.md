@@ -5,9 +5,9 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 * Fix
-  * Malformed ingested package versions are fixed (via [#]) 
+  * Malformed ingested package versions are fixed (via [#1246]) 
 
-[#]: 
+[#1246]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1246
 
 ## 3.9.0 - 2023-12-10
 
