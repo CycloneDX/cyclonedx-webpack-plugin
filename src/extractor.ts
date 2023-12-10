@@ -62,9 +62,9 @@ export class Extractor {
           const _packageJson = structuredClonePolyfill(pkg.packageJson)
           normalizePackageJson(_packageJson as object /* add debug for warnings? */)
           // region fix normalizations
-          if (typeof pkg.packageJson === 'string') {
+          if (typeof pkg.packageJson.version === 'string') {
             // allow non-SemVer strings
-            _packageJson.version = pkg.packageJson.trim()
+            _packageJson.version = pkg.packageJson.version.trim()
           }
           // endregion fix normalizations
           pkg.packageJson = _packageJson
