@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 3.9.1 - 2023-12-10
+
 * Fix
   * Malformed ingested package versions are fixed (via [#1246]) 
 
