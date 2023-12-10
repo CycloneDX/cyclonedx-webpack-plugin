@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 3.9.0 - 2023-12-10
+
 * Changed
   * Hardened JSON imports (via [#1242], [#1245])
 * Build
