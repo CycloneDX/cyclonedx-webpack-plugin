@@ -111,7 +111,7 @@ jobs:
         run: |
           set -ex
           dep_constraints=''
-          dev_requirements='jest jest-junit imurmurhash fast-glob'
+          dev_requirements='c8 jest jest-junit imurmurhash fast-glob'
           # as long as npm cannot auto-resolve engine-constraints, we need to help here
           case '${{ matrix.node-version }}' in
             '14')
@@ -119,7 +119,7 @@ jobs:
             ;;
             '14.0.0')
               dep_constraints='normalize-package-data@^3'
-              dev_requirements='jest@^26 jest-junit imurmurhash fast-glob'
+              dev_requirements='c8@^8 jest@^26 jest-junit imurmurhash fast-glob'
               # cannot run snapshot-compare with old versions ...
               rm -rf tests/integration/__snapshots__/
             ;;
