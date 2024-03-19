@@ -55,7 +55,7 @@
     "webpack": "^5"
   },
   "devDependencies": {
-    "@types/node": "ts5.3",
+    "@types/node": "ts5.4",
     "@types/normalize-package-data": "^2.4.1",
     "c8": "^8||^9",
     "eslint": "8.57.0",
