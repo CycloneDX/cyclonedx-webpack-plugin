@@ -44,7 +44,7 @@ jobs:
         run: npm run build
       - name: artifact build result
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: dist
           path: dist
@@ -156,7 +156,7 @@ jobs:
       - name: artifact test reports
         if: ${{ ! cancelled() }}
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ env.TESTS_REPORTS_ARTIFACT }}
           path: ${{ env.REPORTS_DIR }}
