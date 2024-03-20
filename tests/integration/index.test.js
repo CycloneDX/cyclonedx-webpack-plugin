@@ -64,6 +64,24 @@ const testSetups = [
     ]
   },
   {
+    dir: 'webpack5-angular17',
+    purpose: 'functional: webpack5 with angular17',
+    results: [ // paths relative to `dir`
+      {
+        format: 'xml',
+        file: 'dist/.bom/bom.xml'
+      },
+      {
+        format: 'json',
+        file: 'dist/.bom/bom.json'
+      },
+      {
+        format: 'json',
+        file: 'dist/.well-known/sbom'
+      }
+    ]
+  },
+  {
     dir: 'webpack5-react18',
     purpose: 'functional: webpack5 with react18',
     results: [ // paths relative to `dir`
