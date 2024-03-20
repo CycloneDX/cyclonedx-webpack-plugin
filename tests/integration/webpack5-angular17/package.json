@@ -1,0 +1,58 @@
+{
+  "private": true,
+  "name": "@cyclonedx-webpack-plugin-tests/example-webpack5-angular17",
+  "version": "0.0.0",
+  "description": "example setup witch Angular17 in WebPack5",
+  "homepage": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/webpack5-angular17#readme",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Jan Kowalleck",
+    "email": "jan.kowalleck@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Jan Kowalleck",
+      "email": "jan.kowalleck@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
+    "directory": "tests/integration/webpack5-angular17"
+  },
+  "bugs": {
+    "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues"
+  },
+  "engines": {
+    "node": ">=14",
+    "npm": ">=8"
+  },
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development"
+  },
+  "dependencies": {
+    "@angular/animations": "^17.3.0",
+    "@angular/common": "^17.3.0",
+    "@angular/compiler": "^17.3.0",
+    "@angular/core": "^17.3.0",
+    "@angular/forms": "^17.3.0",
+    "@angular/platform-browser": "^17.3.0",
+    "@angular/platform-browser-dynamic": "^17.3.0",
+    "@angular/router": "^17.3.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.3"
+  },
+  "devDependencies": {
+    "@angular-builders/custom-webpack": "^17.0.1",
+    "@angular-devkit/build-angular": "^17.3.0",
+    "@angular/cli": "^17.3.0",
+    "@angular/compiler-cli": "^17.3.0",
+    "@cyclonedx/webpack-plugin": "file:../../..",
+    "typescript": "~5.4.2",
+    "webpack": "^5"
+  }
+}
