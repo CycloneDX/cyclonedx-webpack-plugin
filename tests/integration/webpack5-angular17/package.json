@@ -3,39 +3,31 @@
   "version": "0.0.1",
   "description": "example setup witch Angular17 in WebPack5",
   "private": true,
-  "homepage": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/webpack5-angular13#readme",
+  "homepage": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/webpack5-angular17#readme",
   "license": "Apache-2.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+  "author": {
+    "name": "Jan Kowalleck",
+    "email": "jan.kowalleck@gmail.com"
   },
-  "dependencies": {
-    "@angular/animations": "^17.3.0",
-    "@angular/common": "^17.3.0",
-    "@angular/compiler": "^17.3.0",
-    "@angular/core": "^17.3.0",
-    "@angular/forms": "^17.3.0",
-    "@angular/platform-browser": "^17.3.0",
-    "@angular/platform-browser-dynamic": "^17.3.0",
-    "@angular/router": "^17.3.0",
-    "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.14.3"
+  "contributors": [
+    {
+      "name": "Jan Kowalleck",
+      "email": "jan.kowalleck@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
+    "directory": "tests/integration/webpack5-angular17"
+  },
+  "bugs": {
+    "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues"
+  },
+  "engines": {
+    "node": ">=14",
+    "npm": ">=8"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^17.3.0",
-    "@angular/cli": "^17.3.0",
-    "@angular/compiler-cli": "^17.3.0",
-    "@types/jasmine": "~5.1.0",
-    "jasmine-core": "~5.1.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.2.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.4.2"
+    "@angular/cli": "^17.3.0"
   }
 }
