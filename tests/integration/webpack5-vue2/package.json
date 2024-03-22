@@ -41,5 +41,8 @@
   "engines": {
     "node": ">=14",
     "npm": ">=8"
+  },
+  "resolutions": {
+    "@cyclonedx/webpack-plugin": "portal:../../.."
   }
 }
