@@ -8,6 +8,8 @@
 
 # Node
 /node_modules
+/.yarn/
+.pnp.*
 npm-debug.log
 yarn-error.log
 

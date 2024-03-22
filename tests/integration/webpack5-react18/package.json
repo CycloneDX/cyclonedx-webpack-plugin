@@ -163,5 +163,8 @@
   },
   "devDependencies": {
     "@cyclonedx/webpack-plugin": "file:../../.."
+  },
+  "resolutions": {
+    "@cyclonedx/webpack-plugin": "portal:../../.."
   }
 }

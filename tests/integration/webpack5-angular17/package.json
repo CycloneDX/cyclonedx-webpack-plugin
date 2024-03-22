@@ -54,5 +54,8 @@
     "@cyclonedx/webpack-plugin": "file:../../..",
     "typescript": "~5.4.2",
     "webpack": "^5"
+  },
+  "resolutions": {
+    "@cyclonedx/webpack-plugin": "portal:../../.."
   }
 }

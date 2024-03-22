@@ -18,10 +18,11 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 const { spawnSync } = require('child_process')
-const path = require('path');
+const path = require('path')
+const fs = require('fs');
 
 (function () {
-  const REQUIRES_NPM_INSTALL = [
+  const REQUIRES_INSTALL = [
     // region functional tests
     'webpack5-angular13',
     'webpack5-angular17',
@@ -33,6 +34,18 @@ const path = require('path');
     // endregion regression tests
   ]
 
+  const SetupMapMethodCmdArgs = {
+    npm: ['npm', ['ci']],
+    yarn: ['yarn', ['install']], //, '--immutable']],
+    pnpm: ['pnpm', ['install', '--frozen-lockfile']]
+  }
+
+  const CleanupMapMethod = {
+    npm: ['node_modules'],
+    yarn: ['.yarn', '.pnp.js', '.pnp.cjs', '.pnp.loader.mjs'],
+    pnpm: []
+  }
+
   console.warn(`
   WILL SETUP INTEGRATION TEST BEDS
   THAT MIGHT CONTAIN OUTDATED VULNERABLE PACKAGES
@@ -40,13 +53,29 @@ const path = require('path');
   `)
 
   process.exitCode = 0
-  let done
 
-  for (const DIR of REQUIRES_NPM_INSTALL) {
-    console.log('>>> setup with NPM:', DIR)
-    done = spawnSync(
-      'npm', ['ci'], {
-        cwd: path.resolve(__dirname, DIR),
+  const setupMethod = (process.argv[2] || 'npm').toLowerCase()
+  const setupMethodCmdArgs = SetupMapMethodCmdArgs[setupMethod]
+  if (undefined === setupMethodCmdArgs) {
+    throw new RangeError(`
+    Unsupported setupMethod: ${setupMethod}
+    Supported values: ${Object.keys(SetupMapMethodCmdArgs).join(' ')}
+    `)
+  }
+
+  for (const DIR of REQUIRES_INSTALL) {
+    const testbed = path.resolve(__dirname, DIR)
+    for (const [cm, cts] of Object.entries(CleanupMapMethod)) {
+      if (cm === setupMethod) { continue }
+      console.log(`>>> clean ${cm}: ${DIR}`)
+      for (const ct in cts) {
+        fs.rmSync(path.resolve(testbed, ct), { recursive: true, force: true })
+      }
+    }
+    console.log(`>>> setup with ${setupMethod}: ${DIR}`)
+    const done = spawnSync(
+      setupMethodCmdArgs[0], setupMethodCmdArgs[1], {
+        cwd: testbed,
         stdio: 'inherit',
         shell: true
       }

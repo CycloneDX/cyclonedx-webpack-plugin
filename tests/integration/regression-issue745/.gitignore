@@ -3,8 +3,10 @@
 !/.gitattributes
 !/README.md
 !/.npmrc
+!/.yarnrc.yml
 !/package.json
 !/package-lock.json
+!/yarn.lock
 !/webpack.config.js
 !/src
 !/src/*
