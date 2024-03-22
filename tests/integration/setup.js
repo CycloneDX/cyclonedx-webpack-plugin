@@ -36,13 +36,13 @@ const fs = require('fs');
 
   const SetupMapMethodCmdArgs = {
     npm: ['npm', ['ci']],
-    yarn: ['yarn', ['install', '--immutable']],
+    yarn: ['yarn', ['install']], //, '--immutable']],
     pnpm: ['pnpm', ['install', '--frozen-lockfile']]
   }
 
   const CleanupMapMethod = {
     npm: ['node_modules'],
-    yarn: ['.yarn'],
+    yarn: ['.yarn', '.pnp.js', '.pnp.cjs', '.pnp.loader.mjs'],
     pnpm: []
   }
 
