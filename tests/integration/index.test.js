@@ -133,9 +133,11 @@ try {
 
 describe('integration', () => {
   testSetups.forEach(({ purpose, dir, results }) => {
+    const setupMethod = 'yarn'  // @TODO detect yarn / pnpm / ... fallback npm
+
     describe(purpose, () => {
       const built = spawnSync(
-        'npm', ['run', 'build'], {
+        setupMethod, ['run', 'build'], {
           cwd: path.resolve(module.path, dir),
           stdio: ['ignore', 'pipe', 'pipe'],
           encoding: 'utf8',
