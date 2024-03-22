@@ -31,6 +31,7 @@ However, there are older versions of this plugin, that support
 ```shell
 npm i -D @cyclonedx/webpack-plugin
 yarn add -D @cyclonedx/webpack-plugin
+pnpm add -D @cyclonedx/webpack-plugin
 ```
 
 ## Usage

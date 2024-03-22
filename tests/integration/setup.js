@@ -33,6 +33,12 @@ const path = require('path');
     // endregion regression tests
   ]
 
+  const SetupMapMethodCmdArgs = {
+    npm: ['npm', ['ci']],
+    yarn: ['yarn', ['install', '--immutable']],
+    pnpm: ['pnpm', ['install', '--frozen-lockfile']]
+  }
+
   console.warn(`
   WILL SETUP INTEGRATION TEST BEDS
   THAT MIGHT CONTAIN OUTDATED VULNERABLE PACKAGES
@@ -40,12 +46,20 @@ const path = require('path');
   `)
 
   process.exitCode = 0
-  let done
+
+  const setupMethod = (process.argv[2] || 'npm').toLowerCase()
+  const setupMethodCmdArgs = SetupMapMethodCmdArgs[setupMethod]
+  if (undefined === setupMethodCmdArgs) {
+    throw new RangeError(`
+    Unsupported setupMethod: ${setupMethod}
+    Supported values: ${Object.keys(SetupMapMethodCmdArgs).join(' ')}
+    `)
+  }
 
   for (const DIR of REQUIRES_NPM_INSTALL) {
-    console.log('>>> setup with NPM:', DIR)
-    done = spawnSync(
-      'npm', ['ci'], {
+    console.log(`>>> setup with ${setupMethod}:`, DIR)
+    const done = spawnSync(
+      ...setupMethodCmdArgs, {
         cwd: path.resolve(__dirname, DIR),
         stdio: 'inherit',
         shell: true
