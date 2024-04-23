@@ -5,6 +5,7 @@ It might install outdated, unmaintained or vulnerable components, for showcasing
 
 ----
 
-this setup is a regression test for [issue#745].
+this setup is a regression test for [issue#745]:
+allow unorthodox package names - names that `npmjs.org` would not allow, that are totally fine for nodejs.
 
 [issue#745]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/745#issuecomment-1487012610
