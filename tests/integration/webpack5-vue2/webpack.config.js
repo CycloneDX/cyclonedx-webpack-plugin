@@ -19,7 +19,7 @@ module.exports = {
     new HtmlInlineScriptPlugin(),
     new CycloneDxWebpackPlugin(
       {
-        specVersion: '1.5',
+        specVersion: '1.6',
         outputLocation: '.bom',
         reproducibleResults: true,
         validateResults: true
