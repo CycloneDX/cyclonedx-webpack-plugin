@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+<!-- unreleased changes go here -->
+
+Added support for [_CycloneDX_ Specification-1.6](https://github.com/CycloneDX/specification/releases/tag/1.6).
+
+* Changed
+  * This tool supports _CycloneDX_ Specification-1.6 now (via [#1276])
+* Added
+  * Option `specVersion` now supports value `1.6` to reflect _CycloneDX_ Specification-1.6 (via [#1276])  
+    Default value for that option is unchanged - still `1.4`.
+
+[#1276]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1276
+
 ## 3.9.2 - 2024-03-19
 
 * Build
