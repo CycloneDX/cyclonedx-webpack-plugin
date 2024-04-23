@@ -85,7 +85,7 @@ export interface CycloneDxWebpackPluginOptions {
   rootComponentAutodetect?: CycloneDxWebpackPlugin['rootComponentAutodetect']
   /**
    * Set the RootComponent's type.
-   * See {@link https://cyclonedx.org/docs/1.5/json/#metadata_component_type the list of valid values}.
+   * See {@link https://cyclonedx.org/docs/1.6/json/#metadata_component_type the list of valid values}.
    *
    * @default 'application'
    */
