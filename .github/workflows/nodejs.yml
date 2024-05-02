@@ -3,7 +3,7 @@
 
 name: Node CI
 
-on: 
+on:
   push:
     branches: [ "master" ]
   pull_request:
@@ -14,7 +14,7 @@ on:
     - cron: '42 23 * * 5'
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: '${{ github.workflow }}-${{ github.ref }}'
   cancel-in-progress: true
 
 env:
@@ -79,7 +79,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ "ubuntu-latest" ]
-        node-version: 
+        node-version:
           # action based on https://github.com/actions/node-versions/releases
           # see also: https://nodejs.org/en/about/previous-releases
           - "22"      # current
@@ -158,7 +158,7 @@ jobs:
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.TESTS_REPORTS_ARTIFACT }}
+          name: '${{ env.TESTS_REPORTS_ARTIFACT }}_${{ matrix.os }}_node${{ matrix.node-version }}'
           path: ${{ env.REPORTS_DIR }}
 
   test-examples:
@@ -208,12 +208,14 @@ jobs:
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v4
         with:
-          name: ${{ env.TESTS_REPORTS_ARTIFACT }}
+          pattern: '${{ env.TESTS_REPORTS_ARTIFACT }}_*'
+          merge-multiple: true
           path: ${{ env.REPORTS_DIR }}
       - name: Run codacy-coverage-reporter
         env:
           CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
-        if: ${{ env.CODACY_PROJECT_TOKEN != '' }} ## see https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-using-secrets
+        ## see https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-using-secrets
+        if: ${{ env.CODACY_PROJECT_TOKEN != '' }}
         # see https://github.com/codacy/codacy-coverage-reporter-action
         uses: codacy/codacy-coverage-reporter-action@v1
         with:
