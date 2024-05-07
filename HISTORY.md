@@ -6,6 +6,13 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Added
+  * Licenses acknowledgement might be populated ([#1274] via [#])
+* Misc
+  * Raised dependency `@cyclonedx/cyclonedx-library@^6.6.0`, was `@^6.5.0` (via [#])
+
+[#1274]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1274
+
 ## 3.10.0 - 2024-04-23
 
 Added support for [_CycloneDX_ Specification-1.6](https://github.com/CycloneDX/specification/releases/tag/1.6).
