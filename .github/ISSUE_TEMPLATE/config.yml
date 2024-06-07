@@ -1,7 +1,7 @@
 blank_issues_enabled: true
 contact_links:
   - name: Discussions
-    url: https://github.com/CycloneDX/cyclonedx-node-npm/discussions
+    url: https://github.com/CycloneDX/cyclonedx-webpack-plugin/discussions
     about: Please ask and answer questions here.
   - name: Community slack support channel
     url: https://cyclonedx.slack.com/archives/C02E5182DM1
