@@ -18,7 +18,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import { existsSync, readFileSync } from 'fs'
-import { dirname, isAbsolute, join } from 'path'
+import { dirname, isAbsolute, join, sep } from 'path'
 
 export interface PackageDescription {
   path: string
@@ -26,13 +26,19 @@ export interface PackageDescription {
 }
 
 export function getPackageDescription (path: string): PackageDescription | undefined {
+  const isSubDirOfNodeModules = isSubDirectoryOfNodeModulesFolder(path)
+
   while (isAbsolute(path)) {
-    const packageJson = join(path, 'package.json')
-    if (existsSync(packageJson)) {
+    const pathToPackageJson = join(path, 'package.json')
+    if (existsSync(pathToPackageJson)) {
       try {
-        return {
-          path: packageJson,
-          packageJson: loadJsonFile(packageJson) ?? {}
+        const contentOfPackageJson = loadJsonFile(pathToPackageJson) ?? {}
+        // only look for valid candidate if we are in a node_modules subdirectory
+        if (!isSubDirOfNodeModules || isValidPackageJSON(contentOfPackageJson)) {
+          return {
+            path: pathToPackageJson,
+            packageJson: loadJsonFile(pathToPackageJson) ?? {}
+          }
         }
       } catch {
         return undefined
@@ -40,12 +46,26 @@ export function getPackageDescription (path: string): PackageDescription | undef
     }
 
     const nextPath = dirname(path)
-    if (nextPath === path) {
+    if (nextPath === path || isNodeModulesFolder(nextPath)) {
       return undefined
     }
     path = nextPath
   }
   return undefined
+}
+
+function isNodeModulesFolder (path: string): boolean {
+  return path.endsWith(`${sep}node_modules`)
+}
+
+function isSubDirectoryOfNodeModulesFolder (path: string): boolean {
+  return path.includes(`${sep}node_modules${sep}`)
+}
+
+export function isValidPackageJSON (pkg: any): boolean {
+  // checking for the existence of name and version properties
+  // both are required for a valid package.json according to https://docs.npmjs.com/cli/v10/configuring-npm/package-json
+  return typeof pkg.name === 'string' && typeof pkg.version === 'string'
 }
 
 export function loadJsonFile (path: string): any {

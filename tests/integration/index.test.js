@@ -118,8 +118,26 @@ const testSetups = [
         file: 'dist/.well-known/sbom'
       }
     ]
-  }
+  },
   // endregion regression
+  {
+    dir: 'improvement-issue-1284',
+    purpose: 'functional: verify enhanced package.json finder',
+    results: [ // paths relative to `dir`
+      {
+        format: 'xml',
+        file: 'dist/.bom/bom.xml'
+      },
+      {
+        format: 'json',
+        file: 'dist/.bom/bom.json'
+      },
+      {
+        format: 'json',
+        file: 'dist/.well-known/sbom'
+      }
+    ]
+  }
 ]
 
 // for testing purposes, some outdated jest version must be used.

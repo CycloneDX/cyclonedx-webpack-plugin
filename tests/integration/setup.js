@@ -29,8 +29,9 @@ const path = require('path');
     'webpack5-vue2',
     // endregion functional tests
     // region regression tests
-    'regression-issue745'
+    'regression-issue745',
     // endregion regression tests
+    'improvement-issue-1284'
   ]
 
   console.warn(`
