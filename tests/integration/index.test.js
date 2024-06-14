@@ -137,6 +137,25 @@ const testSetups = [
         file: 'dist/.well-known/sbom'
       }
     ]
+  },
+  {
+    dir: 'improvement-issue-1284-yarn',
+    packageManager: 'yarn',
+    purpose: 'functional: verify enhanced package.json finder with yarn pkg manager',
+    results: [ // paths relative to `dir`
+      {
+        format: 'xml',
+        file: 'dist/.bom/bom.xml'
+      },
+      {
+        format: 'json',
+        file: 'dist/.bom/bom.json'
+      },
+      {
+        format: 'json',
+        file: 'dist/.well-known/sbom'
+      }
+    ]
   }
 ]
 
@@ -150,10 +169,10 @@ try {
 }
 
 describe('integration', () => {
-  testSetups.forEach(({ purpose, dir, results }) => {
+  testSetups.forEach(({ purpose, dir, results, packageManager }) => {
     describe(purpose, () => {
       const built = spawnSync(
-        'npm', ['run', 'build'], {
+        packageManager ?? 'npm', ['run', 'build'], {
           cwd: path.resolve(module.path, dir),
           stdio: ['ignore', 'pipe', 'pipe'],
           encoding: 'utf8',

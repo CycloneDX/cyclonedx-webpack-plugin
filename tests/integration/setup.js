@@ -34,6 +34,10 @@ const path = require('path');
     'improvement-issue-1284'
   ]
 
+  const REQUIRES_YARN_INSTALL = [
+    'improvement-issue-1284-yarn'
+  ]
+
   console.warn(`
   WILL SETUP INTEGRATION TEST BEDS
   THAT MIGHT CONTAIN OUTDATED VULNERABLE PACKAGES
@@ -47,6 +51,21 @@ const path = require('path');
     console.log('>>> setup with NPM:', DIR)
     done = spawnSync(
       'npm', ['ci'], {
+        cwd: path.resolve(__dirname, DIR),
+        stdio: 'inherit',
+        shell: true
+      }
+    )
+    if (done.status !== 0) {
+      ++process.exitCode
+      console.error(done)
+    }
+  }
+
+  for (const DIR of REQUIRES_YARN_INSTALL) {
+    console.log('>>> setup with yarn:', DIR)
+    done = spawnSync(
+      'yarn', ['install', '--immutable'], {
         cwd: path.resolve(__dirname, DIR),
         stdio: 'inherit',
         shell: true
