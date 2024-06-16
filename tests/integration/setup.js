@@ -63,6 +63,7 @@ const path = require('path');
   }
 
   for (const DIR of REQUIRES_YARN_INSTALL) {
+    setYarnVersion(DIR)
     console.log('>>> setup with yarn:', DIR)
     done = spawnSync(
       'yarn', ['install', '--immutable'], {
@@ -77,3 +78,17 @@ const path = require('path');
     }
   }
 })()
+
+function setYarnVersion (DIR) {
+  const done = spawnSync(
+    'yarn', ['set', 'version', 'berry'], {
+      cwd: path.resolve(__dirname, DIR),
+      stdio: 'inherit',
+      shell: true
+    }
+  )
+  if (done.status !== 0) {
+    ++process.exitCode
+    console.error(done)
+  }
+}
