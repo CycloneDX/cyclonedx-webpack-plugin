@@ -102,6 +102,8 @@ jobs:
       - # some integration tests require a certain npm version to be installable
         name: update npm
         run: npm i -g npm@^8
+      - name: Setup yarn
+        run: corepack enable yarn
       - name: display version
         run: |-
           node --version
