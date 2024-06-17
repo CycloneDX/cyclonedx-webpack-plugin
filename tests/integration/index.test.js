@@ -142,8 +142,8 @@ const testSetups = [
     ]
   },
   {
-    dir: 'improvement-issue-1284',
-    purpose: 'functional: verify enhanced package.json finder',
+    dir: 'regression-issue1284',
+    purpose: 'regression: verify enhanced package.json finder',
     results: [ // paths relative to `dir`
       {
         format: 'xml',
@@ -161,9 +161,9 @@ const testSetups = [
   },
   {
     skip: !(nodeSV[0] > 16),
-    dir: 'improvement-issue-1284-yarn',
+    dir: 'regression-issue1284-yarn',
     packageManager: 'yarn',
-    purpose: 'functional: verify enhanced package.json finder with yarn pkg manager',
+    purpose: 'regression: verify enhanced package.json finder with yarn pkg manager',
     results: [ // paths relative to `dir`
       {
         format: 'xml',

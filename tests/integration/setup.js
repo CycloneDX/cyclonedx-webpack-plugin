@@ -32,7 +32,7 @@ const nodeSV = Object.freeze((process?.versions?.node ?? '').split('.').map(Numb
     // endregion functional tests
     // region regression tests
     'regression-issue745',
-    'improvement-issue-1284'
+    'regression-issue1284'
     // endregion regression tests
   ]
 
@@ -42,7 +42,7 @@ const nodeSV = Object.freeze((process?.versions?.node ?? '').split('.').map(Numb
         'webpack5-vue2-yarn',
         // endregion functional tests
         // region regression tests
-        'improvement-issue-1284-yarn'
+        'regression-issue1284-yarn'
         // endregion regression tests
       ]
     : []
