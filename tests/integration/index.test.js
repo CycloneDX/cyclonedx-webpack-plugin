@@ -68,6 +68,25 @@ const testSetups = [
     ]
   },
   {
+    dir: 'webpack5-vue2-pnpm',
+    purpose: 'functional: webpack5 with vue2 in pnpm setup',
+    packageManager: 'pnpm',
+    results: [ // paths relative to `dir`
+      {
+        format: 'xml',
+        file: 'dist/.bom/bom.xml'
+      },
+      {
+        format: 'json',
+        file: 'dist/.bom/bom.json'
+      },
+      {
+        format: 'json',
+        file: 'dist/.well-known/sbom'
+      }
+    ]
+  },
+  {
     dir: 'webpack5-angular13',
     purpose: 'functional: webpack5 with angular13',
     results: [ // paths relative to `dir`

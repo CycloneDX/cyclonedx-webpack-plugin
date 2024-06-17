@@ -104,6 +104,10 @@ jobs:
         run: |-
           npm i -g npm@^8
           npm --version
+      - name: enable pnpm
+        run: |-
+          corepack enable pnpm
+          pnpm --version
       - name: enable yarn
         if: "matrix.node-version != '14.0.0'"  # yarn14 has broken corepack
         run: |-

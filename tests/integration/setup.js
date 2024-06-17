@@ -35,6 +35,14 @@ const nodeSV = Object.freeze((process?.versions?.node ?? '').split('.').map(Numb
     // endregion regression tests
   ]
 
+  const REQUIRES_PNPM_INSTALL = [
+      // region functional tests
+      'webpack5-vue2-pnpm'
+      // endregion functional tests
+      // region regression tests
+      // endregion regression tests
+    ]
+
   const REQUIRES_YARN_INSTALL = nodeSV[0] > 16
     ? [
         // region functional tests
@@ -57,6 +65,21 @@ const nodeSV = Object.freeze((process?.versions?.node ?? '').split('.').map(Numb
     console.log('>>> setup with NPM:', DIR)
     const done = spawnSync(
       'npm', ['ci'], {
+        cwd: path.resolve(__dirname, DIR),
+        stdio: 'inherit',
+        shell: true
+      }
+    )
+    if (done.status !== 0) {
+      ++process.exitCode
+      console.error(done)
+    }
+  }
+
+  for (const DIR of REQUIRES_PNPM_INSTALL) {
+    console.log('>>> setup with PNPM:', DIR)
+    const done = spawnSync(
+      'pnpm', ['install', '--frozen-lockfile'], {
         cwd: path.resolve(__dirname, DIR),
         stdio: 'inherit',
         shell: true
