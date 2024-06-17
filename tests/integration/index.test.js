@@ -140,6 +140,44 @@ const testSetups = [
         file: 'dist/.well-known/sbom'
       }
     ]
+  },
+  {
+    dir: 'regression-issue1284',
+    purpose: 'regression: verify enhanced package.json finder',
+    results: [ // paths relative to `dir`
+      {
+        format: 'xml',
+        file: 'dist/.bom/bom.xml'
+      },
+      {
+        format: 'json',
+        file: 'dist/.bom/bom.json'
+      },
+      {
+        format: 'json',
+        file: 'dist/.well-known/sbom'
+      }
+    ]
+  },
+  {
+    skip: !(nodeSV[0] > 16),
+    dir: 'regression-issue1284-yarn',
+    packageManager: 'yarn',
+    purpose: 'regression: verify enhanced package.json finder with yarn pkg manager',
+    results: [ // paths relative to `dir`
+      {
+        format: 'xml',
+        file: 'dist/.bom/bom.xml'
+      },
+      {
+        format: 'json',
+        file: 'dist/.bom/bom.json'
+      },
+      {
+        format: 'json',
+        file: 'dist/.well-known/sbom'
+      }
+    ]
   }
   // endregion regression
 ]

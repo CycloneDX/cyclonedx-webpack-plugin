@@ -31,16 +31,18 @@ const nodeSV = Object.freeze((process?.versions?.node ?? '').split('.').map(Numb
     'webpack5-vue2',
     // endregion functional tests
     // region regression tests
-    'regression-issue745'
+    'regression-issue745',
+    'regression-issue1284'
     // endregion regression tests
   ]
 
   const REQUIRES_YARN_INSTALL = nodeSV[0] > 16
     ? [
         // region functional tests
-        'webpack5-vue2-yarn'
+        'webpack5-vue2-yarn',
         // endregion functional tests
         // region regression tests
+        'regression-issue1284-yarn'
         // endregion regression tests
       ]
     : []

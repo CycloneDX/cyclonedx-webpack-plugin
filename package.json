@@ -40,6 +40,10 @@
     {
       "name": "Jan Kowalleck",
       "email": "jan.kowalleck@gmail.com"
+    },
+    {
+      "name": "Tristan Bastian",
+      "url": "https://github.com/reey"
     }
   ],
   "type": "commonjs",

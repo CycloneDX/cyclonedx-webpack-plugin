@@ -1,0 +1,9 @@
+*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/package.json
+!/webpack.config.js
+!/src
+!/src/*
+!/yarn.lock
