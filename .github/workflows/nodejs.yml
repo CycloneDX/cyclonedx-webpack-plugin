@@ -101,13 +101,16 @@ jobs:
         run: |-
           npm i -g npm@^8
           npm --version
-      - name: enable yarn & pnpm
+      - name: enable pnpm
         if: "matrix.node-version != '14.0.0'"  # yarn14 has broken corepack
         run: |-
-          set -x
+          corepack enable pnpm
+          pnpm --version
+      - name: enable yarn
+        if: "matrix.node-version != '14.0.0'"  # yarn14 has broken corepack
+        run: |-
           corepack enable
           yarn --version
-          pnpm --version
       - name: Checkout
         # see https://github.com/actions/checkout
         uses: actions/checkout@v4
