@@ -46,6 +46,25 @@ const testSetups = [
     ]
   },
   {
+    dir: 'webpack5-vue2-yarn',
+    purpose: 'functional: webpack5 with vue2 in yarn setup',
+    packageManager: 'yarn',
+    results: [ // paths relative to `dir`
+      {
+        format: 'xml',
+        file: 'dist/.bom/bom.xml'
+      },
+      {
+        format: 'json',
+        file: 'dist/.bom/bom.json'
+      },
+      {
+        format: 'json',
+        file: 'dist/.well-known/sbom'
+      }
+    ]
+  },
+  {
     dir: 'webpack5-angular13',
     purpose: 'functional: webpack5 with angular13',
     results: [ // paths relative to `dir`
@@ -132,10 +151,10 @@ try {
 }
 
 describe('integration', () => {
-  testSetups.forEach(({ purpose, dir, results }) => {
+  testSetups.forEach(({ purpose, dir, packageManager, results }) => {
     describe(purpose, () => {
       const built = spawnSync(
-        'npm', ['run', 'build'], {
+        packageManager ?? 'npm', ['run', 'build'], {
           cwd: path.resolve(module.path, dir),
           stdio: ['ignore', 'pipe', 'pipe'],
           encoding: 'utf8',
