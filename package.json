@@ -34,12 +34,24 @@
   ],
   "author": {
     "name": "Jan Kowalleck",
-    "email": "jan.kowalleck@gmail.com"
+    "url": "https://github.com/jkowalleck"
   },
   "contributors": [
     {
       "name": "Jan Kowalleck",
-      "email": "jan.kowalleck@gmail.com"
+      "url": "https://github.com/jkowalleck"
+    },
+    {
+      "name": "Steve Springett",
+      "url": "https://github.com/stevespringett"
+    },
+    {
+      "name": "Peter Schuster",
+      "url": "https://github.com/peschuster"
+    },
+    {
+      "name": "Drew Thompson",
+      "url": "https://github.com/officerNordberg"
     },
     {
       "name": "Tristan Bastian",
