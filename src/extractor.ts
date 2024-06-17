@@ -17,11 +17,11 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import type * as CDX from '@cyclonedx/cyclonedx-library'
+import * as CDX from '@cyclonedx/cyclonedx-library'
 import * as normalizePackageJson from 'normalize-package-data'
 import { type Compilation, type Module } from 'webpack'
 
-import { getPackageDescription } from './_helpers'
+import { getPackageDescription, type PackageDescription } from './_helpers'
 
 type WebpackLogger = Compilation['logger']
 
@@ -52,37 +52,23 @@ export class Extractor {
       }
       const pkg = getPackageDescription(module.context)
       if (pkg === undefined) {
-        logger?.debug('no package for', module.context)
+        logger?.debug('skipped package for', module.context)
         continue
       }
       let component = pkgs[pkg.path]
       if (component === undefined) {
-        logger?.log('try to build new Component from PkgPath', pkg.path)
+        logger?.log('try to build new Component from PkgPath:', pkg.path)
         try {
-          const _packageJson = structuredClonePolyfill(pkg.packageJson)
-          normalizePackageJson(_packageJson as object /* add debug for warnings? */)
-          // region fix normalizations
-          if (typeof pkg.packageJson.version === 'string') {
-            // allow non-SemVer strings
-            _packageJson.version = pkg.packageJson.version.trim()
-          }
-          // endregion fix normalizations
-          pkg.packageJson = _packageJson
-        } catch (e) {
-          logger?.warn('normalizePackageJson from PkgPath', pkg.path, 'failed:', e)
+          component = this.makeComponent(pkg, logger)
+        } catch (err) {
+          logger?.debug('unexpected error:', err)
+          logger?.warn('skipped Component from PkgPath', pkg.path)
+          continue
         }
-        component = pkgs[pkg.path] = this.#componentBuilder.makeComponent(pkg.packageJson as object)
         logger?.debug('built', component, 'based on', pkg, 'for module', module)
+        pkgs[pkg.path] = component
       }
-      if (component !== undefined) {
-        components.set(module, component)
-      }
-    }
-
-    logger?.log('generating PURLs and BomRefs...')
-    for (const component of components.values()) {
-      component.purl = this.#purlFactory.makeFromComponent(component)
-      component.bomRef.value = component.purl?.toString()
+      components.set(module, component)
     }
 
     logger?.log('linking Component.dependencies...')
@@ -90,6 +76,39 @@ export class Extractor {
 
     logger?.log('done building Components from modules...')
     return components.values()
+  }
+
+  /**
+   * @throws {Error} when no component could be fetched
+   */
+  makeComponent (pkg: PackageDescription, logger?: WebpackLogger): CDX.Models.Component {
+    try {
+      const _packageJson = structuredClonePolyfill(pkg.packageJson)
+      normalizePackageJson(_packageJson as object /* add debug for warnings? */)
+      // region fix normalizations
+      if (typeof pkg.packageJson.version === 'string') {
+        // allow non-SemVer strings
+        _packageJson.version = pkg.packageJson.version.trim()
+      }
+      // endregion fix normalizations
+      pkg.packageJson = _packageJson
+    } catch (e) {
+      logger?.warn('normalizePackageJson from PkgPath', pkg.path, 'failed:', e)
+    }
+
+    const component = this.#componentBuilder.makeComponent(pkg.packageJson as object)
+    if (component === undefined) {
+      throw new Error(`failed building Component from PkgPath ${pkg.path}`)
+    }
+
+    component.licenses.forEach(l => {
+      l.acknowledgement = CDX.Enums.LicenseAcknowledgement.Declared
+    })
+
+    component.purl = this.#purlFactory.makeFromComponent(component)
+    component.bomRef.value = component.purl?.toString()
+
+    return component
   }
 
   #linkDependencies (modulesComponents: Map<Module, CDX.Models.Component>): void {
