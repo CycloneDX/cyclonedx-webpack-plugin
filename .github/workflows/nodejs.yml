@@ -89,9 +89,6 @@ jobs:
           - "14"
           - "14.0.0"  # lowest supported
     steps:
-      - name: Checkout
-        # see https://github.com/actions/checkout
-        uses: actions/checkout@v4
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
         uses: actions/setup-node@v4
@@ -104,11 +101,19 @@ jobs:
         run: |-
           npm i -g npm@^8
           npm --version
+      - name: enable pnpm
+        if: "matrix.node-version != '14.0.0'"  # yarn14 has broken corepack
+        run: |-
+          corepack enable pnpm
+          pnpm --version
       - name: enable yarn
         if: "matrix.node-version != '14.0.0'"  # yarn14 has broken corepack
         run: |-
-          corepack enable yarn
+          corepack enable
           yarn --version
+      - name: Checkout
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v4
       - name: install project
         shell: bash
         run: |

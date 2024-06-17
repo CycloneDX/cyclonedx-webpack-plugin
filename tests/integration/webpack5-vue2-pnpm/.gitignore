@@ -1,0 +1,10 @@
+*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/package.json
+!/pnpm-lock.yaml
+!/.npmrc
+!/webpack.config.js
+!/src
+!/src/*

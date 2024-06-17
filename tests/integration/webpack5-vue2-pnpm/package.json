@@ -1,0 +1,46 @@
+{
+  "name": "@cyclonedx-webpack-plugin-tests/example-webpack5-vue2-pnpm",
+  "description": "example setup witch Vue2 in WebPack5 with pnpm setup",
+  "private": true,
+  "homepage": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/webpack5-vue2#readme",
+  "copyright": "Copyright OWASP Foundation",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Jan Kowalleck",
+    "email": "jan.kowalleck@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Jan Kowalleck",
+      "email": "jan.kowalleck@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
+    "directory": "tests/integration/webpack5-vue2-yarn"
+  },
+  "bugs": {
+    "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues"
+  },
+  "main": "index.html",
+  "scripts": {
+    "prebuild:node": "node -r fs -e 'fs.rmSync(\"dist\",{recursive:true,force:true})'",
+    "build": "webpack build"
+  },
+  "dependencies": {
+    "vue": "^2.6.14"
+  },
+  "devDependencies": {
+    "@cyclonedx/webpack-plugin": "link:../../..",
+    "html-inline-script-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5",
+    "webpack-cli": "^5"
+  },
+  "engines": {
+    "node": ">=14",
+    "pnpm": ">=8"
+  },
+  "packageManager": "pnpm@8.3.1"
+}
