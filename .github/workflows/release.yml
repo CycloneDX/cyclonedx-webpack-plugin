@@ -69,6 +69,8 @@ jobs:
         id: bump
         run: |
           set -eux
+          git status
+          git diff
           COMMIT_SIG="Signed-off-by: $(git config user.name) <$(git config user.email)>"
           VERSION="$(npm version "$NPMV_NEWVERSION" --message "$NPMV_MESSAGE"$'\n\n'"$COMMIT_SIG" --preid "$NPMV_PREID")"
           echo "::debug::new version = $VERSION"
