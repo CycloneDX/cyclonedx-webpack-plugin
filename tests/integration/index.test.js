@@ -25,11 +25,33 @@ const { describe, expect, it } = require('@jest/globals')
 
 const { version: thisVersion } = require('../../package.json')
 
+const nodeSV = Object.freeze((process?.versions?.node ?? '').split('.').map(Number))
+
 const testSetups = [
   // region functional
   {
     dir: 'webpack5-vue2',
     purpose: 'functional: webpack5 with vue2',
+    results: [ // paths relative to `dir`
+      {
+        format: 'xml',
+        file: 'dist/.bom/bom.xml'
+      },
+      {
+        format: 'json',
+        file: 'dist/.bom/bom.json'
+      },
+      {
+        format: 'json',
+        file: 'dist/.well-known/sbom'
+      }
+    ]
+  },
+  {
+    skip: !(nodeSV[0] > 16),
+    dir: 'webpack5-vue2-yarn',
+    purpose: 'functional: webpack5 with vue2 in yarn setup',
+    packageManager: 'yarn',
     results: [ // paths relative to `dir`
       {
         format: 'xml',
@@ -132,29 +154,32 @@ try {
 }
 
 describe('integration', () => {
-  testSetups.forEach(({ purpose, dir, results }) => {
+  testSetups.forEach(({ skip: skipTests, purpose, dir, packageManager, results }) => {
+    skipTests = !!skipTests
     describe(purpose, () => {
-      const built = spawnSync(
-        'npm', ['run', 'build'], {
-          cwd: path.resolve(module.path, dir),
-          stdio: ['ignore', 'pipe', 'pipe'],
-          encoding: 'utf8',
-          shell: true,
-          env: {
-            PATH: process.env.PATH,
-            CI: '1'
+      if (!skipTests) {
+        const built = spawnSync(
+          packageManager ?? 'npm', ['run', 'build'], {
+            cwd: path.resolve(module.path, dir),
+            stdio: ['ignore', 'pipe', 'pipe'],
+            encoding: 'utf8',
+            shell: true,
+            env: {
+              PATH: process.env.PATH,
+              CI: '1'
+            }
           }
-        }
-      )
-      let skipTests = false
-      try {
-        expect(built.status).toBe(0)
-      } catch (err) {
-        if (/should not be used for production|Angular CLI requires a minimum|does not support Node\.js v/.test(built.stderr.toString())) {
-          skipTests = true
-        } else {
-          console.log(built, '\n')
-          throw err
+        )
+        try {
+          expect(built.status).toBe(0)
+        } catch (err) {
+          if (/should not be used for production|Angular CLI requires a minimum|does not support Node\.js v/.test(built.stderr.toString())) {
+            skipTests = true
+          } else {
+            console.log('purpose: ', purpose, '\n')
+            console.log('built', built, '\n')
+            throw err
+          }
         }
       }
 

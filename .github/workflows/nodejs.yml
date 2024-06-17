@@ -101,11 +101,14 @@ jobs:
           # cache-dependency-path: "**/package-lock.json"
       - # some integration tests require a certain npm version to be installable
         name: update npm
-        run: npm i -g npm@^8
-      - name: display version
         run: |-
-          node --version
+          npm i -g npm@^8
           npm --version
+      - name: enable yarn
+        if: "matrix.node-version != '14.0.0'"  # yarn14 has broken corepack
+        run: |-
+          corepack enable yarn
+          yarn --version
       - name: install project
         shell: bash
         run: |
