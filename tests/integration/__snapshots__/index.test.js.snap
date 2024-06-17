@@ -1298,6 +1298,41 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
     },
     {
       "type": "library",
+      "name": "runtime",
+      "group": "@babel",
+      "version": "7.24.0",
+      "bom-ref": "pkg:npm/%40babel/runtime@7.24.0?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime",
+      "author": "The Babel Team",
+      "description": "babel's modular runtime helpers",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/%40babel/runtime@7.24.0?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime",
+      "externalReferences": [
+        {
+          "url": "https://github.com/babel/babel/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git+https://github.com/babel/babel.git#packages/babel-runtime",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\" and \\"repository.directory\\""
+        },
+        {
+          "url": "https://babel.dev/docs/en/next/babel-runtime",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ]
+    },
+    {
+      "type": "library",
       "name": "css-loader",
       "version": "6.10.0",
       "bom-ref": "pkg:npm/css-loader@6.10.0?vcs_url=git%2Bhttps%3A//github.com/webpack-contrib/css-loader.git",
@@ -1438,12 +1473,14 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
       "ref": "pkg:npm/%40angular/common@17.3.0?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
       "dependsOn": [
         "pkg:npm/%40angular/core@17.3.0?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
+        "pkg:npm/%40babel/runtime@7.24.0?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime",
         "pkg:npm/rxjs@7.8.1?vcs_url=git%2Bhttps%3A//github.com/reactivex/rxjs.git"
       ]
     },
     {
       "ref": "pkg:npm/%40angular/core@17.3.0?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
       "dependsOn": [
+        "pkg:npm/%40babel/runtime@7.24.0?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime",
         "pkg:npm/rxjs@7.8.1?vcs_url=git%2Bhttps%3A//github.com/reactivex/rxjs.git"
       ]
     },
@@ -1462,6 +1499,9 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
         "pkg:npm/%40angular/platform-browser@17.3.0?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser",
         "pkg:npm/rxjs@7.8.1?vcs_url=git%2Bhttps%3A//github.com/reactivex/rxjs.git"
       ]
+    },
+    {
+      "ref": "pkg:npm/%40babel/runtime@7.24.0?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime"
     },
     {
       "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular17",
@@ -1728,6 +1768,41 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
     },
     {
       "type": "library",
+      "name": "runtime",
+      "group": "@babel",
+      "version": "7.24.0",
+      "bom-ref": "pkg:npm/%40babel/runtime@7.24.0?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime",
+      "author": "The Babel Team",
+      "description": "babel's modular runtime helpers",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/%40babel/runtime@7.24.0?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime",
+      "externalReferences": [
+        {
+          "url": "https://github.com/babel/babel/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git+https://github.com/babel/babel.git#packages/babel-runtime",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\" and \\"repository.directory\\""
+        },
+        {
+          "url": "https://babel.dev/docs/en/next/babel-runtime",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ]
+    },
+    {
+      "type": "library",
       "name": "css-loader",
       "version": "6.10.0",
       "bom-ref": "pkg:npm/css-loader@6.10.0?vcs_url=git%2Bhttps%3A//github.com/webpack-contrib/css-loader.git",
@@ -1868,12 +1943,14 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
       "ref": "pkg:npm/%40angular/common@17.3.0?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
       "dependsOn": [
         "pkg:npm/%40angular/core@17.3.0?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
+        "pkg:npm/%40babel/runtime@7.24.0?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime",
         "pkg:npm/rxjs@7.8.1?vcs_url=git%2Bhttps%3A//github.com/reactivex/rxjs.git"
       ]
     },
     {
       "ref": "pkg:npm/%40angular/core@17.3.0?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
       "dependsOn": [
+        "pkg:npm/%40babel/runtime@7.24.0?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime",
         "pkg:npm/rxjs@7.8.1?vcs_url=git%2Bhttps%3A//github.com/reactivex/rxjs.git"
       ]
     },
@@ -1892,6 +1969,9 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
         "pkg:npm/%40angular/platform-browser@17.3.0?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser",
         "pkg:npm/rxjs@7.8.1?vcs_url=git%2Bhttps%3A//github.com/reactivex/rxjs.git"
       ]
+    },
+    {
+      "ref": "pkg:npm/%40babel/runtime@7.24.0?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime"
     },
     {
       "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular17",
@@ -2107,6 +2187,33 @@ exports[`integration functional: webpack5 with angular17 generated xml file: dis
         </reference>
       </externalReferences>
     </component>
+    <component type="library" bom-ref="pkg:npm/%40babel/runtime@7.24.0?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime">
+      <author>The Babel Team</author>
+      <group>@babel</group>
+      <name>runtime</name>
+      <version>7.24.0</version>
+      <description>babel's modular runtime helpers</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/%40babel/runtime@7.24.0?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/babel/babel/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/babel/babel.git#packages/babel-runtime</url>
+          <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://babel.dev/docs/en/next/babel-runtime</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
     <component type="library" bom-ref="pkg:npm/css-loader@6.10.0?vcs_url=git%2Bhttps%3A//github.com/webpack-contrib/css-loader.git">
       <author>Tobias Koppers @sokra</author>
       <name>css-loader</name>
@@ -2215,9 +2322,11 @@ exports[`integration functional: webpack5 with angular17 generated xml file: dis
   <dependencies>
     <dependency ref="pkg:npm/%40angular/common@17.3.0?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common">
       <dependency ref="pkg:npm/%40angular/core@17.3.0?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core"/>
+      <dependency ref="pkg:npm/%40babel/runtime@7.24.0?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime"/>
       <dependency ref="pkg:npm/rxjs@7.8.1?vcs_url=git%2Bhttps%3A//github.com/reactivex/rxjs.git"/>
     </dependency>
     <dependency ref="pkg:npm/%40angular/core@17.3.0?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core">
+      <dependency ref="pkg:npm/%40babel/runtime@7.24.0?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime"/>
       <dependency ref="pkg:npm/rxjs@7.8.1?vcs_url=git%2Bhttps%3A//github.com/reactivex/rxjs.git"/>
     </dependency>
     <dependency ref="pkg:npm/%40angular/platform-browser@17.3.0?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser">
@@ -2230,6 +2339,7 @@ exports[`integration functional: webpack5 with angular17 generated xml file: dis
       <dependency ref="pkg:npm/%40angular/platform-browser@17.3.0?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser"/>
       <dependency ref="pkg:npm/rxjs@7.8.1?vcs_url=git%2Bhttps%3A//github.com/reactivex/rxjs.git"/>
     </dependency>
+    <dependency ref="pkg:npm/%40babel/runtime@7.24.0?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime"/>
     <dependency ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular17">
       <dependency ref="pkg:npm/%40angular/core@17.3.0?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core"/>
       <dependency ref="pkg:npm/%40angular/platform-browser@17.3.0?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser"/>
@@ -2341,6 +2451,41 @@ exports[`integration functional: webpack5 with react18 generated json file: dist
     }
   },
   "components": [
+    {
+      "type": "library",
+      "name": "runtime",
+      "group": "@babel",
+      "version": "7.18.3",
+      "bom-ref": "pkg:npm/%40babel/runtime@7.18.3?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime",
+      "author": "The Babel Team",
+      "description": "babel's modular runtime helpers",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/%40babel/runtime@7.18.3?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime",
+      "externalReferences": [
+        {
+          "url": "https://github.com/babel/babel/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git+https://github.com/babel/babel.git#packages/babel-runtime",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\" and \\"repository.directory\\""
+        },
+        {
+          "url": "https://babel.dev/docs/en/next/babel-runtime",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ]
+    },
     {
       "type": "library",
       "name": "css-loader",
@@ -2511,8 +2656,12 @@ exports[`integration functional: webpack5 with react18 generated json file: dist
   ],
   "dependencies": [
     {
+      "ref": "pkg:npm/%40babel/runtime@7.18.3?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime"
+    },
+    {
       "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18",
       "dependsOn": [
+        "pkg:npm/%40babel/runtime@7.18.3?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime",
         "pkg:npm/css-loader@6.7.1?vcs_url=git%2Bhttps%3A//github.com/webpack-contrib/css-loader.git",
         "pkg:npm/react-dom@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react-dom",
         "pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react"
@@ -2638,6 +2787,41 @@ exports[`integration functional: webpack5 with react18 generated json file: dist
   "components": [
     {
       "type": "library",
+      "name": "runtime",
+      "group": "@babel",
+      "version": "7.18.3",
+      "bom-ref": "pkg:npm/%40babel/runtime@7.18.3?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime",
+      "author": "The Babel Team",
+      "description": "babel's modular runtime helpers",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/%40babel/runtime@7.18.3?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime",
+      "externalReferences": [
+        {
+          "url": "https://github.com/babel/babel/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git+https://github.com/babel/babel.git#packages/babel-runtime",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\" and \\"repository.directory\\""
+        },
+        {
+          "url": "https://babel.dev/docs/en/next/babel-runtime",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ]
+    },
+    {
+      "type": "library",
       "name": "css-loader",
       "version": "6.7.1",
       "bom-ref": "pkg:npm/css-loader@6.7.1?vcs_url=git%2Bhttps%3A//github.com/webpack-contrib/css-loader.git",
@@ -2806,8 +2990,12 @@ exports[`integration functional: webpack5 with react18 generated json file: dist
   ],
   "dependencies": [
     {
+      "ref": "pkg:npm/%40babel/runtime@7.18.3?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime"
+    },
+    {
       "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18",
       "dependsOn": [
+        "pkg:npm/%40babel/runtime@7.18.3?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime",
         "pkg:npm/css-loader@6.7.1?vcs_url=git%2Bhttps%3A//github.com/webpack-contrib/css-loader.git",
         "pkg:npm/react-dom@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react-dom",
         "pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react"
@@ -2914,6 +3102,33 @@ exports[`integration functional: webpack5 with react18 generated xml file: dist/
     </component>
   </metadata>
   <components>
+    <component type="library" bom-ref="pkg:npm/%40babel/runtime@7.18.3?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime">
+      <author>The Babel Team</author>
+      <group>@babel</group>
+      <name>runtime</name>
+      <version>7.18.3</version>
+      <description>babel's modular runtime helpers</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/%40babel/runtime@7.18.3?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/babel/babel/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/babel/babel.git#packages/babel-runtime</url>
+          <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://babel.dev/docs/en/next/babel-runtime</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
     <component type="library" bom-ref="pkg:npm/css-loader@6.7.1?vcs_url=git%2Bhttps%3A//github.com/webpack-contrib/css-loader.git">
       <author>Tobias Koppers @sokra</author>
       <name>css-loader</name>
@@ -3043,7 +3258,9 @@ exports[`integration functional: webpack5 with react18 generated xml file: dist/
     </component>
   </components>
   <dependencies>
+    <dependency ref="pkg:npm/%40babel/runtime@7.18.3?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime"/>
     <dependency ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18">
+      <dependency ref="pkg:npm/%40babel/runtime@7.18.3?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime"/>
       <dependency ref="pkg:npm/css-loader@6.7.1?vcs_url=git%2Bhttps%3A//github.com/webpack-contrib/css-loader.git"/>
       <dependency ref="pkg:npm/react-dom@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react-dom"/>
       <dependency ref="pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react"/>
@@ -3982,90 +4199,6 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
     },
     {
       "type": "library",
-      "name": "client/cache",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client%2Fcache",
-      "purl": "pkg:npm/%40apollo/client%2Fcache"
-    },
-    {
-      "type": "library",
-      "name": "client/core",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client%2Fcore",
-      "purl": "pkg:npm/%40apollo/client%2Fcore"
-    },
-    {
-      "type": "library",
-      "name": "client/errors",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client%2Ferrors",
-      "purl": "pkg:npm/%40apollo/client%2Ferrors"
-    },
-    {
-      "type": "library",
-      "name": "client/link/core",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client%2Flink%2Fcore",
-      "purl": "pkg:npm/%40apollo/client%2Flink%2Fcore"
-    },
-    {
-      "type": "library",
-      "name": "client/link/http",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client%2Flink%2Fhttp",
-      "purl": "pkg:npm/%40apollo/client%2Flink%2Fhttp"
-    },
-    {
-      "type": "library",
-      "name": "client/link/utils",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client%2Flink%2Futils",
-      "purl": "pkg:npm/%40apollo/client%2Flink%2Futils"
-    },
-    {
-      "type": "library",
-      "name": "client/react",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client%2Freact",
-      "purl": "pkg:npm/%40apollo/client%2Freact"
-    },
-    {
-      "type": "library",
-      "name": "client/react/context",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client%2Freact%2Fcontext",
-      "purl": "pkg:npm/%40apollo/client%2Freact%2Fcontext"
-    },
-    {
-      "type": "library",
-      "name": "client/react/hooks",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client%2Freact%2Fhooks",
-      "purl": "pkg:npm/%40apollo/client%2Freact%2Fhooks"
-    },
-    {
-      "type": "library",
-      "name": "client/react/parser",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client%2Freact%2Fparser",
-      "purl": "pkg:npm/%40apollo/client%2Freact%2Fparser"
-    },
-    {
-      "type": "library",
-      "name": "client/utilities",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client%2Futilities",
-      "purl": "pkg:npm/%40apollo/client%2Futilities"
-    },
-    {
-      "type": "library",
-      "name": "client/utilities/globals",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
-      "purl": "pkg:npm/%40apollo/client%2Futilities%2Fglobals"
-    },
-    {
-      "type": "library",
       "name": "context",
       "group": "@wry",
       "version": "0.7.0",
@@ -4363,12 +4496,6 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
     },
     {
       "type": "library",
-      "name": "ts-invariant/process",
-      "bom-ref": "pkg:npm/ts-invariant%2Fprocess",
-      "purl": "pkg:npm/ts-invariant%2Fprocess"
-    },
-    {
-      "type": "library",
       "name": "tslib",
       "version": "2.5.0",
       "bom-ref": "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
@@ -4437,134 +4564,17 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
     {
       "ref": "pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git",
       "dependsOn": [
-        "pkg:npm/%40apollo/client%2Fcore",
-        "pkg:npm/%40apollo/client%2Freact"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client%2Fcache",
-      "dependsOn": [
-        "pkg:npm/%40apollo/client%2Futilities",
-        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
         "pkg:npm/%40wry/context@0.7.0?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
         "pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
         "pkg:npm/%40wry/trie@0.3.2?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
-        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
-        "pkg:npm/optimism@0.16.2?vcs_url=git%2Bhttps%3A//github.com/benjamn/optimism.git",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client%2Fcore",
-      "dependsOn": [
-        "pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git",
-        "pkg:npm/%40apollo/client%2Fcache",
-        "pkg:npm/%40apollo/client%2Ferrors",
-        "pkg:npm/%40apollo/client%2Flink%2Fcore",
-        "pkg:npm/%40apollo/client%2Flink%2Fhttp",
-        "pkg:npm/%40apollo/client%2Flink%2Futils",
-        "pkg:npm/%40apollo/client%2Futilities",
-        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
-        "pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
         "pkg:npm/graphql-tag@2.12.6?vcs_url=git%2Bhttps%3A//github.com/apollographql/graphql-tag.git",
         "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
-        "pkg:npm/ts-invariant@0.10.3?vcs_url=git%2Bhttps%3A//github.com/apollographql/invariant-packages.git",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
-        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client%2Ferrors",
-      "dependsOn": [
-        "pkg:npm/%40apollo/client%2Futilities",
-        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client%2Flink%2Fcore",
-      "dependsOn": [
-        "pkg:npm/%40apollo/client%2Flink%2Futils",
-        "pkg:npm/%40apollo/client%2Futilities",
-        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
-        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client%2Flink%2Fhttp",
-      "dependsOn": [
-        "pkg:npm/%40apollo/client%2Flink%2Fcore",
-        "pkg:npm/%40apollo/client%2Flink%2Futils",
-        "pkg:npm/%40apollo/client%2Futilities",
-        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
-        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
-        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client%2Flink%2Futils",
-      "dependsOn": [
-        "pkg:npm/%40apollo/client%2Futilities",
-        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
-        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client%2Freact",
-      "dependsOn": [
-        "pkg:npm/%40apollo/client%2Freact%2Fcontext",
-        "pkg:npm/%40apollo/client%2Freact%2Fhooks",
-        "pkg:npm/%40apollo/client%2Freact%2Fparser",
-        "pkg:npm/%40apollo/client%2Futilities%2Fglobals"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client%2Freact%2Fcontext",
-      "dependsOn": [
-        "pkg:npm/%40apollo/client%2Futilities",
-        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
-        "pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client%2Freact%2Fhooks",
-      "dependsOn": [
-        "pkg:npm/%40apollo/client%2Fcore",
-        "pkg:npm/%40apollo/client%2Ferrors",
-        "pkg:npm/%40apollo/client%2Freact%2Fcontext",
-        "pkg:npm/%40apollo/client%2Freact%2Fparser",
-        "pkg:npm/%40apollo/client%2Futilities",
-        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
-        "pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
+        "pkg:npm/optimism@0.16.2?vcs_url=git%2Bhttps%3A//github.com/benjamn/optimism.git",
         "pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client%2Freact%2Fparser",
-      "dependsOn": [
-        "pkg:npm/%40apollo/client%2Futilities%2Fglobals"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client%2Futilities",
-      "dependsOn": [
-        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
-        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
         "pkg:npm/symbol-observable@4.0.0?vcs_url=git%2Bhttps%3A//github.com/blesh/symbol-observable.git",
+        "pkg:npm/ts-invariant@0.10.3?vcs_url=git%2Bhttps%3A//github.com/apollographql/invariant-packages.git",
         "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
         "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
-      "dependsOn": [
-        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
-        "pkg:npm/ts-invariant@0.10.3?vcs_url=git%2Bhttps%3A//github.com/apollographql/invariant-packages.git",
-        "pkg:npm/ts-invariant%2Fprocess"
       ]
     },
     {
@@ -4610,9 +4620,6 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
       "dependsOn": [
         "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
       ]
-    },
-    {
-      "ref": "pkg:npm/ts-invariant%2Fprocess"
     },
     {
       "ref": "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
@@ -4748,90 +4755,6 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
     },
     {
       "type": "library",
-      "name": "client/cache",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client%2Fcache",
-      "purl": "pkg:npm/%40apollo/client%2Fcache"
-    },
-    {
-      "type": "library",
-      "name": "client/core",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client%2Fcore",
-      "purl": "pkg:npm/%40apollo/client%2Fcore"
-    },
-    {
-      "type": "library",
-      "name": "client/errors",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client%2Ferrors",
-      "purl": "pkg:npm/%40apollo/client%2Ferrors"
-    },
-    {
-      "type": "library",
-      "name": "client/link/core",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client%2Flink%2Fcore",
-      "purl": "pkg:npm/%40apollo/client%2Flink%2Fcore"
-    },
-    {
-      "type": "library",
-      "name": "client/link/http",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client%2Flink%2Fhttp",
-      "purl": "pkg:npm/%40apollo/client%2Flink%2Fhttp"
-    },
-    {
-      "type": "library",
-      "name": "client/link/utils",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client%2Flink%2Futils",
-      "purl": "pkg:npm/%40apollo/client%2Flink%2Futils"
-    },
-    {
-      "type": "library",
-      "name": "client/react",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client%2Freact",
-      "purl": "pkg:npm/%40apollo/client%2Freact"
-    },
-    {
-      "type": "library",
-      "name": "client/react/context",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client%2Freact%2Fcontext",
-      "purl": "pkg:npm/%40apollo/client%2Freact%2Fcontext"
-    },
-    {
-      "type": "library",
-      "name": "client/react/hooks",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client%2Freact%2Fhooks",
-      "purl": "pkg:npm/%40apollo/client%2Freact%2Fhooks"
-    },
-    {
-      "type": "library",
-      "name": "client/react/parser",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client%2Freact%2Fparser",
-      "purl": "pkg:npm/%40apollo/client%2Freact%2Fparser"
-    },
-    {
-      "type": "library",
-      "name": "client/utilities",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client%2Futilities",
-      "purl": "pkg:npm/%40apollo/client%2Futilities"
-    },
-    {
-      "type": "library",
-      "name": "client/utilities/globals",
-      "group": "@apollo",
-      "bom-ref": "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
-      "purl": "pkg:npm/%40apollo/client%2Futilities%2Fglobals"
-    },
-    {
-      "type": "library",
       "name": "context",
       "group": "@wry",
       "version": "0.7.0",
@@ -5129,12 +5052,6 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
     },
     {
       "type": "library",
-      "name": "ts-invariant/process",
-      "bom-ref": "pkg:npm/ts-invariant%2Fprocess",
-      "purl": "pkg:npm/ts-invariant%2Fprocess"
-    },
-    {
-      "type": "library",
       "name": "tslib",
       "version": "2.5.0",
       "bom-ref": "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
@@ -5203,134 +5120,17 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
     {
       "ref": "pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git",
       "dependsOn": [
-        "pkg:npm/%40apollo/client%2Fcore",
-        "pkg:npm/%40apollo/client%2Freact"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client%2Fcache",
-      "dependsOn": [
-        "pkg:npm/%40apollo/client%2Futilities",
-        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
         "pkg:npm/%40wry/context@0.7.0?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
         "pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
         "pkg:npm/%40wry/trie@0.3.2?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
-        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
-        "pkg:npm/optimism@0.16.2?vcs_url=git%2Bhttps%3A//github.com/benjamn/optimism.git",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client%2Fcore",
-      "dependsOn": [
-        "pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git",
-        "pkg:npm/%40apollo/client%2Fcache",
-        "pkg:npm/%40apollo/client%2Ferrors",
-        "pkg:npm/%40apollo/client%2Flink%2Fcore",
-        "pkg:npm/%40apollo/client%2Flink%2Fhttp",
-        "pkg:npm/%40apollo/client%2Flink%2Futils",
-        "pkg:npm/%40apollo/client%2Futilities",
-        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
-        "pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
         "pkg:npm/graphql-tag@2.12.6?vcs_url=git%2Bhttps%3A//github.com/apollographql/graphql-tag.git",
         "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
-        "pkg:npm/ts-invariant@0.10.3?vcs_url=git%2Bhttps%3A//github.com/apollographql/invariant-packages.git",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
-        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client%2Ferrors",
-      "dependsOn": [
-        "pkg:npm/%40apollo/client%2Futilities",
-        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client%2Flink%2Fcore",
-      "dependsOn": [
-        "pkg:npm/%40apollo/client%2Flink%2Futils",
-        "pkg:npm/%40apollo/client%2Futilities",
-        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
-        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client%2Flink%2Fhttp",
-      "dependsOn": [
-        "pkg:npm/%40apollo/client%2Flink%2Fcore",
-        "pkg:npm/%40apollo/client%2Flink%2Futils",
-        "pkg:npm/%40apollo/client%2Futilities",
-        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
-        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
-        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client%2Flink%2Futils",
-      "dependsOn": [
-        "pkg:npm/%40apollo/client%2Futilities",
-        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
-        "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client%2Freact",
-      "dependsOn": [
-        "pkg:npm/%40apollo/client%2Freact%2Fcontext",
-        "pkg:npm/%40apollo/client%2Freact%2Fhooks",
-        "pkg:npm/%40apollo/client%2Freact%2Fparser",
-        "pkg:npm/%40apollo/client%2Futilities%2Fglobals"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client%2Freact%2Fcontext",
-      "dependsOn": [
-        "pkg:npm/%40apollo/client%2Futilities",
-        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
-        "pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client%2Freact%2Fhooks",
-      "dependsOn": [
-        "pkg:npm/%40apollo/client%2Fcore",
-        "pkg:npm/%40apollo/client%2Ferrors",
-        "pkg:npm/%40apollo/client%2Freact%2Fcontext",
-        "pkg:npm/%40apollo/client%2Freact%2Fparser",
-        "pkg:npm/%40apollo/client%2Futilities",
-        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
-        "pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git",
+        "pkg:npm/optimism@0.16.2?vcs_url=git%2Bhttps%3A//github.com/benjamn/optimism.git",
         "pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react",
-        "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client%2Freact%2Fparser",
-      "dependsOn": [
-        "pkg:npm/%40apollo/client%2Futilities%2Fglobals"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client%2Futilities",
-      "dependsOn": [
-        "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
-        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
         "pkg:npm/symbol-observable@4.0.0?vcs_url=git%2Bhttps%3A//github.com/blesh/symbol-observable.git",
+        "pkg:npm/ts-invariant@0.10.3?vcs_url=git%2Bhttps%3A//github.com/apollographql/invariant-packages.git",
         "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git",
         "pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"
-      ]
-    },
-    {
-      "ref": "pkg:npm/%40apollo/client%2Futilities%2Fglobals",
-      "dependsOn": [
-        "pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git",
-        "pkg:npm/ts-invariant@0.10.3?vcs_url=git%2Bhttps%3A//github.com/apollographql/invariant-packages.git",
-        "pkg:npm/ts-invariant%2Fprocess"
       ]
     },
     {
@@ -5376,9 +5176,6 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
       "dependsOn": [
         "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
       ]
-    },
-    {
-      "ref": "pkg:npm/ts-invariant%2Fprocess"
     },
     {
       "ref": "pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"
@@ -5488,66 +5285,6 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
           <comment>as detected from PackageJson property "homepage"</comment>
         </reference>
       </externalReferences>
-    </component>
-    <component type="library" bom-ref="pkg:npm/%40apollo/client%2Fcache">
-      <group>@apollo</group>
-      <name>client/cache</name>
-      <purl>pkg:npm/%40apollo/client%2Fcache</purl>
-    </component>
-    <component type="library" bom-ref="pkg:npm/%40apollo/client%2Fcore">
-      <group>@apollo</group>
-      <name>client/core</name>
-      <purl>pkg:npm/%40apollo/client%2Fcore</purl>
-    </component>
-    <component type="library" bom-ref="pkg:npm/%40apollo/client%2Ferrors">
-      <group>@apollo</group>
-      <name>client/errors</name>
-      <purl>pkg:npm/%40apollo/client%2Ferrors</purl>
-    </component>
-    <component type="library" bom-ref="pkg:npm/%40apollo/client%2Flink%2Fcore">
-      <group>@apollo</group>
-      <name>client/link/core</name>
-      <purl>pkg:npm/%40apollo/client%2Flink%2Fcore</purl>
-    </component>
-    <component type="library" bom-ref="pkg:npm/%40apollo/client%2Flink%2Fhttp">
-      <group>@apollo</group>
-      <name>client/link/http</name>
-      <purl>pkg:npm/%40apollo/client%2Flink%2Fhttp</purl>
-    </component>
-    <component type="library" bom-ref="pkg:npm/%40apollo/client%2Flink%2Futils">
-      <group>@apollo</group>
-      <name>client/link/utils</name>
-      <purl>pkg:npm/%40apollo/client%2Flink%2Futils</purl>
-    </component>
-    <component type="library" bom-ref="pkg:npm/%40apollo/client%2Freact">
-      <group>@apollo</group>
-      <name>client/react</name>
-      <purl>pkg:npm/%40apollo/client%2Freact</purl>
-    </component>
-    <component type="library" bom-ref="pkg:npm/%40apollo/client%2Freact%2Fcontext">
-      <group>@apollo</group>
-      <name>client/react/context</name>
-      <purl>pkg:npm/%40apollo/client%2Freact%2Fcontext</purl>
-    </component>
-    <component type="library" bom-ref="pkg:npm/%40apollo/client%2Freact%2Fhooks">
-      <group>@apollo</group>
-      <name>client/react/hooks</name>
-      <purl>pkg:npm/%40apollo/client%2Freact%2Fhooks</purl>
-    </component>
-    <component type="library" bom-ref="pkg:npm/%40apollo/client%2Freact%2Fparser">
-      <group>@apollo</group>
-      <name>client/react/parser</name>
-      <purl>pkg:npm/%40apollo/client%2Freact%2Fparser</purl>
-    </component>
-    <component type="library" bom-ref="pkg:npm/%40apollo/client%2Futilities">
-      <group>@apollo</group>
-      <name>client/utilities</name>
-      <purl>pkg:npm/%40apollo/client%2Futilities</purl>
-    </component>
-    <component type="library" bom-ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals">
-      <group>@apollo</group>
-      <name>client/utilities/globals</name>
-      <purl>pkg:npm/%40apollo/client%2Futilities%2Fglobals</purl>
     </component>
     <component type="library" bom-ref="pkg:npm/%40wry/context@0.7.0?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git">
       <author>Ben Newman</author>
@@ -5783,10 +5520,6 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="pkg:npm/ts-invariant%2Fprocess">
-      <name>ts-invariant/process</name>
-      <purl>pkg:npm/ts-invariant%2Fprocess</purl>
-    </component>
     <component type="library" bom-ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git">
       <author>Microsoft Corp.</author>
       <name>tslib</name>
@@ -5841,98 +5574,17 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
   </components>
   <dependencies>
     <dependency ref="pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git">
-      <dependency ref="pkg:npm/%40apollo/client%2Fcore"/>
-      <dependency ref="pkg:npm/%40apollo/client%2Freact"/>
-    </dependency>
-    <dependency ref="pkg:npm/%40apollo/client%2Fcache">
-      <dependency ref="pkg:npm/%40apollo/client%2Futilities"/>
-      <dependency ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals"/>
       <dependency ref="pkg:npm/%40wry/context@0.7.0?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git"/>
       <dependency ref="pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git"/>
       <dependency ref="pkg:npm/%40wry/trie@0.3.2?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git"/>
-      <dependency ref="pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git"/>
-      <dependency ref="pkg:npm/optimism@0.16.2?vcs_url=git%2Bhttps%3A//github.com/benjamn/optimism.git"/>
-      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
-    </dependency>
-    <dependency ref="pkg:npm/%40apollo/client%2Fcore">
-      <dependency ref="pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git"/>
-      <dependency ref="pkg:npm/%40apollo/client%2Fcache"/>
-      <dependency ref="pkg:npm/%40apollo/client%2Ferrors"/>
-      <dependency ref="pkg:npm/%40apollo/client%2Flink%2Fcore"/>
-      <dependency ref="pkg:npm/%40apollo/client%2Flink%2Fhttp"/>
-      <dependency ref="pkg:npm/%40apollo/client%2Flink%2Futils"/>
-      <dependency ref="pkg:npm/%40apollo/client%2Futilities"/>
-      <dependency ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals"/>
-      <dependency ref="pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git"/>
       <dependency ref="pkg:npm/graphql-tag@2.12.6?vcs_url=git%2Bhttps%3A//github.com/apollographql/graphql-tag.git"/>
       <dependency ref="pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git"/>
-      <dependency ref="pkg:npm/ts-invariant@0.10.3?vcs_url=git%2Bhttps%3A//github.com/apollographql/invariant-packages.git"/>
-      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
-      <dependency ref="pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"/>
-    </dependency>
-    <dependency ref="pkg:npm/%40apollo/client%2Ferrors">
-      <dependency ref="pkg:npm/%40apollo/client%2Futilities"/>
-      <dependency ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals"/>
-      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
-    </dependency>
-    <dependency ref="pkg:npm/%40apollo/client%2Flink%2Fcore">
-      <dependency ref="pkg:npm/%40apollo/client%2Flink%2Futils"/>
-      <dependency ref="pkg:npm/%40apollo/client%2Futilities"/>
-      <dependency ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals"/>
-      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
-      <dependency ref="pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"/>
-    </dependency>
-    <dependency ref="pkg:npm/%40apollo/client%2Flink%2Fhttp">
-      <dependency ref="pkg:npm/%40apollo/client%2Flink%2Fcore"/>
-      <dependency ref="pkg:npm/%40apollo/client%2Flink%2Futils"/>
-      <dependency ref="pkg:npm/%40apollo/client%2Futilities"/>
-      <dependency ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals"/>
-      <dependency ref="pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git"/>
-      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
-      <dependency ref="pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"/>
-    </dependency>
-    <dependency ref="pkg:npm/%40apollo/client%2Flink%2Futils">
-      <dependency ref="pkg:npm/%40apollo/client%2Futilities"/>
-      <dependency ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals"/>
-      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
-      <dependency ref="pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"/>
-    </dependency>
-    <dependency ref="pkg:npm/%40apollo/client%2Freact">
-      <dependency ref="pkg:npm/%40apollo/client%2Freact%2Fcontext"/>
-      <dependency ref="pkg:npm/%40apollo/client%2Freact%2Fhooks"/>
-      <dependency ref="pkg:npm/%40apollo/client%2Freact%2Fparser"/>
-      <dependency ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals"/>
-    </dependency>
-    <dependency ref="pkg:npm/%40apollo/client%2Freact%2Fcontext">
-      <dependency ref="pkg:npm/%40apollo/client%2Futilities"/>
-      <dependency ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals"/>
+      <dependency ref="pkg:npm/optimism@0.16.2?vcs_url=git%2Bhttps%3A//github.com/benjamn/optimism.git"/>
       <dependency ref="pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react"/>
-    </dependency>
-    <dependency ref="pkg:npm/%40apollo/client%2Freact%2Fhooks">
-      <dependency ref="pkg:npm/%40apollo/client%2Fcore"/>
-      <dependency ref="pkg:npm/%40apollo/client%2Ferrors"/>
-      <dependency ref="pkg:npm/%40apollo/client%2Freact%2Fcontext"/>
-      <dependency ref="pkg:npm/%40apollo/client%2Freact%2Fparser"/>
-      <dependency ref="pkg:npm/%40apollo/client%2Futilities"/>
-      <dependency ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals"/>
-      <dependency ref="pkg:npm/%40wry/equality@0.5.3?vcs_url=git%2Bhttps%3A//github.com/benjamn/wryware.git"/>
-      <dependency ref="pkg:npm/react@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react"/>
-      <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
-    </dependency>
-    <dependency ref="pkg:npm/%40apollo/client%2Freact%2Fparser">
-      <dependency ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals"/>
-    </dependency>
-    <dependency ref="pkg:npm/%40apollo/client%2Futilities">
-      <dependency ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals"/>
-      <dependency ref="pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git"/>
       <dependency ref="pkg:npm/symbol-observable@4.0.0?vcs_url=git%2Bhttps%3A//github.com/blesh/symbol-observable.git"/>
+      <dependency ref="pkg:npm/ts-invariant@0.10.3?vcs_url=git%2Bhttps%3A//github.com/apollographql/invariant-packages.git"/>
       <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
       <dependency ref="pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"/>
-    </dependency>
-    <dependency ref="pkg:npm/%40apollo/client%2Futilities%2Fglobals">
-      <dependency ref="pkg:npm/graphql@16.6.0?vcs_url=git%2Bhttps%3A//github.com/graphql/graphql-js.git"/>
-      <dependency ref="pkg:npm/ts-invariant@0.10.3?vcs_url=git%2Bhttps%3A//github.com/apollographql/invariant-packages.git"/>
-      <dependency ref="pkg:npm/ts-invariant%2Fprocess"/>
     </dependency>
     <dependency ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue745?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue745">
       <dependency ref="pkg:npm/%40apollo/client@3.7.10?vcs_url=git%2Bhttps%3A//github.com/apollographql/apollo-client.git"/>
@@ -5954,7 +5606,6 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
     <dependency ref="pkg:npm/ts-invariant@0.10.3?vcs_url=git%2Bhttps%3A//github.com/apollographql/invariant-packages.git">
       <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
     </dependency>
-    <dependency ref="pkg:npm/ts-invariant%2Fprocess"/>
     <dependency ref="pkg:npm/tslib@2.5.0?vcs_url=git%2Bhttps%3A//github.com/Microsoft/tslib.git"/>
     <dependency ref="pkg:npm/zen-observable-ts@1.2.5?vcs_url=git%2Bhttps%3A//github.com/apollographql/zen-observable-ts.git"/>
   </dependencies>
@@ -6059,24 +5710,6 @@ exports[`integration regression: verify enhanced package.json finder generated j
     },
     {
       "type": "library",
-      "name": "libphonenumber-js/build",
-      "bom-ref": "pkg:npm/libphonenumber-js%2Fbuild",
-      "purl": "pkg:npm/libphonenumber-js%2Fbuild"
-    },
-    {
-      "type": "library",
-      "name": "libphonenumber-js/core",
-      "bom-ref": "pkg:npm/libphonenumber-js%2Fcore",
-      "purl": "pkg:npm/libphonenumber-js%2Fcore"
-    },
-    {
-      "type": "library",
-      "name": "libphonenumber-js/max",
-      "bom-ref": "pkg:npm/libphonenumber-js%2Fmax",
-      "purl": "pkg:npm/libphonenumber-js%2Fmax"
-    },
-    {
-      "type": "library",
       "name": "luxon",
       "version": "3.4.4",
       "bom-ref": "pkg:npm/luxon@3.4.4?vcs_url=git%2Bhttps%3A//github.com/moment/luxon.git",
@@ -6113,28 +5746,12 @@ exports[`integration regression: verify enhanced package.json finder generated j
     {
       "ref": "pkg:npm/%40cyclonedx-weboack-plugin-tests/regression-issue1284",
       "dependsOn": [
-        "pkg:npm/libphonenumber-js%2Fmax",
+        "pkg:npm/libphonenumber-js@1.11.3?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git",
         "pkg:npm/luxon@3.4.4?vcs_url=git%2Bhttps%3A//github.com/moment/luxon.git"
       ]
     },
     {
       "ref": "pkg:npm/libphonenumber-js@1.11.3?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git"
-    },
-    {
-      "ref": "pkg:npm/libphonenumber-js%2Fbuild"
-    },
-    {
-      "ref": "pkg:npm/libphonenumber-js%2Fcore",
-      "dependsOn": [
-        "pkg:npm/libphonenumber-js%2Fbuild"
-      ]
-    },
-    {
-      "ref": "pkg:npm/libphonenumber-js%2Fmax",
-      "dependsOn": [
-        "pkg:npm/libphonenumber-js@1.11.3?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git",
-        "pkg:npm/libphonenumber-js%2Fcore"
-      ]
     },
     {
       "ref": "pkg:npm/luxon@3.4.4?vcs_url=git%2Bhttps%3A//github.com/moment/luxon.git"
@@ -6241,24 +5858,6 @@ exports[`integration regression: verify enhanced package.json finder generated j
     },
     {
       "type": "library",
-      "name": "libphonenumber-js/build",
-      "bom-ref": "pkg:npm/libphonenumber-js%2Fbuild",
-      "purl": "pkg:npm/libphonenumber-js%2Fbuild"
-    },
-    {
-      "type": "library",
-      "name": "libphonenumber-js/core",
-      "bom-ref": "pkg:npm/libphonenumber-js%2Fcore",
-      "purl": "pkg:npm/libphonenumber-js%2Fcore"
-    },
-    {
-      "type": "library",
-      "name": "libphonenumber-js/max",
-      "bom-ref": "pkg:npm/libphonenumber-js%2Fmax",
-      "purl": "pkg:npm/libphonenumber-js%2Fmax"
-    },
-    {
-      "type": "library",
       "name": "luxon",
       "version": "3.4.4",
       "bom-ref": "pkg:npm/luxon@3.4.4?vcs_url=git%2Bhttps%3A//github.com/moment/luxon.git",
@@ -6295,28 +5894,12 @@ exports[`integration regression: verify enhanced package.json finder generated j
     {
       "ref": "pkg:npm/%40cyclonedx-weboack-plugin-tests/regression-issue1284",
       "dependsOn": [
-        "pkg:npm/libphonenumber-js%2Fmax",
+        "pkg:npm/libphonenumber-js@1.11.3?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git",
         "pkg:npm/luxon@3.4.4?vcs_url=git%2Bhttps%3A//github.com/moment/luxon.git"
       ]
     },
     {
       "ref": "pkg:npm/libphonenumber-js@1.11.3?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git"
-    },
-    {
-      "ref": "pkg:npm/libphonenumber-js%2Fbuild"
-    },
-    {
-      "ref": "pkg:npm/libphonenumber-js%2Fcore",
-      "dependsOn": [
-        "pkg:npm/libphonenumber-js%2Fbuild"
-      ]
-    },
-    {
-      "ref": "pkg:npm/libphonenumber-js%2Fmax",
-      "dependsOn": [
-        "pkg:npm/libphonenumber-js@1.11.3?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git",
-        "pkg:npm/libphonenumber-js%2Fcore"
-      ]
     },
     {
       "ref": "pkg:npm/luxon@3.4.4?vcs_url=git%2Bhttps%3A//github.com/moment/luxon.git"
@@ -6403,18 +5986,6 @@ exports[`integration regression: verify enhanced package.json finder generated x
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="pkg:npm/libphonenumber-js%2Fbuild">
-      <name>libphonenumber-js/build</name>
-      <purl>pkg:npm/libphonenumber-js%2Fbuild</purl>
-    </component>
-    <component type="library" bom-ref="pkg:npm/libphonenumber-js%2Fcore">
-      <name>libphonenumber-js/core</name>
-      <purl>pkg:npm/libphonenumber-js%2Fcore</purl>
-    </component>
-    <component type="library" bom-ref="pkg:npm/libphonenumber-js%2Fmax">
-      <name>libphonenumber-js/max</name>
-      <purl>pkg:npm/libphonenumber-js%2Fmax</purl>
-    </component>
     <component type="library" bom-ref="pkg:npm/luxon@3.4.4?vcs_url=git%2Bhttps%3A//github.com/moment/luxon.git">
       <author>Isaac Cambron</author>
       <name>luxon</name>
@@ -6444,18 +6015,10 @@ exports[`integration regression: verify enhanced package.json finder generated x
   </components>
   <dependencies>
     <dependency ref="pkg:npm/%40cyclonedx-weboack-plugin-tests/regression-issue1284">
-      <dependency ref="pkg:npm/libphonenumber-js%2Fmax"/>
+      <dependency ref="pkg:npm/libphonenumber-js@1.11.3?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git"/>
       <dependency ref="pkg:npm/luxon@3.4.4?vcs_url=git%2Bhttps%3A//github.com/moment/luxon.git"/>
     </dependency>
     <dependency ref="pkg:npm/libphonenumber-js@1.11.3?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git"/>
-    <dependency ref="pkg:npm/libphonenumber-js%2Fbuild"/>
-    <dependency ref="pkg:npm/libphonenumber-js%2Fcore">
-      <dependency ref="pkg:npm/libphonenumber-js%2Fbuild"/>
-    </dependency>
-    <dependency ref="pkg:npm/libphonenumber-js%2Fmax">
-      <dependency ref="pkg:npm/libphonenumber-js@1.11.3?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git"/>
-      <dependency ref="pkg:npm/libphonenumber-js%2Fcore"/>
-    </dependency>
     <dependency ref="pkg:npm/luxon@3.4.4?vcs_url=git%2Bhttps%3A//github.com/moment/luxon.git"/>
   </dependencies>
 </bom>"
@@ -6559,24 +6122,6 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
     },
     {
       "type": "library",
-      "name": "libphonenumber-js/build",
-      "bom-ref": "pkg:npm/libphonenumber-js%2Fbuild",
-      "purl": "pkg:npm/libphonenumber-js%2Fbuild"
-    },
-    {
-      "type": "library",
-      "name": "libphonenumber-js/core",
-      "bom-ref": "pkg:npm/libphonenumber-js%2Fcore",
-      "purl": "pkg:npm/libphonenumber-js%2Fcore"
-    },
-    {
-      "type": "library",
-      "name": "libphonenumber-js/max",
-      "bom-ref": "pkg:npm/libphonenumber-js%2Fmax",
-      "purl": "pkg:npm/libphonenumber-js%2Fmax"
-    },
-    {
-      "type": "library",
       "name": "luxon",
       "version": "3.4.4",
       "bom-ref": "pkg:npm/luxon@3.4.4?vcs_url=git%2Bhttps%3A//github.com/moment/luxon.git",
@@ -6613,28 +6158,12 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
     {
       "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1284-yarn",
       "dependsOn": [
-        "pkg:npm/libphonenumber-js%2Fmax",
+        "pkg:npm/libphonenumber-js@1.11.3?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git",
         "pkg:npm/luxon@3.4.4?vcs_url=git%2Bhttps%3A//github.com/moment/luxon.git"
       ]
     },
     {
       "ref": "pkg:npm/libphonenumber-js@1.11.3?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git"
-    },
-    {
-      "ref": "pkg:npm/libphonenumber-js%2Fbuild"
-    },
-    {
-      "ref": "pkg:npm/libphonenumber-js%2Fcore",
-      "dependsOn": [
-        "pkg:npm/libphonenumber-js%2Fbuild"
-      ]
-    },
-    {
-      "ref": "pkg:npm/libphonenumber-js%2Fmax",
-      "dependsOn": [
-        "pkg:npm/libphonenumber-js@1.11.3?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git",
-        "pkg:npm/libphonenumber-js%2Fcore"
-      ]
     },
     {
       "ref": "pkg:npm/luxon@3.4.4?vcs_url=git%2Bhttps%3A//github.com/moment/luxon.git"
@@ -6741,24 +6270,6 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
     },
     {
       "type": "library",
-      "name": "libphonenumber-js/build",
-      "bom-ref": "pkg:npm/libphonenumber-js%2Fbuild",
-      "purl": "pkg:npm/libphonenumber-js%2Fbuild"
-    },
-    {
-      "type": "library",
-      "name": "libphonenumber-js/core",
-      "bom-ref": "pkg:npm/libphonenumber-js%2Fcore",
-      "purl": "pkg:npm/libphonenumber-js%2Fcore"
-    },
-    {
-      "type": "library",
-      "name": "libphonenumber-js/max",
-      "bom-ref": "pkg:npm/libphonenumber-js%2Fmax",
-      "purl": "pkg:npm/libphonenumber-js%2Fmax"
-    },
-    {
-      "type": "library",
       "name": "luxon",
       "version": "3.4.4",
       "bom-ref": "pkg:npm/luxon@3.4.4?vcs_url=git%2Bhttps%3A//github.com/moment/luxon.git",
@@ -6795,28 +6306,12 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
     {
       "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1284-yarn",
       "dependsOn": [
-        "pkg:npm/libphonenumber-js%2Fmax",
+        "pkg:npm/libphonenumber-js@1.11.3?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git",
         "pkg:npm/luxon@3.4.4?vcs_url=git%2Bhttps%3A//github.com/moment/luxon.git"
       ]
     },
     {
       "ref": "pkg:npm/libphonenumber-js@1.11.3?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git"
-    },
-    {
-      "ref": "pkg:npm/libphonenumber-js%2Fbuild"
-    },
-    {
-      "ref": "pkg:npm/libphonenumber-js%2Fcore",
-      "dependsOn": [
-        "pkg:npm/libphonenumber-js%2Fbuild"
-      ]
-    },
-    {
-      "ref": "pkg:npm/libphonenumber-js%2Fmax",
-      "dependsOn": [
-        "pkg:npm/libphonenumber-js@1.11.3?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git",
-        "pkg:npm/libphonenumber-js%2Fcore"
-      ]
     },
     {
       "ref": "pkg:npm/luxon@3.4.4?vcs_url=git%2Bhttps%3A//github.com/moment/luxon.git"
@@ -6903,18 +6398,6 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="pkg:npm/libphonenumber-js%2Fbuild">
-      <name>libphonenumber-js/build</name>
-      <purl>pkg:npm/libphonenumber-js%2Fbuild</purl>
-    </component>
-    <component type="library" bom-ref="pkg:npm/libphonenumber-js%2Fcore">
-      <name>libphonenumber-js/core</name>
-      <purl>pkg:npm/libphonenumber-js%2Fcore</purl>
-    </component>
-    <component type="library" bom-ref="pkg:npm/libphonenumber-js%2Fmax">
-      <name>libphonenumber-js/max</name>
-      <purl>pkg:npm/libphonenumber-js%2Fmax</purl>
-    </component>
     <component type="library" bom-ref="pkg:npm/luxon@3.4.4?vcs_url=git%2Bhttps%3A//github.com/moment/luxon.git">
       <author>Isaac Cambron</author>
       <name>luxon</name>
@@ -6944,18 +6427,10 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
   </components>
   <dependencies>
     <dependency ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1284-yarn">
-      <dependency ref="pkg:npm/libphonenumber-js%2Fmax"/>
+      <dependency ref="pkg:npm/libphonenumber-js@1.11.3?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git"/>
       <dependency ref="pkg:npm/luxon@3.4.4?vcs_url=git%2Bhttps%3A//github.com/moment/luxon.git"/>
     </dependency>
     <dependency ref="pkg:npm/libphonenumber-js@1.11.3?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git"/>
-    <dependency ref="pkg:npm/libphonenumber-js%2Fbuild"/>
-    <dependency ref="pkg:npm/libphonenumber-js%2Fcore">
-      <dependency ref="pkg:npm/libphonenumber-js%2Fbuild"/>
-    </dependency>
-    <dependency ref="pkg:npm/libphonenumber-js%2Fmax">
-      <dependency ref="pkg:npm/libphonenumber-js@1.11.3?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git"/>
-      <dependency ref="pkg:npm/libphonenumber-js%2Fcore"/>
-    </dependency>
     <dependency ref="pkg:npm/luxon@3.4.4?vcs_url=git%2Bhttps%3A//github.com/moment/luxon.git"/>
   </dependencies>
 </bom>"
