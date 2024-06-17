@@ -48,7 +48,7 @@ const testSetups = [
     ]
   },
   {
-    skip: nodeSV[0] < 18,
+    skip: !(nodeSV[0] > 16),
     dir: 'webpack5-vue2-yarn',
     purpose: 'functional: webpack5 with vue2 in yarn setup',
     packageManager: 'yarn',
