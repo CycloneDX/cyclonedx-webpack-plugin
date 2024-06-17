@@ -36,12 +36,12 @@ const nodeSV = Object.freeze((process?.versions?.node ?? '').split('.').map(Numb
   ]
 
   const REQUIRES_PNPM_INSTALL = [
-      // region functional tests
-      'webpack5-vue2-pnpm'
-      // endregion functional tests
-      // region regression tests
-      // endregion regression tests
-    ]
+    // region functional tests
+    'webpack5-vue2-pnpm'
+    // endregion functional tests
+    // region regression tests
+    // endregion regression tests
+  ]
 
   const REQUIRES_YARN_INSTALL = nodeSV[0] > 16
     ? [
