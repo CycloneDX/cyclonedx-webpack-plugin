@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 3.12.0 - 2024-06-17
+
 * Changed
   * Improved package detection ([#1284] via [#1286])
 
