@@ -35,7 +35,7 @@ const path = require('path');
 
   const REQUIRES_YARN_INSTALL = [
     // region functional tests
-    'webpack5-vue2-yarn',
+    'webpack5-vue2-yarn'
     // endregion functional tests
     // region regression tests
     // endregion regression tests
