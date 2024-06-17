@@ -51,10 +51,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
-      - name: enable yarn  # needed in some tests
-        run: |-
-          corepack enable
-          yarn --version
       - name: Checkout code
         # see https://github.com/actions/checkout
         uses: actions/checkout@v4
@@ -97,16 +93,20 @@ jobs:
     env:
       NPMJS_RELEASE_TAG: ${{ github.event.inputs.prerelease == 'true' && 'unstable-prerelease' || 'latest' }}
     steps:
-      - name: Checkout code
-        # see https://github.com/actions/checkout
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ needs.bump.outputs.version }}
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
+      - name: enable yarn  # needed in some tests
+        run: |-
+          corepack enable
+          yarn --version
+      - name: Checkout code
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.bump.outputs.version }}
       - name: install build tools
         run: npm i --ignore-scripts
       # no explicit npm build. if a build is required, it should be configured as prepublish/prepublishOnly script of npm.
