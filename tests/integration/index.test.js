@@ -157,8 +157,8 @@ describe('integration', () => {
   testSetups.forEach(({ skip: skipTests, purpose, dir, packageManager, results }) => {
     skipTests = !!skipTests;
     (skipTests
-      ? describe
-      : describe.skip
+      ? describe.skip
+      : describe
     )(purpose, () => {
       const built = spawnSync(
         packageManager ?? 'npm', ['run', 'build'], {
@@ -178,7 +178,8 @@ describe('integration', () => {
         if (/should not be used for production|Angular CLI requires a minimum|does not support Node\.js v/.test(built.stderr.toString())) {
           skipTests = true
         } else {
-          console.log(built, '\n')
+          console.log('purpose: ', purpose, '\n')
+          console.log('built', built, '\n')
           throw err
         }
       }
