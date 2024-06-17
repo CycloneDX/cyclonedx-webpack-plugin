@@ -25,6 +25,8 @@ const { describe, expect, it } = require('@jest/globals')
 
 const { version: thisVersion } = require('../../package.json')
 
+const nodeSV = process.versions.node.split('.').map(Number)
+
 const testSetups = [
   // region functional
   {
@@ -46,6 +48,7 @@ const testSetups = [
     ]
   },
   {
+    skip: nodeSV[0] < 18,
     dir: 'webpack5-vue2-yarn',
     purpose: 'functional: webpack5 with vue2 in yarn setup',
     packageManager: 'yarn',
@@ -151,8 +154,12 @@ try {
 }
 
 describe('integration', () => {
-  testSetups.forEach(({ purpose, dir, packageManager, results }) => {
-    describe(purpose, () => {
+  testSetups.forEach(({ skip: skipTests, purpose, dir, packageManager, results }) => {
+    skipTests = !!skipTests;
+    (skipTests
+      ? describe
+      : describe.skip
+    )(purpose, () => {
       const built = spawnSync(
         packageManager ?? 'npm', ['run', 'build'], {
           cwd: path.resolve(module.path, dir),
@@ -165,7 +172,6 @@ describe('integration', () => {
           }
         }
       )
-      let skipTests = false
       try {
         expect(built.status).toBe(0)
       } catch (err) {

@@ -18,7 +18,9 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 const { spawnSync } = require('child_process')
-const path = require('path');
+const path = require('path')
+
+const nodeSV = process.versions.node.split('.').map(Number);
 
 (function () {
   const REQUIRES_NPM_INSTALL = [
@@ -33,13 +35,15 @@ const path = require('path');
     // endregion regression tests
   ]
 
-  const REQUIRES_YARN_INSTALL = [
-    // region functional tests
-    'webpack5-vue2-yarn'
-    // endregion functional tests
-    // region regression tests
-    // endregion regression tests
-  ]
+  const REQUIRES_YARN_INSTALL = nodeSV[0] >= 18
+    ? [
+        // region functional tests
+        'webpack5-vue2-yarn'
+        // endregion functional tests
+        // region regression tests
+        // endregion regression tests
+      ]
+    : []
 
   console.warn(`
   WILL SETUP INTEGRATION TEST BEDS
