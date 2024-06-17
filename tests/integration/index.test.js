@@ -25,7 +25,7 @@ const { describe, expect, it } = require('@jest/globals')
 
 const { version: thisVersion } = require('../../package.json')
 
-const nodeSV = Object.freeze(process?.versions?.node ?? '').split('.').map(Number))
+const nodeSV = Object.freeze((process?.versions?.node ?? '').split('.').map(Number))
 
 const testSetups = [
   // region functional
