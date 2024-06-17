@@ -6,6 +6,12 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Changed
+  * Improved package detection ([#1284] via [#1286])
+
+[#1284]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1284
+[#1286]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1286
+
 ## 3.11.0 - 2024-05-08
 
 * Added
