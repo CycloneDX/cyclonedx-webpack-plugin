@@ -5,9 +5,9 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@cyclonedx-weboack-plugin-tests/improvement-issue-1284-yarn@workspace:.":
+"@cyclonedx-webpack-plugin-tests/regression-issue1284-yarn@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@cyclonedx-weboack-plugin-tests/improvement-issue-1284-yarn@workspace:."
+  resolution: "@cyclonedx-webpack-plugin-tests/regression-issue1284-yarn@workspace:."
   dependencies:
     "@cyclonedx/webpack-plugin": "portal:../../.."
     bootstrap: "npm:^5.1.3"
@@ -44,9 +44,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cyclonedx/webpack-plugin@portal:../../..::locator=%40cyclonedx-weboack-plugin-tests%2Fimprovement-issue-1284-yarn%40workspace%3A.":
+"@cyclonedx/webpack-plugin@portal:../../..::locator=%40cyclonedx-webpack-plugin-tests%2Fregression-issue1284-yarn%40workspace%3A.":
   version: 0.0.0-use.local
-  resolution: "@cyclonedx/webpack-plugin@portal:../../..::locator=%40cyclonedx-weboack-plugin-tests%2Fimprovement-issue-1284-yarn%40workspace%3A."
+  resolution: "@cyclonedx/webpack-plugin@portal:../../..::locator=%40cyclonedx-webpack-plugin-tests%2Fregression-issue1284-yarn%40workspace%3A."
   dependencies:
     "@cyclonedx/cyclonedx-library": "npm:^6.6.0"
     normalize-package-data: "npm:^3||^4||^5||^6"
