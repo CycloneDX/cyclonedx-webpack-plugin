@@ -80,6 +80,9 @@ jobs:
           NPMV_NEWVERSION: ${{ github.event.inputs.newversion }}
           NPMV_MESSAGE: ${{ github.event.inputs.commitMessage }}
           NPMV_PREID: ${{ github.event.inputs.preid }}
+      - name: show error logs
+        if: ${{ failure() }}
+        run: cat /home/runner/.npm/_logs/*.log
       - name: git push back
         run: git push --follow-tags
 
@@ -119,6 +122,9 @@ jobs:
         run: |
           mkdir -p "$PACKED_DIR"
           npm pack --pack-destination "$PACKED_DIR"
+      - name: show error logs
+        if: ${{ failure() }}
+        run: cat /home/runner/.npm/_logs/*.log
       - name: artifact release result
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v4
