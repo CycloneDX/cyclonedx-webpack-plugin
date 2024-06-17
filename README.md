@@ -28,6 +28,7 @@ However, there are older versions of this plugin, that support
 
 ## Installing
 
+
 ```shell
 npm i -D @cyclonedx/webpack-plugin
 yarn add -D @cyclonedx/webpack-plugin
@@ -149,7 +150,7 @@ See the [LICENSE][license_file] file for the full license.
 [shield_gh-workflow-test]: https://img.shields.io/github/actions/workflow/status/CycloneDX/cyclonedx-webpack-plugin/nodejs.yml?branch=master&logo=GitHub&logoColor=white "tests"
 [shield_npm-version]: https://img.shields.io/npm/v/%40cyclonedx%2fwebpack-plugin/latest?label=npm&logo=npm&logoColor=white "npm"
 [shield_license]: https://img.shields.io/github/license/CycloneDX/cyclonedx-webpack-plugin?logo=open%20source%20initiative&logoColor=white "license"
-[shield_ossf-best-practices]: https://img.shields.io/cii/level/7884?label=OpenSSF%20best%20practices "OpenSSF best practices"
+[shield_ossf-best-practices]: https://img.shields.io/cii/percentage/7884?label=OpenSSF%20best%20practices "OpenSSF best practices"
 [shield_coverage]: https://img.shields.io/codacy/coverage/100ece8926d548e99d8ca56b9d8cec78?logo=Codacy&logoColor=white "test coverage"
 [shield_website]: https://img.shields.io/badge/https://-cyclonedx.org-blue.svg "homepage"
 [shield_slack]: https://img.shields.io/badge/slack-join-blue?logo=Slack&logoColor=white "slack join"
