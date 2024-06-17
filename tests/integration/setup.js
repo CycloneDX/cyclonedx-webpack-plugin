@@ -20,7 +20,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 const { spawnSync } = require('child_process')
 const path = require('path')
 
-const nodeSV = (process?.versions?.node ?? '').split('.').map(Number)
+const nodeSV = Object.freeze(process?.versions?.node ?? '').split('.').map(Number))
 
 (function () {
   const REQUIRES_NPM_INSTALL = [
