@@ -66,7 +66,7 @@ const testSetups = [
     ]
   },
   {
-    skip: !(nodeSV[0] > 16),
+    skip: !(nodeSV[0] >= 18),
     dir: 'webpack5-vue2-yarn',
     purpose: 'functional: webpack5 with vue2 in yarn setup',
     packageManager: 'yarn',
@@ -213,6 +213,8 @@ describe('integration', () => {
   testSetups.forEach(({ skip: skipTests, purpose, dir, packageManager, results }) => {
     skipTests = !!skipTests
     describe(purpose, () => {
+
+
       if (!skipTests) {
         const built = spawnSync(
           packageManager ?? 'npm', ['run', 'build'], {
