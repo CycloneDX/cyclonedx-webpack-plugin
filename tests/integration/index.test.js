@@ -213,8 +213,6 @@ describe('integration', () => {
   testSetups.forEach(({ skip: skipTests, purpose, dir, packageManager, results }) => {
     skipTests = !!skipTests
     describe(purpose, () => {
-
-
       if (!skipTests) {
         const built = spawnSync(
           packageManager ?? 'npm', ['run', 'build'], {
