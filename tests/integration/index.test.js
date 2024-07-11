@@ -48,6 +48,24 @@ const testSetups = [
     ]
   },
   {
+    dir: 'webpack5-vue2-cli-service',
+    purpose: 'functional: webpack5 with vue2-cli-service',
+    results: [ // paths relative to `dir`
+      {
+        format: 'xml',
+        file: 'dist/.bom/bom.xml'
+      },
+      {
+        format: 'json',
+        file: 'dist/.bom/bom.json'
+      },
+      {
+        format: 'json',
+        file: 'dist/.well-known/sbom'
+      }
+    ]
+  },
+  {
     skip: !(nodeSV[0] > 16),
     dir: 'webpack5-vue2-yarn',
     purpose: 'functional: webpack5 with vue2 in yarn setup',

@@ -28,6 +28,7 @@
     "npm": ">=8"
   },
   "scripts": {
+    "prebuild": "node -r fs -e 'fs.rmSync(\"dist\",{recursive:true,force:true})'",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",

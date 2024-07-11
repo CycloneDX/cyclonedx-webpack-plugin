@@ -80,6 +80,7 @@
     "workbox-webpack-plugin": "^6.4.1"
   },
   "scripts": {
+    "prebuild": "node -r fs -e 'fs.rmSync(\"dist\",{recursive:true,force:true})'",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js"
   },

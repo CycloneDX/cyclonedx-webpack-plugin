@@ -29,6 +29,7 @@ const nodeSV = Object.freeze((process?.versions?.node ?? '').split('.').map(Numb
     'webpack5-angular17',
     'webpack5-react18',
     'webpack5-vue2',
+    'webpack5-vue2-cli-service',
     // endregion functional tests
     // region regression tests
     'regression-issue745',
