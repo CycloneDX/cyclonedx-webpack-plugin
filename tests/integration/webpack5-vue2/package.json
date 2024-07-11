@@ -1,7 +1,7 @@
 {
+  "private": true,
   "name": "@cyclonedx-webpack-plugin-tests/example-webpack5-vue2",
   "description": "example setup witch Vue2 in WebPack5",
-  "private": true,
   "homepage": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/webpack5-vue2#readme",
   "copyright": "Copyright OWASP Foundation",
   "license": "Apache-2.0",
@@ -25,7 +25,7 @@
   },
   "main": "index.html",
   "scripts": {
-    "prebuild:node": "node -r fs -e 'fs.rmSync(\"dist\",{recursive:true,force:true})'",
+    "prebuild": "node -r fs -e 'fs.rmSync(\"dist\",{recursive:true,force:true})'",
     "build": "webpack build"
   },
   "dependencies": {

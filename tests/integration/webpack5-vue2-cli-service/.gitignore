@@ -1,0 +1,10 @@
+*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/.npmrc
+!/package.json
+!/package-lock.json
+!/vue.config.js
+!/src
+!/src/*

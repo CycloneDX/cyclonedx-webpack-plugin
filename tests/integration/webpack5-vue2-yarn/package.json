@@ -42,5 +42,5 @@
     "node": ">=18",
     "yarn": ">=4"
   },
-  "packageManager": "yarn@4.3.0"
+  "packageManager": "yarn@4.3.1"
 }

@@ -29,7 +29,7 @@
   },
   "main": "index.html",
   "scripts": {
-    "prebuild:node": "node -r fs -e 'fs.rmSync(\"dist\",{recursive:true,force:true})'",
+    "prebuild": "node -r fs -e 'fs.rmSync(\"dist\",{recursive:true,force:true})'",
     "build": "webpack build"
   },
   "dependencies": {

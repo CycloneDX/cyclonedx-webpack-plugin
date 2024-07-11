@@ -4075,6 +4075,374 @@ exports[`integration functional: webpack5 with vue2 in yarn setup generated xml 
 </bom>"
 `;
 
+exports[`integration functional: webpack5 with vue2-cli-service generated json file: dist/.bom/bom.json 1`] = `
+"{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "metadata": {
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
+    "tools": [
+      {
+        "vendor": "@cyclonedx",
+        "name": "cyclonedx-library",
+        "version": "libVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
+            "type": "issue-tracker",
+            "comment": "as detected from PackageJson property \\"bugs.url\\""
+          },
+          {
+            "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
+            "type": "vcs",
+            "comment": "as detected from PackageJson property \\"repository.url\\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \\"homepage\\""
+          }
+        ]
+      },
+      {
+        "vendor": "@cyclonedx",
+        "name": "webpack-plugin",
+        "version": "thisVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
+            "type": "issue-tracker",
+            "comment": "as detected from PackageJson property \\"bugs.url\\""
+          },
+          {
+            "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
+            "type": "vcs",
+            "comment": "as detected from PackageJson property \\"repository.url\\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \\"homepage\\""
+          }
+        ]
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "example-webpack5-vue2-cli",
+      "group": "@cyclonedx-webpack-plugin-tests",
+      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli",
+      "description": "example setup witch Vue2 in WebPack5",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli",
+      "externalReferences": [
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/webpack5-vue2#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "vue",
+      "version": "2.7.16",
+      "bom-ref": "pkg:npm/vue@2.7.16?vcs_url=git%2Bhttps%3A//github.com/vuejs/vue.git",
+      "author": "Evan You",
+      "description": "Reactive, component-oriented view layer for modern web interfaces.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/vue@2.7.16?vcs_url=git%2Bhttps%3A//github.com/vuejs/vue.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/vuejs/vue/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git+https://github.com/vuejs/vue.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://github.com/vuejs/vue#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli",
+      "dependsOn": [
+        "pkg:npm/vue@2.7.16?vcs_url=git%2Bhttps%3A//github.com/vuejs/vue.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/vue@2.7.16?vcs_url=git%2Bhttps%3A//github.com/vuejs/vue.git"
+    }
+  ]
+}"
+`;
+
+exports[`integration functional: webpack5 with vue2-cli-service generated json file: dist/.well-known/sbom 1`] = `
+"{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "metadata": {
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
+    "tools": [
+      {
+        "vendor": "@cyclonedx",
+        "name": "cyclonedx-library",
+        "version": "libVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
+            "type": "issue-tracker",
+            "comment": "as detected from PackageJson property \\"bugs.url\\""
+          },
+          {
+            "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
+            "type": "vcs",
+            "comment": "as detected from PackageJson property \\"repository.url\\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \\"homepage\\""
+          }
+        ]
+      },
+      {
+        "vendor": "@cyclonedx",
+        "name": "webpack-plugin",
+        "version": "thisVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
+            "type": "issue-tracker",
+            "comment": "as detected from PackageJson property \\"bugs.url\\""
+          },
+          {
+            "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
+            "type": "vcs",
+            "comment": "as detected from PackageJson property \\"repository.url\\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \\"homepage\\""
+          }
+        ]
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "example-webpack5-vue2-cli",
+      "group": "@cyclonedx-webpack-plugin-tests",
+      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli",
+      "description": "example setup witch Vue2 in WebPack5",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli",
+      "externalReferences": [
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/webpack5-vue2#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "vue",
+      "version": "2.7.16",
+      "bom-ref": "pkg:npm/vue@2.7.16?vcs_url=git%2Bhttps%3A//github.com/vuejs/vue.git",
+      "author": "Evan You",
+      "description": "Reactive, component-oriented view layer for modern web interfaces.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/vue@2.7.16?vcs_url=git%2Bhttps%3A//github.com/vuejs/vue.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/vuejs/vue/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git+https://github.com/vuejs/vue.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://github.com/vuejs/vue#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli",
+      "dependsOn": [
+        "pkg:npm/vue@2.7.16?vcs_url=git%2Bhttps%3A//github.com/vuejs/vue.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/vue@2.7.16?vcs_url=git%2Bhttps%3A//github.com/vuejs/vue.git"
+    }
+  ]
+}"
+`;
+
+exports[`integration functional: webpack5 with vue2-cli-service generated xml file: dist/.bom/bom.xml 1`] = `
+"<?xml version="1.0" encoding="UTF-8"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
+  <metadata>
+    <lifecycles>
+      <lifecycle>
+        <phase>build</phase>
+      </lifecycle>
+    </lifecycles>
+    <tools>
+      <tool>
+        <vendor>@cyclonedx</vendor>
+        <name>cyclonedx-library</name>
+        <version>libVersion-testing</version>
+        <externalReferences>
+          <reference type="issue-tracker">
+            <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
+            <comment>as detected from PackageJson property "bugs.url"</comment>
+          </reference>
+          <reference type="vcs">
+            <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
+            <comment>as detected from PackageJson property "repository.url"</comment>
+          </reference>
+          <reference type="website">
+            <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+            <comment>as detected from PackageJson property "homepage"</comment>
+          </reference>
+        </externalReferences>
+      </tool>
+      <tool>
+        <vendor>@cyclonedx</vendor>
+        <name>webpack-plugin</name>
+        <version>thisVersion-testing</version>
+        <externalReferences>
+          <reference type="issue-tracker">
+            <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
+            <comment>as detected from PackageJson property "bugs.url"</comment>
+          </reference>
+          <reference type="vcs">
+            <url>git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git</url>
+            <comment>as detected from PackageJson property "repository.url"</comment>
+          </reference>
+          <reference type="website">
+            <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme</url>
+            <comment>as detected from PackageJson property "homepage"</comment>
+          </reference>
+        </externalReferences>
+      </tool>
+    </tools>
+    <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli">
+      <group>@cyclonedx-webpack-plugin-tests</group>
+      <name>example-webpack5-vue2-cli</name>
+      <description>example setup witch Vue2 in WebPack5</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/webpack5-vue2#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+  </metadata>
+  <components>
+    <component type="library" bom-ref="pkg:npm/vue@2.7.16?vcs_url=git%2Bhttps%3A//github.com/vuejs/vue.git">
+      <author>Evan You</author>
+      <name>vue</name>
+      <version>2.7.16</version>
+      <description>Reactive, component-oriented view layer for modern web interfaces.</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/vue@2.7.16?vcs_url=git%2Bhttps%3A//github.com/vuejs/vue.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/vuejs/vue/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/vuejs/vue.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/vuejs/vue#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+  </components>
+  <dependencies>
+    <dependency ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli">
+      <dependency ref="pkg:npm/vue@2.7.16?vcs_url=git%2Bhttps%3A//github.com/vuejs/vue.git"/>
+    </dependency>
+    <dependency ref="pkg:npm/vue@2.7.16?vcs_url=git%2Bhttps%3A//github.com/vuejs/vue.git"/>
+  </dependencies>
+</bom>"
+`;
+
 exports[`integration regression: issue#745 generated json file: dist/.bom/bom.json 1`] = `
 "{
   "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
