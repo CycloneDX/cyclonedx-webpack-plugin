@@ -62,7 +62,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
       "type": "application",
       "name": "example-webpack5-angular13",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13",
+      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git",
       "author": "Jan Kowalleck",
       "description": "example setup witch Angular13 in WebPack5",
       "licenses": [
@@ -73,7 +73,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13",
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -81,9 +81,9 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
           "comment": "as detected from PackageJson property \\"bugs.url\\""
         },
         {
-          "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13",
+          "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \\"repository.url\\" and \\"repository.directory\\""
+          "comment": "as detected from PackageJson property \\"repository.url\\""
         },
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/webpack5-angular13#readme",
@@ -357,7 +357,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
       ]
     },
     {
-      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13",
+      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git",
       "dependsOn": [
         "pkg:npm/%40angular/common@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
         "pkg:npm/%40angular/core@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
@@ -447,7 +447,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
       "type": "application",
       "name": "example-webpack5-angular13",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13",
+      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git",
       "author": "Jan Kowalleck",
       "description": "example setup witch Angular13 in WebPack5",
       "licenses": [
@@ -458,7 +458,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13",
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -466,9 +466,9 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
           "comment": "as detected from PackageJson property \\"bugs.url\\""
         },
         {
-          "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13",
+          "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \\"repository.url\\" and \\"repository.directory\\""
+          "comment": "as detected from PackageJson property \\"repository.url\\""
         },
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/webpack5-angular13#readme",
@@ -742,7 +742,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
       ]
     },
     {
-      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13",
+      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git",
       "dependsOn": [
         "pkg:npm/%40angular/common@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common",
         "pkg:npm/%40angular/core@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
@@ -819,7 +819,7 @@ exports[`integration functional: webpack5 with angular13 generated xml file: dis
         </externalReferences>
       </tool>
     </tools>
-    <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13">
+    <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git">
       <author>Jan Kowalleck</author>
       <group>@cyclonedx-webpack-plugin-tests</group>
       <name>example-webpack5-angular13</name>
@@ -829,15 +829,15 @@ exports[`integration functional: webpack5 with angular13 generated xml file: dis
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13</purl>
+      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
-          <url>git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13</url>
-          <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
+          <url>git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
         </reference>
         <reference type="website">
           <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/webpack5-angular13#readme</url>
@@ -1044,7 +1044,7 @@ exports[`integration functional: webpack5 with angular13 generated xml file: dis
       <dependency ref="pkg:npm/%40angular/common@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common"/>
       <dependency ref="pkg:npm/%40angular/core@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core"/>
     </dependency>
-    <dependency ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular13">
+    <dependency ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git">
       <dependency ref="pkg:npm/%40angular/common@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/common"/>
       <dependency ref="pkg:npm/%40angular/core@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core"/>
       <dependency ref="pkg:npm/%40angular/platform-browser@13.3.12?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser"/>
@@ -1124,7 +1124,7 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
       "name": "example-webpack5-angular17",
       "group": "@cyclonedx-webpack-plugin-tests",
       "version": "0.0.0",
-      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular17",
+      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0?vcs_url=git%40gitlab.example.com%3Ademos/webpack5-angular17",
       "author": "Jan Kowalleck",
       "description": "example setup witch Angular17 in WebPack5",
       "licenses": [
@@ -1135,17 +1135,12 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular17",
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0?vcs_url=git%40gitlab.example.com%3Ademos/webpack5-angular17",
       "externalReferences": [
         {
-          "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \\"bugs.url\\""
-        },
-        {
-          "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular17",
+          "url": "git@gitlab.example.com:demos/webpack5-angular17",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \\"repository.url\\" and \\"repository.directory\\""
+          "comment": "as detected from PackageJson property \\"repository.url\\""
         },
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/webpack5-angular17#readme",
@@ -1504,7 +1499,7 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
       "ref": "pkg:npm/%40babel/runtime@7.24.0?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime"
     },
     {
-      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular17",
+      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0?vcs_url=git%40gitlab.example.com%3Ademos/webpack5-angular17",
       "dependsOn": [
         "pkg:npm/%40angular/core@17.3.0?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
         "pkg:npm/%40angular/platform-browser@17.3.0?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser",
@@ -1594,7 +1589,7 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
       "name": "example-webpack5-angular17",
       "group": "@cyclonedx-webpack-plugin-tests",
       "version": "0.0.0",
-      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular17",
+      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0?vcs_url=git%40gitlab.example.com%3Ademos/webpack5-angular17",
       "author": "Jan Kowalleck",
       "description": "example setup witch Angular17 in WebPack5",
       "licenses": [
@@ -1605,17 +1600,12 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular17",
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0?vcs_url=git%40gitlab.example.com%3Ademos/webpack5-angular17",
       "externalReferences": [
         {
-          "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \\"bugs.url\\""
-        },
-        {
-          "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular17",
+          "url": "git@gitlab.example.com:demos/webpack5-angular17",
           "type": "vcs",
-          "comment": "as detected from PackageJson property \\"repository.url\\" and \\"repository.directory\\""
+          "comment": "as detected from PackageJson property \\"repository.url\\""
         },
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/webpack5-angular17#readme",
@@ -1974,7 +1964,7 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
       "ref": "pkg:npm/%40babel/runtime@7.24.0?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime"
     },
     {
-      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular17",
+      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0?vcs_url=git%40gitlab.example.com%3Ademos/webpack5-angular17",
       "dependsOn": [
         "pkg:npm/%40angular/core@17.3.0?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core",
         "pkg:npm/%40angular/platform-browser@17.3.0?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser",
@@ -2050,7 +2040,7 @@ exports[`integration functional: webpack5 with angular17 generated xml file: dis
         </externalReferences>
       </tool>
     </tools>
-    <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular17">
+    <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0?vcs_url=git%40gitlab.example.com%3Ademos/webpack5-angular17">
       <author>Jan Kowalleck</author>
       <group>@cyclonedx-webpack-plugin-tests</group>
       <name>example-webpack5-angular17</name>
@@ -2061,16 +2051,8 @@ exports[`integration functional: webpack5 with angular17 generated xml file: dis
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular17</purl>
+      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0?vcs_url=git%40gitlab.example.com%3Ademos/webpack5-angular17</purl>
       <externalReferences>
-        <reference type="issue-tracker">
-          <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
-          <comment>as detected from PackageJson property "bugs.url"</comment>
-        </reference>
-        <reference type="vcs">
-          <url>git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular17</url>
-          <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
-        </reference>
         <reference type="website">
           <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/webpack5-angular17#readme</url>
           <comment>as detected from PackageJson property "homepage"</comment>
@@ -2340,7 +2322,7 @@ exports[`integration functional: webpack5 with angular17 generated xml file: dis
       <dependency ref="pkg:npm/rxjs@7.8.1?vcs_url=git%2Bhttps%3A//github.com/reactivex/rxjs.git"/>
     </dependency>
     <dependency ref="pkg:npm/%40babel/runtime@7.24.0?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime"/>
-    <dependency ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-angular17">
+    <dependency ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0?vcs_url=git%40gitlab.example.com%3Ademos/webpack5-angular17">
       <dependency ref="pkg:npm/%40angular/core@17.3.0?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/core"/>
       <dependency ref="pkg:npm/%40angular/platform-browser@17.3.0?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/platform-browser"/>
       <dependency ref="pkg:npm/%40angular/router@17.3.0?vcs_url=git%2Bhttps%3A//github.com/angular/angular.git#packages/router"/>
@@ -2419,7 +2401,7 @@ exports[`integration functional: webpack5 with react18 generated json file: dist
       "name": "example-webpack5-react18",
       "group": "@cyclonedx-webpack-plugin-tests",
       "version": "0.0.1",
-      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18",
+      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18",
       "author": "Jan Kowalleck",
       "description": "example setup with react and webpack5",
       "licenses": [
@@ -2430,7 +2412,7 @@ exports[`integration functional: webpack5 with react18 generated json file: dist
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18",
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -2438,7 +2420,7 @@ exports[`integration functional: webpack5 with react18 generated json file: dist
           "comment": "as detected from PackageJson property \\"bugs.url\\""
         },
         {
-          "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18",
+          "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18",
           "type": "vcs",
           "comment": "as detected from PackageJson property \\"repository.url\\" and \\"repository.directory\\""
         },
@@ -2659,7 +2641,7 @@ exports[`integration functional: webpack5 with react18 generated json file: dist
       "ref": "pkg:npm/%40babel/runtime@7.18.3?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime"
     },
     {
-      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18",
+      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18",
       "dependsOn": [
         "pkg:npm/%40babel/runtime@7.18.3?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime",
         "pkg:npm/css-loader@6.7.1?vcs_url=git%2Bhttps%3A//github.com/webpack-contrib/css-loader.git",
@@ -2753,7 +2735,7 @@ exports[`integration functional: webpack5 with react18 generated json file: dist
       "name": "example-webpack5-react18",
       "group": "@cyclonedx-webpack-plugin-tests",
       "version": "0.0.1",
-      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18",
+      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18",
       "author": "Jan Kowalleck",
       "description": "example setup with react and webpack5",
       "licenses": [
@@ -2764,7 +2746,7 @@ exports[`integration functional: webpack5 with react18 generated json file: dist
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18",
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -2772,7 +2754,7 @@ exports[`integration functional: webpack5 with react18 generated json file: dist
           "comment": "as detected from PackageJson property \\"bugs.url\\""
         },
         {
-          "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18",
+          "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18",
           "type": "vcs",
           "comment": "as detected from PackageJson property \\"repository.url\\" and \\"repository.directory\\""
         },
@@ -2993,7 +2975,7 @@ exports[`integration functional: webpack5 with react18 generated json file: dist
       "ref": "pkg:npm/%40babel/runtime@7.18.3?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime"
     },
     {
-      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18",
+      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18",
       "dependsOn": [
         "pkg:npm/%40babel/runtime@7.18.3?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime",
         "pkg:npm/css-loader@6.7.1?vcs_url=git%2Bhttps%3A//github.com/webpack-contrib/css-loader.git",
@@ -3073,7 +3055,7 @@ exports[`integration functional: webpack5 with react18 generated xml file: dist/
         </externalReferences>
       </tool>
     </tools>
-    <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18">
+    <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18">
       <author>Jan Kowalleck</author>
       <group>@cyclonedx-webpack-plugin-tests</group>
       <name>example-webpack5-react18</name>
@@ -3084,14 +3066,14 @@ exports[`integration functional: webpack5 with react18 generated xml file: dist/
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18</purl>
+      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
-          <url>git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18</url>
+          <url>git+ssh://git@github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18</url>
           <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
         </reference>
         <reference type="website">
@@ -3259,7 +3241,7 @@ exports[`integration functional: webpack5 with react18 generated xml file: dist/
   </components>
   <dependencies>
     <dependency ref="pkg:npm/%40babel/runtime@7.18.3?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime"/>
-    <dependency ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18">
+    <dependency ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-react18">
       <dependency ref="pkg:npm/%40babel/runtime@7.18.3?vcs_url=git%2Bhttps%3A//github.com/babel/babel.git#packages/babel-runtime"/>
       <dependency ref="pkg:npm/css-loader@6.7.1?vcs_url=git%2Bhttps%3A//github.com/webpack-contrib/css-loader.git"/>
       <dependency ref="pkg:npm/react-dom@18.2.0?vcs_url=git%2Bhttps%3A//github.com/facebook/react.git#packages/react-dom"/>
@@ -3339,7 +3321,7 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.b
       "type": "application",
       "name": "example-webpack5-vue2",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
+      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
       "author": "Jan Kowalleck",
       "description": "example setup witch Vue2 in WebPack5",
       "licenses": [
@@ -3350,7 +3332,7 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.b
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -3358,7 +3340,7 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.b
           "comment": "as detected from PackageJson property \\"bugs.url\\""
         },
         {
-          "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
+          "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
           "type": "vcs",
           "comment": "as detected from PackageJson property \\"repository.url\\" and \\"repository.directory\\""
         },
@@ -3408,7 +3390,7 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.b
   ],
   "dependencies": [
     {
-      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
+      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
       "dependsOn": [
         "pkg:npm/vue@2.6.14?vcs_url=git%2Bhttps%3A//github.com/vuejs/vue.git"
       ]
@@ -3482,7 +3464,7 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.w
       "type": "application",
       "name": "example-webpack5-vue2",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
+      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
       "author": "Jan Kowalleck",
       "description": "example setup witch Vue2 in WebPack5",
       "licenses": [
@@ -3493,7 +3475,7 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.w
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -3501,7 +3483,7 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.w
           "comment": "as detected from PackageJson property \\"bugs.url\\""
         },
         {
-          "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
+          "url": "git+ssh://git@github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
           "type": "vcs",
           "comment": "as detected from PackageJson property \\"repository.url\\" and \\"repository.directory\\""
         },
@@ -3551,7 +3533,7 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.w
   ],
   "dependencies": [
     {
-      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
+      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2",
       "dependsOn": [
         "pkg:npm/vue@2.6.14?vcs_url=git%2Bhttps%3A//github.com/vuejs/vue.git"
       ]
@@ -3612,7 +3594,7 @@ exports[`integration functional: webpack5 with vue2 generated xml file: dist/.bo
         </externalReferences>
       </tool>
     </tools>
-    <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2">
+    <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2">
       <author>Jan Kowalleck</author>
       <group>@cyclonedx-webpack-plugin-tests</group>
       <name>example-webpack5-vue2</name>
@@ -3622,14 +3604,14 @@ exports[`integration functional: webpack5 with vue2 generated xml file: dist/.bo
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2</purl>
+      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
         </reference>
         <reference type="vcs">
-          <url>git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2</url>
+          <url>git+ssh://git@github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2</url>
           <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
         </reference>
         <reference type="website">
@@ -3668,7 +3650,7 @@ exports[`integration functional: webpack5 with vue2 generated xml file: dist/.bo
     </component>
   </components>
   <dependencies>
-    <dependency ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2">
+    <dependency ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bssh%3A//git%40github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2">
       <dependency ref="pkg:npm/vue@2.6.14?vcs_url=git%2Bhttps%3A//github.com/vuejs/vue.git"/>
     </dependency>
     <dependency ref="pkg:npm/vue@2.6.14?vcs_url=git%2Bhttps%3A//github.com/vuejs/vue.git"/>
@@ -4137,7 +4119,7 @@ exports[`integration functional: webpack5 with vue2-cli-service generated json f
       "type": "application",
       "name": "example-webpack5-vue2-cli",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli",
+      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2-cli-service",
       "description": "example setup witch Vue2 in WebPack5",
       "licenses": [
         {
@@ -4147,8 +4129,18 @@ exports[`integration functional: webpack5 with vue2-cli-service generated json f
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli",
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2-cli-service",
       "externalReferences": [
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2-cli-service",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\" and \\"repository.directory\\""
+        },
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/webpack5-vue2#readme",
           "type": "website",
@@ -4195,7 +4187,7 @@ exports[`integration functional: webpack5 with vue2-cli-service generated json f
   ],
   "dependencies": [
     {
-      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli",
+      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2-cli-service",
       "dependsOn": [
         "pkg:npm/vue@2.7.16?vcs_url=git%2Bhttps%3A//github.com/vuejs/vue.git"
       ]
@@ -4269,7 +4261,7 @@ exports[`integration functional: webpack5 with vue2-cli-service generated json f
       "type": "application",
       "name": "example-webpack5-vue2-cli",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli",
+      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2-cli-service",
       "description": "example setup witch Vue2 in WebPack5",
       "licenses": [
         {
@@ -4279,8 +4271,18 @@ exports[`integration functional: webpack5 with vue2-cli-service generated json f
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli",
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2-cli-service",
       "externalReferences": [
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2-cli-service",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\" and \\"repository.directory\\""
+        },
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/webpack5-vue2#readme",
           "type": "website",
@@ -4327,7 +4329,7 @@ exports[`integration functional: webpack5 with vue2-cli-service generated json f
   ],
   "dependencies": [
     {
-      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli",
+      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2-cli-service",
       "dependsOn": [
         "pkg:npm/vue@2.7.16?vcs_url=git%2Bhttps%3A//github.com/vuejs/vue.git"
       ]
@@ -4388,7 +4390,7 @@ exports[`integration functional: webpack5 with vue2-cli-service generated xml fi
         </externalReferences>
       </tool>
     </tools>
-    <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli">
+    <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2-cli-service">
       <group>@cyclonedx-webpack-plugin-tests</group>
       <name>example-webpack5-vue2-cli</name>
       <description>example setup witch Vue2 in WebPack5</description>
@@ -4397,8 +4399,16 @@ exports[`integration functional: webpack5 with vue2-cli-service generated xml fi
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli</purl>
+      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2-cli-service</purl>
       <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2-cli-service</url>
+          <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
+        </reference>
         <reference type="website">
           <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/webpack5-vue2#readme</url>
           <comment>as detected from PackageJson property "homepage"</comment>
@@ -4435,7 +4445,7 @@ exports[`integration functional: webpack5 with vue2-cli-service generated xml fi
     </component>
   </components>
   <dependencies>
-    <dependency ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli">
+    <dependency ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2-cli-service">
       <dependency ref="pkg:npm/vue@2.7.16?vcs_url=git%2Bhttps%3A//github.com/vuejs/vue.git"/>
     </dependency>
     <dependency ref="pkg:npm/vue@2.7.16?vcs_url=git%2Bhttps%3A//github.com/vuejs/vue.git"/>
