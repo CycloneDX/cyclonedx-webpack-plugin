@@ -15,11 +15,7 @@
       "email": "jan.kowalleck@gmail.com"
     }
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
-    "directory": "tests/integration/webpack5-angular13"
-  },
+  "repository": "CycloneDX/cyclonedx-webpack-plugin",
   "bugs": {
     "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues"
   },

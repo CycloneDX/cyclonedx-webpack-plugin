@@ -17,11 +17,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
-    "directory": "tests/integration/webpack5-angular17"
-  },
-  "bugs": {
-    "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues"
+    "url": "git@gitlab.example.com:demos/webpack5-angular17"
   },
   "engines": {
     "node": ">=14",

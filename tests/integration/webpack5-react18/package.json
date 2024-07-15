@@ -17,8 +17,7 @@
     }
   ],
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
+    "url": "git@github.com/CycloneDX/cyclonedx-webpack-plugin.git",
     "directory": "tests/integration/webpack5-react18"
   },
   "bugs": {
