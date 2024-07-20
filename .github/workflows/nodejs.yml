@@ -153,6 +153,7 @@ jobs:
           name: 'npm-errors'
           path: '/home/runner/.npm/_logs/*.log'
           if-no-files-found: ignore
+          retention-days: 7
       - name: test
         run: npm run test:jest
         env:
