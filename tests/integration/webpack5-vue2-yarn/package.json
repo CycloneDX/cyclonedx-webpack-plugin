@@ -32,7 +32,7 @@
     "vue": "^2.6.14"
   },
   "devDependencies": {
-    "@cyclonedx/webpack-plugin": "portal:../../..",
+    "@cyclonedx/webpack-plugin": "link:../../..",
     "html-inline-script-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^5.5.0",
     "webpack": "^5",
