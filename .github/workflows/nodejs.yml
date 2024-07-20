@@ -145,6 +145,14 @@ jobs:
           path: dist
       - name: setup test beds
         run: npm run setup-tests
+      - name: artifact npm errors
+        if: ${{ failed() }}
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: 'npm-errors'
+          path: '/home/runner/.npm/_logs/*.log'
+          if-no-files-found: ignore
       - name: test
         run: npm run test:jest
         env:
