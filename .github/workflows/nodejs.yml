@@ -82,7 +82,7 @@ jobs:
         node-version:
           # action based on https://github.com/actions/node-versions/releases
           # see also: https://nodejs.org/en/about/previous-releases
-          - "22"      # current
+          - "22.4"      # current -- pinned for https://github.com/npm/cli/issues/7666
           - "20"      # active LTS
           - "18"
           - '16'
