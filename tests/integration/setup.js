@@ -59,7 +59,7 @@ const nodeSV = Object.freeze((process?.versions?.node ?? '').split('.').map(Numb
   for (const DIR of REQUIRES_NPM_INSTALL) {
     console.log('>>> setup with NPM:', DIR)
     const done = spawnSync(
-      'npm', ['ci'], {
+      'npm', ['ci', '--ignore-scripts'], {
         cwd: path.resolve(__dirname, DIR),
         stdio: 'inherit',
         shell: true
@@ -86,7 +86,7 @@ const nodeSV = Object.freeze((process?.versions?.node ?? '').split('.').map(Numb
       continue
     }
     done = spawnSync(
-      'yarn', ['install', '--immutable'], {
+      'yarn', ['install', '--immutable', '--mode=skip-build'], {
         cwd: path.resolve(__dirname, DIR),
         stdio: 'inherit',
         shell: true
