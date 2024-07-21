@@ -6,6 +6,12 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Dependencies
+  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@^6.11.0`, was `@^6.6.0` (via [#1300])  
+    This was done to incorporate non-breaking upstream changes and fixes.
+
+[#1300]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1300
+
 ## 3.12.0 - 2024-06-17
 
 * Changed
