@@ -9,7 +9,10 @@ All notable changes to this project will be documented in this file.
 * Dependencies
   * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@^6.11.0`, was `@^6.6.0` (via [#1300])  
     This was done to incorporate non-breaking upstream changes and fixes.
+* Build
+  * Use _TypeScript_ `v5.5.3` now, was `v5.4.5` (via [#1296])
 
+[#1296]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1296
 [#1300]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1300
 
 ## 3.12.0 - 2024-06-17
