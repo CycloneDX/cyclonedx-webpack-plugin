@@ -1,3 +1,5 @@
+# CycloneDX _webpack_ plugin
+
 [![shield_npm-version]][link_npm]
 [![shield_gh-workflow-test]][link_gh-workflow-test]
 [![shield_coverage]][link_codacy]
@@ -9,8 +11,6 @@
 [![shield_twitter-follow]][link_twitter]
 
 ----
-
-# CycloneDX Webpack Plugin
 
 This plugin for _[webpack]_ creates a _[CycloneDX]_ Software Bill of Materials (SBoM) 
 containing an aggregate of all bundled dependencies.  
