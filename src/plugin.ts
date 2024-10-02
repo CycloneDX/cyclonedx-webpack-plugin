@@ -54,6 +54,13 @@ export interface CycloneDxWebpackPluginOptions {
   validateResults?: CycloneDxWebpackPlugin['validateResults']
 
   /**
+   * Look for common files that may provide licenses or copyrights and attach them to the component as evidence
+   *
+   * @default false
+   */
+  collectEvidence?: boolean
+
+  /**
    * Path to write the output to.
    * The path is relative to webpack's overall output path.
    *
@@ -119,6 +126,7 @@ export class CycloneDxWebpackPlugin {
   specVersion: CDX.Spec.Version
   reproducibleResults: boolean
   validateResults: boolean
+  collectEvidence: boolean
 
   resultXml: string
   resultJson: string
@@ -133,6 +141,7 @@ export class CycloneDxWebpackPlugin {
     specVersion = CDX.Spec.Version.v1dot4,
     reproducibleResults = false,
     validateResults = true,
+    collectEvidence = false,
     outputLocation = './cyclonedx',
     includeWellknown = true,
     wellknownLocation = './.well-known',
@@ -144,6 +153,14 @@ export class CycloneDxWebpackPlugin {
     this.specVersion = specVersion
     this.reproducibleResults = reproducibleResults
     this.validateResults = validateResults
+    this.collectEvidence = collectEvidence
+    // evidence where introduced in v1.3
+    if ([CDX.Spec.Version.v1dot0, CDX.Spec.Version.v1dot1, CDX.Spec.Version.v1dot2].includes(specVersion)) {
+      throw new Error(
+        'Failed to generate valid BOM\n' +
+        'defined spec version has to be 1.3 or higher for collecting evidence'
+      )
+    }
     this.resultXml = joinPath(outputLocation, './bom.xml')
     this.resultJson = joinPath(outputLocation, './bom.json')
     this.resultWellknown = includeWellknown
@@ -221,7 +238,7 @@ export class CycloneDxWebpackPlugin {
       pluginName,
       (_, modules) => {
         const thisLogger = logger.getChildLogger('ComponentFetcher')
-        const extractor = new Extractor(compilation, cdxComponentBuilder, cdxPurlFactory)
+        const extractor = new Extractor(compilation, cdxComponentBuilder, cdxPurlFactory, cdxLicenseFactory, this.collectEvidence)
 
         thisLogger.log('generating components...')
         for (const component of extractor.generateComponents(modules, thisLogger.getChildLogger('Extractor'))) {

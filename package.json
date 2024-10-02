@@ -60,7 +60,7 @@
   ],
   "type": "commonjs",
   "engines": {
-    "node": ">=14"
+    "node": ">=18"
   },
   "dependencies": {
     "@cyclonedx/cyclonedx-library": "^6.11.0",

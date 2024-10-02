@@ -21,7 +21,7 @@ import * as CDX from '@cyclonedx/cyclonedx-library'
 import * as normalizePackageJson from 'normalize-package-data'
 import { type Compilation, type Module } from 'webpack'
 
-import { getPackageDescription, type PackageDescription } from './_helpers'
+import { getComponentEvidence, getPackageDescription, type PackageDescription } from './_helpers'
 
 type WebpackLogger = Compilation['logger']
 
@@ -29,15 +29,21 @@ export class Extractor {
   readonly #compilation: Compilation
   readonly #componentBuilder: CDX.Builders.FromNodePackageJson.ComponentBuilder
   readonly #purlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory
+  readonly #licenseFactory: CDX.Factories.LicenseFactory
+  readonly #collectEvidence: boolean
 
   constructor (
     compilation: Compilation,
     componentBuilder: CDX.Builders.FromNodePackageJson.ComponentBuilder,
-    purlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory
+    purlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory,
+    licenseFactory: CDX.Factories.LicenseFactory,
+    collectEvidence: boolean
   ) {
     this.#compilation = compilation
     this.#componentBuilder = componentBuilder
     this.#purlFactory = purlFactory
+    this.#collectEvidence = collectEvidence
+    this.#licenseFactory = licenseFactory
   }
 
   generateComponents (modules: Iterable<Module>, logger?: WebpackLogger): Iterable<CDX.Models.Component> {
@@ -107,6 +113,14 @@ export class Extractor {
 
     component.purl = this.#purlFactory.makeFromComponent(component)
     component.bomRef.value = component.purl?.toString()
+
+    if (this.#collectEvidence) {
+      try {
+        component.evidence = getComponentEvidence(pkg, this.#licenseFactory)
+      } catch (e) {
+        logger?.warn('collecting Evidence from PkgPath', pkg.path, 'failed:', e)
+      }
+    }
 
     return component
   }
