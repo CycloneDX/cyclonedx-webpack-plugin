@@ -17,16 +17,23 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { readdirSync } from 'node:fs'
-
 import * as CDX from '@cyclonedx/cyclonedx-library'
-import { existsSync, readFileSync } from 'fs'
-import { dirname, isAbsolute, join, sep } from 'path'
+import { existsSync, readdirSync,readFileSync } from 'fs'
+import { dirname, extname, isAbsolute, join, sep } from 'path'
 
 export interface PackageDescription {
   path: string
   packageJson: any
 }
+
+// common file endings that are used for notice/license files
+const contentTypeMap: Record<string, string> = {
+  '': 'text/plain',
+  '.txt': 'text/plain',
+  '.md': 'text/markdown',
+  '.xml': 'text/xml'
+} as const
+const typicalFilenameRex = /^(?:un)?licen[cs]e|notice|copyrightnotice/i
 
 export function getPackageDescription (path: string): PackageDescription | undefined {
   const isSubDirOfNodeModules = isSubDirectoryOfNodeModulesFolder(path)
@@ -85,7 +92,6 @@ export function loadJsonFile (path: string): any {
  * @returns {Array<string>} filepath to files that may contain
  */
 export function searchEvidenceSources (searchFolder: string): Array<{ filepath: string, contentType: string }> {
-  const typicalFilenameRex = /^(un)?licen[cs]e|notice|copyrightnotice/i
   const evidenceFilenames = []
 
   for (const dirent of readdirSync(searchFolder, { withFileTypes: true })) {
@@ -111,19 +117,10 @@ export function searchEvidenceSources (searchFolder: string): Array<{ filepath: 
 
 /**
  * Returns the MIME type for the file or undefined if nothing was matched
- * @param filename
+ * @param {string} filename filename or complete filepath
  */
 export function determineContentType (filename: string): string | undefined {
-  // common file endings that are used for notice/license files
-  const contentTypeMap: Record<string, string> = {
-    '': 'text/plain',
-    txt: 'text/plain',
-    md: 'text/markdown',
-    xml: 'text/xml'
-  }
-  const fileExt = filename.lastIndexOf('.') === -1 ? '' : filename.split('.').at(-1)
-
-  return fileExt !== undefined ? contentTypeMap[fileExt] : undefined
+  return contentTypeMap[extname(filename)]
 }
 
 /**
@@ -132,19 +129,18 @@ export function determineContentType (filename: string): string | undefined {
  * @param licenseFactory
  */
 export function getComponentEvidence (pkg: PackageDescription, licenseFactory: CDX.Factories.LicenseFactory): CDX.Models.ComponentEvidence {
-  const evidenceFilenames = searchEvidenceSources(pkg.path.slice(0, 'package.json'.length * -1))
+  const evidenceFilenames = searchEvidenceSources(dirname(pkg.path))
   const cdxComponentEvidence = new CDX.Models.ComponentEvidence()
 
   evidenceFilenames.forEach(({ contentType, filepath }) => {
-    const encoding = CDX.Enums.AttachmentEncoding.Base64
     const buffer = readFileSync(filepath)
 
     // Add license evidence
     const attachment = licenseFactory.makeDisjunctive(pkg.packageJson.license as string)
     attachment.text = {
       contentType,
-      encoding,
-      content: buffer.toString(encoding)
+      encoding: CDX.Enums.AttachmentEncoding.Base64,
+      content: buffer.toString('base64')
     }
 
     cdxComponentEvidence.licenses.add(attachment)
