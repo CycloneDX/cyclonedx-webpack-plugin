@@ -144,22 +144,6 @@ export function getComponentEvidence (pkg: PackageDescription, licenseFactory: C
     }
 
     cdxComponentEvidence.licenses.add(attachment)
-
-    // Add copyright evidence
-    const linesStartingWithCopyright = buffer.toString('utf-8')
-      .split(/\r\n?|\n/)
-      .map(line => line.trimStart())
-      .filter(trimmedLine => {
-        return trimmedLine.startsWith('opyright', 1) && // include copyright statements
-          !trimmedLine.startsWith('opyright notice', 1) && // exclude lines from license text
-          !trimmedLine.startsWith('opyright and related rights', 1) &&
-          !trimmedLine.startsWith('opyright license to reproduce', 1)
-      })
-      .filter((value, index, list) => index === 0 || value !== list[0]) // remove duplicates
-
-    linesStartingWithCopyright.forEach(line => {
-      cdxComponentEvidence.copyright.add(line)
-    })
   })
 
   return cdxComponentEvidence
