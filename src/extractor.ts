@@ -22,6 +22,7 @@ import * as normalizePackageJson from 'normalize-package-data'
 import { type Compilation, type Module } from 'webpack'
 
 import { getComponentEvidence, getPackageDescription, type PackageDescription } from './_helpers'
+import { type CycloneDxWebpackPluginOptions } from './plugin'
 
 type WebpackLogger = Compilation['logger']
 
@@ -30,23 +31,20 @@ export class Extractor {
   readonly #componentBuilder: CDX.Builders.FromNodePackageJson.ComponentBuilder
   readonly #purlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory
   readonly #licenseFactory: CDX.Factories.LicenseFactory
-  readonly #collectEvidence: boolean
 
   constructor (
     compilation: Compilation,
     componentBuilder: CDX.Builders.FromNodePackageJson.ComponentBuilder,
     purlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory,
-    licenseFactory: CDX.Factories.LicenseFactory,
-    collectEvidence: boolean
+    licenseFactory: CDX.Factories.LicenseFactory
   ) {
     this.#compilation = compilation
     this.#componentBuilder = componentBuilder
     this.#purlFactory = purlFactory
-    this.#collectEvidence = collectEvidence
     this.#licenseFactory = licenseFactory
   }
 
-  generateComponents (modules: Iterable<Module>, logger?: WebpackLogger): Iterable<CDX.Models.Component> {
+  generateComponents (modules: Iterable<Module>, options: CycloneDxWebpackPluginOptions, logger?: WebpackLogger): Iterable<CDX.Models.Component> {
     const pkgs: Record<string, CDX.Models.Component | undefined> = {}
     const components = new Map<Module, CDX.Models.Component>()
 
@@ -65,7 +63,7 @@ export class Extractor {
       if (component === undefined) {
         logger?.log('try to build new Component from PkgPath:', pkg.path)
         try {
-          component = this.makeComponent(pkg, logger)
+          component = this.makeComponent(pkg, options, logger)
         } catch (err) {
           logger?.debug('unexpected error:', err)
           logger?.warn('skipped Component from PkgPath', pkg.path)
@@ -87,7 +85,7 @@ export class Extractor {
   /**
    * @throws {Error} when no component could be fetched
    */
-  makeComponent (pkg: PackageDescription, logger?: WebpackLogger): CDX.Models.Component {
+  makeComponent (pkg: PackageDescription, options: CycloneDxWebpackPluginOptions, logger?: WebpackLogger): CDX.Models.Component {
     try {
       const _packageJson = structuredClonePolyfill(pkg.packageJson)
       normalizePackageJson(_packageJson as object /* add debug for warnings? */)
@@ -114,7 +112,7 @@ export class Extractor {
     component.purl = this.#purlFactory.makeFromComponent(component)
     component.bomRef.value = component.purl?.toString()
 
-    if (this.#collectEvidence) {
+    if (options.collectEvidence === true) {
       try {
         component.evidence = getComponentEvidence(pkg, this.#licenseFactory)
       } catch (e) {

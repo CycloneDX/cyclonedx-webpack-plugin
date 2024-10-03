@@ -238,10 +238,10 @@ export class CycloneDxWebpackPlugin {
       pluginName,
       (_, modules) => {
         const thisLogger = logger.getChildLogger('ComponentFetcher')
-        const extractor = new Extractor(compilation, cdxComponentBuilder, cdxPurlFactory, cdxLicenseFactory, this.collectEvidence)
+        const extractor = new Extractor(compilation, cdxComponentBuilder, cdxPurlFactory, cdxLicenseFactory)
 
         thisLogger.log('generating components...')
-        for (const component of extractor.generateComponents(modules, thisLogger.getChildLogger('Extractor'))) {
+        for (const component of extractor.generateComponents(modules, { collectEvidence: this.collectEvidence }, thisLogger.getChildLogger('Extractor'))) {
           if (bom.metadata.component !== undefined &&
             bom.metadata.component.group === component.group &&
             bom.metadata.component.name === component.name &&
