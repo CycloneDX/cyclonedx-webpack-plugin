@@ -154,13 +154,6 @@ export class CycloneDxWebpackPlugin {
     this.reproducibleResults = reproducibleResults
     this.validateResults = validateResults
     this.collectEvidence = collectEvidence
-    // evidence where introduced in v1.3
-    if ([CDX.Spec.Version.v1dot0, CDX.Spec.Version.v1dot1, CDX.Spec.Version.v1dot2].includes(specVersion)) {
-      throw new Error(
-        'Failed to generate valid BOM\n' +
-        'defined spec version has to be 1.3 or higher for collecting evidence'
-      )
-    }
     this.resultXml = joinPath(outputLocation, './bom.xml')
     this.resultJson = joinPath(outputLocation, './bom.json')
     this.resultWellknown = includeWellknown
