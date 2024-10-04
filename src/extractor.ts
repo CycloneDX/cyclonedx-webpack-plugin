@@ -18,10 +18,12 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import * as CDX from '@cyclonedx/cyclonedx-library'
+import { readFileSync } from 'fs'
 import * as normalizePackageJson from 'normalize-package-data'
+import { basename, dirname } from 'path'
 import { type Compilation, type Module } from 'webpack'
 
-import { getComponentEvidence, getPackageDescription, type PackageDescription } from './_helpers'
+import { getPackageDescription, type PackageDescription, searchEvidenceSources } from './_helpers'
 
 type WebpackLogger = Compilation['logger']
 
@@ -110,7 +112,7 @@ export class Extractor {
 
     if (collectEvidence === true) {
       try {
-        component.evidence = getComponentEvidence(pkg)
+        component.evidence = this.makeComponentEvidence(pkg)
       } catch (e) {
         logger?.warn('collecting Evidence from PkgPath', pkg.path, 'failed:', e)
       }
@@ -128,6 +130,32 @@ export class Extractor {
         }
       }
     }
+  }
+
+  /**
+   * Look for common files that may provide licenses and attach them to the component as evidence
+   * @param pkg
+   */
+  makeComponentEvidence (pkg: PackageDescription): CDX.Models.ComponentEvidence {
+    const cdxComponentEvidence = new CDX.Models.ComponentEvidence()
+
+    // Add license evidence
+    for (const { contentType, filepath } of searchEvidenceSources(dirname(pkg.path))) {
+      cdxComponentEvidence.licenses.add(new CDX.Models.NamedLicense(
+        `file: ${basename(filepath)}`,
+        {
+          text: new CDX.Models.Attachment(
+            readFileSync(filepath).toString('base64'),
+            {
+              contentType,
+              encoding: CDX.Enums.AttachmentEncoding.Base64
+            }
+          )
+        }
+      ))
+    }
+
+    return cdxComponentEvidence
   }
 }
 

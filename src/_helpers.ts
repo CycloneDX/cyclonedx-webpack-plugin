@@ -17,9 +17,8 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import * as CDX from '@cyclonedx/cyclonedx-library'
 import { existsSync, readdirSync, readFileSync } from 'fs'
-import { basename, dirname, extname, isAbsolute, join, sep } from 'path'
+import { dirname, extname, isAbsolute, join, sep } from 'path'
 
 export interface PackageDescription {
   path: string
@@ -122,30 +121,4 @@ const CONTENT_TYPE_MAP: Record<string, string> = {
  */
 export function determineContentType (filename: string): string | undefined {
   return CONTENT_TYPE_MAP[extname(filename)]
-}
-
-/**
- * Look for common files that may provide licenses and attach them to the component as evidence
- * @param pkg
- */
-export function getComponentEvidence (pkg: PackageDescription): CDX.Models.ComponentEvidence {
-  const cdxComponentEvidence = new CDX.Models.ComponentEvidence()
-
-  // Add license evidence
-  for (const { contentType, filepath } of searchEvidenceSources(dirname(pkg.path))) {
-    cdxComponentEvidence.licenses.add(new CDX.Models.NamedLicense(
-      `file: ${basename(filepath)}`,
-      {
-        text: new CDX.Models.Attachment(
-          readFileSync(filepath).toString('base64'),
-          {
-            contentType,
-            encoding: CDX.Enums.AttachmentEncoding.Base64
-          }
-        )
-      }
-    ))
-  }
-
-  return cdxComponentEvidence
 }
