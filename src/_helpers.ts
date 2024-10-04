@@ -26,15 +26,6 @@ export interface PackageDescription {
   packageJson: any
 }
 
-// common file endings that are used for notice/license files
-const contentTypeMap: Record<string, string> = {
-  '': 'text/plain',
-  '.txt': 'text/plain',
-  '.md': 'text/markdown',
-  '.xml': 'text/xml'
-} as const
-const typicalFilenameRex = /^(?:UN)?LICEN[CS]E|NOTICE|COPYRIGHTNOTICE/i
-
 export function getPackageDescription (path: string): PackageDescription | undefined {
   const isSubDirOfNodeModules = isSubDirectoryOfNodeModulesFolder(path)
 
@@ -117,6 +108,15 @@ export function * searchEvidenceSources (searchFolder: string): Generator<{
     }
   }
 }
+
+// common file endings that are used for notice/license files
+const contentTypeMap: Record<string, string> = {
+  '': 'text/plain',
+  '.txt': 'text/plain',
+  '.md': 'text/markdown',
+  '.xml': 'text/xml'
+} as const
+const typicalFilenameRex = /^(?:UN)?LICEN[CS]E|NOTICE|COPYRIGHTNOTICE/i
 
 /**
  * Returns the MIME type for the file or undefined if nothing was matched
