@@ -22,7 +22,6 @@ import * as normalizePackageJson from 'normalize-package-data'
 import { type Compilation, type Module } from 'webpack'
 
 import { getComponentEvidence, getPackageDescription, type PackageDescription } from './_helpers'
-import { type CycloneDxWebpackPluginOptions } from './plugin'
 
 type WebpackLogger = Compilation['logger']
 
@@ -44,7 +43,7 @@ export class Extractor {
     this.#licenseFactory = licenseFactory
   }
 
-  generateComponents (modules: Iterable<Module>, options: CycloneDxWebpackPluginOptions, logger?: WebpackLogger): Iterable<CDX.Models.Component> {
+  generateComponents (modules: Iterable<Module>, collectEvidence?: boolean, logger?: WebpackLogger): Iterable<CDX.Models.Component> {
     const pkgs: Record<string, CDX.Models.Component | undefined> = {}
     const components = new Map<Module, CDX.Models.Component>()
 
@@ -63,7 +62,7 @@ export class Extractor {
       if (component === undefined) {
         logger?.log('try to build new Component from PkgPath:', pkg.path)
         try {
-          component = this.makeComponent(pkg, options, logger)
+          component = this.makeComponent(pkg, collectEvidence, logger)
         } catch (err) {
           logger?.debug('unexpected error:', err)
           logger?.warn('skipped Component from PkgPath', pkg.path)
@@ -85,7 +84,7 @@ export class Extractor {
   /**
    * @throws {Error} when no component could be fetched
    */
-  makeComponent (pkg: PackageDescription, options: CycloneDxWebpackPluginOptions, logger?: WebpackLogger): CDX.Models.Component {
+  makeComponent (pkg: PackageDescription, collectEvidence?: boolean, logger?: WebpackLogger): CDX.Models.Component {
     try {
       const _packageJson = structuredClonePolyfill(pkg.packageJson)
       normalizePackageJson(_packageJson as object /* add debug for warnings? */)
@@ -112,7 +111,7 @@ export class Extractor {
     component.purl = this.#purlFactory.makeFromComponent(component)
     component.bomRef.value = component.purl?.toString()
 
-    if (options.collectEvidence === true) {
+    if (collectEvidence === true) {
       try {
         component.evidence = getComponentEvidence(pkg, this.#licenseFactory)
       } catch (e) {
