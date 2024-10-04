@@ -18,8 +18,8 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import * as CDX from '@cyclonedx/cyclonedx-library'
-import { existsSync, readdirSync,readFileSync } from 'fs'
-import { dirname, extname, isAbsolute, join, sep } from 'path'
+import { existsSync, readdirSync, readFileSync } from 'fs'
+import { basename, dirname, extname, isAbsolute, join, sep } from 'path'
 
 export interface PackageDescription {
   path: string
@@ -139,7 +139,7 @@ export function getComponentEvidence (pkg: PackageDescription, licenseFactory: C
     const buffer = readFileSync(filepath)
 
     // Add license evidence
-    const attachment = licenseFactory.makeDisjunctive(pkg.packageJson.license as string)
+    const attachment = licenseFactory.makeNamedLicense(`file: ${basename(filepath)}`)
     attachment.text = {
       contentType,
       encoding: CDX.Enums.AttachmentEncoding.Base64,
@@ -147,7 +147,7 @@ export function getComponentEvidence (pkg: PackageDescription, licenseFactory: C
     }
 
     cdxComponentEvidence.licenses.add(attachment)
-  })
+  }
 
   return cdxComponentEvidence
 }
