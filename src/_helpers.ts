@@ -76,6 +76,7 @@ export function loadJsonFile (path: string): any {
   // see https://github.com/tc39/proposal-import-attributes
 }
 
+const LICENSE_FILENAME_PATTERN = /^(?:UN)?LICEN[CS]E|NOTICE|COPYRIGHTNOTICE/i
 /**
  * Searches typical files in the package path which have typical a license notice or copyright text inside
  *
@@ -90,7 +91,7 @@ export function * searchEvidenceSources (searchFolder: string): Generator<{
   for (const dirent of readdirSync(searchFolder, { withFileTypes: true })) {
     if (
       !dirent.isFile() ||
-      !typicalFilenameRex.test(dirent.name)
+      !LICENSE_FILENAME_PATTERN.test(dirent.name)
     ) {
       continue
     }
@@ -108,20 +109,19 @@ export function * searchEvidenceSources (searchFolder: string): Generator<{
 }
 
 // common file endings that are used for notice/license files
-const contentTypeMap: Record<string, string> = {
+const CONTENT_TYPE_MAP: Record<string, string> = {
   '': 'text/plain',
   '.txt': 'text/plain',
   '.md': 'text/markdown',
   '.xml': 'text/xml'
 } as const
-const typicalFilenameRex = /^(?:UN)?LICEN[CS]E|NOTICE|COPYRIGHTNOTICE/i
 
 /**
  * Returns the MIME type for the file or undefined if nothing was matched
  * @param {string} filename filename or complete filepath
  */
 export function determineContentType (filename: string): string | undefined {
-  return contentTypeMap[extname(filename)]
+  return CONTENT_TYPE_MAP[extname(filename)]
 }
 
 /**
