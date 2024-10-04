@@ -33,7 +33,7 @@ const contentTypeMap: Record<string, string> = {
   '.md': 'text/markdown',
   '.xml': 'text/xml'
 } as const
-const typicalFilenameRex = /^(?:un)?licen[cs]e|notice|copyrightnotice/i
+const typicalFilenameRex = /^(?:UN)?LICEN[CS]E|NOTICE|COPYRIGHTNOTICE/i
 
 export function getPackageDescription (path: string): PackageDescription | undefined {
   const isSubDirOfNodeModules = isSubDirectoryOfNodeModulesFolder(path)
