@@ -100,10 +100,8 @@ export function * searchEvidenceSources (searchFolder: string): Generator<{
       continue
     }
 
-    const filepath = dirent.parentPath + dirent.name
-
     yield {
-      filepath,
+      filepath: dirent.parentPath + dirent.name,
       contentType
     }
   }
@@ -127,26 +125,26 @@ export function determineContentType (filename: string): string | undefined {
 }
 
 /**
- * Look for common files that may provide licenses or copyrights and attach them to the component as evidence
+ * Look for common files that may provide licenses and attach them to the component as evidence
  * @param pkg
- * @param licenseFactory
  */
-export function getComponentEvidence (pkg: PackageDescription, licenseFactory: CDX.Factories.LicenseFactory): CDX.Models.ComponentEvidence {
-  const evidenceFilenames = searchEvidenceSources(dirname(pkg.path))
+export function getComponentEvidence (pkg: PackageDescription): CDX.Models.ComponentEvidence {
   const cdxComponentEvidence = new CDX.Models.ComponentEvidence()
 
-  for (const { contentType, filepath } of evidenceFilenames) {
-    const buffer = readFileSync(filepath)
-
-    // Add license evidence
-    const attachment = licenseFactory.makeNamedLicense(`file: ${basename(filepath)}`)
-    attachment.text = {
-      contentType,
-      encoding: CDX.Enums.AttachmentEncoding.Base64,
-      content: buffer.toString('base64')
-    }
-
-    cdxComponentEvidence.licenses.add(attachment)
+  // Add license evidence
+  for (const { contentType, filepath } of searchEvidenceSources(dirname(pkg.path))) {
+    cdxComponentEvidence.licenses.add(new CDX.Models.NamedLicense(
+      `file: ${basename(filepath)}`,
+      {
+        text: new CDX.Models.Attachment(
+          readFileSync(filepath).toString('base64'),
+          {
+            contentType,
+            encoding: CDX.Enums.AttachmentEncoding.Base64
+          }
+        )
+      }
+    ))
   }
 
   return cdxComponentEvidence

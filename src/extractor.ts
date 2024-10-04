@@ -29,18 +29,15 @@ export class Extractor {
   readonly #compilation: Compilation
   readonly #componentBuilder: CDX.Builders.FromNodePackageJson.ComponentBuilder
   readonly #purlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory
-  readonly #licenseFactory: CDX.Factories.LicenseFactory
 
   constructor (
     compilation: Compilation,
     componentBuilder: CDX.Builders.FromNodePackageJson.ComponentBuilder,
-    purlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory,
-    licenseFactory: CDX.Factories.LicenseFactory
+    purlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory
   ) {
     this.#compilation = compilation
     this.#componentBuilder = componentBuilder
     this.#purlFactory = purlFactory
-    this.#licenseFactory = licenseFactory
   }
 
   generateComponents (modules: Iterable<Module>, collectEvidence?: boolean, logger?: WebpackLogger): Iterable<CDX.Models.Component> {
@@ -113,7 +110,7 @@ export class Extractor {
 
     if (collectEvidence === true) {
       try {
-        component.evidence = getComponentEvidence(pkg, this.#licenseFactory)
+        component.evidence = getComponentEvidence(pkg)
       } catch (e) {
         logger?.warn('collecting Evidence from PkgPath', pkg.path, 'failed:', e)
       }
