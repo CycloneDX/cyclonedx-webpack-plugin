@@ -15,7 +15,8 @@ module.exports = {
       {
         outputLocation: '.bom',
         reproducibleResults: true,
-        validateResults: true
+        validateResults: true,
+        collectEvidence: true
       }
     )
   ]
