@@ -89,13 +89,18 @@ export function loadJsonFile (path: string): any {
  * Searches typical files in the package path which have typical a license notice or copyright text inside
  *
  * @param {string} searchFolder folder to look for common filenames
- * @returns {Array<string>} filepath to files that may contain
+ *
+ * @yields {{ filepath: string, contentType: string}} Next matching file containing path and MIME type
  */
-export function searchEvidenceSources (searchFolder: string): Array<{ filepath: string, contentType: string }> {
-  const evidenceFilenames = []
-
+export function * searchEvidenceSources (searchFolder: string): Generator<{
+  filepath: string
+  contentType: string
+}> {
   for (const dirent of readdirSync(searchFolder, { withFileTypes: true })) {
-    if (!typicalFilenameRex.test(dirent.name)) {
+    if (
+      !dirent.isFile() ||
+      !typicalFilenameRex.test(dirent.name)
+    ) {
       continue
     }
 
@@ -106,13 +111,11 @@ export function searchEvidenceSources (searchFolder: string): Array<{ filepath: 
 
     const filepath = dirent.parentPath + dirent.name
 
-    evidenceFilenames.push({
+    yield {
       filepath,
       contentType
-    })
+    }
   }
-
-  return evidenceFilenames
 }
 
 /**
@@ -132,7 +135,7 @@ export function getComponentEvidence (pkg: PackageDescription, licenseFactory: C
   const evidenceFilenames = searchEvidenceSources(dirname(pkg.path))
   const cdxComponentEvidence = new CDX.Models.ComponentEvidence()
 
-  evidenceFilenames.forEach(({ contentType, filepath }) => {
+  for (const { contentType, filepath } of evidenceFilenames) {
     const buffer = readFileSync(filepath)
 
     // Add license evidence
