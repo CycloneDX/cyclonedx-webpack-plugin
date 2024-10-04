@@ -101,7 +101,7 @@ export function * searchEvidenceSources (searchFolder: string): Generator<{
     }
 
     yield {
-      filepath: dirent.parentPath + dirent.name,
+      filepath: `${dirent.parentPath}/${dirent.name}`,
       contentType
     }
   }
