@@ -54,7 +54,7 @@ export interface CycloneDxWebpackPluginOptions {
   validateResults?: CycloneDxWebpackPlugin['validateResults']
 
   /**
-   * Look for common files that may provide licenses or copyrights and attach them to the component as evidence
+   * Look for common files that may provide licenses and attach them to the component as evidence
    *
    * @default false
    */

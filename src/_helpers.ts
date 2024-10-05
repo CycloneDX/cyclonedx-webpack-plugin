@@ -75,9 +75,9 @@ export function loadJsonFile (path: string): any {
   // see https://github.com/tc39/proposal-import-attributes
 }
 
-const LICENSE_FILENAME_PATTERN = /^(?:UN)?LICEN[CS]E|NOTICE|COPYRIGHTNOTICE/i
+const LICENSE_FILENAME_PATTERN = /^(?:UN)?LICEN[CS]E|NOTICE/i
 /**
- * Searches typical files in the package path which have typical a license notice or copyright text inside
+ * Searches typical files in the package path which have typical a license notice text inside
  *
  * @param {string} searchFolder folder to look for common filenames
  *
