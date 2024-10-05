@@ -11,8 +11,7 @@ module.exports = {
         specVersion: '1.6',
         outputLocation: '.bom',
         reproducibleResults: true,
-        validateResults: true,
-        collectEvidence: true
+        validateResults: true
       }),
     ],
   },

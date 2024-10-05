@@ -752,8 +752,7 @@ module.exports = function (webpackEnv) {
         specVersion: '1.6',
         outputLocation: '.bom',
         reproducibleResults: true,
-        validateResults: true,
-        collectEvidence: true
+        validateResults: true
       })
     ].filter(Boolean),
     // Turn off performance processing because we utilize

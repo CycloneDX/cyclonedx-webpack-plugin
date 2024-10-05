@@ -30,8 +30,7 @@ module.exports = {
     new CycloneDxWebpackPlugin(
       {
         outputLocation: '.bom',
-        reproducibleResults: true,
-        collectEvidence: true
+        reproducibleResults: true
       }
     )
   ]
