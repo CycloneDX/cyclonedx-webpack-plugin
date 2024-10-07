@@ -49,6 +49,7 @@ new CycloneDxWebpackPlugin(options?: object)
 | **`specVersion`** | `{string}`<br/>one of: `"1.2"`, `"1.3"`, `"1.4"`, `"1.5"`, `"1.6"` | `"1.4"` |  Which version of [CycloneDX-spec] to use.<br/> Supported values depend on the installed dependency [CycloneDX-javascript-library]. |
 | **`reproducibleResults`** | `{boolean}` | `false` | Whether to go the extra mile and make the output reproducible.<br/> Reproducibility might result in loss of time- and random-based-values. |
 | **`validateResults`** | `{boolean}` | `true` | Whether to validate the BOM result.<br/>Validation is skipped, if requirements not met. Requires [transitive optional dependencies](https://github.com/CycloneDX/cyclonedx-javascript-library#optional-dependencies). |
+| **`collectEvidence`** | `{boolean}` | `false` | Look for common files that may provide licenses and attach them to the component as evidence. |
 | **`outputLocation`** | `{string}` | `"./cyclonedx"` | Path to write the output to. The path is relative to _webpack_'s overall output path. |
 | **`includeWellknown`** | `{boolean}` | `true` | Whether to write the Wellknowns. |
 | **`wellknownLocation`** | `{string}` | `"./.well-known"` | Path to write the Wellknowns to. The path is relative to _webpack_'s overall output path. | 

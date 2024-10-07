@@ -54,6 +54,13 @@ export interface CycloneDxWebpackPluginOptions {
   validateResults?: CycloneDxWebpackPlugin['validateResults']
 
   /**
+   * Look for common files that may provide licenses and attach them to the component as evidence
+   *
+   * @default false
+   */
+  collectEvidence?: boolean
+
+  /**
    * Path to write the output to.
    * The path is relative to webpack's overall output path.
    *
@@ -119,6 +126,7 @@ export class CycloneDxWebpackPlugin {
   specVersion: CDX.Spec.Version
   reproducibleResults: boolean
   validateResults: boolean
+  collectEvidence: boolean
 
   resultXml: string
   resultJson: string
@@ -133,6 +141,7 @@ export class CycloneDxWebpackPlugin {
     specVersion = CDX.Spec.Version.v1dot4,
     reproducibleResults = false,
     validateResults = true,
+    collectEvidence = false,
     outputLocation = './cyclonedx',
     includeWellknown = true,
     wellknownLocation = './.well-known',
@@ -144,6 +153,7 @@ export class CycloneDxWebpackPlugin {
     this.specVersion = specVersion
     this.reproducibleResults = reproducibleResults
     this.validateResults = validateResults
+    this.collectEvidence = collectEvidence
     this.resultXml = joinPath(outputLocation, './bom.xml')
     this.resultJson = joinPath(outputLocation, './bom.json')
     this.resultWellknown = includeWellknown
@@ -224,7 +234,7 @@ export class CycloneDxWebpackPlugin {
         const extractor = new Extractor(compilation, cdxComponentBuilder, cdxPurlFactory)
 
         thisLogger.log('generating components...')
-        for (const component of extractor.generateComponents(modules, thisLogger.getChildLogger('Extractor'))) {
+        for (const component of extractor.generateComponents(modules, this.collectEvidence, thisLogger.getChildLogger('Extractor'))) {
           if (bom.metadata.component !== undefined &&
             bom.metadata.component.group === component.group &&
             bom.metadata.component.name === component.name &&

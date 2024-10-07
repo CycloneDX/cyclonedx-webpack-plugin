@@ -17,8 +17,8 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { existsSync, readFileSync } from 'fs'
-import { dirname, isAbsolute, join, sep } from 'path'
+import { existsSync, readdirSync, readFileSync } from 'fs'
+import { dirname, extname, isAbsolute, join, sep } from 'path'
 
 export interface PackageDescription {
   path: string
@@ -73,4 +73,52 @@ export function loadJsonFile (path: string): any {
   // may be replaced by `require(f, { with: { type: "json" } })`
   // as soon as this spec is properly implemented.
   // see https://github.com/tc39/proposal-import-attributes
+}
+
+const LICENSE_FILENAME_PATTERN = /^(?:UN)?LICEN[CS]E|NOTICE/i
+/**
+ * Searches typical files in the package path which have typical a license notice text inside
+ *
+ * @param {string} searchFolder folder to look for common filenames
+ *
+ * @yields {{ filepath: string, contentType: string}} Next matching file containing path and MIME type
+ */
+export function * searchEvidenceSources (searchFolder: string): Generator<{
+  filepath: string
+  contentType: string
+}> {
+  for (const dirent of readdirSync(searchFolder, { withFileTypes: true })) {
+    if (
+      !dirent.isFile() ||
+      !LICENSE_FILENAME_PATTERN.test(dirent.name)
+    ) {
+      continue
+    }
+
+    const contentType = determineContentType(dirent.name)
+    if (contentType === undefined) {
+      continue
+    }
+
+    yield {
+      filepath: `${dirent.parentPath}/${dirent.name}`,
+      contentType
+    }
+  }
+}
+
+// common file endings that are used for notice/license files
+const CONTENT_TYPE_MAP: Record<string, string> = {
+  '': 'text/plain',
+  '.txt': 'text/plain',
+  '.md': 'text/markdown',
+  '.xml': 'text/xml'
+} as const
+
+/**
+ * Returns the MIME type for the file or undefined if nothing was matched
+ * @param {string} filename filename or complete filepath
+ */
+export function determineContentType (filename: string): string | undefined {
+  return CONTENT_TYPE_MAP[extname(filename)]
 }

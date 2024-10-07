@@ -18,10 +18,12 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import * as CDX from '@cyclonedx/cyclonedx-library'
+import { readFileSync } from 'fs'
 import * as normalizePackageJson from 'normalize-package-data'
+import { basename, dirname } from 'path'
 import { type Compilation, type Module } from 'webpack'
 
-import { getPackageDescription, type PackageDescription } from './_helpers'
+import { getPackageDescription, type PackageDescription, searchEvidenceSources } from './_helpers'
 
 type WebpackLogger = Compilation['logger']
 
@@ -40,7 +42,7 @@ export class Extractor {
     this.#purlFactory = purlFactory
   }
 
-  generateComponents (modules: Iterable<Module>, logger?: WebpackLogger): Iterable<CDX.Models.Component> {
+  generateComponents (modules: Iterable<Module>, collectEvidence?: boolean, logger?: WebpackLogger): Iterable<CDX.Models.Component> {
     const pkgs: Record<string, CDX.Models.Component | undefined> = {}
     const components = new Map<Module, CDX.Models.Component>()
 
@@ -59,7 +61,7 @@ export class Extractor {
       if (component === undefined) {
         logger?.log('try to build new Component from PkgPath:', pkg.path)
         try {
-          component = this.makeComponent(pkg, logger)
+          component = this.makeComponent(pkg, collectEvidence, logger)
         } catch (err) {
           logger?.debug('unexpected error:', err)
           logger?.warn('skipped Component from PkgPath', pkg.path)
@@ -81,7 +83,7 @@ export class Extractor {
   /**
    * @throws {Error} when no component could be fetched
    */
-  makeComponent (pkg: PackageDescription, logger?: WebpackLogger): CDX.Models.Component {
+  makeComponent (pkg: PackageDescription, collectEvidence?: boolean, logger?: WebpackLogger): CDX.Models.Component {
     try {
       const _packageJson = structuredClonePolyfill(pkg.packageJson)
       normalizePackageJson(_packageJson as object /* add debug for warnings? */)
@@ -108,6 +110,14 @@ export class Extractor {
     component.purl = this.#purlFactory.makeFromComponent(component)
     component.bomRef.value = component.purl?.toString()
 
+    if (collectEvidence === true) {
+      try {
+        component.evidence = this.makeComponentEvidence(pkg)
+      } catch (e) {
+        logger?.warn('collecting Evidence from PkgPath', pkg.path, 'failed:', e)
+      }
+    }
+
     return component
   }
 
@@ -120,6 +130,32 @@ export class Extractor {
         }
       }
     }
+  }
+
+  /**
+   * Look for common files that may provide licenses and attach them to the component as evidence
+   * @param pkg
+   */
+  makeComponentEvidence (pkg: PackageDescription): CDX.Models.ComponentEvidence {
+    const cdxComponentEvidence = new CDX.Models.ComponentEvidence()
+
+    // Add license evidence
+    for (const { contentType, filepath } of searchEvidenceSources(dirname(pkg.path))) {
+      cdxComponentEvidence.licenses.add(new CDX.Models.NamedLicense(
+        `file: ${basename(filepath)}`,
+        {
+          text: new CDX.Models.Attachment(
+            readFileSync(filepath).toString('base64'),
+            {
+              contentType,
+              encoding: CDX.Enums.AttachmentEncoding.Base64
+            }
+          )
+        }
+      ))
+    }
+
+    return cdxComponentEvidence
   }
 }
 
