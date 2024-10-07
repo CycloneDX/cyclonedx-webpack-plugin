@@ -6,9 +6,9 @@ exports[`integration feature: component evidence generated json file: dist/.bom/
   "bomFormat": "CycloneDX",
   "specVersion": "1.4",
   "version": 1,
-  "serialNumber": "urn:uuid:78d4e8c8-5d64-46c7-b17e-f48ca5992e7a",
+  "serialNumber": "urn:uuid:6c02b6a6-7a2f-4926-873c-5d66fed4ef40",
   "metadata": {
-    "timestamp": "2024-10-07T15:41:56.504Z",
+    "timestamp": "2024-10-07T16:23:11.575Z",
     "tools": [
       {
         "vendor": "@cyclonedx",
@@ -617,9 +617,9 @@ exports[`integration feature: component evidence generated json file: dist/.well
   "bomFormat": "CycloneDX",
   "specVersion": "1.4",
   "version": 1,
-  "serialNumber": "urn:uuid:78d4e8c8-5d64-46c7-b17e-f48ca5992e7a",
+  "serialNumber": "urn:uuid:6c02b6a6-7a2f-4926-873c-5d66fed4ef40",
   "metadata": {
-    "timestamp": "2024-10-07T15:41:56.504Z",
+    "timestamp": "2024-10-07T16:23:11.575Z",
     "tools": [
       {
         "vendor": "@cyclonedx",
@@ -1224,9 +1224,9 @@ exports[`integration feature: component evidence generated json file: dist/.well
 
 exports[`integration feature: component evidence generated xml file: dist/.bom/bom.xml 1`] = `
 "<?xml version="1.0" encoding="UTF-8"?>
-<bom xmlns="http://cyclonedx.org/schema/bom/1.4" version="1" serialNumber="urn:uuid:78d4e8c8-5d64-46c7-b17e-f48ca5992e7a">
+<bom xmlns="http://cyclonedx.org/schema/bom/1.4" version="1" serialNumber="urn:uuid:6c02b6a6-7a2f-4926-873c-5d66fed4ef40">
   <metadata>
-    <timestamp>2024-10-07T15:41:56.504Z</timestamp>
+    <timestamp>2024-10-07T16:23:11.575Z</timestamp>
     <tools>
       <tool>
         <vendor>@cyclonedx</vendor>
