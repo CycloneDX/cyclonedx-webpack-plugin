@@ -18,12 +18,12 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import * as CDX from '@cyclonedx/cyclonedx-library'
-import { readFileSync } from 'fs'
+import { readdirSync, readFileSync } from 'fs'
 import * as normalizePackageJson from 'normalize-package-data'
-import { basename, dirname } from 'path'
+import { dirname, join } from 'path'
 import type { Compilation, Module } from 'webpack'
 
-import { getPackageDescription, isNonNullable, type PackageDescription, searchEvidenceSources, structuredClonePolyfill } from './_helpers'
+import { getMimeForTextFile, getPackageDescription, isNonNullable, type PackageDescription, structuredClonePolyfill } from './_helpers'
 
 type WebpackLogger = Compilation['logger']
 
@@ -42,7 +42,7 @@ export class Extractor {
     this.#purlFactory = purlFactory
   }
 
-  generateComponents (modules: Iterable<Module>, collectEvidence?: boolean, logger?: WebpackLogger): Iterable<CDX.Models.Component> {
+  generateComponents (modules: Iterable<Module>, collectEvidence: boolean, logger?: WebpackLogger): Iterable<CDX.Models.Component> {
     const pkgs: Record<string, CDX.Models.Component | undefined> = {}
     const components = new Map<Module, CDX.Models.Component>()
 
@@ -83,7 +83,7 @@ export class Extractor {
   /**
    * @throws {Error} when no component could be fetched
    */
-  makeComponent (pkg: PackageDescription, collectEvidence?: boolean, logger?: WebpackLogger): CDX.Models.Component {
+  makeComponent (pkg: PackageDescription, collectEvidence: boolean, logger?: WebpackLogger): CDX.Models.Component {
     try {
       const _packageJson = structuredClonePolyfill(pkg.packageJson)
       normalizePackageJson(_packageJson as object /* add debug for warnings? */)
@@ -107,16 +107,14 @@ export class Extractor {
       l.acknowledgement = CDX.Enums.LicenseAcknowledgement.Declared
     })
 
+    if (collectEvidence) {
+      component.evidence = new CDX.Models.ComponentEvidence({
+        licenses: new CDX.Models.LicenseRepository(this.getLicenseEvidence(dirname(pkg.path), logger))
+      })
+    }
+
     component.purl = this.#purlFactory.makeFromComponent(component)
     component.bomRef.value = component.purl?.toString()
-
-    if (collectEvidence === true) {
-      try {
-        component.evidence = this.makeComponentEvidence(pkg)
-      } catch (e) {
-        logger?.warn('collecting Evidence from PkgPath', pkg.path, 'failed:', e)
-      }
-    }
 
     return component
   }
@@ -132,29 +130,45 @@ export class Extractor {
     }
   }
 
-  /**
-   * Look for common files that may provide licenses and attach them to the component as evidence
-   * @param pkg
-   */
-  makeComponentEvidence (pkg: PackageDescription): CDX.Models.ComponentEvidence {
-    const cdxComponentEvidence = new CDX.Models.ComponentEvidence()
+  readonly #LICENSE_FILENAME_PATTERN = /^(?:UN)?LICEN[CS]E|^NOTICE$/i
 
-    // Add license evidence
-    for (const { contentType, filepath } of searchEvidenceSources(dirname(pkg.path))) {
-      cdxComponentEvidence.licenses.add(new CDX.Models.NamedLicense(
-        `file: ${basename(filepath)}`,
-        {
-          text: new CDX.Models.Attachment(
-            readFileSync(filepath).toString('base64'),
-            {
-              contentType,
-              encoding: CDX.Enums.AttachmentEncoding.Base64
-            }
-          )
-        }
-      ))
+  public * getLicenseEvidence (packageDir: string, logger?: WebpackLogger): Generator<CDX.Models.License> {
+    let pcis
+    try {
+      pcis = readdirSync(packageDir, { withFileTypes: true })
+    } catch (e) {
+      logger?.warn('collecting license evidence in', packageDir, 'failed:', e)
+      return
     }
+    for (const pci of pcis) {
+      if (
+        !pci.isFile() ||
+        !this.#LICENSE_FILENAME_PATTERN.test(pci.name)
+      ) {
+        continue
+      }
 
-    return cdxComponentEvidence
+      const contentType = getMimeForTextFile(pci.name)
+      if (contentType === undefined) {
+        continue
+      }
+
+      const fp = join(packageDir, pci.name)
+      try {
+        yield new CDX.Models.NamedLicense(
+          `file: ${pci.name}`,
+          {
+            text: new CDX.Models.Attachment(
+              readFileSync(fp).toString('base64'),
+              {
+                contentType,
+                encoding: CDX.Enums.AttachmentEncoding.Base64
+              }
+            )
+          })
+      } catch (e) { // may throw if `readFileSync()` fails
+        logger?.warn('collecting license evidence from', fp, 'failed:', e)
+      }
+    }
   }
 }

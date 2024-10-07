@@ -17,7 +17,7 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { existsSync, readdirSync, readFileSync } from 'fs'
+import { existsSync, readFileSync } from 'fs'
 import { dirname, extname, isAbsolute, join, sep } from 'path'
 
 export function isNonNullable<T> (value: T): value is NonNullable<T> {
@@ -88,50 +88,20 @@ export function loadJsonFile (path: string): any {
   // see https://github.com/tc39/proposal-import-attributes
 }
 
-const LICENSE_FILENAME_PATTERN = /^(?:UN)?LICEN[CS]E|NOTICE/i
-/**
- * Searches typical files in the package path which have typical a license notice text inside
- *
- * @param {string} searchFolder folder to look for common filenames
- *
- * @yields {{ filepath: string, contentType: string}} Next matching file containing path and MIME type
- */
-export function * searchEvidenceSources (searchFolder: string): Generator<{
-  filepath: string
-  contentType: string
-}> {
-  for (const dirent of readdirSync(searchFolder, { withFileTypes: true })) {
-    if (
-      !dirent.isFile() ||
-      !LICENSE_FILENAME_PATTERN.test(dirent.name)
-    ) {
-      continue
-    }
+// region MIME
 
-    const contentType = determineContentType(dirent.name)
-    if (contentType === undefined) {
-      continue
-    }
+export type MimeType = string
 
-    yield {
-      filepath: `${dirent.parentPath}/${dirent.name}`,
-      contentType
-    }
-  }
-}
-
-// common file endings that are used for notice/license files
-const CONTENT_TYPE_MAP: Record<string, string> = {
+const MAP_TEXT_EXTENSION_MIME: Readonly<Record<string, MimeType>> = {
   '': 'text/plain',
-  '.txt': 'text/plain',
   '.md': 'text/markdown',
-  '.xml': 'text/xml'
+  '.rst': 'text/prs.fallenstein.rst',
+  '.txt': 'text/plain',
+  '.xml': 'text/xml' // not `application/xml` -- our scope is text!
 } as const
 
-/**
- * Returns the MIME type for the file or undefined if nothing was matched
- * @param {string} filename filename or complete filepath
- */
-export function determineContentType (filename: string): string | undefined {
-  return CONTENT_TYPE_MAP[extname(filename)]
+export function getMimeForTextFile (filename: string): MimeType | undefined {
+  return MAP_TEXT_EXTENSION_MIME[extname(filename)]
 }
+
+// endregion MIME
