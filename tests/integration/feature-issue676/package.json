@@ -1,0 +1,58 @@
+{
+  "private": true,
+  "name": "@cyclonedx-webpack-plugin-tests/feature-issue676",
+  "version": "0.0.0",
+  "description": "example setup for testing evidence collection",
+  "homepage": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/feature-issue676#readme",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Jan Kowalleck",
+    "email": "jan.kowalleck@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Jan Kowalleck",
+      "email": "jan.kowalleck@gmail.com"
+    },
+    {
+      "name": "Frozen_byte",
+      "url": "https://github.com/Frozen-byte"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.example.com:demos/feature-issue676"
+  },
+  "engines": {
+    "node": ">=14",
+    "npm": ">=8"
+  },
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development"
+  },
+  "dependencies": {
+    "@angular/animations": "^18.2.7",
+    "@angular/common": "^18.2.7",
+    "@angular/compiler": "^18.2.7",
+    "@angular/core": "^18.2.7",
+    "@angular/forms": "^18.2.7",
+    "@angular/platform-browser": "^18.2.7",
+    "@angular/platform-browser-dynamic": "^18.2.7",
+    "@angular/router": "^18.2.7",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.10"
+  },
+  "devDependencies": {
+    "@angular-builders/custom-webpack": "^18.0.0",
+    "@angular/build": "^18.2.7",
+    "@angular/cli": "^18.2.7",
+    "@angular/compiler-cli": "^18.2.7",
+    "@cyclonedx/webpack-plugin": "file:../../..",
+    "typescript": "~5.4.2",
+    "webpack": "^5"
+  }
+}
