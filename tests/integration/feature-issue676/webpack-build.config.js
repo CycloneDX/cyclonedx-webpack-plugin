@@ -5,6 +5,7 @@ const cycloneDxWebpackPluginOptions = new CycloneDxWebpackPlugin({
   specVersion: '1.4',
   outputLocation: '.bom',
   collectEvidence: true,
+  reproducibleResults: true
 })
 
 module.exports = {
