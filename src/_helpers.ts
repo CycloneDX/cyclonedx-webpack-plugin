@@ -20,16 +20,27 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 import { existsSync, readdirSync, readFileSync } from 'fs'
 import { dirname, extname, isAbsolute, join, sep } from 'path'
 
+export function isNonNullable<T> (value: T): value is NonNullable<T> {
+  // NonNullable: not null and not undefined
+  return value !== null && value !== undefined
+}
+
+export const structuredClonePolyfill: <T>(value: T) => T = typeof structuredClone === 'function'
+  ? structuredClone
+  : function (value) { return JSON.parse(JSON.stringify(value)) }
+
 export interface PackageDescription {
   path: string
   packageJson: any
 }
 
+const PACKAGE_MANIFEST_FILENAME = 'package.json'
+
 export function getPackageDescription (path: string): PackageDescription | undefined {
   const isSubDirOfNodeModules = isSubDirectoryOfNodeModulesFolder(path)
 
   while (isAbsolute(path)) {
-    const pathToPackageJson = join(path, 'package.json')
+    const pathToPackageJson = join(path, PACKAGE_MANIFEST_FILENAME)
     if (existsSync(pathToPackageJson)) {
       try {
         const contentOfPackageJson = loadJsonFile(pathToPackageJson) ?? {}
@@ -37,7 +48,7 @@ export function getPackageDescription (path: string): PackageDescription | undef
         if (!isSubDirOfNodeModules || isValidPackageJSON(contentOfPackageJson)) {
           return {
             path: pathToPackageJson,
-            packageJson: loadJsonFile(pathToPackageJson) ?? {}
+            packageJson: contentOfPackageJson
           }
         }
       } catch {
@@ -54,12 +65,14 @@ export function getPackageDescription (path: string): PackageDescription | undef
   return undefined
 }
 
+const NODE_MODULES_FOLDERNAME = 'node_modules'
+
 function isNodeModulesFolder (path: string): boolean {
-  return path.endsWith(`${sep}node_modules`)
+  return path.endsWith(`${sep}${NODE_MODULES_FOLDERNAME}`)
 }
 
 function isSubDirectoryOfNodeModulesFolder (path: string): boolean {
-  return path.includes(`${sep}node_modules${sep}`)
+  return path.includes(`${sep}${NODE_MODULES_FOLDERNAME}${sep}`)
 }
 
 export function isValidPackageJSON (pkg: any): boolean {
