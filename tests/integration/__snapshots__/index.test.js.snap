@@ -2,11 +2,16 @@
 
 exports[`integration feature: component evidence generated json file: dist/.bom/bom.json 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.4",
+  "specVersion": "1.6",
   "version": 1,
   "metadata": {
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
     "tools": [
       {
         "vendor": "@cyclonedx",
@@ -64,7 +69,8 @@ exports[`integration feature: component evidence generated json file: dist/.bom/
       "licenses": [
         {
           "license": {
-            "id": "Apache-2.0"
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -119,7 +125,8 @@ exports[`integration feature: component evidence generated json file: dist/.bom/
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -167,7 +174,8 @@ exports[`integration feature: component evidence generated json file: dist/.bom/
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -215,7 +223,8 @@ exports[`integration feature: component evidence generated json file: dist/.bom/
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -263,7 +272,8 @@ exports[`integration feature: component evidence generated json file: dist/.bom/
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -311,7 +321,8 @@ exports[`integration feature: component evidence generated json file: dist/.bom/
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -358,7 +369,8 @@ exports[`integration feature: component evidence generated json file: dist/.bom/
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -405,7 +417,8 @@ exports[`integration feature: component evidence generated json file: dist/.bom/
       "licenses": [
         {
           "license": {
-            "id": "Apache-2.0"
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -452,7 +465,8 @@ exports[`integration feature: component evidence generated json file: dist/.bom/
       "licenses": [
         {
           "license": {
-            "id": "0BSD"
+            "id": "0BSD",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -499,7 +513,8 @@ exports[`integration feature: component evidence generated json file: dist/.bom/
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -601,11 +616,16 @@ exports[`integration feature: component evidence generated json file: dist/.bom/
 
 exports[`integration feature: component evidence generated json file: dist/.well-known/sbom 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.4",
+  "specVersion": "1.6",
   "version": 1,
   "metadata": {
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
     "tools": [
       {
         "vendor": "@cyclonedx",
@@ -663,7 +683,8 @@ exports[`integration feature: component evidence generated json file: dist/.well
       "licenses": [
         {
           "license": {
-            "id": "Apache-2.0"
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -718,7 +739,8 @@ exports[`integration feature: component evidence generated json file: dist/.well
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -766,7 +788,8 @@ exports[`integration feature: component evidence generated json file: dist/.well
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -814,7 +837,8 @@ exports[`integration feature: component evidence generated json file: dist/.well
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -862,7 +886,8 @@ exports[`integration feature: component evidence generated json file: dist/.well
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -910,7 +935,8 @@ exports[`integration feature: component evidence generated json file: dist/.well
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -957,7 +983,8 @@ exports[`integration feature: component evidence generated json file: dist/.well
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -1004,7 +1031,8 @@ exports[`integration feature: component evidence generated json file: dist/.well
       "licenses": [
         {
           "license": {
-            "id": "Apache-2.0"
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -1051,7 +1079,8 @@ exports[`integration feature: component evidence generated json file: dist/.well
       "licenses": [
         {
           "license": {
-            "id": "0BSD"
+            "id": "0BSD",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -1098,7 +1127,8 @@ exports[`integration feature: component evidence generated json file: dist/.well
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -1200,8 +1230,13 @@ exports[`integration feature: component evidence generated json file: dist/.well
 
 exports[`integration feature: component evidence generated xml file: dist/.bom/bom.xml 1`] = `
 "<?xml version="1.0" encoding="UTF-8"?>
-<bom xmlns="http://cyclonedx.org/schema/bom/1.4" version="1">
+<bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
   <metadata>
+    <lifecycles>
+      <lifecycle>
+        <phase>build</phase>
+      </lifecycle>
+    </lifecycles>
     <tools>
       <tool>
         <vendor>@cyclonedx</vendor>
@@ -1249,7 +1284,7 @@ exports[`integration feature: component evidence generated xml file: dist/.bom/b
       <version>0.0.0</version>
       <description>example setup for testing evidence collection</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>Apache-2.0</id>
         </license>
       </licenses>
@@ -1286,7 +1321,7 @@ exports[`integration feature: component evidence generated xml file: dist/.bom/b
       <version>18.2.7</version>
       <description>Angular - commonly needed directives and services</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -1321,7 +1356,7 @@ exports[`integration feature: component evidence generated xml file: dist/.bom/b
       <version>18.2.7</version>
       <description>Angular - the core framework</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -1356,7 +1391,7 @@ exports[`integration feature: component evidence generated xml file: dist/.bom/b
       <version>18.2.7</version>
       <description>Angular - library for using Angular in a web browser</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -1391,7 +1426,7 @@ exports[`integration feature: component evidence generated xml file: dist/.bom/b
       <version>18.2.7</version>
       <description>Angular - the routing library</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -1426,7 +1461,7 @@ exports[`integration feature: component evidence generated xml file: dist/.bom/b
       <version>7.25.0</version>
       <description>babel's modular runtime helpers</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -1460,7 +1495,7 @@ exports[`integration feature: component evidence generated xml file: dist/.bom/b
       <version>7.1.2</version>
       <description>css loader module for webpack</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -1494,7 +1529,7 @@ exports[`integration feature: component evidence generated xml file: dist/.bom/b
       <version>7.8.1</version>
       <description>Reactive Extensions for modern JavaScript</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>Apache-2.0</id>
         </license>
       </licenses>
@@ -1528,7 +1563,7 @@ exports[`integration feature: component evidence generated xml file: dist/.bom/b
       <version>2.6.3</version>
       <description>Runtime library for TypeScript helper functions</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>0BSD</id>
         </license>
       </licenses>
@@ -1562,7 +1597,7 @@ exports[`integration feature: component evidence generated xml file: dist/.bom/b
       <version>0.14.10</version>
       <description>Zones for JavaScript</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
