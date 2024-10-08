@@ -110,7 +110,7 @@ export interface CycloneDxWebpackPluginOptions {
    *
    * @default false
    */
-  collectEvidence?: boolean
+  collectEvidence?: CycloneDxWebpackPlugin['collectEvidence']
 }
 
 class ValidationError extends Error {
