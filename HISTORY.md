@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file.
 <!-- unreleased changes go here -->
 
 * Added
-  * Feature for collecting (license) evidence ([#676] via [#1309])  
+  * Feature for collecting (license) evidence ([#676] via [#1309], [#1312])  
     Controlled with option `collectEvidence`, disabled by default.
 * Build
   * Use _TypeScript_ `v5.6.2` now, was `v5.5.3` (via [#1302], [#1306])
@@ -16,6 +16,7 @@ All notable changes to this project will be documented in this file.
 [#1302]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1302
 [#1306]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1306
 [#1309]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1309
+[#1312]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1312
 
 ## 3.13.0 - 2024-07-21
 

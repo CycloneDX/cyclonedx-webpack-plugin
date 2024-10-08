@@ -4,8 +4,9 @@ const { CycloneDxWebpackPlugin } = require('@cyclonedx/webpack-plugin')
 const cycloneDxWebpackPluginOptions = new CycloneDxWebpackPlugin({
   specVersion: '1.4',
   outputLocation: '.bom',
-  collectEvidence: true,
-  reproducibleResults: true
+  reproducibleResults: true,
+  validateResults: true,
+  collectEvidence: true
 })
 
 module.exports = {
