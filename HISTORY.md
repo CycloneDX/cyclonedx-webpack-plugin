@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 3.14.0 - 2024-10-08
+
 * Added
   * Feature for collecting (license) evidence ([#676] via [#1309], [#1312])  
     Controlled with option `collectEvidence`, disabled by default.
