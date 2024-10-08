@@ -2,11 +2,11 @@ const { CycloneDxWebpackPlugin } = require('@cyclonedx/webpack-plugin')
 
 /** @type {import('@cyclonedx/webpack-plugin').CycloneDxWebpackPluginOptions} */
 const cycloneDxWebpackPluginOptions = new CycloneDxWebpackPlugin({
-  specVersion: '1.4',
+  specVersion: '1.6', // feature is emitted in CDX >= 1.3
   outputLocation: '.bom',
   reproducibleResults: true,
   validateResults: true,
-  collectEvidence: true
+  collectEvidence: true // <<< this enables the feature
 })
 
 module.exports = {
