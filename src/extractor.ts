@@ -21,9 +21,9 @@ import * as CDX from '@cyclonedx/cyclonedx-library'
 import { readFileSync } from 'fs'
 import * as normalizePackageJson from 'normalize-package-data'
 import { basename, dirname } from 'path'
-import { type Compilation, type Module } from 'webpack'
+import type { Compilation, Module } from 'webpack'
 
-import { getPackageDescription, type PackageDescription, searchEvidenceSources } from './_helpers'
+import { getPackageDescription, isNonNullable, type PackageDescription, searchEvidenceSources, structuredClonePolyfill } from './_helpers'
 
 type WebpackLogger = Compilation['logger']
 
@@ -158,12 +158,3 @@ export class Extractor {
     return cdxComponentEvidence
   }
 }
-
-function isNonNullable<T> (value: T): value is NonNullable<T> {
-  // NonNullable: not null and not undefined
-  return value !== null && value !== undefined
-}
-
-const structuredClonePolyfill: <T>(value: T) => T = typeof structuredClone === 'function'
-  ? structuredClone
-  : function (value) { return JSON.parse(JSON.stringify(value)) }
