@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 3.15.0 - 2024-10-19
+
 * Added
   * Extended license evidence collection to also find `*.LICEN[CS]E` files ([#1321] via [#1322])
 * Build
