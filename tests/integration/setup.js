@@ -74,19 +74,7 @@ const nodeSV = Object.freeze((process?.versions?.node ?? '').split('.').map(Numb
 
   for (const DIR of REQUIRES_YARN_INSTALL) {
     console.log('>>> setup with YARN:', DIR)
-    let done = spawnSync(
-      'yarn', ['set', 'version', 'stable'], {
-        cwd: path.resolve(__dirname, DIR),
-        stdio: 'inherit',
-        shell: true
-      }
-    )
-    if (done.status !== 0) {
-      ++process.exitCode
-      console.error(done)
-      continue
-    }
-    done = spawnSync(
+    const done = spawnSync(
       'yarn', ['install', '--immutable', '--mode=skip-build'], {
         cwd: path.resolve(__dirname, DIR),
         stdio: 'inherit',
