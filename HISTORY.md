@@ -6,6 +6,12 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Added
+  * Extended license evidence collection to also find `*.LICEN[CS]E` files ([#1321] via [#1322])
+
+[#1321]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1321
+[#1322]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1322
+
 ## 3.14.0 - 2024-10-08
 
 * Added
