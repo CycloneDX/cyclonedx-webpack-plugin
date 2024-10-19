@@ -8,7 +8,7 @@ All notable changes to this project will be documented in this file.
 
 * Added
   * Extended license evidence collection to also find `*.LICEN[CS]E` files ([#1321] via [#1322])
- * Build
+* Build
   * Use _TypeScript_ `v5.6.3` now, was `v5.6.2` (via [#1320])
 
 [#1320]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1320
