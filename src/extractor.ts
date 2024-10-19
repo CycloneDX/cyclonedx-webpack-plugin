@@ -130,7 +130,7 @@ export class Extractor {
     }
   }
 
-  readonly #LICENSE_FILENAME_PATTERN = /^(?:UN)?LICEN[CS]E|^NOTICE$/i
+  readonly #LICENSE_FILENAME_PATTERN = /^(?:UN)?LICEN[CS]E|.\.LICEN[CS]E$|^NOTICE$/i
 
   public * getLicenseEvidence (packageDir: string, logger?: WebpackLogger): Generator<CDX.Models.License> {
     let pcis
@@ -143,7 +143,7 @@ export class Extractor {
     for (const pci of pcis) {
       if (
         !pci.isFile() ||
-        !this.#LICENSE_FILENAME_PATTERN.test(pci.name)
+        !this.#LICENSE_FILENAME_PATTERN.test(pci.name.toLowerCase())
       ) {
         continue
       }

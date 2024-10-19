@@ -94,6 +94,8 @@ export type MimeType = string
 
 const MAP_TEXT_EXTENSION_MIME: Readonly<Record<string, MimeType>> = {
   '': 'text/plain',
+  '.license': 'text/plain',
+  '.licence': 'text/plain',
   '.md': 'text/markdown',
   '.rst': 'text/prs.fallenstein.rst',
   '.txt': 'text/plain',
@@ -101,7 +103,7 @@ const MAP_TEXT_EXTENSION_MIME: Readonly<Record<string, MimeType>> = {
 } as const
 
 export function getMimeForTextFile (filename: string): MimeType | undefined {
-  return MAP_TEXT_EXTENSION_MIME[extname(filename)]
+  return MAP_TEXT_EXTENSION_MIME[extname(filename).toLowerCase()]
 }
 
 // endregion MIME
