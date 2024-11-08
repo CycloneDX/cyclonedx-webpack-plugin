@@ -143,7 +143,7 @@ export class Extractor {
     for (const pci of pcis) {
       if (
         !pci.isFile() ||
-        !this.#LICENSE_FILENAME_PATTERN.test(pci.name.toLowerCase())
+        !this.#LICENSE_FILENAME_PATTERN.test(pci.name)
       ) {
         continue
       }
