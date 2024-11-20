@@ -47,7 +47,7 @@ exports[`integration feature: component evidence generated json file: dist/.bom/
           ]
         },
         {
-          "type": "application",
+          "type": "library",
           "name": "webpack-plugin",
           "group": "@cyclonedx",
           "version": "thisVersion-testing",
@@ -78,8 +78,7 @@ exports[`integration feature: component evidence generated json file: dist/.bom/
             }
           ]
         }
-      ],
-      "services": []
+      ]
     },
     "component": {
       "type": "application",
@@ -694,7 +693,7 @@ exports[`integration feature: component evidence generated json file: dist/.well
           ]
         },
         {
-          "type": "application",
+          "type": "library",
           "name": "webpack-plugin",
           "group": "@cyclonedx",
           "version": "thisVersion-testing",
@@ -725,8 +724,7 @@ exports[`integration feature: component evidence generated json file: dist/.well
             }
           ]
         }
-      ],
-      "services": []
+      ]
     },
     "component": {
       "type": "application",
@@ -1309,7 +1307,7 @@ exports[`integration feature: component evidence generated xml file: dist/.bom/b
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.0.0-beta.1</version>
+          <version>7.0.0-beta.2</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -1331,7 +1329,7 @@ exports[`integration feature: component evidence generated xml file: dist/.bom/b
             </reference>
           </externalReferences>
         </component>
-        <component type="application">
+        <component type="library">
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>webpack-plugin</name>
@@ -1358,7 +1356,6 @@ exports[`integration feature: component evidence generated xml file: dist/.bom/b
           </externalReferences>
         </component>
       </components>
-      <services/>
     </tools>
     <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/feature-issue676@0.0.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40gitlab.example.com%2Fdemos%2Ffeature-issue676">
       <author>Jan Kowalleck</author>
@@ -2447,7 +2444,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
           ]
         },
         {
-          "type": "application",
+          "type": "library",
           "name": "webpack-plugin",
           "group": "@cyclonedx",
           "version": "thisVersion-testing",
@@ -2478,8 +2475,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
             }
           ]
         }
-      ],
-      "services": []
+      ]
     },
     "component": {
       "type": "application",
@@ -2855,7 +2851,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
           ]
         },
         {
-          "type": "application",
+          "type": "library",
           "name": "webpack-plugin",
           "group": "@cyclonedx",
           "version": "thisVersion-testing",
@@ -2886,8 +2882,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
             }
           ]
         }
-      ],
-      "services": []
+      ]
     },
     "component": {
       "type": "application",
@@ -3231,7 +3226,7 @@ exports[`integration functional: webpack5 with angular13 generated xml file: dis
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.0.0-beta.1</version>
+          <version>7.0.0-beta.2</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -3253,7 +3248,7 @@ exports[`integration functional: webpack5 with angular13 generated xml file: dis
             </reference>
           </externalReferences>
         </component>
-        <component type="application">
+        <component type="library">
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>webpack-plugin</name>
@@ -3280,7 +3275,6 @@ exports[`integration functional: webpack5 with angular13 generated xml file: dis
           </externalReferences>
         </component>
       </components>
-      <services/>
     </tools>
     <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git">
       <author>Jan Kowalleck</author>
@@ -3571,7 +3565,7 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
           ]
         },
         {
-          "type": "application",
+          "type": "library",
           "name": "webpack-plugin",
           "group": "@cyclonedx",
           "version": "thisVersion-testing",
@@ -3602,8 +3596,7 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
             }
           ]
         }
-      ],
-      "services": []
+      ]
     },
     "component": {
       "type": "application",
@@ -4059,7 +4052,7 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
           ]
         },
         {
-          "type": "application",
+          "type": "library",
           "name": "webpack-plugin",
           "group": "@cyclonedx",
           "version": "thisVersion-testing",
@@ -4090,8 +4083,7 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
             }
           ]
         }
-      ],
-      "services": []
+      ]
     },
     "component": {
       "type": "application",
@@ -4515,7 +4507,7 @@ exports[`integration functional: webpack5 with angular17 generated xml file: dis
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.0.0-beta.1</version>
+          <version>7.0.0-beta.2</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -4537,7 +4529,7 @@ exports[`integration functional: webpack5 with angular17 generated xml file: dis
             </reference>
           </externalReferences>
         </component>
-        <component type="application">
+        <component type="library">
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>webpack-plugin</name>
@@ -4564,7 +4556,6 @@ exports[`integration functional: webpack5 with angular17 generated xml file: dis
           </externalReferences>
         </component>
       </components>
-      <services/>
     </tools>
     <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0?vcs_url=git%2Bssh%3A%2F%2Fgit%40gitlab.example.com%2Fdemos%2Fwebpack5-angular17">
       <author>Jan Kowalleck</author>
@@ -4915,7 +4906,7 @@ exports[`integration functional: webpack5 with react18 generated json file: dist
           ]
         },
         {
-          "type": "application",
+          "type": "library",
           "name": "webpack-plugin",
           "group": "@cyclonedx",
           "version": "thisVersion-testing",
@@ -4946,8 +4937,7 @@ exports[`integration functional: webpack5 with react18 generated json file: dist
             }
           ]
         }
-      ],
-      "services": []
+      ]
     },
     "component": {
       "type": "application",
@@ -5272,7 +5262,7 @@ exports[`integration functional: webpack5 with react18 generated json file: dist
           ]
         },
         {
-          "type": "application",
+          "type": "library",
           "name": "webpack-plugin",
           "group": "@cyclonedx",
           "version": "thisVersion-testing",
@@ -5303,8 +5293,7 @@ exports[`integration functional: webpack5 with react18 generated json file: dist
             }
           ]
         }
-      ],
-      "services": []
+      ]
     },
     "component": {
       "type": "application",
@@ -5597,7 +5586,7 @@ exports[`integration functional: webpack5 with react18 generated xml file: dist/
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.0.0-beta.1</version>
+          <version>7.0.0-beta.2</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -5619,7 +5608,7 @@ exports[`integration functional: webpack5 with react18 generated xml file: dist/
             </reference>
           </externalReferences>
         </component>
-        <component type="application">
+        <component type="library">
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>webpack-plugin</name>
@@ -5646,7 +5635,6 @@ exports[`integration functional: webpack5 with react18 generated xml file: dist/
           </externalReferences>
         </component>
       </components>
-      <services/>
     </tools>
     <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git#tests/integration/webpack5-react18">
       <author>Jan Kowalleck</author>
@@ -5899,7 +5887,7 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.b
           ]
         },
         {
-          "type": "application",
+          "type": "library",
           "name": "webpack-plugin",
           "group": "@cyclonedx",
           "version": "thisVersion-testing",
@@ -5930,8 +5918,7 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.b
             }
           ]
         }
-      ],
-      "services": []
+      ]
     },
     "component": {
       "type": "application",
@@ -6065,7 +6052,7 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.w
           ]
         },
         {
-          "type": "application",
+          "type": "library",
           "name": "webpack-plugin",
           "group": "@cyclonedx",
           "version": "thisVersion-testing",
@@ -6096,8 +6083,7 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.w
             }
           ]
         }
-      ],
-      "services": []
+      ]
     },
     "component": {
       "type": "application",
@@ -6199,7 +6185,7 @@ exports[`integration functional: webpack5 with vue2 generated xml file: dist/.bo
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.0.0-beta.1</version>
+          <version>7.0.0-beta.2</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -6221,7 +6207,7 @@ exports[`integration functional: webpack5 with vue2 generated xml file: dist/.bo
             </reference>
           </externalReferences>
         </component>
-        <component type="application">
+        <component type="library">
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>webpack-plugin</name>
@@ -6248,7 +6234,6 @@ exports[`integration functional: webpack5 with vue2 generated xml file: dist/.bo
           </externalReferences>
         </component>
       </components>
-      <services/>
     </tools>
     <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2">
       <author>Jan Kowalleck</author>
@@ -6361,7 +6346,7 @@ exports[`integration functional: webpack5 with vue2 in yarn setup generated json
           ]
         },
         {
-          "type": "application",
+          "type": "library",
           "name": "webpack-plugin",
           "group": "@cyclonedx",
           "version": "thisVersion-testing",
@@ -6392,8 +6377,7 @@ exports[`integration functional: webpack5 with vue2 in yarn setup generated json
             }
           ]
         }
-      ],
-      "services": []
+      ]
     },
     "component": {
       "type": "application",
@@ -6527,7 +6511,7 @@ exports[`integration functional: webpack5 with vue2 in yarn setup generated json
           ]
         },
         {
-          "type": "application",
+          "type": "library",
           "name": "webpack-plugin",
           "group": "@cyclonedx",
           "version": "thisVersion-testing",
@@ -6558,8 +6542,7 @@ exports[`integration functional: webpack5 with vue2 in yarn setup generated json
             }
           ]
         }
-      ],
-      "services": []
+      ]
     },
     "component": {
       "type": "application",
@@ -6661,7 +6644,7 @@ exports[`integration functional: webpack5 with vue2 in yarn setup generated xml 
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.0.0-beta.1</version>
+          <version>7.0.0-beta.2</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -6683,7 +6666,7 @@ exports[`integration functional: webpack5 with vue2 in yarn setup generated xml 
             </reference>
           </externalReferences>
         </component>
-        <component type="application">
+        <component type="library">
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>webpack-plugin</name>
@@ -6710,7 +6693,6 @@ exports[`integration functional: webpack5 with vue2 in yarn setup generated xml 
           </externalReferences>
         </component>
       </components>
-      <services/>
     </tools>
     <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-yarn?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2-yarn">
       <author>Jan Kowalleck</author>
@@ -6823,7 +6805,7 @@ exports[`integration functional: webpack5 with vue2-cli-service generated json f
           ]
         },
         {
-          "type": "application",
+          "type": "library",
           "name": "webpack-plugin",
           "group": "@cyclonedx",
           "version": "thisVersion-testing",
@@ -6854,8 +6836,7 @@ exports[`integration functional: webpack5 with vue2-cli-service generated json f
             }
           ]
         }
-      ],
-      "services": []
+      ]
     },
     "component": {
       "type": "application",
@@ -6988,7 +6969,7 @@ exports[`integration functional: webpack5 with vue2-cli-service generated json f
           ]
         },
         {
-          "type": "application",
+          "type": "library",
           "name": "webpack-plugin",
           "group": "@cyclonedx",
           "version": "thisVersion-testing",
@@ -7019,8 +7000,7 @@ exports[`integration functional: webpack5 with vue2-cli-service generated json f
             }
           ]
         }
-      ],
-      "services": []
+      ]
     },
     "component": {
       "type": "application",
@@ -7121,7 +7101,7 @@ exports[`integration functional: webpack5 with vue2-cli-service generated xml fi
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.0.0-beta.1</version>
+          <version>7.0.0-beta.2</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -7143,7 +7123,7 @@ exports[`integration functional: webpack5 with vue2-cli-service generated xml fi
             </reference>
           </externalReferences>
         </component>
-        <component type="application">
+        <component type="library">
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>webpack-plugin</name>
@@ -7170,7 +7150,6 @@ exports[`integration functional: webpack5 with vue2-cli-service generated xml fi
           </externalReferences>
         </component>
       </components>
-      <services/>
     </tools>
     <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git#tests/integration/webpack5-vue2-cli-service">
       <group>@cyclonedx-webpack-plugin-tests</group>
