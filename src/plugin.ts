@@ -152,7 +152,7 @@ export class CycloneDxWebpackPlugin {
   collectEvidence: boolean
 
   constructor ({
-    specVersion = CDX.Spec.Version.v1dot4,
+    specVersion = CDX.Spec.Version.v1dot6,
     reproducibleResults = false,
     validateResults = true,
     outputLocation = './cyclonedx',
