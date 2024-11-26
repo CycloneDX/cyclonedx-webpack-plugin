@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* BREAKING changes
+  * Option `specVersion` defaults to `"1.6"`, was `"1.4"` ([#1329] via [#])
+
+[#1329]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1329
+
 ## 3.15.0 - 2024-10-19
 
 * Added
