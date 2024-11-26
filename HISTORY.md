@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file.
 <!-- unreleased changes go here -->
 
 * BREAKING Changes
-  * Option `specVersion` defaults to `"1.6"`, was `"1.4"` ([#1329] via [#])
+  * Option `specVersion` defaults to `"1.6"`, was `"1.4"` ([#1329] via [#1333])
   * Emit `.metadata.tools` as components ([#1330] via [#1331])  
     This affects only CycloneDX spec-version 1.5 and later.
 * Build
@@ -16,6 +16,7 @@ All notable changes to this project will be documented in this file.
 [#1329]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1329
 [#1330]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1330
 [#1331]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1331
+[#1333]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1333
 [#1351]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1351
 
 ## 3.17.0 - 2025-01-10
