@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 3.15.1 - 2024-12-03
+
 * Fixed
   * Properly detect license evidences like `LICEN[CS]E.{Apache,BSD,GPL,MIT}` ([#1337] via [#1339])
 
