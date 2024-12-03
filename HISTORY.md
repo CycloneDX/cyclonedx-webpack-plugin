@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file.
 <!-- unreleased changes go here -->
 
 * Fixed
-  * ``Properly detect license evidences like `LICEN[CS]E.{Apache,BSD,GPL,MIT}` ([#1337] via [#1339])
+  * Properly detect license evidences like `LICEN[CS]E.{Apache,BSD,GPL,MIT}` ([#1337] via [#1339])
 
 [#1337]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1337
 [#1339]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1339
