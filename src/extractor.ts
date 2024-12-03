@@ -23,7 +23,7 @@ import * as normalizePackageJson from 'normalize-package-data'
 import { dirname, join } from 'path'
 import type { Compilation, Module } from 'webpack'
 
-import { getMimeForTextFile, getPackageDescription, isNonNullable, type PackageDescription, structuredClonePolyfill } from './_helpers'
+import { getMimeForLicenseFile, getPackageDescription, isNonNullable, type PackageDescription, structuredClonePolyfill } from './_helpers'
 
 type WebpackLogger = Compilation['logger']
 
@@ -148,7 +148,7 @@ export class Extractor {
         continue
       }
 
-      const contentType = getMimeForTextFile(pci.name)
+      const contentType = getMimeForLicenseFile(pci.name)
       if (contentType === undefined) {
         continue
       }
