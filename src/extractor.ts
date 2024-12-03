@@ -111,6 +111,9 @@ export class Extractor {
       component.evidence = new CDX.Models.ComponentEvidence({
         licenses: new CDX.Models.LicenseRepository(this.getLicenseEvidence(dirname(pkg.path), logger))
       })
+      for (const line of this.getCopyrightEvidence(dirname(pkg.path), logger)) {
+        component.evidence.copyright.add(line)
+      }
     }
 
     component.purl = this.#purlFactory.makeFromComponent(component)
@@ -126,6 +129,46 @@ export class Extractor {
         if (dependencyBomRef !== undefined) {
           component.dependencies.add(dependencyBomRef)
         }
+      }
+    }
+  }
+
+  readonly #COPYRIGHT_FILENAME_PATTERN = /^(?:UN)?LICEN[CS]E|.\.LICEN[CS]E$|^NOTICE$|^COPYRIGHTNOTICE$/i
+
+  public * getCopyrightEvidence (packageDir: string, logger?: WebpackLogger): Generator<string> {
+    let pcis
+    try {
+      pcis = readdirSync(packageDir, {withFileTypes: true})
+    } catch (e) {
+      logger?.warn('collecting license evidence in', packageDir, 'failed:', e)
+      return
+    }
+    for (const pci of pcis) {
+      if (
+        !pci.isFile() ||
+        !this.#COPYRIGHT_FILENAME_PATTERN.test(pci.name)
+      ) {
+        continue
+      }
+      const fp = join(packageDir, pci.name)
+      try {
+        // Add copyright evidence
+        const linesStartingWithCopyright = readFileSync(fp).toString('utf-8')
+          .split(/\r\n?|\n/)
+          .map(line => line.trimStart())
+          .filter(trimmedLine => {
+            return trimmedLine.startsWith('opyright', 1) && // include copyright statements
+              !trimmedLine.startsWith('opyright notice', 1) && // exclude lines from license text
+              !trimmedLine.startsWith('opyright and related rights', 1) &&
+              !trimmedLine.startsWith('opyright license to reproduce', 1)
+          })
+          .filter((value, index, list) => index === 0 || value !== list[0]) // remove duplicates
+
+        for (const line of linesStartingWithCopyright) {
+          yield line
+        }
+      } catch (e) { // may throw if `readFileSync()` fails
+        logger?.warn('collecting copyright evidences from', fp, 'failed:', e)
       }
     }
   }
@@ -150,6 +193,7 @@ export class Extractor {
 
       const contentType = getMimeForTextFile(pci.name)
       if (contentType === undefined) {
+        logger?.warn(`could not determine content-type for ${pci.name}`)
         continue
       }
 
