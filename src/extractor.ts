@@ -140,7 +140,7 @@ export class Extractor {
     try {
       pcis = readdirSync(packageDir, {withFileTypes: true})
     } catch (e) {
-      logger?.warn('collecting license evidence in', packageDir, 'failed:', e)
+      logger?.warn('collecting copyright evidence in', packageDir, 'failed:', e)
       return
     }
     for (const pci of pcis) {
