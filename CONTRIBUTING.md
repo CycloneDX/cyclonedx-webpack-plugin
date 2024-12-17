@@ -18,7 +18,7 @@ This will install process automatically build the project from source.
 ## Build from source
 
 ```shell
-npm run build
+npm run build-dev
 ```
 
 ## Testing
