@@ -253,7 +253,7 @@ export class CycloneDxWebpackPlugin {
         thisLogger.log('generated components.')
 
         thisLogger.log('finalizing BOM...')
-        this.#finalizeBom(bom, cdxToolBuilder, cdxPurlFactory, logger.getChildLogger('BomFinalizer'))
+        this.#finalizeBom(bom, cdxToolBuilder, cdxComponentBuilder, cdxPurlFactory, logger.getChildLogger('BomFinalizer'))
         thisLogger.log('finalized BOM.')
       })
 
@@ -314,14 +314,19 @@ export class CycloneDxWebpackPlugin {
     const thisPackageJson: object = this.rootComponentAutodetect
       ? getPackageDescription(path)?.packageJson
       : { name: this.rootComponentName, version: this.rootComponentVersion }
-    if (thisPackageJson === undefined) { return undefined }
-    normalizePackageJson(thisPackageJson, w => { logger.debug('normalizePackageJson from PkgPath', path, 'caused:', w) })
+    if (thisPackageJson === undefined) {
+      return undefined
+    }
+    normalizePackageJson(thisPackageJson, w => {
+      logger.debug('normalizePackageJson from PkgPath', path, 'caused:', w)
+    })
     return builder.makeComponent(thisPackageJson)
   }
 
   #finalizeBom (
     bom: CDX.Models.Bom,
     cdxToolBuilder: CDX.Builders.FromNodePackageJson.ToolBuilder,
+    cdxComponentBuilder: CDX.Builders.FromNodePackageJson.ComponentBuilder,
     cdxPurlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory,
     logger: WebpackLogger
   ): void {
@@ -332,10 +337,15 @@ export class CycloneDxWebpackPlugin {
       ? undefined
       : new Date()
 
-    for (const tool of this.#makeTools(cdxToolBuilder, logger.getChildLogger('ToolMaker'))) {
-      bom.metadata.tools.add(tool)
+    if (this.specVersion >= CDX.Spec.Version.v1dot5) {
+      for (const component of this.#makeToolComponents(cdxComponentBuilder, logger.getChildLogger('ToolMaker'))) {
+        bom.metadata.tools.components.add(component)
+      }
+    } else {
+      for (const tool of this.#makeTools(cdxToolBuilder, logger.getChildLogger('ToolMaker'))) {
+        bom.metadata.tools.tools.add(tool)
+      }
     }
-
     if (bom.metadata.component !== undefined) {
       bom.metadata.component.type = this.rootComponentType
       bom.metadata.component.purl = cdxPurlFactory.makeFromComponent(bom.metadata.component)
@@ -366,10 +376,46 @@ export class CycloneDxWebpackPlugin {
     for (const packageJsonPath of packageJsonPaths) {
       logger.log('try to build new Tool from PkgPath', packageJsonPath)
       const packageJson: object = loadJsonFile(packageJsonPath) ?? {}
-      normalizePackageJson(packageJson, w => { logger.debug('normalizePackageJson from PkgPath', packageJsonPath, 'caused:', w) })
+      normalizePackageJson(packageJson, w => {
+        logger.debug('normalizePackageJson from PkgPath', packageJsonPath, 'caused:', w)
+      })
       const tool = builder.makeTool(packageJson)
       if (tool !== undefined) {
         yield tool
+      }
+    }
+  }
+
+  * #makeToolComponents (builder: CDX.Builders.FromNodePackageJson.ComponentBuilder, logger: WebpackLogger): Generator<CDX.Models.Component> {
+    const packageJsonPaths = [resolve(module.path, '..', 'package.json')]
+
+    const libs = [
+      '@cyclonedx/cyclonedx-library'
+    ].map(s => s.split('/', 2))
+    const nodeModulePaths = require.resolve.paths('__some_none-native_package__') ?? []
+
+    /* eslint-disable no-labels */
+    libsLoop:
+    for (const lib of libs) {
+      for (const nodeModulePath of nodeModulePaths) {
+        const packageJsonPath = resolve(nodeModulePath, ...lib, 'package.json')
+        if (existsSync(packageJsonPath)) {
+          packageJsonPaths.push(packageJsonPath)
+          continue libsLoop
+        }
+      }
+    }
+    /* eslint-enable no-labels */
+
+    for (const packageJsonPath of packageJsonPaths) {
+      logger.log('try to build new Tool Component from PkgPath', packageJsonPath)
+      const packageJson: object = loadJsonFile(packageJsonPath) ?? {}
+      normalizePackageJson(packageJson, w => {
+        logger.debug('normalizePackageJson from PkgPath', packageJsonPath, 'caused:', w)
+      })
+      const toolComponent = builder.makeComponent(packageJson)
+      if (toolComponent !== undefined) {
+        yield toolComponent
       }
     }
   }
