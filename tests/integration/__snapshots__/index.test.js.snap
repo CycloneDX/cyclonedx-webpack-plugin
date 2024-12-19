@@ -6143,6 +6143,2135 @@ exports[`integration functional: webpack5 with vue2-cli-service generated xml fi
 </bom>"
 `;
 
+exports[`integration regression: find license evidence like \`LICENSE.MIT\` generated json file: dist/.bom/bom.json 1`] = `
+"{
+  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "version": 1,
+  "metadata": {
+    "tools": [
+      {
+        "vendor": "@cyclonedx",
+        "name": "cyclonedx-library",
+        "version": "libVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
+            "type": "issue-tracker",
+            "comment": "as detected from PackageJson property \\"bugs.url\\""
+          },
+          {
+            "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
+            "type": "vcs",
+            "comment": "as detected from PackageJson property \\"repository.url\\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \\"homepage\\""
+          }
+        ]
+      },
+      {
+        "vendor": "@cyclonedx",
+        "name": "webpack-plugin",
+        "version": "thisVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
+            "type": "issue-tracker",
+            "comment": "as detected from PackageJson property \\"bugs.url\\""
+          },
+          {
+            "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
+            "type": "vcs",
+            "comment": "as detected from PackageJson property \\"repository.url\\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \\"homepage\\""
+          }
+        ]
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "regression-issue1337",
+      "group": "@cyclonedx-webpack-plugin-tests",
+      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue1337",
+      "author": "Jan Kowalleck",
+      "description": "example setup for issue#1337",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue1337",
+      "externalReferences": [
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue1337",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\" and \\"repository.directory\\""
+        },
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/regression-issue1337#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {}
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "base64-js",
+      "version": "1.5.1",
+      "bom-ref": "pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git",
+      "author": "T. Jameson Little",
+      "description": "Base64 encoding/decoding in pure JS",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/beatgammit/base64-js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git://github.com/beatgammit/base64-js.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://github.com/beatgammit/base64-js",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE",
+              "text": {
+                "content": "VGhlIE1JVCBMaWNlbnNlIChNSVQpCgpDb3B5cmlnaHQgKGMpIDIwMTQgSmFtZXNvbiBMaXR0bGUKClBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHkKb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgIlNvZnR3YXJlIiksIHRvIGRlYWwKaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0cwp0byB1c2UsIGNvcHksIG1vZGlmeSwgbWVyZ2UsIHB1Ymxpc2gsIGRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsCmNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpcwpmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOgoKVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUgaW5jbHVkZWQgaW4KYWxsIGNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuCgpUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgIkFTIElTIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUyBPUgpJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSwKRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFCkFVVEhPUlMgT1IgQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVIKTElBQklMSVRZLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSwKT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgU09GVFdBUkUgT1IgVEhFIFVTRSBPUiBPVEhFUiBERUFMSU5HUyBJTgpUSEUgU09GVFdBUkUuCg==",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "library",
+      "name": "buffer",
+      "version": "6.0.3",
+      "bom-ref": "pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git",
+      "author": "Feross Aboukhadijeh",
+      "description": "Node.js Buffer API, for the browser",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/feross/buffer/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git://github.com/feross/buffer.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://github.com/feross/buffer",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE",
+              "text": {
+                "content": "VGhlIE1JVCBMaWNlbnNlIChNSVQpCgpDb3B5cmlnaHQgKGMpIEZlcm9zcyBBYm91a2hhZGlqZWgsIGFuZCBvdGhlciBjb250cmlidXRvcnMuCgpQZXJtaXNzaW9uIGlzIGhlcmVieSBncmFudGVkLCBmcmVlIG9mIGNoYXJnZSwgdG8gYW55IHBlcnNvbiBvYnRhaW5pbmcgYSBjb3B5Cm9mIHRoaXMgc29mdHdhcmUgYW5kIGFzc29jaWF0ZWQgZG9jdW1lbnRhdGlvbiBmaWxlcyAodGhlICJTb2Z0d2FyZSIpLCB0byBkZWFsCmluIHRoZSBTb2Z0d2FyZSB3aXRob3V0IHJlc3RyaWN0aW9uLCBpbmNsdWRpbmcgd2l0aG91dCBsaW1pdGF0aW9uIHRoZSByaWdodHMKdG8gdXNlLCBjb3B5LCBtb2RpZnksIG1lcmdlLCBwdWJsaXNoLCBkaXN0cmlidXRlLCBzdWJsaWNlbnNlLCBhbmQvb3Igc2VsbApjb3BpZXMgb2YgdGhlIFNvZnR3YXJlLCBhbmQgdG8gcGVybWl0IHBlcnNvbnMgdG8gd2hvbSB0aGUgU29mdHdhcmUgaXMKZnVybmlzaGVkIHRvIGRvIHNvLCBzdWJqZWN0IHRvIHRoZSBmb2xsb3dpbmcgY29uZGl0aW9uczoKClRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlIGFuZCB0aGlzIHBlcm1pc3Npb24gbm90aWNlIHNoYWxsIGJlIGluY2x1ZGVkIGluCmFsbCBjb3BpZXMgb3Igc3Vic3RhbnRpYWwgcG9ydGlvbnMgb2YgdGhlIFNvZnR3YXJlLgoKVEhFIFNPRlRXQVJFIElTIFBST1ZJREVEICJBUyBJUyIsIFdJVEhPVVQgV0FSUkFOVFkgT0YgQU5ZIEtJTkQsIEVYUFJFU1MgT1IKSU1QTElFRCwgSU5DTFVESU5HIEJVVCBOT1QgTElNSVRFRCBUTyBUSEUgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFksCkZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFIEFORCBOT05JTkZSSU5HRU1FTlQuIElOIE5PIEVWRU5UIFNIQUxMIFRIRQpBVVRIT1JTIE9SIENPUFlSSUdIVCBIT0xERVJTIEJFIExJQUJMRSBGT1IgQU5ZIENMQUlNLCBEQU1BR0VTIE9SIE9USEVSCkxJQUJJTElUWSwgV0hFVEhFUiBJTiBBTiBBQ1RJT04gT0YgQ09OVFJBQ1QsIFRPUlQgT1IgT1RIRVJXSVNFLCBBUklTSU5HIEZST00sCk9VVCBPRiBPUiBJTiBDT05ORUNUSU9OIFdJVEggVEhFIFNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MgSU4KVEhFIFNPRlRXQVJFLgo=",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "library",
+      "name": "esprima",
+      "version": "4.0.1",
+      "bom-ref": "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git",
+      "author": "Ariya Hidayat",
+      "description": "ECMAScript parsing infrastructure for multipurpose analysis",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/jquery/esprima/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git+https://github.com/jquery/esprima.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "http://esprima.org",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE.BSD",
+              "text": {
+                "content": "Q29weXJpZ2h0IEpTIEZvdW5kYXRpb24gYW5kIG90aGVyIGNvbnRyaWJ1dG9ycywgaHR0cHM6Ly9qcy5mb3VuZGF0aW9uLwoKUmVkaXN0cmlidXRpb24gYW5kIHVzZSBpbiBzb3VyY2UgYW5kIGJpbmFyeSBmb3Jtcywgd2l0aCBvciB3aXRob3V0Cm1vZGlmaWNhdGlvbiwgYXJlIHBlcm1pdHRlZCBwcm92aWRlZCB0aGF0IHRoZSBmb2xsb3dpbmcgY29uZGl0aW9ucyBhcmUgbWV0OgoKICAqIFJlZGlzdHJpYnV0aW9ucyBvZiBzb3VyY2UgY29kZSBtdXN0IHJldGFpbiB0aGUgYWJvdmUgY29weXJpZ2h0CiAgICBub3RpY2UsIHRoaXMgbGlzdCBvZiBjb25kaXRpb25zIGFuZCB0aGUgZm9sbG93aW5nIGRpc2NsYWltZXIuCiAgKiBSZWRpc3RyaWJ1dGlvbnMgaW4gYmluYXJ5IGZvcm0gbXVzdCByZXByb2R1Y2UgdGhlIGFib3ZlIGNvcHlyaWdodAogICAgbm90aWNlLCB0aGlzIGxpc3Qgb2YgY29uZGl0aW9ucyBhbmQgdGhlIGZvbGxvd2luZyBkaXNjbGFpbWVyIGluIHRoZQogICAgZG9jdW1lbnRhdGlvbiBhbmQvb3Igb3RoZXIgbWF0ZXJpYWxzIHByb3ZpZGVkIHdpdGggdGhlIGRpc3RyaWJ1dGlvbi4KClRISVMgU09GVFdBUkUgSVMgUFJPVklERUQgQlkgVEhFIENPUFlSSUdIVCBIT0xERVJTIEFORCBDT05UUklCVVRPUlMgIkFTIElTIgpBTkQgQU5ZIEVYUFJFU1MgT1IgSU1QTElFRCBXQVJSQU5USUVTLCBJTkNMVURJTkcsIEJVVCBOT1QgTElNSVRFRCBUTywgVEhFCklNUExJRUQgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFkgQU5EIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFCkFSRSBESVNDTEFJTUVELiBJTiBOTyBFVkVOVCBTSEFMTCA8Q09QWVJJR0hUIEhPTERFUj4gQkUgTElBQkxFIEZPUiBBTlkKRElSRUNULCBJTkRJUkVDVCwgSU5DSURFTlRBTCwgU1BFQ0lBTCwgRVhFTVBMQVJZLCBPUiBDT05TRVFVRU5USUFMIERBTUFHRVMKKElOQ0xVRElORywgQlVUIE5PVCBMSU1JVEVEIFRPLCBQUk9DVVJFTUVOVCBPRiBTVUJTVElUVVRFIEdPT0RTIE9SIFNFUlZJQ0VTOwpMT1NTIE9GIFVTRSwgREFUQSwgT1IgUFJPRklUUzsgT1IgQlVTSU5FU1MgSU5URVJSVVBUSU9OKSBIT1dFVkVSIENBVVNFRCBBTkQKT04gQU5ZIFRIRU9SWSBPRiBMSUFCSUxJVFksIFdIRVRIRVIgSU4gQ09OVFJBQ1QsIFNUUklDVCBMSUFCSUxJVFksIE9SIFRPUlQKKElOQ0xVRElORyBORUdMSUdFTkNFIE9SIE9USEVSV0lTRSkgQVJJU0lORyBJTiBBTlkgV0FZIE9VVCBPRiBUSEUgVVNFIE9GClRISVMgU09GVFdBUkUsIEVWRU4gSUYgQURWSVNFRCBPRiBUSEUgUE9TU0lCSUxJVFkgT0YgU1VDSCBEQU1BR0UuCg==",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "library",
+      "name": "events",
+      "version": "3.3.0",
+      "bom-ref": "pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git",
+      "author": "Irakli Gozalishvili",
+      "description": "Node's event emitter for all engines.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git",
+      "externalReferences": [
+        {
+          "url": "http://github.com/Gozala/events/issues/",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git://github.com/Gozala/events.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://github.com/Gozala/events#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE",
+              "text": {
+                "content": "TUlUCgpDb3B5cmlnaHQgSm95ZW50LCBJbmMuIGFuZCBvdGhlciBOb2RlIGNvbnRyaWJ1dG9ycy4KClBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhCmNvcHkgb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUKIlNvZnR3YXJlIiksIHRvIGRlYWwgaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZwp3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0cyB0byB1c2UsIGNvcHksIG1vZGlmeSwgbWVyZ2UsIHB1Ymxpc2gsCmRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsIGNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQKcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpcyBmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlCmZvbGxvd2luZyBjb25kaXRpb25zOgoKVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUgaW5jbHVkZWQKaW4gYWxsIGNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuCgpUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgIkFTIElTIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUwpPUiBJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GCk1FUkNIQU5UQUJJTElUWSwgRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gSU4KTk8gRVZFTlQgU0hBTEwgVEhFIEFVVEhPUlMgT1IgQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sCkRBTUFHRVMgT1IgT1RIRVIgTElBQklMSVRZLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUgpPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSwgT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgU09GVFdBUkUgT1IgVEhFClVTRSBPUiBPVEhFUiBERUFMSU5HUyBJTiBUSEUgU09GVFdBUkUuCg==",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "library",
+      "name": "ieee754",
+      "version": "1.2.1",
+      "bom-ref": "pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git",
+      "author": "Feross Aboukhadijeh",
+      "description": "Read/write IEEE754 floating point numbers from/to a Buffer or array-like object",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/feross/ieee754/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git://github.com/feross/ieee754.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://github.com/feross/ieee754#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE",
+              "text": {
+                "content": "Q29weXJpZ2h0IDIwMDggRmFpciBPYWtzIExhYnMsIEluYy4KClJlZGlzdHJpYnV0aW9uIGFuZCB1c2UgaW4gc291cmNlIGFuZCBiaW5hcnkgZm9ybXMsIHdpdGggb3Igd2l0aG91dCBtb2RpZmljYXRpb24sIGFyZSBwZXJtaXR0ZWQgcHJvdmlkZWQgdGhhdCB0aGUgZm9sbG93aW5nIGNvbmRpdGlvbnMgYXJlIG1ldDoKCjEuIFJlZGlzdHJpYnV0aW9ucyBvZiBzb3VyY2UgY29kZSBtdXN0IHJldGFpbiB0aGUgYWJvdmUgY29weXJpZ2h0IG5vdGljZSwgdGhpcyBsaXN0IG9mIGNvbmRpdGlvbnMgYW5kIHRoZSBmb2xsb3dpbmcgZGlzY2xhaW1lci4KCjIuIFJlZGlzdHJpYnV0aW9ucyBpbiBiaW5hcnkgZm9ybSBtdXN0IHJlcHJvZHVjZSB0aGUgYWJvdmUgY29weXJpZ2h0IG5vdGljZSwgdGhpcyBsaXN0IG9mIGNvbmRpdGlvbnMgYW5kIHRoZSBmb2xsb3dpbmcgZGlzY2xhaW1lciBpbiB0aGUgZG9jdW1lbnRhdGlvbiBhbmQvb3Igb3RoZXIgbWF0ZXJpYWxzIHByb3ZpZGVkIHdpdGggdGhlIGRpc3RyaWJ1dGlvbi4KCjMuIE5laXRoZXIgdGhlIG5hbWUgb2YgdGhlIGNvcHlyaWdodCBob2xkZXIgbm9yIHRoZSBuYW1lcyBvZiBpdHMgY29udHJpYnV0b3JzIG1heSBiZSB1c2VkIHRvIGVuZG9yc2Ugb3IgcHJvbW90ZSBwcm9kdWN0cyBkZXJpdmVkIGZyb20gdGhpcyBzb2Z0d2FyZSB3aXRob3V0IHNwZWNpZmljIHByaW9yIHdyaXR0ZW4gcGVybWlzc2lvbi4KClRISVMgU09GVFdBUkUgSVMgUFJPVklERUQgQlkgVEhFIENPUFlSSUdIVCBIT0xERVJTIEFORCBDT05UUklCVVRPUlMgIkFTIElTIiBBTkQgQU5ZIEVYUFJFU1MgT1IgSU1QTElFRCBXQVJSQU5USUVTLCBJTkNMVURJTkcsIEJVVCBOT1QgTElNSVRFRCBUTywgVEhFIElNUExJRUQgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFkgQU5EIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFIEFSRSBESVNDTEFJTUVELiBJTiBOTyBFVkVOVCBTSEFMTCBUSEUgQ09QWVJJR0hUIEhPTERFUiBPUiBDT05UUklCVVRPUlMgQkUgTElBQkxFIEZPUiBBTlkgRElSRUNULCBJTkRJUkVDVCwgSU5DSURFTlRBTCwgU1BFQ0lBTCwgRVhFTVBMQVJZLCBPUiBDT05TRVFVRU5USUFMIERBTUFHRVMgKElOQ0xVRElORywgQlVUIE5PVCBMSU1JVEVEIFRPLCBQUk9DVVJFTUVOVCBPRiBTVUJTVElUVVRFIEdPT0RTIE9SIFNFUlZJQ0VTOyBMT1NTIE9GIFVTRSwgREFUQSwgT1IgUFJPRklUUzsgT1IgQlVTSU5FU1MgSU5URVJSVVBUSU9OKSBIT1dFVkVSIENBVVNFRCBBTkQgT04gQU5ZIFRIRU9SWSBPRiBMSUFCSUxJVFksIFdIRVRIRVIgSU4gQ09OVFJBQ1QsIFNUUklDVCBMSUFCSUxJVFksIE9SIFRPUlQgKElOQ0xVRElORyBORUdMSUdFTkNFIE9SIE9USEVSV0lTRSkgQVJJU0lORyBJTiBBTlkgV0FZIE9VVCBPRiBUSEUgVVNFIE9GIFRISVMgU09GVFdBUkUsIEVWRU4gSUYgQURWSVNFRCBPRiBUSEUgUE9TU0lCSUxJVFkgT0YgU1VDSCBEQU1BR0UuCg==",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "library",
+      "name": "inherits",
+      "version": "2.0.4",
+      "bom-ref": "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git",
+      "description": "Browser-friendly inheritance fully compatible with standard node.js inherits()",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "purl": "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/isaacs/inherits/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git://github.com/isaacs/inherits.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://github.com/isaacs/inherits#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE",
+              "text": {
+                "content": "VGhlIElTQyBMaWNlbnNlCgpDb3B5cmlnaHQgKGMpIElzYWFjIFouIFNjaGx1ZXRlcgoKUGVybWlzc2lvbiB0byB1c2UsIGNvcHksIG1vZGlmeSwgYW5kL29yIGRpc3RyaWJ1dGUgdGhpcyBzb2Z0d2FyZSBmb3IgYW55CnB1cnBvc2Ugd2l0aCBvciB3aXRob3V0IGZlZSBpcyBoZXJlYnkgZ3JhbnRlZCwgcHJvdmlkZWQgdGhhdCB0aGUgYWJvdmUKY29weXJpZ2h0IG5vdGljZSBhbmQgdGhpcyBwZXJtaXNzaW9uIG5vdGljZSBhcHBlYXIgaW4gYWxsIGNvcGllcy4KClRIRSBTT0ZUV0FSRSBJUyBQUk9WSURFRCAiQVMgSVMiIEFORCBUSEUgQVVUSE9SIERJU0NMQUlNUyBBTEwgV0FSUkFOVElFUyBXSVRIClJFR0FSRCBUTyBUSElTIFNPRlRXQVJFIElOQ0xVRElORyBBTEwgSU1QTElFRCBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSBBTkQKRklUTkVTUy4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFIEFVVEhPUiBCRSBMSUFCTEUgRk9SIEFOWSBTUEVDSUFMLCBESVJFQ1QsCklORElSRUNULCBPUiBDT05TRVFVRU5USUFMIERBTUFHRVMgT1IgQU5ZIERBTUFHRVMgV0hBVFNPRVZFUiBSRVNVTFRJTkcgRlJPTQpMT1NTIE9GIFVTRSwgREFUQSBPUiBQUk9GSVRTLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgTkVHTElHRU5DRSBPUgpPVEhFUiBUT1JUSU9VUyBBQ1RJT04sIEFSSVNJTkcgT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgVVNFIE9SClBFUkZPUk1BTkNFIE9GIFRISVMgU09GVFdBUkUuCgo=",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "library",
+      "name": "libphonenumber-js",
+      "version": "1.11.16",
+      "bom-ref": "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git",
+      "author": "catamphetamine",
+      "description": "A simpler (and smaller) rewrite of Google Android's libphonenumber library in javascript",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git",
+      "externalReferences": [
+        {
+          "url": "https://gitlab.com/catamphetamine/libphonenumber-js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git+https://gitlab.com/catamphetamine/libphonenumber-js.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://gitlab.com/catamphetamine/libphonenumber-js#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE",
+              "text": {
+                "content": "KFRoZSBNSVQgTGljZW5zZSkNCg0KQ29weXJpZ2h0IChjKSAyMDE2IEBjYXRhbXBoZXRhbWluZSA8cHVyZWNhdGFtcGhldGFtaW5lQGdtYWlsLmNvbT4NCg0KUGVybWlzc2lvbiBpcyBoZXJlYnkgZ3JhbnRlZCwgZnJlZSBvZiBjaGFyZ2UsIHRvIGFueSBwZXJzb24gb2J0YWluaW5nDQphIGNvcHkgb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUNCidTb2Z0d2FyZScpLCB0byBkZWFsIGluIHRoZSBTb2Z0d2FyZSB3aXRob3V0IHJlc3RyaWN0aW9uLCBpbmNsdWRpbmcNCndpdGhvdXQgbGltaXRhdGlvbiB0aGUgcmlnaHRzIHRvIHVzZSwgY29weSwgbW9kaWZ5LCBtZXJnZSwgcHVibGlzaCwNCmRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsIGNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0bw0KcGVybWl0IHBlcnNvbnMgdG8gd2hvbSB0aGUgU29mdHdhcmUgaXMgZnVybmlzaGVkIHRvIGRvIHNvLCBzdWJqZWN0IHRvDQp0aGUgZm9sbG93aW5nIGNvbmRpdGlvbnM6DQoNClRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlIGFuZCB0aGlzIHBlcm1pc3Npb24gbm90aWNlIHNoYWxsIGJlDQppbmNsdWRlZCBpbiBhbGwgY29waWVzIG9yIHN1YnN0YW50aWFsIHBvcnRpb25zIG9mIHRoZSBTb2Z0d2FyZS4NCg0KVEhFIFNPRlRXQVJFIElTIFBST1ZJREVEICdBUyBJUycsIFdJVEhPVVQgV0FSUkFOVFkgT0YgQU5ZIEtJTkQsDQpFWFBSRVNTIE9SIElNUExJRUQsIElOQ0xVRElORyBCVVQgTk9UIExJTUlURUQgVE8gVEhFIFdBUlJBTlRJRVMgT0YNCk1FUkNIQU5UQUJJTElUWSwgRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4NCklOIE5PIEVWRU5UIFNIQUxMIFRIRSBBVVRIT1JTIE9SIENPUFlSSUdIVCBIT0xERVJTIEJFIExJQUJMRSBGT1IgQU5ZDQpDTEFJTSwgREFNQUdFUyBPUiBPVEhFUiBMSUFCSUxJVFksIFdIRVRIRVIgSU4gQU4gQUNUSU9OIE9GIENPTlRSQUNULA0KVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSwgT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUNClNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MgSU4gVEhFIFNPRlRXQVJFLg==",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          },
+          {
+            "license": {
+              "name": "file: LICENSE.Apache",
+              "text": {
+                "content": "ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQXBhY2hlIExpY2Vuc2UNCiAgICAgICAgICAgICAgICAgICAgICAgICAgIFZlcnNpb24gMi4wLCBKYW51YXJ5IDIwMDQNCiAgICAgICAgICAgICAgICAgICAgICAgIGh0dHA6Ly93d3cuYXBhY2hlLm9yZy9saWNlbnNlcy8NCg0KICAgVEVSTVMgQU5EIENPTkRJVElPTlMgRk9SIFVTRSwgUkVQUk9EVUNUSU9OLCBBTkQgRElTVFJJQlVUSU9ODQoNCiAgIDEuIERlZmluaXRpb25zLg0KDQogICAgICAiTGljZW5zZSIgc2hhbGwgbWVhbiB0aGUgdGVybXMgYW5kIGNvbmRpdGlvbnMgZm9yIHVzZSwgcmVwcm9kdWN0aW9uLA0KICAgICAgYW5kIGRpc3RyaWJ1dGlvbiBhcyBkZWZpbmVkIGJ5IFNlY3Rpb25zIDEgdGhyb3VnaCA5IG9mIHRoaXMgZG9jdW1lbnQuDQoNCiAgICAgICJMaWNlbnNvciIgc2hhbGwgbWVhbiB0aGUgY29weXJpZ2h0IG93bmVyIG9yIGVudGl0eSBhdXRob3JpemVkIGJ5DQogICAgICB0aGUgY29weXJpZ2h0IG93bmVyIHRoYXQgaXMgZ3JhbnRpbmcgdGhlIExpY2Vuc2UuDQoNCiAgICAgICJMZWdhbCBFbnRpdHkiIHNoYWxsIG1lYW4gdGhlIHVuaW9uIG9mIHRoZSBhY3RpbmcgZW50aXR5IGFuZCBhbGwNCiAgICAgIG90aGVyIGVudGl0aWVzIHRoYXQgY29udHJvbCwgYXJlIGNvbnRyb2xsZWQgYnksIG9yIGFyZSB1bmRlciBjb21tb24NCiAgICAgIGNvbnRyb2wgd2l0aCB0aGF0IGVudGl0eS4gRm9yIHRoZSBwdXJwb3NlcyBvZiB0aGlzIGRlZmluaXRpb24sDQogICAgICAiY29udHJvbCIgbWVhbnMgKGkpIHRoZSBwb3dlciwgZGlyZWN0IG9yIGluZGlyZWN0LCB0byBjYXVzZSB0aGUNCiAgICAgIGRpcmVjdGlvbiBvciBtYW5hZ2VtZW50IG9mIHN1Y2ggZW50aXR5LCB3aGV0aGVyIGJ5IGNvbnRyYWN0IG9yDQogICAgICBvdGhlcndpc2UsIG9yIChpaSkgb3duZXJzaGlwIG9mIGZpZnR5IHBlcmNlbnQgKDUwJSkgb3IgbW9yZSBvZiB0aGUNCiAgICAgIG91dHN0YW5kaW5nIHNoYXJlcywgb3IgKGlpaSkgYmVuZWZpY2lhbCBvd25lcnNoaXAgb2Ygc3VjaCBlbnRpdHkuDQoNCiAgICAgICJZb3UiIChvciAiWW91ciIpIHNoYWxsIG1lYW4gYW4gaW5kaXZpZHVhbCBvciBMZWdhbCBFbnRpdHkNCiAgICAgIGV4ZXJjaXNpbmcgcGVybWlzc2lvbnMgZ3JhbnRlZCBieSB0aGlzIExpY2Vuc2UuDQoNCiAgICAgICJTb3VyY2UiIGZvcm0gc2hhbGwgbWVhbiB0aGUgcHJlZmVycmVkIGZvcm0gZm9yIG1ha2luZyBtb2RpZmljYXRpb25zLA0KICAgICAgaW5jbHVkaW5nIGJ1dCBub3QgbGltaXRlZCB0byBzb2Z0d2FyZSBzb3VyY2UgY29kZSwgZG9jdW1lbnRhdGlvbg0KICAgICAgc291cmNlLCBhbmQgY29uZmlndXJhdGlvbiBmaWxlcy4NCg0KICAgICAgIk9iamVjdCIgZm9ybSBzaGFsbCBtZWFuIGFueSBmb3JtIHJlc3VsdGluZyBmcm9tIG1lY2hhbmljYWwNCiAgICAgIHRyYW5zZm9ybWF0aW9uIG9yIHRyYW5zbGF0aW9uIG9mIGEgU291cmNlIGZvcm0sIGluY2x1ZGluZyBidXQNCiAgICAgIG5vdCBsaW1pdGVkIHRvIGNvbXBpbGVkIG9iamVjdCBjb2RlLCBnZW5lcmF0ZWQgZG9jdW1lbnRhdGlvbiwNCiAgICAgIGFuZCBjb252ZXJzaW9ucyB0byBvdGhlciBtZWRpYSB0eXBlcy4NCg0KICAgICAgIldvcmsiIHNoYWxsIG1lYW4gdGhlIHdvcmsgb2YgYXV0aG9yc2hpcCwgd2hldGhlciBpbiBTb3VyY2Ugb3INCiAgICAgIE9iamVjdCBmb3JtLCBtYWRlIGF2YWlsYWJsZSB1bmRlciB0aGUgTGljZW5zZSwgYXMgaW5kaWNhdGVkIGJ5IGENCiAgICAgIGNvcHlyaWdodCBub3RpY2UgdGhhdCBpcyBpbmNsdWRlZCBpbiBvciBhdHRhY2hlZCB0byB0aGUgd29yaw0KICAgICAgKGFuIGV4YW1wbGUgaXMgcHJvdmlkZWQgaW4gdGhlIEFwcGVuZGl4IGJlbG93KS4NCg0KICAgICAgIkRlcml2YXRpdmUgV29ya3MiIHNoYWxsIG1lYW4gYW55IHdvcmssIHdoZXRoZXIgaW4gU291cmNlIG9yIE9iamVjdA0KICAgICAgZm9ybSwgdGhhdCBpcyBiYXNlZCBvbiAob3IgZGVyaXZlZCBmcm9tKSB0aGUgV29yayBhbmQgZm9yIHdoaWNoIHRoZQ0KICAgICAgZWRpdG9yaWFsIHJldmlzaW9ucywgYW5ub3RhdGlvbnMsIGVsYWJvcmF0aW9ucywgb3Igb3RoZXIgbW9kaWZpY2F0aW9ucw0KICAgICAgcmVwcmVzZW50LCBhcyBhIHdob2xlLCBhbiBvcmlnaW5hbCB3b3JrIG9mIGF1dGhvcnNoaXAuIEZvciB0aGUgcHVycG9zZXMNCiAgICAgIG9mIHRoaXMgTGljZW5zZSwgRGVyaXZhdGl2ZSBXb3JrcyBzaGFsbCBub3QgaW5jbHVkZSB3b3JrcyB0aGF0IHJlbWFpbg0KICAgICAgc2VwYXJhYmxlIGZyb20sIG9yIG1lcmVseSBsaW5rIChvciBiaW5kIGJ5IG5hbWUpIHRvIHRoZSBpbnRlcmZhY2VzIG9mLA0KICAgICAgdGhlIFdvcmsgYW5kIERlcml2YXRpdmUgV29ya3MgdGhlcmVvZi4NCg0KICAgICAgIkNvbnRyaWJ1dGlvbiIgc2hhbGwgbWVhbiBhbnkgd29yayBvZiBhdXRob3JzaGlwLCBpbmNsdWRpbmcNCiAgICAgIHRoZSBvcmlnaW5hbCB2ZXJzaW9uIG9mIHRoZSBXb3JrIGFuZCBhbnkgbW9kaWZpY2F0aW9ucyBvciBhZGRpdGlvbnMNCiAgICAgIHRvIHRoYXQgV29yayBvciBEZXJpdmF0aXZlIFdvcmtzIHRoZXJlb2YsIHRoYXQgaXMgaW50ZW50aW9uYWxseQ0KICAgICAgc3VibWl0dGVkIHRvIExpY2Vuc29yIGZvciBpbmNsdXNpb24gaW4gdGhlIFdvcmsgYnkgdGhlIGNvcHlyaWdodCBvd25lcg0KICAgICAgb3IgYnkgYW4gaW5kaXZpZHVhbCBvciBMZWdhbCBFbnRpdHkgYXV0aG9yaXplZCB0byBzdWJtaXQgb24gYmVoYWxmIG9mDQogICAgICB0aGUgY29weXJpZ2h0IG93bmVyLiBGb3IgdGhlIHB1cnBvc2VzIG9mIHRoaXMgZGVmaW5pdGlvbiwgInN1Ym1pdHRlZCINCiAgICAgIG1lYW5zIGFueSBmb3JtIG9mIGVsZWN0cm9uaWMsIHZlcmJhbCwgb3Igd3JpdHRlbiBjb21tdW5pY2F0aW9uIHNlbnQNCiAgICAgIHRvIHRoZSBMaWNlbnNvciBvciBpdHMgcmVwcmVzZW50YXRpdmVzLCBpbmNsdWRpbmcgYnV0IG5vdCBsaW1pdGVkIHRvDQogICAgICBjb21tdW5pY2F0aW9uIG9uIGVsZWN0cm9uaWMgbWFpbGluZyBsaXN0cywgc291cmNlIGNvZGUgY29udHJvbCBzeXN0ZW1zLA0KICAgICAgYW5kIGlzc3VlIHRyYWNraW5nIHN5c3RlbXMgdGhhdCBhcmUgbWFuYWdlZCBieSwgb3Igb24gYmVoYWxmIG9mLCB0aGUNCiAgICAgIExpY2Vuc29yIGZvciB0aGUgcHVycG9zZSBvZiBkaXNjdXNzaW5nIGFuZCBpbXByb3ZpbmcgdGhlIFdvcmssIGJ1dA0KICAgICAgZXhjbHVkaW5nIGNvbW11bmljYXRpb24gdGhhdCBpcyBjb25zcGljdW91c2x5IG1hcmtlZCBvciBvdGhlcndpc2UNCiAgICAgIGRlc2lnbmF0ZWQgaW4gd3JpdGluZyBieSB0aGUgY29weXJpZ2h0IG93bmVyIGFzICJOb3QgYSBDb250cmlidXRpb24uIg0KDQogICAgICAiQ29udHJpYnV0b3IiIHNoYWxsIG1lYW4gTGljZW5zb3IgYW5kIGFueSBpbmRpdmlkdWFsIG9yIExlZ2FsIEVudGl0eQ0KICAgICAgb24gYmVoYWxmIG9mIHdob20gYSBDb250cmlidXRpb24gaGFzIGJlZW4gcmVjZWl2ZWQgYnkgTGljZW5zb3IgYW5kDQogICAgICBzdWJzZXF1ZW50bHkgaW5jb3Jwb3JhdGVkIHdpdGhpbiB0aGUgV29yay4NCg0KICAgMi4gR3JhbnQgb2YgQ29weXJpZ2h0IExpY2Vuc2UuIFN1YmplY3QgdG8gdGhlIHRlcm1zIGFuZCBjb25kaXRpb25zIG9mDQogICAgICB0aGlzIExpY2Vuc2UsIGVhY2ggQ29udHJpYnV0b3IgaGVyZWJ5IGdyYW50cyB0byBZb3UgYSBwZXJwZXR1YWwsDQogICAgICB3b3JsZHdpZGUsIG5vbi1leGNsdXNpdmUsIG5vLWNoYXJnZSwgcm95YWx0eS1mcmVlLCBpcnJldm9jYWJsZQ0KICAgICAgY29weXJpZ2h0IGxpY2Vuc2UgdG8gcmVwcm9kdWNlLCBwcmVwYXJlIERlcml2YXRpdmUgV29ya3Mgb2YsDQogICAgICBwdWJsaWNseSBkaXNwbGF5LCBwdWJsaWNseSBwZXJmb3JtLCBzdWJsaWNlbnNlLCBhbmQgZGlzdHJpYnV0ZSB0aGUNCiAgICAgIFdvcmsgYW5kIHN1Y2ggRGVyaXZhdGl2ZSBXb3JrcyBpbiBTb3VyY2Ugb3IgT2JqZWN0IGZvcm0uDQoNCiAgIDMuIEdyYW50IG9mIFBhdGVudCBMaWNlbnNlLiBTdWJqZWN0IHRvIHRoZSB0ZXJtcyBhbmQgY29uZGl0aW9ucyBvZg0KICAgICAgdGhpcyBMaWNlbnNlLCBlYWNoIENvbnRyaWJ1dG9yIGhlcmVieSBncmFudHMgdG8gWW91IGEgcGVycGV0dWFsLA0KICAgICAgd29ybGR3aWRlLCBub24tZXhjbHVzaXZlLCBuby1jaGFyZ2UsIHJveWFsdHktZnJlZSwgaXJyZXZvY2FibGUNCiAgICAgIChleGNlcHQgYXMgc3RhdGVkIGluIHRoaXMgc2VjdGlvbikgcGF0ZW50IGxpY2Vuc2UgdG8gbWFrZSwgaGF2ZSBtYWRlLA0KICAgICAgdXNlLCBvZmZlciB0byBzZWxsLCBzZWxsLCBpbXBvcnQsIGFuZCBvdGhlcndpc2UgdHJhbnNmZXIgdGhlIFdvcmssDQogICAgICB3aGVyZSBzdWNoIGxpY2Vuc2UgYXBwbGllcyBvbmx5IHRvIHRob3NlIHBhdGVudCBjbGFpbXMgbGljZW5zYWJsZQ0KICAgICAgYnkgc3VjaCBDb250cmlidXRvciB0aGF0IGFyZSBuZWNlc3NhcmlseSBpbmZyaW5nZWQgYnkgdGhlaXINCiAgICAgIENvbnRyaWJ1dGlvbihzKSBhbG9uZSBvciBieSBjb21iaW5hdGlvbiBvZiB0aGVpciBDb250cmlidXRpb24ocykNCiAgICAgIHdpdGggdGhlIFdvcmsgdG8gd2hpY2ggc3VjaCBDb250cmlidXRpb24ocykgd2FzIHN1Ym1pdHRlZC4gSWYgWW91DQogICAgICBpbnN0aXR1dGUgcGF0ZW50IGxpdGlnYXRpb24gYWdhaW5zdCBhbnkgZW50aXR5IChpbmNsdWRpbmcgYQ0KICAgICAgY3Jvc3MtY2xhaW0gb3IgY291bnRlcmNsYWltIGluIGEgbGF3c3VpdCkgYWxsZWdpbmcgdGhhdCB0aGUgV29yaw0KICAgICAgb3IgYSBDb250cmlidXRpb24gaW5jb3Jwb3JhdGVkIHdpdGhpbiB0aGUgV29yayBjb25zdGl0dXRlcyBkaXJlY3QNCiAgICAgIG9yIGNvbnRyaWJ1dG9yeSBwYXRlbnQgaW5mcmluZ2VtZW50LCB0aGVuIGFueSBwYXRlbnQgbGljZW5zZXMNCiAgICAgIGdyYW50ZWQgdG8gWW91IHVuZGVyIHRoaXMgTGljZW5zZSBmb3IgdGhhdCBXb3JrIHNoYWxsIHRlcm1pbmF0ZQ0KICAgICAgYXMgb2YgdGhlIGRhdGUgc3VjaCBsaXRpZ2F0aW9uIGlzIGZpbGVkLg0KDQogICA0LiBSZWRpc3RyaWJ1dGlvbi4gWW91IG1heSByZXByb2R1Y2UgYW5kIGRpc3RyaWJ1dGUgY29waWVzIG9mIHRoZQ0KICAgICAgV29yayBvciBEZXJpdmF0aXZlIFdvcmtzIHRoZXJlb2YgaW4gYW55IG1lZGl1bSwgd2l0aCBvciB3aXRob3V0DQogICAgICBtb2RpZmljYXRpb25zLCBhbmQgaW4gU291cmNlIG9yIE9iamVjdCBmb3JtLCBwcm92aWRlZCB0aGF0IFlvdQ0KICAgICAgbWVldCB0aGUgZm9sbG93aW5nIGNvbmRpdGlvbnM6DQoNCiAgICAgIChhKSBZb3UgbXVzdCBnaXZlIGFueSBvdGhlciByZWNpcGllbnRzIG9mIHRoZSBXb3JrIG9yDQogICAgICAgICAgRGVyaXZhdGl2ZSBXb3JrcyBhIGNvcHkgb2YgdGhpcyBMaWNlbnNlOyBhbmQNCg0KICAgICAgKGIpIFlvdSBtdXN0IGNhdXNlIGFueSBtb2RpZmllZCBmaWxlcyB0byBjYXJyeSBwcm9taW5lbnQgbm90aWNlcw0KICAgICAgICAgIHN0YXRpbmcgdGhhdCBZb3UgY2hhbmdlZCB0aGUgZmlsZXM7IGFuZA0KDQogICAgICAoYykgWW91IG11c3QgcmV0YWluLCBpbiB0aGUgU291cmNlIGZvcm0gb2YgYW55IERlcml2YXRpdmUgV29ya3MNCiAgICAgICAgICB0aGF0IFlvdSBkaXN0cmlidXRlLCBhbGwgY29weXJpZ2h0LCBwYXRlbnQsIHRyYWRlbWFyaywgYW5kDQogICAgICAgICAgYXR0cmlidXRpb24gbm90aWNlcyBmcm9tIHRoZSBTb3VyY2UgZm9ybSBvZiB0aGUgV29yaywNCiAgICAgICAgICBleGNsdWRpbmcgdGhvc2Ugbm90aWNlcyB0aGF0IGRvIG5vdCBwZXJ0YWluIHRvIGFueSBwYXJ0IG9mDQogICAgICAgICAgdGhlIERlcml2YXRpdmUgV29ya3M7IGFuZA0KDQogICAgICAoZCkgSWYgdGhlIFdvcmsgaW5jbHVkZXMgYSAiTk9USUNFIiB0ZXh0IGZpbGUgYXMgcGFydCBvZiBpdHMNCiAgICAgICAgICBkaXN0cmlidXRpb24sIHRoZW4gYW55IERlcml2YXRpdmUgV29ya3MgdGhhdCBZb3UgZGlzdHJpYnV0ZSBtdXN0DQogICAgICAgICAgaW5jbHVkZSBhIHJlYWRhYmxlIGNvcHkgb2YgdGhlIGF0dHJpYnV0aW9uIG5vdGljZXMgY29udGFpbmVkDQogICAgICAgICAgd2l0aGluIHN1Y2ggTk9USUNFIGZpbGUsIGV4Y2x1ZGluZyB0aG9zZSBub3RpY2VzIHRoYXQgZG8gbm90DQogICAgICAgICAgcGVydGFpbiB0byBhbnkgcGFydCBvZiB0aGUgRGVyaXZhdGl2ZSBXb3JrcywgaW4gYXQgbGVhc3Qgb25lDQogICAgICAgICAgb2YgdGhlIGZvbGxvd2luZyBwbGFjZXM6IHdpdGhpbiBhIE5PVElDRSB0ZXh0IGZpbGUgZGlzdHJpYnV0ZWQNCiAgICAgICAgICBhcyBwYXJ0IG9mIHRoZSBEZXJpdmF0aXZlIFdvcmtzOyB3aXRoaW4gdGhlIFNvdXJjZSBmb3JtIG9yDQogICAgICAgICAgZG9jdW1lbnRhdGlvbiwgaWYgcHJvdmlkZWQgYWxvbmcgd2l0aCB0aGUgRGVyaXZhdGl2ZSBXb3Jrczsgb3IsDQogICAgICAgICAgd2l0aGluIGEgZGlzcGxheSBnZW5lcmF0ZWQgYnkgdGhlIERlcml2YXRpdmUgV29ya3MsIGlmIGFuZA0KICAgICAgICAgIHdoZXJldmVyIHN1Y2ggdGhpcmQtcGFydHkgbm90aWNlcyBub3JtYWxseSBhcHBlYXIuIFRoZSBjb250ZW50cw0KICAgICAgICAgIG9mIHRoZSBOT1RJQ0UgZmlsZSBhcmUgZm9yIGluZm9ybWF0aW9uYWwgcHVycG9zZXMgb25seSBhbmQNCiAgICAgICAgICBkbyBub3QgbW9kaWZ5IHRoZSBMaWNlbnNlLiBZb3UgbWF5IGFkZCBZb3VyIG93biBhdHRyaWJ1dGlvbg0KICAgICAgICAgIG5vdGljZXMgd2l0aGluIERlcml2YXRpdmUgV29ya3MgdGhhdCBZb3UgZGlzdHJpYnV0ZSwgYWxvbmdzaWRlDQogICAgICAgICAgb3IgYXMgYW4gYWRkZW5kdW0gdG8gdGhlIE5PVElDRSB0ZXh0IGZyb20gdGhlIFdvcmssIHByb3ZpZGVkDQogICAgICAgICAgdGhhdCBzdWNoIGFkZGl0aW9uYWwgYXR0cmlidXRpb24gbm90aWNlcyBjYW5ub3QgYmUgY29uc3RydWVkDQogICAgICAgICAgYXMgbW9kaWZ5aW5nIHRoZSBMaWNlbnNlLg0KDQogICAgICBZb3UgbWF5IGFkZCBZb3VyIG93biBjb3B5cmlnaHQgc3RhdGVtZW50IHRvIFlvdXIgbW9kaWZpY2F0aW9ucyBhbmQNCiAgICAgIG1heSBwcm92aWRlIGFkZGl0aW9uYWwgb3IgZGlmZmVyZW50IGxpY2Vuc2UgdGVybXMgYW5kIGNvbmRpdGlvbnMNCiAgICAgIGZvciB1c2UsIHJlcHJvZHVjdGlvbiwgb3IgZGlzdHJpYnV0aW9uIG9mIFlvdXIgbW9kaWZpY2F0aW9ucywgb3INCiAgICAgIGZvciBhbnkgc3VjaCBEZXJpdmF0aXZlIFdvcmtzIGFzIGEgd2hvbGUsIHByb3ZpZGVkIFlvdXIgdXNlLA0KICAgICAgcmVwcm9kdWN0aW9uLCBhbmQgZGlzdHJpYnV0aW9uIG9mIHRoZSBXb3JrIG90aGVyd2lzZSBjb21wbGllcyB3aXRoDQogICAgICB0aGUgY29uZGl0aW9ucyBzdGF0ZWQgaW4gdGhpcyBMaWNlbnNlLg0KDQogICA1LiBTdWJtaXNzaW9uIG9mIENvbnRyaWJ1dGlvbnMuIFVubGVzcyBZb3UgZXhwbGljaXRseSBzdGF0ZSBvdGhlcndpc2UsDQogICAgICBhbnkgQ29udHJpYnV0aW9uIGludGVudGlvbmFsbHkgc3VibWl0dGVkIGZvciBpbmNsdXNpb24gaW4gdGhlIFdvcmsNCiAgICAgIGJ5IFlvdSB0byB0aGUgTGljZW5zb3Igc2hhbGwgYmUgdW5kZXIgdGhlIHRlcm1zIGFuZCBjb25kaXRpb25zIG9mDQogICAgICB0aGlzIExpY2Vuc2UsIHdpdGhvdXQgYW55IGFkZGl0aW9uYWwgdGVybXMgb3IgY29uZGl0aW9ucy4NCiAgICAgIE5vdHdpdGhzdGFuZGluZyB0aGUgYWJvdmUsIG5vdGhpbmcgaGVyZWluIHNoYWxsIHN1cGVyc2VkZSBvciBtb2RpZnkNCiAgICAgIHRoZSB0ZXJtcyBvZiBhbnkgc2VwYXJhdGUgbGljZW5zZSBhZ3JlZW1lbnQgeW91IG1heSBoYXZlIGV4ZWN1dGVkDQogICAgICB3aXRoIExpY2Vuc29yIHJlZ2FyZGluZyBzdWNoIENvbnRyaWJ1dGlvbnMuDQoNCiAgIDYuIFRyYWRlbWFya3MuIFRoaXMgTGljZW5zZSBkb2VzIG5vdCBncmFudCBwZXJtaXNzaW9uIHRvIHVzZSB0aGUgdHJhZGUNCiAgICAgIG5hbWVzLCB0cmFkZW1hcmtzLCBzZXJ2aWNlIG1hcmtzLCBvciBwcm9kdWN0IG5hbWVzIG9mIHRoZSBMaWNlbnNvciwNCiAgICAgIGV4Y2VwdCBhcyByZXF1aXJlZCBmb3IgcmVhc29uYWJsZSBhbmQgY3VzdG9tYXJ5IHVzZSBpbiBkZXNjcmliaW5nIHRoZQ0KICAgICAgb3JpZ2luIG9mIHRoZSBXb3JrIGFuZCByZXByb2R1Y2luZyB0aGUgY29udGVudCBvZiB0aGUgTk9USUNFIGZpbGUuDQoNCiAgIDcuIERpc2NsYWltZXIgb2YgV2FycmFudHkuIFVubGVzcyByZXF1aXJlZCBieSBhcHBsaWNhYmxlIGxhdyBvcg0KICAgICAgYWdyZWVkIHRvIGluIHdyaXRpbmcsIExpY2Vuc29yIHByb3ZpZGVzIHRoZSBXb3JrIChhbmQgZWFjaA0KICAgICAgQ29udHJpYnV0b3IgcHJvdmlkZXMgaXRzIENvbnRyaWJ1dGlvbnMpIG9uIGFuICJBUyBJUyIgQkFTSVMsDQogICAgICBXSVRIT1VUIFdBUlJBTlRJRVMgT1IgQ09ORElUSU9OUyBPRiBBTlkgS0lORCwgZWl0aGVyIGV4cHJlc3Mgb3INCiAgICAgIGltcGxpZWQsIGluY2x1ZGluZywgd2l0aG91dCBsaW1pdGF0aW9uLCBhbnkgd2FycmFudGllcyBvciBjb25kaXRpb25zDQogICAgICBvZiBUSVRMRSwgTk9OLUlORlJJTkdFTUVOVCwgTUVSQ0hBTlRBQklMSVRZLCBvciBGSVRORVNTIEZPUiBBDQogICAgICBQQVJUSUNVTEFSIFBVUlBPU0UuIFlvdSBhcmUgc29sZWx5IHJlc3BvbnNpYmxlIGZvciBkZXRlcm1pbmluZyB0aGUNCiAgICAgIGFwcHJvcHJpYXRlbmVzcyBvZiB1c2luZyBvciByZWRpc3RyaWJ1dGluZyB0aGUgV29yayBhbmQgYXNzdW1lIGFueQ0KICAgICAgcmlza3MgYXNzb2NpYXRlZCB3aXRoIFlvdXIgZXhlcmNpc2Ugb2YgcGVybWlzc2lvbnMgdW5kZXIgdGhpcyBMaWNlbnNlLg0KDQogICA4LiBMaW1pdGF0aW9uIG9mIExpYWJpbGl0eS4gSW4gbm8gZXZlbnQgYW5kIHVuZGVyIG5vIGxlZ2FsIHRoZW9yeSwNCiAgICAgIHdoZXRoZXIgaW4gdG9ydCAoaW5jbHVkaW5nIG5lZ2xpZ2VuY2UpLCBjb250cmFjdCwgb3Igb3RoZXJ3aXNlLA0KICAgICAgdW5sZXNzIHJlcXVpcmVkIGJ5IGFwcGxpY2FibGUgbGF3IChzdWNoIGFzIGRlbGliZXJhdGUgYW5kIGdyb3NzbHkNCiAgICAgIG5lZ2xpZ2VudCBhY3RzKSBvciBhZ3JlZWQgdG8gaW4gd3JpdGluZywgc2hhbGwgYW55IENvbnRyaWJ1dG9yIGJlDQogICAgICBsaWFibGUgdG8gWW91IGZvciBkYW1hZ2VzLCBpbmNsdWRpbmcgYW55IGRpcmVjdCwgaW5kaXJlY3QsIHNwZWNpYWwsDQogICAgICBpbmNpZGVudGFsLCBvciBjb25zZXF1ZW50aWFsIGRhbWFnZXMgb2YgYW55IGNoYXJhY3RlciBhcmlzaW5nIGFzIGENCiAgICAgIHJlc3VsdCBvZiB0aGlzIExpY2Vuc2Ugb3Igb3V0IG9mIHRoZSB1c2Ugb3IgaW5hYmlsaXR5IHRvIHVzZSB0aGUNCiAgICAgIFdvcmsgKGluY2x1ZGluZyBidXQgbm90IGxpbWl0ZWQgdG8gZGFtYWdlcyBmb3IgbG9zcyBvZiBnb29kd2lsbCwNCiAgICAgIHdvcmsgc3RvcHBhZ2UsIGNvbXB1dGVyIGZhaWx1cmUgb3IgbWFsZnVuY3Rpb24sIG9yIGFueSBhbmQgYWxsDQogICAgICBvdGhlciBjb21tZXJjaWFsIGRhbWFnZXMgb3IgbG9zc2VzKSwgZXZlbiBpZiBzdWNoIENvbnRyaWJ1dG9yDQogICAgICBoYXMgYmVlbiBhZHZpc2VkIG9mIHRoZSBwb3NzaWJpbGl0eSBvZiBzdWNoIGRhbWFnZXMuDQoNCiAgIDkuIEFjY2VwdGluZyBXYXJyYW50eSBvciBBZGRpdGlvbmFsIExpYWJpbGl0eS4gV2hpbGUgcmVkaXN0cmlidXRpbmcNCiAgICAgIHRoZSBXb3JrIG9yIERlcml2YXRpdmUgV29ya3MgdGhlcmVvZiwgWW91IG1heSBjaG9vc2UgdG8gb2ZmZXIsDQogICAgICBhbmQgY2hhcmdlIGEgZmVlIGZvciwgYWNjZXB0YW5jZSBvZiBzdXBwb3J0LCB3YXJyYW50eSwgaW5kZW1uaXR5LA0KICAgICAgb3Igb3RoZXIgbGlhYmlsaXR5IG9ibGlnYXRpb25zIGFuZC9vciByaWdodHMgY29uc2lzdGVudCB3aXRoIHRoaXMNCiAgICAgIExpY2Vuc2UuIEhvd2V2ZXIsIGluIGFjY2VwdGluZyBzdWNoIG9ibGlnYXRpb25zLCBZb3UgbWF5IGFjdCBvbmx5DQogICAgICBvbiBZb3VyIG93biBiZWhhbGYgYW5kIG9uIFlvdXIgc29sZSByZXNwb25zaWJpbGl0eSwgbm90IG9uIGJlaGFsZg0KICAgICAgb2YgYW55IG90aGVyIENvbnRyaWJ1dG9yLCBhbmQgb25seSBpZiBZb3UgYWdyZWUgdG8gaW5kZW1uaWZ5LA0KICAgICAgZGVmZW5kLCBhbmQgaG9sZCBlYWNoIENvbnRyaWJ1dG9yIGhhcm1sZXNzIGZvciBhbnkgbGlhYmlsaXR5DQogICAgICBpbmN1cnJlZCBieSwgb3IgY2xhaW1zIGFzc2VydGVkIGFnYWluc3QsIHN1Y2ggQ29udHJpYnV0b3IgYnkgcmVhc29uDQogICAgICBvZiB5b3VyIGFjY2VwdGluZyBhbnkgc3VjaCB3YXJyYW50eSBvciBhZGRpdGlvbmFsIGxpYWJpbGl0eS4NCg0KICAgRU5EIE9GIFRFUk1TIEFORCBDT05ESVRJT05T",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "library",
+      "name": "readable-stream",
+      "version": "3.6.2",
+      "bom-ref": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git",
+      "description": "Streams3, a user-land copy of the stream library from Node.js",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/nodejs/readable-stream/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git://github.com/nodejs/readable-stream.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://github.com/nodejs/readable-stream#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE",
+              "text": {
+                "content": "Tm9kZS5qcyBpcyBsaWNlbnNlZCBmb3IgdXNlIGFzIGZvbGxvd3M6CgoiIiIKQ29weXJpZ2h0IE5vZGUuanMgY29udHJpYnV0b3JzLiBBbGwgcmlnaHRzIHJlc2VydmVkLgoKUGVybWlzc2lvbiBpcyBoZXJlYnkgZ3JhbnRlZCwgZnJlZSBvZiBjaGFyZ2UsIHRvIGFueSBwZXJzb24gb2J0YWluaW5nIGEgY29weQpvZiB0aGlzIHNvZnR3YXJlIGFuZCBhc3NvY2lhdGVkIGRvY3VtZW50YXRpb24gZmlsZXMgKHRoZSAiU29mdHdhcmUiKSwgdG8KZGVhbCBpbiB0aGUgU29mdHdhcmUgd2l0aG91dCByZXN0cmljdGlvbiwgaW5jbHVkaW5nIHdpdGhvdXQgbGltaXRhdGlvbiB0aGUKcmlnaHRzIHRvIHVzZSwgY29weSwgbW9kaWZ5LCBtZXJnZSwgcHVibGlzaCwgZGlzdHJpYnV0ZSwgc3VibGljZW5zZSwgYW5kL29yCnNlbGwgY29waWVzIG9mIHRoZSBTb2Z0d2FyZSwgYW5kIHRvIHBlcm1pdCBwZXJzb25zIHRvIHdob20gdGhlIFNvZnR3YXJlIGlzCmZ1cm5pc2hlZCB0byBkbyBzbywgc3ViamVjdCB0byB0aGUgZm9sbG93aW5nIGNvbmRpdGlvbnM6CgpUaGUgYWJvdmUgY29weXJpZ2h0IG5vdGljZSBhbmQgdGhpcyBwZXJtaXNzaW9uIG5vdGljZSBzaGFsbCBiZSBpbmNsdWRlZCBpbgphbGwgY29waWVzIG9yIHN1YnN0YW50aWFsIHBvcnRpb25zIG9mIHRoZSBTb2Z0d2FyZS4KClRIRSBTT0ZUV0FSRSBJUyBQUk9WSURFRCAiQVMgSVMiLCBXSVRIT1VUIFdBUlJBTlRZIE9GIEFOWSBLSU5ELCBFWFBSRVNTIE9SCklNUExJRUQsIElOQ0xVRElORyBCVVQgTk9UIExJTUlURUQgVE8gVEhFIFdBUlJBTlRJRVMgT0YgTUVSQ0hBTlRBQklMSVRZLApGSVRORVNTIEZPUiBBIFBBUlRJQ1VMQVIgUFVSUE9TRSBBTkQgTk9OSU5GUklOR0VNRU5ULiBJTiBOTyBFVkVOVCBTSEFMTCBUSEUKQVVUSE9SUyBPUiBDT1BZUklHSFQgSE9MREVSUyBCRSBMSUFCTEUgRk9SIEFOWSBDTEFJTSwgREFNQUdFUyBPUiBPVEhFUgpMSUFCSUxJVFksIFdIRVRIRVIgSU4gQU4gQUNUSU9OIE9GIENPTlRSQUNULCBUT1JUIE9SIE9USEVSV0lTRSwgQVJJU0lORwpGUk9NLCBPVVQgT0YgT1IgSU4gQ09OTkVDVElPTiBXSVRIIFRIRSBTT0ZUV0FSRSBPUiBUSEUgVVNFIE9SIE9USEVSIERFQUxJTkdTCklOIFRIRSBTT0ZUV0FSRS4KIiIiCgpUaGlzIGxpY2Vuc2UgYXBwbGllcyB0byBwYXJ0cyBvZiBOb2RlLmpzIG9yaWdpbmF0aW5nIGZyb20gdGhlCmh0dHBzOi8vZ2l0aHViLmNvbS9qb3llbnQvbm9kZSByZXBvc2l0b3J5OgoKIiIiCkNvcHlyaWdodCBKb3llbnQsIEluYy4gYW5kIG90aGVyIE5vZGUgY29udHJpYnV0b3JzLiBBbGwgcmlnaHRzIHJlc2VydmVkLgpQZXJtaXNzaW9uIGlzIGhlcmVieSBncmFudGVkLCBmcmVlIG9mIGNoYXJnZSwgdG8gYW55IHBlcnNvbiBvYnRhaW5pbmcgYSBjb3B5Cm9mIHRoaXMgc29mdHdhcmUgYW5kIGFzc29jaWF0ZWQgZG9jdW1lbnRhdGlvbiBmaWxlcyAodGhlICJTb2Z0d2FyZSIpLCB0bwpkZWFsIGluIHRoZSBTb2Z0d2FyZSB3aXRob3V0IHJlc3RyaWN0aW9uLCBpbmNsdWRpbmcgd2l0aG91dCBsaW1pdGF0aW9uIHRoZQpyaWdodHMgdG8gdXNlLCBjb3B5LCBtb2RpZnksIG1lcmdlLCBwdWJsaXNoLCBkaXN0cmlidXRlLCBzdWJsaWNlbnNlLCBhbmQvb3IKc2VsbCBjb3BpZXMgb2YgdGhlIFNvZnR3YXJlLCBhbmQgdG8gcGVybWl0IHBlcnNvbnMgdG8gd2hvbSB0aGUgU29mdHdhcmUgaXMKZnVybmlzaGVkIHRvIGRvIHNvLCBzdWJqZWN0IHRvIHRoZSBmb2xsb3dpbmcgY29uZGl0aW9uczoKClRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlIGFuZCB0aGlzIHBlcm1pc3Npb24gbm90aWNlIHNoYWxsIGJlIGluY2x1ZGVkIGluCmFsbCBjb3BpZXMgb3Igc3Vic3RhbnRpYWwgcG9ydGlvbnMgb2YgdGhlIFNvZnR3YXJlLgoKVEhFIFNPRlRXQVJFIElTIFBST1ZJREVEICJBUyBJUyIsIFdJVEhPVVQgV0FSUkFOVFkgT0YgQU5ZIEtJTkQsIEVYUFJFU1MgT1IKSU1QTElFRCwgSU5DTFVESU5HIEJVVCBOT1QgTElNSVRFRCBUTyBUSEUgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFksCkZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFIEFORCBOT05JTkZSSU5HRU1FTlQuIElOIE5PIEVWRU5UIFNIQUxMIFRIRQpBVVRIT1JTIE9SIENPUFlSSUdIVCBIT0xERVJTIEJFIExJQUJMRSBGT1IgQU5ZIENMQUlNLCBEQU1BR0VTIE9SIE9USEVSCkxJQUJJTElUWSwgV0hFVEhFUiBJTiBBTiBBQ1RJT04gT0YgQ09OVFJBQ1QsIFRPUlQgT1IgT1RIRVJXSVNFLCBBUklTSU5HCkZST00sIE9VVCBPRiBPUiBJTiBDT05ORUNUSU9OIFdJVEggVEhFIFNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MKSU4gVEhFIFNPRlRXQVJFLgoiIiIK",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "library",
+      "name": "safe-buffer",
+      "version": "5.2.1",
+      "bom-ref": "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git",
+      "author": "Feross Aboukhadijeh",
+      "description": "Safer Node.js Buffer API",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/feross/safe-buffer/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git://github.com/feross/safe-buffer.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://github.com/feross/safe-buffer",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE",
+              "text": {
+                "content": "VGhlIE1JVCBMaWNlbnNlIChNSVQpCgpDb3B5cmlnaHQgKGMpIEZlcm9zcyBBYm91a2hhZGlqZWgKClBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHkKb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgIlNvZnR3YXJlIiksIHRvIGRlYWwKaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0cwp0byB1c2UsIGNvcHksIG1vZGlmeSwgbWVyZ2UsIHB1Ymxpc2gsIGRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsCmNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpcwpmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOgoKVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUgaW5jbHVkZWQgaW4KYWxsIGNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuCgpUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgIkFTIElTIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUyBPUgpJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSwKRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFCkFVVEhPUlMgT1IgQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVIKTElBQklMSVRZLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSwKT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgU09GVFdBUkUgT1IgVEhFIFVTRSBPUiBPVEhFUiBERUFMSU5HUyBJTgpUSEUgU09GVFdBUkUuCg==",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "library",
+      "name": "stream-browserify",
+      "version": "3.0.0",
+      "bom-ref": "pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A//github.com/browserify/stream-browserify.git",
+      "author": "James Halliday",
+      "description": "the stream module from node core for browsers",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A//github.com/browserify/stream-browserify.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/browserify/stream-browserify/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git://github.com/browserify/stream-browserify.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://github.com/browserify/stream-browserify",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE",
+              "text": {
+                "content": "TUlUIExpY2Vuc2UKCkNvcHlyaWdodCAoYykgSmFtZXMgSGFsbGlkYXkKClBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHkgb2YKdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgIlNvZnR3YXJlIiksIHRvIGRlYWwgaW4KdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0cyB0bwp1c2UsIGNvcHksIG1vZGlmeSwgbWVyZ2UsIHB1Ymxpc2gsIGRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsIGNvcGllcyBvZgp0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpcyBmdXJuaXNoZWQgdG8gZG8gc28sCnN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOgoKVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUgaW5jbHVkZWQgaW4gYWxsCmNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuCgpUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgIkFTIElTIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUyBPUgpJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSwgRklUTkVTUwpGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFIEFVVEhPUlMgT1IKQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVIgTElBQklMSVRZLCBXSEVUSEVSCklOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSwgT1VUIE9GIE9SIElOCkNPTk5FQ1RJT04gV0lUSCBUSEUgU09GVFdBUkUgT1IgVEhFIFVTRSBPUiBPVEhFUiBERUFMSU5HUyBJTiBUSEUgU09GVFdBUkUuCg==",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "library",
+      "name": "string_decoder",
+      "version": "1.3.0",
+      "bom-ref": "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git",
+      "description": "The string_decoder module from Node core",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/nodejs/string_decoder/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git://github.com/nodejs/string_decoder.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://github.com/nodejs/string_decoder",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE",
+              "text": {
+                "content": "Tm9kZS5qcyBpcyBsaWNlbnNlZCBmb3IgdXNlIGFzIGZvbGxvd3M6CgoiIiIKQ29weXJpZ2h0IE5vZGUuanMgY29udHJpYnV0b3JzLiBBbGwgcmlnaHRzIHJlc2VydmVkLgoKUGVybWlzc2lvbiBpcyBoZXJlYnkgZ3JhbnRlZCwgZnJlZSBvZiBjaGFyZ2UsIHRvIGFueSBwZXJzb24gb2J0YWluaW5nIGEgY29weQpvZiB0aGlzIHNvZnR3YXJlIGFuZCBhc3NvY2lhdGVkIGRvY3VtZW50YXRpb24gZmlsZXMgKHRoZSAiU29mdHdhcmUiKSwgdG8KZGVhbCBpbiB0aGUgU29mdHdhcmUgd2l0aG91dCByZXN0cmljdGlvbiwgaW5jbHVkaW5nIHdpdGhvdXQgbGltaXRhdGlvbiB0aGUKcmlnaHRzIHRvIHVzZSwgY29weSwgbW9kaWZ5LCBtZXJnZSwgcHVibGlzaCwgZGlzdHJpYnV0ZSwgc3VibGljZW5zZSwgYW5kL29yCnNlbGwgY29waWVzIG9mIHRoZSBTb2Z0d2FyZSwgYW5kIHRvIHBlcm1pdCBwZXJzb25zIHRvIHdob20gdGhlIFNvZnR3YXJlIGlzCmZ1cm5pc2hlZCB0byBkbyBzbywgc3ViamVjdCB0byB0aGUgZm9sbG93aW5nIGNvbmRpdGlvbnM6CgpUaGUgYWJvdmUgY29weXJpZ2h0IG5vdGljZSBhbmQgdGhpcyBwZXJtaXNzaW9uIG5vdGljZSBzaGFsbCBiZSBpbmNsdWRlZCBpbgphbGwgY29waWVzIG9yIHN1YnN0YW50aWFsIHBvcnRpb25zIG9mIHRoZSBTb2Z0d2FyZS4KClRIRSBTT0ZUV0FSRSBJUyBQUk9WSURFRCAiQVMgSVMiLCBXSVRIT1VUIFdBUlJBTlRZIE9GIEFOWSBLSU5ELCBFWFBSRVNTIE9SCklNUExJRUQsIElOQ0xVRElORyBCVVQgTk9UIExJTUlURUQgVE8gVEhFIFdBUlJBTlRJRVMgT0YgTUVSQ0hBTlRBQklMSVRZLApGSVRORVNTIEZPUiBBIFBBUlRJQ1VMQVIgUFVSUE9TRSBBTkQgTk9OSU5GUklOR0VNRU5ULiBJTiBOTyBFVkVOVCBTSEFMTCBUSEUKQVVUSE9SUyBPUiBDT1BZUklHSFQgSE9MREVSUyBCRSBMSUFCTEUgRk9SIEFOWSBDTEFJTSwgREFNQUdFUyBPUiBPVEhFUgpMSUFCSUxJVFksIFdIRVRIRVIgSU4gQU4gQUNUSU9OIE9GIENPTlRSQUNULCBUT1JUIE9SIE9USEVSV0lTRSwgQVJJU0lORwpGUk9NLCBPVVQgT0YgT1IgSU4gQ09OTkVDVElPTiBXSVRIIFRIRSBTT0ZUV0FSRSBPUiBUSEUgVVNFIE9SIE9USEVSIERFQUxJTkdTCklOIFRIRSBTT0ZUV0FSRS4KIiIiCgpUaGlzIGxpY2Vuc2UgYXBwbGllcyB0byBwYXJ0cyBvZiBOb2RlLmpzIG9yaWdpbmF0aW5nIGZyb20gdGhlCmh0dHBzOi8vZ2l0aHViLmNvbS9qb3llbnQvbm9kZSByZXBvc2l0b3J5OgoKIiIiCkNvcHlyaWdodCBKb3llbnQsIEluYy4gYW5kIG90aGVyIE5vZGUgY29udHJpYnV0b3JzLiBBbGwgcmlnaHRzIHJlc2VydmVkLgpQZXJtaXNzaW9uIGlzIGhlcmVieSBncmFudGVkLCBmcmVlIG9mIGNoYXJnZSwgdG8gYW55IHBlcnNvbiBvYnRhaW5pbmcgYSBjb3B5Cm9mIHRoaXMgc29mdHdhcmUgYW5kIGFzc29jaWF0ZWQgZG9jdW1lbnRhdGlvbiBmaWxlcyAodGhlICJTb2Z0d2FyZSIpLCB0bwpkZWFsIGluIHRoZSBTb2Z0d2FyZSB3aXRob3V0IHJlc3RyaWN0aW9uLCBpbmNsdWRpbmcgd2l0aG91dCBsaW1pdGF0aW9uIHRoZQpyaWdodHMgdG8gdXNlLCBjb3B5LCBtb2RpZnksIG1lcmdlLCBwdWJsaXNoLCBkaXN0cmlidXRlLCBzdWJsaWNlbnNlLCBhbmQvb3IKc2VsbCBjb3BpZXMgb2YgdGhlIFNvZnR3YXJlLCBhbmQgdG8gcGVybWl0IHBlcnNvbnMgdG8gd2hvbSB0aGUgU29mdHdhcmUgaXMKZnVybmlzaGVkIHRvIGRvIHNvLCBzdWJqZWN0IHRvIHRoZSBmb2xsb3dpbmcgY29uZGl0aW9uczoKClRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlIGFuZCB0aGlzIHBlcm1pc3Npb24gbm90aWNlIHNoYWxsIGJlIGluY2x1ZGVkIGluCmFsbCBjb3BpZXMgb3Igc3Vic3RhbnRpYWwgcG9ydGlvbnMgb2YgdGhlIFNvZnR3YXJlLgoKVEhFIFNPRlRXQVJFIElTIFBST1ZJREVEICJBUyBJUyIsIFdJVEhPVVQgV0FSUkFOVFkgT0YgQU5ZIEtJTkQsIEVYUFJFU1MgT1IKSU1QTElFRCwgSU5DTFVESU5HIEJVVCBOT1QgTElNSVRFRCBUTyBUSEUgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFksCkZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFIEFORCBOT05JTkZSSU5HRU1FTlQuIElOIE5PIEVWRU5UIFNIQUxMIFRIRQpBVVRIT1JTIE9SIENPUFlSSUdIVCBIT0xERVJTIEJFIExJQUJMRSBGT1IgQU5ZIENMQUlNLCBEQU1BR0VTIE9SIE9USEVSCkxJQUJJTElUWSwgV0hFVEhFUiBJTiBBTiBBQ1RJT04gT0YgQ09OVFJBQ1QsIFRPUlQgT1IgT1RIRVJXSVNFLCBBUklTSU5HCkZST00sIE9VVCBPRiBPUiBJTiBDT05ORUNUSU9OIFdJVEggVEhFIFNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MKSU4gVEhFIFNPRlRXQVJFLgoiIiIKCg==",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "library",
+      "name": "through",
+      "version": "2.3.8",
+      "bom-ref": "pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/through.git",
+      "author": "Dominic Tarr",
+      "description": "simplified stream construction",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/through.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/dominictarr/through/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git+https://github.com/dominictarr/through.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://github.com/dominictarr/through",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE.MIT",
+              "text": {
+                "content": "VGhlIE1JVCBMaWNlbnNlCgpDb3B5cmlnaHQgKGMpIDIwMTEgRG9taW5pYyBUYXJyCgpQZXJtaXNzaW9uIGlzIGhlcmVieSBncmFudGVkLCBmcmVlIG9mIGNoYXJnZSwgCnRvIGFueSBwZXJzb24gb2J0YWluaW5nIGEgY29weSBvZiB0aGlzIHNvZnR3YXJlIGFuZCAKYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgIlNvZnR3YXJlIiksIHRvIApkZWFsIGluIHRoZSBTb2Z0d2FyZSB3aXRob3V0IHJlc3RyaWN0aW9uLCBpbmNsdWRpbmcgCndpdGhvdXQgbGltaXRhdGlvbiB0aGUgcmlnaHRzIHRvIHVzZSwgY29weSwgbW9kaWZ5LCAKbWVyZ2UsIHB1Ymxpc2gsIGRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsIApjb3BpZXMgb2YgdGhlIFNvZnR3YXJlLCBhbmQgdG8gcGVybWl0IHBlcnNvbnMgdG8gd2hvbSAKdGhlIFNvZnR3YXJlIGlzIGZ1cm5pc2hlZCB0byBkbyBzbywgCnN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOgoKVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2UgCnNoYWxsIGJlIGluY2x1ZGVkIGluIGFsbCBjb3BpZXMgb3Igc3Vic3RhbnRpYWwgcG9ydGlvbnMgb2YgdGhlIFNvZnR3YXJlLgoKVEhFIFNPRlRXQVJFIElTIFBST1ZJREVEICJBUyBJUyIsIFdJVEhPVVQgV0FSUkFOVFkgT0YgQU5ZIEtJTkQsIApFWFBSRVNTIE9SIElNUExJRUQsIElOQ0xVRElORyBCVVQgTk9UIExJTUlURUQgVE8gVEhFIFdBUlJBTlRJRVMgCk9GIE1FUkNIQU5UQUJJTElUWSwgRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gCklOIE5PIEVWRU5UIFNIQUxMIFRIRSBBVVRIT1JTIE9SIENPUFlSSUdIVCBIT0xERVJTIEJFIExJQUJMRSBGT1IgCkFOWSBDTEFJTSwgREFNQUdFUyBPUiBPVEhFUiBMSUFCSUxJVFksIFdIRVRIRVIgSU4gQU4gQUNUSU9OIE9GIENPTlRSQUNULCAKVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSwgT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgClNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MgSU4gVEhFIFNPRlRXQVJFLgo=",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "library",
+      "name": "util-deprecate",
+      "version": "1.0.2",
+      "bom-ref": "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git",
+      "author": "Nathan Rajlich",
+      "description": "The Node.js \`util.deprecate()\` function with browser support",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/TooTallNate/util-deprecate/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git://github.com/TooTallNate/util-deprecate.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://github.com/TooTallNate/util-deprecate",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE",
+              "text": {
+                "content": "KFRoZSBNSVQgTGljZW5zZSkKCkNvcHlyaWdodCAoYykgMjAxNCBOYXRoYW4gUmFqbGljaCA8bmF0aGFuQHRvb3RhbGxuYXRlLm5ldD4KClBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uCm9idGFpbmluZyBhIGNvcHkgb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uCmZpbGVzICh0aGUgIlNvZnR3YXJlIiksIHRvIGRlYWwgaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQKcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0cyB0byB1c2UsCmNvcHksIG1vZGlmeSwgbWVyZ2UsIHB1Ymxpc2gsIGRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsCmNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZQpTb2Z0d2FyZSBpcyBmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlIGZvbGxvd2luZwpjb25kaXRpb25zOgoKVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUKaW5jbHVkZWQgaW4gYWxsIGNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuCgpUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgIkFTIElTIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwKRVhQUkVTUyBPUiBJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTCk9GIE1FUkNIQU5UQUJJTElUWSwgRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5ECk5PTklORlJJTkdFTUVOVC4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFIEFVVEhPUlMgT1IgQ09QWVJJR0hUCkhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVIgTElBQklMSVRZLApXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcKRlJPTSwgT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgU09GVFdBUkUgT1IgVEhFIFVTRSBPUgpPVEhFUiBERUFMSU5HUyBJTiBUSEUgU09GVFdBUkUuCg==",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue1337",
+      "dependsOn": [
+        "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git",
+        "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git",
+        "pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/through.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git"
+    },
+    {
+      "ref": "pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git",
+      "dependsOn": [
+        "pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git",
+        "pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git"
+    },
+    {
+      "ref": "pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git"
+    },
+    {
+      "ref": "pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git"
+    },
+    {
+      "ref": "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git"
+    },
+    {
+      "ref": "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git"
+    },
+    {
+      "ref": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git",
+      "dependsOn": [
+        "pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git",
+        "pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git",
+        "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git",
+        "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git",
+        "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git",
+      "dependsOn": [
+        "pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A//github.com/browserify/stream-browserify.git",
+      "dependsOn": [
+        "pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git",
+        "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git",
+        "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git",
+      "dependsOn": [
+        "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/through.git",
+      "dependsOn": [
+        "pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A//github.com/browserify/stream-browserify.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git"
+    }
+  ]
+}"
+`;
+
+exports[`integration regression: find license evidence like \`LICENSE.MIT\` generated json file: dist/.well-known/sbom 1`] = `
+"{
+  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "version": 1,
+  "metadata": {
+    "tools": [
+      {
+        "vendor": "@cyclonedx",
+        "name": "cyclonedx-library",
+        "version": "libVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
+            "type": "issue-tracker",
+            "comment": "as detected from PackageJson property \\"bugs.url\\""
+          },
+          {
+            "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
+            "type": "vcs",
+            "comment": "as detected from PackageJson property \\"repository.url\\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \\"homepage\\""
+          }
+        ]
+      },
+      {
+        "vendor": "@cyclonedx",
+        "name": "webpack-plugin",
+        "version": "thisVersion-testing",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
+            "type": "issue-tracker",
+            "comment": "as detected from PackageJson property \\"bugs.url\\""
+          },
+          {
+            "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
+            "type": "vcs",
+            "comment": "as detected from PackageJson property \\"repository.url\\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \\"homepage\\""
+          }
+        ]
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "regression-issue1337",
+      "group": "@cyclonedx-webpack-plugin-tests",
+      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue1337",
+      "author": "Jan Kowalleck",
+      "description": "example setup for issue#1337",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue1337",
+      "externalReferences": [
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue1337",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\" and \\"repository.directory\\""
+        },
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/regression-issue1337#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {}
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "base64-js",
+      "version": "1.5.1",
+      "bom-ref": "pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git",
+      "author": "T. Jameson Little",
+      "description": "Base64 encoding/decoding in pure JS",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/beatgammit/base64-js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git://github.com/beatgammit/base64-js.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://github.com/beatgammit/base64-js",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE",
+              "text": {
+                "content": "VGhlIE1JVCBMaWNlbnNlIChNSVQpCgpDb3B5cmlnaHQgKGMpIDIwMTQgSmFtZXNvbiBMaXR0bGUKClBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHkKb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgIlNvZnR3YXJlIiksIHRvIGRlYWwKaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0cwp0byB1c2UsIGNvcHksIG1vZGlmeSwgbWVyZ2UsIHB1Ymxpc2gsIGRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsCmNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpcwpmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOgoKVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUgaW5jbHVkZWQgaW4KYWxsIGNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuCgpUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgIkFTIElTIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUyBPUgpJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSwKRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFCkFVVEhPUlMgT1IgQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVIKTElBQklMSVRZLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSwKT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgU09GVFdBUkUgT1IgVEhFIFVTRSBPUiBPVEhFUiBERUFMSU5HUyBJTgpUSEUgU09GVFdBUkUuCg==",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "library",
+      "name": "buffer",
+      "version": "6.0.3",
+      "bom-ref": "pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git",
+      "author": "Feross Aboukhadijeh",
+      "description": "Node.js Buffer API, for the browser",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/feross/buffer/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git://github.com/feross/buffer.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://github.com/feross/buffer",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE",
+              "text": {
+                "content": "VGhlIE1JVCBMaWNlbnNlIChNSVQpCgpDb3B5cmlnaHQgKGMpIEZlcm9zcyBBYm91a2hhZGlqZWgsIGFuZCBvdGhlciBjb250cmlidXRvcnMuCgpQZXJtaXNzaW9uIGlzIGhlcmVieSBncmFudGVkLCBmcmVlIG9mIGNoYXJnZSwgdG8gYW55IHBlcnNvbiBvYnRhaW5pbmcgYSBjb3B5Cm9mIHRoaXMgc29mdHdhcmUgYW5kIGFzc29jaWF0ZWQgZG9jdW1lbnRhdGlvbiBmaWxlcyAodGhlICJTb2Z0d2FyZSIpLCB0byBkZWFsCmluIHRoZSBTb2Z0d2FyZSB3aXRob3V0IHJlc3RyaWN0aW9uLCBpbmNsdWRpbmcgd2l0aG91dCBsaW1pdGF0aW9uIHRoZSByaWdodHMKdG8gdXNlLCBjb3B5LCBtb2RpZnksIG1lcmdlLCBwdWJsaXNoLCBkaXN0cmlidXRlLCBzdWJsaWNlbnNlLCBhbmQvb3Igc2VsbApjb3BpZXMgb2YgdGhlIFNvZnR3YXJlLCBhbmQgdG8gcGVybWl0IHBlcnNvbnMgdG8gd2hvbSB0aGUgU29mdHdhcmUgaXMKZnVybmlzaGVkIHRvIGRvIHNvLCBzdWJqZWN0IHRvIHRoZSBmb2xsb3dpbmcgY29uZGl0aW9uczoKClRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlIGFuZCB0aGlzIHBlcm1pc3Npb24gbm90aWNlIHNoYWxsIGJlIGluY2x1ZGVkIGluCmFsbCBjb3BpZXMgb3Igc3Vic3RhbnRpYWwgcG9ydGlvbnMgb2YgdGhlIFNvZnR3YXJlLgoKVEhFIFNPRlRXQVJFIElTIFBST1ZJREVEICJBUyBJUyIsIFdJVEhPVVQgV0FSUkFOVFkgT0YgQU5ZIEtJTkQsIEVYUFJFU1MgT1IKSU1QTElFRCwgSU5DTFVESU5HIEJVVCBOT1QgTElNSVRFRCBUTyBUSEUgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFksCkZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFIEFORCBOT05JTkZSSU5HRU1FTlQuIElOIE5PIEVWRU5UIFNIQUxMIFRIRQpBVVRIT1JTIE9SIENPUFlSSUdIVCBIT0xERVJTIEJFIExJQUJMRSBGT1IgQU5ZIENMQUlNLCBEQU1BR0VTIE9SIE9USEVSCkxJQUJJTElUWSwgV0hFVEhFUiBJTiBBTiBBQ1RJT04gT0YgQ09OVFJBQ1QsIFRPUlQgT1IgT1RIRVJXSVNFLCBBUklTSU5HIEZST00sCk9VVCBPRiBPUiBJTiBDT05ORUNUSU9OIFdJVEggVEhFIFNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MgSU4KVEhFIFNPRlRXQVJFLgo=",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "library",
+      "name": "esprima",
+      "version": "4.0.1",
+      "bom-ref": "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git",
+      "author": "Ariya Hidayat",
+      "description": "ECMAScript parsing infrastructure for multipurpose analysis",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/jquery/esprima/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git+https://github.com/jquery/esprima.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "http://esprima.org",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE.BSD",
+              "text": {
+                "content": "Q29weXJpZ2h0IEpTIEZvdW5kYXRpb24gYW5kIG90aGVyIGNvbnRyaWJ1dG9ycywgaHR0cHM6Ly9qcy5mb3VuZGF0aW9uLwoKUmVkaXN0cmlidXRpb24gYW5kIHVzZSBpbiBzb3VyY2UgYW5kIGJpbmFyeSBmb3Jtcywgd2l0aCBvciB3aXRob3V0Cm1vZGlmaWNhdGlvbiwgYXJlIHBlcm1pdHRlZCBwcm92aWRlZCB0aGF0IHRoZSBmb2xsb3dpbmcgY29uZGl0aW9ucyBhcmUgbWV0OgoKICAqIFJlZGlzdHJpYnV0aW9ucyBvZiBzb3VyY2UgY29kZSBtdXN0IHJldGFpbiB0aGUgYWJvdmUgY29weXJpZ2h0CiAgICBub3RpY2UsIHRoaXMgbGlzdCBvZiBjb25kaXRpb25zIGFuZCB0aGUgZm9sbG93aW5nIGRpc2NsYWltZXIuCiAgKiBSZWRpc3RyaWJ1dGlvbnMgaW4gYmluYXJ5IGZvcm0gbXVzdCByZXByb2R1Y2UgdGhlIGFib3ZlIGNvcHlyaWdodAogICAgbm90aWNlLCB0aGlzIGxpc3Qgb2YgY29uZGl0aW9ucyBhbmQgdGhlIGZvbGxvd2luZyBkaXNjbGFpbWVyIGluIHRoZQogICAgZG9jdW1lbnRhdGlvbiBhbmQvb3Igb3RoZXIgbWF0ZXJpYWxzIHByb3ZpZGVkIHdpdGggdGhlIGRpc3RyaWJ1dGlvbi4KClRISVMgU09GVFdBUkUgSVMgUFJPVklERUQgQlkgVEhFIENPUFlSSUdIVCBIT0xERVJTIEFORCBDT05UUklCVVRPUlMgIkFTIElTIgpBTkQgQU5ZIEVYUFJFU1MgT1IgSU1QTElFRCBXQVJSQU5USUVTLCBJTkNMVURJTkcsIEJVVCBOT1QgTElNSVRFRCBUTywgVEhFCklNUExJRUQgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFkgQU5EIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFCkFSRSBESVNDTEFJTUVELiBJTiBOTyBFVkVOVCBTSEFMTCA8Q09QWVJJR0hUIEhPTERFUj4gQkUgTElBQkxFIEZPUiBBTlkKRElSRUNULCBJTkRJUkVDVCwgSU5DSURFTlRBTCwgU1BFQ0lBTCwgRVhFTVBMQVJZLCBPUiBDT05TRVFVRU5USUFMIERBTUFHRVMKKElOQ0xVRElORywgQlVUIE5PVCBMSU1JVEVEIFRPLCBQUk9DVVJFTUVOVCBPRiBTVUJTVElUVVRFIEdPT0RTIE9SIFNFUlZJQ0VTOwpMT1NTIE9GIFVTRSwgREFUQSwgT1IgUFJPRklUUzsgT1IgQlVTSU5FU1MgSU5URVJSVVBUSU9OKSBIT1dFVkVSIENBVVNFRCBBTkQKT04gQU5ZIFRIRU9SWSBPRiBMSUFCSUxJVFksIFdIRVRIRVIgSU4gQ09OVFJBQ1QsIFNUUklDVCBMSUFCSUxJVFksIE9SIFRPUlQKKElOQ0xVRElORyBORUdMSUdFTkNFIE9SIE9USEVSV0lTRSkgQVJJU0lORyBJTiBBTlkgV0FZIE9VVCBPRiBUSEUgVVNFIE9GClRISVMgU09GVFdBUkUsIEVWRU4gSUYgQURWSVNFRCBPRiBUSEUgUE9TU0lCSUxJVFkgT0YgU1VDSCBEQU1BR0UuCg==",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "library",
+      "name": "events",
+      "version": "3.3.0",
+      "bom-ref": "pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git",
+      "author": "Irakli Gozalishvili",
+      "description": "Node's event emitter for all engines.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git",
+      "externalReferences": [
+        {
+          "url": "http://github.com/Gozala/events/issues/",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git://github.com/Gozala/events.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://github.com/Gozala/events#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE",
+              "text": {
+                "content": "TUlUCgpDb3B5cmlnaHQgSm95ZW50LCBJbmMuIGFuZCBvdGhlciBOb2RlIGNvbnRyaWJ1dG9ycy4KClBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhCmNvcHkgb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUKIlNvZnR3YXJlIiksIHRvIGRlYWwgaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZwp3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0cyB0byB1c2UsIGNvcHksIG1vZGlmeSwgbWVyZ2UsIHB1Ymxpc2gsCmRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsIGNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQKcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpcyBmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlCmZvbGxvd2luZyBjb25kaXRpb25zOgoKVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUgaW5jbHVkZWQKaW4gYWxsIGNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuCgpUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgIkFTIElTIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUwpPUiBJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GCk1FUkNIQU5UQUJJTElUWSwgRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gSU4KTk8gRVZFTlQgU0hBTEwgVEhFIEFVVEhPUlMgT1IgQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sCkRBTUFHRVMgT1IgT1RIRVIgTElBQklMSVRZLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUgpPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSwgT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgU09GVFdBUkUgT1IgVEhFClVTRSBPUiBPVEhFUiBERUFMSU5HUyBJTiBUSEUgU09GVFdBUkUuCg==",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "library",
+      "name": "ieee754",
+      "version": "1.2.1",
+      "bom-ref": "pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git",
+      "author": "Feross Aboukhadijeh",
+      "description": "Read/write IEEE754 floating point numbers from/to a Buffer or array-like object",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/feross/ieee754/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git://github.com/feross/ieee754.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://github.com/feross/ieee754#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE",
+              "text": {
+                "content": "Q29weXJpZ2h0IDIwMDggRmFpciBPYWtzIExhYnMsIEluYy4KClJlZGlzdHJpYnV0aW9uIGFuZCB1c2UgaW4gc291cmNlIGFuZCBiaW5hcnkgZm9ybXMsIHdpdGggb3Igd2l0aG91dCBtb2RpZmljYXRpb24sIGFyZSBwZXJtaXR0ZWQgcHJvdmlkZWQgdGhhdCB0aGUgZm9sbG93aW5nIGNvbmRpdGlvbnMgYXJlIG1ldDoKCjEuIFJlZGlzdHJpYnV0aW9ucyBvZiBzb3VyY2UgY29kZSBtdXN0IHJldGFpbiB0aGUgYWJvdmUgY29weXJpZ2h0IG5vdGljZSwgdGhpcyBsaXN0IG9mIGNvbmRpdGlvbnMgYW5kIHRoZSBmb2xsb3dpbmcgZGlzY2xhaW1lci4KCjIuIFJlZGlzdHJpYnV0aW9ucyBpbiBiaW5hcnkgZm9ybSBtdXN0IHJlcHJvZHVjZSB0aGUgYWJvdmUgY29weXJpZ2h0IG5vdGljZSwgdGhpcyBsaXN0IG9mIGNvbmRpdGlvbnMgYW5kIHRoZSBmb2xsb3dpbmcgZGlzY2xhaW1lciBpbiB0aGUgZG9jdW1lbnRhdGlvbiBhbmQvb3Igb3RoZXIgbWF0ZXJpYWxzIHByb3ZpZGVkIHdpdGggdGhlIGRpc3RyaWJ1dGlvbi4KCjMuIE5laXRoZXIgdGhlIG5hbWUgb2YgdGhlIGNvcHlyaWdodCBob2xkZXIgbm9yIHRoZSBuYW1lcyBvZiBpdHMgY29udHJpYnV0b3JzIG1heSBiZSB1c2VkIHRvIGVuZG9yc2Ugb3IgcHJvbW90ZSBwcm9kdWN0cyBkZXJpdmVkIGZyb20gdGhpcyBzb2Z0d2FyZSB3aXRob3V0IHNwZWNpZmljIHByaW9yIHdyaXR0ZW4gcGVybWlzc2lvbi4KClRISVMgU09GVFdBUkUgSVMgUFJPVklERUQgQlkgVEhFIENPUFlSSUdIVCBIT0xERVJTIEFORCBDT05UUklCVVRPUlMgIkFTIElTIiBBTkQgQU5ZIEVYUFJFU1MgT1IgSU1QTElFRCBXQVJSQU5USUVTLCBJTkNMVURJTkcsIEJVVCBOT1QgTElNSVRFRCBUTywgVEhFIElNUExJRUQgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFkgQU5EIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFIEFSRSBESVNDTEFJTUVELiBJTiBOTyBFVkVOVCBTSEFMTCBUSEUgQ09QWVJJR0hUIEhPTERFUiBPUiBDT05UUklCVVRPUlMgQkUgTElBQkxFIEZPUiBBTlkgRElSRUNULCBJTkRJUkVDVCwgSU5DSURFTlRBTCwgU1BFQ0lBTCwgRVhFTVBMQVJZLCBPUiBDT05TRVFVRU5USUFMIERBTUFHRVMgKElOQ0xVRElORywgQlVUIE5PVCBMSU1JVEVEIFRPLCBQUk9DVVJFTUVOVCBPRiBTVUJTVElUVVRFIEdPT0RTIE9SIFNFUlZJQ0VTOyBMT1NTIE9GIFVTRSwgREFUQSwgT1IgUFJPRklUUzsgT1IgQlVTSU5FU1MgSU5URVJSVVBUSU9OKSBIT1dFVkVSIENBVVNFRCBBTkQgT04gQU5ZIFRIRU9SWSBPRiBMSUFCSUxJVFksIFdIRVRIRVIgSU4gQ09OVFJBQ1QsIFNUUklDVCBMSUFCSUxJVFksIE9SIFRPUlQgKElOQ0xVRElORyBORUdMSUdFTkNFIE9SIE9USEVSV0lTRSkgQVJJU0lORyBJTiBBTlkgV0FZIE9VVCBPRiBUSEUgVVNFIE9GIFRISVMgU09GVFdBUkUsIEVWRU4gSUYgQURWSVNFRCBPRiBUSEUgUE9TU0lCSUxJVFkgT0YgU1VDSCBEQU1BR0UuCg==",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "library",
+      "name": "inherits",
+      "version": "2.0.4",
+      "bom-ref": "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git",
+      "description": "Browser-friendly inheritance fully compatible with standard node.js inherits()",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "purl": "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/isaacs/inherits/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git://github.com/isaacs/inherits.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://github.com/isaacs/inherits#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE",
+              "text": {
+                "content": "VGhlIElTQyBMaWNlbnNlCgpDb3B5cmlnaHQgKGMpIElzYWFjIFouIFNjaGx1ZXRlcgoKUGVybWlzc2lvbiB0byB1c2UsIGNvcHksIG1vZGlmeSwgYW5kL29yIGRpc3RyaWJ1dGUgdGhpcyBzb2Z0d2FyZSBmb3IgYW55CnB1cnBvc2Ugd2l0aCBvciB3aXRob3V0IGZlZSBpcyBoZXJlYnkgZ3JhbnRlZCwgcHJvdmlkZWQgdGhhdCB0aGUgYWJvdmUKY29weXJpZ2h0IG5vdGljZSBhbmQgdGhpcyBwZXJtaXNzaW9uIG5vdGljZSBhcHBlYXIgaW4gYWxsIGNvcGllcy4KClRIRSBTT0ZUV0FSRSBJUyBQUk9WSURFRCAiQVMgSVMiIEFORCBUSEUgQVVUSE9SIERJU0NMQUlNUyBBTEwgV0FSUkFOVElFUyBXSVRIClJFR0FSRCBUTyBUSElTIFNPRlRXQVJFIElOQ0xVRElORyBBTEwgSU1QTElFRCBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSBBTkQKRklUTkVTUy4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFIEFVVEhPUiBCRSBMSUFCTEUgRk9SIEFOWSBTUEVDSUFMLCBESVJFQ1QsCklORElSRUNULCBPUiBDT05TRVFVRU5USUFMIERBTUFHRVMgT1IgQU5ZIERBTUFHRVMgV0hBVFNPRVZFUiBSRVNVTFRJTkcgRlJPTQpMT1NTIE9GIFVTRSwgREFUQSBPUiBQUk9GSVRTLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgTkVHTElHRU5DRSBPUgpPVEhFUiBUT1JUSU9VUyBBQ1RJT04sIEFSSVNJTkcgT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgVVNFIE9SClBFUkZPUk1BTkNFIE9GIFRISVMgU09GVFdBUkUuCgo=",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "library",
+      "name": "libphonenumber-js",
+      "version": "1.11.16",
+      "bom-ref": "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git",
+      "author": "catamphetamine",
+      "description": "A simpler (and smaller) rewrite of Google Android's libphonenumber library in javascript",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git",
+      "externalReferences": [
+        {
+          "url": "https://gitlab.com/catamphetamine/libphonenumber-js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git+https://gitlab.com/catamphetamine/libphonenumber-js.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://gitlab.com/catamphetamine/libphonenumber-js#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE",
+              "text": {
+                "content": "KFRoZSBNSVQgTGljZW5zZSkNCg0KQ29weXJpZ2h0IChjKSAyMDE2IEBjYXRhbXBoZXRhbWluZSA8cHVyZWNhdGFtcGhldGFtaW5lQGdtYWlsLmNvbT4NCg0KUGVybWlzc2lvbiBpcyBoZXJlYnkgZ3JhbnRlZCwgZnJlZSBvZiBjaGFyZ2UsIHRvIGFueSBwZXJzb24gb2J0YWluaW5nDQphIGNvcHkgb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUNCidTb2Z0d2FyZScpLCB0byBkZWFsIGluIHRoZSBTb2Z0d2FyZSB3aXRob3V0IHJlc3RyaWN0aW9uLCBpbmNsdWRpbmcNCndpdGhvdXQgbGltaXRhdGlvbiB0aGUgcmlnaHRzIHRvIHVzZSwgY29weSwgbW9kaWZ5LCBtZXJnZSwgcHVibGlzaCwNCmRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsIGNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0bw0KcGVybWl0IHBlcnNvbnMgdG8gd2hvbSB0aGUgU29mdHdhcmUgaXMgZnVybmlzaGVkIHRvIGRvIHNvLCBzdWJqZWN0IHRvDQp0aGUgZm9sbG93aW5nIGNvbmRpdGlvbnM6DQoNClRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlIGFuZCB0aGlzIHBlcm1pc3Npb24gbm90aWNlIHNoYWxsIGJlDQppbmNsdWRlZCBpbiBhbGwgY29waWVzIG9yIHN1YnN0YW50aWFsIHBvcnRpb25zIG9mIHRoZSBTb2Z0d2FyZS4NCg0KVEhFIFNPRlRXQVJFIElTIFBST1ZJREVEICdBUyBJUycsIFdJVEhPVVQgV0FSUkFOVFkgT0YgQU5ZIEtJTkQsDQpFWFBSRVNTIE9SIElNUExJRUQsIElOQ0xVRElORyBCVVQgTk9UIExJTUlURUQgVE8gVEhFIFdBUlJBTlRJRVMgT0YNCk1FUkNIQU5UQUJJTElUWSwgRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4NCklOIE5PIEVWRU5UIFNIQUxMIFRIRSBBVVRIT1JTIE9SIENPUFlSSUdIVCBIT0xERVJTIEJFIExJQUJMRSBGT1IgQU5ZDQpDTEFJTSwgREFNQUdFUyBPUiBPVEhFUiBMSUFCSUxJVFksIFdIRVRIRVIgSU4gQU4gQUNUSU9OIE9GIENPTlRSQUNULA0KVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSwgT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUNClNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MgSU4gVEhFIFNPRlRXQVJFLg==",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          },
+          {
+            "license": {
+              "name": "file: LICENSE.Apache",
+              "text": {
+                "content": "ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQXBhY2hlIExpY2Vuc2UNCiAgICAgICAgICAgICAgICAgICAgICAgICAgIFZlcnNpb24gMi4wLCBKYW51YXJ5IDIwMDQNCiAgICAgICAgICAgICAgICAgICAgICAgIGh0dHA6Ly93d3cuYXBhY2hlLm9yZy9saWNlbnNlcy8NCg0KICAgVEVSTVMgQU5EIENPTkRJVElPTlMgRk9SIFVTRSwgUkVQUk9EVUNUSU9OLCBBTkQgRElTVFJJQlVUSU9ODQoNCiAgIDEuIERlZmluaXRpb25zLg0KDQogICAgICAiTGljZW5zZSIgc2hhbGwgbWVhbiB0aGUgdGVybXMgYW5kIGNvbmRpdGlvbnMgZm9yIHVzZSwgcmVwcm9kdWN0aW9uLA0KICAgICAgYW5kIGRpc3RyaWJ1dGlvbiBhcyBkZWZpbmVkIGJ5IFNlY3Rpb25zIDEgdGhyb3VnaCA5IG9mIHRoaXMgZG9jdW1lbnQuDQoNCiAgICAgICJMaWNlbnNvciIgc2hhbGwgbWVhbiB0aGUgY29weXJpZ2h0IG93bmVyIG9yIGVudGl0eSBhdXRob3JpemVkIGJ5DQogICAgICB0aGUgY29weXJpZ2h0IG93bmVyIHRoYXQgaXMgZ3JhbnRpbmcgdGhlIExpY2Vuc2UuDQoNCiAgICAgICJMZWdhbCBFbnRpdHkiIHNoYWxsIG1lYW4gdGhlIHVuaW9uIG9mIHRoZSBhY3RpbmcgZW50aXR5IGFuZCBhbGwNCiAgICAgIG90aGVyIGVudGl0aWVzIHRoYXQgY29udHJvbCwgYXJlIGNvbnRyb2xsZWQgYnksIG9yIGFyZSB1bmRlciBjb21tb24NCiAgICAgIGNvbnRyb2wgd2l0aCB0aGF0IGVudGl0eS4gRm9yIHRoZSBwdXJwb3NlcyBvZiB0aGlzIGRlZmluaXRpb24sDQogICAgICAiY29udHJvbCIgbWVhbnMgKGkpIHRoZSBwb3dlciwgZGlyZWN0IG9yIGluZGlyZWN0LCB0byBjYXVzZSB0aGUNCiAgICAgIGRpcmVjdGlvbiBvciBtYW5hZ2VtZW50IG9mIHN1Y2ggZW50aXR5LCB3aGV0aGVyIGJ5IGNvbnRyYWN0IG9yDQogICAgICBvdGhlcndpc2UsIG9yIChpaSkgb3duZXJzaGlwIG9mIGZpZnR5IHBlcmNlbnQgKDUwJSkgb3IgbW9yZSBvZiB0aGUNCiAgICAgIG91dHN0YW5kaW5nIHNoYXJlcywgb3IgKGlpaSkgYmVuZWZpY2lhbCBvd25lcnNoaXAgb2Ygc3VjaCBlbnRpdHkuDQoNCiAgICAgICJZb3UiIChvciAiWW91ciIpIHNoYWxsIG1lYW4gYW4gaW5kaXZpZHVhbCBvciBMZWdhbCBFbnRpdHkNCiAgICAgIGV4ZXJjaXNpbmcgcGVybWlzc2lvbnMgZ3JhbnRlZCBieSB0aGlzIExpY2Vuc2UuDQoNCiAgICAgICJTb3VyY2UiIGZvcm0gc2hhbGwgbWVhbiB0aGUgcHJlZmVycmVkIGZvcm0gZm9yIG1ha2luZyBtb2RpZmljYXRpb25zLA0KICAgICAgaW5jbHVkaW5nIGJ1dCBub3QgbGltaXRlZCB0byBzb2Z0d2FyZSBzb3VyY2UgY29kZSwgZG9jdW1lbnRhdGlvbg0KICAgICAgc291cmNlLCBhbmQgY29uZmlndXJhdGlvbiBmaWxlcy4NCg0KICAgICAgIk9iamVjdCIgZm9ybSBzaGFsbCBtZWFuIGFueSBmb3JtIHJlc3VsdGluZyBmcm9tIG1lY2hhbmljYWwNCiAgICAgIHRyYW5zZm9ybWF0aW9uIG9yIHRyYW5zbGF0aW9uIG9mIGEgU291cmNlIGZvcm0sIGluY2x1ZGluZyBidXQNCiAgICAgIG5vdCBsaW1pdGVkIHRvIGNvbXBpbGVkIG9iamVjdCBjb2RlLCBnZW5lcmF0ZWQgZG9jdW1lbnRhdGlvbiwNCiAgICAgIGFuZCBjb252ZXJzaW9ucyB0byBvdGhlciBtZWRpYSB0eXBlcy4NCg0KICAgICAgIldvcmsiIHNoYWxsIG1lYW4gdGhlIHdvcmsgb2YgYXV0aG9yc2hpcCwgd2hldGhlciBpbiBTb3VyY2Ugb3INCiAgICAgIE9iamVjdCBmb3JtLCBtYWRlIGF2YWlsYWJsZSB1bmRlciB0aGUgTGljZW5zZSwgYXMgaW5kaWNhdGVkIGJ5IGENCiAgICAgIGNvcHlyaWdodCBub3RpY2UgdGhhdCBpcyBpbmNsdWRlZCBpbiBvciBhdHRhY2hlZCB0byB0aGUgd29yaw0KICAgICAgKGFuIGV4YW1wbGUgaXMgcHJvdmlkZWQgaW4gdGhlIEFwcGVuZGl4IGJlbG93KS4NCg0KICAgICAgIkRlcml2YXRpdmUgV29ya3MiIHNoYWxsIG1lYW4gYW55IHdvcmssIHdoZXRoZXIgaW4gU291cmNlIG9yIE9iamVjdA0KICAgICAgZm9ybSwgdGhhdCBpcyBiYXNlZCBvbiAob3IgZGVyaXZlZCBmcm9tKSB0aGUgV29yayBhbmQgZm9yIHdoaWNoIHRoZQ0KICAgICAgZWRpdG9yaWFsIHJldmlzaW9ucywgYW5ub3RhdGlvbnMsIGVsYWJvcmF0aW9ucywgb3Igb3RoZXIgbW9kaWZpY2F0aW9ucw0KICAgICAgcmVwcmVzZW50LCBhcyBhIHdob2xlLCBhbiBvcmlnaW5hbCB3b3JrIG9mIGF1dGhvcnNoaXAuIEZvciB0aGUgcHVycG9zZXMNCiAgICAgIG9mIHRoaXMgTGljZW5zZSwgRGVyaXZhdGl2ZSBXb3JrcyBzaGFsbCBub3QgaW5jbHVkZSB3b3JrcyB0aGF0IHJlbWFpbg0KICAgICAgc2VwYXJhYmxlIGZyb20sIG9yIG1lcmVseSBsaW5rIChvciBiaW5kIGJ5IG5hbWUpIHRvIHRoZSBpbnRlcmZhY2VzIG9mLA0KICAgICAgdGhlIFdvcmsgYW5kIERlcml2YXRpdmUgV29ya3MgdGhlcmVvZi4NCg0KICAgICAgIkNvbnRyaWJ1dGlvbiIgc2hhbGwgbWVhbiBhbnkgd29yayBvZiBhdXRob3JzaGlwLCBpbmNsdWRpbmcNCiAgICAgIHRoZSBvcmlnaW5hbCB2ZXJzaW9uIG9mIHRoZSBXb3JrIGFuZCBhbnkgbW9kaWZpY2F0aW9ucyBvciBhZGRpdGlvbnMNCiAgICAgIHRvIHRoYXQgV29yayBvciBEZXJpdmF0aXZlIFdvcmtzIHRoZXJlb2YsIHRoYXQgaXMgaW50ZW50aW9uYWxseQ0KICAgICAgc3VibWl0dGVkIHRvIExpY2Vuc29yIGZvciBpbmNsdXNpb24gaW4gdGhlIFdvcmsgYnkgdGhlIGNvcHlyaWdodCBvd25lcg0KICAgICAgb3IgYnkgYW4gaW5kaXZpZHVhbCBvciBMZWdhbCBFbnRpdHkgYXV0aG9yaXplZCB0byBzdWJtaXQgb24gYmVoYWxmIG9mDQogICAgICB0aGUgY29weXJpZ2h0IG93bmVyLiBGb3IgdGhlIHB1cnBvc2VzIG9mIHRoaXMgZGVmaW5pdGlvbiwgInN1Ym1pdHRlZCINCiAgICAgIG1lYW5zIGFueSBmb3JtIG9mIGVsZWN0cm9uaWMsIHZlcmJhbCwgb3Igd3JpdHRlbiBjb21tdW5pY2F0aW9uIHNlbnQNCiAgICAgIHRvIHRoZSBMaWNlbnNvciBvciBpdHMgcmVwcmVzZW50YXRpdmVzLCBpbmNsdWRpbmcgYnV0IG5vdCBsaW1pdGVkIHRvDQogICAgICBjb21tdW5pY2F0aW9uIG9uIGVsZWN0cm9uaWMgbWFpbGluZyBsaXN0cywgc291cmNlIGNvZGUgY29udHJvbCBzeXN0ZW1zLA0KICAgICAgYW5kIGlzc3VlIHRyYWNraW5nIHN5c3RlbXMgdGhhdCBhcmUgbWFuYWdlZCBieSwgb3Igb24gYmVoYWxmIG9mLCB0aGUNCiAgICAgIExpY2Vuc29yIGZvciB0aGUgcHVycG9zZSBvZiBkaXNjdXNzaW5nIGFuZCBpbXByb3ZpbmcgdGhlIFdvcmssIGJ1dA0KICAgICAgZXhjbHVkaW5nIGNvbW11bmljYXRpb24gdGhhdCBpcyBjb25zcGljdW91c2x5IG1hcmtlZCBvciBvdGhlcndpc2UNCiAgICAgIGRlc2lnbmF0ZWQgaW4gd3JpdGluZyBieSB0aGUgY29weXJpZ2h0IG93bmVyIGFzICJOb3QgYSBDb250cmlidXRpb24uIg0KDQogICAgICAiQ29udHJpYnV0b3IiIHNoYWxsIG1lYW4gTGljZW5zb3IgYW5kIGFueSBpbmRpdmlkdWFsIG9yIExlZ2FsIEVudGl0eQ0KICAgICAgb24gYmVoYWxmIG9mIHdob20gYSBDb250cmlidXRpb24gaGFzIGJlZW4gcmVjZWl2ZWQgYnkgTGljZW5zb3IgYW5kDQogICAgICBzdWJzZXF1ZW50bHkgaW5jb3Jwb3JhdGVkIHdpdGhpbiB0aGUgV29yay4NCg0KICAgMi4gR3JhbnQgb2YgQ29weXJpZ2h0IExpY2Vuc2UuIFN1YmplY3QgdG8gdGhlIHRlcm1zIGFuZCBjb25kaXRpb25zIG9mDQogICAgICB0aGlzIExpY2Vuc2UsIGVhY2ggQ29udHJpYnV0b3IgaGVyZWJ5IGdyYW50cyB0byBZb3UgYSBwZXJwZXR1YWwsDQogICAgICB3b3JsZHdpZGUsIG5vbi1leGNsdXNpdmUsIG5vLWNoYXJnZSwgcm95YWx0eS1mcmVlLCBpcnJldm9jYWJsZQ0KICAgICAgY29weXJpZ2h0IGxpY2Vuc2UgdG8gcmVwcm9kdWNlLCBwcmVwYXJlIERlcml2YXRpdmUgV29ya3Mgb2YsDQogICAgICBwdWJsaWNseSBkaXNwbGF5LCBwdWJsaWNseSBwZXJmb3JtLCBzdWJsaWNlbnNlLCBhbmQgZGlzdHJpYnV0ZSB0aGUNCiAgICAgIFdvcmsgYW5kIHN1Y2ggRGVyaXZhdGl2ZSBXb3JrcyBpbiBTb3VyY2Ugb3IgT2JqZWN0IGZvcm0uDQoNCiAgIDMuIEdyYW50IG9mIFBhdGVudCBMaWNlbnNlLiBTdWJqZWN0IHRvIHRoZSB0ZXJtcyBhbmQgY29uZGl0aW9ucyBvZg0KICAgICAgdGhpcyBMaWNlbnNlLCBlYWNoIENvbnRyaWJ1dG9yIGhlcmVieSBncmFudHMgdG8gWW91IGEgcGVycGV0dWFsLA0KICAgICAgd29ybGR3aWRlLCBub24tZXhjbHVzaXZlLCBuby1jaGFyZ2UsIHJveWFsdHktZnJlZSwgaXJyZXZvY2FibGUNCiAgICAgIChleGNlcHQgYXMgc3RhdGVkIGluIHRoaXMgc2VjdGlvbikgcGF0ZW50IGxpY2Vuc2UgdG8gbWFrZSwgaGF2ZSBtYWRlLA0KICAgICAgdXNlLCBvZmZlciB0byBzZWxsLCBzZWxsLCBpbXBvcnQsIGFuZCBvdGhlcndpc2UgdHJhbnNmZXIgdGhlIFdvcmssDQogICAgICB3aGVyZSBzdWNoIGxpY2Vuc2UgYXBwbGllcyBvbmx5IHRvIHRob3NlIHBhdGVudCBjbGFpbXMgbGljZW5zYWJsZQ0KICAgICAgYnkgc3VjaCBDb250cmlidXRvciB0aGF0IGFyZSBuZWNlc3NhcmlseSBpbmZyaW5nZWQgYnkgdGhlaXINCiAgICAgIENvbnRyaWJ1dGlvbihzKSBhbG9uZSBvciBieSBjb21iaW5hdGlvbiBvZiB0aGVpciBDb250cmlidXRpb24ocykNCiAgICAgIHdpdGggdGhlIFdvcmsgdG8gd2hpY2ggc3VjaCBDb250cmlidXRpb24ocykgd2FzIHN1Ym1pdHRlZC4gSWYgWW91DQogICAgICBpbnN0aXR1dGUgcGF0ZW50IGxpdGlnYXRpb24gYWdhaW5zdCBhbnkgZW50aXR5IChpbmNsdWRpbmcgYQ0KICAgICAgY3Jvc3MtY2xhaW0gb3IgY291bnRlcmNsYWltIGluIGEgbGF3c3VpdCkgYWxsZWdpbmcgdGhhdCB0aGUgV29yaw0KICAgICAgb3IgYSBDb250cmlidXRpb24gaW5jb3Jwb3JhdGVkIHdpdGhpbiB0aGUgV29yayBjb25zdGl0dXRlcyBkaXJlY3QNCiAgICAgIG9yIGNvbnRyaWJ1dG9yeSBwYXRlbnQgaW5mcmluZ2VtZW50LCB0aGVuIGFueSBwYXRlbnQgbGljZW5zZXMNCiAgICAgIGdyYW50ZWQgdG8gWW91IHVuZGVyIHRoaXMgTGljZW5zZSBmb3IgdGhhdCBXb3JrIHNoYWxsIHRlcm1pbmF0ZQ0KICAgICAgYXMgb2YgdGhlIGRhdGUgc3VjaCBsaXRpZ2F0aW9uIGlzIGZpbGVkLg0KDQogICA0LiBSZWRpc3RyaWJ1dGlvbi4gWW91IG1heSByZXByb2R1Y2UgYW5kIGRpc3RyaWJ1dGUgY29waWVzIG9mIHRoZQ0KICAgICAgV29yayBvciBEZXJpdmF0aXZlIFdvcmtzIHRoZXJlb2YgaW4gYW55IG1lZGl1bSwgd2l0aCBvciB3aXRob3V0DQogICAgICBtb2RpZmljYXRpb25zLCBhbmQgaW4gU291cmNlIG9yIE9iamVjdCBmb3JtLCBwcm92aWRlZCB0aGF0IFlvdQ0KICAgICAgbWVldCB0aGUgZm9sbG93aW5nIGNvbmRpdGlvbnM6DQoNCiAgICAgIChhKSBZb3UgbXVzdCBnaXZlIGFueSBvdGhlciByZWNpcGllbnRzIG9mIHRoZSBXb3JrIG9yDQogICAgICAgICAgRGVyaXZhdGl2ZSBXb3JrcyBhIGNvcHkgb2YgdGhpcyBMaWNlbnNlOyBhbmQNCg0KICAgICAgKGIpIFlvdSBtdXN0IGNhdXNlIGFueSBtb2RpZmllZCBmaWxlcyB0byBjYXJyeSBwcm9taW5lbnQgbm90aWNlcw0KICAgICAgICAgIHN0YXRpbmcgdGhhdCBZb3UgY2hhbmdlZCB0aGUgZmlsZXM7IGFuZA0KDQogICAgICAoYykgWW91IG11c3QgcmV0YWluLCBpbiB0aGUgU291cmNlIGZvcm0gb2YgYW55IERlcml2YXRpdmUgV29ya3MNCiAgICAgICAgICB0aGF0IFlvdSBkaXN0cmlidXRlLCBhbGwgY29weXJpZ2h0LCBwYXRlbnQsIHRyYWRlbWFyaywgYW5kDQogICAgICAgICAgYXR0cmlidXRpb24gbm90aWNlcyBmcm9tIHRoZSBTb3VyY2UgZm9ybSBvZiB0aGUgV29yaywNCiAgICAgICAgICBleGNsdWRpbmcgdGhvc2Ugbm90aWNlcyB0aGF0IGRvIG5vdCBwZXJ0YWluIHRvIGFueSBwYXJ0IG9mDQogICAgICAgICAgdGhlIERlcml2YXRpdmUgV29ya3M7IGFuZA0KDQogICAgICAoZCkgSWYgdGhlIFdvcmsgaW5jbHVkZXMgYSAiTk9USUNFIiB0ZXh0IGZpbGUgYXMgcGFydCBvZiBpdHMNCiAgICAgICAgICBkaXN0cmlidXRpb24sIHRoZW4gYW55IERlcml2YXRpdmUgV29ya3MgdGhhdCBZb3UgZGlzdHJpYnV0ZSBtdXN0DQogICAgICAgICAgaW5jbHVkZSBhIHJlYWRhYmxlIGNvcHkgb2YgdGhlIGF0dHJpYnV0aW9uIG5vdGljZXMgY29udGFpbmVkDQogICAgICAgICAgd2l0aGluIHN1Y2ggTk9USUNFIGZpbGUsIGV4Y2x1ZGluZyB0aG9zZSBub3RpY2VzIHRoYXQgZG8gbm90DQogICAgICAgICAgcGVydGFpbiB0byBhbnkgcGFydCBvZiB0aGUgRGVyaXZhdGl2ZSBXb3JrcywgaW4gYXQgbGVhc3Qgb25lDQogICAgICAgICAgb2YgdGhlIGZvbGxvd2luZyBwbGFjZXM6IHdpdGhpbiBhIE5PVElDRSB0ZXh0IGZpbGUgZGlzdHJpYnV0ZWQNCiAgICAgICAgICBhcyBwYXJ0IG9mIHRoZSBEZXJpdmF0aXZlIFdvcmtzOyB3aXRoaW4gdGhlIFNvdXJjZSBmb3JtIG9yDQogICAgICAgICAgZG9jdW1lbnRhdGlvbiwgaWYgcHJvdmlkZWQgYWxvbmcgd2l0aCB0aGUgRGVyaXZhdGl2ZSBXb3Jrczsgb3IsDQogICAgICAgICAgd2l0aGluIGEgZGlzcGxheSBnZW5lcmF0ZWQgYnkgdGhlIERlcml2YXRpdmUgV29ya3MsIGlmIGFuZA0KICAgICAgICAgIHdoZXJldmVyIHN1Y2ggdGhpcmQtcGFydHkgbm90aWNlcyBub3JtYWxseSBhcHBlYXIuIFRoZSBjb250ZW50cw0KICAgICAgICAgIG9mIHRoZSBOT1RJQ0UgZmlsZSBhcmUgZm9yIGluZm9ybWF0aW9uYWwgcHVycG9zZXMgb25seSBhbmQNCiAgICAgICAgICBkbyBub3QgbW9kaWZ5IHRoZSBMaWNlbnNlLiBZb3UgbWF5IGFkZCBZb3VyIG93biBhdHRyaWJ1dGlvbg0KICAgICAgICAgIG5vdGljZXMgd2l0aGluIERlcml2YXRpdmUgV29ya3MgdGhhdCBZb3UgZGlzdHJpYnV0ZSwgYWxvbmdzaWRlDQogICAgICAgICAgb3IgYXMgYW4gYWRkZW5kdW0gdG8gdGhlIE5PVElDRSB0ZXh0IGZyb20gdGhlIFdvcmssIHByb3ZpZGVkDQogICAgICAgICAgdGhhdCBzdWNoIGFkZGl0aW9uYWwgYXR0cmlidXRpb24gbm90aWNlcyBjYW5ub3QgYmUgY29uc3RydWVkDQogICAgICAgICAgYXMgbW9kaWZ5aW5nIHRoZSBMaWNlbnNlLg0KDQogICAgICBZb3UgbWF5IGFkZCBZb3VyIG93biBjb3B5cmlnaHQgc3RhdGVtZW50IHRvIFlvdXIgbW9kaWZpY2F0aW9ucyBhbmQNCiAgICAgIG1heSBwcm92aWRlIGFkZGl0aW9uYWwgb3IgZGlmZmVyZW50IGxpY2Vuc2UgdGVybXMgYW5kIGNvbmRpdGlvbnMNCiAgICAgIGZvciB1c2UsIHJlcHJvZHVjdGlvbiwgb3IgZGlzdHJpYnV0aW9uIG9mIFlvdXIgbW9kaWZpY2F0aW9ucywgb3INCiAgICAgIGZvciBhbnkgc3VjaCBEZXJpdmF0aXZlIFdvcmtzIGFzIGEgd2hvbGUsIHByb3ZpZGVkIFlvdXIgdXNlLA0KICAgICAgcmVwcm9kdWN0aW9uLCBhbmQgZGlzdHJpYnV0aW9uIG9mIHRoZSBXb3JrIG90aGVyd2lzZSBjb21wbGllcyB3aXRoDQogICAgICB0aGUgY29uZGl0aW9ucyBzdGF0ZWQgaW4gdGhpcyBMaWNlbnNlLg0KDQogICA1LiBTdWJtaXNzaW9uIG9mIENvbnRyaWJ1dGlvbnMuIFVubGVzcyBZb3UgZXhwbGljaXRseSBzdGF0ZSBvdGhlcndpc2UsDQogICAgICBhbnkgQ29udHJpYnV0aW9uIGludGVudGlvbmFsbHkgc3VibWl0dGVkIGZvciBpbmNsdXNpb24gaW4gdGhlIFdvcmsNCiAgICAgIGJ5IFlvdSB0byB0aGUgTGljZW5zb3Igc2hhbGwgYmUgdW5kZXIgdGhlIHRlcm1zIGFuZCBjb25kaXRpb25zIG9mDQogICAgICB0aGlzIExpY2Vuc2UsIHdpdGhvdXQgYW55IGFkZGl0aW9uYWwgdGVybXMgb3IgY29uZGl0aW9ucy4NCiAgICAgIE5vdHdpdGhzdGFuZGluZyB0aGUgYWJvdmUsIG5vdGhpbmcgaGVyZWluIHNoYWxsIHN1cGVyc2VkZSBvciBtb2RpZnkNCiAgICAgIHRoZSB0ZXJtcyBvZiBhbnkgc2VwYXJhdGUgbGljZW5zZSBhZ3JlZW1lbnQgeW91IG1heSBoYXZlIGV4ZWN1dGVkDQogICAgICB3aXRoIExpY2Vuc29yIHJlZ2FyZGluZyBzdWNoIENvbnRyaWJ1dGlvbnMuDQoNCiAgIDYuIFRyYWRlbWFya3MuIFRoaXMgTGljZW5zZSBkb2VzIG5vdCBncmFudCBwZXJtaXNzaW9uIHRvIHVzZSB0aGUgdHJhZGUNCiAgICAgIG5hbWVzLCB0cmFkZW1hcmtzLCBzZXJ2aWNlIG1hcmtzLCBvciBwcm9kdWN0IG5hbWVzIG9mIHRoZSBMaWNlbnNvciwNCiAgICAgIGV4Y2VwdCBhcyByZXF1aXJlZCBmb3IgcmVhc29uYWJsZSBhbmQgY3VzdG9tYXJ5IHVzZSBpbiBkZXNjcmliaW5nIHRoZQ0KICAgICAgb3JpZ2luIG9mIHRoZSBXb3JrIGFuZCByZXByb2R1Y2luZyB0aGUgY29udGVudCBvZiB0aGUgTk9USUNFIGZpbGUuDQoNCiAgIDcuIERpc2NsYWltZXIgb2YgV2FycmFudHkuIFVubGVzcyByZXF1aXJlZCBieSBhcHBsaWNhYmxlIGxhdyBvcg0KICAgICAgYWdyZWVkIHRvIGluIHdyaXRpbmcsIExpY2Vuc29yIHByb3ZpZGVzIHRoZSBXb3JrIChhbmQgZWFjaA0KICAgICAgQ29udHJpYnV0b3IgcHJvdmlkZXMgaXRzIENvbnRyaWJ1dGlvbnMpIG9uIGFuICJBUyBJUyIgQkFTSVMsDQogICAgICBXSVRIT1VUIFdBUlJBTlRJRVMgT1IgQ09ORElUSU9OUyBPRiBBTlkgS0lORCwgZWl0aGVyIGV4cHJlc3Mgb3INCiAgICAgIGltcGxpZWQsIGluY2x1ZGluZywgd2l0aG91dCBsaW1pdGF0aW9uLCBhbnkgd2FycmFudGllcyBvciBjb25kaXRpb25zDQogICAgICBvZiBUSVRMRSwgTk9OLUlORlJJTkdFTUVOVCwgTUVSQ0hBTlRBQklMSVRZLCBvciBGSVRORVNTIEZPUiBBDQogICAgICBQQVJUSUNVTEFSIFBVUlBPU0UuIFlvdSBhcmUgc29sZWx5IHJlc3BvbnNpYmxlIGZvciBkZXRlcm1pbmluZyB0aGUNCiAgICAgIGFwcHJvcHJpYXRlbmVzcyBvZiB1c2luZyBvciByZWRpc3RyaWJ1dGluZyB0aGUgV29yayBhbmQgYXNzdW1lIGFueQ0KICAgICAgcmlza3MgYXNzb2NpYXRlZCB3aXRoIFlvdXIgZXhlcmNpc2Ugb2YgcGVybWlzc2lvbnMgdW5kZXIgdGhpcyBMaWNlbnNlLg0KDQogICA4LiBMaW1pdGF0aW9uIG9mIExpYWJpbGl0eS4gSW4gbm8gZXZlbnQgYW5kIHVuZGVyIG5vIGxlZ2FsIHRoZW9yeSwNCiAgICAgIHdoZXRoZXIgaW4gdG9ydCAoaW5jbHVkaW5nIG5lZ2xpZ2VuY2UpLCBjb250cmFjdCwgb3Igb3RoZXJ3aXNlLA0KICAgICAgdW5sZXNzIHJlcXVpcmVkIGJ5IGFwcGxpY2FibGUgbGF3IChzdWNoIGFzIGRlbGliZXJhdGUgYW5kIGdyb3NzbHkNCiAgICAgIG5lZ2xpZ2VudCBhY3RzKSBvciBhZ3JlZWQgdG8gaW4gd3JpdGluZywgc2hhbGwgYW55IENvbnRyaWJ1dG9yIGJlDQogICAgICBsaWFibGUgdG8gWW91IGZvciBkYW1hZ2VzLCBpbmNsdWRpbmcgYW55IGRpcmVjdCwgaW5kaXJlY3QsIHNwZWNpYWwsDQogICAgICBpbmNpZGVudGFsLCBvciBjb25zZXF1ZW50aWFsIGRhbWFnZXMgb2YgYW55IGNoYXJhY3RlciBhcmlzaW5nIGFzIGENCiAgICAgIHJlc3VsdCBvZiB0aGlzIExpY2Vuc2Ugb3Igb3V0IG9mIHRoZSB1c2Ugb3IgaW5hYmlsaXR5IHRvIHVzZSB0aGUNCiAgICAgIFdvcmsgKGluY2x1ZGluZyBidXQgbm90IGxpbWl0ZWQgdG8gZGFtYWdlcyBmb3IgbG9zcyBvZiBnb29kd2lsbCwNCiAgICAgIHdvcmsgc3RvcHBhZ2UsIGNvbXB1dGVyIGZhaWx1cmUgb3IgbWFsZnVuY3Rpb24sIG9yIGFueSBhbmQgYWxsDQogICAgICBvdGhlciBjb21tZXJjaWFsIGRhbWFnZXMgb3IgbG9zc2VzKSwgZXZlbiBpZiBzdWNoIENvbnRyaWJ1dG9yDQogICAgICBoYXMgYmVlbiBhZHZpc2VkIG9mIHRoZSBwb3NzaWJpbGl0eSBvZiBzdWNoIGRhbWFnZXMuDQoNCiAgIDkuIEFjY2VwdGluZyBXYXJyYW50eSBvciBBZGRpdGlvbmFsIExpYWJpbGl0eS4gV2hpbGUgcmVkaXN0cmlidXRpbmcNCiAgICAgIHRoZSBXb3JrIG9yIERlcml2YXRpdmUgV29ya3MgdGhlcmVvZiwgWW91IG1heSBjaG9vc2UgdG8gb2ZmZXIsDQogICAgICBhbmQgY2hhcmdlIGEgZmVlIGZvciwgYWNjZXB0YW5jZSBvZiBzdXBwb3J0LCB3YXJyYW50eSwgaW5kZW1uaXR5LA0KICAgICAgb3Igb3RoZXIgbGlhYmlsaXR5IG9ibGlnYXRpb25zIGFuZC9vciByaWdodHMgY29uc2lzdGVudCB3aXRoIHRoaXMNCiAgICAgIExpY2Vuc2UuIEhvd2V2ZXIsIGluIGFjY2VwdGluZyBzdWNoIG9ibGlnYXRpb25zLCBZb3UgbWF5IGFjdCBvbmx5DQogICAgICBvbiBZb3VyIG93biBiZWhhbGYgYW5kIG9uIFlvdXIgc29sZSByZXNwb25zaWJpbGl0eSwgbm90IG9uIGJlaGFsZg0KICAgICAgb2YgYW55IG90aGVyIENvbnRyaWJ1dG9yLCBhbmQgb25seSBpZiBZb3UgYWdyZWUgdG8gaW5kZW1uaWZ5LA0KICAgICAgZGVmZW5kLCBhbmQgaG9sZCBlYWNoIENvbnRyaWJ1dG9yIGhhcm1sZXNzIGZvciBhbnkgbGlhYmlsaXR5DQogICAgICBpbmN1cnJlZCBieSwgb3IgY2xhaW1zIGFzc2VydGVkIGFnYWluc3QsIHN1Y2ggQ29udHJpYnV0b3IgYnkgcmVhc29uDQogICAgICBvZiB5b3VyIGFjY2VwdGluZyBhbnkgc3VjaCB3YXJyYW50eSBvciBhZGRpdGlvbmFsIGxpYWJpbGl0eS4NCg0KICAgRU5EIE9GIFRFUk1TIEFORCBDT05ESVRJT05T",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "library",
+      "name": "readable-stream",
+      "version": "3.6.2",
+      "bom-ref": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git",
+      "description": "Streams3, a user-land copy of the stream library from Node.js",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/nodejs/readable-stream/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git://github.com/nodejs/readable-stream.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://github.com/nodejs/readable-stream#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE",
+              "text": {
+                "content": "Tm9kZS5qcyBpcyBsaWNlbnNlZCBmb3IgdXNlIGFzIGZvbGxvd3M6CgoiIiIKQ29weXJpZ2h0IE5vZGUuanMgY29udHJpYnV0b3JzLiBBbGwgcmlnaHRzIHJlc2VydmVkLgoKUGVybWlzc2lvbiBpcyBoZXJlYnkgZ3JhbnRlZCwgZnJlZSBvZiBjaGFyZ2UsIHRvIGFueSBwZXJzb24gb2J0YWluaW5nIGEgY29weQpvZiB0aGlzIHNvZnR3YXJlIGFuZCBhc3NvY2lhdGVkIGRvY3VtZW50YXRpb24gZmlsZXMgKHRoZSAiU29mdHdhcmUiKSwgdG8KZGVhbCBpbiB0aGUgU29mdHdhcmUgd2l0aG91dCByZXN0cmljdGlvbiwgaW5jbHVkaW5nIHdpdGhvdXQgbGltaXRhdGlvbiB0aGUKcmlnaHRzIHRvIHVzZSwgY29weSwgbW9kaWZ5LCBtZXJnZSwgcHVibGlzaCwgZGlzdHJpYnV0ZSwgc3VibGljZW5zZSwgYW5kL29yCnNlbGwgY29waWVzIG9mIHRoZSBTb2Z0d2FyZSwgYW5kIHRvIHBlcm1pdCBwZXJzb25zIHRvIHdob20gdGhlIFNvZnR3YXJlIGlzCmZ1cm5pc2hlZCB0byBkbyBzbywgc3ViamVjdCB0byB0aGUgZm9sbG93aW5nIGNvbmRpdGlvbnM6CgpUaGUgYWJvdmUgY29weXJpZ2h0IG5vdGljZSBhbmQgdGhpcyBwZXJtaXNzaW9uIG5vdGljZSBzaGFsbCBiZSBpbmNsdWRlZCBpbgphbGwgY29waWVzIG9yIHN1YnN0YW50aWFsIHBvcnRpb25zIG9mIHRoZSBTb2Z0d2FyZS4KClRIRSBTT0ZUV0FSRSBJUyBQUk9WSURFRCAiQVMgSVMiLCBXSVRIT1VUIFdBUlJBTlRZIE9GIEFOWSBLSU5ELCBFWFBSRVNTIE9SCklNUExJRUQsIElOQ0xVRElORyBCVVQgTk9UIExJTUlURUQgVE8gVEhFIFdBUlJBTlRJRVMgT0YgTUVSQ0hBTlRBQklMSVRZLApGSVRORVNTIEZPUiBBIFBBUlRJQ1VMQVIgUFVSUE9TRSBBTkQgTk9OSU5GUklOR0VNRU5ULiBJTiBOTyBFVkVOVCBTSEFMTCBUSEUKQVVUSE9SUyBPUiBDT1BZUklHSFQgSE9MREVSUyBCRSBMSUFCTEUgRk9SIEFOWSBDTEFJTSwgREFNQUdFUyBPUiBPVEhFUgpMSUFCSUxJVFksIFdIRVRIRVIgSU4gQU4gQUNUSU9OIE9GIENPTlRSQUNULCBUT1JUIE9SIE9USEVSV0lTRSwgQVJJU0lORwpGUk9NLCBPVVQgT0YgT1IgSU4gQ09OTkVDVElPTiBXSVRIIFRIRSBTT0ZUV0FSRSBPUiBUSEUgVVNFIE9SIE9USEVSIERFQUxJTkdTCklOIFRIRSBTT0ZUV0FSRS4KIiIiCgpUaGlzIGxpY2Vuc2UgYXBwbGllcyB0byBwYXJ0cyBvZiBOb2RlLmpzIG9yaWdpbmF0aW5nIGZyb20gdGhlCmh0dHBzOi8vZ2l0aHViLmNvbS9qb3llbnQvbm9kZSByZXBvc2l0b3J5OgoKIiIiCkNvcHlyaWdodCBKb3llbnQsIEluYy4gYW5kIG90aGVyIE5vZGUgY29udHJpYnV0b3JzLiBBbGwgcmlnaHRzIHJlc2VydmVkLgpQZXJtaXNzaW9uIGlzIGhlcmVieSBncmFudGVkLCBmcmVlIG9mIGNoYXJnZSwgdG8gYW55IHBlcnNvbiBvYnRhaW5pbmcgYSBjb3B5Cm9mIHRoaXMgc29mdHdhcmUgYW5kIGFzc29jaWF0ZWQgZG9jdW1lbnRhdGlvbiBmaWxlcyAodGhlICJTb2Z0d2FyZSIpLCB0bwpkZWFsIGluIHRoZSBTb2Z0d2FyZSB3aXRob3V0IHJlc3RyaWN0aW9uLCBpbmNsdWRpbmcgd2l0aG91dCBsaW1pdGF0aW9uIHRoZQpyaWdodHMgdG8gdXNlLCBjb3B5LCBtb2RpZnksIG1lcmdlLCBwdWJsaXNoLCBkaXN0cmlidXRlLCBzdWJsaWNlbnNlLCBhbmQvb3IKc2VsbCBjb3BpZXMgb2YgdGhlIFNvZnR3YXJlLCBhbmQgdG8gcGVybWl0IHBlcnNvbnMgdG8gd2hvbSB0aGUgU29mdHdhcmUgaXMKZnVybmlzaGVkIHRvIGRvIHNvLCBzdWJqZWN0IHRvIHRoZSBmb2xsb3dpbmcgY29uZGl0aW9uczoKClRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlIGFuZCB0aGlzIHBlcm1pc3Npb24gbm90aWNlIHNoYWxsIGJlIGluY2x1ZGVkIGluCmFsbCBjb3BpZXMgb3Igc3Vic3RhbnRpYWwgcG9ydGlvbnMgb2YgdGhlIFNvZnR3YXJlLgoKVEhFIFNPRlRXQVJFIElTIFBST1ZJREVEICJBUyBJUyIsIFdJVEhPVVQgV0FSUkFOVFkgT0YgQU5ZIEtJTkQsIEVYUFJFU1MgT1IKSU1QTElFRCwgSU5DTFVESU5HIEJVVCBOT1QgTElNSVRFRCBUTyBUSEUgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFksCkZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFIEFORCBOT05JTkZSSU5HRU1FTlQuIElOIE5PIEVWRU5UIFNIQUxMIFRIRQpBVVRIT1JTIE9SIENPUFlSSUdIVCBIT0xERVJTIEJFIExJQUJMRSBGT1IgQU5ZIENMQUlNLCBEQU1BR0VTIE9SIE9USEVSCkxJQUJJTElUWSwgV0hFVEhFUiBJTiBBTiBBQ1RJT04gT0YgQ09OVFJBQ1QsIFRPUlQgT1IgT1RIRVJXSVNFLCBBUklTSU5HCkZST00sIE9VVCBPRiBPUiBJTiBDT05ORUNUSU9OIFdJVEggVEhFIFNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MKSU4gVEhFIFNPRlRXQVJFLgoiIiIK",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "library",
+      "name": "safe-buffer",
+      "version": "5.2.1",
+      "bom-ref": "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git",
+      "author": "Feross Aboukhadijeh",
+      "description": "Safer Node.js Buffer API",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/feross/safe-buffer/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git://github.com/feross/safe-buffer.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://github.com/feross/safe-buffer",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE",
+              "text": {
+                "content": "VGhlIE1JVCBMaWNlbnNlIChNSVQpCgpDb3B5cmlnaHQgKGMpIEZlcm9zcyBBYm91a2hhZGlqZWgKClBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHkKb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgIlNvZnR3YXJlIiksIHRvIGRlYWwKaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0cwp0byB1c2UsIGNvcHksIG1vZGlmeSwgbWVyZ2UsIHB1Ymxpc2gsIGRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsCmNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpcwpmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOgoKVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUgaW5jbHVkZWQgaW4KYWxsIGNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuCgpUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgIkFTIElTIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUyBPUgpJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSwKRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFCkFVVEhPUlMgT1IgQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVIKTElBQklMSVRZLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSwKT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgU09GVFdBUkUgT1IgVEhFIFVTRSBPUiBPVEhFUiBERUFMSU5HUyBJTgpUSEUgU09GVFdBUkUuCg==",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "library",
+      "name": "stream-browserify",
+      "version": "3.0.0",
+      "bom-ref": "pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A//github.com/browserify/stream-browserify.git",
+      "author": "James Halliday",
+      "description": "the stream module from node core for browsers",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A//github.com/browserify/stream-browserify.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/browserify/stream-browserify/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git://github.com/browserify/stream-browserify.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://github.com/browserify/stream-browserify",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE",
+              "text": {
+                "content": "TUlUIExpY2Vuc2UKCkNvcHlyaWdodCAoYykgSmFtZXMgSGFsbGlkYXkKClBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHkgb2YKdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgIlNvZnR3YXJlIiksIHRvIGRlYWwgaW4KdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0cyB0bwp1c2UsIGNvcHksIG1vZGlmeSwgbWVyZ2UsIHB1Ymxpc2gsIGRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsIGNvcGllcyBvZgp0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpcyBmdXJuaXNoZWQgdG8gZG8gc28sCnN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOgoKVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUgaW5jbHVkZWQgaW4gYWxsCmNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuCgpUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgIkFTIElTIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUyBPUgpJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSwgRklUTkVTUwpGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFIEFVVEhPUlMgT1IKQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVIgTElBQklMSVRZLCBXSEVUSEVSCklOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSwgT1VUIE9GIE9SIElOCkNPTk5FQ1RJT04gV0lUSCBUSEUgU09GVFdBUkUgT1IgVEhFIFVTRSBPUiBPVEhFUiBERUFMSU5HUyBJTiBUSEUgU09GVFdBUkUuCg==",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "library",
+      "name": "string_decoder",
+      "version": "1.3.0",
+      "bom-ref": "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git",
+      "description": "The string_decoder module from Node core",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/nodejs/string_decoder/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git://github.com/nodejs/string_decoder.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://github.com/nodejs/string_decoder",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE",
+              "text": {
+                "content": "Tm9kZS5qcyBpcyBsaWNlbnNlZCBmb3IgdXNlIGFzIGZvbGxvd3M6CgoiIiIKQ29weXJpZ2h0IE5vZGUuanMgY29udHJpYnV0b3JzLiBBbGwgcmlnaHRzIHJlc2VydmVkLgoKUGVybWlzc2lvbiBpcyBoZXJlYnkgZ3JhbnRlZCwgZnJlZSBvZiBjaGFyZ2UsIHRvIGFueSBwZXJzb24gb2J0YWluaW5nIGEgY29weQpvZiB0aGlzIHNvZnR3YXJlIGFuZCBhc3NvY2lhdGVkIGRvY3VtZW50YXRpb24gZmlsZXMgKHRoZSAiU29mdHdhcmUiKSwgdG8KZGVhbCBpbiB0aGUgU29mdHdhcmUgd2l0aG91dCByZXN0cmljdGlvbiwgaW5jbHVkaW5nIHdpdGhvdXQgbGltaXRhdGlvbiB0aGUKcmlnaHRzIHRvIHVzZSwgY29weSwgbW9kaWZ5LCBtZXJnZSwgcHVibGlzaCwgZGlzdHJpYnV0ZSwgc3VibGljZW5zZSwgYW5kL29yCnNlbGwgY29waWVzIG9mIHRoZSBTb2Z0d2FyZSwgYW5kIHRvIHBlcm1pdCBwZXJzb25zIHRvIHdob20gdGhlIFNvZnR3YXJlIGlzCmZ1cm5pc2hlZCB0byBkbyBzbywgc3ViamVjdCB0byB0aGUgZm9sbG93aW5nIGNvbmRpdGlvbnM6CgpUaGUgYWJvdmUgY29weXJpZ2h0IG5vdGljZSBhbmQgdGhpcyBwZXJtaXNzaW9uIG5vdGljZSBzaGFsbCBiZSBpbmNsdWRlZCBpbgphbGwgY29waWVzIG9yIHN1YnN0YW50aWFsIHBvcnRpb25zIG9mIHRoZSBTb2Z0d2FyZS4KClRIRSBTT0ZUV0FSRSBJUyBQUk9WSURFRCAiQVMgSVMiLCBXSVRIT1VUIFdBUlJBTlRZIE9GIEFOWSBLSU5ELCBFWFBSRVNTIE9SCklNUExJRUQsIElOQ0xVRElORyBCVVQgTk9UIExJTUlURUQgVE8gVEhFIFdBUlJBTlRJRVMgT0YgTUVSQ0hBTlRBQklMSVRZLApGSVRORVNTIEZPUiBBIFBBUlRJQ1VMQVIgUFVSUE9TRSBBTkQgTk9OSU5GUklOR0VNRU5ULiBJTiBOTyBFVkVOVCBTSEFMTCBUSEUKQVVUSE9SUyBPUiBDT1BZUklHSFQgSE9MREVSUyBCRSBMSUFCTEUgRk9SIEFOWSBDTEFJTSwgREFNQUdFUyBPUiBPVEhFUgpMSUFCSUxJVFksIFdIRVRIRVIgSU4gQU4gQUNUSU9OIE9GIENPTlRSQUNULCBUT1JUIE9SIE9USEVSV0lTRSwgQVJJU0lORwpGUk9NLCBPVVQgT0YgT1IgSU4gQ09OTkVDVElPTiBXSVRIIFRIRSBTT0ZUV0FSRSBPUiBUSEUgVVNFIE9SIE9USEVSIERFQUxJTkdTCklOIFRIRSBTT0ZUV0FSRS4KIiIiCgpUaGlzIGxpY2Vuc2UgYXBwbGllcyB0byBwYXJ0cyBvZiBOb2RlLmpzIG9yaWdpbmF0aW5nIGZyb20gdGhlCmh0dHBzOi8vZ2l0aHViLmNvbS9qb3llbnQvbm9kZSByZXBvc2l0b3J5OgoKIiIiCkNvcHlyaWdodCBKb3llbnQsIEluYy4gYW5kIG90aGVyIE5vZGUgY29udHJpYnV0b3JzLiBBbGwgcmlnaHRzIHJlc2VydmVkLgpQZXJtaXNzaW9uIGlzIGhlcmVieSBncmFudGVkLCBmcmVlIG9mIGNoYXJnZSwgdG8gYW55IHBlcnNvbiBvYnRhaW5pbmcgYSBjb3B5Cm9mIHRoaXMgc29mdHdhcmUgYW5kIGFzc29jaWF0ZWQgZG9jdW1lbnRhdGlvbiBmaWxlcyAodGhlICJTb2Z0d2FyZSIpLCB0bwpkZWFsIGluIHRoZSBTb2Z0d2FyZSB3aXRob3V0IHJlc3RyaWN0aW9uLCBpbmNsdWRpbmcgd2l0aG91dCBsaW1pdGF0aW9uIHRoZQpyaWdodHMgdG8gdXNlLCBjb3B5LCBtb2RpZnksIG1lcmdlLCBwdWJsaXNoLCBkaXN0cmlidXRlLCBzdWJsaWNlbnNlLCBhbmQvb3IKc2VsbCBjb3BpZXMgb2YgdGhlIFNvZnR3YXJlLCBhbmQgdG8gcGVybWl0IHBlcnNvbnMgdG8gd2hvbSB0aGUgU29mdHdhcmUgaXMKZnVybmlzaGVkIHRvIGRvIHNvLCBzdWJqZWN0IHRvIHRoZSBmb2xsb3dpbmcgY29uZGl0aW9uczoKClRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlIGFuZCB0aGlzIHBlcm1pc3Npb24gbm90aWNlIHNoYWxsIGJlIGluY2x1ZGVkIGluCmFsbCBjb3BpZXMgb3Igc3Vic3RhbnRpYWwgcG9ydGlvbnMgb2YgdGhlIFNvZnR3YXJlLgoKVEhFIFNPRlRXQVJFIElTIFBST1ZJREVEICJBUyBJUyIsIFdJVEhPVVQgV0FSUkFOVFkgT0YgQU5ZIEtJTkQsIEVYUFJFU1MgT1IKSU1QTElFRCwgSU5DTFVESU5HIEJVVCBOT1QgTElNSVRFRCBUTyBUSEUgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFksCkZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFIEFORCBOT05JTkZSSU5HRU1FTlQuIElOIE5PIEVWRU5UIFNIQUxMIFRIRQpBVVRIT1JTIE9SIENPUFlSSUdIVCBIT0xERVJTIEJFIExJQUJMRSBGT1IgQU5ZIENMQUlNLCBEQU1BR0VTIE9SIE9USEVSCkxJQUJJTElUWSwgV0hFVEhFUiBJTiBBTiBBQ1RJT04gT0YgQ09OVFJBQ1QsIFRPUlQgT1IgT1RIRVJXSVNFLCBBUklTSU5HCkZST00sIE9VVCBPRiBPUiBJTiBDT05ORUNUSU9OIFdJVEggVEhFIFNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MKSU4gVEhFIFNPRlRXQVJFLgoiIiIKCg==",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "library",
+      "name": "through",
+      "version": "2.3.8",
+      "bom-ref": "pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/through.git",
+      "author": "Dominic Tarr",
+      "description": "simplified stream construction",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/through.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/dominictarr/through/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git+https://github.com/dominictarr/through.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://github.com/dominictarr/through",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE.MIT",
+              "text": {
+                "content": "VGhlIE1JVCBMaWNlbnNlCgpDb3B5cmlnaHQgKGMpIDIwMTEgRG9taW5pYyBUYXJyCgpQZXJtaXNzaW9uIGlzIGhlcmVieSBncmFudGVkLCBmcmVlIG9mIGNoYXJnZSwgCnRvIGFueSBwZXJzb24gb2J0YWluaW5nIGEgY29weSBvZiB0aGlzIHNvZnR3YXJlIGFuZCAKYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgIlNvZnR3YXJlIiksIHRvIApkZWFsIGluIHRoZSBTb2Z0d2FyZSB3aXRob3V0IHJlc3RyaWN0aW9uLCBpbmNsdWRpbmcgCndpdGhvdXQgbGltaXRhdGlvbiB0aGUgcmlnaHRzIHRvIHVzZSwgY29weSwgbW9kaWZ5LCAKbWVyZ2UsIHB1Ymxpc2gsIGRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsIApjb3BpZXMgb2YgdGhlIFNvZnR3YXJlLCBhbmQgdG8gcGVybWl0IHBlcnNvbnMgdG8gd2hvbSAKdGhlIFNvZnR3YXJlIGlzIGZ1cm5pc2hlZCB0byBkbyBzbywgCnN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOgoKVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2UgCnNoYWxsIGJlIGluY2x1ZGVkIGluIGFsbCBjb3BpZXMgb3Igc3Vic3RhbnRpYWwgcG9ydGlvbnMgb2YgdGhlIFNvZnR3YXJlLgoKVEhFIFNPRlRXQVJFIElTIFBST1ZJREVEICJBUyBJUyIsIFdJVEhPVVQgV0FSUkFOVFkgT0YgQU5ZIEtJTkQsIApFWFBSRVNTIE9SIElNUExJRUQsIElOQ0xVRElORyBCVVQgTk9UIExJTUlURUQgVE8gVEhFIFdBUlJBTlRJRVMgCk9GIE1FUkNIQU5UQUJJTElUWSwgRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gCklOIE5PIEVWRU5UIFNIQUxMIFRIRSBBVVRIT1JTIE9SIENPUFlSSUdIVCBIT0xERVJTIEJFIExJQUJMRSBGT1IgCkFOWSBDTEFJTSwgREFNQUdFUyBPUiBPVEhFUiBMSUFCSUxJVFksIFdIRVRIRVIgSU4gQU4gQUNUSU9OIE9GIENPTlRSQUNULCAKVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSwgT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgClNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MgSU4gVEhFIFNPRlRXQVJFLgo=",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "library",
+      "name": "util-deprecate",
+      "version": "1.0.2",
+      "bom-ref": "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git",
+      "author": "Nathan Rajlich",
+      "description": "The Node.js \`util.deprecate()\` function with browser support",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git",
+      "externalReferences": [
+        {
+          "url": "https://github.com/TooTallNate/util-deprecate/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git://github.com/TooTallNate/util-deprecate.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://github.com/TooTallNate/util-deprecate",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ],
+      "evidence": {
+        "licenses": [
+          {
+            "license": {
+              "name": "file: LICENSE",
+              "text": {
+                "content": "KFRoZSBNSVQgTGljZW5zZSkKCkNvcHlyaWdodCAoYykgMjAxNCBOYXRoYW4gUmFqbGljaCA8bmF0aGFuQHRvb3RhbGxuYXRlLm5ldD4KClBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uCm9idGFpbmluZyBhIGNvcHkgb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uCmZpbGVzICh0aGUgIlNvZnR3YXJlIiksIHRvIGRlYWwgaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQKcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0cyB0byB1c2UsCmNvcHksIG1vZGlmeSwgbWVyZ2UsIHB1Ymxpc2gsIGRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsCmNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZQpTb2Z0d2FyZSBpcyBmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlIGZvbGxvd2luZwpjb25kaXRpb25zOgoKVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUKaW5jbHVkZWQgaW4gYWxsIGNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuCgpUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgIkFTIElTIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwKRVhQUkVTUyBPUiBJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTCk9GIE1FUkNIQU5UQUJJTElUWSwgRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5ECk5PTklORlJJTkdFTUVOVC4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFIEFVVEhPUlMgT1IgQ09QWVJJR0hUCkhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVIgTElBQklMSVRZLApXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcKRlJPTSwgT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgU09GVFdBUkUgT1IgVEhFIFVTRSBPUgpPVEhFUiBERUFMSU5HUyBJTiBUSEUgU09GVFdBUkUuCg==",
+                "contentType": "text/plain",
+                "encoding": "base64"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue1337",
+      "dependsOn": [
+        "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git",
+        "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git",
+        "pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/through.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git"
+    },
+    {
+      "ref": "pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git",
+      "dependsOn": [
+        "pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git",
+        "pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git"
+    },
+    {
+      "ref": "pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git"
+    },
+    {
+      "ref": "pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git"
+    },
+    {
+      "ref": "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git"
+    },
+    {
+      "ref": "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git"
+    },
+    {
+      "ref": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git",
+      "dependsOn": [
+        "pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git",
+        "pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git",
+        "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git",
+        "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git",
+        "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git",
+      "dependsOn": [
+        "pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A//github.com/browserify/stream-browserify.git",
+      "dependsOn": [
+        "pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git",
+        "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git",
+        "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git",
+      "dependsOn": [
+        "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/through.git",
+      "dependsOn": [
+        "pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A//github.com/browserify/stream-browserify.git"
+      ]
+    },
+    {
+      "ref": "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git"
+    }
+  ]
+}"
+`;
+
+exports[`integration regression: find license evidence like \`LICENSE.MIT\` generated xml file: dist/.bom/bom.xml 1`] = `
+"<?xml version="1.0" encoding="UTF-8"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.4" version="1">
+  <metadata>
+    <tools>
+      <tool>
+        <vendor>@cyclonedx</vendor>
+        <name>cyclonedx-library</name>
+        <version>libVersion-testing</version>
+        <externalReferences>
+          <reference type="issue-tracker">
+            <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
+            <comment>as detected from PackageJson property "bugs.url"</comment>
+          </reference>
+          <reference type="vcs">
+            <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
+            <comment>as detected from PackageJson property "repository.url"</comment>
+          </reference>
+          <reference type="website">
+            <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+            <comment>as detected from PackageJson property "homepage"</comment>
+          </reference>
+        </externalReferences>
+      </tool>
+      <tool>
+        <vendor>@cyclonedx</vendor>
+        <name>webpack-plugin</name>
+        <version>thisVersion-testing</version>
+        <externalReferences>
+          <reference type="issue-tracker">
+            <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
+            <comment>as detected from PackageJson property "bugs.url"</comment>
+          </reference>
+          <reference type="vcs">
+            <url>git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git</url>
+            <comment>as detected from PackageJson property "repository.url"</comment>
+          </reference>
+          <reference type="website">
+            <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme</url>
+            <comment>as detected from PackageJson property "homepage"</comment>
+          </reference>
+        </externalReferences>
+      </tool>
+    </tools>
+    <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue1337">
+      <author>Jan Kowalleck</author>
+      <group>@cyclonedx-webpack-plugin-tests</group>
+      <name>regression-issue1337</name>
+      <description>example setup for issue#1337</description>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue1337</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue1337</url>
+          <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/regression-issue1337#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+      <evidence/>
+    </component>
+  </metadata>
+  <components>
+    <component type="library" bom-ref="pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git">
+      <author>T. Jameson Little</author>
+      <name>base64-js</name>
+      <version>1.5.1</version>
+      <description>Base64 encoding/decoding in pure JS</description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/beatgammit/base64-js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/beatgammit/base64-js.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/beatgammit/base64-js</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+      <evidence>
+        <licenses>
+          <license>
+            <name>file: LICENSE</name>
+            <text content-type="text/plain" encoding="base64">VGhlIE1JVCBMaWNlbnNlIChNSVQpCgpDb3B5cmlnaHQgKGMpIDIwMTQgSmFtZXNvbiBMaXR0bGUKClBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHkKb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgIlNvZnR3YXJlIiksIHRvIGRlYWwKaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0cwp0byB1c2UsIGNvcHksIG1vZGlmeSwgbWVyZ2UsIHB1Ymxpc2gsIGRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsCmNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpcwpmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOgoKVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUgaW5jbHVkZWQgaW4KYWxsIGNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuCgpUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgIkFTIElTIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUyBPUgpJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSwKRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFCkFVVEhPUlMgT1IgQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVIKTElBQklMSVRZLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSwKT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgU09GVFdBUkUgT1IgVEhFIFVTRSBPUiBPVEhFUiBERUFMSU5HUyBJTgpUSEUgU09GVFdBUkUuCg==</text>
+          </license>
+        </licenses>
+      </evidence>
+    </component>
+    <component type="library" bom-ref="pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git">
+      <author>Feross Aboukhadijeh</author>
+      <name>buffer</name>
+      <version>6.0.3</version>
+      <description>Node.js Buffer API, for the browser</description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/feross/buffer/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/feross/buffer.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/feross/buffer</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+      <evidence>
+        <licenses>
+          <license>
+            <name>file: LICENSE</name>
+            <text content-type="text/plain" encoding="base64">VGhlIE1JVCBMaWNlbnNlIChNSVQpCgpDb3B5cmlnaHQgKGMpIEZlcm9zcyBBYm91a2hhZGlqZWgsIGFuZCBvdGhlciBjb250cmlidXRvcnMuCgpQZXJtaXNzaW9uIGlzIGhlcmVieSBncmFudGVkLCBmcmVlIG9mIGNoYXJnZSwgdG8gYW55IHBlcnNvbiBvYnRhaW5pbmcgYSBjb3B5Cm9mIHRoaXMgc29mdHdhcmUgYW5kIGFzc29jaWF0ZWQgZG9jdW1lbnRhdGlvbiBmaWxlcyAodGhlICJTb2Z0d2FyZSIpLCB0byBkZWFsCmluIHRoZSBTb2Z0d2FyZSB3aXRob3V0IHJlc3RyaWN0aW9uLCBpbmNsdWRpbmcgd2l0aG91dCBsaW1pdGF0aW9uIHRoZSByaWdodHMKdG8gdXNlLCBjb3B5LCBtb2RpZnksIG1lcmdlLCBwdWJsaXNoLCBkaXN0cmlidXRlLCBzdWJsaWNlbnNlLCBhbmQvb3Igc2VsbApjb3BpZXMgb2YgdGhlIFNvZnR3YXJlLCBhbmQgdG8gcGVybWl0IHBlcnNvbnMgdG8gd2hvbSB0aGUgU29mdHdhcmUgaXMKZnVybmlzaGVkIHRvIGRvIHNvLCBzdWJqZWN0IHRvIHRoZSBmb2xsb3dpbmcgY29uZGl0aW9uczoKClRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlIGFuZCB0aGlzIHBlcm1pc3Npb24gbm90aWNlIHNoYWxsIGJlIGluY2x1ZGVkIGluCmFsbCBjb3BpZXMgb3Igc3Vic3RhbnRpYWwgcG9ydGlvbnMgb2YgdGhlIFNvZnR3YXJlLgoKVEhFIFNPRlRXQVJFIElTIFBST1ZJREVEICJBUyBJUyIsIFdJVEhPVVQgV0FSUkFOVFkgT0YgQU5ZIEtJTkQsIEVYUFJFU1MgT1IKSU1QTElFRCwgSU5DTFVESU5HIEJVVCBOT1QgTElNSVRFRCBUTyBUSEUgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFksCkZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFIEFORCBOT05JTkZSSU5HRU1FTlQuIElOIE5PIEVWRU5UIFNIQUxMIFRIRQpBVVRIT1JTIE9SIENPUFlSSUdIVCBIT0xERVJTIEJFIExJQUJMRSBGT1IgQU5ZIENMQUlNLCBEQU1BR0VTIE9SIE9USEVSCkxJQUJJTElUWSwgV0hFVEhFUiBJTiBBTiBBQ1RJT04gT0YgQ09OVFJBQ1QsIFRPUlQgT1IgT1RIRVJXSVNFLCBBUklTSU5HIEZST00sCk9VVCBPRiBPUiBJTiBDT05ORUNUSU9OIFdJVEggVEhFIFNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MgSU4KVEhFIFNPRlRXQVJFLgo=</text>
+          </license>
+        </licenses>
+      </evidence>
+    </component>
+    <component type="library" bom-ref="pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git">
+      <author>Ariya Hidayat</author>
+      <name>esprima</name>
+      <version>4.0.1</version>
+      <description>ECMAScript parsing infrastructure for multipurpose analysis</description>
+      <licenses>
+        <license>
+          <id>BSD-2-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/jquery/esprima/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/jquery/esprima.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>http://esprima.org</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+      <evidence>
+        <licenses>
+          <license>
+            <name>file: LICENSE.BSD</name>
+            <text content-type="text/plain" encoding="base64">Q29weXJpZ2h0IEpTIEZvdW5kYXRpb24gYW5kIG90aGVyIGNvbnRyaWJ1dG9ycywgaHR0cHM6Ly9qcy5mb3VuZGF0aW9uLwoKUmVkaXN0cmlidXRpb24gYW5kIHVzZSBpbiBzb3VyY2UgYW5kIGJpbmFyeSBmb3Jtcywgd2l0aCBvciB3aXRob3V0Cm1vZGlmaWNhdGlvbiwgYXJlIHBlcm1pdHRlZCBwcm92aWRlZCB0aGF0IHRoZSBmb2xsb3dpbmcgY29uZGl0aW9ucyBhcmUgbWV0OgoKICAqIFJlZGlzdHJpYnV0aW9ucyBvZiBzb3VyY2UgY29kZSBtdXN0IHJldGFpbiB0aGUgYWJvdmUgY29weXJpZ2h0CiAgICBub3RpY2UsIHRoaXMgbGlzdCBvZiBjb25kaXRpb25zIGFuZCB0aGUgZm9sbG93aW5nIGRpc2NsYWltZXIuCiAgKiBSZWRpc3RyaWJ1dGlvbnMgaW4gYmluYXJ5IGZvcm0gbXVzdCByZXByb2R1Y2UgdGhlIGFib3ZlIGNvcHlyaWdodAogICAgbm90aWNlLCB0aGlzIGxpc3Qgb2YgY29uZGl0aW9ucyBhbmQgdGhlIGZvbGxvd2luZyBkaXNjbGFpbWVyIGluIHRoZQogICAgZG9jdW1lbnRhdGlvbiBhbmQvb3Igb3RoZXIgbWF0ZXJpYWxzIHByb3ZpZGVkIHdpdGggdGhlIGRpc3RyaWJ1dGlvbi4KClRISVMgU09GVFdBUkUgSVMgUFJPVklERUQgQlkgVEhFIENPUFlSSUdIVCBIT0xERVJTIEFORCBDT05UUklCVVRPUlMgIkFTIElTIgpBTkQgQU5ZIEVYUFJFU1MgT1IgSU1QTElFRCBXQVJSQU5USUVTLCBJTkNMVURJTkcsIEJVVCBOT1QgTElNSVRFRCBUTywgVEhFCklNUExJRUQgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFkgQU5EIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFCkFSRSBESVNDTEFJTUVELiBJTiBOTyBFVkVOVCBTSEFMTCA8Q09QWVJJR0hUIEhPTERFUj4gQkUgTElBQkxFIEZPUiBBTlkKRElSRUNULCBJTkRJUkVDVCwgSU5DSURFTlRBTCwgU1BFQ0lBTCwgRVhFTVBMQVJZLCBPUiBDT05TRVFVRU5USUFMIERBTUFHRVMKKElOQ0xVRElORywgQlVUIE5PVCBMSU1JVEVEIFRPLCBQUk9DVVJFTUVOVCBPRiBTVUJTVElUVVRFIEdPT0RTIE9SIFNFUlZJQ0VTOwpMT1NTIE9GIFVTRSwgREFUQSwgT1IgUFJPRklUUzsgT1IgQlVTSU5FU1MgSU5URVJSVVBUSU9OKSBIT1dFVkVSIENBVVNFRCBBTkQKT04gQU5ZIFRIRU9SWSBPRiBMSUFCSUxJVFksIFdIRVRIRVIgSU4gQ09OVFJBQ1QsIFNUUklDVCBMSUFCSUxJVFksIE9SIFRPUlQKKElOQ0xVRElORyBORUdMSUdFTkNFIE9SIE9USEVSV0lTRSkgQVJJU0lORyBJTiBBTlkgV0FZIE9VVCBPRiBUSEUgVVNFIE9GClRISVMgU09GVFdBUkUsIEVWRU4gSUYgQURWSVNFRCBPRiBUSEUgUE9TU0lCSUxJVFkgT0YgU1VDSCBEQU1BR0UuCg==</text>
+          </license>
+        </licenses>
+      </evidence>
+    </component>
+    <component type="library" bom-ref="pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git">
+      <author>Irakli Gozalishvili</author>
+      <name>events</name>
+      <version>3.3.0</version>
+      <description>Node's event emitter for all engines.</description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>http://github.com/Gozala/events/issues/</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/Gozala/events.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/Gozala/events#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+      <evidence>
+        <licenses>
+          <license>
+            <name>file: LICENSE</name>
+            <text content-type="text/plain" encoding="base64">TUlUCgpDb3B5cmlnaHQgSm95ZW50LCBJbmMuIGFuZCBvdGhlciBOb2RlIGNvbnRyaWJ1dG9ycy4KClBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhCmNvcHkgb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUKIlNvZnR3YXJlIiksIHRvIGRlYWwgaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZwp3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0cyB0byB1c2UsIGNvcHksIG1vZGlmeSwgbWVyZ2UsIHB1Ymxpc2gsCmRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsIGNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQKcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpcyBmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlCmZvbGxvd2luZyBjb25kaXRpb25zOgoKVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUgaW5jbHVkZWQKaW4gYWxsIGNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuCgpUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgIkFTIElTIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUwpPUiBJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GCk1FUkNIQU5UQUJJTElUWSwgRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gSU4KTk8gRVZFTlQgU0hBTEwgVEhFIEFVVEhPUlMgT1IgQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sCkRBTUFHRVMgT1IgT1RIRVIgTElBQklMSVRZLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUgpPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSwgT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgU09GVFdBUkUgT1IgVEhFClVTRSBPUiBPVEhFUiBERUFMSU5HUyBJTiBUSEUgU09GVFdBUkUuCg==</text>
+          </license>
+        </licenses>
+      </evidence>
+    </component>
+    <component type="library" bom-ref="pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git">
+      <author>Feross Aboukhadijeh</author>
+      <name>ieee754</name>
+      <version>1.2.1</version>
+      <description>Read/write IEEE754 floating point numbers from/to a Buffer or array-like object</description>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/feross/ieee754/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/feross/ieee754.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/feross/ieee754#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+      <evidence>
+        <licenses>
+          <license>
+            <name>file: LICENSE</name>
+            <text content-type="text/plain" encoding="base64">Q29weXJpZ2h0IDIwMDggRmFpciBPYWtzIExhYnMsIEluYy4KClJlZGlzdHJpYnV0aW9uIGFuZCB1c2UgaW4gc291cmNlIGFuZCBiaW5hcnkgZm9ybXMsIHdpdGggb3Igd2l0aG91dCBtb2RpZmljYXRpb24sIGFyZSBwZXJtaXR0ZWQgcHJvdmlkZWQgdGhhdCB0aGUgZm9sbG93aW5nIGNvbmRpdGlvbnMgYXJlIG1ldDoKCjEuIFJlZGlzdHJpYnV0aW9ucyBvZiBzb3VyY2UgY29kZSBtdXN0IHJldGFpbiB0aGUgYWJvdmUgY29weXJpZ2h0IG5vdGljZSwgdGhpcyBsaXN0IG9mIGNvbmRpdGlvbnMgYW5kIHRoZSBmb2xsb3dpbmcgZGlzY2xhaW1lci4KCjIuIFJlZGlzdHJpYnV0aW9ucyBpbiBiaW5hcnkgZm9ybSBtdXN0IHJlcHJvZHVjZSB0aGUgYWJvdmUgY29weXJpZ2h0IG5vdGljZSwgdGhpcyBsaXN0IG9mIGNvbmRpdGlvbnMgYW5kIHRoZSBmb2xsb3dpbmcgZGlzY2xhaW1lciBpbiB0aGUgZG9jdW1lbnRhdGlvbiBhbmQvb3Igb3RoZXIgbWF0ZXJpYWxzIHByb3ZpZGVkIHdpdGggdGhlIGRpc3RyaWJ1dGlvbi4KCjMuIE5laXRoZXIgdGhlIG5hbWUgb2YgdGhlIGNvcHlyaWdodCBob2xkZXIgbm9yIHRoZSBuYW1lcyBvZiBpdHMgY29udHJpYnV0b3JzIG1heSBiZSB1c2VkIHRvIGVuZG9yc2Ugb3IgcHJvbW90ZSBwcm9kdWN0cyBkZXJpdmVkIGZyb20gdGhpcyBzb2Z0d2FyZSB3aXRob3V0IHNwZWNpZmljIHByaW9yIHdyaXR0ZW4gcGVybWlzc2lvbi4KClRISVMgU09GVFdBUkUgSVMgUFJPVklERUQgQlkgVEhFIENPUFlSSUdIVCBIT0xERVJTIEFORCBDT05UUklCVVRPUlMgIkFTIElTIiBBTkQgQU5ZIEVYUFJFU1MgT1IgSU1QTElFRCBXQVJSQU5USUVTLCBJTkNMVURJTkcsIEJVVCBOT1QgTElNSVRFRCBUTywgVEhFIElNUExJRUQgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFkgQU5EIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFIEFSRSBESVNDTEFJTUVELiBJTiBOTyBFVkVOVCBTSEFMTCBUSEUgQ09QWVJJR0hUIEhPTERFUiBPUiBDT05UUklCVVRPUlMgQkUgTElBQkxFIEZPUiBBTlkgRElSRUNULCBJTkRJUkVDVCwgSU5DSURFTlRBTCwgU1BFQ0lBTCwgRVhFTVBMQVJZLCBPUiBDT05TRVFVRU5USUFMIERBTUFHRVMgKElOQ0xVRElORywgQlVUIE5PVCBMSU1JVEVEIFRPLCBQUk9DVVJFTUVOVCBPRiBTVUJTVElUVVRFIEdPT0RTIE9SIFNFUlZJQ0VTOyBMT1NTIE9GIFVTRSwgREFUQSwgT1IgUFJPRklUUzsgT1IgQlVTSU5FU1MgSU5URVJSVVBUSU9OKSBIT1dFVkVSIENBVVNFRCBBTkQgT04gQU5ZIFRIRU9SWSBPRiBMSUFCSUxJVFksIFdIRVRIRVIgSU4gQ09OVFJBQ1QsIFNUUklDVCBMSUFCSUxJVFksIE9SIFRPUlQgKElOQ0xVRElORyBORUdMSUdFTkNFIE9SIE9USEVSV0lTRSkgQVJJU0lORyBJTiBBTlkgV0FZIE9VVCBPRiBUSEUgVVNFIE9GIFRISVMgU09GVFdBUkUsIEVWRU4gSUYgQURWSVNFRCBPRiBUSEUgUE9TU0lCSUxJVFkgT0YgU1VDSCBEQU1BR0UuCg==</text>
+          </license>
+        </licenses>
+      </evidence>
+    </component>
+    <component type="library" bom-ref="pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git">
+      <name>inherits</name>
+      <version>2.0.4</version>
+      <description>Browser-friendly inheritance fully compatible with standard node.js inherits()</description>
+      <licenses>
+        <license>
+          <id>ISC</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/isaacs/inherits/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/isaacs/inherits.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/isaacs/inherits#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+      <evidence>
+        <licenses>
+          <license>
+            <name>file: LICENSE</name>
+            <text content-type="text/plain" encoding="base64">VGhlIElTQyBMaWNlbnNlCgpDb3B5cmlnaHQgKGMpIElzYWFjIFouIFNjaGx1ZXRlcgoKUGVybWlzc2lvbiB0byB1c2UsIGNvcHksIG1vZGlmeSwgYW5kL29yIGRpc3RyaWJ1dGUgdGhpcyBzb2Z0d2FyZSBmb3IgYW55CnB1cnBvc2Ugd2l0aCBvciB3aXRob3V0IGZlZSBpcyBoZXJlYnkgZ3JhbnRlZCwgcHJvdmlkZWQgdGhhdCB0aGUgYWJvdmUKY29weXJpZ2h0IG5vdGljZSBhbmQgdGhpcyBwZXJtaXNzaW9uIG5vdGljZSBhcHBlYXIgaW4gYWxsIGNvcGllcy4KClRIRSBTT0ZUV0FSRSBJUyBQUk9WSURFRCAiQVMgSVMiIEFORCBUSEUgQVVUSE9SIERJU0NMQUlNUyBBTEwgV0FSUkFOVElFUyBXSVRIClJFR0FSRCBUTyBUSElTIFNPRlRXQVJFIElOQ0xVRElORyBBTEwgSU1QTElFRCBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSBBTkQKRklUTkVTUy4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFIEFVVEhPUiBCRSBMSUFCTEUgRk9SIEFOWSBTUEVDSUFMLCBESVJFQ1QsCklORElSRUNULCBPUiBDT05TRVFVRU5USUFMIERBTUFHRVMgT1IgQU5ZIERBTUFHRVMgV0hBVFNPRVZFUiBSRVNVTFRJTkcgRlJPTQpMT1NTIE9GIFVTRSwgREFUQSBPUiBQUk9GSVRTLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgTkVHTElHRU5DRSBPUgpPVEhFUiBUT1JUSU9VUyBBQ1RJT04sIEFSSVNJTkcgT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgVVNFIE9SClBFUkZPUk1BTkNFIE9GIFRISVMgU09GVFdBUkUuCgo=</text>
+          </license>
+        </licenses>
+      </evidence>
+    </component>
+    <component type="library" bom-ref="pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git">
+      <author>catamphetamine</author>
+      <name>libphonenumber-js</name>
+      <version>1.11.16</version>
+      <description>A simpler (and smaller) rewrite of Google Android's libphonenumber library in javascript</description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://gitlab.com/catamphetamine/libphonenumber-js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://gitlab.com/catamphetamine/libphonenumber-js.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://gitlab.com/catamphetamine/libphonenumber-js#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+      <evidence>
+        <licenses>
+          <license>
+            <name>file: LICENSE</name>
+            <text content-type="text/plain" encoding="base64">KFRoZSBNSVQgTGljZW5zZSkNCg0KQ29weXJpZ2h0IChjKSAyMDE2IEBjYXRhbXBoZXRhbWluZSA8cHVyZWNhdGFtcGhldGFtaW5lQGdtYWlsLmNvbT4NCg0KUGVybWlzc2lvbiBpcyBoZXJlYnkgZ3JhbnRlZCwgZnJlZSBvZiBjaGFyZ2UsIHRvIGFueSBwZXJzb24gb2J0YWluaW5nDQphIGNvcHkgb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUNCidTb2Z0d2FyZScpLCB0byBkZWFsIGluIHRoZSBTb2Z0d2FyZSB3aXRob3V0IHJlc3RyaWN0aW9uLCBpbmNsdWRpbmcNCndpdGhvdXQgbGltaXRhdGlvbiB0aGUgcmlnaHRzIHRvIHVzZSwgY29weSwgbW9kaWZ5LCBtZXJnZSwgcHVibGlzaCwNCmRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsIGNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0bw0KcGVybWl0IHBlcnNvbnMgdG8gd2hvbSB0aGUgU29mdHdhcmUgaXMgZnVybmlzaGVkIHRvIGRvIHNvLCBzdWJqZWN0IHRvDQp0aGUgZm9sbG93aW5nIGNvbmRpdGlvbnM6DQoNClRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlIGFuZCB0aGlzIHBlcm1pc3Npb24gbm90aWNlIHNoYWxsIGJlDQppbmNsdWRlZCBpbiBhbGwgY29waWVzIG9yIHN1YnN0YW50aWFsIHBvcnRpb25zIG9mIHRoZSBTb2Z0d2FyZS4NCg0KVEhFIFNPRlRXQVJFIElTIFBST1ZJREVEICdBUyBJUycsIFdJVEhPVVQgV0FSUkFOVFkgT0YgQU5ZIEtJTkQsDQpFWFBSRVNTIE9SIElNUExJRUQsIElOQ0xVRElORyBCVVQgTk9UIExJTUlURUQgVE8gVEhFIFdBUlJBTlRJRVMgT0YNCk1FUkNIQU5UQUJJTElUWSwgRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4NCklOIE5PIEVWRU5UIFNIQUxMIFRIRSBBVVRIT1JTIE9SIENPUFlSSUdIVCBIT0xERVJTIEJFIExJQUJMRSBGT1IgQU5ZDQpDTEFJTSwgREFNQUdFUyBPUiBPVEhFUiBMSUFCSUxJVFksIFdIRVRIRVIgSU4gQU4gQUNUSU9OIE9GIENPTlRSQUNULA0KVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSwgT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUNClNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MgSU4gVEhFIFNPRlRXQVJFLg==</text>
+          </license>
+          <license>
+            <name>file: LICENSE.Apache</name>
+            <text content-type="text/plain" encoding="base64">ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQXBhY2hlIExpY2Vuc2UNCiAgICAgICAgICAgICAgICAgICAgICAgICAgIFZlcnNpb24gMi4wLCBKYW51YXJ5IDIwMDQNCiAgICAgICAgICAgICAgICAgICAgICAgIGh0dHA6Ly93d3cuYXBhY2hlLm9yZy9saWNlbnNlcy8NCg0KICAgVEVSTVMgQU5EIENPTkRJVElPTlMgRk9SIFVTRSwgUkVQUk9EVUNUSU9OLCBBTkQgRElTVFJJQlVUSU9ODQoNCiAgIDEuIERlZmluaXRpb25zLg0KDQogICAgICAiTGljZW5zZSIgc2hhbGwgbWVhbiB0aGUgdGVybXMgYW5kIGNvbmRpdGlvbnMgZm9yIHVzZSwgcmVwcm9kdWN0aW9uLA0KICAgICAgYW5kIGRpc3RyaWJ1dGlvbiBhcyBkZWZpbmVkIGJ5IFNlY3Rpb25zIDEgdGhyb3VnaCA5IG9mIHRoaXMgZG9jdW1lbnQuDQoNCiAgICAgICJMaWNlbnNvciIgc2hhbGwgbWVhbiB0aGUgY29weXJpZ2h0IG93bmVyIG9yIGVudGl0eSBhdXRob3JpemVkIGJ5DQogICAgICB0aGUgY29weXJpZ2h0IG93bmVyIHRoYXQgaXMgZ3JhbnRpbmcgdGhlIExpY2Vuc2UuDQoNCiAgICAgICJMZWdhbCBFbnRpdHkiIHNoYWxsIG1lYW4gdGhlIHVuaW9uIG9mIHRoZSBhY3RpbmcgZW50aXR5IGFuZCBhbGwNCiAgICAgIG90aGVyIGVudGl0aWVzIHRoYXQgY29udHJvbCwgYXJlIGNvbnRyb2xsZWQgYnksIG9yIGFyZSB1bmRlciBjb21tb24NCiAgICAgIGNvbnRyb2wgd2l0aCB0aGF0IGVudGl0eS4gRm9yIHRoZSBwdXJwb3NlcyBvZiB0aGlzIGRlZmluaXRpb24sDQogICAgICAiY29udHJvbCIgbWVhbnMgKGkpIHRoZSBwb3dlciwgZGlyZWN0IG9yIGluZGlyZWN0LCB0byBjYXVzZSB0aGUNCiAgICAgIGRpcmVjdGlvbiBvciBtYW5hZ2VtZW50IG9mIHN1Y2ggZW50aXR5LCB3aGV0aGVyIGJ5IGNvbnRyYWN0IG9yDQogICAgICBvdGhlcndpc2UsIG9yIChpaSkgb3duZXJzaGlwIG9mIGZpZnR5IHBlcmNlbnQgKDUwJSkgb3IgbW9yZSBvZiB0aGUNCiAgICAgIG91dHN0YW5kaW5nIHNoYXJlcywgb3IgKGlpaSkgYmVuZWZpY2lhbCBvd25lcnNoaXAgb2Ygc3VjaCBlbnRpdHkuDQoNCiAgICAgICJZb3UiIChvciAiWW91ciIpIHNoYWxsIG1lYW4gYW4gaW5kaXZpZHVhbCBvciBMZWdhbCBFbnRpdHkNCiAgICAgIGV4ZXJjaXNpbmcgcGVybWlzc2lvbnMgZ3JhbnRlZCBieSB0aGlzIExpY2Vuc2UuDQoNCiAgICAgICJTb3VyY2UiIGZvcm0gc2hhbGwgbWVhbiB0aGUgcHJlZmVycmVkIGZvcm0gZm9yIG1ha2luZyBtb2RpZmljYXRpb25zLA0KICAgICAgaW5jbHVkaW5nIGJ1dCBub3QgbGltaXRlZCB0byBzb2Z0d2FyZSBzb3VyY2UgY29kZSwgZG9jdW1lbnRhdGlvbg0KICAgICAgc291cmNlLCBhbmQgY29uZmlndXJhdGlvbiBmaWxlcy4NCg0KICAgICAgIk9iamVjdCIgZm9ybSBzaGFsbCBtZWFuIGFueSBmb3JtIHJlc3VsdGluZyBmcm9tIG1lY2hhbmljYWwNCiAgICAgIHRyYW5zZm9ybWF0aW9uIG9yIHRyYW5zbGF0aW9uIG9mIGEgU291cmNlIGZvcm0sIGluY2x1ZGluZyBidXQNCiAgICAgIG5vdCBsaW1pdGVkIHRvIGNvbXBpbGVkIG9iamVjdCBjb2RlLCBnZW5lcmF0ZWQgZG9jdW1lbnRhdGlvbiwNCiAgICAgIGFuZCBjb252ZXJzaW9ucyB0byBvdGhlciBtZWRpYSB0eXBlcy4NCg0KICAgICAgIldvcmsiIHNoYWxsIG1lYW4gdGhlIHdvcmsgb2YgYXV0aG9yc2hpcCwgd2hldGhlciBpbiBTb3VyY2Ugb3INCiAgICAgIE9iamVjdCBmb3JtLCBtYWRlIGF2YWlsYWJsZSB1bmRlciB0aGUgTGljZW5zZSwgYXMgaW5kaWNhdGVkIGJ5IGENCiAgICAgIGNvcHlyaWdodCBub3RpY2UgdGhhdCBpcyBpbmNsdWRlZCBpbiBvciBhdHRhY2hlZCB0byB0aGUgd29yaw0KICAgICAgKGFuIGV4YW1wbGUgaXMgcHJvdmlkZWQgaW4gdGhlIEFwcGVuZGl4IGJlbG93KS4NCg0KICAgICAgIkRlcml2YXRpdmUgV29ya3MiIHNoYWxsIG1lYW4gYW55IHdvcmssIHdoZXRoZXIgaW4gU291cmNlIG9yIE9iamVjdA0KICAgICAgZm9ybSwgdGhhdCBpcyBiYXNlZCBvbiAob3IgZGVyaXZlZCBmcm9tKSB0aGUgV29yayBhbmQgZm9yIHdoaWNoIHRoZQ0KICAgICAgZWRpdG9yaWFsIHJldmlzaW9ucywgYW5ub3RhdGlvbnMsIGVsYWJvcmF0aW9ucywgb3Igb3RoZXIgbW9kaWZpY2F0aW9ucw0KICAgICAgcmVwcmVzZW50LCBhcyBhIHdob2xlLCBhbiBvcmlnaW5hbCB3b3JrIG9mIGF1dGhvcnNoaXAuIEZvciB0aGUgcHVycG9zZXMNCiAgICAgIG9mIHRoaXMgTGljZW5zZSwgRGVyaXZhdGl2ZSBXb3JrcyBzaGFsbCBub3QgaW5jbHVkZSB3b3JrcyB0aGF0IHJlbWFpbg0KICAgICAgc2VwYXJhYmxlIGZyb20sIG9yIG1lcmVseSBsaW5rIChvciBiaW5kIGJ5IG5hbWUpIHRvIHRoZSBpbnRlcmZhY2VzIG9mLA0KICAgICAgdGhlIFdvcmsgYW5kIERlcml2YXRpdmUgV29ya3MgdGhlcmVvZi4NCg0KICAgICAgIkNvbnRyaWJ1dGlvbiIgc2hhbGwgbWVhbiBhbnkgd29yayBvZiBhdXRob3JzaGlwLCBpbmNsdWRpbmcNCiAgICAgIHRoZSBvcmlnaW5hbCB2ZXJzaW9uIG9mIHRoZSBXb3JrIGFuZCBhbnkgbW9kaWZpY2F0aW9ucyBvciBhZGRpdGlvbnMNCiAgICAgIHRvIHRoYXQgV29yayBvciBEZXJpdmF0aXZlIFdvcmtzIHRoZXJlb2YsIHRoYXQgaXMgaW50ZW50aW9uYWxseQ0KICAgICAgc3VibWl0dGVkIHRvIExpY2Vuc29yIGZvciBpbmNsdXNpb24gaW4gdGhlIFdvcmsgYnkgdGhlIGNvcHlyaWdodCBvd25lcg0KICAgICAgb3IgYnkgYW4gaW5kaXZpZHVhbCBvciBMZWdhbCBFbnRpdHkgYXV0aG9yaXplZCB0byBzdWJtaXQgb24gYmVoYWxmIG9mDQogICAgICB0aGUgY29weXJpZ2h0IG93bmVyLiBGb3IgdGhlIHB1cnBvc2VzIG9mIHRoaXMgZGVmaW5pdGlvbiwgInN1Ym1pdHRlZCINCiAgICAgIG1lYW5zIGFueSBmb3JtIG9mIGVsZWN0cm9uaWMsIHZlcmJhbCwgb3Igd3JpdHRlbiBjb21tdW5pY2F0aW9uIHNlbnQNCiAgICAgIHRvIHRoZSBMaWNlbnNvciBvciBpdHMgcmVwcmVzZW50YXRpdmVzLCBpbmNsdWRpbmcgYnV0IG5vdCBsaW1pdGVkIHRvDQogICAgICBjb21tdW5pY2F0aW9uIG9uIGVsZWN0cm9uaWMgbWFpbGluZyBsaXN0cywgc291cmNlIGNvZGUgY29udHJvbCBzeXN0ZW1zLA0KICAgICAgYW5kIGlzc3VlIHRyYWNraW5nIHN5c3RlbXMgdGhhdCBhcmUgbWFuYWdlZCBieSwgb3Igb24gYmVoYWxmIG9mLCB0aGUNCiAgICAgIExpY2Vuc29yIGZvciB0aGUgcHVycG9zZSBvZiBkaXNjdXNzaW5nIGFuZCBpbXByb3ZpbmcgdGhlIFdvcmssIGJ1dA0KICAgICAgZXhjbHVkaW5nIGNvbW11bmljYXRpb24gdGhhdCBpcyBjb25zcGljdW91c2x5IG1hcmtlZCBvciBvdGhlcndpc2UNCiAgICAgIGRlc2lnbmF0ZWQgaW4gd3JpdGluZyBieSB0aGUgY29weXJpZ2h0IG93bmVyIGFzICJOb3QgYSBDb250cmlidXRpb24uIg0KDQogICAgICAiQ29udHJpYnV0b3IiIHNoYWxsIG1lYW4gTGljZW5zb3IgYW5kIGFueSBpbmRpdmlkdWFsIG9yIExlZ2FsIEVudGl0eQ0KICAgICAgb24gYmVoYWxmIG9mIHdob20gYSBDb250cmlidXRpb24gaGFzIGJlZW4gcmVjZWl2ZWQgYnkgTGljZW5zb3IgYW5kDQogICAgICBzdWJzZXF1ZW50bHkgaW5jb3Jwb3JhdGVkIHdpdGhpbiB0aGUgV29yay4NCg0KICAgMi4gR3JhbnQgb2YgQ29weXJpZ2h0IExpY2Vuc2UuIFN1YmplY3QgdG8gdGhlIHRlcm1zIGFuZCBjb25kaXRpb25zIG9mDQogICAgICB0aGlzIExpY2Vuc2UsIGVhY2ggQ29udHJpYnV0b3IgaGVyZWJ5IGdyYW50cyB0byBZb3UgYSBwZXJwZXR1YWwsDQogICAgICB3b3JsZHdpZGUsIG5vbi1leGNsdXNpdmUsIG5vLWNoYXJnZSwgcm95YWx0eS1mcmVlLCBpcnJldm9jYWJsZQ0KICAgICAgY29weXJpZ2h0IGxpY2Vuc2UgdG8gcmVwcm9kdWNlLCBwcmVwYXJlIERlcml2YXRpdmUgV29ya3Mgb2YsDQogICAgICBwdWJsaWNseSBkaXNwbGF5LCBwdWJsaWNseSBwZXJmb3JtLCBzdWJsaWNlbnNlLCBhbmQgZGlzdHJpYnV0ZSB0aGUNCiAgICAgIFdvcmsgYW5kIHN1Y2ggRGVyaXZhdGl2ZSBXb3JrcyBpbiBTb3VyY2Ugb3IgT2JqZWN0IGZvcm0uDQoNCiAgIDMuIEdyYW50IG9mIFBhdGVudCBMaWNlbnNlLiBTdWJqZWN0IHRvIHRoZSB0ZXJtcyBhbmQgY29uZGl0aW9ucyBvZg0KICAgICAgdGhpcyBMaWNlbnNlLCBlYWNoIENvbnRyaWJ1dG9yIGhlcmVieSBncmFudHMgdG8gWW91IGEgcGVycGV0dWFsLA0KICAgICAgd29ybGR3aWRlLCBub24tZXhjbHVzaXZlLCBuby1jaGFyZ2UsIHJveWFsdHktZnJlZSwgaXJyZXZvY2FibGUNCiAgICAgIChleGNlcHQgYXMgc3RhdGVkIGluIHRoaXMgc2VjdGlvbikgcGF0ZW50IGxpY2Vuc2UgdG8gbWFrZSwgaGF2ZSBtYWRlLA0KICAgICAgdXNlLCBvZmZlciB0byBzZWxsLCBzZWxsLCBpbXBvcnQsIGFuZCBvdGhlcndpc2UgdHJhbnNmZXIgdGhlIFdvcmssDQogICAgICB3aGVyZSBzdWNoIGxpY2Vuc2UgYXBwbGllcyBvbmx5IHRvIHRob3NlIHBhdGVudCBjbGFpbXMgbGljZW5zYWJsZQ0KICAgICAgYnkgc3VjaCBDb250cmlidXRvciB0aGF0IGFyZSBuZWNlc3NhcmlseSBpbmZyaW5nZWQgYnkgdGhlaXINCiAgICAgIENvbnRyaWJ1dGlvbihzKSBhbG9uZSBvciBieSBjb21iaW5hdGlvbiBvZiB0aGVpciBDb250cmlidXRpb24ocykNCiAgICAgIHdpdGggdGhlIFdvcmsgdG8gd2hpY2ggc3VjaCBDb250cmlidXRpb24ocykgd2FzIHN1Ym1pdHRlZC4gSWYgWW91DQogICAgICBpbnN0aXR1dGUgcGF0ZW50IGxpdGlnYXRpb24gYWdhaW5zdCBhbnkgZW50aXR5IChpbmNsdWRpbmcgYQ0KICAgICAgY3Jvc3MtY2xhaW0gb3IgY291bnRlcmNsYWltIGluIGEgbGF3c3VpdCkgYWxsZWdpbmcgdGhhdCB0aGUgV29yaw0KICAgICAgb3IgYSBDb250cmlidXRpb24gaW5jb3Jwb3JhdGVkIHdpdGhpbiB0aGUgV29yayBjb25zdGl0dXRlcyBkaXJlY3QNCiAgICAgIG9yIGNvbnRyaWJ1dG9yeSBwYXRlbnQgaW5mcmluZ2VtZW50LCB0aGVuIGFueSBwYXRlbnQgbGljZW5zZXMNCiAgICAgIGdyYW50ZWQgdG8gWW91IHVuZGVyIHRoaXMgTGljZW5zZSBmb3IgdGhhdCBXb3JrIHNoYWxsIHRlcm1pbmF0ZQ0KICAgICAgYXMgb2YgdGhlIGRhdGUgc3VjaCBsaXRpZ2F0aW9uIGlzIGZpbGVkLg0KDQogICA0LiBSZWRpc3RyaWJ1dGlvbi4gWW91IG1heSByZXByb2R1Y2UgYW5kIGRpc3RyaWJ1dGUgY29waWVzIG9mIHRoZQ0KICAgICAgV29yayBvciBEZXJpdmF0aXZlIFdvcmtzIHRoZXJlb2YgaW4gYW55IG1lZGl1bSwgd2l0aCBvciB3aXRob3V0DQogICAgICBtb2RpZmljYXRpb25zLCBhbmQgaW4gU291cmNlIG9yIE9iamVjdCBmb3JtLCBwcm92aWRlZCB0aGF0IFlvdQ0KICAgICAgbWVldCB0aGUgZm9sbG93aW5nIGNvbmRpdGlvbnM6DQoNCiAgICAgIChhKSBZb3UgbXVzdCBnaXZlIGFueSBvdGhlciByZWNpcGllbnRzIG9mIHRoZSBXb3JrIG9yDQogICAgICAgICAgRGVyaXZhdGl2ZSBXb3JrcyBhIGNvcHkgb2YgdGhpcyBMaWNlbnNlOyBhbmQNCg0KICAgICAgKGIpIFlvdSBtdXN0IGNhdXNlIGFueSBtb2RpZmllZCBmaWxlcyB0byBjYXJyeSBwcm9taW5lbnQgbm90aWNlcw0KICAgICAgICAgIHN0YXRpbmcgdGhhdCBZb3UgY2hhbmdlZCB0aGUgZmlsZXM7IGFuZA0KDQogICAgICAoYykgWW91IG11c3QgcmV0YWluLCBpbiB0aGUgU291cmNlIGZvcm0gb2YgYW55IERlcml2YXRpdmUgV29ya3MNCiAgICAgICAgICB0aGF0IFlvdSBkaXN0cmlidXRlLCBhbGwgY29weXJpZ2h0LCBwYXRlbnQsIHRyYWRlbWFyaywgYW5kDQogICAgICAgICAgYXR0cmlidXRpb24gbm90aWNlcyBmcm9tIHRoZSBTb3VyY2UgZm9ybSBvZiB0aGUgV29yaywNCiAgICAgICAgICBleGNsdWRpbmcgdGhvc2Ugbm90aWNlcyB0aGF0IGRvIG5vdCBwZXJ0YWluIHRvIGFueSBwYXJ0IG9mDQogICAgICAgICAgdGhlIERlcml2YXRpdmUgV29ya3M7IGFuZA0KDQogICAgICAoZCkgSWYgdGhlIFdvcmsgaW5jbHVkZXMgYSAiTk9USUNFIiB0ZXh0IGZpbGUgYXMgcGFydCBvZiBpdHMNCiAgICAgICAgICBkaXN0cmlidXRpb24sIHRoZW4gYW55IERlcml2YXRpdmUgV29ya3MgdGhhdCBZb3UgZGlzdHJpYnV0ZSBtdXN0DQogICAgICAgICAgaW5jbHVkZSBhIHJlYWRhYmxlIGNvcHkgb2YgdGhlIGF0dHJpYnV0aW9uIG5vdGljZXMgY29udGFpbmVkDQogICAgICAgICAgd2l0aGluIHN1Y2ggTk9USUNFIGZpbGUsIGV4Y2x1ZGluZyB0aG9zZSBub3RpY2VzIHRoYXQgZG8gbm90DQogICAgICAgICAgcGVydGFpbiB0byBhbnkgcGFydCBvZiB0aGUgRGVyaXZhdGl2ZSBXb3JrcywgaW4gYXQgbGVhc3Qgb25lDQogICAgICAgICAgb2YgdGhlIGZvbGxvd2luZyBwbGFjZXM6IHdpdGhpbiBhIE5PVElDRSB0ZXh0IGZpbGUgZGlzdHJpYnV0ZWQNCiAgICAgICAgICBhcyBwYXJ0IG9mIHRoZSBEZXJpdmF0aXZlIFdvcmtzOyB3aXRoaW4gdGhlIFNvdXJjZSBmb3JtIG9yDQogICAgICAgICAgZG9jdW1lbnRhdGlvbiwgaWYgcHJvdmlkZWQgYWxvbmcgd2l0aCB0aGUgRGVyaXZhdGl2ZSBXb3Jrczsgb3IsDQogICAgICAgICAgd2l0aGluIGEgZGlzcGxheSBnZW5lcmF0ZWQgYnkgdGhlIERlcml2YXRpdmUgV29ya3MsIGlmIGFuZA0KICAgICAgICAgIHdoZXJldmVyIHN1Y2ggdGhpcmQtcGFydHkgbm90aWNlcyBub3JtYWxseSBhcHBlYXIuIFRoZSBjb250ZW50cw0KICAgICAgICAgIG9mIHRoZSBOT1RJQ0UgZmlsZSBhcmUgZm9yIGluZm9ybWF0aW9uYWwgcHVycG9zZXMgb25seSBhbmQNCiAgICAgICAgICBkbyBub3QgbW9kaWZ5IHRoZSBMaWNlbnNlLiBZb3UgbWF5IGFkZCBZb3VyIG93biBhdHRyaWJ1dGlvbg0KICAgICAgICAgIG5vdGljZXMgd2l0aGluIERlcml2YXRpdmUgV29ya3MgdGhhdCBZb3UgZGlzdHJpYnV0ZSwgYWxvbmdzaWRlDQogICAgICAgICAgb3IgYXMgYW4gYWRkZW5kdW0gdG8gdGhlIE5PVElDRSB0ZXh0IGZyb20gdGhlIFdvcmssIHByb3ZpZGVkDQogICAgICAgICAgdGhhdCBzdWNoIGFkZGl0aW9uYWwgYXR0cmlidXRpb24gbm90aWNlcyBjYW5ub3QgYmUgY29uc3RydWVkDQogICAgICAgICAgYXMgbW9kaWZ5aW5nIHRoZSBMaWNlbnNlLg0KDQogICAgICBZb3UgbWF5IGFkZCBZb3VyIG93biBjb3B5cmlnaHQgc3RhdGVtZW50IHRvIFlvdXIgbW9kaWZpY2F0aW9ucyBhbmQNCiAgICAgIG1heSBwcm92aWRlIGFkZGl0aW9uYWwgb3IgZGlmZmVyZW50IGxpY2Vuc2UgdGVybXMgYW5kIGNvbmRpdGlvbnMNCiAgICAgIGZvciB1c2UsIHJlcHJvZHVjdGlvbiwgb3IgZGlzdHJpYnV0aW9uIG9mIFlvdXIgbW9kaWZpY2F0aW9ucywgb3INCiAgICAgIGZvciBhbnkgc3VjaCBEZXJpdmF0aXZlIFdvcmtzIGFzIGEgd2hvbGUsIHByb3ZpZGVkIFlvdXIgdXNlLA0KICAgICAgcmVwcm9kdWN0aW9uLCBhbmQgZGlzdHJpYnV0aW9uIG9mIHRoZSBXb3JrIG90aGVyd2lzZSBjb21wbGllcyB3aXRoDQogICAgICB0aGUgY29uZGl0aW9ucyBzdGF0ZWQgaW4gdGhpcyBMaWNlbnNlLg0KDQogICA1LiBTdWJtaXNzaW9uIG9mIENvbnRyaWJ1dGlvbnMuIFVubGVzcyBZb3UgZXhwbGljaXRseSBzdGF0ZSBvdGhlcndpc2UsDQogICAgICBhbnkgQ29udHJpYnV0aW9uIGludGVudGlvbmFsbHkgc3VibWl0dGVkIGZvciBpbmNsdXNpb24gaW4gdGhlIFdvcmsNCiAgICAgIGJ5IFlvdSB0byB0aGUgTGljZW5zb3Igc2hhbGwgYmUgdW5kZXIgdGhlIHRlcm1zIGFuZCBjb25kaXRpb25zIG9mDQogICAgICB0aGlzIExpY2Vuc2UsIHdpdGhvdXQgYW55IGFkZGl0aW9uYWwgdGVybXMgb3IgY29uZGl0aW9ucy4NCiAgICAgIE5vdHdpdGhzdGFuZGluZyB0aGUgYWJvdmUsIG5vdGhpbmcgaGVyZWluIHNoYWxsIHN1cGVyc2VkZSBvciBtb2RpZnkNCiAgICAgIHRoZSB0ZXJtcyBvZiBhbnkgc2VwYXJhdGUgbGljZW5zZSBhZ3JlZW1lbnQgeW91IG1heSBoYXZlIGV4ZWN1dGVkDQogICAgICB3aXRoIExpY2Vuc29yIHJlZ2FyZGluZyBzdWNoIENvbnRyaWJ1dGlvbnMuDQoNCiAgIDYuIFRyYWRlbWFya3MuIFRoaXMgTGljZW5zZSBkb2VzIG5vdCBncmFudCBwZXJtaXNzaW9uIHRvIHVzZSB0aGUgdHJhZGUNCiAgICAgIG5hbWVzLCB0cmFkZW1hcmtzLCBzZXJ2aWNlIG1hcmtzLCBvciBwcm9kdWN0IG5hbWVzIG9mIHRoZSBMaWNlbnNvciwNCiAgICAgIGV4Y2VwdCBhcyByZXF1aXJlZCBmb3IgcmVhc29uYWJsZSBhbmQgY3VzdG9tYXJ5IHVzZSBpbiBkZXNjcmliaW5nIHRoZQ0KICAgICAgb3JpZ2luIG9mIHRoZSBXb3JrIGFuZCByZXByb2R1Y2luZyB0aGUgY29udGVudCBvZiB0aGUgTk9USUNFIGZpbGUuDQoNCiAgIDcuIERpc2NsYWltZXIgb2YgV2FycmFudHkuIFVubGVzcyByZXF1aXJlZCBieSBhcHBsaWNhYmxlIGxhdyBvcg0KICAgICAgYWdyZWVkIHRvIGluIHdyaXRpbmcsIExpY2Vuc29yIHByb3ZpZGVzIHRoZSBXb3JrIChhbmQgZWFjaA0KICAgICAgQ29udHJpYnV0b3IgcHJvdmlkZXMgaXRzIENvbnRyaWJ1dGlvbnMpIG9uIGFuICJBUyBJUyIgQkFTSVMsDQogICAgICBXSVRIT1VUIFdBUlJBTlRJRVMgT1IgQ09ORElUSU9OUyBPRiBBTlkgS0lORCwgZWl0aGVyIGV4cHJlc3Mgb3INCiAgICAgIGltcGxpZWQsIGluY2x1ZGluZywgd2l0aG91dCBsaW1pdGF0aW9uLCBhbnkgd2FycmFudGllcyBvciBjb25kaXRpb25zDQogICAgICBvZiBUSVRMRSwgTk9OLUlORlJJTkdFTUVOVCwgTUVSQ0hBTlRBQklMSVRZLCBvciBGSVRORVNTIEZPUiBBDQogICAgICBQQVJUSUNVTEFSIFBVUlBPU0UuIFlvdSBhcmUgc29sZWx5IHJlc3BvbnNpYmxlIGZvciBkZXRlcm1pbmluZyB0aGUNCiAgICAgIGFwcHJvcHJpYXRlbmVzcyBvZiB1c2luZyBvciByZWRpc3RyaWJ1dGluZyB0aGUgV29yayBhbmQgYXNzdW1lIGFueQ0KICAgICAgcmlza3MgYXNzb2NpYXRlZCB3aXRoIFlvdXIgZXhlcmNpc2Ugb2YgcGVybWlzc2lvbnMgdW5kZXIgdGhpcyBMaWNlbnNlLg0KDQogICA4LiBMaW1pdGF0aW9uIG9mIExpYWJpbGl0eS4gSW4gbm8gZXZlbnQgYW5kIHVuZGVyIG5vIGxlZ2FsIHRoZW9yeSwNCiAgICAgIHdoZXRoZXIgaW4gdG9ydCAoaW5jbHVkaW5nIG5lZ2xpZ2VuY2UpLCBjb250cmFjdCwgb3Igb3RoZXJ3aXNlLA0KICAgICAgdW5sZXNzIHJlcXVpcmVkIGJ5IGFwcGxpY2FibGUgbGF3IChzdWNoIGFzIGRlbGliZXJhdGUgYW5kIGdyb3NzbHkNCiAgICAgIG5lZ2xpZ2VudCBhY3RzKSBvciBhZ3JlZWQgdG8gaW4gd3JpdGluZywgc2hhbGwgYW55IENvbnRyaWJ1dG9yIGJlDQogICAgICBsaWFibGUgdG8gWW91IGZvciBkYW1hZ2VzLCBpbmNsdWRpbmcgYW55IGRpcmVjdCwgaW5kaXJlY3QsIHNwZWNpYWwsDQogICAgICBpbmNpZGVudGFsLCBvciBjb25zZXF1ZW50aWFsIGRhbWFnZXMgb2YgYW55IGNoYXJhY3RlciBhcmlzaW5nIGFzIGENCiAgICAgIHJlc3VsdCBvZiB0aGlzIExpY2Vuc2Ugb3Igb3V0IG9mIHRoZSB1c2Ugb3IgaW5hYmlsaXR5IHRvIHVzZSB0aGUNCiAgICAgIFdvcmsgKGluY2x1ZGluZyBidXQgbm90IGxpbWl0ZWQgdG8gZGFtYWdlcyBmb3IgbG9zcyBvZiBnb29kd2lsbCwNCiAgICAgIHdvcmsgc3RvcHBhZ2UsIGNvbXB1dGVyIGZhaWx1cmUgb3IgbWFsZnVuY3Rpb24sIG9yIGFueSBhbmQgYWxsDQogICAgICBvdGhlciBjb21tZXJjaWFsIGRhbWFnZXMgb3IgbG9zc2VzKSwgZXZlbiBpZiBzdWNoIENvbnRyaWJ1dG9yDQogICAgICBoYXMgYmVlbiBhZHZpc2VkIG9mIHRoZSBwb3NzaWJpbGl0eSBvZiBzdWNoIGRhbWFnZXMuDQoNCiAgIDkuIEFjY2VwdGluZyBXYXJyYW50eSBvciBBZGRpdGlvbmFsIExpYWJpbGl0eS4gV2hpbGUgcmVkaXN0cmlidXRpbmcNCiAgICAgIHRoZSBXb3JrIG9yIERlcml2YXRpdmUgV29ya3MgdGhlcmVvZiwgWW91IG1heSBjaG9vc2UgdG8gb2ZmZXIsDQogICAgICBhbmQgY2hhcmdlIGEgZmVlIGZvciwgYWNjZXB0YW5jZSBvZiBzdXBwb3J0LCB3YXJyYW50eSwgaW5kZW1uaXR5LA0KICAgICAgb3Igb3RoZXIgbGlhYmlsaXR5IG9ibGlnYXRpb25zIGFuZC9vciByaWdodHMgY29uc2lzdGVudCB3aXRoIHRoaXMNCiAgICAgIExpY2Vuc2UuIEhvd2V2ZXIsIGluIGFjY2VwdGluZyBzdWNoIG9ibGlnYXRpb25zLCBZb3UgbWF5IGFjdCBvbmx5DQogICAgICBvbiBZb3VyIG93biBiZWhhbGYgYW5kIG9uIFlvdXIgc29sZSByZXNwb25zaWJpbGl0eSwgbm90IG9uIGJlaGFsZg0KICAgICAgb2YgYW55IG90aGVyIENvbnRyaWJ1dG9yLCBhbmQgb25seSBpZiBZb3UgYWdyZWUgdG8gaW5kZW1uaWZ5LA0KICAgICAgZGVmZW5kLCBhbmQgaG9sZCBlYWNoIENvbnRyaWJ1dG9yIGhhcm1sZXNzIGZvciBhbnkgbGlhYmlsaXR5DQogICAgICBpbmN1cnJlZCBieSwgb3IgY2xhaW1zIGFzc2VydGVkIGFnYWluc3QsIHN1Y2ggQ29udHJpYnV0b3IgYnkgcmVhc29uDQogICAgICBvZiB5b3VyIGFjY2VwdGluZyBhbnkgc3VjaCB3YXJyYW50eSBvciBhZGRpdGlvbmFsIGxpYWJpbGl0eS4NCg0KICAgRU5EIE9GIFRFUk1TIEFORCBDT05ESVRJT05T</text>
+          </license>
+        </licenses>
+      </evidence>
+    </component>
+    <component type="library" bom-ref="pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git">
+      <name>readable-stream</name>
+      <version>3.6.2</version>
+      <description>Streams3, a user-land copy of the stream library from Node.js</description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/nodejs/readable-stream/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/nodejs/readable-stream.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/nodejs/readable-stream#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+      <evidence>
+        <licenses>
+          <license>
+            <name>file: LICENSE</name>
+            <text content-type="text/plain" encoding="base64">Tm9kZS5qcyBpcyBsaWNlbnNlZCBmb3IgdXNlIGFzIGZvbGxvd3M6CgoiIiIKQ29weXJpZ2h0IE5vZGUuanMgY29udHJpYnV0b3JzLiBBbGwgcmlnaHRzIHJlc2VydmVkLgoKUGVybWlzc2lvbiBpcyBoZXJlYnkgZ3JhbnRlZCwgZnJlZSBvZiBjaGFyZ2UsIHRvIGFueSBwZXJzb24gb2J0YWluaW5nIGEgY29weQpvZiB0aGlzIHNvZnR3YXJlIGFuZCBhc3NvY2lhdGVkIGRvY3VtZW50YXRpb24gZmlsZXMgKHRoZSAiU29mdHdhcmUiKSwgdG8KZGVhbCBpbiB0aGUgU29mdHdhcmUgd2l0aG91dCByZXN0cmljdGlvbiwgaW5jbHVkaW5nIHdpdGhvdXQgbGltaXRhdGlvbiB0aGUKcmlnaHRzIHRvIHVzZSwgY29weSwgbW9kaWZ5LCBtZXJnZSwgcHVibGlzaCwgZGlzdHJpYnV0ZSwgc3VibGljZW5zZSwgYW5kL29yCnNlbGwgY29waWVzIG9mIHRoZSBTb2Z0d2FyZSwgYW5kIHRvIHBlcm1pdCBwZXJzb25zIHRvIHdob20gdGhlIFNvZnR3YXJlIGlzCmZ1cm5pc2hlZCB0byBkbyBzbywgc3ViamVjdCB0byB0aGUgZm9sbG93aW5nIGNvbmRpdGlvbnM6CgpUaGUgYWJvdmUgY29weXJpZ2h0IG5vdGljZSBhbmQgdGhpcyBwZXJtaXNzaW9uIG5vdGljZSBzaGFsbCBiZSBpbmNsdWRlZCBpbgphbGwgY29waWVzIG9yIHN1YnN0YW50aWFsIHBvcnRpb25zIG9mIHRoZSBTb2Z0d2FyZS4KClRIRSBTT0ZUV0FSRSBJUyBQUk9WSURFRCAiQVMgSVMiLCBXSVRIT1VUIFdBUlJBTlRZIE9GIEFOWSBLSU5ELCBFWFBSRVNTIE9SCklNUExJRUQsIElOQ0xVRElORyBCVVQgTk9UIExJTUlURUQgVE8gVEhFIFdBUlJBTlRJRVMgT0YgTUVSQ0hBTlRBQklMSVRZLApGSVRORVNTIEZPUiBBIFBBUlRJQ1VMQVIgUFVSUE9TRSBBTkQgTk9OSU5GUklOR0VNRU5ULiBJTiBOTyBFVkVOVCBTSEFMTCBUSEUKQVVUSE9SUyBPUiBDT1BZUklHSFQgSE9MREVSUyBCRSBMSUFCTEUgRk9SIEFOWSBDTEFJTSwgREFNQUdFUyBPUiBPVEhFUgpMSUFCSUxJVFksIFdIRVRIRVIgSU4gQU4gQUNUSU9OIE9GIENPTlRSQUNULCBUT1JUIE9SIE9USEVSV0lTRSwgQVJJU0lORwpGUk9NLCBPVVQgT0YgT1IgSU4gQ09OTkVDVElPTiBXSVRIIFRIRSBTT0ZUV0FSRSBPUiBUSEUgVVNFIE9SIE9USEVSIERFQUxJTkdTCklOIFRIRSBTT0ZUV0FSRS4KIiIiCgpUaGlzIGxpY2Vuc2UgYXBwbGllcyB0byBwYXJ0cyBvZiBOb2RlLmpzIG9yaWdpbmF0aW5nIGZyb20gdGhlCmh0dHBzOi8vZ2l0aHViLmNvbS9qb3llbnQvbm9kZSByZXBvc2l0b3J5OgoKIiIiCkNvcHlyaWdodCBKb3llbnQsIEluYy4gYW5kIG90aGVyIE5vZGUgY29udHJpYnV0b3JzLiBBbGwgcmlnaHRzIHJlc2VydmVkLgpQZXJtaXNzaW9uIGlzIGhlcmVieSBncmFudGVkLCBmcmVlIG9mIGNoYXJnZSwgdG8gYW55IHBlcnNvbiBvYnRhaW5pbmcgYSBjb3B5Cm9mIHRoaXMgc29mdHdhcmUgYW5kIGFzc29jaWF0ZWQgZG9jdW1lbnRhdGlvbiBmaWxlcyAodGhlICJTb2Z0d2FyZSIpLCB0bwpkZWFsIGluIHRoZSBTb2Z0d2FyZSB3aXRob3V0IHJlc3RyaWN0aW9uLCBpbmNsdWRpbmcgd2l0aG91dCBsaW1pdGF0aW9uIHRoZQpyaWdodHMgdG8gdXNlLCBjb3B5LCBtb2RpZnksIG1lcmdlLCBwdWJsaXNoLCBkaXN0cmlidXRlLCBzdWJsaWNlbnNlLCBhbmQvb3IKc2VsbCBjb3BpZXMgb2YgdGhlIFNvZnR3YXJlLCBhbmQgdG8gcGVybWl0IHBlcnNvbnMgdG8gd2hvbSB0aGUgU29mdHdhcmUgaXMKZnVybmlzaGVkIHRvIGRvIHNvLCBzdWJqZWN0IHRvIHRoZSBmb2xsb3dpbmcgY29uZGl0aW9uczoKClRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlIGFuZCB0aGlzIHBlcm1pc3Npb24gbm90aWNlIHNoYWxsIGJlIGluY2x1ZGVkIGluCmFsbCBjb3BpZXMgb3Igc3Vic3RhbnRpYWwgcG9ydGlvbnMgb2YgdGhlIFNvZnR3YXJlLgoKVEhFIFNPRlRXQVJFIElTIFBST1ZJREVEICJBUyBJUyIsIFdJVEhPVVQgV0FSUkFOVFkgT0YgQU5ZIEtJTkQsIEVYUFJFU1MgT1IKSU1QTElFRCwgSU5DTFVESU5HIEJVVCBOT1QgTElNSVRFRCBUTyBUSEUgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFksCkZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFIEFORCBOT05JTkZSSU5HRU1FTlQuIElOIE5PIEVWRU5UIFNIQUxMIFRIRQpBVVRIT1JTIE9SIENPUFlSSUdIVCBIT0xERVJTIEJFIExJQUJMRSBGT1IgQU5ZIENMQUlNLCBEQU1BR0VTIE9SIE9USEVSCkxJQUJJTElUWSwgV0hFVEhFUiBJTiBBTiBBQ1RJT04gT0YgQ09OVFJBQ1QsIFRPUlQgT1IgT1RIRVJXSVNFLCBBUklTSU5HCkZST00sIE9VVCBPRiBPUiBJTiBDT05ORUNUSU9OIFdJVEggVEhFIFNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MKSU4gVEhFIFNPRlRXQVJFLgoiIiIK</text>
+          </license>
+        </licenses>
+      </evidence>
+    </component>
+    <component type="library" bom-ref="pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git">
+      <author>Feross Aboukhadijeh</author>
+      <name>safe-buffer</name>
+      <version>5.2.1</version>
+      <description>Safer Node.js Buffer API</description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/feross/safe-buffer/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/feross/safe-buffer.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/feross/safe-buffer</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+      <evidence>
+        <licenses>
+          <license>
+            <name>file: LICENSE</name>
+            <text content-type="text/plain" encoding="base64">VGhlIE1JVCBMaWNlbnNlIChNSVQpCgpDb3B5cmlnaHQgKGMpIEZlcm9zcyBBYm91a2hhZGlqZWgKClBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHkKb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgIlNvZnR3YXJlIiksIHRvIGRlYWwKaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0cwp0byB1c2UsIGNvcHksIG1vZGlmeSwgbWVyZ2UsIHB1Ymxpc2gsIGRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsCmNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpcwpmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOgoKVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUgaW5jbHVkZWQgaW4KYWxsIGNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuCgpUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgIkFTIElTIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUyBPUgpJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSwKRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFCkFVVEhPUlMgT1IgQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVIKTElBQklMSVRZLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSwKT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgU09GVFdBUkUgT1IgVEhFIFVTRSBPUiBPVEhFUiBERUFMSU5HUyBJTgpUSEUgU09GVFdBUkUuCg==</text>
+          </license>
+        </licenses>
+      </evidence>
+    </component>
+    <component type="library" bom-ref="pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A//github.com/browserify/stream-browserify.git">
+      <author>James Halliday</author>
+      <name>stream-browserify</name>
+      <version>3.0.0</version>
+      <description>the stream module from node core for browsers</description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A//github.com/browserify/stream-browserify.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/browserify/stream-browserify/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/browserify/stream-browserify.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/browserify/stream-browserify</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+      <evidence>
+        <licenses>
+          <license>
+            <name>file: LICENSE</name>
+            <text content-type="text/plain" encoding="base64">TUlUIExpY2Vuc2UKCkNvcHlyaWdodCAoYykgSmFtZXMgSGFsbGlkYXkKClBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHkgb2YKdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgIlNvZnR3YXJlIiksIHRvIGRlYWwgaW4KdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0cyB0bwp1c2UsIGNvcHksIG1vZGlmeSwgbWVyZ2UsIHB1Ymxpc2gsIGRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsIGNvcGllcyBvZgp0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpcyBmdXJuaXNoZWQgdG8gZG8gc28sCnN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOgoKVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUgaW5jbHVkZWQgaW4gYWxsCmNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuCgpUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgIkFTIElTIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUyBPUgpJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSwgRklUTkVTUwpGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFIEFVVEhPUlMgT1IKQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVIgTElBQklMSVRZLCBXSEVUSEVSCklOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSwgT1VUIE9GIE9SIElOCkNPTk5FQ1RJT04gV0lUSCBUSEUgU09GVFdBUkUgT1IgVEhFIFVTRSBPUiBPVEhFUiBERUFMSU5HUyBJTiBUSEUgU09GVFdBUkUuCg==</text>
+          </license>
+        </licenses>
+      </evidence>
+    </component>
+    <component type="library" bom-ref="pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git">
+      <name>string_decoder</name>
+      <version>1.3.0</version>
+      <description>The string_decoder module from Node core</description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/nodejs/string_decoder/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/nodejs/string_decoder.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/nodejs/string_decoder</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+      <evidence>
+        <licenses>
+          <license>
+            <name>file: LICENSE</name>
+            <text content-type="text/plain" encoding="base64">Tm9kZS5qcyBpcyBsaWNlbnNlZCBmb3IgdXNlIGFzIGZvbGxvd3M6CgoiIiIKQ29weXJpZ2h0IE5vZGUuanMgY29udHJpYnV0b3JzLiBBbGwgcmlnaHRzIHJlc2VydmVkLgoKUGVybWlzc2lvbiBpcyBoZXJlYnkgZ3JhbnRlZCwgZnJlZSBvZiBjaGFyZ2UsIHRvIGFueSBwZXJzb24gb2J0YWluaW5nIGEgY29weQpvZiB0aGlzIHNvZnR3YXJlIGFuZCBhc3NvY2lhdGVkIGRvY3VtZW50YXRpb24gZmlsZXMgKHRoZSAiU29mdHdhcmUiKSwgdG8KZGVhbCBpbiB0aGUgU29mdHdhcmUgd2l0aG91dCByZXN0cmljdGlvbiwgaW5jbHVkaW5nIHdpdGhvdXQgbGltaXRhdGlvbiB0aGUKcmlnaHRzIHRvIHVzZSwgY29weSwgbW9kaWZ5LCBtZXJnZSwgcHVibGlzaCwgZGlzdHJpYnV0ZSwgc3VibGljZW5zZSwgYW5kL29yCnNlbGwgY29waWVzIG9mIHRoZSBTb2Z0d2FyZSwgYW5kIHRvIHBlcm1pdCBwZXJzb25zIHRvIHdob20gdGhlIFNvZnR3YXJlIGlzCmZ1cm5pc2hlZCB0byBkbyBzbywgc3ViamVjdCB0byB0aGUgZm9sbG93aW5nIGNvbmRpdGlvbnM6CgpUaGUgYWJvdmUgY29weXJpZ2h0IG5vdGljZSBhbmQgdGhpcyBwZXJtaXNzaW9uIG5vdGljZSBzaGFsbCBiZSBpbmNsdWRlZCBpbgphbGwgY29waWVzIG9yIHN1YnN0YW50aWFsIHBvcnRpb25zIG9mIHRoZSBTb2Z0d2FyZS4KClRIRSBTT0ZUV0FSRSBJUyBQUk9WSURFRCAiQVMgSVMiLCBXSVRIT1VUIFdBUlJBTlRZIE9GIEFOWSBLSU5ELCBFWFBSRVNTIE9SCklNUExJRUQsIElOQ0xVRElORyBCVVQgTk9UIExJTUlURUQgVE8gVEhFIFdBUlJBTlRJRVMgT0YgTUVSQ0hBTlRBQklMSVRZLApGSVRORVNTIEZPUiBBIFBBUlRJQ1VMQVIgUFVSUE9TRSBBTkQgTk9OSU5GUklOR0VNRU5ULiBJTiBOTyBFVkVOVCBTSEFMTCBUSEUKQVVUSE9SUyBPUiBDT1BZUklHSFQgSE9MREVSUyBCRSBMSUFCTEUgRk9SIEFOWSBDTEFJTSwgREFNQUdFUyBPUiBPVEhFUgpMSUFCSUxJVFksIFdIRVRIRVIgSU4gQU4gQUNUSU9OIE9GIENPTlRSQUNULCBUT1JUIE9SIE9USEVSV0lTRSwgQVJJU0lORwpGUk9NLCBPVVQgT0YgT1IgSU4gQ09OTkVDVElPTiBXSVRIIFRIRSBTT0ZUV0FSRSBPUiBUSEUgVVNFIE9SIE9USEVSIERFQUxJTkdTCklOIFRIRSBTT0ZUV0FSRS4KIiIiCgpUaGlzIGxpY2Vuc2UgYXBwbGllcyB0byBwYXJ0cyBvZiBOb2RlLmpzIG9yaWdpbmF0aW5nIGZyb20gdGhlCmh0dHBzOi8vZ2l0aHViLmNvbS9qb3llbnQvbm9kZSByZXBvc2l0b3J5OgoKIiIiCkNvcHlyaWdodCBKb3llbnQsIEluYy4gYW5kIG90aGVyIE5vZGUgY29udHJpYnV0b3JzLiBBbGwgcmlnaHRzIHJlc2VydmVkLgpQZXJtaXNzaW9uIGlzIGhlcmVieSBncmFudGVkLCBmcmVlIG9mIGNoYXJnZSwgdG8gYW55IHBlcnNvbiBvYnRhaW5pbmcgYSBjb3B5Cm9mIHRoaXMgc29mdHdhcmUgYW5kIGFzc29jaWF0ZWQgZG9jdW1lbnRhdGlvbiBmaWxlcyAodGhlICJTb2Z0d2FyZSIpLCB0bwpkZWFsIGluIHRoZSBTb2Z0d2FyZSB3aXRob3V0IHJlc3RyaWN0aW9uLCBpbmNsdWRpbmcgd2l0aG91dCBsaW1pdGF0aW9uIHRoZQpyaWdodHMgdG8gdXNlLCBjb3B5LCBtb2RpZnksIG1lcmdlLCBwdWJsaXNoLCBkaXN0cmlidXRlLCBzdWJsaWNlbnNlLCBhbmQvb3IKc2VsbCBjb3BpZXMgb2YgdGhlIFNvZnR3YXJlLCBhbmQgdG8gcGVybWl0IHBlcnNvbnMgdG8gd2hvbSB0aGUgU29mdHdhcmUgaXMKZnVybmlzaGVkIHRvIGRvIHNvLCBzdWJqZWN0IHRvIHRoZSBmb2xsb3dpbmcgY29uZGl0aW9uczoKClRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlIGFuZCB0aGlzIHBlcm1pc3Npb24gbm90aWNlIHNoYWxsIGJlIGluY2x1ZGVkIGluCmFsbCBjb3BpZXMgb3Igc3Vic3RhbnRpYWwgcG9ydGlvbnMgb2YgdGhlIFNvZnR3YXJlLgoKVEhFIFNPRlRXQVJFIElTIFBST1ZJREVEICJBUyBJUyIsIFdJVEhPVVQgV0FSUkFOVFkgT0YgQU5ZIEtJTkQsIEVYUFJFU1MgT1IKSU1QTElFRCwgSU5DTFVESU5HIEJVVCBOT1QgTElNSVRFRCBUTyBUSEUgV0FSUkFOVElFUyBPRiBNRVJDSEFOVEFCSUxJVFksCkZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFIEFORCBOT05JTkZSSU5HRU1FTlQuIElOIE5PIEVWRU5UIFNIQUxMIFRIRQpBVVRIT1JTIE9SIENPUFlSSUdIVCBIT0xERVJTIEJFIExJQUJMRSBGT1IgQU5ZIENMQUlNLCBEQU1BR0VTIE9SIE9USEVSCkxJQUJJTElUWSwgV0hFVEhFUiBJTiBBTiBBQ1RJT04gT0YgQ09OVFJBQ1QsIFRPUlQgT1IgT1RIRVJXSVNFLCBBUklTSU5HCkZST00sIE9VVCBPRiBPUiBJTiBDT05ORUNUSU9OIFdJVEggVEhFIFNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MKSU4gVEhFIFNPRlRXQVJFLgoiIiIKCg==</text>
+          </license>
+        </licenses>
+      </evidence>
+    </component>
+    <component type="library" bom-ref="pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/through.git">
+      <author>Dominic Tarr</author>
+      <name>through</name>
+      <version>2.3.8</version>
+      <description>simplified stream construction</description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/through.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/dominictarr/through/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://github.com/dominictarr/through.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/dominictarr/through</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+      <evidence>
+        <licenses>
+          <license>
+            <name>file: LICENSE.MIT</name>
+            <text content-type="text/plain" encoding="base64">VGhlIE1JVCBMaWNlbnNlCgpDb3B5cmlnaHQgKGMpIDIwMTEgRG9taW5pYyBUYXJyCgpQZXJtaXNzaW9uIGlzIGhlcmVieSBncmFudGVkLCBmcmVlIG9mIGNoYXJnZSwgCnRvIGFueSBwZXJzb24gb2J0YWluaW5nIGEgY29weSBvZiB0aGlzIHNvZnR3YXJlIGFuZCAKYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgIlNvZnR3YXJlIiksIHRvIApkZWFsIGluIHRoZSBTb2Z0d2FyZSB3aXRob3V0IHJlc3RyaWN0aW9uLCBpbmNsdWRpbmcgCndpdGhvdXQgbGltaXRhdGlvbiB0aGUgcmlnaHRzIHRvIHVzZSwgY29weSwgbW9kaWZ5LCAKbWVyZ2UsIHB1Ymxpc2gsIGRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsIApjb3BpZXMgb2YgdGhlIFNvZnR3YXJlLCBhbmQgdG8gcGVybWl0IHBlcnNvbnMgdG8gd2hvbSAKdGhlIFNvZnR3YXJlIGlzIGZ1cm5pc2hlZCB0byBkbyBzbywgCnN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOgoKVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2UgCnNoYWxsIGJlIGluY2x1ZGVkIGluIGFsbCBjb3BpZXMgb3Igc3Vic3RhbnRpYWwgcG9ydGlvbnMgb2YgdGhlIFNvZnR3YXJlLgoKVEhFIFNPRlRXQVJFIElTIFBST1ZJREVEICJBUyBJUyIsIFdJVEhPVVQgV0FSUkFOVFkgT0YgQU5ZIEtJTkQsIApFWFBSRVNTIE9SIElNUExJRUQsIElOQ0xVRElORyBCVVQgTk9UIExJTUlURUQgVE8gVEhFIFdBUlJBTlRJRVMgCk9GIE1FUkNIQU5UQUJJTElUWSwgRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gCklOIE5PIEVWRU5UIFNIQUxMIFRIRSBBVVRIT1JTIE9SIENPUFlSSUdIVCBIT0xERVJTIEJFIExJQUJMRSBGT1IgCkFOWSBDTEFJTSwgREFNQUdFUyBPUiBPVEhFUiBMSUFCSUxJVFksIFdIRVRIRVIgSU4gQU4gQUNUSU9OIE9GIENPTlRSQUNULCAKVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSwgT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgClNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MgSU4gVEhFIFNPRlRXQVJFLgo=</text>
+          </license>
+        </licenses>
+      </evidence>
+    </component>
+    <component type="library" bom-ref="pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git">
+      <author>Nathan Rajlich</author>
+      <name>util-deprecate</name>
+      <version>1.0.2</version>
+      <description>The Node.js \`util.deprecate()\` function with browser support</description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/TooTallNate/util-deprecate/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/TooTallNate/util-deprecate.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/TooTallNate/util-deprecate</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+      <evidence>
+        <licenses>
+          <license>
+            <name>file: LICENSE</name>
+            <text content-type="text/plain" encoding="base64">KFRoZSBNSVQgTGljZW5zZSkKCkNvcHlyaWdodCAoYykgMjAxNCBOYXRoYW4gUmFqbGljaCA8bmF0aGFuQHRvb3RhbGxuYXRlLm5ldD4KClBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uCm9idGFpbmluZyBhIGNvcHkgb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uCmZpbGVzICh0aGUgIlNvZnR3YXJlIiksIHRvIGRlYWwgaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQKcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0cyB0byB1c2UsCmNvcHksIG1vZGlmeSwgbWVyZ2UsIHB1Ymxpc2gsIGRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsCmNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZQpTb2Z0d2FyZSBpcyBmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlIGZvbGxvd2luZwpjb25kaXRpb25zOgoKVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUKaW5jbHVkZWQgaW4gYWxsIGNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuCgpUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgIkFTIElTIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwKRVhQUkVTUyBPUiBJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTCk9GIE1FUkNIQU5UQUJJTElUWSwgRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5ECk5PTklORlJJTkdFTUVOVC4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFIEFVVEhPUlMgT1IgQ09QWVJJR0hUCkhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVIgTElBQklMSVRZLApXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcKRlJPTSwgT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgU09GVFdBUkUgT1IgVEhFIFVTRSBPUgpPVEhFUiBERUFMSU5HUyBJTiBUSEUgU09GVFdBUkUuCg==</text>
+          </license>
+        </licenses>
+      </evidence>
+    </component>
+  </components>
+  <dependencies>
+    <dependency ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue1337">
+      <dependency ref="pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git"/>
+      <dependency ref="pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git"/>
+      <dependency ref="pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/through.git"/>
+    </dependency>
+    <dependency ref="pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git"/>
+    <dependency ref="pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git">
+      <dependency ref="pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git"/>
+      <dependency ref="pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git"/>
+    </dependency>
+    <dependency ref="pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git"/>
+    <dependency ref="pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git"/>
+    <dependency ref="pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git"/>
+    <dependency ref="pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git"/>
+    <dependency ref="pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git"/>
+    <dependency ref="pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git">
+      <dependency ref="pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git"/>
+      <dependency ref="pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git"/>
+      <dependency ref="pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git"/>
+      <dependency ref="pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git"/>
+      <dependency ref="pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git"/>
+    </dependency>
+    <dependency ref="pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git">
+      <dependency ref="pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git"/>
+    </dependency>
+    <dependency ref="pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A//github.com/browserify/stream-browserify.git">
+      <dependency ref="pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git"/>
+      <dependency ref="pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git"/>
+      <dependency ref="pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git"/>
+    </dependency>
+    <dependency ref="pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git">
+      <dependency ref="pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git"/>
+    </dependency>
+    <dependency ref="pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/through.git">
+      <dependency ref="pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A//github.com/browserify/stream-browserify.git"/>
+    </dependency>
+    <dependency ref="pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git"/>
+  </dependencies>
+</bom>"
+`;
+
 exports[`integration regression: issue#745 generated json file: dist/.bom/bom.json 1`] = `
 "{
   "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
