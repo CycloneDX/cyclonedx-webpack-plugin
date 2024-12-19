@@ -7336,11 +7336,16 @@ exports[`integration functional: webpack5 with vue2-cli-service generated xml fi
 
 exports[`integration regression: find license evidence like \`LICENSE.MIT\` generated json file: dist/.bom/bom.json 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.4",
+  "specVersion": "1.6",
   "version": 1,
   "metadata": {
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
     "tools": [
       {
         "vendor": "@cyclonedx",
@@ -7397,7 +7402,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "Apache-2.0"
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -7433,7 +7439,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -7480,7 +7487,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -7527,7 +7535,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "BSD-2-Clause"
+            "id": "BSD-2-Clause",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -7574,7 +7583,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -7621,7 +7631,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "BSD-3-Clause"
+            "id": "BSD-3-Clause",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -7667,7 +7678,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "ISC"
+            "id": "ISC",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -7714,7 +7726,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -7770,7 +7783,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -7817,7 +7831,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -7864,7 +7879,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -7910,7 +7926,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -7957,7 +7974,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -8004,7 +8022,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -8121,11 +8140,16 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
 
 exports[`integration regression: find license evidence like \`LICENSE.MIT\` generated json file: dist/.well-known/sbom 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.4",
+  "specVersion": "1.6",
   "version": 1,
   "metadata": {
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
     "tools": [
       {
         "vendor": "@cyclonedx",
@@ -8182,7 +8206,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "Apache-2.0"
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -8218,7 +8243,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -8265,7 +8291,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -8312,7 +8339,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "BSD-2-Clause"
+            "id": "BSD-2-Clause",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -8359,7 +8387,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -8406,7 +8435,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "BSD-3-Clause"
+            "id": "BSD-3-Clause",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -8452,7 +8482,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "ISC"
+            "id": "ISC",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -8499,7 +8530,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -8555,7 +8587,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -8602,7 +8635,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -8649,7 +8683,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -8695,7 +8730,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -8742,7 +8778,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -8789,7 +8826,8 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -8906,8 +8944,13 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
 
 exports[`integration regression: find license evidence like \`LICENSE.MIT\` generated xml file: dist/.bom/bom.xml 1`] = `
 "<?xml version="1.0" encoding="UTF-8"?>
-<bom xmlns="http://cyclonedx.org/schema/bom/1.4" version="1">
+<bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
   <metadata>
+    <lifecycles>
+      <lifecycle>
+        <phase>build</phase>
+      </lifecycle>
+    </lifecycles>
     <tools>
       <tool>
         <vendor>@cyclonedx</vendor>
@@ -8954,7 +8997,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       <name>regression-issue1337</name>
       <description>example setup for issue#1337</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>Apache-2.0</id>
         </license>
       </licenses>
@@ -8983,7 +9026,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       <version>1.5.1</version>
       <description>Base64 encoding/decoding in pure JS</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -9017,7 +9060,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       <version>6.0.3</version>
       <description>Node.js Buffer API, for the browser</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -9051,7 +9094,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       <version>4.0.1</version>
       <description>ECMAScript parsing infrastructure for multipurpose analysis</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>BSD-2-Clause</id>
         </license>
       </licenses>
@@ -9085,7 +9128,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       <version>3.3.0</version>
       <description>Node's event emitter for all engines.</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -9119,7 +9162,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       <version>1.2.1</version>
       <description>Read/write IEEE754 floating point numbers from/to a Buffer or array-like object</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>BSD-3-Clause</id>
         </license>
       </licenses>
@@ -9152,7 +9195,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       <version>2.0.4</version>
       <description>Browser-friendly inheritance fully compatible with standard node.js inherits()</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>ISC</id>
         </license>
       </licenses>
@@ -9186,7 +9229,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       <version>1.11.16</version>
       <description>A simpler (and smaller) rewrite of Google Android's libphonenumber library in javascript</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -9223,7 +9266,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       <version>3.6.2</version>
       <description>Streams3, a user-land copy of the stream library from Node.js</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -9257,7 +9300,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       <version>5.2.1</version>
       <description>Safer Node.js Buffer API</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -9291,7 +9334,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       <version>3.0.0</version>
       <description>the stream module from node core for browsers</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -9324,7 +9367,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       <version>1.3.0</version>
       <description>The string_decoder module from Node core</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -9358,7 +9401,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       <version>2.3.8</version>
       <description>simplified stream construction</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -9392,7 +9435,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       <version>1.0.2</version>
       <description>The Node.js \`util.deprecate()\` function with browser support</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -9465,11 +9508,16 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
 
 exports[`integration regression: issue#745 generated json file: dist/.bom/bom.json 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.4",
+  "specVersion": "1.6",
   "version": 1,
   "metadata": {
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
     "tools": [
       {
         "vendor": "@cyclonedx",
@@ -9526,7 +9574,8 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
       "licenses": [
         {
           "license": {
-            "id": "Apache-2.0"
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -9562,7 +9611,8 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -9596,7 +9646,8 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -9630,7 +9681,8 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -9664,7 +9716,8 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -9696,7 +9749,8 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -9728,7 +9782,8 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -9761,7 +9816,8 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -9793,7 +9849,8 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -9826,7 +9883,8 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -9859,7 +9917,8 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -9892,7 +9951,8 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
       "licenses": [
         {
           "license": {
-            "id": "0BSD"
+            "id": "0BSD",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -9924,7 +9984,8 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -10021,11 +10082,16 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
 
 exports[`integration regression: issue#745 generated json file: dist/.well-known/sbom 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.4",
+  "specVersion": "1.6",
   "version": 1,
   "metadata": {
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
     "tools": [
       {
         "vendor": "@cyclonedx",
@@ -10082,7 +10148,8 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
       "licenses": [
         {
           "license": {
-            "id": "Apache-2.0"
+            "id": "Apache-2.0",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -10118,7 +10185,8 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -10152,7 +10220,8 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -10186,7 +10255,8 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -10220,7 +10290,8 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -10252,7 +10323,8 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -10284,7 +10356,8 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -10317,7 +10390,8 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -10349,7 +10423,8 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -10382,7 +10457,8 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -10415,7 +10491,8 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -10448,7 +10525,8 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
       "licenses": [
         {
           "license": {
-            "id": "0BSD"
+            "id": "0BSD",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -10480,7 +10558,8 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -10577,8 +10656,13 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
 
 exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml 1`] = `
 "<?xml version="1.0" encoding="UTF-8"?>
-<bom xmlns="http://cyclonedx.org/schema/bom/1.4" version="1">
+<bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
   <metadata>
+    <lifecycles>
+      <lifecycle>
+        <phase>build</phase>
+      </lifecycle>
+    </lifecycles>
     <tools>
       <tool>
         <vendor>@cyclonedx</vendor>
@@ -10625,7 +10709,7 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
       <name>regression-issue745</name>
       <description>example setup for issue#745</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>Apache-2.0</id>
         </license>
       </licenses>
@@ -10654,7 +10738,7 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
       <version>3.7.10</version>
       <description>A fully-featured caching GraphQL client.</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -10681,7 +10765,7 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
       <version>0.7.0</version>
       <description>Manage contextual information needed by (a)synchronous tasks without explicitly passing objects around</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -10708,7 +10792,7 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
       <version>0.5.3</version>
       <description>Structural equality checking for JavaScript values</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -10735,7 +10819,7 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
       <version>0.3.2</version>
       <description>https://en.wikipedia.org/wiki/Trie</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -10760,7 +10844,7 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
       <version>2.12.6</version>
       <description>A JavaScript template literal tag that parses GraphQL queries</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -10785,7 +10869,7 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
       <version>16.6.0</version>
       <description>A Query Language and Runtime which can target any service.</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -10811,7 +10895,7 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
       <version>0.16.2</version>
       <description>Composable reactive caching with efficient invalidation.</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -10836,7 +10920,7 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
       <version>18.2.0</version>
       <description>React is a JavaScript library for building user interfaces.</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -10862,7 +10946,7 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
       <version>4.0.0</version>
       <description>Symbol.observable ponyfill</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -10888,7 +10972,7 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
       <version>0.10.3</version>
       <description>TypeScript implementation of invariant(condition, message)</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -10914,7 +10998,7 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
       <version>2.5.0</version>
       <description>Runtime library for TypeScript helper functions</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>0BSD</id>
         </license>
       </licenses>
@@ -10939,7 +11023,7 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
       <version>1.2.5</version>
       <description>Thin wrapper around zen-observable and @types/zen-observable, to support ESM exports as well as CommonJS exports</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -11002,11 +11086,16 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
 
 exports[`integration regression: verify enhanced package.json finder generated json file: dist/.bom/bom.json 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.4",
+  "specVersion": "1.6",
   "version": 1,
   "metadata": {
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
     "tools": [
       {
         "vendor": "@cyclonedx",
@@ -11073,7 +11162,8 @@ exports[`integration regression: verify enhanced package.json finder generated j
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -11106,7 +11196,8 @@ exports[`integration regression: verify enhanced package.json finder generated j
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -11150,11 +11241,16 @@ exports[`integration regression: verify enhanced package.json finder generated j
 
 exports[`integration regression: verify enhanced package.json finder generated json file: dist/.well-known/sbom 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.4",
+  "specVersion": "1.6",
   "version": 1,
   "metadata": {
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
     "tools": [
       {
         "vendor": "@cyclonedx",
@@ -11221,7 +11317,8 @@ exports[`integration regression: verify enhanced package.json finder generated j
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -11254,7 +11351,8 @@ exports[`integration regression: verify enhanced package.json finder generated j
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -11298,8 +11396,13 @@ exports[`integration regression: verify enhanced package.json finder generated j
 
 exports[`integration regression: verify enhanced package.json finder generated xml file: dist/.bom/bom.xml 1`] = `
 "<?xml version="1.0" encoding="UTF-8"?>
-<bom xmlns="http://cyclonedx.org/schema/bom/1.4" version="1">
+<bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
   <metadata>
+    <lifecycles>
+      <lifecycle>
+        <phase>build</phase>
+      </lifecycle>
+    </lifecycles>
     <tools>
       <tool>
         <vendor>@cyclonedx</vendor>
@@ -11354,7 +11457,7 @@ exports[`integration regression: verify enhanced package.json finder generated x
       <version>1.11.3</version>
       <description>A simpler (and smaller) rewrite of Google Android's libphonenumber library in javascript</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -11380,7 +11483,7 @@ exports[`integration regression: verify enhanced package.json finder generated x
       <version>3.4.4</version>
       <description>Immutable date wrapper</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -11414,11 +11517,16 @@ exports[`integration regression: verify enhanced package.json finder generated x
 
 exports[`integration regression: verify enhanced package.json finder with yarn pkg manager generated json file: dist/.bom/bom.json 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.4",
+  "specVersion": "1.6",
   "version": 1,
   "metadata": {
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
     "tools": [
       {
         "vendor": "@cyclonedx",
@@ -11485,7 +11593,8 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -11518,7 +11627,8 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -11562,11 +11672,16 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
 
 exports[`integration regression: verify enhanced package.json finder with yarn pkg manager generated json file: dist/.well-known/sbom 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.4",
+  "specVersion": "1.6",
   "version": 1,
   "metadata": {
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
     "tools": [
       {
         "vendor": "@cyclonedx",
@@ -11633,7 +11748,8 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -11666,7 +11782,8 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
       "licenses": [
         {
           "license": {
-            "id": "MIT"
+            "id": "MIT",
+            "acknowledgement": "declared"
           }
         }
       ],
@@ -11710,8 +11827,13 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
 
 exports[`integration regression: verify enhanced package.json finder with yarn pkg manager generated xml file: dist/.bom/bom.xml 1`] = `
 "<?xml version="1.0" encoding="UTF-8"?>
-<bom xmlns="http://cyclonedx.org/schema/bom/1.4" version="1">
+<bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
   <metadata>
+    <lifecycles>
+      <lifecycle>
+        <phase>build</phase>
+      </lifecycle>
+    </lifecycles>
     <tools>
       <tool>
         <vendor>@cyclonedx</vendor>
@@ -11766,7 +11888,7 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
       <version>1.11.3</version>
       <description>A simpler (and smaller) rewrite of Google Android's libphonenumber library in javascript</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
@@ -11792,7 +11914,7 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
       <version>3.4.4</version>
       <description>Immutable date wrapper</description>
       <licenses>
-        <license>
+        <license acknowledgement="declared">
           <id>MIT</id>
         </license>
       </licenses>
