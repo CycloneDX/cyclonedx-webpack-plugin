@@ -214,6 +214,25 @@ const testSetups = [
         file: 'dist/.well-known/sbom'
       }
     ]
+  },
+  {
+    dir: 'regression-issue1337',
+    packageManager: 'npm',
+    purpose: 'regression: find license evidence like `LICENSE.MIT`',
+    results: [ // paths relative to `dir`
+      {
+        format: 'xml',
+        file: 'dist/.bom/bom.xml'
+      },
+      {
+        format: 'json',
+        file: 'dist/.bom/bom.json'
+      },
+      {
+        format: 'json',
+        file: 'dist/.well-known/sbom'
+      }
+    ]
   }
   // endregion regression
 ]

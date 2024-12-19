@@ -6,6 +6,14 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 3.15.1 - 2024-12-03
+
+* Fixed
+  * Properly detect license evidences like `LICEN[CS]E.{Apache,BSD,GPL,MIT}` ([#1337] via [#1339])
+
+[#1337]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1337
+[#1339]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1339
+
 ## 3.15.0 - 2024-10-19
 
 * Added

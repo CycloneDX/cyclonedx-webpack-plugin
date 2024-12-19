@@ -1,0 +1,47 @@
+{
+  "name": "@cyclonedx-webpack-plugin-tests/regression-issue1337",
+  "description": "example setup for issue#1337",
+  "private": true,
+  "type": "commonjs",
+  "homepage": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/regression-issue1337#readme",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Jan Kowalleck",
+    "email": "jan.kowalleck@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Jan Kowalleck",
+      "email": "jan.kowalleck@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
+    "directory": "tests/integration/regression-issue1337"
+  },
+  "bugs": {
+    "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues"
+  },
+  "main": "index.html",
+  "scripts": {
+    "prebuild": "node -r fs -e 'fs.rmSync(\"dist\",{recursive:true,force:true})'",
+    "build": "webpack build"
+  },
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "esprima": "4.0.1",
+    "libphonenumber-js": "1.11.16",
+    "stream-browserify": "3.0.0",
+    "through": "2.3.8"
+  },
+  "devDependencies": {
+    "@cyclonedx/webpack-plugin": "file:../../..",
+    "webpack": "^5",
+    "webpack-cli": "^5"
+  },
+  "engines": {
+    "node": ">=14",
+    "npm": ">=8"
+  }
+}
