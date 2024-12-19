@@ -8,11 +8,15 @@ All notable changes to this project will be documented in this file.
 
 * BREAKING changes
   * Option `specVersion` defaults to `"1.6"`, was `"1.4"` ([#1329] via [#1333])
-* Fixed
-  * Properly detect license evidences like `LICEN[CS]E.{Apache,BSD,GPL,MIT}` ([#1337] via [#1339])
 
 [#1329]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1329
 [#1333]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1333
+
+## 3.15.1 - 2024-12-03
+
+* Fixed
+  * Properly detect license evidences like `LICEN[CS]E.{Apache,BSD,GPL,MIT}` ([#1337] via [#1339])
+
 [#1337]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1337
 [#1339]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1339
 
