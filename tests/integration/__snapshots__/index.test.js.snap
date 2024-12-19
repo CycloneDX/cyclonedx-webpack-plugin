@@ -1307,7 +1307,7 @@ exports[`integration feature: component evidence generated xml file: dist/.bom/b
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.0.0-beta.2</version>
+          <version>7.0.0</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -3226,7 +3226,7 @@ exports[`integration functional: webpack5 with angular13 generated xml file: dis
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.0.0-beta.2</version>
+          <version>7.0.0</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -4507,7 +4507,7 @@ exports[`integration functional: webpack5 with angular17 generated xml file: dis
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.0.0-beta.2</version>
+          <version>7.0.0</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -5586,7 +5586,7 @@ exports[`integration functional: webpack5 with react18 generated xml file: dist/
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.0.0-beta.2</version>
+          <version>7.0.0</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -6185,7 +6185,7 @@ exports[`integration functional: webpack5 with vue2 generated xml file: dist/.bo
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.0.0-beta.2</version>
+          <version>7.0.0</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -6644,7 +6644,7 @@ exports[`integration functional: webpack5 with vue2 in yarn setup generated xml 
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.0.0-beta.2</version>
+          <version>7.0.0</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -7101,7 +7101,7 @@ exports[`integration functional: webpack5 with vue2-cli-service generated xml fi
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.0.0-beta.2</version>
+          <version>7.0.0</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -7271,7 +7271,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "application",
       "name": "regression-issue1337",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue1337",
+      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git#tests/integration/regression-issue1337",
       "author": "Jan Kowalleck",
       "description": "example setup for issue#1337",
       "licenses": [
@@ -7281,7 +7281,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue1337",
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git#tests/integration/regression-issue1337",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -7307,7 +7307,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "base64-js",
       "version": "1.5.1",
-      "bom-ref": "pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git",
+      "bom-ref": "pkg:npm/base64-js@1.5.1?vcs_url=git%3A%2F%2Fgithub.com%2Fbeatgammit%2Fbase64-js.git",
       "author": "T. Jameson Little",
       "description": "Base64 encoding/decoding in pure JS",
       "licenses": [
@@ -7317,7 +7317,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git",
+      "purl": "pkg:npm/base64-js@1.5.1?vcs_url=git%3A%2F%2Fgithub.com%2Fbeatgammit%2Fbase64-js.git",
       "externalReferences": [
         {
           "url": "https://github.com/beatgammit/base64-js/issues",
@@ -7354,7 +7354,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "buffer",
       "version": "6.0.3",
-      "bom-ref": "pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git",
+      "bom-ref": "pkg:npm/buffer@6.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fbuffer.git",
       "author": "Feross Aboukhadijeh",
       "description": "Node.js Buffer API, for the browser",
       "licenses": [
@@ -7364,7 +7364,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git",
+      "purl": "pkg:npm/buffer@6.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fbuffer.git",
       "externalReferences": [
         {
           "url": "https://github.com/feross/buffer/issues",
@@ -7401,7 +7401,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "esprima",
       "version": "4.0.1",
-      "bom-ref": "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git",
+      "bom-ref": "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjquery%2Fesprima.git",
       "author": "Ariya Hidayat",
       "description": "ECMAScript parsing infrastructure for multipurpose analysis",
       "licenses": [
@@ -7411,7 +7411,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git",
+      "purl": "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjquery%2Fesprima.git",
       "externalReferences": [
         {
           "url": "https://github.com/jquery/esprima/issues",
@@ -7448,7 +7448,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "events",
       "version": "3.3.0",
-      "bom-ref": "pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git",
+      "bom-ref": "pkg:npm/events@3.3.0?vcs_url=git%3A%2F%2Fgithub.com%2FGozala%2Fevents.git",
       "author": "Irakli Gozalishvili",
       "description": "Node's event emitter for all engines.",
       "licenses": [
@@ -7458,7 +7458,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git",
+      "purl": "pkg:npm/events@3.3.0?vcs_url=git%3A%2F%2Fgithub.com%2FGozala%2Fevents.git",
       "externalReferences": [
         {
           "url": "http://github.com/Gozala/events/issues/",
@@ -7495,7 +7495,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "ieee754",
       "version": "1.2.1",
-      "bom-ref": "pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git",
+      "bom-ref": "pkg:npm/ieee754@1.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fieee754.git",
       "author": "Feross Aboukhadijeh",
       "description": "Read/write IEEE754 floating point numbers from/to a Buffer or array-like object",
       "licenses": [
@@ -7505,7 +7505,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git",
+      "purl": "pkg:npm/ieee754@1.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fieee754.git",
       "externalReferences": [
         {
           "url": "https://github.com/feross/ieee754/issues",
@@ -7542,7 +7542,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "inherits",
       "version": "2.0.4",
-      "bom-ref": "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git",
+      "bom-ref": "pkg:npm/inherits@2.0.4?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Finherits.git",
       "description": "Browser-friendly inheritance fully compatible with standard node.js inherits()",
       "licenses": [
         {
@@ -7551,7 +7551,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git",
+      "purl": "pkg:npm/inherits@2.0.4?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Finherits.git",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/inherits/issues",
@@ -7588,7 +7588,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "libphonenumber-js",
       "version": "1.11.16",
-      "bom-ref": "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git",
+      "bom-ref": "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.com%2Fcatamphetamine%2Flibphonenumber-js.git",
       "author": "catamphetamine",
       "description": "A simpler (and smaller) rewrite of Google Android's libphonenumber library in javascript",
       "licenses": [
@@ -7598,7 +7598,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git",
+      "purl": "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.com%2Fcatamphetamine%2Flibphonenumber-js.git",
       "externalReferences": [
         {
           "url": "https://gitlab.com/catamphetamine/libphonenumber-js/issues",
@@ -7645,7 +7645,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "readable-stream",
       "version": "3.6.2",
-      "bom-ref": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git",
+      "bom-ref": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Freadable-stream.git",
       "description": "Streams3, a user-land copy of the stream library from Node.js",
       "licenses": [
         {
@@ -7654,7 +7654,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git",
+      "purl": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Freadable-stream.git",
       "externalReferences": [
         {
           "url": "https://github.com/nodejs/readable-stream/issues",
@@ -7691,7 +7691,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "safe-buffer",
       "version": "5.2.1",
-      "bom-ref": "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git",
+      "bom-ref": "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fsafe-buffer.git",
       "author": "Feross Aboukhadijeh",
       "description": "Safer Node.js Buffer API",
       "licenses": [
@@ -7701,7 +7701,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git",
+      "purl": "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fsafe-buffer.git",
       "externalReferences": [
         {
           "url": "https://github.com/feross/safe-buffer/issues",
@@ -7738,7 +7738,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "stream-browserify",
       "version": "3.0.0",
-      "bom-ref": "pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A//github.com/browserify/stream-browserify.git",
+      "bom-ref": "pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fbrowserify%2Fstream-browserify.git",
       "author": "James Halliday",
       "description": "the stream module from node core for browsers",
       "licenses": [
@@ -7748,7 +7748,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A//github.com/browserify/stream-browserify.git",
+      "purl": "pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fbrowserify%2Fstream-browserify.git",
       "externalReferences": [
         {
           "url": "https://github.com/browserify/stream-browserify/issues",
@@ -7785,7 +7785,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "string_decoder",
       "version": "1.3.0",
-      "bom-ref": "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git",
+      "bom-ref": "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Fstring_decoder.git",
       "description": "The string_decoder module from Node core",
       "licenses": [
         {
@@ -7794,7 +7794,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git",
+      "purl": "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Fstring_decoder.git",
       "externalReferences": [
         {
           "url": "https://github.com/nodejs/string_decoder/issues",
@@ -7831,7 +7831,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "through",
       "version": "2.3.8",
-      "bom-ref": "pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/through.git",
+      "bom-ref": "pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fdominictarr%2Fthrough.git",
       "author": "Dominic Tarr",
       "description": "simplified stream construction",
       "licenses": [
@@ -7841,7 +7841,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/through.git",
+      "purl": "pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fdominictarr%2Fthrough.git",
       "externalReferences": [
         {
           "url": "https://github.com/dominictarr/through/issues",
@@ -7878,7 +7878,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "util-deprecate",
       "version": "1.0.2",
-      "bom-ref": "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git",
+      "bom-ref": "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Futil-deprecate.git",
       "author": "Nathan Rajlich",
       "description": "The Node.js \`util.deprecate()\` function with browser support",
       "licenses": [
@@ -7888,7 +7888,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git",
+      "purl": "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Futil-deprecate.git",
       "externalReferences": [
         {
           "url": "https://github.com/TooTallNate/util-deprecate/issues",
@@ -7924,76 +7924,76 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
   ],
   "dependencies": [
     {
-      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue1337",
+      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git#tests/integration/regression-issue1337",
       "dependsOn": [
-        "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git",
-        "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git",
-        "pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/through.git"
+        "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjquery%2Fesprima.git",
+        "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.com%2Fcatamphetamine%2Flibphonenumber-js.git",
+        "pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fdominictarr%2Fthrough.git"
       ]
     },
     {
-      "ref": "pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git"
+      "ref": "pkg:npm/base64-js@1.5.1?vcs_url=git%3A%2F%2Fgithub.com%2Fbeatgammit%2Fbase64-js.git"
     },
     {
-      "ref": "pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git",
+      "ref": "pkg:npm/buffer@6.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fbuffer.git",
       "dependsOn": [
-        "pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git",
-        "pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git"
+        "pkg:npm/base64-js@1.5.1?vcs_url=git%3A%2F%2Fgithub.com%2Fbeatgammit%2Fbase64-js.git",
+        "pkg:npm/ieee754@1.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fieee754.git"
       ]
     },
     {
-      "ref": "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git"
+      "ref": "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjquery%2Fesprima.git"
     },
     {
-      "ref": "pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git"
+      "ref": "pkg:npm/events@3.3.0?vcs_url=git%3A%2F%2Fgithub.com%2FGozala%2Fevents.git"
     },
     {
-      "ref": "pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git"
+      "ref": "pkg:npm/ieee754@1.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fieee754.git"
     },
     {
-      "ref": "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git"
+      "ref": "pkg:npm/inherits@2.0.4?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Finherits.git"
     },
     {
-      "ref": "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git"
+      "ref": "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.com%2Fcatamphetamine%2Flibphonenumber-js.git"
     },
     {
-      "ref": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git",
+      "ref": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Freadable-stream.git",
       "dependsOn": [
-        "pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git",
-        "pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git",
-        "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git",
-        "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git",
-        "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git"
+        "pkg:npm/buffer@6.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fbuffer.git",
+        "pkg:npm/events@3.3.0?vcs_url=git%3A%2F%2Fgithub.com%2FGozala%2Fevents.git",
+        "pkg:npm/inherits@2.0.4?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Finherits.git",
+        "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Fstring_decoder.git",
+        "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Futil-deprecate.git"
       ]
     },
     {
-      "ref": "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git",
+      "ref": "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fsafe-buffer.git",
       "dependsOn": [
-        "pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git"
+        "pkg:npm/buffer@6.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fbuffer.git"
       ]
     },
     {
-      "ref": "pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A//github.com/browserify/stream-browserify.git",
+      "ref": "pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fbrowserify%2Fstream-browserify.git",
       "dependsOn": [
-        "pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git",
-        "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git",
-        "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git"
+        "pkg:npm/events@3.3.0?vcs_url=git%3A%2F%2Fgithub.com%2FGozala%2Fevents.git",
+        "pkg:npm/inherits@2.0.4?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Finherits.git",
+        "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Freadable-stream.git"
       ]
     },
     {
-      "ref": "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git",
+      "ref": "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Fstring_decoder.git",
       "dependsOn": [
-        "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git"
+        "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fsafe-buffer.git"
       ]
     },
     {
-      "ref": "pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/through.git",
+      "ref": "pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fdominictarr%2Fthrough.git",
       "dependsOn": [
-        "pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A//github.com/browserify/stream-browserify.git"
+        "pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fbrowserify%2Fstream-browserify.git"
       ]
     },
     {
-      "ref": "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git"
+      "ref": "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Futil-deprecate.git"
     }
   ]
 }"
@@ -8056,7 +8056,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "application",
       "name": "regression-issue1337",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue1337",
+      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git#tests/integration/regression-issue1337",
       "author": "Jan Kowalleck",
       "description": "example setup for issue#1337",
       "licenses": [
@@ -8066,7 +8066,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue1337",
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git#tests/integration/regression-issue1337",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -8092,7 +8092,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "base64-js",
       "version": "1.5.1",
-      "bom-ref": "pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git",
+      "bom-ref": "pkg:npm/base64-js@1.5.1?vcs_url=git%3A%2F%2Fgithub.com%2Fbeatgammit%2Fbase64-js.git",
       "author": "T. Jameson Little",
       "description": "Base64 encoding/decoding in pure JS",
       "licenses": [
@@ -8102,7 +8102,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git",
+      "purl": "pkg:npm/base64-js@1.5.1?vcs_url=git%3A%2F%2Fgithub.com%2Fbeatgammit%2Fbase64-js.git",
       "externalReferences": [
         {
           "url": "https://github.com/beatgammit/base64-js/issues",
@@ -8139,7 +8139,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "buffer",
       "version": "6.0.3",
-      "bom-ref": "pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git",
+      "bom-ref": "pkg:npm/buffer@6.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fbuffer.git",
       "author": "Feross Aboukhadijeh",
       "description": "Node.js Buffer API, for the browser",
       "licenses": [
@@ -8149,7 +8149,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git",
+      "purl": "pkg:npm/buffer@6.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fbuffer.git",
       "externalReferences": [
         {
           "url": "https://github.com/feross/buffer/issues",
@@ -8186,7 +8186,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "esprima",
       "version": "4.0.1",
-      "bom-ref": "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git",
+      "bom-ref": "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjquery%2Fesprima.git",
       "author": "Ariya Hidayat",
       "description": "ECMAScript parsing infrastructure for multipurpose analysis",
       "licenses": [
@@ -8196,7 +8196,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git",
+      "purl": "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjquery%2Fesprima.git",
       "externalReferences": [
         {
           "url": "https://github.com/jquery/esprima/issues",
@@ -8233,7 +8233,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "events",
       "version": "3.3.0",
-      "bom-ref": "pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git",
+      "bom-ref": "pkg:npm/events@3.3.0?vcs_url=git%3A%2F%2Fgithub.com%2FGozala%2Fevents.git",
       "author": "Irakli Gozalishvili",
       "description": "Node's event emitter for all engines.",
       "licenses": [
@@ -8243,7 +8243,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git",
+      "purl": "pkg:npm/events@3.3.0?vcs_url=git%3A%2F%2Fgithub.com%2FGozala%2Fevents.git",
       "externalReferences": [
         {
           "url": "http://github.com/Gozala/events/issues/",
@@ -8280,7 +8280,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "ieee754",
       "version": "1.2.1",
-      "bom-ref": "pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git",
+      "bom-ref": "pkg:npm/ieee754@1.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fieee754.git",
       "author": "Feross Aboukhadijeh",
       "description": "Read/write IEEE754 floating point numbers from/to a Buffer or array-like object",
       "licenses": [
@@ -8290,7 +8290,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git",
+      "purl": "pkg:npm/ieee754@1.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fieee754.git",
       "externalReferences": [
         {
           "url": "https://github.com/feross/ieee754/issues",
@@ -8327,7 +8327,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "inherits",
       "version": "2.0.4",
-      "bom-ref": "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git",
+      "bom-ref": "pkg:npm/inherits@2.0.4?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Finherits.git",
       "description": "Browser-friendly inheritance fully compatible with standard node.js inherits()",
       "licenses": [
         {
@@ -8336,7 +8336,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git",
+      "purl": "pkg:npm/inherits@2.0.4?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Finherits.git",
       "externalReferences": [
         {
           "url": "https://github.com/isaacs/inherits/issues",
@@ -8373,7 +8373,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "libphonenumber-js",
       "version": "1.11.16",
-      "bom-ref": "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git",
+      "bom-ref": "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.com%2Fcatamphetamine%2Flibphonenumber-js.git",
       "author": "catamphetamine",
       "description": "A simpler (and smaller) rewrite of Google Android's libphonenumber library in javascript",
       "licenses": [
@@ -8383,7 +8383,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git",
+      "purl": "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.com%2Fcatamphetamine%2Flibphonenumber-js.git",
       "externalReferences": [
         {
           "url": "https://gitlab.com/catamphetamine/libphonenumber-js/issues",
@@ -8430,7 +8430,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "readable-stream",
       "version": "3.6.2",
-      "bom-ref": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git",
+      "bom-ref": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Freadable-stream.git",
       "description": "Streams3, a user-land copy of the stream library from Node.js",
       "licenses": [
         {
@@ -8439,7 +8439,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git",
+      "purl": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Freadable-stream.git",
       "externalReferences": [
         {
           "url": "https://github.com/nodejs/readable-stream/issues",
@@ -8476,7 +8476,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "safe-buffer",
       "version": "5.2.1",
-      "bom-ref": "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git",
+      "bom-ref": "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fsafe-buffer.git",
       "author": "Feross Aboukhadijeh",
       "description": "Safer Node.js Buffer API",
       "licenses": [
@@ -8486,7 +8486,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git",
+      "purl": "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fsafe-buffer.git",
       "externalReferences": [
         {
           "url": "https://github.com/feross/safe-buffer/issues",
@@ -8523,7 +8523,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "stream-browserify",
       "version": "3.0.0",
-      "bom-ref": "pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A//github.com/browserify/stream-browserify.git",
+      "bom-ref": "pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fbrowserify%2Fstream-browserify.git",
       "author": "James Halliday",
       "description": "the stream module from node core for browsers",
       "licenses": [
@@ -8533,7 +8533,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A//github.com/browserify/stream-browserify.git",
+      "purl": "pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fbrowserify%2Fstream-browserify.git",
       "externalReferences": [
         {
           "url": "https://github.com/browserify/stream-browserify/issues",
@@ -8570,7 +8570,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "string_decoder",
       "version": "1.3.0",
-      "bom-ref": "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git",
+      "bom-ref": "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Fstring_decoder.git",
       "description": "The string_decoder module from Node core",
       "licenses": [
         {
@@ -8579,7 +8579,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git",
+      "purl": "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Fstring_decoder.git",
       "externalReferences": [
         {
           "url": "https://github.com/nodejs/string_decoder/issues",
@@ -8616,7 +8616,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "through",
       "version": "2.3.8",
-      "bom-ref": "pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/through.git",
+      "bom-ref": "pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fdominictarr%2Fthrough.git",
       "author": "Dominic Tarr",
       "description": "simplified stream construction",
       "licenses": [
@@ -8626,7 +8626,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/through.git",
+      "purl": "pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fdominictarr%2Fthrough.git",
       "externalReferences": [
         {
           "url": "https://github.com/dominictarr/through/issues",
@@ -8663,7 +8663,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "library",
       "name": "util-deprecate",
       "version": "1.0.2",
-      "bom-ref": "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git",
+      "bom-ref": "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Futil-deprecate.git",
       "author": "Nathan Rajlich",
       "description": "The Node.js \`util.deprecate()\` function with browser support",
       "licenses": [
@@ -8673,7 +8673,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
-      "purl": "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git",
+      "purl": "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Futil-deprecate.git",
       "externalReferences": [
         {
           "url": "https://github.com/TooTallNate/util-deprecate/issues",
@@ -8709,76 +8709,76 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
   ],
   "dependencies": [
     {
-      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue1337",
+      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git#tests/integration/regression-issue1337",
       "dependsOn": [
-        "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git",
-        "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git",
-        "pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/through.git"
+        "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjquery%2Fesprima.git",
+        "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.com%2Fcatamphetamine%2Flibphonenumber-js.git",
+        "pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fdominictarr%2Fthrough.git"
       ]
     },
     {
-      "ref": "pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git"
+      "ref": "pkg:npm/base64-js@1.5.1?vcs_url=git%3A%2F%2Fgithub.com%2Fbeatgammit%2Fbase64-js.git"
     },
     {
-      "ref": "pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git",
+      "ref": "pkg:npm/buffer@6.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fbuffer.git",
       "dependsOn": [
-        "pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git",
-        "pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git"
+        "pkg:npm/base64-js@1.5.1?vcs_url=git%3A%2F%2Fgithub.com%2Fbeatgammit%2Fbase64-js.git",
+        "pkg:npm/ieee754@1.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fieee754.git"
       ]
     },
     {
-      "ref": "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git"
+      "ref": "pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjquery%2Fesprima.git"
     },
     {
-      "ref": "pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git"
+      "ref": "pkg:npm/events@3.3.0?vcs_url=git%3A%2F%2Fgithub.com%2FGozala%2Fevents.git"
     },
     {
-      "ref": "pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git"
+      "ref": "pkg:npm/ieee754@1.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fieee754.git"
     },
     {
-      "ref": "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git"
+      "ref": "pkg:npm/inherits@2.0.4?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Finherits.git"
     },
     {
-      "ref": "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git"
+      "ref": "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.com%2Fcatamphetamine%2Flibphonenumber-js.git"
     },
     {
-      "ref": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git",
+      "ref": "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Freadable-stream.git",
       "dependsOn": [
-        "pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git",
-        "pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git",
-        "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git",
-        "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git",
-        "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git"
+        "pkg:npm/buffer@6.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fbuffer.git",
+        "pkg:npm/events@3.3.0?vcs_url=git%3A%2F%2Fgithub.com%2FGozala%2Fevents.git",
+        "pkg:npm/inherits@2.0.4?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Finherits.git",
+        "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Fstring_decoder.git",
+        "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Futil-deprecate.git"
       ]
     },
     {
-      "ref": "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git",
+      "ref": "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fsafe-buffer.git",
       "dependsOn": [
-        "pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git"
+        "pkg:npm/buffer@6.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fbuffer.git"
       ]
     },
     {
-      "ref": "pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A//github.com/browserify/stream-browserify.git",
+      "ref": "pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fbrowserify%2Fstream-browserify.git",
       "dependsOn": [
-        "pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git",
-        "pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git",
-        "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git"
+        "pkg:npm/events@3.3.0?vcs_url=git%3A%2F%2Fgithub.com%2FGozala%2Fevents.git",
+        "pkg:npm/inherits@2.0.4?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Finherits.git",
+        "pkg:npm/readable-stream@3.6.2?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Freadable-stream.git"
       ]
     },
     {
-      "ref": "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git",
+      "ref": "pkg:npm/string_decoder@1.3.0?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Fstring_decoder.git",
       "dependsOn": [
-        "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git"
+        "pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fsafe-buffer.git"
       ]
     },
     {
-      "ref": "pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/through.git",
+      "ref": "pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fdominictarr%2Fthrough.git",
       "dependsOn": [
-        "pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A//github.com/browserify/stream-browserify.git"
+        "pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fbrowserify%2Fstream-browserify.git"
       ]
     },
     {
-      "ref": "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git"
+      "ref": "pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Futil-deprecate.git"
     }
   ]
 }"
@@ -8828,7 +8828,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
         </externalReferences>
       </tool>
     </tools>
-    <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue1337">
+    <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git#tests/integration/regression-issue1337">
       <author>Jan Kowalleck</author>
       <group>@cyclonedx-webpack-plugin-tests</group>
       <name>regression-issue1337</name>
@@ -8838,7 +8838,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           <id>Apache-2.0</id>
         </license>
       </licenses>
-      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue1337</purl>
+      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git#tests/integration/regression-issue1337</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
@@ -8857,7 +8857,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
     </component>
   </metadata>
   <components>
-    <component type="library" bom-ref="pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git">
+    <component type="library" bom-ref="pkg:npm/base64-js@1.5.1?vcs_url=git%3A%2F%2Fgithub.com%2Fbeatgammit%2Fbase64-js.git">
       <author>T. Jameson Little</author>
       <name>base64-js</name>
       <version>1.5.1</version>
@@ -8867,7 +8867,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git</purl>
+      <purl>pkg:npm/base64-js@1.5.1?vcs_url=git%3A%2F%2Fgithub.com%2Fbeatgammit%2Fbase64-js.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/beatgammit/base64-js/issues</url>
@@ -8891,7 +8891,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git">
+    <component type="library" bom-ref="pkg:npm/buffer@6.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fbuffer.git">
       <author>Feross Aboukhadijeh</author>
       <name>buffer</name>
       <version>6.0.3</version>
@@ -8901,7 +8901,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git</purl>
+      <purl>pkg:npm/buffer@6.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fbuffer.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/feross/buffer/issues</url>
@@ -8925,7 +8925,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git">
+    <component type="library" bom-ref="pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjquery%2Fesprima.git">
       <author>Ariya Hidayat</author>
       <name>esprima</name>
       <version>4.0.1</version>
@@ -8935,7 +8935,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           <id>BSD-2-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git</purl>
+      <purl>pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjquery%2Fesprima.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/jquery/esprima/issues</url>
@@ -8959,7 +8959,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git">
+    <component type="library" bom-ref="pkg:npm/events@3.3.0?vcs_url=git%3A%2F%2Fgithub.com%2FGozala%2Fevents.git">
       <author>Irakli Gozalishvili</author>
       <name>events</name>
       <version>3.3.0</version>
@@ -8969,7 +8969,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git</purl>
+      <purl>pkg:npm/events@3.3.0?vcs_url=git%3A%2F%2Fgithub.com%2FGozala%2Fevents.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>http://github.com/Gozala/events/issues/</url>
@@ -8993,7 +8993,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git">
+    <component type="library" bom-ref="pkg:npm/ieee754@1.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fieee754.git">
       <author>Feross Aboukhadijeh</author>
       <name>ieee754</name>
       <version>1.2.1</version>
@@ -9003,7 +9003,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           <id>BSD-3-Clause</id>
         </license>
       </licenses>
-      <purl>pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git</purl>
+      <purl>pkg:npm/ieee754@1.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fieee754.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/feross/ieee754/issues</url>
@@ -9027,7 +9027,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git">
+    <component type="library" bom-ref="pkg:npm/inherits@2.0.4?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Finherits.git">
       <name>inherits</name>
       <version>2.0.4</version>
       <description>Browser-friendly inheritance fully compatible with standard node.js inherits()</description>
@@ -9036,7 +9036,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           <id>ISC</id>
         </license>
       </licenses>
-      <purl>pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git</purl>
+      <purl>pkg:npm/inherits@2.0.4?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Finherits.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/isaacs/inherits/issues</url>
@@ -9060,7 +9060,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git">
+    <component type="library" bom-ref="pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.com%2Fcatamphetamine%2Flibphonenumber-js.git">
       <author>catamphetamine</author>
       <name>libphonenumber-js</name>
       <version>1.11.16</version>
@@ -9070,7 +9070,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git</purl>
+      <purl>pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.com%2Fcatamphetamine%2Flibphonenumber-js.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://gitlab.com/catamphetamine/libphonenumber-js/issues</url>
@@ -9098,7 +9098,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git">
+    <component type="library" bom-ref="pkg:npm/readable-stream@3.6.2?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Freadable-stream.git">
       <name>readable-stream</name>
       <version>3.6.2</version>
       <description>Streams3, a user-land copy of the stream library from Node.js</description>
@@ -9107,7 +9107,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git</purl>
+      <purl>pkg:npm/readable-stream@3.6.2?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Freadable-stream.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/nodejs/readable-stream/issues</url>
@@ -9131,7 +9131,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git">
+    <component type="library" bom-ref="pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fsafe-buffer.git">
       <author>Feross Aboukhadijeh</author>
       <name>safe-buffer</name>
       <version>5.2.1</version>
@@ -9141,7 +9141,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git</purl>
+      <purl>pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fsafe-buffer.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/feross/safe-buffer/issues</url>
@@ -9165,7 +9165,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A//github.com/browserify/stream-browserify.git">
+    <component type="library" bom-ref="pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fbrowserify%2Fstream-browserify.git">
       <author>James Halliday</author>
       <name>stream-browserify</name>
       <version>3.0.0</version>
@@ -9175,7 +9175,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A//github.com/browserify/stream-browserify.git</purl>
+      <purl>pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fbrowserify%2Fstream-browserify.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/browserify/stream-browserify/issues</url>
@@ -9199,7 +9199,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git">
+    <component type="library" bom-ref="pkg:npm/string_decoder@1.3.0?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Fstring_decoder.git">
       <name>string_decoder</name>
       <version>1.3.0</version>
       <description>The string_decoder module from Node core</description>
@@ -9208,7 +9208,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git</purl>
+      <purl>pkg:npm/string_decoder@1.3.0?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Fstring_decoder.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/nodejs/string_decoder/issues</url>
@@ -9232,7 +9232,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/through.git">
+    <component type="library" bom-ref="pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fdominictarr%2Fthrough.git">
       <author>Dominic Tarr</author>
       <name>through</name>
       <version>2.3.8</version>
@@ -9242,7 +9242,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/through.git</purl>
+      <purl>pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fdominictarr%2Fthrough.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/dominictarr/through/issues</url>
@@ -9266,7 +9266,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
         </licenses>
       </evidence>
     </component>
-    <component type="library" bom-ref="pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git">
+    <component type="library" bom-ref="pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Futil-deprecate.git">
       <author>Nathan Rajlich</author>
       <name>util-deprecate</name>
       <version>1.0.2</version>
@@ -9276,7 +9276,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git</purl>
+      <purl>pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Futil-deprecate.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/TooTallNate/util-deprecate/issues</url>
@@ -9302,43 +9302,43 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
     </component>
   </components>
   <dependencies>
-    <dependency ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/regression-issue1337">
-      <dependency ref="pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git"/>
-      <dependency ref="pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git"/>
-      <dependency ref="pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/through.git"/>
+    <dependency ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git#tests/integration/regression-issue1337">
+      <dependency ref="pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjquery%2Fesprima.git"/>
+      <dependency ref="pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.com%2Fcatamphetamine%2Flibphonenumber-js.git"/>
+      <dependency ref="pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fdominictarr%2Fthrough.git"/>
     </dependency>
-    <dependency ref="pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git"/>
-    <dependency ref="pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git">
-      <dependency ref="pkg:npm/base64-js@1.5.1?vcs_url=git%3A//github.com/beatgammit/base64-js.git"/>
-      <dependency ref="pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git"/>
+    <dependency ref="pkg:npm/base64-js@1.5.1?vcs_url=git%3A%2F%2Fgithub.com%2Fbeatgammit%2Fbase64-js.git"/>
+    <dependency ref="pkg:npm/buffer@6.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fbuffer.git">
+      <dependency ref="pkg:npm/base64-js@1.5.1?vcs_url=git%3A%2F%2Fgithub.com%2Fbeatgammit%2Fbase64-js.git"/>
+      <dependency ref="pkg:npm/ieee754@1.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fieee754.git"/>
     </dependency>
-    <dependency ref="pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A//github.com/jquery/esprima.git"/>
-    <dependency ref="pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git"/>
-    <dependency ref="pkg:npm/ieee754@1.2.1?vcs_url=git%3A//github.com/feross/ieee754.git"/>
-    <dependency ref="pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git"/>
-    <dependency ref="pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A//gitlab.com/catamphetamine/libphonenumber-js.git"/>
-    <dependency ref="pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git">
-      <dependency ref="pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git"/>
-      <dependency ref="pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git"/>
-      <dependency ref="pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git"/>
-      <dependency ref="pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git"/>
-      <dependency ref="pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git"/>
+    <dependency ref="pkg:npm/esprima@4.0.1?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fjquery%2Fesprima.git"/>
+    <dependency ref="pkg:npm/events@3.3.0?vcs_url=git%3A%2F%2Fgithub.com%2FGozala%2Fevents.git"/>
+    <dependency ref="pkg:npm/ieee754@1.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fieee754.git"/>
+    <dependency ref="pkg:npm/inherits@2.0.4?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Finherits.git"/>
+    <dependency ref="pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.com%2Fcatamphetamine%2Flibphonenumber-js.git"/>
+    <dependency ref="pkg:npm/readable-stream@3.6.2?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Freadable-stream.git">
+      <dependency ref="pkg:npm/buffer@6.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fbuffer.git"/>
+      <dependency ref="pkg:npm/events@3.3.0?vcs_url=git%3A%2F%2Fgithub.com%2FGozala%2Fevents.git"/>
+      <dependency ref="pkg:npm/inherits@2.0.4?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Finherits.git"/>
+      <dependency ref="pkg:npm/string_decoder@1.3.0?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Fstring_decoder.git"/>
+      <dependency ref="pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Futil-deprecate.git"/>
     </dependency>
-    <dependency ref="pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git">
-      <dependency ref="pkg:npm/buffer@6.0.3?vcs_url=git%3A//github.com/feross/buffer.git"/>
+    <dependency ref="pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fsafe-buffer.git">
+      <dependency ref="pkg:npm/buffer@6.0.3?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fbuffer.git"/>
     </dependency>
-    <dependency ref="pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A//github.com/browserify/stream-browserify.git">
-      <dependency ref="pkg:npm/events@3.3.0?vcs_url=git%3A//github.com/Gozala/events.git"/>
-      <dependency ref="pkg:npm/inherits@2.0.4?vcs_url=git%3A//github.com/isaacs/inherits.git"/>
-      <dependency ref="pkg:npm/readable-stream@3.6.2?vcs_url=git%3A//github.com/nodejs/readable-stream.git"/>
+    <dependency ref="pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fbrowserify%2Fstream-browserify.git">
+      <dependency ref="pkg:npm/events@3.3.0?vcs_url=git%3A%2F%2Fgithub.com%2FGozala%2Fevents.git"/>
+      <dependency ref="pkg:npm/inherits@2.0.4?vcs_url=git%3A%2F%2Fgithub.com%2Fisaacs%2Finherits.git"/>
+      <dependency ref="pkg:npm/readable-stream@3.6.2?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Freadable-stream.git"/>
     </dependency>
-    <dependency ref="pkg:npm/string_decoder@1.3.0?vcs_url=git%3A//github.com/nodejs/string_decoder.git">
-      <dependency ref="pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A//github.com/feross/safe-buffer.git"/>
+    <dependency ref="pkg:npm/string_decoder@1.3.0?vcs_url=git%3A%2F%2Fgithub.com%2Fnodejs%2Fstring_decoder.git">
+      <dependency ref="pkg:npm/safe-buffer@5.2.1?vcs_url=git%3A%2F%2Fgithub.com%2Ffeross%2Fsafe-buffer.git"/>
     </dependency>
-    <dependency ref="pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A//github.com/dominictarr/through.git">
-      <dependency ref="pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A//github.com/browserify/stream-browserify.git"/>
+    <dependency ref="pkg:npm/through@2.3.8?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fdominictarr%2Fthrough.git">
+      <dependency ref="pkg:npm/stream-browserify@3.0.0?vcs_url=git%3A%2F%2Fgithub.com%2Fbrowserify%2Fstream-browserify.git"/>
     </dependency>
-    <dependency ref="pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A//github.com/TooTallNate/util-deprecate.git"/>
+    <dependency ref="pkg:npm/util-deprecate@1.0.2?vcs_url=git%3A%2F%2Fgithub.com%2FTooTallNate%2Futil-deprecate.git"/>
   </dependencies>
 </bom>"
 `;
