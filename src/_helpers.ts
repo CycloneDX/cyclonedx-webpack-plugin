@@ -17,6 +17,7 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
+import { execSync } from 'child_process'
 import { existsSync, readFileSync } from 'fs'
 import { dirname, extname, isAbsolute, join, parse, sep } from 'path'
 
@@ -126,7 +127,84 @@ export function getMimeForLicenseFile (filename: string): MimeType | undefined {
   const { name, ext } = parse(filename.toLowerCase())
   return LICENSE_FILENAME_BASE.has(name) && LICENSE_FILENAME_EXT.has(ext)
     ? MIME_TEXT_PLAIN
-    : MAP_TEXT_EXTENSION_MIME[ext]
+    : MAP_TEXT_EXTENSION_MIME[ext] ?? undefined
 }
 
 // endregion MIME
+
+export function detectBuildUrl (): string | undefined {
+  if (process.env.GITHUB_ACTIONS === 'true') {
+    return `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`
+  }
+  if (process.env.GITLAB_CI === 'true' && isNonNullable(process.env.CI_JOB_URL)) {
+    return process.env.CI_JOB_URL
+  }
+  if (isNonNullable(process.env.CIRCLECI)) {
+    return process.env.CIRCLE_BUILD_URL
+  }
+  if (isNonNullable(process.env.JENKINS_URL)) {
+    return process.env.BUILD_URL
+  }
+  if (isNonNullable(process.env.TF_BUILD)) {
+    return `${process.env.SYSTEM_TEAMFOUNDATIONCOLLECTIONURI}${process.env.SYSTEM_TEAMPROJECT}/_build/results?buildId=${process.env.BUILD_BUILDID}`
+  }
+  if (isNonNullable(process.env.TRAVIS)) {
+    return process.env.TRAVIS_BUILD_WEB_URL
+  }
+  if (isNonNullable(process.env.BITBUCKET_BUILD_NUMBER)) {
+    return process.env.BITBUCKET_GIT_HTTP_ORIGIN
+  }
+  if (isNonNullable(process.env.CODEBUILD_PUBLIC_BUILD_URL)) {
+    return process.env.CODEBUILD_PUBLIC_BUILD_URL
+  }
+  if (isNonNullable(process.env.DRONE_BUILD_LINK)) {
+    return process.env.DRONE_BUILD_LINK
+  }
+  return undefined
+}
+
+export function detectSourceUrl(): string | undefined {
+  try {
+    const hasGit = execSync('which git', { stdio: 'ignore' })
+    if (hasGit !== null && hasGit.length > 0) {
+      const gitUrl = execSync('git remote get-url origin 2>/dev/null', { encoding: 'utf8' }).trim()
+      if (gitUrl !== null && gitUrl !== '') {
+        if (gitUrl.startsWith('git@') && gitUrl.endsWith('.git')) {
+          return gitUrl.replace(':', '/').replace('git@', 'https://')
+        }
+        return gitUrl
+      }
+    }
+  } catch (error) {
+    // Fall through to environment checks if git commands fail
+  }
+
+  if (isNonNullable(process.env.GITHUB_REPOSITORY)) {
+    return `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}`
+  }
+  if (isNonNullable(process.env.GITLAB_CI)) {
+    return process.env.CI_REPOSITORY_URL
+  }
+  if (isNonNullable(process.env.CIRCLECI)) {
+    return process.env.CIRCLE_REPOSITORY_URL
+  }
+  if (isNonNullable(process.env.JENKINS_URL)) {
+    return process.env.GIT_URL
+  }
+  if (isNonNullable(process.env.TF_BUILD)) {
+    return process.env.BUILD_REPOSITORY_URI
+  }
+  if (isNonNullable(process.env.BITBUCKET_GIT_HTTP_ORIGIN)) {
+    return process.env.BITBUCKET_GIT_HTTP_ORIGIN
+  }
+  if (isNonNullable(process.env.BITBUCKET_GIT_SSH_ORIGIN)) {
+    return process.env.BITBUCKET_GIT_SSH_ORIGIN
+  }
+  if (isNonNullable(process.env.CODEBUILD_BUILD_ID)) {
+    return process.env.CODEBUILD_SOURCE_REPO_URL
+  }
+  if (isNonNullable(process.env.DRONE_REPO_LINK)) {
+    return process.env.DRONE_REPO_LINK
+  }
+  return undefined
+}

@@ -316,9 +316,35 @@ export class CycloneDxWebpackPlugin {
       : { name: this.rootComponentName, version: this.rootComponentVersion }
     if (thisPackageJson === undefined) { return undefined }
     normalizePackageJson(thisPackageJson, w => { logger.debug('normalizePackageJson from PkgPath', path, 'caused:', w) })
-    return builder.makeComponent(thisPackageJson)
-  }
+    // return builder.makeComponent(thisPackageJson)
+    const component = builder.makeComponent(thisPackageJson)
 
+    if (component !== undefined) {
+      const sourceUrl = (this as any).sourceUrl
+      if (sourceUrl !== undefined) {
+        component.externalReferences.add({
+          type: CDX.Enums.ExternalReferenceType.VCS,
+          url: sourceUrl,
+          hashes: new CDX.Models.HashDictionary(),
+          comment: '',
+          compare: () => 0
+        })
+      }
+
+      const buildUrl = (this as any).buildUrl
+      if (buildUrl !== undefined) {
+        component.externalReferences.add({
+          type: CDX.Enums.ExternalReferenceType.BuildSystem,
+          url: buildUrl,
+          hashes: new CDX.Models.HashDictionary(),
+          comment: '',
+          compare: () => 0
+        })
+      }
+    }
+
+    return component
+  }
   #finalizeBom (
     bom: CDX.Models.Bom,
     cdxToolBuilder: CDX.Builders.FromNodePackageJson.ToolBuilder,
