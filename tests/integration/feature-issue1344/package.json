@@ -32,10 +32,7 @@
     "prebuild": "node -r fs -e 'fs.rmSync(\"dist\",{recursive:true,force:true})'",
     "build": "webpack build"
   },
-  "dependencies": {
-    "@apollo/client": "3.7.10",
-    "react": "^18.2.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@cyclonedx/webpack-plugin": "file:../../..",
     "webpack": "^5",

@@ -319,8 +319,13 @@ export class CycloneDxWebpackPlugin {
   #addRootComponentExtRefs (component: CDX.Models.Component | undefined, logger: WebpackLogger): void {
     if (component === undefined) { return }
     if (typeof this.rootComponentBuildSystem === 'string' && this.rootComponentBuildSystem.length > 0) {
-      const buildSystemRef = new CDX.Models.ExternalReference(this.rootComponentBuildSystem, CDX.Enums.ExternalReferenceType.BuildSystem)
-      component.externalReferences.add(buildSystemRef)
+      component.externalReferences.add(
+        new CDX.Models.ExternalReference(
+          this.rootComponentBuildSystem,
+          CDX.Enums.ExternalReferenceType.BuildSystem,
+          { comment: 'as declared via cyclonedx-webpack-plugin config "rootComponentBuildSystem"' }
+        )
+      )
       logger.debug('Added build system URL:', this.rootComponentBuildSystem)
     }
   }
