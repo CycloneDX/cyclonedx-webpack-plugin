@@ -336,7 +336,7 @@ export class CycloneDxWebpackPlugin {
     if (thisPackageJson === undefined) { return undefined }
     normalizePackageJson(thisPackageJson, w => { logger.debug('normalizePackageJson from PkgPath', path, 'caused:', w) })
     const component = builder.makeComponent(thisPackageJson)
-    this.#ensureExternalRefs(component, logger)
+    this.#addRootComponentExtRefs(component, logger)
     return component
   }
 
