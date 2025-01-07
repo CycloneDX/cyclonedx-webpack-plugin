@@ -316,7 +316,7 @@ export class CycloneDxWebpackPlugin {
     )
   }
 
-  #ensureExternalRefs (component: CDX.Models.Component | undefined, logger: WebpackLogger): void {
+  #addRootComponentExtRefs (component: CDX.Models.Component | undefined, logger: WebpackLogger): void {
     if (component === undefined) { return }
     if (typeof this.rootComponentBuildSystem === 'string' && this.rootComponentBuildSystem.length > 0) {
       const buildSystemRef = new CDX.Models.ExternalReference(this.rootComponentBuildSystem, CDX.Enums.ExternalReferenceType.BuildSystem)
