@@ -253,7 +253,7 @@ export class CycloneDxWebpackPlugin {
             // metadata matches this exact component.
             // -> so the component is actually treated as the root component.
             thisLogger.debug('update bom.metadata.component - replace', bom.metadata.component, 'with', component)
-            this.#ensureExternalRefs(component, thisLogger)
+            this.#addRootComponentExtRefs(component, thisLogger)
             bom.metadata.component = component
           } else {
             thisLogger.debug('add to bom.components', component)
