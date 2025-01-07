@@ -159,7 +159,7 @@ const testSetups = [
   },
   {
     dir: 'feature-issue1344',
-    purpose: 'regression: issue#1344',
+    purpose: 'feature: root component BuildSystem',
     results: [ // paths relative to `dir`
       {
         format: 'xml',
