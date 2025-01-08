@@ -106,6 +106,12 @@ export interface CycloneDxWebpackPluginOptions {
   rootComponentVersion?: CycloneDxWebpackPlugin['rootComponentVersion']
 
   /**
+   * Set the externalReference URL for the build-system for the RootComponent.
+   * See {@link https://cyclonedx.org/docs/1.6/json/#metadata_component_externalReferences}.
+   */
+  rootComponentBuildSystem?: CycloneDxWebpackPlugin['rootComponentBuildSystem']
+
+  /**
    * Whether to collect (license) evidence and attach them to the resulting SBOM.
    *
    * @default false
@@ -135,6 +141,7 @@ export class CycloneDxWebpackPlugin {
   rootComponentType: CDX.Models.Component['type']
   rootComponentName: CDX.Models.Component['name'] | undefined
   rootComponentVersion: CDX.Models.Component['version'] | undefined
+  rootComponentBuildSystem: CDX.Models.ExternalReference['url'] | undefined
 
   collectEvidence: boolean
 
@@ -149,6 +156,7 @@ export class CycloneDxWebpackPlugin {
     rootComponentType = CDX.Enums.ComponentType.Application,
     rootComponentName = undefined,
     rootComponentVersion = undefined,
+    rootComponentBuildSystem = undefined,
     collectEvidence = false
   }: CycloneDxWebpackPluginOptions = {}) {
     this.specVersion = specVersion
@@ -163,6 +171,7 @@ export class CycloneDxWebpackPlugin {
     this.rootComponentType = rootComponentType
     this.rootComponentName = rootComponentName
     this.rootComponentVersion = rootComponentVersion
+    this.rootComponentBuildSystem = rootComponentBuildSystem
     this.collectEvidence = collectEvidence
   }
 
@@ -244,6 +253,7 @@ export class CycloneDxWebpackPlugin {
             // metadata matches this exact component.
             // -> so the component is actually treated as the root component.
             thisLogger.debug('update bom.metadata.component - replace', bom.metadata.component, 'with', component)
+            this.#addRootComponentExtRefs(component, thisLogger)
             bom.metadata.component = component
           } else {
             thisLogger.debug('add to bom.components', component)
@@ -306,6 +316,20 @@ export class CycloneDxWebpackPlugin {
     )
   }
 
+  #addRootComponentExtRefs (component: CDX.Models.Component | undefined, logger: WebpackLogger): void {
+    if (component === undefined) { return }
+    if (typeof this.rootComponentBuildSystem === 'string' && this.rootComponentBuildSystem.length > 0) {
+      component.externalReferences.add(
+        new CDX.Models.ExternalReference(
+          this.rootComponentBuildSystem,
+          CDX.Enums.ExternalReferenceType.BuildSystem,
+          { comment: 'as declared via cyclonedx-webpack-plugin config "rootComponentBuildSystem"' }
+        )
+      )
+      logger.debug('Added rootComponent BuildSystem URL:', this.rootComponentBuildSystem)
+    }
+  }
+
   #makeRootComponent (
     path: string,
     builder: CDX.Builders.FromNodePackageJson.ComponentBuilder,
@@ -316,7 +340,9 @@ export class CycloneDxWebpackPlugin {
       : { name: this.rootComponentName, version: this.rootComponentVersion }
     if (thisPackageJson === undefined) { return undefined }
     normalizePackageJson(thisPackageJson, w => { logger.debug('normalizePackageJson from PkgPath', path, 'caused:', w) })
-    return builder.makeComponent(thisPackageJson)
+    const component = builder.makeComponent(thisPackageJson)
+    this.#addRootComponentExtRefs(component, logger)
+    return component
   }
 
   #finalizeBom (

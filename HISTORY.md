@@ -6,6 +6,12 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Added
+  * Configuration option for `rootComponentBuildSystem` ([#1344] via [#1349])
+
+[#1344]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1344
+[#1349]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1349
+
 ## 3.15.1 - 2024-12-03
 
 * Fixed
