@@ -1762,6 +1762,11 @@ exports[`integration feature: root component BuildSystem generated json file: di
       "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/feature-issue1344?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/feature-issue1344",
       "externalReferences": [
         {
+          "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/actions",
+          "type": "build-system",
+          "comment": "as declared via cyclonedx-webpack-plugin config \\"rootComponentBuildSystem\\""
+        },
+        {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
           "type": "issue-tracker",
           "comment": "as detected from PackageJson property \\"bugs.url\\""
@@ -1864,6 +1869,11 @@ exports[`integration feature: root component BuildSystem generated json file: di
       "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/feature-issue1344?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/feature-issue1344",
       "externalReferences": [
         {
+          "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/actions",
+          "type": "build-system",
+          "comment": "as declared via cyclonedx-webpack-plugin config \\"rootComponentBuildSystem\\""
+        },
+        {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
           "type": "issue-tracker",
           "comment": "as detected from PackageJson property \\"bugs.url\\""
@@ -1951,6 +1961,10 @@ exports[`integration feature: root component BuildSystem generated xml file: dis
       </licenses>
       <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/feature-issue1344?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/feature-issue1344</purl>
       <externalReferences>
+        <reference type="build-system">
+          <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/actions</url>
+          <comment>as declared via cyclonedx-webpack-plugin config "rootComponentBuildSystem"</comment>
+        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
