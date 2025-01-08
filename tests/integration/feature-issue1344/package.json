@@ -1,6 +1,6 @@
 {
   "name": "@cyclonedx-webpack-plugin-tests/feature-issue1344",
-  "description": "example setup for issue#1344",
+  "description": "example setup with properly configured `rootComponentBuildSystem`",
   "private": true,
   "type": "commonjs",
   "homepage": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/feature-issue1344#readme",
