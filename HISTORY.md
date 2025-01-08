@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 3.16.0 - 2025-01-08
+
 * Added
   * Configuration option for `rootComponentBuildSystem` ([#1344] via [#1349])
 
