@@ -326,7 +326,7 @@ export class CycloneDxWebpackPlugin {
           { comment: 'as declared via cyclonedx-webpack-plugin config "rootComponentBuildSystem"' }
         )
       )
-      logger.debug('Added build system URL:', this.rootComponentBuildSystem)
+      logger.debug('Added rootComponent BuildSystem URL:', this.rootComponentBuildSystem)
     }
   }
 
