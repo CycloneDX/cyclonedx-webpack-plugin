@@ -1749,8 +1749,8 @@ exports[`integration feature: root component BuildSystem generated json file: di
       "name": "feature-issue1344",
       "group": "@cyclonedx-webpack-plugin-tests",
       "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/feature-issue1344?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/feature-issue1344",
-      "author": "Jan Kowalleck",
-      "description": "example setup for issue#1344",
+      "author": "Jeremy Long",
+      "description": "example setup with properly configured \`rootComponentBuildSystem\`",
       "licenses": [
         {
           "license": {
@@ -1761,11 +1761,6 @@ exports[`integration feature: root component BuildSystem generated json file: di
       ],
       "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/feature-issue1344?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/feature-issue1344",
       "externalReferences": [
-        {
-          "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/actions",
-          "type": "build-system",
-          "comment": "as declared via cyclonedx-webpack-plugin config \\"rootComponentBuildSystem\\""
-        },
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
           "type": "issue-tracker",
@@ -1856,8 +1851,8 @@ exports[`integration feature: root component BuildSystem generated json file: di
       "name": "feature-issue1344",
       "group": "@cyclonedx-webpack-plugin-tests",
       "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/feature-issue1344?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/feature-issue1344",
-      "author": "Jan Kowalleck",
-      "description": "example setup for issue#1344",
+      "author": "Jeremy Long",
+      "description": "example setup with properly configured \`rootComponentBuildSystem\`",
       "licenses": [
         {
           "license": {
@@ -1868,11 +1863,6 @@ exports[`integration feature: root component BuildSystem generated json file: di
       ],
       "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/feature-issue1344?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/feature-issue1344",
       "externalReferences": [
-        {
-          "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/actions",
-          "type": "build-system",
-          "comment": "as declared via cyclonedx-webpack-plugin config \\"rootComponentBuildSystem\\""
-        },
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
           "type": "issue-tracker",
@@ -1950,10 +1940,10 @@ exports[`integration feature: root component BuildSystem generated xml file: dis
       </tool>
     </tools>
     <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/feature-issue1344?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/feature-issue1344">
-      <author>Jan Kowalleck</author>
+      <author>Jeremy Long</author>
       <group>@cyclonedx-webpack-plugin-tests</group>
       <name>feature-issue1344</name>
-      <description>example setup for issue#1344</description>
+      <description>example setup with properly configured \`rootComponentBuildSystem\`</description>
       <licenses>
         <license acknowledgement="declared">
           <id>Apache-2.0</id>
@@ -1961,10 +1951,6 @@ exports[`integration feature: root component BuildSystem generated xml file: dis
       </licenses>
       <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/feature-issue1344?vcs_url=git%2Bhttps%3A//github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/feature-issue1344</purl>
       <externalReferences>
-        <reference type="build-system">
-          <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/actions</url>
-          <comment>as declared via cyclonedx-webpack-plugin config "rootComponentBuildSystem"</comment>
-        </reference>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
           <comment>as detected from PackageJson property "bugs.url"</comment>
