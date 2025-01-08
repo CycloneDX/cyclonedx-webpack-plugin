@@ -57,6 +57,7 @@ new CycloneDxWebpackPlugin(options?: object)
 | **`rootComponentName`** | optional `{string}` | `undefined` | If `rootComponentAutodetect` is disabled, then this value is assumed as the "name" of the `package.json`. |
 | **`rootComponentVersion`** | optional `{string}` | `undefined` | If `rootComponentAutodetect` is disabled, then this value is assumed as the "version" of the `package.json`. |
 | **`rootComponentBuildSystem`** | optional `{string}` | `undefined` | Set's the URL for the RootComponent's External References' build-system. |
+| **`rootComponentVCS`** | optional `{string}` | `undefined` | If `rootComponentAutodetect` is disabled or the VCS is not defined in the package.json, then this value is used as the URL for the RootComponent's External Referencees' Version Control System. |
 | **`collectEvidence`** | `{boolean}` | `false` | Whether to collect (license) evidence and attach them to the resulting SBOM. |
 
 ### Example
