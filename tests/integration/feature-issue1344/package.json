@@ -6,17 +6,13 @@
   "homepage": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/feature-issue1344#readme",
   "license": "Apache-2.0",
   "author": {
-    "name": "Jan Kowalleck",
-    "email": "jan.kowalleck@gmail.com"
+    "name": "Jeremy Long",
+    "url": "https://github.com/jeremylong"
   },
   "contributors": [
     {
-      "name": "Jan Kowalleck",
-      "email": "jan.kowalleck@gmail.com"
-    },
-    {
-      "name": "Stefan Resch",
-      "url": "https://github.com/sresch4b"
+      "name": "Jeremy Long",
+      "url": "https://github.com/jeremylong"
     }
   ],
   "repository": {
