@@ -56,6 +56,7 @@ new CycloneDxWebpackPlugin(options?: object)
 | **`rootComponentType`** | `{string}` | `"application"` | Set the RootComponent's type.<br/>See [the list of valid values](https://cyclonedx.org/docs/1.4/json/#metadata_component_type). Supported values depend on [CycloneDX-javascript-library]'s enum `ComponentType`. |
 | **`rootComponentName`** | optional `{string}` | `undefined` | If `rootComponentAutodetect` is disabled, then this value is assumed as the "name" of the `package.json`. |
 | **`rootComponentVersion`** | optional `{string}` | `undefined` | If `rootComponentAutodetect` is disabled, then this value is assumed as the "version" of the `package.json`. |
+| **`rootComponentBuildSystem`** | optional `{string}` | `undefined` | Set's the URL for the RootComponent's External References' build-system. |
 | **`collectEvidence`** | `{boolean}` | `false` | Whether to collect (license) evidence and attach them to the resulting SBOM. |
 
 ### Example
