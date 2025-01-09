@@ -338,7 +338,7 @@ export class CycloneDxWebpackPlugin {
     }
     if (typeof this.rootComponentVCS === 'string' &&
       this.rootComponentVCS.length > 0 &&
-      ![...component.externalReferences].some(ref => ref.type === CDX.Enums.ExternalReferenceType.VCS)) {
+      !component.externalReferences.values().some(ref => ref.type === CDX.Enums.ExternalReferenceType.VCS)) {
       component.externalReferences.add(
         new CDX.Models.ExternalReference(
           this.rootComponentVCS,
