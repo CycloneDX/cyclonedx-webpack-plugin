@@ -46,18 +46,18 @@ new CycloneDxWebpackPlugin(options?: object)
 
 | Name | Type | Default | Description |
 |:-----|:----:|:-------:|:------------|
-| **`specVersion`** | `{string}`<br/>one of: `"1.2"`, `"1.3"`, `"1.4"`, `"1.5"`, `"1.6"` | `"1.4"` |  Which version of [CycloneDX-spec] to use.<br/> Supported values depend on the installed dependency [CycloneDX-javascript-library]. |
+| **`specVersion`** | `{string}`<br/> one of: `"1.2"`, `"1.3"`, `"1.4"`, `"1.5"`, `"1.6"` | `"1.4"` |  Which version of [CycloneDX-spec] to use.<br/> Supported values depend on the installed dependency [CycloneDX-javascript-library]. |
 | **`reproducibleResults`** | `{boolean}` | `false` | Whether to go the extra mile and make the output reproducible.<br/> Reproducibility might result in loss of time- and random-based-values. |
-| **`validateResults`** | `{boolean}` | `true` | Whether to validate the BOM result.<br/>Validation is skipped, if requirements not met. Requires [transitive optional dependencies](https://github.com/CycloneDX/cyclonedx-javascript-library#optional-dependencies). |
+| **`validateResults`** | `{boolean}` | `true` | Whether to validate the BOM result.<br/> Validation is skipped, if requirements not met. Requires [transitive optional dependencies](https://github.com/CycloneDX/cyclonedx-javascript-library#optional-dependencies). |
 | **`outputLocation`** | `{string}` | `"./cyclonedx"` | Path to write the output to. The path is relative to _webpack_'s overall output path. |
 | **`includeWellknown`** | `{boolean}` | `true` | Whether to write the Wellknowns. |
 | **`wellknownLocation`** | `{string}` | `"./.well-known"` | Path to write the Wellknowns to. The path is relative to _webpack_'s overall output path. | 
 | **`rootComponentAutodetect`** | `{boolean}` | `true` | Whether to try auto-detection of the RootComponent.<br/> Tries to find the nearest `package.json` and build a CycloneDX component from it, so it can be assigned to `bom.metadata.component`. |
-| **`rootComponentType`** | `{string}` | `"application"` | Set the RootComponent's type.<br/>See [the list of valid values](https://cyclonedx.org/docs/1.6/json/#metadata_component_type). Supported values depend on [CycloneDX-javascript-library]'s enum `ComponentType`. |
+| **`rootComponentType`** | `{string}` | `"application"` | Set the RootComponent's type.<br/> See [the list of valid values](https://cyclonedx.org/docs/1.6/json/#metadata_component_type). Supported values depend on [CycloneDX-javascript-library]'s enum `ComponentType`. |
 | **`rootComponentName`** | optional `{string}` | `undefined` | If `rootComponentAutodetect` is disabled, then this value is assumed as the "name" of the `package.json`. |
 | **`rootComponentVersion`** | optional `{string}` | `undefined` | If `rootComponentAutodetect` is disabled, then this value is assumed as the "version" of the `package.json`. |
-| **`rootComponentBuildSystem`** | optional `{string}` | `undefined` | Set's the URL for [RootComponent's External References'][docs_cdx_metadata_component_externalReferences] of type "build-system". |
 | **`rootComponentVCS`** | optional `{string}` | `undefined` | If `rootComponentAutodetect` is disabled or the Version Control System is not declared in the `package.json`, then this value is used as the URL for [RootComponent's External References'][docs_cdx_metadata_component_externalReferences] of type "vcs". |
+| **`rootComponentBuildSystem`** | optional `{string}` | `undefined` | Set the URL for [RootComponent's External References'][docs_cdx_metadata_component_externalReferences] of type "build-system".<br/> This behavior is regardless of `rootComponentAutodetect`'s status. |
 | **`collectEvidence`** | `{boolean}` | `false` | Whether to collect (license) evidence and attach them to the resulting SBOM. |
 
 ### Example
