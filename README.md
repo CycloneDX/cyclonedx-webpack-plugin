@@ -53,11 +53,11 @@ new CycloneDxWebpackPlugin(options?: object)
 | **`includeWellknown`** | `{boolean}` | `true` | Whether to write the Wellknowns. |
 | **`wellknownLocation`** | `{string}` | `"./.well-known"` | Path to write the Wellknowns to. The path is relative to _webpack_'s overall output path. | 
 | **`rootComponentAutodetect`** | `{boolean}` | `true` | Whether to try auto-detection of the RootComponent.<br/> Tries to find the nearest `package.json` and build a CycloneDX component from it, so it can be assigned to `bom.metadata.component`. |
-| **`rootComponentType`** | `{string}` | `"application"` | Set the RootComponent's type.<br/>See [the list of valid values](https://cyclonedx.org/docs/1.4/json/#metadata_component_type). Supported values depend on [CycloneDX-javascript-library]'s enum `ComponentType`. |
+| **`rootComponentType`** | `{string}` | `"application"` | Set the RootComponent's type.<br/>See [the list of valid values](https://cyclonedx.org/docs/1.6/json/#metadata_component_type). Supported values depend on [CycloneDX-javascript-library]'s enum `ComponentType`. |
 | **`rootComponentName`** | optional `{string}` | `undefined` | If `rootComponentAutodetect` is disabled, then this value is assumed as the "name" of the `package.json`. |
 | **`rootComponentVersion`** | optional `{string}` | `undefined` | If `rootComponentAutodetect` is disabled, then this value is assumed as the "version" of the `package.json`. |
-| **`rootComponentBuildSystem`** | optional `{string}` | `undefined` | Set's the URL for the RootComponent's External References' build-system. |
-| **`rootComponentVCS`** | optional `{string}` | `undefined` | If `rootComponentAutodetect` is disabled or the VCS is not defined in the package.json, then this value is used as the URL for the RootComponent's External Referencees' Version Control System. |
+| **`rootComponentBuildSystem`** | optional `{string}` | `undefined` | Set's the URL for [RootComponent's External References'][docs_cdx_metadata_component_externalReferences] of type "build-system". |
+| **`rootComponentVCS`** | optional `{string}` | `undefined` | If `rootComponentAutodetect` is disabled or the Version Control System is not declared in the `package.json`, then this value is used as the URL for [RootComponent's External References'][docs_cdx_metadata_component_externalReferences] of type "vcs". |
 | **`collectEvidence`** | `{boolean}` | `false` | Whether to collect (license) evidence and attach them to the resulting SBOM. |
 
 ### Example
@@ -168,3 +168,5 @@ See the [LICENSE][license_file] file for the full license.
 [link_slack]: https://cyclonedx.org/slack/invite
 [link_discussion]: https://groups.io/g/CycloneDX
 [link_twitter]: https://twitter.com/CycloneDX_Spec
+
+[docs_cdx_metadata_component_externalReferences]: https://cyclonedx.org/docs/1.6/json/#metadata_component_externalReferences
