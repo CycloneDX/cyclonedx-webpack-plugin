@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 <!-- unreleased changes go here -->
+* Added
+  * Configuration option for `rootComponentVCS` ([#1344] via [#1350])
+
+[#1344]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1344
+[#1350]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1350
 
 ## 3.16.0 - 2025-01-08
 
