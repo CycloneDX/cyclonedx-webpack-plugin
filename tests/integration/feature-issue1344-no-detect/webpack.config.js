@@ -17,9 +17,11 @@ module.exports = {
         specVersion: '1.6',
         reproducibleResults: true,
         validateResults: true,
+        rootComponentAutodetect: false,
+        rootComponentName: 'overridden-cycloneDx-webpack-plugin',
+        rootComponentVersion: '1.0.0',
         rootComponentBuildSystem: 'https://github.com/CycloneDX/cyclonedx-webpack-plugin/actions',
-        // This will not be used as autodetect is set to true by default
-        rootComponentVCS: 'https://example.com/will-overide-value-in-package.json'
+        rootComponentVCS: 'https://github.com/CycloneDX/cyclonedx-webpack-plugin'
       }
     )
   ]

@@ -130,3 +130,17 @@ export function getMimeForLicenseFile (filename: string): MimeType | undefined {
 }
 
 // endregion MIME
+
+// region polyfills
+
+/** Polyfill for Iterator.some() */
+export function iterableSome<T> (i: Iterable<T>, t: (v: T) => boolean): boolean {
+  for (const v of i) {
+    if (t(v)) {
+      return true
+    }
+  }
+  return false
+}
+
+// endregion polyfills

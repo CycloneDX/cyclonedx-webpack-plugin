@@ -175,6 +175,24 @@ const testSetups = [
       }
     ]
   },
+  {
+    dir: 'feature-issue1344-no-detect',
+    purpose: 'feature: root component VCS',
+    results: [ // paths relative to `dir`
+      {
+        format: 'xml',
+        file: 'dist/.bom/bom.xml'
+      },
+      {
+        format: 'json',
+        file: 'dist/.bom/bom.json'
+      },
+      {
+        format: 'json',
+        file: 'dist/.well-known/sbom'
+      }
+    ]
+  },
   // endregion functional
   // region regression
   {

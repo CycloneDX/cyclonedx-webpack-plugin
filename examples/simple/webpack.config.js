@@ -33,6 +33,7 @@ const cycloneDxWebpackPluginOptions = {
   rootComponentName: undefined,
   rootComponentVersion: undefined,
   rootComponentBuildSystem: undefined,
+  rootComponentVCS: undefined,
   collectEvidence: true
 }
 
