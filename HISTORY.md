@@ -5,6 +5,9 @@ All notable changes to this project will be documented in this file.
 ## unreleased
 
 <!-- unreleased changes go here -->
+
+## 3.17.0 - 2025-01-10
+
 * Added
   * Configuration option for `rootComponentVCS` ([#1344] via [#1350])
 
