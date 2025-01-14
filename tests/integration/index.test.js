@@ -354,23 +354,41 @@ function makeReproducible (format, data) {
 function makeJsonReproducible (json) {
   return json
     .replace(
-      // replace metadata.tools.version
+      // replace self metadata.tools[].version
       '        "vendor": "@cyclonedx",\n' +
       '        "name": "webpack-plugin",\n' +
-      `        "version": ${JSON.stringify(thisVersion)},\n`,
+      `        "version": ${JSON.stringify(thisVersion)}`,
       '        "vendor": "@cyclonedx",\n' +
       '        "name": "webpack-plugin",\n' +
-      '        "version": "thisVersion-testing",\n'
+      '        "version": "thisVersion-testing"'
     ).replace(
-      // replace metadata.tools.version
+      // replace self metadata.tools.components[].version
+      '          "name": "webpack-plugin",\n' +
+      '          "group": "@cyclonedx",\n' +
+      `          "version": ${JSON.stringify(thisVersion)}`,
+      '          "name": "webpack-plugin",\n' +
+      '          "group": "@cyclonedx",\n' +
+      '          "version": "thisVersion-testing"'
+    ).replace(
+      // replace library metadata.tools[].version
       new RegExp(
         '        "vendor": "@cyclonedx",\n' +
         '        "name": "cyclonedx-library",\n' +
-        '        "version": ".+?",\n'
+        '        "version": ".+?"'
       ),
       '        "vendor": "@cyclonedx",\n' +
       '        "name": "cyclonedx-library",\n' +
-      '        "version": "libVersion-testing",\n'
+      '        "version": "libVersion-testing"'
+    ).replace(
+      // replace library metadata.tools.components[].version
+      new RegExp(
+        '          "name": "cyclonedx-library",\n' +
+        '          "group": "@cyclonedx",\n' +
+        '          "version": ".+?"'
+      ),
+      '          "name": "cyclonedx-library",\n' +
+      '          "group": "@cyclonedx",\n' +
+      '          "version": "libVersion-testing"'
     )
 }
 
@@ -383,7 +401,7 @@ function makeJsonReproducible (json) {
 function makeXmlReproducible (xml) {
   return xml
     .replace(
-      // replace metadata.tools.version
+      // replace metadata.tools[].version
       '        <vendor>@cyclonedx</vendor>\n' +
       '        <name>webpack-plugin</name>\n' +
       `        <version>${thisVersion}</version>`,
@@ -391,7 +409,15 @@ function makeXmlReproducible (xml) {
       '        <name>webpack-plugin</name>\n' +
       '        <version>thisVersion-testing</version>'
     ).replace(
-      // replace metadata.tools.version
+      // replace metadata.tools.components[].version
+      '          <group>@cyclonedx</group>\n' +
+      '          <name>webpack-plugin</name>\n' +
+      `          <version>${thisVersion}</version>`,
+      '          <group>@cyclonedx</group>\n' +
+      '          <name>webpack-plugin</name>\n' +
+      '          <version>thisVersion-testing</version>'
+    ).replace(
+      // replace metadata.tools[].version
       new RegExp(
         '        <vendor>@cyclonedx</vendor>\n' +
         '        <name>cyclonedx-library</name>\n' +
@@ -400,5 +426,13 @@ function makeXmlReproducible (xml) {
       '        <vendor>@cyclonedx</vendor>\n' +
       '        <name>cyclonedx-library</name>\n' +
       '        <version>libVersion-testing</version>'
+    ).replace(
+      // replace metadata.tools.components[].version
+      '          <group>@cyclonedx</group>\n' +
+      '          <name>cyclonedx-library</name>\n' +
+      '          <version>.+?</version>',
+      '          <group>@cyclonedx</group>\n' +
+      '          <name>cyclonedx-library</name>\n' +
+      '          <version>libVersion-testing</version>'
     )
 }
