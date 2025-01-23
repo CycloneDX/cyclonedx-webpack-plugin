@@ -7346,52 +7346,74 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
         "phase": "build"
       }
     ],
-    "tools": [
-      {
-        "vendor": "@cyclonedx",
-        "name": "cyclonedx-library",
-        "version": "libVersion-testing",
-        "externalReferences": [
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
-            "type": "issue-tracker",
-            "comment": "as detected from PackageJson property \\"bugs.url\\""
-          },
-          {
-            "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
-            "type": "vcs",
-            "comment": "as detected from PackageJson property \\"repository.url\\""
-          },
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
-            "type": "website",
-            "comment": "as detected from PackageJson property \\"homepage\\""
-          }
-        ]
-      },
-      {
-        "vendor": "@cyclonedx",
-        "name": "webpack-plugin",
-        "version": "thisVersion-testing",
-        "externalReferences": [
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
-            "type": "issue-tracker",
-            "comment": "as detected from PackageJson property \\"bugs.url\\""
-          },
-          {
-            "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
-            "type": "vcs",
-            "comment": "as detected from PackageJson property \\"repository.url\\""
-          },
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme",
-            "type": "website",
-            "comment": "as detected from PackageJson property \\"homepage\\""
-          }
-        ]
-      }
-    ],
+    "tools": {
+      "components": [
+        {
+          "type": "library",
+          "name": "cyclonedx-library",
+          "group": "@cyclonedx",
+          "version": "libVersion-testing",
+          "author": "Jan Kowalleck",
+          "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \\"bugs.url\\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \\"repository.url\\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \\"homepage\\""
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "webpack-plugin",
+          "group": "@cyclonedx",
+          "version": "thisVersion-testing",
+          "author": "Jan Kowalleck",
+          "description": "Creates CycloneDX Software Bill of Materials (SBoM) from webpack projects",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \\"bugs.url\\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \\"repository.url\\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \\"homepage\\""
+            }
+          ]
+        }
+      ]
+    },
     "component": {
       "type": "application",
       "name": "regression-issue1337",
@@ -8150,52 +8172,74 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
         "phase": "build"
       }
     ],
-    "tools": [
-      {
-        "vendor": "@cyclonedx",
-        "name": "cyclonedx-library",
-        "version": "libVersion-testing",
-        "externalReferences": [
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
-            "type": "issue-tracker",
-            "comment": "as detected from PackageJson property \\"bugs.url\\""
-          },
-          {
-            "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
-            "type": "vcs",
-            "comment": "as detected from PackageJson property \\"repository.url\\""
-          },
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
-            "type": "website",
-            "comment": "as detected from PackageJson property \\"homepage\\""
-          }
-        ]
-      },
-      {
-        "vendor": "@cyclonedx",
-        "name": "webpack-plugin",
-        "version": "thisVersion-testing",
-        "externalReferences": [
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
-            "type": "issue-tracker",
-            "comment": "as detected from PackageJson property \\"bugs.url\\""
-          },
-          {
-            "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
-            "type": "vcs",
-            "comment": "as detected from PackageJson property \\"repository.url\\""
-          },
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme",
-            "type": "website",
-            "comment": "as detected from PackageJson property \\"homepage\\""
-          }
-        ]
-      }
-    ],
+    "tools": {
+      "components": [
+        {
+          "type": "library",
+          "name": "cyclonedx-library",
+          "group": "@cyclonedx",
+          "version": "libVersion-testing",
+          "author": "Jan Kowalleck",
+          "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \\"bugs.url\\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \\"repository.url\\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \\"homepage\\""
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "webpack-plugin",
+          "group": "@cyclonedx",
+          "version": "thisVersion-testing",
+          "author": "Jan Kowalleck",
+          "description": "Creates CycloneDX Software Bill of Materials (SBoM) from webpack projects",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \\"bugs.url\\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \\"repository.url\\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \\"homepage\\""
+            }
+          ]
+        }
+      ]
+    },
     "component": {
       "type": "application",
       "name": "regression-issue1337",
@@ -8952,44 +8996,60 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       </lifecycle>
     </lifecycles>
     <tools>
-      <tool>
-        <vendor>@cyclonedx</vendor>
-        <name>cyclonedx-library</name>
-        <version>libVersion-testing</version>
-        <externalReferences>
-          <reference type="issue-tracker">
-            <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
-            <comment>as detected from PackageJson property "bugs.url"</comment>
-          </reference>
-          <reference type="vcs">
-            <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
-            <comment>as detected from PackageJson property "repository.url"</comment>
-          </reference>
-          <reference type="website">
-            <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
-            <comment>as detected from PackageJson property "homepage"</comment>
-          </reference>
-        </externalReferences>
-      </tool>
-      <tool>
-        <vendor>@cyclonedx</vendor>
-        <name>webpack-plugin</name>
-        <version>thisVersion-testing</version>
-        <externalReferences>
-          <reference type="issue-tracker">
-            <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
-            <comment>as detected from PackageJson property "bugs.url"</comment>
-          </reference>
-          <reference type="vcs">
-            <url>git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git</url>
-            <comment>as detected from PackageJson property "repository.url"</comment>
-          </reference>
-          <reference type="website">
-            <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme</url>
-            <comment>as detected from PackageJson property "homepage"</comment>
-          </reference>
-        </externalReferences>
-      </tool>
+      <components>
+        <component type="library">
+          <author>Jan Kowalleck</author>
+          <group>@cyclonedx</group>
+          <name>cyclonedx-library</name>
+          <version>7.1.0</version>
+          <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
+          <licenses>
+            <license>
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+        <component type="library">
+          <author>Jan Kowalleck</author>
+          <group>@cyclonedx</group>
+          <name>webpack-plugin</name>
+          <version>thisVersion-testing</version>
+          <description>Creates CycloneDX Software Bill of Materials (SBoM) from webpack projects</description>
+          <licenses>
+            <license>
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+      </components>
     </tools>
     <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git#tests/integration/regression-issue1337">
       <author>Jan Kowalleck</author>
@@ -9518,52 +9578,74 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
         "phase": "build"
       }
     ],
-    "tools": [
-      {
-        "vendor": "@cyclonedx",
-        "name": "cyclonedx-library",
-        "version": "libVersion-testing",
-        "externalReferences": [
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
-            "type": "issue-tracker",
-            "comment": "as detected from PackageJson property \\"bugs.url\\""
-          },
-          {
-            "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
-            "type": "vcs",
-            "comment": "as detected from PackageJson property \\"repository.url\\""
-          },
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
-            "type": "website",
-            "comment": "as detected from PackageJson property \\"homepage\\""
-          }
-        ]
-      },
-      {
-        "vendor": "@cyclonedx",
-        "name": "webpack-plugin",
-        "version": "thisVersion-testing",
-        "externalReferences": [
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
-            "type": "issue-tracker",
-            "comment": "as detected from PackageJson property \\"bugs.url\\""
-          },
-          {
-            "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
-            "type": "vcs",
-            "comment": "as detected from PackageJson property \\"repository.url\\""
-          },
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme",
-            "type": "website",
-            "comment": "as detected from PackageJson property \\"homepage\\""
-          }
-        ]
-      }
-    ],
+    "tools": {
+      "components": [
+        {
+          "type": "library",
+          "name": "cyclonedx-library",
+          "group": "@cyclonedx",
+          "version": "libVersion-testing",
+          "author": "Jan Kowalleck",
+          "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \\"bugs.url\\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \\"repository.url\\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \\"homepage\\""
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "webpack-plugin",
+          "group": "@cyclonedx",
+          "version": "thisVersion-testing",
+          "author": "Jan Kowalleck",
+          "description": "Creates CycloneDX Software Bill of Materials (SBoM) from webpack projects",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \\"bugs.url\\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \\"repository.url\\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \\"homepage\\""
+            }
+          ]
+        }
+      ]
+    },
     "component": {
       "type": "application",
       "name": "regression-issue745",
@@ -10092,52 +10174,74 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
         "phase": "build"
       }
     ],
-    "tools": [
-      {
-        "vendor": "@cyclonedx",
-        "name": "cyclonedx-library",
-        "version": "libVersion-testing",
-        "externalReferences": [
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
-            "type": "issue-tracker",
-            "comment": "as detected from PackageJson property \\"bugs.url\\""
-          },
-          {
-            "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
-            "type": "vcs",
-            "comment": "as detected from PackageJson property \\"repository.url\\""
-          },
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
-            "type": "website",
-            "comment": "as detected from PackageJson property \\"homepage\\""
-          }
-        ]
-      },
-      {
-        "vendor": "@cyclonedx",
-        "name": "webpack-plugin",
-        "version": "thisVersion-testing",
-        "externalReferences": [
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
-            "type": "issue-tracker",
-            "comment": "as detected from PackageJson property \\"bugs.url\\""
-          },
-          {
-            "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
-            "type": "vcs",
-            "comment": "as detected from PackageJson property \\"repository.url\\""
-          },
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme",
-            "type": "website",
-            "comment": "as detected from PackageJson property \\"homepage\\""
-          }
-        ]
-      }
-    ],
+    "tools": {
+      "components": [
+        {
+          "type": "library",
+          "name": "cyclonedx-library",
+          "group": "@cyclonedx",
+          "version": "libVersion-testing",
+          "author": "Jan Kowalleck",
+          "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \\"bugs.url\\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \\"repository.url\\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \\"homepage\\""
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "webpack-plugin",
+          "group": "@cyclonedx",
+          "version": "thisVersion-testing",
+          "author": "Jan Kowalleck",
+          "description": "Creates CycloneDX Software Bill of Materials (SBoM) from webpack projects",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \\"bugs.url\\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \\"repository.url\\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \\"homepage\\""
+            }
+          ]
+        }
+      ]
+    },
     "component": {
       "type": "application",
       "name": "regression-issue745",
@@ -10664,44 +10768,60 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
       </lifecycle>
     </lifecycles>
     <tools>
-      <tool>
-        <vendor>@cyclonedx</vendor>
-        <name>cyclonedx-library</name>
-        <version>libVersion-testing</version>
-        <externalReferences>
-          <reference type="issue-tracker">
-            <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
-            <comment>as detected from PackageJson property "bugs.url"</comment>
-          </reference>
-          <reference type="vcs">
-            <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
-            <comment>as detected from PackageJson property "repository.url"</comment>
-          </reference>
-          <reference type="website">
-            <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
-            <comment>as detected from PackageJson property "homepage"</comment>
-          </reference>
-        </externalReferences>
-      </tool>
-      <tool>
-        <vendor>@cyclonedx</vendor>
-        <name>webpack-plugin</name>
-        <version>thisVersion-testing</version>
-        <externalReferences>
-          <reference type="issue-tracker">
-            <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
-            <comment>as detected from PackageJson property "bugs.url"</comment>
-          </reference>
-          <reference type="vcs">
-            <url>git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git</url>
-            <comment>as detected from PackageJson property "repository.url"</comment>
-          </reference>
-          <reference type="website">
-            <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme</url>
-            <comment>as detected from PackageJson property "homepage"</comment>
-          </reference>
-        </externalReferences>
-      </tool>
+      <components>
+        <component type="library">
+          <author>Jan Kowalleck</author>
+          <group>@cyclonedx</group>
+          <name>cyclonedx-library</name>
+          <version>7.1.0</version>
+          <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
+          <licenses>
+            <license>
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+        <component type="library">
+          <author>Jan Kowalleck</author>
+          <group>@cyclonedx</group>
+          <name>webpack-plugin</name>
+          <version>thisVersion-testing</version>
+          <description>Creates CycloneDX Software Bill of Materials (SBoM) from webpack projects</description>
+          <licenses>
+            <license>
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+      </components>
     </tools>
     <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue745?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git#tests/integration/regression-issue745">
       <author>Jan Kowalleck</author>
@@ -11096,52 +11216,74 @@ exports[`integration regression: verify enhanced package.json finder generated j
         "phase": "build"
       }
     ],
-    "tools": [
-      {
-        "vendor": "@cyclonedx",
-        "name": "cyclonedx-library",
-        "version": "libVersion-testing",
-        "externalReferences": [
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
-            "type": "issue-tracker",
-            "comment": "as detected from PackageJson property \\"bugs.url\\""
-          },
-          {
-            "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
-            "type": "vcs",
-            "comment": "as detected from PackageJson property \\"repository.url\\""
-          },
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
-            "type": "website",
-            "comment": "as detected from PackageJson property \\"homepage\\""
-          }
-        ]
-      },
-      {
-        "vendor": "@cyclonedx",
-        "name": "webpack-plugin",
-        "version": "thisVersion-testing",
-        "externalReferences": [
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
-            "type": "issue-tracker",
-            "comment": "as detected from PackageJson property \\"bugs.url\\""
-          },
-          {
-            "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
-            "type": "vcs",
-            "comment": "as detected from PackageJson property \\"repository.url\\""
-          },
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme",
-            "type": "website",
-            "comment": "as detected from PackageJson property \\"homepage\\""
-          }
-        ]
-      }
-    ],
+    "tools": {
+      "components": [
+        {
+          "type": "library",
+          "name": "cyclonedx-library",
+          "group": "@cyclonedx",
+          "version": "libVersion-testing",
+          "author": "Jan Kowalleck",
+          "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \\"bugs.url\\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \\"repository.url\\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \\"homepage\\""
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "webpack-plugin",
+          "group": "@cyclonedx",
+          "version": "thisVersion-testing",
+          "author": "Jan Kowalleck",
+          "description": "Creates CycloneDX Software Bill of Materials (SBoM) from webpack projects",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \\"bugs.url\\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \\"repository.url\\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \\"homepage\\""
+            }
+          ]
+        }
+      ]
+    },
     "component": {
       "type": "application",
       "name": "regression-issue1284",
@@ -11251,52 +11393,74 @@ exports[`integration regression: verify enhanced package.json finder generated j
         "phase": "build"
       }
     ],
-    "tools": [
-      {
-        "vendor": "@cyclonedx",
-        "name": "cyclonedx-library",
-        "version": "libVersion-testing",
-        "externalReferences": [
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
-            "type": "issue-tracker",
-            "comment": "as detected from PackageJson property \\"bugs.url\\""
-          },
-          {
-            "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
-            "type": "vcs",
-            "comment": "as detected from PackageJson property \\"repository.url\\""
-          },
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
-            "type": "website",
-            "comment": "as detected from PackageJson property \\"homepage\\""
-          }
-        ]
-      },
-      {
-        "vendor": "@cyclonedx",
-        "name": "webpack-plugin",
-        "version": "thisVersion-testing",
-        "externalReferences": [
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
-            "type": "issue-tracker",
-            "comment": "as detected from PackageJson property \\"bugs.url\\""
-          },
-          {
-            "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
-            "type": "vcs",
-            "comment": "as detected from PackageJson property \\"repository.url\\""
-          },
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme",
-            "type": "website",
-            "comment": "as detected from PackageJson property \\"homepage\\""
-          }
-        ]
-      }
-    ],
+    "tools": {
+      "components": [
+        {
+          "type": "library",
+          "name": "cyclonedx-library",
+          "group": "@cyclonedx",
+          "version": "libVersion-testing",
+          "author": "Jan Kowalleck",
+          "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \\"bugs.url\\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \\"repository.url\\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \\"homepage\\""
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "webpack-plugin",
+          "group": "@cyclonedx",
+          "version": "thisVersion-testing",
+          "author": "Jan Kowalleck",
+          "description": "Creates CycloneDX Software Bill of Materials (SBoM) from webpack projects",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \\"bugs.url\\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \\"repository.url\\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \\"homepage\\""
+            }
+          ]
+        }
+      ]
+    },
     "component": {
       "type": "application",
       "name": "regression-issue1284",
@@ -11404,44 +11568,60 @@ exports[`integration regression: verify enhanced package.json finder generated x
       </lifecycle>
     </lifecycles>
     <tools>
-      <tool>
-        <vendor>@cyclonedx</vendor>
-        <name>cyclonedx-library</name>
-        <version>libVersion-testing</version>
-        <externalReferences>
-          <reference type="issue-tracker">
-            <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
-            <comment>as detected from PackageJson property "bugs.url"</comment>
-          </reference>
-          <reference type="vcs">
-            <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
-            <comment>as detected from PackageJson property "repository.url"</comment>
-          </reference>
-          <reference type="website">
-            <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
-            <comment>as detected from PackageJson property "homepage"</comment>
-          </reference>
-        </externalReferences>
-      </tool>
-      <tool>
-        <vendor>@cyclonedx</vendor>
-        <name>webpack-plugin</name>
-        <version>thisVersion-testing</version>
-        <externalReferences>
-          <reference type="issue-tracker">
-            <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
-            <comment>as detected from PackageJson property "bugs.url"</comment>
-          </reference>
-          <reference type="vcs">
-            <url>git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git</url>
-            <comment>as detected from PackageJson property "repository.url"</comment>
-          </reference>
-          <reference type="website">
-            <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme</url>
-            <comment>as detected from PackageJson property "homepage"</comment>
-          </reference>
-        </externalReferences>
-      </tool>
+      <components>
+        <component type="library">
+          <author>Jan Kowalleck</author>
+          <group>@cyclonedx</group>
+          <name>cyclonedx-library</name>
+          <version>7.1.0</version>
+          <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
+          <licenses>
+            <license>
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+        <component type="library">
+          <author>Jan Kowalleck</author>
+          <group>@cyclonedx</group>
+          <name>webpack-plugin</name>
+          <version>thisVersion-testing</version>
+          <description>Creates CycloneDX Software Bill of Materials (SBoM) from webpack projects</description>
+          <licenses>
+            <license>
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+      </components>
     </tools>
     <component type="application" bom-ref="pkg:npm/%40cyclonedx-weboack-plugin-tests/regression-issue1284">
       <group>@cyclonedx-weboack-plugin-tests</group>
@@ -11527,52 +11707,74 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
         "phase": "build"
       }
     ],
-    "tools": [
-      {
-        "vendor": "@cyclonedx",
-        "name": "cyclonedx-library",
-        "version": "libVersion-testing",
-        "externalReferences": [
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
-            "type": "issue-tracker",
-            "comment": "as detected from PackageJson property \\"bugs.url\\""
-          },
-          {
-            "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
-            "type": "vcs",
-            "comment": "as detected from PackageJson property \\"repository.url\\""
-          },
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
-            "type": "website",
-            "comment": "as detected from PackageJson property \\"homepage\\""
-          }
-        ]
-      },
-      {
-        "vendor": "@cyclonedx",
-        "name": "webpack-plugin",
-        "version": "thisVersion-testing",
-        "externalReferences": [
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
-            "type": "issue-tracker",
-            "comment": "as detected from PackageJson property \\"bugs.url\\""
-          },
-          {
-            "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
-            "type": "vcs",
-            "comment": "as detected from PackageJson property \\"repository.url\\""
-          },
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme",
-            "type": "website",
-            "comment": "as detected from PackageJson property \\"homepage\\""
-          }
-        ]
-      }
-    ],
+    "tools": {
+      "components": [
+        {
+          "type": "library",
+          "name": "cyclonedx-library",
+          "group": "@cyclonedx",
+          "version": "libVersion-testing",
+          "author": "Jan Kowalleck",
+          "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \\"bugs.url\\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \\"repository.url\\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \\"homepage\\""
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "webpack-plugin",
+          "group": "@cyclonedx",
+          "version": "thisVersion-testing",
+          "author": "Jan Kowalleck",
+          "description": "Creates CycloneDX Software Bill of Materials (SBoM) from webpack projects",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \\"bugs.url\\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \\"repository.url\\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \\"homepage\\""
+            }
+          ]
+        }
+      ]
+    },
     "component": {
       "type": "application",
       "name": "regression-issue1284-yarn",
@@ -11682,52 +11884,74 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
         "phase": "build"
       }
     ],
-    "tools": [
-      {
-        "vendor": "@cyclonedx",
-        "name": "cyclonedx-library",
-        "version": "libVersion-testing",
-        "externalReferences": [
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
-            "type": "issue-tracker",
-            "comment": "as detected from PackageJson property \\"bugs.url\\""
-          },
-          {
-            "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
-            "type": "vcs",
-            "comment": "as detected from PackageJson property \\"repository.url\\""
-          },
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
-            "type": "website",
-            "comment": "as detected from PackageJson property \\"homepage\\""
-          }
-        ]
-      },
-      {
-        "vendor": "@cyclonedx",
-        "name": "webpack-plugin",
-        "version": "thisVersion-testing",
-        "externalReferences": [
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
-            "type": "issue-tracker",
-            "comment": "as detected from PackageJson property \\"bugs.url\\""
-          },
-          {
-            "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
-            "type": "vcs",
-            "comment": "as detected from PackageJson property \\"repository.url\\""
-          },
-          {
-            "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme",
-            "type": "website",
-            "comment": "as detected from PackageJson property \\"homepage\\""
-          }
-        ]
-      }
-    ],
+    "tools": {
+      "components": [
+        {
+          "type": "library",
+          "name": "cyclonedx-library",
+          "group": "@cyclonedx",
+          "version": "libVersion-testing",
+          "author": "Jan Kowalleck",
+          "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \\"bugs.url\\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \\"repository.url\\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \\"homepage\\""
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "webpack-plugin",
+          "group": "@cyclonedx",
+          "version": "thisVersion-testing",
+          "author": "Jan Kowalleck",
+          "description": "Creates CycloneDX Software Bill of Materials (SBoM) from webpack projects",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \\"bugs.url\\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \\"repository.url\\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \\"homepage\\""
+            }
+          ]
+        }
+      ]
+    },
     "component": {
       "type": "application",
       "name": "regression-issue1284-yarn",
@@ -11835,44 +12059,60 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
       </lifecycle>
     </lifecycles>
     <tools>
-      <tool>
-        <vendor>@cyclonedx</vendor>
-        <name>cyclonedx-library</name>
-        <version>libVersion-testing</version>
-        <externalReferences>
-          <reference type="issue-tracker">
-            <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
-            <comment>as detected from PackageJson property "bugs.url"</comment>
-          </reference>
-          <reference type="vcs">
-            <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
-            <comment>as detected from PackageJson property "repository.url"</comment>
-          </reference>
-          <reference type="website">
-            <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
-            <comment>as detected from PackageJson property "homepage"</comment>
-          </reference>
-        </externalReferences>
-      </tool>
-      <tool>
-        <vendor>@cyclonedx</vendor>
-        <name>webpack-plugin</name>
-        <version>thisVersion-testing</version>
-        <externalReferences>
-          <reference type="issue-tracker">
-            <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
-            <comment>as detected from PackageJson property "bugs.url"</comment>
-          </reference>
-          <reference type="vcs">
-            <url>git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git</url>
-            <comment>as detected from PackageJson property "repository.url"</comment>
-          </reference>
-          <reference type="website">
-            <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme</url>
-            <comment>as detected from PackageJson property "homepage"</comment>
-          </reference>
-        </externalReferences>
-      </tool>
+      <components>
+        <component type="library">
+          <author>Jan Kowalleck</author>
+          <group>@cyclonedx</group>
+          <name>cyclonedx-library</name>
+          <version>7.1.0</version>
+          <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
+          <licenses>
+            <license>
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+        <component type="library">
+          <author>Jan Kowalleck</author>
+          <group>@cyclonedx</group>
+          <name>webpack-plugin</name>
+          <version>thisVersion-testing</version>
+          <description>Creates CycloneDX Software Bill of Materials (SBoM) from webpack projects</description>
+          <licenses>
+            <license>
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+      </components>
     </tools>
     <component type="application" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1284-yarn">
       <group>@cyclonedx-webpack-plugin-tests</group>
