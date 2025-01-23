@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
-* BREAKING changes
+* BREAKING Changes
   * Emit `.metadata.tools` as components ([#1330] via [#1331])  
     This affects only CycloneDX spec-version 1.5 and later.
 * Build
