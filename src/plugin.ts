@@ -132,6 +132,15 @@ class ValidationError extends Error {
   }
 }
 
+const WEBPACK_VERSION = (function () {
+  try {
+    /* eslint-disable-next-line @typescript-eslint/no-var-requires */
+    return require('webpack').webpack.version as string
+  } catch {
+    return undefined
+  }
+})()
+
 /** @public */
 export class CycloneDxWebpackPlugin {
   specVersion: CDX.Spec.Version
@@ -385,6 +394,11 @@ export class CycloneDxWebpackPlugin {
       ? undefined
       : new Date()
 
+    bom.metadata.tools.components.add(new CDX.Models.Component(
+      CDX.Enums.ComponentType.Application,
+      'webpack',
+      { version: WEBPACK_VERSION }
+    ))
     for (const toolC of this.#makeToolCs(cdxComponentBuilder, logger.getChildLogger('ToolMaker'))) {
       bom.metadata.tools.components.add(toolC)
     }
