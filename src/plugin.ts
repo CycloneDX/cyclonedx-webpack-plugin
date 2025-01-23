@@ -21,7 +21,7 @@ import * as CDX from '@cyclonedx/cyclonedx-library'
 import { existsSync } from 'fs'
 import * as normalizePackageJson from 'normalize-package-data'
 import { join as joinPath, resolve } from 'path'
-import { Compilation, type Compiler, sources } from 'webpack'
+import { Compilation, type Compiler, sources, version as WEBPACK_VERSION } from 'webpack'
 
 import { getPackageDescription, iterableSome, loadJsonFile } from './_helpers'
 import { Extractor } from './extractor'
@@ -131,15 +131,6 @@ class ValidationError extends Error {
     this.details = details
   }
 }
-
-const WEBPACK_VERSION = (function () {
-  try {
-    /* eslint-disable-next-line @typescript-eslint/no-var-requires */
-    return require('webpack').webpack.version as string
-  } catch {
-    return undefined
-  }
-})()
 
 /** @public */
 export class CycloneDxWebpackPlugin {
