@@ -202,7 +202,6 @@ export class CycloneDxWebpackPlugin {
     const cdxExternalReferenceFactory = new CDX.Factories.FromNodePackageJson.ExternalReferenceFactory()
     const cdxLicenseFactory = new CDX.Factories.LicenseFactory()
     const cdxPurlFactory = new CDX.Factories.FromNodePackageJson.PackageUrlFactory('npm')
-    const cdxToolBuilder = new CDX.Builders.FromNodePackageJson.ToolBuilder(cdxExternalReferenceFactory)
     const cdxComponentBuilder = new CDX.Builders.FromNodePackageJson.ComponentBuilder(cdxExternalReferenceFactory, cdxLicenseFactory)
 
     const bom = new CDX.Models.Bom()
@@ -271,7 +270,7 @@ export class CycloneDxWebpackPlugin {
         thisLogger.log('generated components.')
 
         thisLogger.log('finalizing BOM...')
-        this.#finalizeBom(bom, cdxToolBuilder, cdxPurlFactory, logger.getChildLogger('BomFinalizer'))
+        this.#finalizeBom(bom, cdxComponentBuilder, cdxPurlFactory, logger.getChildLogger('BomFinalizer'))
         thisLogger.log('finalized BOM.')
       })
 
@@ -375,7 +374,7 @@ export class CycloneDxWebpackPlugin {
 
   #finalizeBom (
     bom: CDX.Models.Bom,
-    cdxToolBuilder: CDX.Builders.FromNodePackageJson.ToolBuilder,
+    cdxComponentBuilder: CDX.Builders.FromNodePackageJson.ComponentBuilder,
     cdxPurlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory,
     logger: WebpackLogger
   ): void {
@@ -386,8 +385,8 @@ export class CycloneDxWebpackPlugin {
       ? undefined
       : new Date()
 
-    for (const tool of this.#makeTools(cdxToolBuilder, logger.getChildLogger('ToolMaker'))) {
-      bom.metadata.tools.add(tool)
+    for (const toolC of this.#makeToolCs(cdxComponentBuilder, logger.getChildLogger('ToolMaker'))) {
+      bom.metadata.tools.components.add(toolC)
     }
 
     if (bom.metadata.component !== undefined) {
@@ -397,8 +396,11 @@ export class CycloneDxWebpackPlugin {
     }
   }
 
-  * #makeTools (builder: CDX.Builders.FromNodePackageJson.ToolBuilder, logger: WebpackLogger): Generator<CDX.Models.Tool> {
-    const packageJsonPaths = [resolve(module.path, '..', 'package.json')]
+  * #makeToolCs (builder: CDX.Builders.FromNodePackageJson.ComponentBuilder, logger: WebpackLogger): Generator<CDX.Models.Component> {
+    const packageJsonPaths: Array<[string, CDX.Enums.ComponentType]> = [
+      // this plugin is an optional enhancement, not a standalone application -- use as `Library`
+      [resolve(module.path, '..', 'package.json'), CDX.Enums.ComponentType.Library]
+    ]
 
     const libs = [
       '@cyclonedx/cyclonedx-library'
@@ -410,18 +412,18 @@ export class CycloneDxWebpackPlugin {
       for (const nodeModulePath of nodeModulePaths) {
         const packageJsonPath = resolve(nodeModulePath, ...lib, 'package.json')
         if (existsSync(packageJsonPath)) {
-          packageJsonPaths.push(packageJsonPath)
+          packageJsonPaths.push([packageJsonPath, CDX.Enums.ComponentType.Library])
           continue libsLoop
         }
       }
     }
     /* eslint-enable no-labels */
 
-    for (const packageJsonPath of packageJsonPaths) {
+    for (const [packageJsonPath, cType] of packageJsonPaths) {
       logger.log('try to build new Tool from PkgPath', packageJsonPath)
       const packageJson: object = loadJsonFile(packageJsonPath) ?? {}
       normalizePackageJson(packageJson, w => { logger.debug('normalizePackageJson from PkgPath', packageJsonPath, 'caused:', w) })
-      const tool = builder.makeTool(packageJson)
+      const tool = builder.makeComponent(packageJson, cType)
       if (tool !== undefined) {
         yield tool
       }
