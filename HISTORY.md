@@ -6,9 +6,14 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* BREAKING changes
+  * Emit `.metadata.tools` as components ([#1330] via [#1331])  
+    This affects only CycloneDX spec-version 1.5 and later.
 * Build
   * Use _TypeScript_ `v5.7.3` now, was `v5.6.3` (via [#1351])
 
+[#1330]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1330
+[#1331]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1331
 [#1351]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1351
 
 ## 3.17.0 - 2025-01-10
