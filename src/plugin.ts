@@ -21,7 +21,7 @@ import * as CDX from '@cyclonedx/cyclonedx-library'
 import { existsSync } from 'fs'
 import * as normalizePackageJson from 'normalize-package-data'
 import { join as joinPath, resolve } from 'path'
-import { Compilation, type Compiler, sources } from 'webpack'
+import { Compilation, type Compiler, sources, version as WEBPACK_VERSION } from 'webpack'
 
 import { getPackageDescription, iterableSome, loadJsonFile } from './_helpers'
 import { Extractor } from './extractor'
@@ -385,6 +385,11 @@ export class CycloneDxWebpackPlugin {
       ? undefined
       : new Date()
 
+    bom.metadata.tools.components.add(new CDX.Models.Component(
+      CDX.Enums.ComponentType.Application,
+      'webpack',
+      { version: WEBPACK_VERSION }
+    ))
     for (const toolC of this.#makeToolCs(cdxComponentBuilder, logger.getChildLogger('ToolMaker'))) {
       bom.metadata.tools.components.add(toolC)
     }

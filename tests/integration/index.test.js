@@ -354,6 +354,20 @@ function makeReproducible (format, data) {
 function makeJsonReproducible (json) {
   return json
     .replace(
+      // replace metadata.tools[].version
+      new RegExp(
+        '        {\n' +
+        '          "type": "application",\n' +
+        '          "name": "webpack",\n' +
+        '          "version": ".+?"\n' +
+        '        }'),
+      '        {\n' +
+      '          "type": "application",\n' +
+      '          "name": "webpack",\n' +
+      '          "version": "webpackVersion-testing"\n' +
+      '        }'
+    )
+    .replace(
       // replace self metadata.tools[].version
       '        "vendor": "@cyclonedx",\n' +
       '        "name": "webpack-plugin",\n' +
@@ -370,7 +384,7 @@ function makeJsonReproducible (json) {
       '          "group": "@cyclonedx",\n' +
       '          "version": "thisVersion-testing"'
     ).replace(
-      // replace library metadata.tools[].version
+      // replace cdx-lib metadata.tools[].version
       new RegExp(
         '        "vendor": "@cyclonedx",\n' +
         '        "name": "cyclonedx-library",\n' +
@@ -380,7 +394,7 @@ function makeJsonReproducible (json) {
       '        "name": "cyclonedx-library",\n' +
       '        "version": "libVersion-testing"'
     ).replace(
-      // replace library metadata.tools.components[].version
+      // replace cdx-lib metadata.tools.components[].version
       new RegExp(
         '          "name": "cyclonedx-library",\n' +
         '          "group": "@cyclonedx",\n' +
@@ -401,7 +415,19 @@ function makeJsonReproducible (json) {
 function makeXmlReproducible (xml) {
   return xml
     .replace(
-      // replace metadata.tools[].version
+      // replace webpack metadata.tools[].version
+      new RegExp(
+        '        <component type="application">\n' +
+        '          <name>webpack</name>\n' +
+        '          <version>.+?</version>\n' +
+        '        </component>'),
+      '        <component type="application">\n' +
+      '          <name>webpack</name>\n' +
+      '          <version>webpackVersion-testing</version>\n' +
+      '        </component>'
+    )
+    .replace(
+      // replace self metadata.tools[].version
       '        <vendor>@cyclonedx</vendor>\n' +
       '        <name>webpack-plugin</name>\n' +
       `        <version>${thisVersion}</version>`,
@@ -409,7 +435,7 @@ function makeXmlReproducible (xml) {
       '        <name>webpack-plugin</name>\n' +
       '        <version>thisVersion-testing</version>'
     ).replace(
-      // replace metadata.tools.components[].version
+      // replace self metadata.tools.components[].version
       '          <group>@cyclonedx</group>\n' +
       '          <name>webpack-plugin</name>\n' +
       `          <version>${thisVersion}</version>`,
@@ -417,7 +443,7 @@ function makeXmlReproducible (xml) {
       '          <name>webpack-plugin</name>\n' +
       '          <version>thisVersion-testing</version>'
     ).replace(
-      // replace metadata.tools[].version
+      // replace cdx-lib metadata.tools[].version
       new RegExp(
         '        <vendor>@cyclonedx</vendor>\n' +
         '        <name>cyclonedx-library</name>\n' +
@@ -427,7 +453,7 @@ function makeXmlReproducible (xml) {
       '        <name>cyclonedx-library</name>\n' +
       '        <version>libVersion-testing</version>'
     ).replace(
-      // replace metadata.tools.components[].version
+      // replace cdx-lib metadata.tools.components[].version
       '          <group>@cyclonedx</group>\n' +
       '          <name>cyclonedx-library</name>\n' +
       '          <version>.+?</version>',
