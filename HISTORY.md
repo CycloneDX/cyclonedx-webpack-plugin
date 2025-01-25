@@ -10,10 +10,14 @@ All notable changes to this project will be documented in this file.
   * Option `specVersion` defaults to `"1.6"`, was `"1.4"` ([#1329] via [#1333])
   * Emit `.metadata.tools` as components ([#1330] via [#1331])  
     This affects only CycloneDX spec-version 1.5 and later.
+  * Emitted `.purl` values might be partially url-encoded (via [#1331])  
+    This is caused by changes on underlying 3rd-party dependency `packageurl-js`.
 * Added
   * Emit "webpack" as part of `.metadata.tools` (via [#1354])
 * Build
   * Use _TypeScript_ `v5.7.3` now, was `v5.6.3` (via [#1351])
+* Dependencies
+  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@^7.0.0`, was `@^6.11.0` (via [#1331])
 
 [#1329]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1329
 [#1330]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1330
