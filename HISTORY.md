@@ -16,10 +16,10 @@ All notable changes to this project will be documented in this file.
     This is caused by changes on underlying 3rd-party dependency `packageurl-js`.
 * Added
   * Emit "webpack" as part of `.metadata.tools` (via [#1354])
-* Build
-  * Use _TypeScript_ `v5.7.3` now, was `v5.6.3` (via [#1351])
 * Dependencies
   * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@^7.0.0`, was `@^6.11.0` (via [#1331])
+* Build
+  * Use _TypeScript_ `v5.7.3` now, was `v5.6.3` (via [#1351])
 
 [#1329]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1329
 [#1330]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1330
