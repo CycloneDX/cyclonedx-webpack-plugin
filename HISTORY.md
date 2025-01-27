@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 4.0.0 - 2025-01-27
+
 * BREAKING Changes
   * Option `specVersion` defaults to `"1.6"`, was `"1.4"` ([#1329] via [#1333])
   * Emit `.metadata.tools` as components ([#1330] via [#1331])  
