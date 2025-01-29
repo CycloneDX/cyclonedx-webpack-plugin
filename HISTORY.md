@@ -6,6 +6,14 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 4.0.1 - 2025-01-29
+
+* Fixed
+  * Prevent multiple, duplicate build-system entries ([#1356] via [#1355])
+
+[#1355]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1355
+[#1356]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1356
+
 ## 4.0.0 - 2025-01-27
 
 * BREAKING Changes
