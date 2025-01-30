@@ -260,7 +260,6 @@ export class CycloneDxWebpackPlugin {
             // metadata matches this exact component.
             // -> so the component is actually treated as the root component.
             thisLogger.debug('update bom.metadata.component - replace', bom.metadata.component, 'with', component)
-            this.#addRootComponentExtRefs(component, thisLogger)
             bom.metadata.component = component
           } else {
             thisLogger.debug('add to bom.components', component)
@@ -323,8 +322,7 @@ export class CycloneDxWebpackPlugin {
     )
   }
 
-  #addRootComponentExtRefs (component: CDX.Models.Component | undefined, logger: WebpackLogger): void {
-    if (component === undefined) { return }
+  #addRootComponentExtRefs (component: CDX.Models.Component, logger: WebpackLogger): void {
     if (
       typeof this.rootComponentBuildSystem === 'string' &&
       this.rootComponentBuildSystem.length > 0 &&
@@ -371,9 +369,7 @@ export class CycloneDxWebpackPlugin {
       : { name: this.rootComponentName, version: this.rootComponentVersion }
     if (thisPackageJson === undefined) { return undefined }
     normalizePackageJson(thisPackageJson, w => { logger.debug('normalizePackageJson from PkgPath', path, 'caused:', w) })
-    const component = builder.makeComponent(thisPackageJson)
-    this.#addRootComponentExtRefs(component, logger)
-    return component
+    return builder.makeComponent(thisPackageJson)
   }
 
   #finalizeBom (
@@ -399,6 +395,7 @@ export class CycloneDxWebpackPlugin {
     }
 
     if (bom.metadata.component !== undefined) {
+      this.#addRootComponentExtRefs(bom.metadata.component, logger)
       bom.metadata.component.type = this.rootComponentType
       bom.metadata.component.purl = cdxPurlFactory.makeFromComponent(bom.metadata.component)
       bom.metadata.component.bomRef.value = bom.metadata.component.purl?.toString()
