@@ -454,9 +454,10 @@ function makeXmlReproducible (xml) {
       '        <version>libVersion-testing</version>'
     ).replace(
       // replace cdx-lib metadata.tools.components[].version
-      '          <group>@cyclonedx</group>\n' +
+      new RegExp(
+        '          <group>@cyclonedx</group>\n' +
       '          <name>cyclonedx-library</name>\n' +
-      '          <version>.+?</version>',
+      '          <version>.+?</version>'),
       '          <group>@cyclonedx</group>\n' +
       '          <name>cyclonedx-library</name>\n' +
       '          <version>libVersion-testing</version>'
