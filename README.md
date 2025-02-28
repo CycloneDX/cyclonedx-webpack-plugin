@@ -19,7 +19,7 @@ that are actually used (after [tree-shaking](https://webpack.js.org/guides/tree-
 
 ## Requirements
 
-* _Node.js_ `>= 14`
+* _Node.js_ `>= 20.18`
 * _webpack_ `^5`
 
 However, there are older versions of this plugin, that support
