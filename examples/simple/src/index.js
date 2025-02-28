@@ -17,7 +17,7 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-const { Tooltip, Toast, Popover } = require('bootstrap')
+const { Popover, Toast, Tooltip } = require('bootstrap')
 
 // no real world use, but showcase
 

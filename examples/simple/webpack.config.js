@@ -17,9 +17,11 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-const path = require('path')
+const path = require('node:path')
 
 const { CycloneDxWebpackPlugin } = require('@cyclonedx/webpack-plugin')
+
+/* eslint-disable jsdoc/valid-types */
 
 /** @type {import('@cyclonedx/webpack-plugin').CycloneDxWebpackPluginOptions} */
 const cycloneDxWebpackPluginOptions = {

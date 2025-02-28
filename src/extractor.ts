@@ -17,10 +17,11 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
+import { type Dirent,readdirSync, readFileSync } from 'node:fs'
+import { dirname, join } from 'node:path'
+
 import * as CDX from '@cyclonedx/cyclonedx-library'
-import { readdirSync, readFileSync } from 'fs'
 import normalizePackageJson from 'normalize-package-data'
-import { dirname, join } from 'path'
 import type { Compilation, Module } from 'webpack'
 
 import { getMimeForLicenseFile, getPackageDescription, isNonNullable, type PackageDescription, structuredClonePolyfill } from './_helpers'
@@ -81,7 +82,7 @@ export class Extractor {
   }
 
   /**
-   * @throws {Error} when no component could be fetched
+   * @throws {@link Error} when no component could be fetched
    */
   makeComponent (pkg: PackageDescription, collectEvidence: boolean, logger?: WebpackLogger): CDX.Models.Component {
     try {
@@ -133,7 +134,7 @@ export class Extractor {
   readonly #LICENSE_FILENAME_PATTERN = /^(?:UN)?LICEN[CS]E|.\.LICEN[CS]E$|^NOTICE$/i
 
   public * getLicenseEvidence (packageDir: string, logger?: WebpackLogger): Generator<CDX.Models.License> {
-    let pcis
+    let pcis: Dirent[] = []
     try {
       pcis = readdirSync(packageDir, { withFileTypes: true })
     } catch (e) {
