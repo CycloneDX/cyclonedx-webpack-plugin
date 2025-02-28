@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file.
 <!-- unreleased changes go here -->
 
 * BREAKING Changes
-  * Dropped support for `node<=20.18.0` ([#1362] via [#1365])
+  * Dropped support for `node<20.18.0` ([#1362] via [#1365])
 
 [#1362]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1362
 [#1365]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1365
