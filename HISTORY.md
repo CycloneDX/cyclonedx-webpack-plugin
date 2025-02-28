@@ -6,6 +6,9 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* BREAKING Changes
+  * Dropped support for `node<=20.18.0` ([#1081] via [#1209])
+
 ## 4.0.1 - 2025-01-29
 
 * Fixed
