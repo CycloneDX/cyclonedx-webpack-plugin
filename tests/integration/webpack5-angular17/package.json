@@ -20,7 +20,7 @@
     "url": "git@gitlab.example.com:demos/webpack5-angular17"
   },
   "engines": {
-    "node": ">=14",
+    "node": ">=20.18.0",
     "npm": ">=8"
   },
   "scripts": {
