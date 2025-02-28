@@ -215,7 +215,7 @@ export class CycloneDxWebpackPlugin {
       space: 2 // TODO add option to have this configurable
     }
 
-    let xmlSerializer: CDX.Serialize.XmlSerializer | undefined
+    let xmlSerializer: CDX.Serialize.XmlSerializer | undefined = undefined
     try {
       xmlSerializer = new CDX.Serialize.XmlSerializer(new CDX.Serialize.XML.Normalize.Factory(spec))
     } catch {
@@ -225,7 +225,7 @@ export class CycloneDxWebpackPlugin {
       ? new CDX.Validation.XmlValidator(spec.version)
       : undefined
 
-    let jsonSerializer: CDX.Serialize.JsonSerializer | undefined
+    let jsonSerializer: CDX.Serialize.JsonSerializer | undefined = undefined
     try {
       jsonSerializer = new CDX.Serialize.JsonSerializer(new CDX.Serialize.JSON.Normalize.Factory(spec))
     } catch {
@@ -366,7 +366,7 @@ export class CycloneDxWebpackPlugin {
     builder: CDX.Builders.FromNodePackageJson.ComponentBuilder,
     logger: WebpackLogger
   ): CDX.Models.Component | undefined {
-    const thisPackageJson: object = this.rootComponentAutodetect
+    const thisPackageJson: object | undefined = this.rootComponentAutodetect
       ? getPackageDescription(path)?.packageJson
       : { name: this.rootComponentName, version: this.rootComponentVersion }
     if (thisPackageJson === undefined) { return undefined }

@@ -91,7 +91,7 @@ export class Extractor {
       // region fix normalizations
       if (typeof pkg.packageJson.version === 'string') {
         // allow non-SemVer strings
-        _packageJson.version = pkg.packageJson.version.trim()
+        _packageJson.version = (pkg.packageJson.version as string).trim()
       }
       // endregion fix normalizations
       pkg.packageJson = _packageJson
