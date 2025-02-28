@@ -19,7 +19,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 import * as CDX from '@cyclonedx/cyclonedx-library'
 import { existsSync } from 'fs'
-import * as normalizePackageJson from 'normalize-package-data'
+import normalizePackageJson from 'normalize-package-data'
 import { join as joinPath, resolve } from 'path'
 import { Compilation, type Compiler, sources, version as WEBPACK_VERSION } from 'webpack'
 
@@ -368,7 +368,10 @@ export class CycloneDxWebpackPlugin {
       ? getPackageDescription(path)?.packageJson
       : { name: this.rootComponentName, version: this.rootComponentVersion }
     if (thisPackageJson === undefined) { return undefined }
-    normalizePackageJson(thisPackageJson, w => { logger.debug('normalizePackageJson from PkgPath', path, 'caused:', w) })
+    normalizePackageJson(
+      thisPackageJson,
+      function (w:string):void { logger.debug('normalizePackageJson from PkgPath', path, 'caused:', w) }
+    )
     return builder.makeComponent(thisPackageJson)
   }
 
@@ -428,7 +431,10 @@ export class CycloneDxWebpackPlugin {
     for (const [packageJsonPath, cType] of packageJsonPaths) {
       logger.log('try to build new Tool from PkgPath', packageJsonPath)
       const packageJson: object = loadJsonFile(packageJsonPath) ?? {}
-      normalizePackageJson(packageJson, w => { logger.debug('normalizePackageJson from PkgPath', packageJsonPath, 'caused:', w) })
+      normalizePackageJson(
+        packageJson,
+        function (w: string):void { logger.debug('normalizePackageJson from PkgPath', packageJsonPath, 'caused:', w) }
+      )
       const tool = builder.makeComponent(packageJson, cType)
       if (tool !== undefined) {
         yield tool
