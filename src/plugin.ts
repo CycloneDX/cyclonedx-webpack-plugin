@@ -370,7 +370,7 @@ export class CycloneDxWebpackPlugin {
     if (thisPackageJson === undefined) { return undefined }
     normalizePackageJson(
       thisPackageJson,
-      function (w:string):void { logger.debug('normalizePackageJson from PkgPath', path, 'caused:', w) }
+      w => { logger.debug('normalizePackageJson from PkgPath', path, 'caused:', w) }
     )
     return builder.makeComponent(thisPackageJson)
   }
@@ -433,7 +433,7 @@ export class CycloneDxWebpackPlugin {
       const packageJson: object = loadJsonFile(packageJsonPath) ?? {}
       normalizePackageJson(
         packageJson,
-        function (w: string):void { logger.debug('normalizePackageJson from PkgPath', packageJsonPath, 'caused:', w) }
+        w => { logger.debug('normalizePackageJson from PkgPath', packageJsonPath, 'caused:', w) }
       )
       const tool = builder.makeComponent(packageJson, cType)
       if (tool !== undefined) {
