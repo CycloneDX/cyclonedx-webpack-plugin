@@ -1321,7 +1321,7 @@ exports[`integration feature: component evidence generated xml file: dist/.bom/b
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.1.0</version>
+          <version>libVersion-testing</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -2047,7 +2047,7 @@ exports[`integration feature: root component BuildSystem generated xml file: dis
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.1.0</version>
+          <version>libVersion-testing</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -2458,7 +2458,7 @@ exports[`integration feature: root component VCS generated xml file: dist/.bom/b
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.1.0</version>
+          <version>libVersion-testing</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -3402,7 +3402,7 @@ exports[`integration functional: webpack5 with angular13 generated xml file: dis
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.1.0</version>
+          <version>libVersion-testing</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -4697,7 +4697,7 @@ exports[`integration functional: webpack5 with angular17 generated xml file: dis
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.1.0</version>
+          <version>libVersion-testing</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -5790,7 +5790,7 @@ exports[`integration functional: webpack5 with react18 generated xml file: dist/
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.1.0</version>
+          <version>libVersion-testing</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -6403,7 +6403,7 @@ exports[`integration functional: webpack5 with vue2 generated xml file: dist/.bo
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.1.0</version>
+          <version>libVersion-testing</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -6876,7 +6876,7 @@ exports[`integration functional: webpack5 with vue2 in yarn setup generated xml 
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.1.0</version>
+          <version>libVersion-testing</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -7347,7 +7347,7 @@ exports[`integration functional: webpack5 with vue2-cli-service generated xml fi
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.1.0</version>
+          <version>libVersion-testing</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -9141,7 +9141,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.1.0</version>
+          <version>libVersion-testing</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -10927,7 +10927,7 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.1.0</version>
+          <version>libVersion-testing</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -11741,7 +11741,7 @@ exports[`integration regression: verify enhanced package.json finder generated x
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.1.0</version>
+          <version>libVersion-testing</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>
@@ -12246,7 +12246,7 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
           <author>Jan Kowalleck</author>
           <group>@cyclonedx</group>
           <name>cyclonedx-library</name>
-          <version>7.1.0</version>
+          <version>libVersion-testing</version>
           <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
           <licenses>
             <license>

@@ -67,7 +67,7 @@
     "node": ">=20.18.0"
   },
   "dependencies": {
-    "@cyclonedx/cyclonedx-library": "^7.0.0",
+    "@cyclonedx/cyclonedx-library": "^8.0.0-rc.0",
     "normalize-package-data": "^3||^4||^5||^6",
     "xmlbuilder2": "^3.0.2"
   },
