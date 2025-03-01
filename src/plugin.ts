@@ -71,7 +71,7 @@ export interface CycloneDxWebpackPluginOptions {
    * Path to write the Wellknowns to.
    * The path is relative to webpack's overall output path.
    *
-   * @defaultValue './.well-known'
+   * @defaultValue `'./.well-known'`
    */
   wellknownLocation?: string
 
@@ -88,21 +88,21 @@ export interface CycloneDxWebpackPluginOptions {
    * Set the RootComponent's type.
    * See {@link https://cyclonedx.org/docs/1.6/json/#metadata_component_type | the list of valid values}.
    *
-   * @defaultValue 'application'
+   * @defaultValue `'application'`
    */
   rootComponentType?: CycloneDxWebpackPlugin['rootComponentType']
   /**
    * If `rootComponentAutodetect` is disabled, then
    * this value is assumed as the "name" of the `package.json`.
    *
-   * @defaultValue undefined
+   * @defaultValue `undefined`
    */
   rootComponentName?: CycloneDxWebpackPlugin['rootComponentName']
   /**
    * If `rootComponentAutodetect` is disabled, then
    * this value is assumed as the "version" of the `package.json`.
    *
-   * @defaultValue undefined
+   * @defaultValue `undefined`
    */
   rootComponentVersion?: CycloneDxWebpackPlugin['rootComponentVersion']
 
