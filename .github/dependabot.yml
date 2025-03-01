@@ -52,7 +52,7 @@ updates:
           - '@types/eslint-*'
           - '@types/*-eslint'
           - '@eslint-community/*'
-          - '@typescript-eslint/*'z
+          - '@typescript-eslint/*'
       webpack:
         patterns:
           - 'webpack'
