@@ -8,6 +8,8 @@ All notable changes to this project will be documented in this file.
 
 * BREAKING Changes
   * Dropped support for `node<20.18.0` ([#1362] via [#1365])
+* Documentation
+  * Fixed docs of default values (via [#1369]) 
 * Dependencies
   * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@^8.0.0`, was `@^7.0.0` (via [#1367])
   * Upgraded runtime-dependency `normalize-package-data@^7.0.0`, was `@^3||^4||^5||^6` (via [#1368])
@@ -16,6 +18,7 @@ All notable changes to this project will be documented in this file.
 [#1365]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1365
 [#1367]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1367
 [#1368]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1368
+[#1369]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1369
 
 ## 4.0.1 - 2025-01-29
 

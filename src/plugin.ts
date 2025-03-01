@@ -17,13 +17,14 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
+import { existsSync } from 'node:fs'
+import { join as joinPath, resolve } from 'node:path'
+
 import * as CDX from '@cyclonedx/cyclonedx-library'
-import { existsSync } from 'fs'
 import normalizePackageJson from 'normalize-package-data'
-import { join as joinPath, resolve } from 'path'
 import { Compilation, type Compiler, sources, version as WEBPACK_VERSION } from 'webpack'
 
-import { getPackageDescription, iterableSome, loadJsonFile } from './_helpers'
+import { getPackageDescription, iterableSome, loadJsonFile, type PackageDescription } from './_helpers'
 import { Extractor } from './extractor'
 
 type WebpackLogger = Compilation['logger']
@@ -33,7 +34,7 @@ export interface CycloneDxWebpackPluginOptions {
   // IMPORTANT: keep the table in the `README` in sync!
 
   /**
-   * Which version of {@link https://github.com/CycloneDX/specification CycloneDX spec} to use.
+   * Which version of {@link https://github.com/CycloneDX/specification | CycloneDX spec} to use.
    * Defaults to one that is the latest supported of this application.
    */
   specVersion?: CycloneDxWebpackPlugin['specVersion']
@@ -42,14 +43,14 @@ export interface CycloneDxWebpackPluginOptions {
    * Whether to go the extra mile and make the output reproducible.
    * Reproducibility might result in loss of time- and random-based-values.
    *
-   * @default false
+   * @defaultValue `false`
    */
   reproducibleResults?: CycloneDxWebpackPlugin['reproducibleResults']
   /**
    * Whether to validate the BOM result.
-   * Validation is skipped, if requirements not met. Requires {@link https://github.com/CycloneDX/cyclonedx-javascript-library#optional-dependencies transitive optional dependencies}.
+   * Validation is skipped, if requirements not met. Requires {@link https://github.com/CycloneDX/cyclonedx-javascript-library#optional-dependencies | transitive optional dependencies}.
    *
-   * @default true
+   * @defaultValue `true`
    */
   validateResults?: CycloneDxWebpackPlugin['validateResults']
 
@@ -57,20 +58,20 @@ export interface CycloneDxWebpackPluginOptions {
    * Path to write the output to.
    * The path is relative to webpack's overall output path.
    *
-   * @default './cyclonedx'
+   * @defaultValue './cyclonedx'
    */
   outputLocation?: string
   /**
    * Whether to write the Wellknowns.
    *
-   * @default true
+   * @defaultValue `true`
    */
   includeWellknown?: boolean
   /**
    * Path to write the Wellknowns to.
    * The path is relative to webpack's overall output path.
    *
-   * @default './.well-known'
+   * @defaultValue `'./.well-known'`
    */
   wellknownLocation?: string
 
@@ -80,28 +81,28 @@ export interface CycloneDxWebpackPluginOptions {
    * Tries to find the nearest `package.json` and build a CycloneDX component from it,
    * so it can be assigned to `bom.metadata.component`.
    *
-   * @default true
+   * @defaultValue `true`
    */
   rootComponentAutodetect?: CycloneDxWebpackPlugin['rootComponentAutodetect']
   /**
    * Set the RootComponent's type.
-   * See {@link https://cyclonedx.org/docs/1.6/json/#metadata_component_type the list of valid values}.
+   * See {@link https://cyclonedx.org/docs/1.6/json/#metadata_component_type | the list of valid values}.
    *
-   * @default 'application'
+   * @defaultValue `'application'`
    */
   rootComponentType?: CycloneDxWebpackPlugin['rootComponentType']
   /**
    * If `rootComponentAutodetect` is disabled, then
    * this value is assumed as the "name" of the `package.json`.
    *
-   * @default undefined
+   * @defaultValue `undefined`
    */
   rootComponentName?: CycloneDxWebpackPlugin['rootComponentName']
   /**
    * If `rootComponentAutodetect` is disabled, then
    * this value is assumed as the "version" of the `package.json`.
    *
-   * @default undefined
+   * @defaultValue `undefined`
    */
   rootComponentVersion?: CycloneDxWebpackPlugin['rootComponentVersion']
 
@@ -119,7 +120,7 @@ export interface CycloneDxWebpackPluginOptions {
   /**
    * Whether to collect (license) evidence and attach them to the resulting SBOM.
    *
-   * @default false
+   * @defaultValue `false`
    */
   collectEvidence?: CycloneDxWebpackPlugin['collectEvidence']
 }
@@ -128,6 +129,7 @@ class ValidationError extends Error {
   readonly details: any
   constructor (message: string, details: any) {
     super(message)
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
     this.details = details
   }
 }
@@ -151,6 +153,7 @@ export class CycloneDxWebpackPlugin {
 
   collectEvidence: boolean
 
+  /* eslint-disable-next-line complexity -- acknowledged */
   constructor ({
     specVersion = CDX.Spec.Version.v1dot6,
     reproducibleResults = false,
@@ -213,7 +216,7 @@ export class CycloneDxWebpackPlugin {
       space: 2 // TODO add option to have this configurable
     }
 
-    let xmlSerializer: CDX.Serialize.XmlSerializer | undefined
+    let xmlSerializer: CDX.Serialize.XmlSerializer | undefined = undefined
     try {
       xmlSerializer = new CDX.Serialize.XmlSerializer(new CDX.Serialize.XML.Normalize.Factory(spec))
     } catch {
@@ -223,7 +226,7 @@ export class CycloneDxWebpackPlugin {
       ? new CDX.Validation.XmlValidator(spec.version)
       : undefined
 
-    let jsonSerializer: CDX.Serialize.JsonSerializer | undefined
+    let jsonSerializer: CDX.Serialize.JsonSerializer | undefined = undefined
     try {
       jsonSerializer = new CDX.Serialize.JsonSerializer(new CDX.Serialize.JSON.Normalize.Factory(spec))
     } catch {
@@ -284,6 +287,7 @@ export class CycloneDxWebpackPlugin {
           const serialized = serializer.serialize(bom, serializeOptions)
           if (undefined !== validator) {
             try {
+              /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
               const validationErrors = await validator.validate(serialized)
               if (validationErrors !== null) {
                 thisLogger.debug('BOM result invalid. details: ', validationErrors)
@@ -299,6 +303,7 @@ export class CycloneDxWebpackPlugin {
                 thisLogger.info('skipped validate BOM:', err.message)
               } else {
                 thisLogger.error('unexpected error')
+                /* eslint-disable-next-line @typescript-eslint/only-throw-error -- forward */
                 throw err
               }
             }
@@ -364,15 +369,18 @@ export class CycloneDxWebpackPlugin {
     builder: CDX.Builders.FromNodePackageJson.ComponentBuilder,
     logger: WebpackLogger
   ): CDX.Models.Component | undefined {
-    const thisPackageJson: object = this.rootComponentAutodetect
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
+    const thisPackageJson = this.rootComponentAutodetect
       ? getPackageDescription(path)?.packageJson
       : { name: this.rootComponentName, version: this.rootComponentVersion }
     if (thisPackageJson === undefined) { return undefined }
     normalizePackageJson(
-      thisPackageJson,
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hint */
+      thisPackageJson as normalizePackageJson.Input,
       w => { logger.debug('normalizePackageJson from PkgPath', path, 'caused:', w) }
     )
-    return builder.makeComponent(thisPackageJson)
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hint */
+    return builder.makeComponent(thisPackageJson as normalizePackageJson.Package)
   }
 
   #finalizeBom (
@@ -415,7 +423,7 @@ export class CycloneDxWebpackPlugin {
       '@cyclonedx/cyclonedx-library'
     ].map(s => s.split('/', 2))
     const nodeModulePaths = require.resolve.paths('__some_none-native_package__') ?? []
-    /* eslint-disable no-labels */
+    /* eslint-disable no-labels -- technically needed */
     libsLoop:
     for (const lib of libs) {
       for (const nodeModulePath of nodeModulePaths) {
@@ -430,12 +438,17 @@ export class CycloneDxWebpackPlugin {
 
     for (const [packageJsonPath, cType] of packageJsonPaths) {
       logger.log('try to build new Tool from PkgPath', packageJsonPath)
-      const packageJson: object = loadJsonFile(packageJsonPath) ?? {}
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
+      const packageJson: PackageDescription['packageJson'] = loadJsonFile(packageJsonPath) ?? {}
       normalizePackageJson(
-        packageJson,
+        /* eslint-disable-next-line  @typescript-eslint/no-unsafe-type-assertion -- hint hint */
+        packageJson as normalizePackageJson.Input,
         w => { logger.debug('normalizePackageJson from PkgPath', packageJsonPath, 'caused:', w) }
       )
-      const tool = builder.makeComponent(packageJson, cType)
+      const tool = builder.makeComponent(
+        /* eslint-disable-next-line  @typescript-eslint/no-unsafe-type-assertion -- hint hint */
+        packageJson as normalizePackageJson.Package,
+        cType)
       if (tool !== undefined) {
         yield tool
       }
