@@ -52,7 +52,6 @@ jobs:
           if-no-files-found: error
 
   test-standard:
-    needs: [ 'build' ]
     name: test standard
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -60,12 +59,6 @@ jobs:
       - name: Checkout
         # see https://github.com/actions/checkout
         uses: actions/checkout@v4
-      - name: fetch build artifact
-        # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: dist
-          path: dist
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
         uses: actions/setup-node@v4
