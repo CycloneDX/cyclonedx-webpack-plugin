@@ -24,7 +24,13 @@ import * as CDX from '@cyclonedx/cyclonedx-library'
 import normalizePackageJson from 'normalize-package-data'
 import type { Compilation, Module } from 'webpack'
 
-import { getMimeForLicenseFile, getPackageDescription, isNonNullable, type PackageDescription, structuredClonePolyfill } from './_helpers'
+import {
+  getMimeForLicenseFile,
+  getPackageDescription,
+  isNonNullable,
+  type PackageDescription,
+  structuredClonePolyfill
+} from './_helpers'
 
 type WebpackLogger = Compilation['logger']
 
@@ -86,13 +92,17 @@ export class Extractor {
    */
   makeComponent (pkg: PackageDescription, collectEvidence: boolean, logger?: WebpackLogger): CDX.Models.Component {
     try {
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
       const _packageJson = structuredClonePolyfill(pkg.packageJson)
       /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hont */
       normalizePackageJson(_packageJson as normalizePackageJson.Input /* add debug for warnings? */)
       // region fix normalizations
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- expected */
       if (typeof pkg.packageJson.version === 'string') {
         // allow non-SemVer strings
-        /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hint */
+        /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+                                  , @typescript-eslint/no-unsafe-type-assertion
+           -- hint hint */
         _packageJson.version = (pkg.packageJson.version as string).trim()
       }
       // endregion fix normalizations

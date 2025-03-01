@@ -39,7 +39,7 @@ export interface ValidPackageJSON {
 
 export interface PackageDescription {
   path: string
-  packageJson: NonNullable<any> | ValidPackageJSON
+  packageJson: NonNullable<any>
 }
 
 
@@ -52,11 +52,13 @@ export function getPackageDescription(path: string): PackageDescription | undefi
     const pathToPackageJson = join(path, PACKAGE_MANIFEST_FILENAME)
     if (existsSync(pathToPackageJson)) {
       try {
+        /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
         const contentOfPackageJson: NonNullable<any> = loadJsonFile(pathToPackageJson) ?? {}
         // only look for valid candidate if we are in a node_modules subdirectory
         if (!isSubDirOfNodeModules || isValidPackageJSON(contentOfPackageJson)) {
             return {
               path: pathToPackageJson,
+              /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
               packageJson: contentOfPackageJson
           }
         }
@@ -87,11 +89,11 @@ function isSubDirectoryOfNodeModulesFolder(path: string): boolean {
 export function isValidPackageJSON(pkg: any): pkg is ValidPackageJSON {
   // checking for the existence of name and version properties
   // both are required for a valid package.json according to https://docs.npmjs.com/cli/v10/configuring-npm/package-json
-  return typeof pkg === 'object'
-
+  return isNonNullable(pkg)
+    /* eslint-disable @typescript-eslint/no-unsafe-member-access -- false-positive */
     && typeof pkg.name === 'string'
     && typeof pkg.version === 'string'
-
+    /* eslint-enable @typescript-eslint/no-unsafe-member-access */
 }
 
 export function loadJsonFile(path: string): any {

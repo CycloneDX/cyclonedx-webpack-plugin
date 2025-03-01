@@ -129,6 +129,7 @@ class ValidationError extends Error {
   readonly details: any
   constructor (message: string, details: any) {
     super(message)
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
     this.details = details
   }
 }
@@ -286,6 +287,7 @@ export class CycloneDxWebpackPlugin {
           const serialized = serializer.serialize(bom, serializeOptions)
           if (undefined !== validator) {
             try {
+              /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
               const validationErrors = await validator.validate(serialized)
               if (validationErrors !== null) {
                 thisLogger.debug('BOM result invalid. details: ', validationErrors)
@@ -367,7 +369,8 @@ export class CycloneDxWebpackPlugin {
     builder: CDX.Builders.FromNodePackageJson.ComponentBuilder,
     logger: WebpackLogger
   ): CDX.Models.Component | undefined {
-    const thisPackageJson: PackageDescription['packageJson'] | undefined = this.rootComponentAutodetect
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
+    const thisPackageJson = this.rootComponentAutodetect
       ? getPackageDescription(path)?.packageJson
       : { name: this.rootComponentName, version: this.rootComponentVersion }
     if (thisPackageJson === undefined) { return undefined }
@@ -376,7 +379,8 @@ export class CycloneDxWebpackPlugin {
       thisPackageJson as normalizePackageJson.Input,
       w => { logger.debug('normalizePackageJson from PkgPath', path, 'caused:', w) }
     )
-    return builder.makeComponent(thisPackageJson)
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hint */
+    return builder.makeComponent(thisPackageJson as normalizePackageJson.Package)
   }
 
   #finalizeBom (
@@ -434,7 +438,8 @@ export class CycloneDxWebpackPlugin {
 
     for (const [packageJsonPath, cType] of packageJsonPaths) {
       logger.log('try to build new Tool from PkgPath', packageJsonPath)
-      const packageJson = loadJsonFile(packageJsonPath) ?? {}
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
+      const packageJson: PackageDescription['packageJson'] = loadJsonFile(packageJsonPath) ?? {}
       normalizePackageJson(
         /* eslint-disable-next-line  @typescript-eslint/no-unsafe-type-assertion -- hint hint */
         packageJson as normalizePackageJson.Input,

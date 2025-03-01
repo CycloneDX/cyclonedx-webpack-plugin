@@ -40,6 +40,14 @@ export default [
     }
   },
   {
+    name: 'project-specific',
+    files: ['src/*.ts'],
+    rules: {
+      '@typescript-eslint/no-unsafe-assignment': 'warn',
+      '@typescript-eslint/no-unsafe-member-access': 'warn',
+    }
+  },
+  {
     files: ['**/*.js'],
     languageOptions: { sourceType: 'commonjs' }
   },
