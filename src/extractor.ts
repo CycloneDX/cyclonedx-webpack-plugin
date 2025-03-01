@@ -87,19 +87,21 @@ export class Extractor {
   makeComponent (pkg: PackageDescription, collectEvidence: boolean, logger?: WebpackLogger): CDX.Models.Component {
     try {
       const _packageJson = structuredClonePolyfill(pkg.packageJson)
-      normalizePackageJson(_packageJson as object /* add debug for warnings? */)
+
+      normalizePackageJson(_packageJson as normalizePackageJson.Input /* add debug for warnings? */)
       // region fix normalizations
       if (typeof pkg.packageJson.version === 'string') {
         // allow non-SemVer strings
-        _packageJson.version = (pkg.packageJson.version as string).trim()
+        _packageJson.version = pkg.packageJson.version.trim()
       }
       // endregion fix normalizations
-      pkg.packageJson = _packageJson
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hint  */
+      pkg.packageJson = _packageJson as normalizePackageJson.Package
     } catch (e) {
       logger?.warn('normalizePackageJson from PkgPath', pkg.path, 'failed:', e)
     }
 
-    const component = this.#componentBuilder.makeComponent(pkg.packageJson as object)
+    const component = this.#componentBuilder.makeComponent(pkg.packageJson)
     if (component === undefined) {
       throw new Error(`failed building Component from PkgPath ${pkg.path}`)
     }

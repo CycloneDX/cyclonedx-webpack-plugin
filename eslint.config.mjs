@@ -58,7 +58,10 @@ export default [
       'tests/**.{js,mjs,cjs,ts}'
     ],
     languageOptions: {
-      globals: globals.mocha
+      globals: {
+        ...globals.node,
+        ...globals.jest,
+      }
     }
   },
   {

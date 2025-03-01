@@ -129,6 +129,7 @@ class ValidationError extends Error {
   readonly details: any
   constructor (message: string, details: any) {
     super(message)
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- needed */
     this.details = details
   }
 }
@@ -286,6 +287,7 @@ export class CycloneDxWebpackPlugin {
           const serialized = serializer.serialize(bom, serializeOptions)
           if (undefined !== validator) {
             try {
+              /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- needed */
               const validationErrors = await validator.validate(serialized)
               if (validationErrors !== null) {
                 thisLogger.debug('BOM result invalid. details: ', validationErrors)
@@ -301,6 +303,7 @@ export class CycloneDxWebpackPlugin {
                 thisLogger.info('skipped validate BOM:', err.message)
               } else {
                 thisLogger.error('unexpected error')
+                /* eslint-disable-next-line @typescript-eslint/only-throw-error -- forward */
                 throw err
               }
             }
@@ -432,12 +435,15 @@ export class CycloneDxWebpackPlugin {
 
     for (const [packageJsonPath, cType] of packageJsonPaths) {
       logger.log('try to build new Tool from PkgPath', packageJsonPath)
-      const packageJson: object = loadJsonFile(packageJsonPath) ?? {}
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- needed */
+      const packageJson = loadJsonFile(packageJsonPath) ?? {}
       normalizePackageJson(
-        packageJson,
+        /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint thin  */
+        packageJson as normalizePackageJson.Input,
         w => { logger.debug('normalizePackageJson from PkgPath', packageJsonPath, 'caused:', w) }
       )
-      const tool = builder.makeComponent(packageJson, cType)
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint thin  */
+      const tool = builder.makeComponent(packageJson as normalizePackageJson.Package, cType)
       if (tool !== undefined) {
         yield tool
       }
