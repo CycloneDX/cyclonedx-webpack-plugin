@@ -372,7 +372,8 @@ export class CycloneDxWebpackPlugin {
       : { name: this.rootComponentName, version: this.rootComponentVersion }
     if (thisPackageJson === undefined) { return undefined }
     normalizePackageJson(
-      thisPackageJson,
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hint */
+      thisPackageJson as normalizePackageJson.Input,
       w => { logger.debug('normalizePackageJson from PkgPath', path, 'caused:', w) }
     )
     return builder.makeComponent(thisPackageJson)
@@ -435,10 +436,14 @@ export class CycloneDxWebpackPlugin {
       logger.log('try to build new Tool from PkgPath', packageJsonPath)
       const packageJson = loadJsonFile(packageJsonPath) ?? {}
       normalizePackageJson(
+        /* eslint-disable-next-line  @typescript-eslint/no-unsafe-type-assertion -- hint hint */
         packageJson as normalizePackageJson.Input,
         w => { logger.debug('normalizePackageJson from PkgPath', packageJsonPath, 'caused:', w) }
       )
-      const tool = builder.makeComponent(packageJson as normalizePackageJson.Package, cType)
+      const tool = builder.makeComponent(
+        /* eslint-disable-next-line  @typescript-eslint/no-unsafe-type-assertion -- hint hint */
+        packageJson as normalizePackageJson.Package,
+        cType)
       if (tool !== undefined) {
         yield tool
       }

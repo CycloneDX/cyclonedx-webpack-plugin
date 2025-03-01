@@ -28,6 +28,7 @@ export function isNonNullable<T>(value: T): value is NonNullable<T> {
 export const structuredClonePolyfill: <T>(value: T) => T = typeof structuredClone === 'function'
   ? structuredClone
   : function <T>(value: T): T {
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- ack */
     return JSON.parse(JSON.stringify(value)) as T
   }
 
@@ -87,8 +88,10 @@ export function isValidPackageJSON(pkg: any): pkg is ValidPackageJSON {
   // checking for the existence of name and version properties
   // both are required for a valid package.json according to https://docs.npmjs.com/cli/v10/configuring-npm/package-json
   return typeof pkg === 'object'
+
     && typeof pkg.name === 'string'
     && typeof pkg.version === 'string'
+
 }
 
 export function loadJsonFile(path: string): any {
