@@ -24,7 +24,7 @@ import * as CDX from '@cyclonedx/cyclonedx-library'
 import normalizePackageJson from 'normalize-package-data'
 import { Compilation, type Compiler, sources, version as WEBPACK_VERSION } from 'webpack'
 
-import { getPackageDescription, iterableSome, loadJsonFile } from './_helpers'
+import { getPackageDescription, iterableSome, loadJsonFile, type PackageDescription } from './_helpers'
 import { Extractor } from './extractor'
 
 type WebpackLogger = Compilation['logger']
@@ -129,7 +129,6 @@ class ValidationError extends Error {
   readonly details: any
   constructor (message: string, details: any) {
     super(message)
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- needed */
     this.details = details
   }
 }
@@ -287,7 +286,6 @@ export class CycloneDxWebpackPlugin {
           const serialized = serializer.serialize(bom, serializeOptions)
           if (undefined !== validator) {
             try {
-              /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- needed */
               const validationErrors = await validator.validate(serialized)
               if (validationErrors !== null) {
                 thisLogger.debug('BOM result invalid. details: ', validationErrors)
@@ -369,7 +367,7 @@ export class CycloneDxWebpackPlugin {
     builder: CDX.Builders.FromNodePackageJson.ComponentBuilder,
     logger: WebpackLogger
   ): CDX.Models.Component | undefined {
-    const thisPackageJson: object | undefined = this.rootComponentAutodetect
+    const thisPackageJson: PackageDescription['packageJson'] | undefined = this.rootComponentAutodetect
       ? getPackageDescription(path)?.packageJson
       : { name: this.rootComponentName, version: this.rootComponentVersion }
     if (thisPackageJson === undefined) { return undefined }
@@ -435,14 +433,11 @@ export class CycloneDxWebpackPlugin {
 
     for (const [packageJsonPath, cType] of packageJsonPaths) {
       logger.log('try to build new Tool from PkgPath', packageJsonPath)
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- needed */
       const packageJson = loadJsonFile(packageJsonPath) ?? {}
       normalizePackageJson(
-        /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint thin  */
         packageJson as normalizePackageJson.Input,
         w => { logger.debug('normalizePackageJson from PkgPath', packageJsonPath, 'caused:', w) }
       )
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint thin  */
       const tool = builder.makeComponent(packageJson as normalizePackageJson.Package, cType)
       if (tool !== undefined) {
         yield tool

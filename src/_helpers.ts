@@ -17,8 +17,8 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import {existsSync, readFileSync} from 'node:fs'
-import {dirname, extname, isAbsolute, join, parse, sep} from 'node:path'
+import { existsSync, readFileSync } from 'node:fs'
+import { dirname, extname, isAbsolute, join, parse, sep } from 'node:path'
 
 export function isNonNullable<T>(value: T): value is NonNullable<T> {
   // NonNullable: not null and not undefined
@@ -28,7 +28,6 @@ export function isNonNullable<T>(value: T): value is NonNullable<T> {
 export const structuredClonePolyfill: <T>(value: T) => T = typeof structuredClone === 'function'
   ? structuredClone
   : function <T>(value: T): T {
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- false-positive */
     return JSON.parse(JSON.stringify(value)) as T
   }
 
@@ -39,7 +38,7 @@ export interface ValidPackageJSON {
 
 export interface PackageDescription {
   path: string
-  packageJson: ValidPackageJSON
+  packageJson: NonNullable<any> | ValidPackageJSON
 }
 
 
@@ -52,15 +51,12 @@ export function getPackageDescription(path: string): PackageDescription | undefi
     const pathToPackageJson = join(path, PACKAGE_MANIFEST_FILENAME)
     if (existsSync(pathToPackageJson)) {
       try {
-        /* eslint-disable-next-line  @typescript-eslint/no-unsafe-assignment -- needed */
-        const contentOfPackageJson = loadJsonFile(pathToPackageJson) ?? {}
+        const contentOfPackageJson: NonNullable<any> = loadJsonFile(pathToPackageJson) ?? {}
         // only look for valid candidate if we are in a node_modules subdirectory
-        if (!isSubDirOfNodeModules) {
-          if (isValidPackageJSON(contentOfPackageJson)) {
+        if (!isSubDirOfNodeModules || isValidPackageJSON(contentOfPackageJson)) {
             return {
               path: pathToPackageJson,
               packageJson: contentOfPackageJson
-            }
           }
         }
       } catch {
@@ -90,11 +86,9 @@ function isSubDirectoryOfNodeModulesFolder(path: string): boolean {
 export function isValidPackageJSON(pkg: any): pkg is ValidPackageJSON {
   // checking for the existence of name and version properties
   // both are required for a valid package.json according to https://docs.npmjs.com/cli/v10/configuring-npm/package-json
-  /* eslint-disable @typescript-eslint/no-unsafe-member-access -- gnaaa */
   return typeof pkg === 'object'
     && typeof pkg.name === 'string'
     && typeof pkg.version === 'string'
-  /* eslint-enable @typescript-eslint/no-unsafe-member-access */
 }
 
 export function loadJsonFile(path: string): any {
