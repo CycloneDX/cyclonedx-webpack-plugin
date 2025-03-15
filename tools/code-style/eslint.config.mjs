@@ -35,13 +35,14 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const projectRoot = path.dirname(path.dirname(__dirname))
 
-/* eslint-disable jsdoc/valid-types */
 
 const licenseHeaderFile = path.join(projectRoot, '.license-header.js')
 
+/* eslint-disable jsdoc/valid-types */
+
 /**
- * @type {import('@types/eslint').Linter.FlatConfig[]}
- * @see {@link https://eslint.org/}
+ * @type {import('eslint').Linter.Config[]}
+ * @see https://eslint.org
  */
 export default [
   {
