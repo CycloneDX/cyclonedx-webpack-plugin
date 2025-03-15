@@ -28,8 +28,8 @@ const __dirname = path.dirname(__filename)
 /* eslint-disable jsdoc/valid-types */
 
 /**
- * @type {import('@types/eslint').Linter.FlatConfig[]}
- * @see {@link https://eslint.org/}
+ * @type {import('tools/code-style/node_modules/eslint').Linter.Config[]}
+ * @see https://eslint.org
  */
 export default [
   ...baseCfg,
