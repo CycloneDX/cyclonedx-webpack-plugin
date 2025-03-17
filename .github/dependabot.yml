@@ -8,7 +8,7 @@ updates:
       - '/tools/code-style'
     schedule:
       interval: 'weekly'
-      day: 'monday'
+      day: 'saturday'
     allow:
       - dependency-type: 'all'
     versioning-strategy: 'auto'
