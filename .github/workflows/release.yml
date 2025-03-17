@@ -84,42 +84,49 @@ jobs:
       - name: git push back
         run: git push --follow-tags
 
-  publish-NPMJS:
+  publish-package:
     needs:
       - "bump"
-    name: publish NPMJS
+    name: publish package
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
-      NPMJS_RELEASE_TAG: ${{ github.event.inputs.prerelease == 'true' && 'unstable-prerelease' || 'latest' }}
+      PACKAGE_RELEASE_TAG: ${{ github.event.inputs.prerelease == 'true' && 'unstable-prerelease' || 'latest' }}
     steps:
-      - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
-        # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_ACTIVE_LTS }}
-      - name: enable yarn  # needed in some tests
-        run: |-
-          corepack enable
-          yarn --version
       - name: Checkout code
         # see https://github.com/actions/checkout
         uses: actions/checkout@v4
         with:
           ref: ${{ needs.bump.outputs.version }}
-      - name: install build tools
-        run: npm i --ignore-scripts
+      - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+      - name: setup project
+        run: |
+          npm install --ignore-scripts --include=optional --loglevel=silly
+      - name: setup tools
+        run: |
+          echo "::group::install docs-gen deps"
+          npm run -- dev-setup:docs-gen   --ignore-scripts --loglevel=silly
+          echo "::endgroup::"
+          echo "::group::install code-style deps"
+          npm run -- dev-setup:code-style --ignore-scripts --loglevel=silly
+          echo "::endgroup::"
       # no explicit npm build. if a build is required, it should be configured as prepublish/prepublishOnly script of npm.
-      - name: login to NPMJS
-        run: npm config set "//registry.npmjs.org/:_authToken=$NPMJS_AUTH_TOKEN"
+      - name: login to registries
+        run: |
+          npm config set "//registry.npmjs.org/:_authToken=$NPM_TOKEN"
         env:
-          NPMJS_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: publish to NPMJS as "${{ env.NPMJS_RELEASE_TAG }}"
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: publish to NPMJS as "${{ env.PACKAGE_RELEASE_TAG }}"
         run: >
-          npm publish 
+          npm publish
+          --@cyclonedx:registry='https://registry.npmjs.org'
           --provenance
           --access public 
-          --tag "$NPMJS_RELEASE_TAG"
+          --tag "$PACKAGE_RELEASE_TAG"
       - name: pack release result
         run: |
           mkdir -p "$PACKED_DIR"
@@ -138,7 +145,7 @@ jobs:
   release-GH:
     needs:
       - "bump"
-      - "publish-NPMJS"
+      - "publish-package"
     name: publish GitHub
     runs-on: ubuntu-latest
     timeout-minutes: 30
