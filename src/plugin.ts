@@ -216,15 +216,23 @@ export class CycloneDxWebpackPlugin {
       space: 2 // TODO add option to have this configurable
     }
 
+    const toBeSerialized = new Map<
+      /* outputLocation */ string,
+      [CDX.Serialize.Types.Serializer, undefined | CDX.Validation.Types.Validator]
+    >()
+
     let xmlSerializer: CDX.Serialize.XmlSerializer | undefined = undefined
     try {
       xmlSerializer = new CDX.Serialize.XmlSerializer(new CDX.Serialize.XML.Normalize.Factory(spec))
     } catch {
       /* pass */
     }
-    const xmlValidator = this.validateResults && xmlSerializer !== undefined
-      ? new CDX.Validation.XmlValidator(spec.version)
-      : undefined
+    if (xmlSerializer !== undefined) {
+      const xmlValidator = this.validateResults
+        ? new CDX.Validation.XmlValidator(spec.version)
+        : undefined
+      toBeSerialized.set(this.resultXml, [xmlSerializer, xmlValidator])
+    }
 
     let jsonSerializer: CDX.Serialize.JsonSerializer | undefined = undefined
     try {
@@ -232,15 +240,10 @@ export class CycloneDxWebpackPlugin {
     } catch {
       /* pass */
     }
-    const jsonValidator = this.validateResults && jsonSerializer !== undefined
-      ? new CDX.Validation.JsonStrictValidator(spec.version)
-      : undefined
-
-    const toBeSerialized = new Map<string, [CDX.Serialize.Types.Serializer, undefined | CDX.Validation.Types.Validator]>()
-    if (xmlSerializer !== undefined) {
-      toBeSerialized.set(this.resultXml, [xmlSerializer, xmlValidator])
-    }
     if (jsonSerializer !== undefined) {
+      const jsonValidator = this.validateResults
+        ? new CDX.Validation.JsonStrictValidator(spec.version)
+        : undefined
       toBeSerialized.set(this.resultJson, [jsonSerializer, jsonValidator])
       if (this.resultWellknown !== undefined) {
         toBeSerialized.set(this.resultWellknown, [jsonSerializer, jsonValidator])
