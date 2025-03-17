@@ -6,6 +6,9 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+
+## 5.0.0 - 2025-03-17
+
 * BREAKING Changes
   * Dropped support for `node<20.18.0` ([#1362] via [#1365])
 * Documentation
