@@ -103,6 +103,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
+      - name: enable yarn  # needed in some tests
+        run: |-
+          corepack enable
+          yarn --version
       - name: setup project
         run: |
           npm install --ignore-scripts --include=optional --loglevel=silly
