@@ -169,6 +169,9 @@ dist
 /jest.*
 /examples/
 
+/tools/
+eslint.*
+
 ## target of JSDoc
 /out/
 /docs/jsdoc/
