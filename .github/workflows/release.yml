@@ -108,9 +108,6 @@ jobs:
           npm install --ignore-scripts --include=optional --loglevel=silly
       - name: setup tools
         run: |
-          echo "::group::install docs-gen deps"
-          npm run -- dev-setup:docs-gen   --ignore-scripts --loglevel=silly
-          echo "::endgroup::"
           echo "::group::install code-style deps"
           npm run -- dev-setup:code-style --ignore-scripts --loglevel=silly
           echo "::endgroup::"
