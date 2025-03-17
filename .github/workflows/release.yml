@@ -34,7 +34,7 @@ env:
   REPORTS_DIR: CI_reports
   PACKED_DIR: CI_packed
   PACKED_ARTIFACT: packed
-  NODE_ACTIVE_LTS: "20"
+  NODE_ACTIVE_LTS: "22"
 
 jobs:
   bump:

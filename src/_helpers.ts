@@ -17,38 +17,49 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { existsSync, readFileSync } from 'fs'
-import { dirname, extname, isAbsolute, join, parse, sep } from 'path'
+import { existsSync, readFileSync } from 'node:fs'
+import { dirname, extname, isAbsolute, join, parse, sep } from 'node:path'
 
-export function isNonNullable<T> (value: T): value is NonNullable<T> {
+export function isNonNullable<T>(value: T): value is NonNullable<T> {
   // NonNullable: not null and not undefined
   return value !== null && value !== undefined
 }
 
 export const structuredClonePolyfill: <T>(value: T) => T = typeof structuredClone === 'function'
   ? structuredClone
-  : function (value) { return JSON.parse(JSON.stringify(value)) }
+  : function <T>(value: T): T {
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- ack */
+    return JSON.parse(JSON.stringify(value)) as T
+  }
+
+export interface ValidPackageJSON {
+  name: string
+  version: string
+}
 
 export interface PackageDescription {
   path: string
-  packageJson: any
+  packageJson: NonNullable<any>
 }
+
 
 const PACKAGE_MANIFEST_FILENAME = 'package.json'
 
-export function getPackageDescription (path: string): PackageDescription | undefined {
+export function getPackageDescription(path: string): PackageDescription | undefined {
   const isSubDirOfNodeModules = isSubDirectoryOfNodeModulesFolder(path)
 
   while (isAbsolute(path)) {
     const pathToPackageJson = join(path, PACKAGE_MANIFEST_FILENAME)
     if (existsSync(pathToPackageJson)) {
       try {
-        const contentOfPackageJson = loadJsonFile(pathToPackageJson) ?? {}
+        /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
+        const contentOfPackageJson: NonNullable<any> = loadJsonFile(pathToPackageJson) ?? {}
         // only look for valid candidate if we are in a node_modules subdirectory
         if (!isSubDirOfNodeModules || isValidPackageJSON(contentOfPackageJson)) {
-          return {
-            path: pathToPackageJson,
-            packageJson: contentOfPackageJson
+            return {
+              path: pathToPackageJson,
+              /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
+              packageJson: contentOfPackageJson
           }
         }
       } catch {
@@ -67,21 +78,25 @@ export function getPackageDescription (path: string): PackageDescription | undef
 
 const NODE_MODULES_FOLDERNAME = 'node_modules'
 
-function isNodeModulesFolder (path: string): boolean {
+function isNodeModulesFolder(path: string): boolean {
   return path.endsWith(`${sep}${NODE_MODULES_FOLDERNAME}`)
 }
 
-function isSubDirectoryOfNodeModulesFolder (path: string): boolean {
+function isSubDirectoryOfNodeModulesFolder(path: string): boolean {
   return path.includes(`${sep}${NODE_MODULES_FOLDERNAME}${sep}`)
 }
 
-export function isValidPackageJSON (pkg: any): boolean {
+export function isValidPackageJSON(pkg: any): pkg is ValidPackageJSON {
   // checking for the existence of name and version properties
   // both are required for a valid package.json according to https://docs.npmjs.com/cli/v10/configuring-npm/package-json
-  return typeof pkg.name === 'string' && typeof pkg.version === 'string'
+  return isNonNullable(pkg)
+    /* eslint-disable @typescript-eslint/no-unsafe-member-access -- false-positive */
+    && typeof pkg.name === 'string'
+    && typeof pkg.version === 'string'
+    /* eslint-enable @typescript-eslint/no-unsafe-member-access */
 }
 
-export function loadJsonFile (path: string): any {
+export function loadJsonFile(path: string): any {
   return JSON.parse(readFileSync(path, 'utf8'))
   // may be replaced by `require(f, { with: { type: "json" } })`
   // as soon as this spec is properly implemented.
@@ -110,7 +125,7 @@ const MAP_TEXT_EXTENSION_MIME: Readonly<Record<string, MimeType>> = {
   '.licence': MIME_TEXT_PLAIN
 } as const
 
-export function getMimeForTextFile (filename: string): MimeType | undefined {
+export function getMimeForTextFile(filename: string): MimeType | undefined {
   return MAP_TEXT_EXTENSION_MIME[extname(filename).toLowerCase()]
 }
 
@@ -122,8 +137,8 @@ const LICENSE_FILENAME_EXT = new Set([
   '.mit'
 ])
 
-export function getMimeForLicenseFile (filename: string): MimeType | undefined {
-  const { name, ext } = parse(filename.toLowerCase())
+export function getMimeForLicenseFile(filename: string): MimeType | undefined {
+  const {name, ext} = parse(filename.toLowerCase())
   return LICENSE_FILENAME_BASE.has(name) && LICENSE_FILENAME_EXT.has(ext)
     ? MIME_TEXT_PLAIN
     : MAP_TEXT_EXTENSION_MIME[ext]
@@ -134,7 +149,7 @@ export function getMimeForLicenseFile (filename: string): MimeType | undefined {
 // region polyfills
 
 /** Polyfill for Iterator.some() */
-export function iterableSome<T> (i: Iterable<T>, t: (v: T) => boolean): boolean {
+export function iterableSome<T>(i: Iterable<T>, t: (v: T) => boolean): boolean {
   for (const v of i) {
     if (t(v)) {
       return true
