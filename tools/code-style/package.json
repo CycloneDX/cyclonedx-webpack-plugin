@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@cyclonedx/cyclonedx-library-code-style",
+  "name": "@cyclonedx/cyclonedx-webpack-plugin/tools/code-style",
   "license": "Apache-2.0",
   "engines": {
     "node": ">=20.18"
