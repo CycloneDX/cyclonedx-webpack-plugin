@@ -52,15 +52,6 @@ export default [
     languageOptions: { sourceType: 'commonjs' }
   },
   {
-    files: ['{src,tests}/**/*!(.{node,web}).{js,mjs,cjs.ts}'],
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.node
-      }
-    }
-  },
-  {
     files: [
       '**/*.{test,spec}.{js,mjs,cjs,ts}',
       'tests/**.{js,mjs,cjs,ts}'
