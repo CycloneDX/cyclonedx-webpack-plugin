@@ -22,7 +22,6 @@ import { fileURLToPath } from 'node:url'
 
 import plugin_js from '@eslint/js'
 import config_love from 'eslint-config-love'
-import plugin_editorconfig from 'eslint-plugin-editorconfig'
 import plugin_import from 'eslint-plugin-import'
 import plugin_jsdoc from 'eslint-plugin-jsdoc'
 import plugin_header from 'eslint-plugin-license-header'
@@ -51,12 +50,9 @@ export default [
       'import': plugin_import,
       'simple-import-sort': plugin_simpleImportSort,
       'license-header': plugin_header,
-      'editorconfig': plugin_editorconfig,
       'n': plugin_n,
     },
     rules: {
-      ...plugin_editorconfig.configs.all.rules,
-      'editorconfig/indent': 'off',
       'n/prefer-node-protocol': 'error',
       'sort-imports': 'off',
       'import/order': [
