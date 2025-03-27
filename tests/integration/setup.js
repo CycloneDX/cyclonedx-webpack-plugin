@@ -17,8 +17,8 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-const { spawnSync } = require('child_process')
-const path = require('path')
+const { spawnSync } = require('node:child_process')
+const path = require('node:path')
 
 const nodeSV = Object.freeze((process?.versions?.node ?? '').split('.').map(Number));
 

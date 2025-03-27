@@ -17,9 +17,9 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-const fs = require('fs')
-const path = require('path')
-const { spawnSync } = require('child_process')
+const { spawnSync } = require('node:child_process')
+const fs = require('node:fs')
+const path = require('node:path')
 
 const { describe, expect, it } = require('@jest/globals')
 
@@ -335,6 +335,7 @@ describe('integration', () => {
  * @param {string} format
  * @param {*} data
  * @returns {string}
+ * @throws {RangeError} if format is unsupported
  */
 function makeReproducible (format, data) {
   switch (format.toLowerCase()) {
