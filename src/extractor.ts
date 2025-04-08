@@ -158,6 +158,8 @@ export class Extractor {
     }
     for (const pci of pcis) {
       if (
+        // Ignore all directories - they are not files :-)
+        // Don't follow symlinks for security reasons!
         !pci.isFile() ||
         !this.#LICENSE_FILENAME_PATTERN.test(pci.name)
       ) {
