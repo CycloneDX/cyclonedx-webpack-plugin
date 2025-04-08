@@ -1,0 +1,13 @@
+*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/.npmrc
+!/package.json
+!/package-lock.json
+!/webpack.config.js
+!/src
+!/src/*
+!/LICENCE.mit
+!/LICENSES/
+!/LICENSES/**
