@@ -125,11 +125,9 @@ export class Extractor {
 
     if (collectEvidence) {
       component.evidence = new CDX.Models.ComponentEvidence({
-        licenses: new CDX.Models.LicenseRepository(this.getLicenseEvidence(dirname(pkg.path), logger))
+        licenses: new CDX.Models.LicenseRepository(this.getLicenseEvidence(dirname(pkg.path), logger)),
+        copyright: new CDX.Models.CopyrightRepository(this.getCopyrightEvidence(dirname(pkg.path), logger))
       })
-      for (const line of this.getCopyrightEvidence(dirname(pkg.path), logger)) {
-        component.evidence.copyright.add(line)
-      }
     }
 
     component.purl = this.#purlFactory.makeFromComponent(component)
