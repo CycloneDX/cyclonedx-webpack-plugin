@@ -17,8 +17,8 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-const { spawnSync } = require('child_process')
-const path = require('path')
+const { spawnSync } = require('node:child_process')
+const path = require('node:path')
 
 const nodeSV = Object.freeze((process?.versions?.node ?? '').split('.').map(Number));
 
@@ -31,10 +31,14 @@ const nodeSV = Object.freeze((process?.versions?.node ?? '').split('.').map(Numb
     'webpack5-vue2',
     'webpack5-vue2-cli-service',
     'feature-issue676',
+    'feature-issue1344',
+    'feature-issue1344-no-detect',
     // endregion functional tests
     // region regression tests
     'regression-issue745',
-    'regression-issue1284'
+    'regression-issue1284',
+    'regression-issue1337',
+    'regression-issue1384'
     // endregion regression tests
   ]
 

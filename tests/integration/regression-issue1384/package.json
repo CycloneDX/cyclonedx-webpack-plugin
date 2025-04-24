@@ -1,0 +1,32 @@
+{
+  "name": "@cyclonedx-webpack-plugin-tests/regression-issue1384",
+  "description": "example setup with properly configured `rootComponentBuildSystem`",
+  "private": true,
+  "type": "commonjs",
+  "homepage": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/regression-issue1384#readme",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
+    "directory": "tests/integration/regression-issue1384"
+  },
+  "bugs": {
+    "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues"
+  },
+  "main": "index.html",
+  "scripts": {
+    "prebuild": "node -r fs -e 'fs.rmSync(\"dist\",{recursive:true,force:true})'",
+    "build": "webpack build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@cyclonedx/webpack-plugin": "file:../../..",
+    "@db-ui/base": "^0.29.2",
+    "webpack": "^5",
+    "webpack-cli": "^5"
+  },
+  "engines": {
+    "node": ">=20.18.0",
+    "npm": ">=10"
+  }
+}

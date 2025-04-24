@@ -17,13 +17,20 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
+import { type Dirent,readdirSync, readFileSync } from 'node:fs'
+import { dirname, join } from 'node:path'
+
 import * as CDX from '@cyclonedx/cyclonedx-library'
-import { readdirSync, readFileSync } from 'fs'
-import * as normalizePackageJson from 'normalize-package-data'
-import { dirname, join } from 'path'
+import normalizePackageJson from 'normalize-package-data'
 import type { Compilation, Module } from 'webpack'
 
-import { getMimeForTextFile, getPackageDescription, isNonNullable, type PackageDescription, structuredClonePolyfill } from './_helpers'
+import {
+  getMimeForLicenseFile,
+  getPackageDescription,
+  isNonNullable,
+  type PackageDescription,
+  structuredClonePolyfill
+} from './_helpers'
 
 type WebpackLogger = Compilation['logger']
 
@@ -81,24 +88,33 @@ export class Extractor {
   }
 
   /**
-   * @throws {Error} when no component could be fetched
+   * @throws {@link Error} when no component could be fetched
    */
   makeComponent (pkg: PackageDescription, collectEvidence: boolean, logger?: WebpackLogger): CDX.Models.Component {
     try {
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
       const _packageJson = structuredClonePolyfill(pkg.packageJson)
-      normalizePackageJson(_packageJson as object /* add debug for warnings? */)
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hont */
+      normalizePackageJson(_packageJson as normalizePackageJson.Input /* add debug for warnings? */)
       // region fix normalizations
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- expected */
       if (typeof pkg.packageJson.version === 'string') {
         // allow non-SemVer strings
-        _packageJson.version = pkg.packageJson.version.trim()
+        /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+                                  , @typescript-eslint/no-unsafe-type-assertion
+           -- hint hint */
+        _packageJson.version = (pkg.packageJson.version as string).trim()
       }
       // endregion fix normalizations
-      pkg.packageJson = _packageJson
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hint */
+      pkg.packageJson = _packageJson as normalizePackageJson.Package
     } catch (e) {
       logger?.warn('normalizePackageJson from PkgPath', pkg.path, 'failed:', e)
     }
 
-    const component = this.#componentBuilder.makeComponent(pkg.packageJson as object)
+    const component = this.#componentBuilder.makeComponent(
+      /* eslint-disable-next-line  @typescript-eslint/no-unsafe-type-assertion -- hint hint */
+      pkg.packageJson as normalizePackageJson.Package)
     if (component === undefined) {
       throw new Error(`failed building Component from PkgPath ${pkg.path}`)
     }
@@ -176,7 +192,7 @@ export class Extractor {
   readonly #LICENSE_FILENAME_PATTERN = /^(?:UN)?LICEN[CS]E|.\.LICEN[CS]E$|^NOTICE$/i
 
   public * getLicenseEvidence (packageDir: string, logger?: WebpackLogger): Generator<CDX.Models.License> {
-    let pcis
+    let pcis: Dirent[] = []
     try {
       pcis = readdirSync(packageDir, { withFileTypes: true })
     } catch (e) {
@@ -185,13 +201,15 @@ export class Extractor {
     }
     for (const pci of pcis) {
       if (
+        // Ignore all directories - they are not files :-)
+        // Don't follow symlinks for security reasons!
         !pci.isFile() ||
         !this.#LICENSE_FILENAME_PATTERN.test(pci.name)
       ) {
         continue
       }
 
-      const contentType = getMimeForTextFile(pci.name)
+      const contentType = getMimeForLicenseFile(pci.name)
       if (contentType === undefined) {
         logger?.warn(`could not determine content-type for ${pci.name}`)
         continue

@@ -21,6 +21,9 @@
     "@vue/cli-service": "~5.0.8",
     "webpack": "^5"
   },
+  "engines": {
+    "node": ">=20.18.0"
+  },
   "browserslist": [
     "> 1%",
     "last 2 versions",

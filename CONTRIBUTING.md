@@ -5,12 +5,12 @@ But please read the
 [CycloneDX contributing guidelines](https://github.com/CycloneDX/.github/blob/master/CONTRIBUTING.md)
 first.
 
-## Setup
+## Set up the project
 
-To start developing simply run to install dev-dependencies and tools:
+Install dependencies:
 
 ```shell
-npm ci
+npm run dev-setup
 ```
 
 This will install process automatically build the project from source.
@@ -18,7 +18,7 @@ This will install process automatically build the project from source.
 ## Build from source
 
 ```shell
-npm run build
+npm run build-dev
 ```
 
 ## Testing

@@ -20,7 +20,7 @@ concurrency:
 
 env:
   REPORTS_DIR: CI_reports
-  NODE_ACTIVE_LTS: "20" # https://nodejs.org/en/about/releases/
+  NODE_ACTIVE_LTS: "22" # https://nodejs.org/en/about/releases/
   TESTS_REPORTS_ARTIFACT: tests-reports
 
 jobs:
@@ -42,7 +42,7 @@ jobs:
       - name: setup project
         run: npm i --ignore-scripts
       - name: build ${{ matrix.target }}
-        run: npm run build
+        run: npm run build-dev
       - name: artifact build result
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v4
@@ -54,7 +54,7 @@ jobs:
   test-standard:
     name: test standard
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 10
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout
@@ -67,9 +67,34 @@ jobs:
           # cache: "npm"
           # cache-dependency-path: "**/package-lock.json"
       - name: setup project
-        run: npm i --ignore-scripts
+        run: |
+          npm install --ignore-scripts --loglevel=silly
+      - name: setup tools
+        run: |
+          echo "::group::install code-style deps"
+          npm run -- dev-setup:code-style --ignore-scripts --loglevel=silly
+          echo "::endgroup::"
+      - name: make reports dir
+        run: mkdir -p "$REPORTS_DIR"
       - name: test
-        run: npm run test:standard
+        run: >
+          npm run -- test:standard
+          --format json
+          --output-file "$PWD/$REPORTS_DIR/eslint.json"
+      - name: Annotate Code
+        if: ${{ failure() || success() }}
+        # see https://github.com/DerLev/eslint-annotations
+        uses: DerLev/eslint-annotations@v2
+        with:
+          eslint-report: ${{ env.REPORTS_DIR }}/eslint.json
+      - name: artifact eslint result
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v4
+        if: ${{ failure() }}
+        with:
+          name: ${{ env.STANDARD_REPORTS_ARTIFACT }}
+          path: ${{ env.REPORTS_DIR }}
+          if-no-files-found: error
 
   test-jest:
     needs: [ 'build' ]
@@ -83,12 +108,10 @@ jobs:
         node-version:
           # action based on https://github.com/actions/node-versions/releases
           # see also: https://nodejs.org/en/about/previous-releases
-          - "22.4"      # current -- pinned for https://github.com/npm/cli/issues/7666
-          - "20"      # active LTS
-          - "18"
-          - '16'
-          - "14"
-          - "14.0.0"  # lowest supported
+          - "23"      # current
+          - "22"      # active LTS
+          - "20"
+          - "20.18.0" # lowest supported
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout
@@ -114,25 +137,7 @@ jobs:
         shell: bash
         run: |
           set -ex
-          dep_constraints=''
           dev_requirements='c8 jest jest-junit imurmurhash fast-glob'
-          # as long as npm cannot auto-resolve engine-constraints, we need to help here
-          case '${{ matrix.node-version }}' in
-            '14')
-              dep_constraints='normalize-package-data@^5'
-            ;;
-            '14.0.0')
-              dep_constraints='normalize-package-data@^3'
-              dev_requirements='c8@^8 jest@^26 jest-junit imurmurhash fast-glob'
-              # cannot run snapshot-compare with old versions ...
-              rm -rf tests/integration/__snapshots__/
-            ;;
-          esac
-          ## !! dont install all the dev-packages, especially since some are not runnable on node 14.0.0
-          if [[ -n "$dep_constraints" ]]
-          then
-            npm add --ignore-scripts --omit=peer --omit=dev --only=prod --production --loglevel=silly --save $dep_constraints
-          fi
           npm i --ignore-scripts --omit=peer --omit=dev --only=prod --production --loglevel=silly
           ## rebuild deps for which scripts were ignored, or partially installed - since "ignore-scripts" was used
           npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2 || true

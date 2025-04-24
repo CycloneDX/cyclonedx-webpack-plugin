@@ -17,13 +17,14 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import * as CDX from '@cyclonedx/cyclonedx-library'
-import { existsSync } from 'fs'
-import * as normalizePackageJson from 'normalize-package-data'
-import { join as joinPath, resolve } from 'path'
-import { Compilation, type Compiler, sources } from 'webpack'
+import { existsSync } from 'node:fs'
+import { join as joinPath, resolve } from 'node:path'
 
-import { getPackageDescription, loadJsonFile } from './_helpers'
+import * as CDX from '@cyclonedx/cyclonedx-library'
+import normalizePackageJson from 'normalize-package-data'
+import { Compilation, type Compiler, sources, version as WEBPACK_VERSION } from 'webpack'
+
+import { getPackageDescription, iterableSome, loadJsonFile, type PackageDescription } from './_helpers'
 import { Extractor } from './extractor'
 
 type WebpackLogger = Compilation['logger']
@@ -33,7 +34,7 @@ export interface CycloneDxWebpackPluginOptions {
   // IMPORTANT: keep the table in the `README` in sync!
 
   /**
-   * Which version of {@link https://github.com/CycloneDX/specification CycloneDX spec} to use.
+   * Which version of {@link https://github.com/CycloneDX/specification | CycloneDX spec} to use.
    * Defaults to one that is the latest supported of this application.
    */
   specVersion?: CycloneDxWebpackPlugin['specVersion']
@@ -42,14 +43,14 @@ export interface CycloneDxWebpackPluginOptions {
    * Whether to go the extra mile and make the output reproducible.
    * Reproducibility might result in loss of time- and random-based-values.
    *
-   * @default false
+   * @defaultValue `false`
    */
   reproducibleResults?: CycloneDxWebpackPlugin['reproducibleResults']
   /**
    * Whether to validate the BOM result.
-   * Validation is skipped, if requirements not met. Requires {@link https://github.com/CycloneDX/cyclonedx-javascript-library#optional-dependencies transitive optional dependencies}.
+   * Validation is skipped, if requirements not met. Requires {@link https://github.com/CycloneDX/cyclonedx-javascript-library#optional-dependencies | transitive optional dependencies}.
    *
-   * @default true
+   * @defaultValue `true`
    */
   validateResults?: CycloneDxWebpackPlugin['validateResults']
 
@@ -57,20 +58,20 @@ export interface CycloneDxWebpackPluginOptions {
    * Path to write the output to.
    * The path is relative to webpack's overall output path.
    *
-   * @default './cyclonedx'
+   * @defaultValue './cyclonedx'
    */
   outputLocation?: string
   /**
    * Whether to write the Wellknowns.
    *
-   * @default true
+   * @defaultValue `true`
    */
   includeWellknown?: boolean
   /**
    * Path to write the Wellknowns to.
    * The path is relative to webpack's overall output path.
    *
-   * @default './.well-known'
+   * @defaultValue `'./.well-known'`
    */
   wellknownLocation?: string
 
@@ -80,35 +81,46 @@ export interface CycloneDxWebpackPluginOptions {
    * Tries to find the nearest `package.json` and build a CycloneDX component from it,
    * so it can be assigned to `bom.metadata.component`.
    *
-   * @default true
+   * @defaultValue `true`
    */
   rootComponentAutodetect?: CycloneDxWebpackPlugin['rootComponentAutodetect']
   /**
    * Set the RootComponent's type.
-   * See {@link https://cyclonedx.org/docs/1.6/json/#metadata_component_type the list of valid values}.
+   * See {@link https://cyclonedx.org/docs/1.6/json/#metadata_component_type | the list of valid values}.
    *
-   * @default 'application'
+   * @defaultValue `'application'`
    */
   rootComponentType?: CycloneDxWebpackPlugin['rootComponentType']
   /**
    * If `rootComponentAutodetect` is disabled, then
    * this value is assumed as the "name" of the `package.json`.
    *
-   * @default undefined
+   * @defaultValue `undefined`
    */
   rootComponentName?: CycloneDxWebpackPlugin['rootComponentName']
   /**
    * If `rootComponentAutodetect` is disabled, then
    * this value is assumed as the "version" of the `package.json`.
    *
-   * @default undefined
+   * @defaultValue `undefined`
    */
   rootComponentVersion?: CycloneDxWebpackPlugin['rootComponentVersion']
 
   /**
+   * Set the externalReference URL for the build-system for the RootComponent.
+   * See {@link https://cyclonedx.org/docs/1.6/json/#metadata_component_externalReferences}.
+   */
+  rootComponentBuildSystem?: CycloneDxWebpackPlugin['rootComponentBuildSystem']
+  /**
+   * Set the externalReference URL for the version control system for the RootComponent.
+   * See {@link https://cyclonedx.org/docs/1.6/json/#metadata_component_externalReferences}.
+   */
+  rootComponentVCS?: CycloneDxWebpackPlugin['rootComponentVCS']
+
+  /**
    * Whether to collect (license) evidence and attach them to the resulting SBOM.
    *
-   * @default false
+   * @defaultValue `false`
    */
   collectEvidence?: CycloneDxWebpackPlugin['collectEvidence']
 }
@@ -117,6 +129,7 @@ class ValidationError extends Error {
   readonly details: any
   constructor (message: string, details: any) {
     super(message)
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
     this.details = details
   }
 }
@@ -135,11 +148,14 @@ export class CycloneDxWebpackPlugin {
   rootComponentType: CDX.Models.Component['type']
   rootComponentName: CDX.Models.Component['name'] | undefined
   rootComponentVersion: CDX.Models.Component['version'] | undefined
+  rootComponentBuildSystem: CDX.Models.ExternalReference['url'] | undefined
+  rootComponentVCS: CDX.Models.ExternalReference['url'] | undefined
 
   collectEvidence: boolean
 
+  /* eslint-disable-next-line complexity -- acknowledged */
   constructor ({
-    specVersion = CDX.Spec.Version.v1dot4,
+    specVersion = CDX.Spec.Version.v1dot6,
     reproducibleResults = false,
     validateResults = true,
     outputLocation = './cyclonedx',
@@ -149,6 +165,8 @@ export class CycloneDxWebpackPlugin {
     rootComponentType = CDX.Enums.ComponentType.Application,
     rootComponentName = undefined,
     rootComponentVersion = undefined,
+    rootComponentBuildSystem = undefined,
+    rootComponentVCS = undefined,
     collectEvidence = false
   }: CycloneDxWebpackPluginOptions = {}) {
     this.specVersion = specVersion
@@ -163,6 +181,8 @@ export class CycloneDxWebpackPlugin {
     this.rootComponentType = rootComponentType
     this.rootComponentName = rootComponentName
     this.rootComponentVersion = rootComponentVersion
+    this.rootComponentBuildSystem = rootComponentBuildSystem
+    this.rootComponentVCS = rootComponentVCS
     this.collectEvidence = collectEvidence
   }
 
@@ -185,7 +205,6 @@ export class CycloneDxWebpackPlugin {
     const cdxExternalReferenceFactory = new CDX.Factories.FromNodePackageJson.ExternalReferenceFactory()
     const cdxLicenseFactory = new CDX.Factories.LicenseFactory()
     const cdxPurlFactory = new CDX.Factories.FromNodePackageJson.PackageUrlFactory('npm')
-    const cdxToolBuilder = new CDX.Builders.FromNodePackageJson.ToolBuilder(cdxExternalReferenceFactory)
     const cdxComponentBuilder = new CDX.Builders.FromNodePackageJson.ComponentBuilder(cdxExternalReferenceFactory, cdxLicenseFactory)
 
     const bom = new CDX.Models.Bom()
@@ -197,31 +216,34 @@ export class CycloneDxWebpackPlugin {
       space: 2 // TODO add option to have this configurable
     }
 
-    let xmlSerializer: CDX.Serialize.XmlSerializer | undefined
+    const toBeSerialized = new Map<
+      /* outputLocation */ string,
+      [CDX.Serialize.Types.Serializer, undefined | CDX.Validation.Types.Validator]
+    >()
+
+    let xmlSerializer: CDX.Serialize.XmlSerializer | undefined = undefined
     try {
       xmlSerializer = new CDX.Serialize.XmlSerializer(new CDX.Serialize.XML.Normalize.Factory(spec))
     } catch {
       /* pass */
     }
-    const xmlValidator = this.validateResults && xmlSerializer !== undefined
-      ? new CDX.Validation.XmlValidator(spec.version)
-      : undefined
+    if (xmlSerializer !== undefined) {
+      const xmlValidator = this.validateResults
+        ? new CDX.Validation.XmlValidator(spec.version)
+        : undefined
+      toBeSerialized.set(this.resultXml, [xmlSerializer, xmlValidator])
+    }
 
-    let jsonSerializer: CDX.Serialize.JsonSerializer | undefined
+    let jsonSerializer: CDX.Serialize.JsonSerializer | undefined = undefined
     try {
       jsonSerializer = new CDX.Serialize.JsonSerializer(new CDX.Serialize.JSON.Normalize.Factory(spec))
     } catch {
       /* pass */
     }
-    const jsonValidator = this.validateResults && jsonSerializer !== undefined
-      ? new CDX.Validation.JsonStrictValidator(spec.version)
-      : undefined
-
-    const toBeSerialized = new Map<string, [CDX.Serialize.Types.Serializer, undefined | CDX.Validation.Types.Validator]>()
-    if (xmlSerializer !== undefined) {
-      toBeSerialized.set(this.resultXml, [xmlSerializer, xmlValidator])
-    }
     if (jsonSerializer !== undefined) {
+      const jsonValidator = this.validateResults
+        ? new CDX.Validation.JsonStrictValidator(spec.version)
+        : undefined
       toBeSerialized.set(this.resultJson, [jsonSerializer, jsonValidator])
       if (this.resultWellknown !== undefined) {
         toBeSerialized.set(this.resultWellknown, [jsonSerializer, jsonValidator])
@@ -253,7 +275,7 @@ export class CycloneDxWebpackPlugin {
         thisLogger.log('generated components.')
 
         thisLogger.log('finalizing BOM...')
-        this.#finalizeBom(bom, cdxToolBuilder, cdxPurlFactory, logger.getChildLogger('BomFinalizer'))
+        this.#finalizeBom(bom, cdxComponentBuilder, cdxPurlFactory, logger.getChildLogger('BomFinalizer'))
         thisLogger.log('finalized BOM.')
       })
 
@@ -268,6 +290,7 @@ export class CycloneDxWebpackPlugin {
           const serialized = serializer.serialize(bom, serializeOptions)
           if (undefined !== validator) {
             try {
+              /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
               const validationErrors = await validator.validate(serialized)
               if (validationErrors !== null) {
                 thisLogger.debug('BOM result invalid. details: ', validationErrors)
@@ -283,6 +306,7 @@ export class CycloneDxWebpackPlugin {
                 thisLogger.info('skipped validate BOM:', err.message)
               } else {
                 thisLogger.error('unexpected error')
+                /* eslint-disable-next-line @typescript-eslint/only-throw-error -- forward */
                 throw err
               }
             }
@@ -306,22 +330,65 @@ export class CycloneDxWebpackPlugin {
     )
   }
 
+  #addRootComponentExtRefs (component: CDX.Models.Component, logger: WebpackLogger): void {
+    if (
+      typeof this.rootComponentBuildSystem === 'string' &&
+      this.rootComponentBuildSystem.length > 0 &&
+      !iterableSome(
+        component.externalReferences,
+        ref => ref.type === CDX.Enums.ExternalReferenceType.BuildSystem
+      )
+    ) {
+      component.externalReferences.add(
+        new CDX.Models.ExternalReference(
+          this.rootComponentBuildSystem,
+          CDX.Enums.ExternalReferenceType.BuildSystem,
+          { comment: 'as declared via cyclonedx-webpack-plugin config "rootComponentBuildSystem"' }
+        )
+      )
+      logger.debug('Added rootComponent BuildSystem URL:', this.rootComponentBuildSystem)
+    }
+    if (
+      typeof this.rootComponentVCS === 'string' &&
+      this.rootComponentVCS.length > 0 &&
+      !iterableSome(
+        component.externalReferences,
+        ref => ref.type === CDX.Enums.ExternalReferenceType.VCS
+      )
+    ) {
+      component.externalReferences.add(
+        new CDX.Models.ExternalReference(
+          this.rootComponentVCS,
+          CDX.Enums.ExternalReferenceType.VCS,
+          { comment: 'as declared via cyclonedx-webpack-plugin config "rootComponentVCS"' }
+        )
+      )
+      logger.debug('Added rootComponent VCS URL:', this.rootComponentVCS)
+    }
+  }
+
   #makeRootComponent (
     path: string,
     builder: CDX.Builders.FromNodePackageJson.ComponentBuilder,
     logger: WebpackLogger
   ): CDX.Models.Component | undefined {
-    const thisPackageJson: object = this.rootComponentAutodetect
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
+    const thisPackageJson = this.rootComponentAutodetect
       ? getPackageDescription(path)?.packageJson
       : { name: this.rootComponentName, version: this.rootComponentVersion }
     if (thisPackageJson === undefined) { return undefined }
-    normalizePackageJson(thisPackageJson, w => { logger.debug('normalizePackageJson from PkgPath', path, 'caused:', w) })
-    return builder.makeComponent(thisPackageJson)
+    normalizePackageJson(
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hint */
+      thisPackageJson as normalizePackageJson.Input,
+      w => { logger.debug('normalizePackageJson from PkgPath', path, 'caused:', w) }
+    )
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hint */
+    return builder.makeComponent(thisPackageJson as normalizePackageJson.Package)
   }
 
   #finalizeBom (
     bom: CDX.Models.Bom,
-    cdxToolBuilder: CDX.Builders.FromNodePackageJson.ToolBuilder,
+    cdxComponentBuilder: CDX.Builders.FromNodePackageJson.ComponentBuilder,
     cdxPurlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory,
     logger: WebpackLogger
   ): void {
@@ -332,42 +399,59 @@ export class CycloneDxWebpackPlugin {
       ? undefined
       : new Date()
 
-    for (const tool of this.#makeTools(cdxToolBuilder, logger.getChildLogger('ToolMaker'))) {
-      bom.metadata.tools.add(tool)
+    bom.metadata.tools.components.add(new CDX.Models.Component(
+      CDX.Enums.ComponentType.Application,
+      'webpack',
+      { version: WEBPACK_VERSION }
+    ))
+    for (const toolC of this.#makeToolCs(cdxComponentBuilder, logger.getChildLogger('ToolMaker'))) {
+      bom.metadata.tools.components.add(toolC)
     }
 
     if (bom.metadata.component !== undefined) {
+      this.#addRootComponentExtRefs(bom.metadata.component, logger)
       bom.metadata.component.type = this.rootComponentType
       bom.metadata.component.purl = cdxPurlFactory.makeFromComponent(bom.metadata.component)
       bom.metadata.component.bomRef.value = bom.metadata.component.purl?.toString()
     }
   }
 
-  * #makeTools (builder: CDX.Builders.FromNodePackageJson.ToolBuilder, logger: WebpackLogger): Generator<CDX.Models.Tool> {
-    const packageJsonPaths = [resolve(module.path, '..', 'package.json')]
+  * #makeToolCs (builder: CDX.Builders.FromNodePackageJson.ComponentBuilder, logger: WebpackLogger): Generator<CDX.Models.Component> {
+    const packageJsonPaths: Array<[string, CDX.Enums.ComponentType]> = [
+      // this plugin is an optional enhancement, not a standalone application -- use as `Library`
+      [resolve(module.path, '..', 'package.json'), CDX.Enums.ComponentType.Library]
+    ]
 
     const libs = [
       '@cyclonedx/cyclonedx-library'
     ].map(s => s.split('/', 2))
     const nodeModulePaths = require.resolve.paths('__some_none-native_package__') ?? []
-    /* eslint-disable no-labels */
+    /* eslint-disable no-labels -- technically needed */
     libsLoop:
     for (const lib of libs) {
       for (const nodeModulePath of nodeModulePaths) {
         const packageJsonPath = resolve(nodeModulePath, ...lib, 'package.json')
         if (existsSync(packageJsonPath)) {
-          packageJsonPaths.push(packageJsonPath)
+          packageJsonPaths.push([packageJsonPath, CDX.Enums.ComponentType.Library])
           continue libsLoop
         }
       }
     }
     /* eslint-enable no-labels */
 
-    for (const packageJsonPath of packageJsonPaths) {
+    for (const [packageJsonPath, cType] of packageJsonPaths) {
       logger.log('try to build new Tool from PkgPath', packageJsonPath)
-      const packageJson: object = loadJsonFile(packageJsonPath) ?? {}
-      normalizePackageJson(packageJson, w => { logger.debug('normalizePackageJson from PkgPath', packageJsonPath, 'caused:', w) })
-      const tool = builder.makeTool(packageJson)
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
+      const packageJson: PackageDescription['packageJson'] = loadJsonFile(packageJsonPath) ?? {}
+      normalizePackageJson(
+        /* eslint-disable-next-line  @typescript-eslint/no-unsafe-type-assertion -- hint hint */
+        packageJson as normalizePackageJson.Input,
+        w => { logger.debug('normalizePackageJson from PkgPath', packageJsonPath, 'caused:', w) }
+      )
+      const tool = builder.makeComponent(
+        /* eslint-disable-next-line  @typescript-eslint/no-unsafe-type-assertion -- hint hint */
+        packageJson as normalizePackageJson.Package,
+        cType)
       if (tool !== undefined) {
         yield tool
       }

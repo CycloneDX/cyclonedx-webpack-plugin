@@ -6,6 +6,88 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Build
+  * Use _TypeScript_ `v5.8.3` now, was `v5.8.2` (via [#1382])
+ 
+[#1382]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1382
+
+## 5.0.1 - 2025-03-17
+
+Maintenance release
+
+## 5.0.0 - 2025-03-17
+
+* BREAKING Changes
+  * Dropped support for `node<20.18.0` ([#1362] via [#1365])
+* Documentation
+  * Fixed docs of default values (via [#1369]) 
+* Dependencies
+  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@^8.0.0`, was `@^7.0.0` (via [#1367])
+  * Upgraded runtime-dependency `normalize-package-data@^7.0.0`, was `@^3||^4||^5||^6` (via [#1368])
+* Build
+  * Use _TypeScript_ `v5.8.2` now, was `v5.7.3` (via [#1376])
+
+[#1362]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1362
+[#1365]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1365
+[#1367]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1367
+[#1368]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1368
+[#1369]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1369
+[#1376]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1376
+
+## 4.0.1 - 2025-01-29
+
+* Fixed
+  * Prevent multiple, duplicate build-system entries ([#1356] via [#1355])
+
+[#1355]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1355
+[#1356]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1356
+
+## 4.0.0 - 2025-01-27
+
+* BREAKING Changes
+  * Option `specVersion` defaults to `"1.6"`, was `"1.4"` ([#1329] via [#1333])
+  * Emit `$.metadata.tools` as components ([#1330] via [#1331])  
+    This affects only CycloneDX spec-version 1.5 and later.
+  * Emitted `.purl` values might be partially url-encoded (via [#1331])  
+    This is caused by changes on underlying 3rd-party dependency `packageurl-js`.
+* Added
+  * Emit "webpack" as part of `$.metadata.tools` (via [#1354])
+* Dependencies
+  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@^7.0.0`, was `@^6.11.0` (via [#1331])
+* Build
+  * Use _TypeScript_ `v5.7.3` now, was `v5.6.3` (via [#1351])
+
+[#1329]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1329
+[#1330]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1330
+[#1331]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1331
+[#1333]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1333
+[#1351]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1351
+[#1354]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1354
+
+## 3.17.0 - 2025-01-10
+
+* Added
+  * Configuration option for `rootComponentVCS` ([#1344] via [#1350])
+
+[#1344]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1344
+[#1350]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1350
+
+## 3.16.0 - 2025-01-08
+
+* Added
+  * Configuration option for `rootComponentBuildSystem` ([#1344] via [#1349])
+
+[#1344]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1344
+[#1349]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1349
+
+## 3.15.1 - 2024-12-03
+
+* Fixed
+  * Properly detect license evidences like `LICEN[CS]E.{Apache,BSD,GPL,MIT}` ([#1337] via [#1339])
+
+[#1337]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1337
+[#1339]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1339
+
 ## 3.15.0 - 2024-10-19
 
 * Added
