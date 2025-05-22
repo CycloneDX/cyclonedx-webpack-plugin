@@ -306,7 +306,6 @@ export class CycloneDxWebpackPlugin {
                 thisLogger.info('skipped validate BOM:', err.message)
               } else {
                 thisLogger.error('unexpected error')
-                /* eslint-disable-next-line @typescript-eslint/only-throw-error -- forward */
                 throw err
               }
             }
