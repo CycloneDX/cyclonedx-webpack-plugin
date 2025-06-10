@@ -42,7 +42,7 @@ export class Extractor {
     compilation: Compilation,
     componentBuilder: CDX.Builders.FromNodePackageJson.ComponentBuilder,
     purlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory,
-    leFetcher: CDX.Builders.License.LicenseEvidenceFetcher
+    leFetcher: CDX.Utils.LicenseUtility.LicenseEvidenceFetcher
   ) {
     this.#compilation = compilation
     this.#componentBuilder = componentBuilder
