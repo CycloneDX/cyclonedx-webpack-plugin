@@ -149,7 +149,7 @@ export class Extractor {
 
   public * getLicenseEvidence (packageDir: string, logger?: WebpackLogger): Generator<CDX.Models.License> {
     try {
-      return this.#leFetcher.fetch(
+      const files = this.#leFetcher.fetch(
         packageDir,
         (error: Error): void => {
           /* c8 ignore next 2 */
@@ -157,7 +157,12 @@ export class Extractor {
           logger?.debug(error.message, error)
         }
       )
-    } catch (e) {
+      for  (const {file, text} of files) {
+        yield new CDX.Models.NamedLicense(`file: ${file}`, { text })
+      }
+    }
+    /* c8 ignore next 2 */
+    catch (e) {
       logger?.warn('collecting license evidence in', packageDir, 'failed:', e)
     }
   }
