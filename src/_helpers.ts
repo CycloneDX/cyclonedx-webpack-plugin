@@ -18,7 +18,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 import { existsSync, readFileSync } from 'node:fs'
-import { dirname, extname, isAbsolute, join, parse, sep } from 'node:path'
+import { dirname, isAbsolute, join, sep } from 'node:path'
 
 export function isNonNullable<T>(value: T): value is NonNullable<T> {
   // NonNullable: not null and not undefined
