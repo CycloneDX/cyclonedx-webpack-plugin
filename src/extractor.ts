@@ -36,7 +36,7 @@ export class Extractor {
   readonly #compilation: Compilation
   readonly #componentBuilder: CDX.Builders.FromNodePackageJson.ComponentBuilder
   readonly #purlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory
-  readonly #leFetcher: CDX.Builders.License.LicenseEvidenceFetcher
+  readonly #leFetcher: CDX.Utils.LicenseUtility.LicenseEvidenceFetcher
 
   constructor (
     compilation: Compilation,
@@ -149,7 +149,7 @@ export class Extractor {
 
   public * getLicenseEvidence (packageDir: string, logger?: WebpackLogger): Generator<CDX.Models.License> {
     try {
-      const files = this.#leFetcher.fetch(
+      const files = this.#leFetcher.fetchAsAttachment(
         packageDir,
         (error: Error): void => {
           /* c8 ignore next 2 */
