@@ -258,7 +258,7 @@ export class CycloneDxWebpackPlugin {
           compilation,
           cdxComponentBuilder,
           cdxPurlFactory,
-          new CDX.Utils.LicenseUtility.LicenseEvidenceFetcher()
+          new CDX.Utils.LicenseUtility.LicenseEvidenceGatherer()
         )
 
         thisLogger.log('generating components...')
