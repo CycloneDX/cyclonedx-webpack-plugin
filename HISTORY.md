@@ -6,10 +6,16 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+
+* Changed
+  * Utilizes license file gatherer of `@cyclonedx/cyclonedx-library`, previously used own implementation (via [#1398])
+* Dependencies
+  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@8.4.0`, was `@8.3.0` (via [#1398])
 * Build
   * Use _TypeScript_ `v5.8.3` now, was `v5.8.2` (via [#1382])
  
 [#1382]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1382
+[#1398]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1398
 
 ## 5.0.1 - 2025-03-17
 
