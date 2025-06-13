@@ -161,8 +161,9 @@ export class Extractor {
         yield new CDX.Models.NamedLicense(`file: ${file}`, { text })
       }
     }
-    /* c8 ignore next 2 */
+    /* c8 ignore next 3 */
     catch (e) {
+      // generator will not throw before first `.nest()` is called ...
       logger?.warn('collecting license evidence in', packageDir, 'failed:', e)
     }
   }
