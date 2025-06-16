@@ -17,15 +17,13 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { type Dirent,readdirSync, readFileSync } from 'node:fs'
-import { dirname, join } from 'node:path'
+import { dirname } from 'node:path'
 
 import * as CDX from '@cyclonedx/cyclonedx-library'
 import normalizePackageJson from 'normalize-package-data'
 import type { Compilation, Module } from 'webpack'
 
 import {
-  getMimeForLicenseFile,
   getPackageDescription,
   isNonNullable,
   type PackageDescription,
@@ -38,15 +36,18 @@ export class Extractor {
   readonly #compilation: Compilation
   readonly #componentBuilder: CDX.Builders.FromNodePackageJson.ComponentBuilder
   readonly #purlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory
+  readonly #leGatherer: CDX.Utils.LicenseUtility.LicenseEvidenceGatherer
 
   constructor (
     compilation: Compilation,
     componentBuilder: CDX.Builders.FromNodePackageJson.ComponentBuilder,
-    purlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory
+    purlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory,
+    leFetcher: CDX.Utils.LicenseUtility.LicenseEvidenceGatherer
   ) {
     this.#compilation = compilation
     this.#componentBuilder = componentBuilder
     this.#purlFactory = purlFactory
+    this.#leGatherer = leFetcher
   }
 
   generateComponents (modules: Iterable<Module>, collectEvidence: boolean, logger?: WebpackLogger): Iterable<CDX.Models.Component> {
@@ -146,47 +147,24 @@ export class Extractor {
     }
   }
 
-  readonly #LICENSE_FILENAME_PATTERN = /^(?:UN)?LICEN[CS]E|.\.LICEN[CS]E$|^NOTICE$/i
-
   public * getLicenseEvidence (packageDir: string, logger?: WebpackLogger): Generator<CDX.Models.License> {
-    let pcis: Dirent[] = []
+    const files = this.#leGatherer.getFileAttachments(
+      packageDir,
+      (error: Error): void => {
+        /* c8 ignore next 2 */
+        logger?.info(error.message)
+        logger?.debug(error.message, error)
+      }
+    )
     try {
-      pcis = readdirSync(packageDir, { withFileTypes: true })
-    } catch (e) {
-      logger?.warn('collecting license evidence in', packageDir, 'failed:', e)
-      return
+      for (const {file, text} of files) {
+        yield new CDX.Models.NamedLicense(`file: ${file}`, { text })
+      }
     }
-    for (const pci of pcis) {
-      if (
-        // Ignore all directories - they are not files :-)
-        // Don't follow symlinks for security reasons!
-        !pci.isFile() ||
-        !this.#LICENSE_FILENAME_PATTERN.test(pci.name)
-      ) {
-        continue
-      }
-
-      const contentType = getMimeForLicenseFile(pci.name)
-      if (contentType === undefined) {
-        continue
-      }
-
-      const fp = join(packageDir, pci.name)
-      try {
-        yield new CDX.Models.NamedLicense(
-          `file: ${pci.name}`,
-          {
-            text: new CDX.Models.Attachment(
-              readFileSync(fp).toString('base64'),
-              {
-                contentType,
-                encoding: CDX.Enums.AttachmentEncoding.Base64
-              }
-            )
-          })
-      } catch (e) { // may throw if `readFileSync()` fails
-        logger?.warn('collecting license evidence from', fp, 'failed:', e)
-      }
+    /* c8 ignore next 3 */
+    catch (e) {
+      // generator will not throw before first `.nest()` is called ...
+      logger?.warn('collecting license evidence in', packageDir, 'failed:', e)
     }
   }
 }
