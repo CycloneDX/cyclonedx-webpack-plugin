@@ -20,6 +20,9 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 import { existsSync, readFileSync } from 'node:fs'
 import { dirname, isAbsolute, join, sep } from 'node:path'
 
+import normalizePackageData from 'normalize-package-data'
+
+
 export function isNonNullable<T>(value: T): value is NonNullable<T> {
   // NonNullable: not null and not undefined
   return value !== null && value !== undefined
@@ -116,3 +119,22 @@ export function iterableSome<T>(i: Iterable<T>, t: (v: T) => boolean): boolean {
 }
 
 // endregion polyfills
+
+
+export function isString (v: any): v is string {
+  return typeof v === 'string'
+}
+
+export function normalizePackageManifest (data: any, warn?: normalizePackageData.WarnFn): asserts data is normalizePackageData.Package {
+  /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-member-access -- ack*/
+  const oVersion = data.version
+
+  /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- ack */
+  normalizePackageData(data as normalizePackageData.Input, warn)
+
+  if (isString(oVersion)) {
+    // normalizer might have stripped version or sanitized it to SemVer -- we want the original
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- ack */
+    data.version = oVersion.trim()
+  }
+}

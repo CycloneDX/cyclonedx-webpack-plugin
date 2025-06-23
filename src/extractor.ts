@@ -20,15 +20,14 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 import { dirname } from 'node:path'
 
 import * as CDX from '@cyclonedx/cyclonedx-library'
-import normalizePackageJson from 'normalize-package-data'
 import type { Compilation, Module } from 'webpack'
 
 import {
   getPackageDescription,
   isNonNullable,
+  normalizePackageManifest,
   type PackageDescription,
-  structuredClonePolyfill
-} from './_helpers'
+  structuredClonePolyfill} from './_helpers'
 
 type WebpackLogger = Compilation['logger']
 
@@ -93,29 +92,19 @@ export class Extractor {
    */
   makeComponent (pkg: PackageDescription, collectEvidence: boolean, logger?: WebpackLogger): CDX.Models.Component {
     try {
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
+      // work with a deep copy, because `normalizePackageManifest()` might modify the data
+      /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ach */
       const _packageJson = structuredClonePolyfill(pkg.packageJson)
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hont */
-      normalizePackageJson(_packageJson as normalizePackageJson.Input /* add debug for warnings? */)
-      // region fix normalizations
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- expected */
-      if (typeof pkg.packageJson.version === 'string') {
-        // allow non-SemVer strings
-        /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-                                  , @typescript-eslint/no-unsafe-type-assertion
-           -- hint hint */
-        _packageJson.version = (pkg.packageJson.version as string).trim()
-      }
-      // endregion fix normalizations
-      /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- hint hint */
-      pkg.packageJson = _packageJson as normalizePackageJson.Package
+      normalizePackageManifest(_packageJson)
+      pkg.packageJson = _packageJson
     } catch (e) {
       logger?.warn('normalizePackageJson from PkgPath', pkg.path, 'failed:', e)
     }
 
     const component = this.#componentBuilder.makeComponent(
-      /* eslint-disable-next-line  @typescript-eslint/no-unsafe-type-assertion -- hint hint */
-      pkg.packageJson as normalizePackageJson.Package)
+      /* @ts-expect-error TS2559 */
+      pkg.packageJson as PackageDescription) /* eslint-disable-line  @typescript-eslint/no-unsafe-type-assertion -- ack */
+
     if (component === undefined) {
       throw new Error(`failed building Component from PkgPath ${pkg.path}`)
     }
