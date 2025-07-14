@@ -74,7 +74,7 @@ jobs:
       - name: setup tools
         run: |
           echo "::group::install code-style deps"
-          npm run -- dev-setup:code-style --ignore-scripts --loglevel=silly
+          npm run -- dev-setup:tools:code-style --ignore-scripts --loglevel=silly
           echo "::endgroup::"
       - name: make reports dir
         run: mkdir -p "$REPORTS_DIR"
