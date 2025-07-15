@@ -54,6 +54,9 @@ updates:
           - '@types/*-eslint'
           - '@eslint-community/*'
           - '@typescript-eslint/*'
+          - 'typescript-eslint'
+          - 'neostandard'
+          - 'globals'
       webpack:
         patterns:
           - 'webpack'
