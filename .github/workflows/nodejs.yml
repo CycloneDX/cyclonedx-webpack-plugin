@@ -169,7 +169,7 @@ jobs:
           npm i --ignore-scripts --loglevel=silly --no-save $dev_requirements
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: dist
           path: dist
@@ -228,7 +228,7 @@ jobs:
           # cache-dependency-path: "**/package-lock.json"
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: dist
           path: dist
@@ -248,7 +248,7 @@ jobs:
     steps:
       - name: fetch test artifacts
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           pattern: '${{ env.TESTS_REPORTS_ARTIFACT }}_*'
           merge-multiple: true
