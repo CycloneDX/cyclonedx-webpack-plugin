@@ -1,0 +1,43 @@
+{
+  "name": "@cyclonedx-webpack-plugin-tests/regression-issue1418",
+  "description": "example setup with autodetect disabled properly configured `rootComponentVCS`",
+  "private": true,
+  "type": "commonjs",
+  "homepage": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/regression-issue1418#readme",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Maxim Bagryantsev",
+    "url": "https://github.com/max619"
+  },
+  "contributors": [
+    {
+      "name": "Maxim Bagryantsev",
+      "url": "https://github.com/max619"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
+    "directory": "tests/integration/regression-issue1418"
+  },
+  "bugs": {
+    "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues"
+  },
+  "main": "index.html",
+  "scripts": {
+    "prebuild": "node -r fs -e 'fs.rmSync(\"dist\",{recursive:true,force:true})'",
+    "build": "webpack build"
+  },
+  "dependencies": {
+    "libphonenumber-js": "1.11.16"
+  },
+  "devDependencies": {
+    "@cyclonedx/webpack-plugin": "file:../../..",
+    "webpack": "^5",
+    "webpack-cli": "^5"
+  },
+  "engines": {
+    "node": ">=20.18.0",
+    "npm": ">=10"
+  }
+}
