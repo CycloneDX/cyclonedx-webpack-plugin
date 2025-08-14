@@ -2240,46 +2240,8 @@ exports[`integration feature: root component VCS generated json file: dist/.bom/
       ]
     }
   },
-  "components": [
-    {
-      "type": "library",
-      "name": "feature-issue1344-no-detect",
-      "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/feature-issue1344-no-detect?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git#tests/integration/feature-issue1344-no-detect",
-      "author": "Jeremy Long",
-      "description": "example setup with autodetect disabled properly configured \`rootComponentVCS\`",
-      "licenses": [
-        {
-          "license": {
-            "id": "Apache-2.0",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/feature-issue1344-no-detect?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git#tests/integration/feature-issue1344-no-detect",
-      "externalReferences": [
-        {
-          "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \\"bugs.url\\""
-        },
-        {
-          "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/feature-issue1344-no-detect",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \\"repository.url\\" and \\"repository.directory\\""
-        },
-        {
-          "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/feature-issue1344-no-detect#readme",
-          "type": "website",
-          "comment": "as detected from PackageJson property \\"homepage\\""
-        }
-      ]
-    }
-  ],
+  "components": [],
   "dependencies": [
-    {
-      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/feature-issue1344-no-detect?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git#tests/integration/feature-issue1344-no-detect"
-    },
     {
       "ref": "pkg:npm/overridden-cyclonedx-webpack-plugin@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin"
     }
@@ -2392,46 +2354,8 @@ exports[`integration feature: root component VCS generated json file: dist/.well
       ]
     }
   },
-  "components": [
-    {
-      "type": "library",
-      "name": "feature-issue1344-no-detect",
-      "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/feature-issue1344-no-detect?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git#tests/integration/feature-issue1344-no-detect",
-      "author": "Jeremy Long",
-      "description": "example setup with autodetect disabled properly configured \`rootComponentVCS\`",
-      "licenses": [
-        {
-          "license": {
-            "id": "Apache-2.0",
-            "acknowledgement": "declared"
-          }
-        }
-      ],
-      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/feature-issue1344-no-detect?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git#tests/integration/feature-issue1344-no-detect",
-      "externalReferences": [
-        {
-          "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
-          "type": "issue-tracker",
-          "comment": "as detected from PackageJson property \\"bugs.url\\""
-        },
-        {
-          "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/feature-issue1344-no-detect",
-          "type": "vcs",
-          "comment": "as detected from PackageJson property \\"repository.url\\" and \\"repository.directory\\""
-        },
-        {
-          "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/feature-issue1344-no-detect#readme",
-          "type": "website",
-          "comment": "as detected from PackageJson property \\"homepage\\""
-        }
-      ]
-    }
-  ],
+  "components": [],
   "dependencies": [
-    {
-      "ref": "pkg:npm/%40cyclonedx-webpack-plugin-tests/feature-issue1344-no-detect?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git#tests/integration/feature-issue1344-no-detect"
-    },
     {
       "ref": "pkg:npm/overridden-cyclonedx-webpack-plugin@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin"
     }
@@ -2524,36 +2448,8 @@ exports[`integration feature: root component VCS generated xml file: dist/.bom/b
       </externalReferences>
     </component>
   </metadata>
-  <components>
-    <component type="library" bom-ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/feature-issue1344-no-detect?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git#tests/integration/feature-issue1344-no-detect">
-      <author>Jeremy Long</author>
-      <group>@cyclonedx-webpack-plugin-tests</group>
-      <name>feature-issue1344-no-detect</name>
-      <description>example setup with autodetect disabled properly configured \`rootComponentVCS\`</description>
-      <licenses>
-        <license acknowledgement="declared">
-          <id>Apache-2.0</id>
-        </license>
-      </licenses>
-      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/feature-issue1344-no-detect?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git#tests/integration/feature-issue1344-no-detect</purl>
-      <externalReferences>
-        <reference type="issue-tracker">
-          <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
-          <comment>as detected from PackageJson property "bugs.url"</comment>
-        </reference>
-        <reference type="vcs">
-          <url>git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git#tests/integration/feature-issue1344-no-detect</url>
-          <comment>as detected from PackageJson property "repository.url" and "repository.directory"</comment>
-        </reference>
-        <reference type="website">
-          <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/integration/feature-issue1344-no-detect#readme</url>
-          <comment>as detected from PackageJson property "homepage"</comment>
-        </reference>
-      </externalReferences>
-    </component>
-  </components>
+  <components/>
   <dependencies>
-    <dependency ref="pkg:npm/%40cyclonedx-webpack-plugin-tests/feature-issue1344-no-detect?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git#tests/integration/feature-issue1344-no-detect"/>
     <dependency ref="pkg:npm/overridden-cyclonedx-webpack-plugin@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin"/>
   </dependencies>
 </bom>"
@@ -7456,6 +7352,438 @@ exports[`integration functional: webpack5 with vue2-cli-service generated xml fi
       <dependency ref="pkg:npm/vue@2.7.16?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fvuejs%2Fvue.git"/>
     </dependency>
     <dependency ref="pkg:npm/vue@2.7.16?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fvuejs%2Fvue.git"/>
+  </dependencies>
+</bom>"
+`;
+
+exports[`integration regression: correctly renames root component generated json file: dist/.bom/bom.json 1`] = `
+"{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "metadata": {
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "webpack",
+          "version": "webpackVersion-testing"
+        },
+        {
+          "type": "library",
+          "name": "cyclonedx-library",
+          "group": "@cyclonedx",
+          "version": "libVersion-testing",
+          "author": "Jan Kowalleck",
+          "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \\"bugs.url\\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \\"repository.url\\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \\"homepage\\""
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "webpack-plugin",
+          "group": "@cyclonedx",
+          "version": "thisVersion-testing",
+          "author": "Jan Kowalleck",
+          "description": "Creates CycloneDX Software Bill of Materials (SBoM) from webpack projects",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \\"bugs.url\\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \\"repository.url\\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \\"homepage\\""
+            }
+          ]
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "name": "overridden-cycloneDx-webpack-plugin",
+      "version": "1.0.0",
+      "bom-ref": "pkg:npm/overridden-cyclonedx-webpack-plugin@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin",
+      "purl": "pkg:npm/overridden-cyclonedx-webpack-plugin@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin",
+      "externalReferences": [
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/actions",
+          "type": "build-system",
+          "comment": "as declared via cyclonedx-webpack-plugin config \\"rootComponentBuildSystem\\""
+        },
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin",
+          "type": "vcs",
+          "comment": "as declared via cyclonedx-webpack-plugin config \\"rootComponentVCS\\""
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "libphonenumber-js",
+      "version": "1.11.16",
+      "bom-ref": "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.com%2Fcatamphetamine%2Flibphonenumber-js.git",
+      "author": "catamphetamine",
+      "description": "A simpler (and smaller) rewrite of Google Android's libphonenumber library in javascript",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.com%2Fcatamphetamine%2Flibphonenumber-js.git",
+      "externalReferences": [
+        {
+          "url": "https://gitlab.com/catamphetamine/libphonenumber-js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git+https://gitlab.com/catamphetamine/libphonenumber-js.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://gitlab.com/catamphetamine/libphonenumber-js#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.com%2Fcatamphetamine%2Flibphonenumber-js.git"
+    },
+    {
+      "ref": "pkg:npm/overridden-cyclonedx-webpack-plugin@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin",
+      "dependsOn": [
+        "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.com%2Fcatamphetamine%2Flibphonenumber-js.git"
+      ]
+    }
+  ]
+}"
+`;
+
+exports[`integration regression: correctly renames root component generated json file: dist/.well-known/sbom 1`] = `
+"{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "metadata": {
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "webpack",
+          "version": "webpackVersion-testing"
+        },
+        {
+          "type": "library",
+          "name": "cyclonedx-library",
+          "group": "@cyclonedx",
+          "version": "libVersion-testing",
+          "author": "Jan Kowalleck",
+          "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \\"bugs.url\\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \\"repository.url\\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \\"homepage\\""
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "webpack-plugin",
+          "group": "@cyclonedx",
+          "version": "thisVersion-testing",
+          "author": "Jan Kowalleck",
+          "description": "Creates CycloneDX Software Bill of Materials (SBoM) from webpack projects",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \\"bugs.url\\""
+            },
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \\"repository.url\\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \\"homepage\\""
+            }
+          ]
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "name": "overridden-cycloneDx-webpack-plugin",
+      "version": "1.0.0",
+      "bom-ref": "pkg:npm/overridden-cyclonedx-webpack-plugin@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin",
+      "purl": "pkg:npm/overridden-cyclonedx-webpack-plugin@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin",
+      "externalReferences": [
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/actions",
+          "type": "build-system",
+          "comment": "as declared via cyclonedx-webpack-plugin config \\"rootComponentBuildSystem\\""
+        },
+        {
+          "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin",
+          "type": "vcs",
+          "comment": "as declared via cyclonedx-webpack-plugin config \\"rootComponentVCS\\""
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "libphonenumber-js",
+      "version": "1.11.16",
+      "bom-ref": "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.com%2Fcatamphetamine%2Flibphonenumber-js.git",
+      "author": "catamphetamine",
+      "description": "A simpler (and smaller) rewrite of Google Android's libphonenumber library in javascript",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.com%2Fcatamphetamine%2Flibphonenumber-js.git",
+      "externalReferences": [
+        {
+          "url": "https://gitlab.com/catamphetamine/libphonenumber-js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \\"bugs.url\\""
+        },
+        {
+          "url": "git+https://gitlab.com/catamphetamine/libphonenumber-js.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \\"repository.url\\""
+        },
+        {
+          "url": "https://gitlab.com/catamphetamine/libphonenumber-js#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \\"homepage\\""
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.com%2Fcatamphetamine%2Flibphonenumber-js.git"
+    },
+    {
+      "ref": "pkg:npm/overridden-cyclonedx-webpack-plugin@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin",
+      "dependsOn": [
+        "pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.com%2Fcatamphetamine%2Flibphonenumber-js.git"
+      ]
+    }
+  ]
+}"
+`;
+
+exports[`integration regression: correctly renames root component generated xml file: dist/.bom/bom.xml 1`] = `
+"<?xml version="1.0" encoding="UTF-8"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
+  <metadata>
+    <lifecycles>
+      <lifecycle>
+        <phase>build</phase>
+      </lifecycle>
+    </lifecycles>
+    <tools>
+      <components>
+        <component type="application">
+          <name>webpack</name>
+          <version>webpackVersion-testing</version>
+        </component>
+        <component type="library">
+          <author>Jan Kowalleck</author>
+          <group>@cyclonedx</group>
+          <name>cyclonedx-library</name>
+          <version>libVersion-testing</version>
+          <description>Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).</description>
+          <licenses>
+            <license>
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/CycloneDX/cyclonedx-javascript-library/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/CycloneDX/cyclonedx-javascript-library.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/CycloneDX/cyclonedx-javascript-library#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+        <component type="library">
+          <author>Jan Kowalleck</author>
+          <group>@cyclonedx</group>
+          <name>webpack-plugin</name>
+          <version>thisVersion-testing</version>
+          <description>Creates CycloneDX Software Bill of Materials (SBoM) from webpack projects</description>
+          <licenses>
+            <license>
+              <id>Apache-2.0</id>
+            </license>
+          </licenses>
+          <externalReferences>
+            <reference type="issue-tracker">
+              <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
+              <comment>as detected from PackageJson property "bugs.url"</comment>
+            </reference>
+            <reference type="vcs">
+              <url>git+https://github.com/CycloneDX/cyclonedx-webpack-plugin.git</url>
+              <comment>as detected from PackageJson property "repository.url"</comment>
+            </reference>
+            <reference type="website">
+              <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin#readme</url>
+              <comment>as detected from PackageJson property "homepage"</comment>
+            </reference>
+          </externalReferences>
+        </component>
+      </components>
+    </tools>
+    <component type="application" bom-ref="pkg:npm/overridden-cyclonedx-webpack-plugin@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin">
+      <name>overridden-cycloneDx-webpack-plugin</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/overridden-cyclonedx-webpack-plugin@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin</purl>
+      <externalReferences>
+        <reference type="build-system">
+          <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/actions</url>
+          <comment>as declared via cyclonedx-webpack-plugin config "rootComponentBuildSystem"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin</url>
+          <comment>as declared via cyclonedx-webpack-plugin config "rootComponentVCS"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+  </metadata>
+  <components>
+    <component type="library" bom-ref="pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.com%2Fcatamphetamine%2Flibphonenumber-js.git">
+      <author>catamphetamine</author>
+      <name>libphonenumber-js</name>
+      <version>1.11.16</version>
+      <description>A simpler (and smaller) rewrite of Google Android's libphonenumber library in javascript</description>
+      <licenses>
+        <license acknowledgement="declared">
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.com%2Fcatamphetamine%2Flibphonenumber-js.git</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://gitlab.com/catamphetamine/libphonenumber-js/issues</url>
+          <comment>as detected from PackageJson property "bugs.url"</comment>
+        </reference>
+        <reference type="vcs">
+          <url>git+https://gitlab.com/catamphetamine/libphonenumber-js.git</url>
+          <comment>as detected from PackageJson property "repository.url"</comment>
+        </reference>
+        <reference type="website">
+          <url>https://gitlab.com/catamphetamine/libphonenumber-js#readme</url>
+          <comment>as detected from PackageJson property "homepage"</comment>
+        </reference>
+      </externalReferences>
+    </component>
+  </components>
+  <dependencies>
+    <dependency ref="pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.com%2Fcatamphetamine%2Flibphonenumber-js.git"/>
+    <dependency ref="pkg:npm/overridden-cyclonedx-webpack-plugin@1.0.0?vcs_url=https%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin">
+      <dependency ref="pkg:npm/libphonenumber-js@1.11.16?vcs_url=git%2Bhttps%3A%2F%2Fgitlab.com%2Fcatamphetamine%2Flibphonenumber-js.git"/>
+    </dependency>
   </dependencies>
 </bom>"
 `;
