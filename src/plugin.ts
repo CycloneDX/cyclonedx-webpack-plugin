@@ -387,11 +387,11 @@ export class CycloneDxWebpackPlugin {
       : { name: this.rootComponentName, version: this.rootComponentVersion }
     if (thisPackageJson === undefined) { return undefined }
     normalizePackageManifest(
-       
+
       thisPackageJson,
       w => { logger.debug('normalizePackageJson from PkgPath', path, 'caused:', w) }
     )
-     
+
     return builder.makeComponent(thisPackageJson)
   }
 

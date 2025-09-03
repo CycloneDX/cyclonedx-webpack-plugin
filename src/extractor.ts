@@ -27,7 +27,8 @@ import {
   isNonNullable,
   normalizePackageManifest,
   type PackageDescription,
-  structuredClonePolyfill} from './_helpers'
+  structuredClonePolyfill
+} from './_helpers'
 
 type WebpackLogger = Compilation['logger']
 
