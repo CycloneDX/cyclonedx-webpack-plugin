@@ -401,6 +401,7 @@ export class CycloneDxWebpackPlugin {
     cdxPurlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory,
     logger: WebpackLogger
   ): void {
+    /* eslint-disable no-param-reassign -- intended */
     bom.serialNumber = this.reproducibleResults
       ? undefined
       : CDX.Utils.BomUtility.randomSerialNumber()
@@ -423,6 +424,7 @@ export class CycloneDxWebpackPlugin {
       bom.metadata.component.purl = cdxPurlFactory.makeFromComponent(bom.metadata.component)
       bom.metadata.component.bomRef.value = bom.metadata.component.purl?.toString()
     }
+    /* eslint-enable no-param-reassign */
   }
 
   * #makeToolCs (builder: CDX.Builders.FromNodePackageJson.ComponentBuilder, logger: WebpackLogger): Generator<CDX.Models.Component> {
