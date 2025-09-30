@@ -74,7 +74,7 @@ export function getPackageDescription(path: string): PackageDescription | undefi
     if (nextPath === path || isNodeModulesFolder(nextPath)) {
       return undefined
     }
-    path = nextPath
+    path = nextPath /* eslint-disable-line  no-param-reassign -- ack */
   }
   return undefined
 }
@@ -134,7 +134,7 @@ export function normalizePackageManifest (data: any, warn?: normalizePackageData
 
   if (isString(oVersion)) {
     // normalizer might have stripped version or sanitized it to SemVer -- we want the original
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- ack */
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, no-param-reassign -- ack */
     data.version = oVersion.trim()
   }
 }

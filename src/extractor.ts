@@ -97,7 +97,7 @@ export class Extractor {
       /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ach */
       const _packageJson = structuredClonePolyfill(pkg.packageJson)
       normalizePackageManifest(_packageJson)
-      pkg.packageJson = _packageJson
+      pkg.packageJson = _packageJson /* eslint-disable-line  no-param-reassign -- intended  */
     } catch (e) {
       logger?.warn('normalizePackageJson from PkgPath', pkg.path, 'failed:', e)
     }
@@ -111,7 +111,9 @@ export class Extractor {
     }
 
     component.licenses.forEach(l => {
+      /* eslint-disable no-param-reassign -- intended */
       l.acknowledgement = CDX.Enums.LicenseAcknowledgement.Declared
+      /* eslint-enable no-param-reassign -- intended */
     })
 
     if (collectEvidence) {
