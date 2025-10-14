@@ -36,11 +36,10 @@ jobs:
         uses: actions/checkout@v5
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
-          # cache: "npm"
-          # cache-dependency-path: "**/package-lock.json"
+          package-manager-cache: false
       - name: setup project
         run: npm i --ignore-scripts
       - name: build ${{ matrix.target }}
@@ -63,11 +62,10 @@ jobs:
         uses: actions/checkout@v5
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
-          # cache: "npm"
-          # cache-dependency-path: "**/package-lock.json"
+          package-manager-cache: false
       - name: setup project
         run: |
           npm install --ignore-scripts --loglevel=silly
@@ -108,11 +106,10 @@ jobs:
         uses: actions/checkout@v5
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
-          # cache: "npm"
-          # cache-dependency-path: "**/package-lock.json"
+          package-manager-cache: false
       - name: setup project
         run: npm install --ignore-scripts --loglevel=silly
       - name: setup tool
@@ -142,11 +139,10 @@ jobs:
         uses: actions/checkout@v5
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
-          # cache: "npm"
-          # cache-dependency-path: "**/package-lock.json"
+          package-manager-cache: false
       - # some integration tests require a certain npm version to be installable
         name: update npm
         run: |-
@@ -221,11 +217,10 @@ jobs:
         uses: actions/checkout@v5
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
-          # cache: "npm"
-          # cache-dependency-path: "**/package-lock.json"
+          package-manager-cache: false
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
         uses: actions/download-artifact@v5
