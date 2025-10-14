@@ -88,7 +88,7 @@
     "@types/node": "ts5.8",
     "@types/normalize-package-data": "^2.4.4",
     "c8": "^10",
-    "jest": "30.1.3",
+    "jest": "30.2.0",
     "jest-junit": "16.0.0",
     "npm-run-all2": "^8.0.1",
     "typescript": "5.9.2",
