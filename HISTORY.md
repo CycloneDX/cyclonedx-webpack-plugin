@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Build
+  * Use _TypeScript_ `v5.9.3` now, was `v5.9.2` (via [#1438])
+
+[#1438]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1438
+
 ## 5.1.1 - 2025-09-16
 
 * Runtime Dependencies
