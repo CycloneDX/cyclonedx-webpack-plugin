@@ -23,10 +23,12 @@ import * as CDX from '@cyclonedx/cyclonedx-library'
 import type { Compilation, Module } from 'webpack'
 
 import {
+  doComponentsMatch,
   getPackageDescription,
   isNonNullable,
   normalizePackageManifest,
   type PackageDescription,
+  type RootComponentCreationResult,
   structuredClonePolyfill
 } from './_helpers'
 
@@ -50,7 +52,7 @@ export class Extractor {
     this.#leGatherer = leFetcher
   }
 
-  generateComponents (modules: Iterable<Module>, collectEvidence: boolean, logger?: WebpackLogger): Iterable<CDX.Models.Component> {
+  generateComponents (modules: Iterable<Module>, collectEvidence: boolean, rootComponents: RootComponentCreationResult | undefined, logger?: WebpackLogger): Iterable<CDX.Models.Component> {
     const pkgs: Record<string, CDX.Models.Component | undefined> = {}
     const components = new Map<Module, CDX.Models.Component>()
 
@@ -69,7 +71,7 @@ export class Extractor {
       if (component === undefined) {
         logger?.log('try to build new Component from PkgPath:', pkg.path)
         try {
-          component = this.makeComponent(pkg, collectEvidence, logger)
+          component = this.#makeComponent(pkg, collectEvidence, rootComponents, logger)
         } catch (err) {
           logger?.debug('unexpected error:', err)
           logger?.warn('skipped Component from PkgPath', pkg.path)
@@ -91,7 +93,7 @@ export class Extractor {
   /**
    * @throws {@link Error} when no component could be fetched
    */
-  makeComponent (pkg: PackageDescription, collectEvidence: boolean, logger?: WebpackLogger): CDX.Models.Component {
+  #makeComponent (pkg: PackageDescription, collectEvidence: boolean, rootComponents: RootComponentCreationResult | undefined, logger?: WebpackLogger): CDX.Models.Component {
     try {
       // work with a deep copy, because `normalizePackageManifest()` might modify the data
       /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ach */
@@ -102,12 +104,16 @@ export class Extractor {
       logger?.warn('normalizePackageJson from PkgPath', pkg.path, 'failed:', e)
     }
 
-    const component = this.#componentBuilder.makeComponent(
+    let component = this.#componentBuilder.makeComponent(
       /* @ts-expect-error TS2559 */
       pkg.packageJson as PackageDescription) /* eslint-disable-line  @typescript-eslint/no-unsafe-type-assertion -- ack */
 
     if (component === undefined) {
       throw new Error(`failed building Component from PkgPath ${pkg.path}`)
+    }
+
+    if (rootComponents?.detectedRootComponent !== undefined && doComponentsMatch(component, rootComponents.detectedRootComponent)) {
+      component = rootComponents.rootComponent
     }
 
     component.licenses.forEach(l => {

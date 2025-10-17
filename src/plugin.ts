@@ -24,11 +24,13 @@ import * as CDX from '@cyclonedx/cyclonedx-library'
 import { Compilation, type Compiler, sources, version as WEBPACK_VERSION } from 'webpack'
 
 import {
+  doComponentsMatch,
   getPackageDescription,
   iterableSome,
   loadJsonFile,
   normalizePackageManifest,
-  type PackageDescription
+  type PackageDescription,
+  type RootComponentCreationResult
 } from './_helpers'
 import { Extractor } from './extractor'
 
@@ -214,7 +216,8 @@ export class CycloneDxWebpackPlugin {
 
     const bom = new CDX.Models.Bom()
     bom.metadata.lifecycles.add(CDX.Enums.LifecyclePhase.Build)
-    bom.metadata.component = this.#makeRootComponent(compilation.compiler.context, cdxComponentBuilder, logger.getChildLogger('RootComponentBuilder'))
+    const rootComponents = this.#makeRootComponent(compilation.compiler.context, cdxComponentBuilder, logger.getChildLogger('RootComponentBuilder'))
+    bom.metadata.component = rootComponents?.rootComponent
 
     const serializeOptions: CDX.Serialize.Types.SerializerOptions & CDX.Serialize.Types.NormalizerOptions = {
       sortLists: this.reproducibleResults,
@@ -267,11 +270,9 @@ export class CycloneDxWebpackPlugin {
         )
 
         thisLogger.log('generating components...')
-        for (const component of extractor.generateComponents(modules, this.collectEvidence, thisLogger.getChildLogger('Extractor'))) {
+        for (const component of extractor.generateComponents(modules, this.collectEvidence, rootComponents, thisLogger.getChildLogger('Extractor'))) {
           if (bom.metadata.component !== undefined &&
-            bom.metadata.component.group === component.group &&
-            bom.metadata.component.name === component.name &&
-            bom.metadata.component.version === component.version
+            doComponentsMatch(bom.metadata.component, component)
           ) {
             // metadata matches this exact component.
             // -> so the component is actually treated as the root component.
@@ -380,19 +381,33 @@ export class CycloneDxWebpackPlugin {
     path: string,
     builder: CDX.Builders.FromNodePackageJson.ComponentBuilder,
     logger: WebpackLogger
-  ): CDX.Models.Component | undefined {
+  ): RootComponentCreationResult | undefined {
     /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
-    const thisPackageJson = this.rootComponentAutodetect
-      ? getPackageDescription(path)?.packageJson
-      : { name: this.rootComponentName, version: this.rootComponentVersion }
-    if (thisPackageJson === undefined) { return undefined }
-    normalizePackageManifest(
+    const detectedRootPackageJson = getPackageDescription(path)?.packageJson
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
+    const rootPackageJson = this.rootComponentAutodetect ? detectedRootPackageJson
+                              : { name: this.rootComponentName, version: this.rootComponentVersion }
 
-      thisPackageJson,
+    if (rootPackageJson === undefined) { return undefined }
+    normalizePackageManifest(
+      rootPackageJson,
       w => { logger.debug('normalizePackageJson from PkgPath', path, 'caused:', w) }
     )
 
-    return builder.makeComponent(thisPackageJson)
+    if (detectedRootPackageJson !== rootPackageJson) {
+      normalizePackageManifest(
+        detectedRootPackageJson,
+        w => { logger.debug('normalizePackageJson from PkgPath', path, 'caused:', w) }
+      )
+    }
+
+    const rootComponent = builder.makeComponent(rootPackageJson)
+    if(rootComponent === undefined) { return undefined }
+
+    const detectedRootComponent = detectedRootPackageJson === rootPackageJson ? rootComponent
+                                /* eslint-disable-next-line @typescript-eslint/no-unsafe-argument -- expected */
+                                : builder.makeComponent(detectedRootPackageJson)
+    return { rootComponent, detectedRootComponent }
   }
 
   #finalizeBom (
