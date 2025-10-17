@@ -50,9 +50,10 @@ jobs:
     steps:
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
+          package-manager-cache: false
       - name: Checkout code
         # see https://github.com/actions/checkout
         uses: actions/checkout@v5
@@ -104,9 +105,10 @@ jobs:
           ref: ${{ needs.bump.outputs.version }}
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
+          package-manager-cache: false
       - name: enable yarn  # needed in some tests
         run: |-
           corepack enable
