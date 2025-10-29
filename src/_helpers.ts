@@ -20,6 +20,7 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 import { existsSync, readFileSync } from 'node:fs'
 import { dirname, isAbsolute, join, sep } from 'node:path'
 
+import type * as CDX from '@cyclonedx/cyclonedx-library'
 import normalizePackageData from 'normalize-package-data'
 
 
@@ -45,6 +46,10 @@ export interface PackageDescription {
   packageJson: NonNullable<any>
 }
 
+export interface RootComponentCreationResult {
+  rootComponent: CDX.Models.Component
+  detectedRootComponent: CDX.Models.Component | undefined
+}
 
 const PACKAGE_MANIFEST_FILENAME = 'package.json'
 
@@ -137,4 +142,10 @@ export function normalizePackageManifest (data: any, warn?: normalizePackageData
     /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, no-param-reassign -- ack */
     data.version = oVersion.trim()
   }
+}
+
+export function doComponentsMatch(first: CDX.Models.Component, second: CDX.Models.Component): boolean {
+  return first.group === second.group &&
+    first.name === second.name &&
+    first.version === second.version
 }

@@ -38,7 +38,8 @@ const nodeSV = Object.freeze((process?.versions?.node ?? '').split('.').map(Numb
     'regression-issue745',
     'regression-issue1284',
     'regression-issue1337',
-    'regression-issue1384'
+    'regression-issue1384',
+    'regression-issue1418'
     // endregion regression tests
   ]
 
