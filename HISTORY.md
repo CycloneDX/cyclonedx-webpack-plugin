@@ -6,10 +6,13 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Added
+  * Basic support for CycloneDX 1.7 (via [#1451])
 * Build
   * Use _TypeScript_ `v5.9.3` now, was `v5.9.2` (via [#1438])
 
 [#1438]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1438
+[#1451]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1451
 
 ## 5.1.1 - 2025-09-16
 
