@@ -91,7 +91,7 @@ export interface CycloneDxWebpackPluginOptions {
   rootComponentAutodetect?: CycloneDxWebpackPlugin['rootComponentAutodetect']
   /**
    * Set the RootComponent's type.
-   * See {@link https://cyclonedx.org/docs/1.6/json/#metadata_component_type | the list of valid values}.
+   * See {@link https://cyclonedx.org/docs/1.7/json/#metadata_component_type | the list of valid values}.
    *
    * @defaultValue `'application'`
    */
@@ -113,12 +113,12 @@ export interface CycloneDxWebpackPluginOptions {
 
   /**
    * Set the externalReference URL for the build-system for the RootComponent.
-   * See {@link https://cyclonedx.org/docs/1.6/json/#metadata_component_externalReferences}.
+   * See {@link https://cyclonedx.org/docs/1.7/json/#metadata_component_externalReferences}.
    */
   rootComponentBuildSystem?: CycloneDxWebpackPlugin['rootComponentBuildSystem']
   /**
    * Set the externalReference URL for the version control system for the RootComponent.
-   * See {@link https://cyclonedx.org/docs/1.6/json/#metadata_component_externalReferences}.
+   * See {@link https://cyclonedx.org/docs/1.7/json/#metadata_component_externalReferences}.
    */
   rootComponentVCS?: CycloneDxWebpackPlugin['rootComponentVCS']
 
