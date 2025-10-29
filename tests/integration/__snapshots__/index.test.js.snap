@@ -2,9 +2,9 @@
 
 exports[`integration feature: component evidence generated json file: dist/.bom/bom.json 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.6",
+  "specVersion": "1.7",
   "version": 1,
   "metadata": {
     "lifecycles": [
@@ -653,9 +653,9 @@ exports[`integration feature: component evidence generated json file: dist/.bom/
 
 exports[`integration feature: component evidence generated json file: dist/.well-known/sbom 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.6",
+  "specVersion": "1.7",
   "version": 1,
   "metadata": {
     "lifecycles": [
@@ -1304,7 +1304,7 @@ exports[`integration feature: component evidence generated json file: dist/.well
 
 exports[`integration feature: component evidence generated xml file: dist/.bom/bom.xml 1`] = `
 "<?xml version="1.0" encoding="UTF-8"?>
-<bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
+<bom xmlns="http://cyclonedx.org/schema/bom/1.7" version="1">
   <metadata>
     <lifecycles>
       <lifecycle>
@@ -1762,9 +1762,9 @@ exports[`integration feature: component evidence generated xml file: dist/.bom/b
 
 exports[`integration feature: root component BuildSystem generated json file: dist/.bom/bom.json 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.6",
+  "specVersion": "1.7",
   "version": 1,
   "metadata": {
     "lifecycles": [
@@ -1896,9 +1896,9 @@ exports[`integration feature: root component BuildSystem generated json file: di
 
 exports[`integration feature: root component BuildSystem generated json file: dist/.well-known/sbom 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.6",
+  "specVersion": "1.7",
   "version": 1,
   "metadata": {
     "lifecycles": [
@@ -2030,7 +2030,7 @@ exports[`integration feature: root component BuildSystem generated json file: di
 
 exports[`integration feature: root component BuildSystem generated xml file: dist/.bom/bom.xml 1`] = `
 "<?xml version="1.0" encoding="UTF-8"?>
-<bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
+<bom xmlns="http://cyclonedx.org/schema/bom/1.7" version="1">
   <metadata>
     <lifecycles>
       <lifecycle>
@@ -2137,9 +2137,9 @@ exports[`integration feature: root component BuildSystem generated xml file: dis
 
 exports[`integration feature: root component VCS generated json file: dist/.bom/bom.json 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.6",
+  "specVersion": "1.7",
   "version": 1,
   "metadata": {
     "lifecycles": [
@@ -2289,9 +2289,9 @@ exports[`integration feature: root component VCS generated json file: dist/.bom/
 
 exports[`integration feature: root component VCS generated json file: dist/.well-known/sbom 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.6",
+  "specVersion": "1.7",
   "version": 1,
   "metadata": {
     "lifecycles": [
@@ -2441,7 +2441,7 @@ exports[`integration feature: root component VCS generated json file: dist/.well
 
 exports[`integration feature: root component VCS generated xml file: dist/.bom/bom.xml 1`] = `
 "<?xml version="1.0" encoding="UTF-8"?>
-<bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
+<bom xmlns="http://cyclonedx.org/schema/bom/1.7" version="1">
   <metadata>
     <lifecycles>
       <lifecycle>
@@ -2561,9 +2561,9 @@ exports[`integration feature: root component VCS generated xml file: dist/.bom/b
 
 exports[`integration functional: webpack5 with angular13 generated json file: dist/.bom/bom.json 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.6",
+  "specVersion": "1.7",
   "version": 1,
   "metadata": {
     "lifecycles": [
@@ -2973,9 +2973,9 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
 
 exports[`integration functional: webpack5 with angular13 generated json file: dist/.well-known/sbom 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.6",
+  "specVersion": "1.7",
   "version": 1,
   "metadata": {
     "lifecycles": [
@@ -3385,7 +3385,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
 
 exports[`integration functional: webpack5 with angular13 generated xml file: dist/.bom/bom.xml 1`] = `
 "<?xml version="1.0" encoding="UTF-8"?>
-<bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
+<bom xmlns="http://cyclonedx.org/schema/bom/1.7" version="1">
   <metadata>
     <lifecycles>
       <lifecycle>
@@ -3696,9 +3696,9 @@ exports[`integration functional: webpack5 with angular13 generated xml file: dis
 
 exports[`integration functional: webpack5 with angular17 generated json file: dist/.bom/bom.json 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.6",
+  "specVersion": "1.7",
   "version": 1,
   "metadata": {
     "lifecycles": [
@@ -4188,9 +4188,9 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
 
 exports[`integration functional: webpack5 with angular17 generated json file: dist/.well-known/sbom 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.6",
+  "specVersion": "1.7",
   "version": 1,
   "metadata": {
     "lifecycles": [
@@ -4680,7 +4680,7 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
 
 exports[`integration functional: webpack5 with angular17 generated xml file: dist/.bom/bom.xml 1`] = `
 "<?xml version="1.0" encoding="UTF-8"?>
-<bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
+<bom xmlns="http://cyclonedx.org/schema/bom/1.7" version="1">
   <metadata>
     <lifecycles>
       <lifecycle>
@@ -6046,9 +6046,9 @@ exports[`integration functional: webpack5 with react18 generated xml file: dist/
 
 exports[`integration functional: webpack5 with vue2 generated json file: dist/.bom/bom.json 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.6",
+  "specVersion": "1.7",
   "version": 1,
   "metadata": {
     "lifecycles": [
@@ -6216,9 +6216,9 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.b
 
 exports[`integration functional: webpack5 with vue2 generated json file: dist/.well-known/sbom 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.6",
+  "specVersion": "1.7",
   "version": 1,
   "metadata": {
     "lifecycles": [
@@ -6386,7 +6386,7 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.w
 
 exports[`integration functional: webpack5 with vue2 generated xml file: dist/.bom/bom.xml 1`] = `
 "<?xml version="1.0" encoding="UTF-8"?>
-<bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
+<bom xmlns="http://cyclonedx.org/schema/bom/1.7" version="1">
   <metadata>
     <lifecycles>
       <lifecycle>
@@ -6519,9 +6519,9 @@ exports[`integration functional: webpack5 with vue2 generated xml file: dist/.bo
 
 exports[`integration functional: webpack5 with vue2 in yarn setup generated json file: dist/.bom/bom.json 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.6",
+  "specVersion": "1.7",
   "version": 1,
   "metadata": {
     "lifecycles": [
@@ -6689,9 +6689,9 @@ exports[`integration functional: webpack5 with vue2 in yarn setup generated json
 
 exports[`integration functional: webpack5 with vue2 in yarn setup generated json file: dist/.well-known/sbom 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.6",
+  "specVersion": "1.7",
   "version": 1,
   "metadata": {
     "lifecycles": [
@@ -6859,7 +6859,7 @@ exports[`integration functional: webpack5 with vue2 in yarn setup generated json
 
 exports[`integration functional: webpack5 with vue2 in yarn setup generated xml file: dist/.bom/bom.xml 1`] = `
 "<?xml version="1.0" encoding="UTF-8"?>
-<bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
+<bom xmlns="http://cyclonedx.org/schema/bom/1.7" version="1">
   <metadata>
     <lifecycles>
       <lifecycle>
@@ -6992,9 +6992,9 @@ exports[`integration functional: webpack5 with vue2 in yarn setup generated xml 
 
 exports[`integration functional: webpack5 with vue2-cli-service generated json file: dist/.bom/bom.json 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.6",
+  "specVersion": "1.7",
   "version": 1,
   "metadata": {
     "lifecycles": [
@@ -7161,9 +7161,9 @@ exports[`integration functional: webpack5 with vue2-cli-service generated json f
 
 exports[`integration functional: webpack5 with vue2-cli-service generated json file: dist/.well-known/sbom 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.6",
+  "specVersion": "1.7",
   "version": 1,
   "metadata": {
     "lifecycles": [
@@ -7330,7 +7330,7 @@ exports[`integration functional: webpack5 with vue2-cli-service generated json f
 
 exports[`integration functional: webpack5 with vue2-cli-service generated xml file: dist/.bom/bom.xml 1`] = `
 "<?xml version="1.0" encoding="UTF-8"?>
-<bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
+<bom xmlns="http://cyclonedx.org/schema/bom/1.7" version="1">
   <metadata>
     <lifecycles>
       <lifecycle>
@@ -9708,9 +9708,9 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
 
 exports[`integration regression: ignore folder \`LICENSES\` generated json file: dist/.bom/bom.json 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.6",
+  "specVersion": "1.7",
   "version": 1,
   "metadata": {
     "lifecycles": [
@@ -9906,9 +9906,9 @@ exports[`integration regression: ignore folder \`LICENSES\` generated json file:
 
 exports[`integration regression: ignore folder \`LICENSES\` generated json file: dist/.well-known/sbom 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.6",
+  "specVersion": "1.7",
   "version": 1,
   "metadata": {
     "lifecycles": [
@@ -10104,7 +10104,7 @@ exports[`integration regression: ignore folder \`LICENSES\` generated json file:
 
 exports[`integration regression: ignore folder \`LICENSES\` generated xml file: dist/.bom/bom.xml 1`] = `
 "<?xml version="1.0" encoding="UTF-8"?>
-<bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
+<bom xmlns="http://cyclonedx.org/schema/bom/1.7" version="1">
   <metadata>
     <lifecycles>
       <lifecycle>
