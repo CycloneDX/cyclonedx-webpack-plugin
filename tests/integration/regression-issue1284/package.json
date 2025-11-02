@@ -21,5 +21,15 @@
   "engines": {
     "node": ">=20.18.0",
     "npm": ">=10"
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "onFail": "error"
+    },
+    "packageManager": {
+      "name": "npm",
+      "onFail": "error"
+    }
   }
 }
