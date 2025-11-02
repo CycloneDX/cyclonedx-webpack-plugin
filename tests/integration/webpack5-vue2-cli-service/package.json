@@ -10,7 +10,7 @@
     "directory": "tests/integration/webpack5-vue2-cli-service"
   },
   "scripts": {
-    "xprebuild": "node -r fs -e 'fs.rmSync(\"dist\",{recursive:true,force:true})'",
+    "prebuild": "node -r fs -e 'fs.rmSync(\"dist\",{recursive:true,force:true})'",
     "build": "vue-cli-service build"
   },
   "dependencies": {
@@ -23,6 +23,12 @@
   },
   "engines": {
     "node": ">=20.18.0"
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "onFail": "error"
+    }
   },
   "browserslist": [
     "> 1%",

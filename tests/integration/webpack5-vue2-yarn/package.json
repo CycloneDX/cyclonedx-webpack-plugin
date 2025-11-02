@@ -42,5 +42,15 @@
     "node": ">=20.18.0",
     "yarn": ">=4"
   },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "onFail": "error"
+    },
+    "packageManager": {
+      "name": "yarn",
+      "onFail": "error"
+    }
+  },
   "packageManager": "yarn@4.3.1"
 }
