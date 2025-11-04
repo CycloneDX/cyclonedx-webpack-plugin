@@ -130,18 +130,9 @@ export interface CycloneDxWebpackPluginOptions {
   collectEvidence?: CycloneDxWebpackPlugin['collectEvidence']
 }
 
-class ValidationError extends Error {
-  readonly details: any
-  constructor (message: string, details: any) {
-    super(message)
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
-    this.details = details
-  }
-}
-
 /** @public */
 export class CycloneDxWebpackPlugin {
-  specVersion: CDX.Spec.Version
+  specVersion: CDX.Spec.Version | `${CDX.Spec.Version}`
   reproducibleResults: boolean
   validateResults: boolean
 
@@ -150,7 +141,7 @@ export class CycloneDxWebpackPlugin {
   resultWellknown: string | undefined
 
   rootComponentAutodetect: boolean
-  rootComponentType: CDX.Models.Component['type']
+  rootComponentType: CDX.Models.Component['type'] |`${CDX.Models.Component['type']}`
   rootComponentName: CDX.Models.Component['name'] | undefined
   rootComponentVersion: CDX.Models.Component['version'] | undefined
   rootComponentBuildSystem: CDX.Models.ExternalReference['url'] | undefined
@@ -420,7 +411,8 @@ export class CycloneDxWebpackPlugin {
 
     if (bom.metadata.component !== undefined) {
       this.#addRootComponentExtRefs(bom.metadata.component, logger)
-      bom.metadata.component.type = this.rootComponentType
+      /* eslint-disable-next-line  @typescript-eslint/no-unsafe-type-assertion -- ack */
+      bom.metadata.component.type = this.rootComponentType as CDX.Models.Component['type']
       bom.metadata.component.purl = cdxPurlFactory.makeFromComponent(bom.metadata.component)
       bom.metadata.component.bomRef.value = bom.metadata.component.purl?.toString()
     }
@@ -463,5 +455,14 @@ export class CycloneDxWebpackPlugin {
         yield tool
       }
     }
+  }
+}
+
+class ValidationError extends Error {
+  readonly details: any
+  constructor (message: string, details: any) {
+    super(message)
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
+    this.details = details
   }
 }
