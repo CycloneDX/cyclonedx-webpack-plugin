@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Fixed
+  * Typing for plugin options (via [#1455]) 
+
+[#1455]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1455
+
 ## 5.2.0 - 2025-10-29
 
 * Added
