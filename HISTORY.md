@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file.
 <!-- unreleased changes go here -->
 
 * Fixed
-  * Typing for plugin options (via [#1455]) 
+  * typing for plugin options of enums support literals, too (via [#1455]) 
 
 [#1455]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1455
 
