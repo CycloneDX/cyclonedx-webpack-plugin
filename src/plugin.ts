@@ -141,7 +141,7 @@ export class CycloneDxWebpackPlugin {
   resultWellknown: string | undefined
 
   rootComponentAutodetect: boolean
-  rootComponentType: CDX.Models.Component['type'] |`${CDX.Models.Component['type']}`
+  rootComponentType: CDX.Models.Component['type'] | `${CDX.Models.Component['type']}`
   rootComponentName: CDX.Models.Component['name'] | undefined
   rootComponentVersion: CDX.Models.Component['version'] | undefined
   rootComponentBuildSystem: CDX.Models.ExternalReference['url'] | undefined
