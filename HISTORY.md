@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
-## 5.2.1 - 2025-11-04
+## 5.2.1 - 2025-11-05
 
 * Fixed
   * typing for plugin options of enums support literals, too (via [#1455]) 
