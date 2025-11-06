@@ -6,6 +6,8 @@
   "copyright": "Copyright OWASP Foundation",
   "keywords": [
     "webpack",
+    "plugin",
+    "webpack-plugin",
     "CycloneDX",
     "bill-of-materials",
     "BOM",
