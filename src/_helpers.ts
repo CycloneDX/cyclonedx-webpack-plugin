@@ -138,3 +138,5 @@ export function normalizePackageManifest (data: any, warn?: normalizePackageData
     data.version = oVersion.trim()
   }
 }
+
+export type ValueType<R> = R extends Record<any, infer V> ? V : never;
