@@ -51,7 +51,7 @@ export class Extractor {
   }
 
   generateComponents (modules: Iterable<Module>, collectEvidence: boolean, logger?: WebpackLogger): Iterable<CDX.Models.Component> {
-    const pkgs: Record<string, CDX.Models.Component> = {}
+    const pkgs: Record<string, CDX.Models.Component | undefined> = {}
     const components = new Map<Module, CDX.Models.Component>()
 
     logger?.log('start building Components from modules...')
@@ -65,7 +65,7 @@ export class Extractor {
         logger?.debug('skipped package for', module.context)
         continue
       }
-      let component = pkgs[pkg.path] as undefined | typeof pkgs[keyof typeof pkgs]
+      let component = pkgs[pkg.path]
       if (component === undefined) {
         logger?.log('try to build new Component from PkgPath:', pkg.path)
         try {
@@ -85,7 +85,7 @@ export class Extractor {
     this.#linkDependencies(components)
 
     logger?.log('done building Components from modules...')
-    return Object.values(pkgs)
+    return Object.values(pkgs).filter(isNonNullable)
   }
 
   /**
