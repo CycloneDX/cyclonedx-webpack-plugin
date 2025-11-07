@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Fixed
+  * Prevent Component duplications (via [#1456])
+
+[#1456]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1456
+
 ## 5.2.1 - 2025-11-05
 
 * Fixed
