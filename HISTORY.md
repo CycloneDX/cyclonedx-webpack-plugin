@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Docs
+  * Correct default value of option `specVersion` (via [#1460])
+
+[#1460]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1460
+
 ## 5.2.1 - 2025-11-05
 
 * Fixed
