@@ -7,10 +7,11 @@ All notable changes to this project will be documented in this file.
 <!-- unreleased changes go here -->
 
 * Fixed
-  * Prevent Component duplications (via [#1456])
+  * Prevent Component duplications ([#1418] via [#1456])
 * Docs
   * Correct default value of option `specVersion` (via [#1460])
 
+[#1418]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues/1418
 [#1456]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1456
 [#1460]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1460
 
