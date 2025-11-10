@@ -273,7 +273,7 @@ export class CycloneDxWebpackPlugin {
               name: this.rootComponentName,
               version: this.rootComponentVersion,
             })
-            if ( rcComponent !== undefined ) {
+            if (rcComponent !== undefined) {
               rcComponent.dependencies = rcComponentDetected.dependencies
               for ( const {dependencies} of components.values() ) {
                 if (dependencies.delete(rcComponentDetected.bomRef)) {
