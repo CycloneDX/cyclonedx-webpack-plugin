@@ -263,8 +263,8 @@ export class CycloneDxWebpackPlugin {
         thisLogger.log('generating components...')
         const components=  extractor.generateComponents(modules, this.collectEvidence, thisLogger.getChildLogger('Extractor'))
         const rcComponentDetected = components.get(rcDesc.path)
-        if (undefined!==rcComponentDetected) {
-          if (this.rootComponentAutodetect){
+        if ( undefined!==rcComponentDetected ) {
+          if ( this.rootComponentAutodetect ) {
             thisLogger.debug('add to bom.metadata.component', rcComponentDetected)
             bom.metadata.component = rcComponentDetected
             components.delete(rcDesc.path)
@@ -273,9 +273,9 @@ export class CycloneDxWebpackPlugin {
               name: this.rootComponentName,
               version: this.rootComponentVersion,
             })
-            if (rcComponent !== undefined) {
+            if ( rcComponent !== undefined ) {
               rcComponent.dependencies = rcComponentDetected.dependencies
-              for (const {dependencies} of components.values()) {
+              for ( const {dependencies} of components.values() ) {
                 if (dependencies.delete(rcComponentDetected.bomRef)) {
                   dependencies.add(rcComponent.bomRef)
                 }
