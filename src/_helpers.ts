@@ -28,13 +28,6 @@ export function isNonNullable<T>(value: T): value is NonNullable<T> {
   return value !== null && value !== undefined
 }
 
-export const structuredClonePolyfill: <T>(value: T) => T = typeof structuredClone === 'function'
-  ? structuredClone
-  : function <T>(value: T): T {
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- ack */
-    return JSON.parse(JSON.stringify(value)) as T
-  }
-
 export interface ValidPackageJSON {
   name: string
   version: string
