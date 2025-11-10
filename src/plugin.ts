@@ -246,8 +246,8 @@ export class CycloneDxWebpackPlugin {
       }
     }
 
-    const rcDesc = getPackageDescription(compilation.compiler.context)
-    ?? {path: compilation.compiler.context}
+    const rcPath = getPackageDescription(compilation.compiler.context)?.path
+      ?? compilation.compiler.context
 
     compilation.hooks.afterOptimizeTree.tap(
       pluginName,
@@ -262,12 +262,12 @@ export class CycloneDxWebpackPlugin {
 
         thisLogger.log('generating components...')
         const components = extractor.generateComponents(modules, this.collectEvidence, thisLogger.getChildLogger('Extractor'))
-        const rcComponentDetected = components.get(rcDesc.path)
+        const rcComponentDetected = components.get(rcPath)
         if ( undefined !== rcComponentDetected ) {
           if (this.rootComponentAutodetect) {
             thisLogger.debug('add to bom.metadata.component', rcComponentDetected)
             bom.metadata.component = rcComponentDetected
-            components.delete(rcDesc.path)
+            components.delete(rcPath)
           } else {
             const rcComponent = cdxComponentBuilder.makeComponent({
               name: this.rootComponentName,
@@ -282,7 +282,7 @@ export class CycloneDxWebpackPlugin {
               }
               thisLogger.debug('add to bom.metadata.component', rcComponentDetected)
               bom.metadata.component = rcComponent
-              components.delete(rcDesc.path)
+              components.delete(rcPath)
             }
           }
         }
