@@ -263,7 +263,7 @@ export class CycloneDxWebpackPlugin {
         thisLogger.log('generating components...')
         const components=  extractor.generateComponents(modules, this.collectEvidence, thisLogger.getChildLogger('Extractor'))
         const rcComponentDetected = components.get(rcDesc.path)
-        if ( undefined!==rcComponentDetected ) {
+        if ( undefined !== rcComponentDetected ) {
           if (this.rootComponentAutodetect) {
             thisLogger.debug('add to bom.metadata.component', rcComponentDetected)
             bom.metadata.component = rcComponentDetected
