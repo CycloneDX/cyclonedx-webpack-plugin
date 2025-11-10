@@ -288,6 +288,25 @@ const testSetups = [
         file: 'dist/.well-known/sbom'
       }
     ]
+  },
+  {
+    dir: 'regression-issue1418',
+    packageManager: 'npm',
+    purpose: 'regression: correctly renames root component',
+    results: [ // paths relative to `dir`
+      {
+        format: 'xml',
+        file: 'dist/.bom/bom.xml'
+      },
+      {
+        format: 'json',
+        file: 'dist/.bom/bom.json'
+      },
+      {
+        format: 'json',
+        file: 'dist/.well-known/sbom'
+      }
+    ]
   }
   // endregion regression
 ]

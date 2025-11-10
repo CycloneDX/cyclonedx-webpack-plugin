@@ -50,8 +50,8 @@ export class Extractor {
     this.#leGatherer = leFetcher
   }
 
-  generateComponents (modules: Iterable<Module>, collectEvidence: boolean, logger?: WebpackLogger): Iterable<CDX.Models.Component> {
-    const pkgs: Record<string, CDX.Models.Component | undefined> = {}
+  generateComponents (modules: Iterable<Module>, collectEvidence: boolean, logger?: WebpackLogger): Map<string, CDX.Models.Component> {
+    const pkgs = new Map<string, CDX.Models.Component>()
     const components = new Map<Module, CDX.Models.Component>()
 
     logger?.log('start building Components from modules...')
@@ -65,7 +65,7 @@ export class Extractor {
         logger?.debug('skipped package for', module.context)
         continue
       }
-      let component = pkgs[pkg.path]
+      let component = pkgs.get(pkg.path)
       if (component === undefined) {
         logger?.log('try to build new Component from PkgPath:', pkg.path)
         try {
@@ -76,7 +76,7 @@ export class Extractor {
           continue
         }
         logger?.debug('built', component, 'based on', pkg, 'for module', module)
-        pkgs[pkg.path] = component
+        pkgs.set(pkg.path, component)
       }
       components.set(module, component)
     }
@@ -85,7 +85,7 @@ export class Extractor {
     this.#linkDependencies(components)
 
     logger?.log('done building Components from modules...')
-    return components.values()
+    return pkgs
   }
 
   /**
