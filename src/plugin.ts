@@ -275,7 +275,7 @@ export class CycloneDxWebpackPlugin {
             })
             if (rcComponent !== undefined) {
               rcComponent.dependencies = rcComponentDetected.dependencies
-              for ( const {dependencies} of components.values() ) {
+              for (const {dependencies} of components.values()) {
                 if (dependencies.delete(rcComponentDetected.bomRef)) {
                   dependencies.add(rcComponent.bomRef)
                 }
