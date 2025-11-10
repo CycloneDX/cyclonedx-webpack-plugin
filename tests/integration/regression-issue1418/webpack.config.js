@@ -14,7 +14,7 @@ module.exports = {
     new CycloneDxWebpackPlugin(
       {
         outputLocation: '.bom',
-        specVersion: '1.6',
+        specVersion: '1.7',
         reproducibleResults: true,
         validateResults: true,
         rootComponentAutodetect: false,

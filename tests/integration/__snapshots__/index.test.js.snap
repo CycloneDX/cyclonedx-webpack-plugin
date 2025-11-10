@@ -7358,9 +7358,9 @@ exports[`integration functional: webpack5 with vue2-cli-service generated xml fi
 
 exports[`integration regression: correctly renames root component generated json file: dist/.bom/bom.json 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.6",
+  "specVersion": "1.7",
   "version": 1,
   "metadata": {
     "lifecycles": [
@@ -7513,9 +7513,9 @@ exports[`integration regression: correctly renames root component generated json
 
 exports[`integration regression: correctly renames root component generated json file: dist/.well-known/sbom 1`] = `
 "{
-  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
-  "specVersion": "1.6",
+  "specVersion": "1.7",
   "version": 1,
   "metadata": {
     "lifecycles": [
@@ -7668,7 +7668,7 @@ exports[`integration regression: correctly renames root component generated json
 
 exports[`integration regression: correctly renames root component generated xml file: dist/.bom/bom.xml 1`] = `
 "<?xml version="1.0" encoding="UTF-8"?>
-<bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
+<bom xmlns="http://cyclonedx.org/schema/bom/1.7" version="1">
   <metadata>
     <lifecycles>
       <lifecycle>
