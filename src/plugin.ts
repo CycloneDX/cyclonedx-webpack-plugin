@@ -206,7 +206,6 @@ export class CycloneDxWebpackPlugin {
 
     const bom = new CDX.Models.Bom()
     bom.metadata.lifecycles.add(CDX.Enums.LifecyclePhase.Build)
-    bom.metadata.component = this.#makeRootComponent(compilation.compiler.context, cdxComponentBuilder, logger.getChildLogger('RootComponentBuilder'))
 
     const serializeOptions: CDX.Serialize.Types.SerializerOptions & CDX.Serialize.Types.NormalizerOptions = {
       sortLists: this.reproducibleResults,
@@ -247,6 +246,9 @@ export class CycloneDxWebpackPlugin {
       }
     }
 
+    const rcDesc = getPackageDescription(compilation.compiler.context)
+    ?? {path: compilation.compiler.context}
+
     compilation.hooks.afterOptimizeTree.tap(
       pluginName,
       (_, modules) => {
@@ -259,22 +261,37 @@ export class CycloneDxWebpackPlugin {
         )
 
         thisLogger.log('generating components...')
-        for (const component of extractor.generateComponents(modules, this.collectEvidence, thisLogger.getChildLogger('Extractor'))) {
-          if (bom.metadata.component !== undefined &&
-            bom.metadata.component.group === component.group &&
-            bom.metadata.component.name === component.name &&
-            bom.metadata.component.version === component.version
-          ) {
-            // metadata matches this exact component.
-            // -> so the component is actually treated as the root component.
-            thisLogger.debug('update bom.metadata.component - replace', bom.metadata.component, 'with', component)
-            bom.metadata.component = component
+        const components=  extractor.generateComponents(modules, this.collectEvidence, thisLogger.getChildLogger('Extractor'))
+        const rcComponentDetected = components.get(rcDesc.path)
+        if (undefined!==rcComponentDetected) {
+          if (this.rootComponentAutodetect){
+            thisLogger.debug('add to bom.metadata.component', rcComponentDetected)
+            bom.metadata.component = rcComponentDetected
+            components.delete(rcDesc.path)
           } else {
-            thisLogger.debug('add to bom.components', component)
-            bom.components.add(component)
+            const rcComponent = cdxComponentBuilder.makeComponent({
+              name: this.rootComponentName,
+              version: this.rootComponentVersion,
+            })
+            if (rcComponent !== undefined) {
+              rcComponent.dependencies = rcComponentDetected.dependencies
+              for (const {dependencies} of components.values()) {
+                if (dependencies.delete(rcComponentDetected.bomRef)) {
+                  dependencies.add(rcComponent.bomRef)
+                }
+              }
+              thisLogger.debug('add to bom.metadata.component', rcComponentDetected)
+              bom.metadata.component = rcComponent
+              components.delete(rcDesc.path)
+            }
           }
         }
+        for (const component of components.values()) {
+            thisLogger.debug('add to bom.components', component)
+            bom.components.add(component)
+        }
         thisLogger.log('generated components.')
+
 
         thisLogger.log('finalizing BOM...')
         this.#finalizeBom(bom, cdxComponentBuilder, cdxPurlFactory, logger.getChildLogger('BomFinalizer'))
@@ -368,25 +385,6 @@ export class CycloneDxWebpackPlugin {
     }
   }
 
-  #makeRootComponent (
-    path: string,
-    builder: CDX.Builders.FromNodePackageJson.ComponentBuilder,
-    logger: WebpackLogger
-  ): CDX.Models.Component | undefined {
-    /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
-    const thisPackageJson = this.rootComponentAutodetect
-      ? getPackageDescription(path)?.packageJson
-      : { name: this.rootComponentName, version: this.rootComponentVersion }
-    if (thisPackageJson === undefined) { return undefined }
-    normalizePackageManifest(
-
-      thisPackageJson,
-      w => { logger.debug('normalizePackageJson from PkgPath', path, 'caused:', w) }
-    )
-
-    return builder.makeComponent(thisPackageJson)
-  }
-
   #finalizeBom (
     bom: CDX.Models.Bom,
     cdxComponentBuilder: CDX.Builders.FromNodePackageJson.ComponentBuilder,
@@ -410,12 +408,13 @@ export class CycloneDxWebpackPlugin {
       bom.metadata.tools.components.add(toolC)
     }
 
-    if (bom.metadata.component !== undefined) {
-      this.#addRootComponentExtRefs(bom.metadata.component, logger)
+    const rComponent = bom.metadata.component
+    if (rComponent !== undefined) {
+      this.#addRootComponentExtRefs(rComponent, logger)
       /* eslint-disable-next-line  @typescript-eslint/no-unsafe-type-assertion -- ack */
-      bom.metadata.component.type = this.rootComponentType as CDX.Models.Component['type']
-      bom.metadata.component.purl = cdxPurlFactory.makeFromComponent(bom.metadata.component)
-      bom.metadata.component.bomRef.value = bom.metadata.component.purl?.toString()
+      rComponent.type = this.rootComponentType as CDX.Models.Component['type']
+      rComponent.purl = cdxPurlFactory.makeFromComponent(rComponent)
+      rComponent.bomRef.value = rComponent.purl?.toString()
     }
     /* eslint-enable no-param-reassign */
   }

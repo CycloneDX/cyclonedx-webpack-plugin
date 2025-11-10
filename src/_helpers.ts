@@ -40,15 +40,15 @@ export interface ValidPackageJSON {
   version: string
 }
 
-export interface PackageDescription {
+export interface PackageDescription<PJ = any> {
   path: string
-  packageJson: NonNullable<any>
+  packageJson: NonNullable<PJ>
 }
 
 
 const PACKAGE_MANIFEST_FILENAME = 'package.json'
 
-export function getPackageDescription(path: string): PackageDescription | undefined {
+export function getPackageDescription(path: string): PackageDescription<ValidPackageJSON> | undefined {
   const isSubDirOfNodeModules = isSubDirectoryOfNodeModulesFolder(path)
 
   while (isAbsolute(path)) {

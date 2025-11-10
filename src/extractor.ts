@@ -50,7 +50,7 @@ export class Extractor {
     this.#leGatherer = leFetcher
   }
 
-  generateComponents (modules: Iterable<Module>, collectEvidence: boolean, logger?: WebpackLogger): Iterable<CDX.Models.Component> {
+  generateComponents (modules: Iterable<Module>, collectEvidence: boolean, logger?: WebpackLogger): Map<string, CDX.Models.Component> {
     const pkgs = new Map<string, CDX.Models.Component>()
     const components = new Map<Module, CDX.Models.Component>()
 
@@ -85,7 +85,7 @@ export class Extractor {
     this.#linkDependencies(components)
 
     logger?.log('done building Components from modules...')
-    return pkgs.values()
+    return pkgs
   }
 
   /**
