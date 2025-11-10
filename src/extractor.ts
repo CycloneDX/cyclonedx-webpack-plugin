@@ -27,7 +27,6 @@ import {
   isNonNullable,
   normalizePackageManifest,
   type PackageDescription,
-  structuredClonePolyfill
 } from './_helpers'
 
 type WebpackLogger = Compilation['logger']
@@ -95,7 +94,7 @@ export class Extractor {
     try {
       // work with a deep copy, because `normalizePackageManifest()` might modify the data
       /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ach */
-      const _packageJson = structuredClonePolyfill(pkg.packageJson)
+      const _packageJson = structuredClone(pkg.packageJson)
       normalizePackageManifest(_packageJson)
       pkg.packageJson = _packageJson /* eslint-disable-line  no-param-reassign -- intended  */
     } catch (e) {
