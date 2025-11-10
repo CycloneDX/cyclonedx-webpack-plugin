@@ -265,7 +265,7 @@ export class CycloneDxWebpackPlugin {
         const rcComponentDetected = components.get(rcPath)
         if ( undefined !== rcComponentDetected ) {
           if (this.rootComponentAutodetect) {
-            thisLogger.debug('add to bom.metadata.component', rcComponentDetected)
+            thisLogger.debug('set bom.metadata.component', rcComponentDetected)
             bom.metadata.component = rcComponentDetected
             components.delete(rcPath)
           } else {
