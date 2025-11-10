@@ -40,7 +40,8 @@ export interface CycloneDxWebpackPluginOptions {
 
   /**
    * Which version of {@link https://github.com/CycloneDX/specification | CycloneDX spec} to use.
-   * Defaults to one that is the latest supported of this application.
+   *
+   * @defaultValue `"1.6"`
    */
   specVersion?: CycloneDxWebpackPlugin['specVersion']
 
