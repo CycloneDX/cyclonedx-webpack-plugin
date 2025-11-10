@@ -102,10 +102,8 @@ export class Extractor {
       logger?.warn('normalizePackageJson from PkgPath', pkg.path, 'failed:', e)
     }
 
-    const component = this.#componentBuilder.makeComponent(
-      /* @ts-expect-error TS2559 */
-      pkg.packageJson as PackageDescription) /* eslint-disable-line  @typescript-eslint/no-unsafe-type-assertion -- ack */
-
+    /* eslint-disable-next-line  @typescript-eslint/no-unsafe-argument -- ack */
+    const component = this.#componentBuilder.makeComponent(pkg.packageJson )
     if (component === undefined) {
       throw new Error(`failed building Component from PkgPath ${pkg.path}`)
     }
