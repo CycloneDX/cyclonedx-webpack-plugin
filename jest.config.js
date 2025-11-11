@@ -99,7 +99,7 @@ module.exports = {
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   modulePathIgnorePatterns: [
-    '<rootDir>/tests/_testbeds/',
+    '/_testbeds/',
   ],
 
   // Activates notifications for test results
@@ -173,7 +173,7 @@ module.exports = {
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   testPathIgnorePatterns: [
     '/node_modules/',
-    '<rootDir>/tests/_testbeds/',
+    '/_testbeds/',
   ],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
