@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 5.2.2 - 2025-11-11
+
 * Fixed
   * Prevent Component duplications ([#1418] via [#1456])
 * Docs
