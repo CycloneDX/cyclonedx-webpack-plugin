@@ -129,7 +129,7 @@ export class Extractor {
     for (const [module, component] of modulesComponents) {
       for (const dependencyModule of module.dependencies.map(d => this.#compilation.moduleGraph.getModule(d)).filter(isNonNullable)) {
         const dependencyBomRef = modulesComponents.get(dependencyModule)?.bomRef
-        if (dependencyBomRef !== undefined) {
+        if (dependencyBomRef !== undefined && dependencyBomRef !== component.bomRef) {
           component.dependencies.add(dependencyBomRef)
         }
       }
