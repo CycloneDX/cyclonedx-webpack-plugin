@@ -6,8 +6,10 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 5.2.3 - 2025-11-11
+
 * Fixed
-  * Explicitly prevent self-reference dependency graph (via [#1472]) 
+  * Explicitly prevent self-references in dependency graph (via [#1472]) 
 
 [#1472]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1472
 
