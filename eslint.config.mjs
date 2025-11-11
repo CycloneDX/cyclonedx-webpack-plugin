@@ -94,7 +94,7 @@ export default [
       'docs/.venv/',
       'examples/**/dist/',
       'tools/',
-      'tests/integration/*/'
+      'tests/_testbeds/'
     ],
   },
 ]

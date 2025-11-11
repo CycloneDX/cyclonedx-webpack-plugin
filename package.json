@@ -109,7 +109,7 @@
     "prebuild": "node -r fs -e 'fs.rmSync(\"dist\",{recursive:true,force:true})'",
     "build": "tsc -b ./tsconfig.json",
     "build-dev": "npm run -- build --sourceMap",
-    "setup-tests": "node tests/integration/setup.js",
+    "setup-tests": "node tests/setup.js",
     "test": "run-p --aggregate-output -lc 'test:*'",
     "test:jest": "c8 jest",
     "test:lint": "tsc --noEmit",

@@ -20,6 +20,8 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 const { spawnSync } = require('node:child_process')
 const path = require('node:path')
 
+const { TB_ROOTDIR } = require('./')
+
 const nodeSV = Object.freeze((process?.versions?.node ?? '').split('.').map(Number));
 
 (function () {
@@ -62,11 +64,11 @@ const nodeSV = Object.freeze((process?.versions?.node ?? '').split('.').map(Numb
 
   process.exitCode = 0
 
-  for (const DIR of REQUIRES_NPM_INSTALL) {
-    console.log('>>> setup with NPM:', DIR)
+  for (const TB_DIR of REQUIRES_NPM_INSTALL) {
+    console.log('>>> setup with NPM:', TB_DIR)
     const done = spawnSync(
       'npm', ['ci', '--ignore-scripts'], {
-        cwd: path.resolve(__dirname, DIR),
+        cwd: path.join(TB_ROOTDIR, TB_DIR),
         stdio: 'inherit',
         shell: true
       }
@@ -77,11 +79,11 @@ const nodeSV = Object.freeze((process?.versions?.node ?? '').split('.').map(Numb
     }
   }
 
-  for (const DIR of REQUIRES_YARN_INSTALL) {
-    console.log('>>> setup with YARN:', DIR)
+  for (const TB_DIR of REQUIRES_YARN_INSTALL) {
+    console.log('>>> setup with YARN:', TB_DIR)
     const done = spawnSync(
       'yarn', ['install', '--immutable', '--mode=skip-build'], {
-        cwd: path.resolve(__dirname, DIR),
+        cwd: path.join(TB_ROOTDIR, TB_DIR),
         stdio: 'inherit',
         shell: true
       }

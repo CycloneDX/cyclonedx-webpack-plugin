@@ -23,6 +23,7 @@ const path = require('node:path')
 
 const { describe, expect, it } = require('@jest/globals')
 
+const { TB_ROOTDIR } = require('../')
 const { version: thisVersion } = require('../../package.json')
 
 const nodeSV = Object.freeze((process?.versions?.node ?? '').split('.').map(Number))
@@ -327,7 +328,7 @@ describe('integration', () => {
       if (!skipTests) {
         const built = spawnSync(
           packageManager ?? 'npm', ['run', 'build'], {
-            cwd: path.resolve(module.path, dir),
+            cwd: path.join(TB_ROOTDIR, dir),
             stdio: ['ignore', 'pipe', 'pipe'],
             encoding: 'utf8',
             shell: true,
@@ -355,7 +356,7 @@ describe('integration', () => {
           ? it.skip
           : it
         )(`generated ${format} file: ${file}`, () => {
-          const resultFile = path.resolve(module.path, dir, file)
+          const resultFile = path.join(TB_ROOTDIR, dir, file)
           const resultBuffer = fs.readFileSync(resultFile)
           expect(resultBuffer).toBeInstanceOf(Buffer)
           expect(resultBuffer.length).toBeGreaterThan(0)
