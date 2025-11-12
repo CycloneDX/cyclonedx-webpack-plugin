@@ -169,8 +169,12 @@ dist
 /jest.*
 /examples/
 
+# ignore QA-tools and their configs
 /tools/
-eslint.*
+/eslint.*
+/knip.*
+/tsdoc.*
+/typedoc.*
 
 ## target of JSDoc
 /out/
