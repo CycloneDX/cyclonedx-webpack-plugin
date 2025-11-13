@@ -2,7 +2,9 @@
 
 This is a showcase how to configure the _CycloneDX Webpack Plugin_. 
 
-see the [`webpack.config.js`](webpack.config.js) for the applied configuration.
+See the [webpack configuration](webpack.config.js) for the applied settings.
+
+Example SBOM results are prepared in folder [`sbom-results`](sbom-results).
 
 ## Prerequisite
 
