@@ -67,7 +67,7 @@ const nodeSV = Object.freeze((process?.versions?.node ?? '').split('.').map(Numb
   for (const TB_DIR of REQUIRES_NPM_INSTALL) {
     console.log('>>> setup with NPM:', TB_DIR)
     const done = spawnSync(
-      'npm', ['ci', '--ignore-scripts'], {
+      'npm', ['i', '--ignore-scripts'], {
         cwd: path.join(TB_ROOTDIR, TB_DIR),
         stdio: 'inherit',
         shell: true
@@ -82,7 +82,7 @@ const nodeSV = Object.freeze((process?.versions?.node ?? '').split('.').map(Numb
   for (const TB_DIR of REQUIRES_YARN_INSTALL) {
     console.log('>>> setup with YARN:', TB_DIR)
     const done = spawnSync(
-      'yarn', ['install', '--immutable', '--mode=skip-build'], {
+      'yarn', ['install', '--mode=skip-build'], {
         cwd: path.join(TB_ROOTDIR, TB_DIR),
         stdio: 'inherit',
         shell: true

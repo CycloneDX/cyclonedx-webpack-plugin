@@ -28,6 +28,10 @@
     "runtime": {
       "name": "node",
       "onFail": "error"
+    },
+    "packageManager": {
+      "name": "npm",
+      "onFail": "error"
     }
   },
   "browserslist": [
