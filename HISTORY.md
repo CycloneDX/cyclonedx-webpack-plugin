@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 5.2.4 - 2025-12-05
+
 * Dependencies
   * Upgraded runtime-dependency `@xmlbuilder2@^3.0.2||^4.0.3`, was `@^3.0.2` (via [#441])
 
