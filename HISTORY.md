@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Dependencies
+  * Upgraded runtime-dependency `@xmlbuilder2@^3.0.2||^4.0.3`, was `@^3.0.2` (via [#441])
+
+[#1483]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1483
+
 ## 5.2.3 - 2025-11-11
 
 * Fixed
