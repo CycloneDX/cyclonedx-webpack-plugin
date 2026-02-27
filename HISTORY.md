@@ -6,6 +6,18 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Fixed
+  * Qualified PackageURLs (via [#])
+* Changed
+  * Take care of PackageURL generation ourselves, now (via [#])  
+    Previously, this was done at best-effort by a 3rd-party library.
+* Dependencies
+  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@^10.0.0` now, was `@^9.2.0` (via [#])
+  * Added runtime-dependency `packageurl-js@^2.0.1` (via [#])
+  * Added runtime-dependency `spdx-expression-parse@^3.0.1||^4.0.0` (via [#])
+
+[#]: 
+
 ## 5.2.4 - 2025-12-05
 
 * Dependencies
