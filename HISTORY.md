@@ -7,16 +7,16 @@ All notable changes to this project will be documented in this file.
 <!-- unreleased changes go here -->
 
 * Fixed
-  * Qualified PackageURLs (via [#])
+  * Qualified PackageURLs (via [#1503])
 * Changed
-  * Take care of PackageURL generation ourselves, now (via [#])  
+  * Take care of PackageURL generation ourselves, now (via [#1503])  
     Previously, this was done at best-effort by a 3rd-party library.
 * Dependencies
-  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@^10.0.0` now, was `@^9.2.0` (via [#])
-  * Added runtime-dependency `packageurl-js@^2.0.1` (via [#])
-  * Added runtime-dependency `spdx-expression-parse@^3.0.1||^4.0.0` (via [#])
+  * Upgraded runtime-dependency `@cyclonedx/cyclonedx-library@^10.0.0` now, was `@^9.2.0` (via [#1503])
+  * Added runtime-dependency `packageurl-js@^2.0.1` (via [#1503])
+  * Added runtime-dependency `spdx-expression-parse@^3.0.1||^4.0.0` (via [#1503])
 
-[#]: 
+[#1503]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1503
 
 ## 5.2.4 - 2025-12-05
 
