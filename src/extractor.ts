@@ -29,7 +29,7 @@ import type { Compilation, Module } from 'webpack'
 
 import type { PackageDescription } from './_helpers'
 import {
-  getPackageDescription,
+  getPackageConfig,
   isNonNullable,
   normalizePackageManifest
 } from './_helpers'
@@ -66,7 +66,7 @@ export class Extractor {
         logger?.debug('skipping', module)
         continue
       }
-      const pkg = getPackageDescription(module.context)
+      const pkg = getPackageConfig(module.context)
       if (pkg === undefined) {
         logger?.debug('skipped package for', module.context)
         continue

@@ -41,7 +41,7 @@ export interface PackageDescription<PJ = any> {
 
 const PACKAGE_MANIFEST_FILENAME = 'package.json'
 
-export function getPackageDescription(path: string): PackageDescription<ValidPackageJSON> | undefined {
+export function getPackageConfig(path: string): PackageDescription<ValidPackageJSON> | undefined {
   const isSubDirOfNodeModules = isSubDirectoryOfNodeModulesFolder(path)
 
   while (isAbsolute(path)) {

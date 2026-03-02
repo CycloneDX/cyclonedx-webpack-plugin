@@ -36,7 +36,7 @@ import { Compilation, sources, version as WEBPACK_VERSION } from 'webpack'
 
 import type { PackageDescription } from './_helpers'
 import {
-  getPackageDescription,
+  getPackageConfig,
   iterableSome,
   loadJsonFile,
   normalizePackageManifest
@@ -259,7 +259,7 @@ export class CycloneDxWebpackPlugin {
       }
     }
 
-    const rcPath = getPackageDescription(compilation.compiler.context)?.path
+    const rcPath = getPackageConfig(compilation.compiler.context)?.path
       ?? compilation.compiler.context
 
     compilation.hooks.afterOptimizeTree.tap(
