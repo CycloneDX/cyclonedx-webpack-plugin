@@ -129,10 +129,15 @@ jobs:
         node-version:
           # action based on https://github.com/actions/node-versions/releases
           # see also: https://nodejs.org/en/about/previous-releases
-          - "24"      # current
-          - "22"      # active LTS
+          - "25"      # Current
+          - "24"      # active LTS
+          - "22"
           - "20"
           - "20.18.0" # lowest supported
+        include:
+          - node: "25"
+            experimental: true
+    continue-on-error: ${{ matrix.experimental == true }}
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout
