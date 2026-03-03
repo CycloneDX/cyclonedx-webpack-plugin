@@ -19,29 +19,36 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 
 import { dirname } from 'node:path'
 
-import * as CDX from '@cyclonedx/cyclonedx-library'
+import type { Builders as FromNodePackageJsonBuilders } from '@cyclonedx/cyclonedx-library/Contrib/FromNodePackageJson'
+import type { Utils as LicenseUtils } from '@cyclonedx/cyclonedx-library/Contrib/License'
+import { LicenseAcknowledgement } from '@cyclonedx/cyclonedx-library/Enums'
+import type { Component, License } from '@cyclonedx/cyclonedx-library/Models'
+import { ComponentEvidence, LicenseRepository, NamedLicense } from '@cyclonedx/cyclonedx-library/Models'
+import type normalizePackageData from "normalize-package-data";
 import type { Compilation, Module } from 'webpack'
 
+import type { PackageDescription } from './_helpers'
 import {
-  getPackageDescription,
+  getPackageConfig,
   isNonNullable,
-  normalizePackageManifest,
-  type PackageDescription,
+  normalizePackageManifest
 } from './_helpers'
+import type { PackageUrlFactory } from './factories'
+
 
 type WebpackLogger = Compilation['logger']
 
 export class Extractor {
   readonly #compilation: Compilation
-  readonly #componentBuilder: CDX.Builders.FromNodePackageJson.ComponentBuilder
-  readonly #purlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory
-  readonly #leGatherer: CDX.Utils.LicenseUtility.LicenseEvidenceGatherer
+  readonly #componentBuilder: FromNodePackageJsonBuilders.ComponentBuilder
+  readonly #purlFactory: PackageUrlFactory
+  readonly #leGatherer: LicenseUtils.LicenseEvidenceGatherer
 
   constructor (
     compilation: Compilation,
-    componentBuilder: CDX.Builders.FromNodePackageJson.ComponentBuilder,
-    purlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory,
-    leFetcher: CDX.Utils.LicenseUtility.LicenseEvidenceGatherer
+    componentBuilder: FromNodePackageJsonBuilders.ComponentBuilder,
+    purlFactory: PackageUrlFactory,
+    leFetcher: LicenseUtils.LicenseEvidenceGatherer,
   ) {
     this.#compilation = compilation
     this.#componentBuilder = componentBuilder
@@ -49,9 +56,9 @@ export class Extractor {
     this.#leGatherer = leFetcher
   }
 
-  generateComponents (modules: Iterable<Module>, collectEvidence: boolean, logger?: WebpackLogger): Map<string, CDX.Models.Component> {
-    const pkgs = new Map<string, CDX.Models.Component>()
-    const components = new Map<Module, CDX.Models.Component>()
+  generateComponents (modules: Iterable<Module>, collectEvidence: boolean, logger?: WebpackLogger): Map<string, Component> {
+    const pkgs = new Map<string, Component>()
+    const components = new Map<Module, Component>()
 
     logger?.log('start building Components from modules...')
     for (const module of modules) {
@@ -59,7 +66,7 @@ export class Extractor {
         logger?.debug('skipping', module)
         continue
       }
-      const pkg = getPackageDescription(module.context)
+      const pkg = getPackageConfig(module.context)
       if (pkg === undefined) {
         logger?.debug('skipped package for', module.context)
         continue
@@ -90,7 +97,7 @@ export class Extractor {
   /**
    * @throws {@link Error} when no component could be fetched
    */
-  makeComponent (pkg: PackageDescription, collectEvidence: boolean, logger?: WebpackLogger): CDX.Models.Component {
+  makeComponent (pkg: PackageDescription, collectEvidence: boolean, logger?: WebpackLogger): Component {
     try {
       // work with a deep copy, because `normalizePackageManifest()` might modify the data
       /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- ach */
@@ -109,23 +116,26 @@ export class Extractor {
 
     component.licenses.forEach(l => {
       /* eslint-disable no-param-reassign -- intended */
-      l.acknowledgement = CDX.Enums.LicenseAcknowledgement.Declared
+      l.acknowledgement = LicenseAcknowledgement.Declared
       /* eslint-enable no-param-reassign -- intended */
     })
 
     if (collectEvidence) {
-      component.evidence = new CDX.Models.ComponentEvidence({
-        licenses: new CDX.Models.LicenseRepository(this.getLicenseEvidence(dirname(pkg.path), logger))
+      component.evidence = new ComponentEvidence({
+        licenses: new LicenseRepository(this.getLicenseEvidence(dirname(pkg.path), logger))
       })
     }
 
-    component.purl = this.#purlFactory.makeFromComponent(component)
-    component.bomRef.value = component.purl?.toString()
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- ack */
+    component.purl = this.#purlFactory.makeFromPackageJson(pkg.packageJson as normalizePackageData.Package)?.toString()
+
+    /* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- ack */
+    component.bomRef.value = `${pkg.packageJson.name}@${pkg.packageJson.version??'*'}`
 
     return component
   }
 
-  #linkDependencies (modulesComponents: Map<Module, CDX.Models.Component>): void {
+  #linkDependencies (modulesComponents: Map<Module, Component>): void {
     for (const [module, component] of modulesComponents) {
       for (const dependencyModule of module.dependencies.map(d => this.#compilation.moduleGraph.getModule(d)).filter(isNonNullable)) {
         const dependencyBomRef = modulesComponents.get(dependencyModule)?.bomRef
@@ -136,7 +146,7 @@ export class Extractor {
     }
   }
 
-  public * getLicenseEvidence (packageDir: string, logger?: WebpackLogger): Generator<CDX.Models.License> {
+  public * getLicenseEvidence (packageDir: string, logger?: WebpackLogger): Generator<License> {
     const files = this.#leGatherer.getFileAttachments(
       packageDir,
       (error: Error): void => {
@@ -147,7 +157,7 @@ export class Extractor {
     )
     try {
       for (const {file, text} of files) {
-        yield new CDX.Models.NamedLicense(`file: ${file}`, { text })
+        yield new NamedLicense(`file: ${file}`, { text })
       }
     }
     /* c8 ignore next 3 */

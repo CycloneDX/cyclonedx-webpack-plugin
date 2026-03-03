@@ -20,17 +20,30 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 import { existsSync } from 'node:fs'
 import { join as joinPath, resolve } from 'node:path'
 
-import * as CDX from '@cyclonedx/cyclonedx-library'
-import { Compilation, type Compiler, sources, version as WEBPACK_VERSION } from 'webpack'
+import { Utils as BomUtils } from '@cyclonedx/cyclonedx-library/Contrib/Bom'
+import { Builders as FromNodePackageJsonBuilders, Factories as FromNodePackageJsonFactories } from '@cyclonedx/cyclonedx-library/Contrib/FromNodePackageJson'
+import { Factories as LicenseFactories, Utils as LicenseUtils } from '@cyclonedx/cyclonedx-library/Contrib/License'
+import { ComponentType, ExternalReferenceType,LifecyclePhase } from '@cyclonedx/cyclonedx-library/Enums'
+import { Bom, Component, ExternalReference } from '@cyclonedx/cyclonedx-library/Models'
+import type { Types as SerializeTypes } from '@cyclonedx/cyclonedx-library/Serialize'
+import { JSON as SerializeJSON, JsonSerializer, XML as SerializeXML,XmlSerializer } from '@cyclonedx/cyclonedx-library/Serialize'
+import { SpecVersionDict,Version as SpecVersion } from '@cyclonedx/cyclonedx-library/Spec'
+import type { Types as ValidationTypes } from '@cyclonedx/cyclonedx-library/Validation'
+import { JsonStrictValidator, MissingOptionalDependencyError,XmlValidator } from '@cyclonedx/cyclonedx-library/Validation'
+import spdxExpressionParse from "spdx-expression-parse"
+import type { Compiler } from 'webpack'
+import { Compilation, sources, version as WEBPACK_VERSION } from 'webpack'
 
+import type { PackageDescription } from './_helpers'
 import {
-  getPackageDescription,
+  getPackageConfig,
   iterableSome,
   loadJsonFile,
-  normalizePackageManifest,
-  type PackageDescription
+  normalizePackageManifest
 } from './_helpers'
 import { Extractor } from './extractor'
+import { PackageUrlFactory } from './factories'
+
 
 type WebpackLogger = Compilation['logger']
 
@@ -133,7 +146,7 @@ export interface CycloneDxWebpackPluginOptions {
 
 /** @public */
 export class CycloneDxWebpackPlugin {
-  specVersion: CDX.Spec.Version | `${CDX.Spec.Version}`
+  specVersion: SpecVersion | `${SpecVersion}`
   reproducibleResults: boolean
   validateResults: boolean
 
@@ -142,24 +155,24 @@ export class CycloneDxWebpackPlugin {
   resultWellknown: string | undefined
 
   rootComponentAutodetect: boolean
-  rootComponentType: CDX.Models.Component['type'] | `${CDX.Models.Component['type']}`
-  rootComponentName: CDX.Models.Component['name'] | undefined
-  rootComponentVersion: CDX.Models.Component['version'] | undefined
-  rootComponentBuildSystem: CDX.Models.ExternalReference['url'] | undefined
-  rootComponentVCS: CDX.Models.ExternalReference['url'] | undefined
+  rootComponentType: Component['type'] | `${Component['type']}`
+  rootComponentName: Component['name'] | undefined
+  rootComponentVersion: Component['version'] | undefined
+  rootComponentBuildSystem: ExternalReference['url'] | undefined
+  rootComponentVCS: ExternalReference['url'] | undefined
 
   collectEvidence: boolean
 
   /* eslint-disable-next-line complexity -- acknowledged */
   constructor ({
-    specVersion = CDX.Spec.Version.v1dot6,
+    specVersion = SpecVersion.v1dot6,
     reproducibleResults = false,
     validateResults = true,
     outputLocation = './cyclonedx',
     includeWellknown = true,
     wellknownLocation = './.well-known',
     rootComponentAutodetect = true,
-    rootComponentType = CDX.Enums.ComponentType.Application,
+    rootComponentType = ComponentType.Application,
     rootComponentName = undefined,
     rootComponentVersion = undefined,
     rootComponentBuildSystem = undefined,
@@ -192,53 +205,53 @@ export class CycloneDxWebpackPlugin {
     const pluginName = this.constructor.name
     const logger = compilation.getLogger(pluginName)
 
-    const spec = CDX.Spec.SpecVersionDict[this.specVersion]
+    const spec = SpecVersionDict[this.specVersion]
     if (spec === undefined) {
       logger.warn('Skip CycloneDX SBOM generation due to unknown specVersion: %j Expected one of: %j',
-        this.specVersion, Object.keys(CDX.Spec.SpecVersionDict))
+        this.specVersion, Object.keys(SpecVersionDict))
       return
     }
 
-    const cdxExternalReferenceFactory = new CDX.Factories.FromNodePackageJson.ExternalReferenceFactory()
-    const cdxLicenseFactory = new CDX.Factories.LicenseFactory()
-    const cdxPurlFactory = new CDX.Factories.FromNodePackageJson.PackageUrlFactory('npm')
-    const cdxComponentBuilder = new CDX.Builders.FromNodePackageJson.ComponentBuilder(cdxExternalReferenceFactory, cdxLicenseFactory)
+    const cdxExternalReferenceFactory = new FromNodePackageJsonFactories.ExternalReferenceFactory()
+    const cdxLicenseFactory = new LicenseFactories.LicenseFactory(spdxExpressionParse)
+    const cdxPurlFactory = new PackageUrlFactory()
+    const cdxComponentBuilder = new FromNodePackageJsonBuilders.ComponentBuilder(cdxExternalReferenceFactory, cdxLicenseFactory)
 
-    const bom = new CDX.Models.Bom()
-    bom.metadata.lifecycles.add(CDX.Enums.LifecyclePhase.Build)
+    const bom = new Bom()
+    bom.metadata.lifecycles.add(LifecyclePhase.Build)
 
-    const serializeOptions: CDX.Serialize.Types.SerializerOptions & CDX.Serialize.Types.NormalizerOptions = {
+    const serializeOptions: SerializeTypes.SerializerOptions & SerializeTypes.NormalizerOptions = {
       sortLists: this.reproducibleResults,
       space: 2 // TODO add option to have this configurable
     }
 
     const toBeSerialized = new Map<
       /* outputLocation */ string,
-      [CDX.Serialize.Types.Serializer, undefined | CDX.Validation.Types.Validator]
+      [SerializeTypes.Serializer, undefined | ValidationTypes.Validator]
     >()
 
-    let xmlSerializer: CDX.Serialize.XmlSerializer | undefined = undefined
+    let xmlSerializer: XmlSerializer | undefined = undefined
     try {
-      xmlSerializer = new CDX.Serialize.XmlSerializer(new CDX.Serialize.XML.Normalize.Factory(spec))
+      xmlSerializer = new XmlSerializer(new SerializeXML.Normalize.Factory(spec))
     } catch {
       /* pass */
     }
     if (xmlSerializer !== undefined) {
       const xmlValidator = this.validateResults
-        ? new CDX.Validation.XmlValidator(spec.version)
+        ? new XmlValidator(spec.version)
         : undefined
       toBeSerialized.set(this.resultXml, [xmlSerializer, xmlValidator])
     }
 
-    let jsonSerializer: CDX.Serialize.JsonSerializer | undefined = undefined
+    let jsonSerializer: JsonSerializer | undefined = undefined
     try {
-      jsonSerializer = new CDX.Serialize.JsonSerializer(new CDX.Serialize.JSON.Normalize.Factory(spec))
+      jsonSerializer = new JsonSerializer(new SerializeJSON.Normalize.Factory(spec))
     } catch {
       /* pass */
     }
     if (jsonSerializer !== undefined) {
       const jsonValidator = this.validateResults
-        ? new CDX.Validation.JsonStrictValidator(spec.version)
+        ? new JsonStrictValidator(spec.version)
         : undefined
       toBeSerialized.set(this.resultJson, [jsonSerializer, jsonValidator])
       if (this.resultWellknown !== undefined) {
@@ -246,7 +259,7 @@ export class CycloneDxWebpackPlugin {
       }
     }
 
-    const rcPath = getPackageDescription(compilation.compiler.context)?.path
+    const rcPath = getPackageConfig(compilation.compiler.context)?.path
       ?? compilation.compiler.context
 
     compilation.hooks.afterOptimizeTree.tap(
@@ -257,7 +270,7 @@ export class CycloneDxWebpackPlugin {
           compilation,
           cdxComponentBuilder,
           cdxPurlFactory,
-          new CDX.Utils.LicenseUtility.LicenseEvidenceGatherer()
+          new LicenseUtils.LicenseEvidenceGatherer()
         )
 
         thisLogger.log('generating components...')
@@ -292,9 +305,8 @@ export class CycloneDxWebpackPlugin {
         }
         thisLogger.log('generated components.')
 
-
         thisLogger.log('finalizing BOM...')
-        this.#finalizeBom(bom, cdxComponentBuilder, cdxPurlFactory, logger.getChildLogger('BomFinalizer'))
+        this.#finalizeBom(bom, cdxComponentBuilder, logger.getChildLogger('BomFinalizer'))
         thisLogger.log('finalized BOM.')
       })
 
@@ -304,7 +316,7 @@ export class CycloneDxWebpackPlugin {
         stage: Compilation.PROCESS_ASSETS_STAGE_ADDITIONAL
       },
       async () => {
-        const compileBomAsset = async function (file: string, serializer: CDX.Serialize.Types.Serializer, validator?: CDX.Validation.Types.Validator): Promise<boolean> {
+        const compileBomAsset = async function (file: string, serializer: SerializeTypes.Serializer, validator?: ValidationTypes.Validator): Promise<boolean> {
           const thisLogger = logger.getChildLogger('BomAssetCompiler')
           const serialized = serializer.serialize(bom, serializeOptions)
           if (undefined !== validator) {
@@ -321,7 +333,7 @@ export class CycloneDxWebpackPlugin {
                 )
               }
             } catch (err) {
-              if (err instanceof CDX.Validation.MissingOptionalDependencyError) {
+              if (err instanceof MissingOptionalDependencyError) {
                 thisLogger.info('skipped validate BOM:', err.message)
               } else {
                 thisLogger.error('unexpected error')
@@ -348,19 +360,19 @@ export class CycloneDxWebpackPlugin {
     )
   }
 
-  #addRootComponentExtRefs (component: CDX.Models.Component, logger: WebpackLogger): void {
+  #addRootComponentExtRefs (component: Component, logger: WebpackLogger): void {
     if (
       typeof this.rootComponentBuildSystem === 'string' &&
       this.rootComponentBuildSystem.length > 0 &&
       !iterableSome(
         component.externalReferences,
-        ref => ref.type === CDX.Enums.ExternalReferenceType.BuildSystem
+        ref => ref.type === ExternalReferenceType.BuildSystem
       )
     ) {
       component.externalReferences.add(
-        new CDX.Models.ExternalReference(
+        new ExternalReference(
           this.rootComponentBuildSystem,
-          CDX.Enums.ExternalReferenceType.BuildSystem,
+          ExternalReferenceType.BuildSystem,
           { comment: 'as declared via cyclonedx-webpack-plugin config "rootComponentBuildSystem"' }
         )
       )
@@ -371,13 +383,13 @@ export class CycloneDxWebpackPlugin {
       this.rootComponentVCS.length > 0 &&
       !iterableSome(
         component.externalReferences,
-        ref => ref.type === CDX.Enums.ExternalReferenceType.VCS
+        ref => ref.type === ExternalReferenceType.VCS
       )
     ) {
       component.externalReferences.add(
-        new CDX.Models.ExternalReference(
+        new ExternalReference(
           this.rootComponentVCS,
-          CDX.Enums.ExternalReferenceType.VCS,
+          ExternalReferenceType.VCS,
           { comment: 'as declared via cyclonedx-webpack-plugin config "rootComponentVCS"' }
         )
       )
@@ -386,21 +398,20 @@ export class CycloneDxWebpackPlugin {
   }
 
   #finalizeBom (
-    bom: CDX.Models.Bom,
-    cdxComponentBuilder: CDX.Builders.FromNodePackageJson.ComponentBuilder,
-    cdxPurlFactory: CDX.Factories.FromNodePackageJson.PackageUrlFactory,
+    bom: Bom,
+    cdxComponentBuilder: FromNodePackageJsonBuilders.ComponentBuilder,
     logger: WebpackLogger
   ): void {
     /* eslint-disable no-param-reassign -- intended */
     bom.serialNumber = this.reproducibleResults
       ? undefined
-      : CDX.Utils.BomUtility.randomSerialNumber()
+      : BomUtils.randomSerialNumber()
     bom.metadata.timestamp = this.reproducibleResults
       ? undefined
       : new Date()
 
-    bom.metadata.tools.components.add(new CDX.Models.Component(
-      CDX.Enums.ComponentType.Application,
+    bom.metadata.tools.components.add(new Component(
+      ComponentType.Application,
       'webpack',
       { version: WEBPACK_VERSION }
     ))
@@ -412,17 +423,16 @@ export class CycloneDxWebpackPlugin {
     if (rComponent !== undefined) {
       this.#addRootComponentExtRefs(rComponent, logger)
       /* eslint-disable-next-line  @typescript-eslint/no-unsafe-type-assertion -- ack */
-      rComponent.type = this.rootComponentType as CDX.Models.Component['type']
-      rComponent.purl = cdxPurlFactory.makeFromComponent(rComponent)
-      rComponent.bomRef.value = rComponent.purl?.toString()
+      rComponent.type = this.rootComponentType as Component['type']
+      rComponent.bomRef.value ??= '__root_component__'
     }
     /* eslint-enable no-param-reassign */
   }
 
-  * #makeToolCs (builder: CDX.Builders.FromNodePackageJson.ComponentBuilder, logger: WebpackLogger): Generator<CDX.Models.Component> {
-    const packageJsonPaths: Array<[string, CDX.Enums.ComponentType]> = [
+  * #makeToolCs (builder: FromNodePackageJsonBuilders.ComponentBuilder, logger: WebpackLogger): Generator<Component> {
+    const packageJsonPaths: Array<[string, ComponentType]> = [
       // this plugin is an optional enhancement, not a standalone application -- use as `Library`
-      [resolve(module.path, '..', 'package.json'), CDX.Enums.ComponentType.Library]
+      [resolve(module.path, '..', 'package.json'), ComponentType.Library]
     ]
 
     const libs = [
@@ -435,7 +445,7 @@ export class CycloneDxWebpackPlugin {
       for (const nodeModulePath of nodeModulePaths) {
         const packageJsonPath = resolve(nodeModulePath, ...lib, 'package.json')
         if (existsSync(packageJsonPath)) {
-          packageJsonPaths.push([packageJsonPath, CDX.Enums.ComponentType.Library])
+          packageJsonPaths.push([packageJsonPath, ComponentType.Library])
           continue libsLoop
         }
       }
