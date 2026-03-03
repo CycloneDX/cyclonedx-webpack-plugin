@@ -424,7 +424,7 @@ export class CycloneDxWebpackPlugin {
       this.#addRootComponentExtRefs(rComponent, logger)
       /* eslint-disable-next-line  @typescript-eslint/no-unsafe-type-assertion -- ack */
       rComponent.type = this.rootComponentType as Component['type']
-      rComponent.bomRef.value = '__root_component__'
+      rComponent.bomRef.value ??= '__root_component__'
     }
     /* eslint-enable no-param-reassign */
   }
