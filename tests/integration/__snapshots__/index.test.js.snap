@@ -90,7 +90,7 @@ exports[`integration feature: component evidence generated json file: dist/.bom/
       "name": "feature-issue676",
       "group": "@cyclonedx-webpack-plugin-tests",
       "version": "0.0.0",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-webpack-plugin-tests/feature-issue676@0.0.0",
       "author": "Jan Kowalleck",
       "description": "example setup for testing evidence collection",
       "licenses": [
@@ -590,15 +590,6 @@ exports[`integration feature: component evidence generated json file: dist/.bom/
   ],
   "dependencies": [
     {
-      "ref": "__root_component__",
-      "dependsOn": [
-        "@angular/core@18.2.7",
-        "@angular/platform-browser@18.2.7",
-        "@angular/router@18.2.7",
-        "css-loader@7.1.2"
-      ]
-    },
-    {
       "ref": "@angular/common@18.2.7",
       "dependsOn": [
         "@angular/core@18.2.7",
@@ -630,6 +621,15 @@ exports[`integration feature: component evidence generated json file: dist/.bom/
     },
     {
       "ref": "@babel/runtime@7.25.0"
+    },
+    {
+      "ref": "@cyclonedx-webpack-plugin-tests/feature-issue676@0.0.0",
+      "dependsOn": [
+        "@angular/core@18.2.7",
+        "@angular/platform-browser@18.2.7",
+        "@angular/router@18.2.7",
+        "css-loader@7.1.2"
+      ]
     },
     {
       "ref": "css-loader@7.1.2"
@@ -740,7 +740,7 @@ exports[`integration feature: component evidence generated json file: dist/.well
       "name": "feature-issue676",
       "group": "@cyclonedx-webpack-plugin-tests",
       "version": "0.0.0",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-webpack-plugin-tests/feature-issue676@0.0.0",
       "author": "Jan Kowalleck",
       "description": "example setup for testing evidence collection",
       "licenses": [
@@ -1240,15 +1240,6 @@ exports[`integration feature: component evidence generated json file: dist/.well
   ],
   "dependencies": [
     {
-      "ref": "__root_component__",
-      "dependsOn": [
-        "@angular/core@18.2.7",
-        "@angular/platform-browser@18.2.7",
-        "@angular/router@18.2.7",
-        "css-loader@7.1.2"
-      ]
-    },
-    {
       "ref": "@angular/common@18.2.7",
       "dependsOn": [
         "@angular/core@18.2.7",
@@ -1280,6 +1271,15 @@ exports[`integration feature: component evidence generated json file: dist/.well
     },
     {
       "ref": "@babel/runtime@7.25.0"
+    },
+    {
+      "ref": "@cyclonedx-webpack-plugin-tests/feature-issue676@0.0.0",
+      "dependsOn": [
+        "@angular/core@18.2.7",
+        "@angular/platform-browser@18.2.7",
+        "@angular/router@18.2.7",
+        "css-loader@7.1.2"
+      ]
     },
     {
       "ref": "css-loader@7.1.2"
@@ -1369,7 +1369,7 @@ exports[`integration feature: component evidence generated xml file: dist/.bom/b
         </component>
       </components>
     </tools>
-    <component type="application" bom-ref="__root_component__">
+    <component type="application" bom-ref="@cyclonedx-webpack-plugin-tests/feature-issue676@0.0.0">
       <author>Jan Kowalleck</author>
       <group>@cyclonedx-webpack-plugin-tests</group>
       <name>feature-issue676</name>
@@ -1722,12 +1722,6 @@ exports[`integration feature: component evidence generated xml file: dist/.bom/b
     </component>
   </components>
   <dependencies>
-    <dependency ref="__root_component__">
-      <dependency ref="@angular/core@18.2.7"/>
-      <dependency ref="@angular/platform-browser@18.2.7"/>
-      <dependency ref="@angular/router@18.2.7"/>
-      <dependency ref="css-loader@7.1.2"/>
-    </dependency>
     <dependency ref="@angular/common@18.2.7">
       <dependency ref="@angular/core@18.2.7"/>
       <dependency ref="@babel/runtime@7.25.0"/>
@@ -1747,6 +1741,12 @@ exports[`integration feature: component evidence generated xml file: dist/.bom/b
       <dependency ref="rxjs@7.8.1"/>
     </dependency>
     <dependency ref="@babel/runtime@7.25.0"/>
+    <dependency ref="@cyclonedx-webpack-plugin-tests/feature-issue676@0.0.0">
+      <dependency ref="@angular/core@18.2.7"/>
+      <dependency ref="@angular/platform-browser@18.2.7"/>
+      <dependency ref="@angular/router@18.2.7"/>
+      <dependency ref="css-loader@7.1.2"/>
+    </dependency>
     <dependency ref="css-loader@7.1.2"/>
     <dependency ref="rxjs@7.8.1">
       <dependency ref="tslib@2.6.3"/>
@@ -1846,7 +1846,7 @@ exports[`integration feature: root component BuildSystem generated json file: di
       "type": "application",
       "name": "feature-issue1344",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-webpack-plugin-tests/feature-issue1344@",
       "author": "Jeremy Long",
       "description": "example setup with properly configured \`rootComponentBuildSystem\`",
       "licenses": [
@@ -1884,7 +1884,7 @@ exports[`integration feature: root component BuildSystem generated json file: di
   "components": [],
   "dependencies": [
     {
-      "ref": "__root_component__"
+      "ref": "@cyclonedx-webpack-plugin-tests/feature-issue1344@"
     }
   ]
 }"
@@ -1979,7 +1979,7 @@ exports[`integration feature: root component BuildSystem generated json file: di
       "type": "application",
       "name": "feature-issue1344",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-webpack-plugin-tests/feature-issue1344@",
       "author": "Jeremy Long",
       "description": "example setup with properly configured \`rootComponentBuildSystem\`",
       "licenses": [
@@ -2017,7 +2017,7 @@ exports[`integration feature: root component BuildSystem generated json file: di
   "components": [],
   "dependencies": [
     {
-      "ref": "__root_component__"
+      "ref": "@cyclonedx-webpack-plugin-tests/feature-issue1344@"
     }
   ]
 }"
@@ -2092,7 +2092,7 @@ exports[`integration feature: root component BuildSystem generated xml file: dis
         </component>
       </components>
     </tools>
-    <component type="application" bom-ref="__root_component__">
+    <component type="application" bom-ref="@cyclonedx-webpack-plugin-tests/feature-issue1344@">
       <author>Jeremy Long</author>
       <group>@cyclonedx-webpack-plugin-tests</group>
       <name>feature-issue1344</name>
@@ -2124,7 +2124,7 @@ exports[`integration feature: root component BuildSystem generated xml file: dis
   </metadata>
   <components/>
   <dependencies>
-    <dependency ref="__root_component__"/>
+    <dependency ref="@cyclonedx-webpack-plugin-tests/feature-issue1344@"/>
   </dependencies>
 </bom>"
 `;
@@ -2535,7 +2535,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
       "type": "application",
       "name": "example-webpack5-angular13",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-webpack-plugin-tests/example-webpack5-angular13@",
       "author": "Jan Kowalleck",
       "description": "example setup witch Angular13 in WebPack5",
       "licenses": [
@@ -2810,16 +2810,6 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
   ],
   "dependencies": [
     {
-      "ref": "__root_component__",
-      "dependsOn": [
-        "@angular/common@13.3.12",
-        "@angular/core@13.3.12",
-        "@angular/platform-browser@13.3.12",
-        "css-loader@6.5.1",
-        "zone.js@0.11.8"
-      ]
-    },
-    {
       "ref": "@angular/common@13.3.12",
       "dependsOn": [
         "@angular/core@13.3.12"
@@ -2836,6 +2826,16 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
       "dependsOn": [
         "@angular/common@13.3.12",
         "@angular/core@13.3.12"
+      ]
+    },
+    {
+      "ref": "@cyclonedx-webpack-plugin-tests/example-webpack5-angular13@",
+      "dependsOn": [
+        "@angular/common@13.3.12",
+        "@angular/core@13.3.12",
+        "@angular/platform-browser@13.3.12",
+        "css-loader@6.5.1",
+        "zone.js@0.11.8"
       ]
     },
     {
@@ -2946,7 +2946,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
       "type": "application",
       "name": "example-webpack5-angular13",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-webpack-plugin-tests/example-webpack5-angular13@",
       "author": "Jan Kowalleck",
       "description": "example setup witch Angular13 in WebPack5",
       "licenses": [
@@ -3221,16 +3221,6 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
   ],
   "dependencies": [
     {
-      "ref": "__root_component__",
-      "dependsOn": [
-        "@angular/common@13.3.12",
-        "@angular/core@13.3.12",
-        "@angular/platform-browser@13.3.12",
-        "css-loader@6.5.1",
-        "zone.js@0.11.8"
-      ]
-    },
-    {
       "ref": "@angular/common@13.3.12",
       "dependsOn": [
         "@angular/core@13.3.12"
@@ -3247,6 +3237,16 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
       "dependsOn": [
         "@angular/common@13.3.12",
         "@angular/core@13.3.12"
+      ]
+    },
+    {
+      "ref": "@cyclonedx-webpack-plugin-tests/example-webpack5-angular13@",
+      "dependsOn": [
+        "@angular/common@13.3.12",
+        "@angular/core@13.3.12",
+        "@angular/platform-browser@13.3.12",
+        "css-loader@6.5.1",
+        "zone.js@0.11.8"
       ]
     },
     {
@@ -3337,7 +3337,7 @@ exports[`integration functional: webpack5 with angular13 generated xml file: dis
         </component>
       </components>
     </tools>
-    <component type="application" bom-ref="__root_component__">
+    <component type="application" bom-ref="@cyclonedx-webpack-plugin-tests/example-webpack5-angular13@">
       <author>Jan Kowalleck</author>
       <group>@cyclonedx-webpack-plugin-tests</group>
       <name>example-webpack5-angular13</name>
@@ -3551,13 +3551,6 @@ exports[`integration functional: webpack5 with angular13 generated xml file: dis
     </component>
   </components>
   <dependencies>
-    <dependency ref="__root_component__">
-      <dependency ref="@angular/common@13.3.12"/>
-      <dependency ref="@angular/core@13.3.12"/>
-      <dependency ref="@angular/platform-browser@13.3.12"/>
-      <dependency ref="css-loader@6.5.1"/>
-      <dependency ref="zone.js@0.11.8"/>
-    </dependency>
     <dependency ref="@angular/common@13.3.12">
       <dependency ref="@angular/core@13.3.12"/>
     </dependency>
@@ -3567,6 +3560,13 @@ exports[`integration functional: webpack5 with angular13 generated xml file: dis
     <dependency ref="@angular/platform-browser@13.3.12">
       <dependency ref="@angular/common@13.3.12"/>
       <dependency ref="@angular/core@13.3.12"/>
+    </dependency>
+    <dependency ref="@cyclonedx-webpack-plugin-tests/example-webpack5-angular13@">
+      <dependency ref="@angular/common@13.3.12"/>
+      <dependency ref="@angular/core@13.3.12"/>
+      <dependency ref="@angular/platform-browser@13.3.12"/>
+      <dependency ref="css-loader@6.5.1"/>
+      <dependency ref="zone.js@0.11.8"/>
     </dependency>
     <dependency ref="css-loader@6.5.1"/>
     <dependency ref="rxjs@7.5.7">
@@ -3668,7 +3668,7 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
       "name": "example-webpack5-angular17",
       "group": "@cyclonedx-webpack-plugin-tests",
       "version": "0.0.0",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0",
       "author": "Jan Kowalleck",
       "description": "example setup witch Angular17 in WebPack5",
       "licenses": [
@@ -4008,15 +4008,6 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
   ],
   "dependencies": [
     {
-      "ref": "__root_component__",
-      "dependsOn": [
-        "@angular/core@17.3.0",
-        "@angular/platform-browser@17.3.0",
-        "@angular/router@17.3.0",
-        "css-loader@6.10.0"
-      ]
-    },
-    {
       "ref": "@angular/common@17.3.0",
       "dependsOn": [
         "@angular/core@17.3.0",
@@ -4049,6 +4040,15 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
     },
     {
       "ref": "@babel/runtime@7.24.0"
+    },
+    {
+      "ref": "@cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0",
+      "dependsOn": [
+        "@angular/core@17.3.0",
+        "@angular/platform-browser@17.3.0",
+        "@angular/router@17.3.0",
+        "css-loader@6.10.0"
+      ]
     },
     {
       "ref": "css-loader@6.10.0"
@@ -4159,7 +4159,7 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
       "name": "example-webpack5-angular17",
       "group": "@cyclonedx-webpack-plugin-tests",
       "version": "0.0.0",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0",
       "author": "Jan Kowalleck",
       "description": "example setup witch Angular17 in WebPack5",
       "licenses": [
@@ -4499,15 +4499,6 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
   ],
   "dependencies": [
     {
-      "ref": "__root_component__",
-      "dependsOn": [
-        "@angular/core@17.3.0",
-        "@angular/platform-browser@17.3.0",
-        "@angular/router@17.3.0",
-        "css-loader@6.10.0"
-      ]
-    },
-    {
       "ref": "@angular/common@17.3.0",
       "dependsOn": [
         "@angular/core@17.3.0",
@@ -4540,6 +4531,15 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
     },
     {
       "ref": "@babel/runtime@7.24.0"
+    },
+    {
+      "ref": "@cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0",
+      "dependsOn": [
+        "@angular/core@17.3.0",
+        "@angular/platform-browser@17.3.0",
+        "@angular/router@17.3.0",
+        "css-loader@6.10.0"
+      ]
     },
     {
       "ref": "css-loader@6.10.0"
@@ -4629,7 +4629,7 @@ exports[`integration functional: webpack5 with angular17 generated xml file: dis
         </component>
       </components>
     </tools>
-    <component type="application" bom-ref="__root_component__">
+    <component type="application" bom-ref="@cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0">
       <author>Jan Kowalleck</author>
       <group>@cyclonedx-webpack-plugin-tests</group>
       <name>example-webpack5-angular17</name>
@@ -4894,12 +4894,6 @@ exports[`integration functional: webpack5 with angular17 generated xml file: dis
     </component>
   </components>
   <dependencies>
-    <dependency ref="__root_component__">
-      <dependency ref="@angular/core@17.3.0"/>
-      <dependency ref="@angular/platform-browser@17.3.0"/>
-      <dependency ref="@angular/router@17.3.0"/>
-      <dependency ref="css-loader@6.10.0"/>
-    </dependency>
     <dependency ref="@angular/common@17.3.0">
       <dependency ref="@angular/core@17.3.0"/>
       <dependency ref="@babel/runtime@7.24.0"/>
@@ -4920,6 +4914,12 @@ exports[`integration functional: webpack5 with angular17 generated xml file: dis
       <dependency ref="rxjs@7.8.1"/>
     </dependency>
     <dependency ref="@babel/runtime@7.24.0"/>
+    <dependency ref="@cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0">
+      <dependency ref="@angular/core@17.3.0"/>
+      <dependency ref="@angular/platform-browser@17.3.0"/>
+      <dependency ref="@angular/router@17.3.0"/>
+      <dependency ref="css-loader@6.10.0"/>
+    </dependency>
     <dependency ref="css-loader@6.10.0"/>
     <dependency ref="rxjs@7.8.1">
       <dependency ref="tslib@2.6.2"/>
@@ -5020,7 +5020,7 @@ exports[`integration functional: webpack5 with react18 generated json file: dist
       "name": "example-webpack5-react18",
       "group": "@cyclonedx-webpack-plugin-tests",
       "version": "0.0.1",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1",
       "author": "Jan Kowalleck",
       "description": "example setup with react and webpack5",
       "licenses": [
@@ -5256,16 +5256,16 @@ exports[`integration functional: webpack5 with react18 generated json file: dist
   ],
   "dependencies": [
     {
-      "ref": "__root_component__",
+      "ref": "@babel/runtime@7.18.3"
+    },
+    {
+      "ref": "@cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1",
       "dependsOn": [
         "@babel/runtime@7.18.3",
         "css-loader@6.7.1",
         "react-dom@18.2.0",
         "react@18.2.0"
       ]
-    },
-    {
-      "ref": "@babel/runtime@7.18.3"
     },
     {
       "ref": "css-loader@6.7.1"
@@ -5380,7 +5380,7 @@ exports[`integration functional: webpack5 with react18 generated json file: dist
       "name": "example-webpack5-react18",
       "group": "@cyclonedx-webpack-plugin-tests",
       "version": "0.0.1",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1",
       "author": "Jan Kowalleck",
       "description": "example setup with react and webpack5",
       "licenses": [
@@ -5616,16 +5616,16 @@ exports[`integration functional: webpack5 with react18 generated json file: dist
   ],
   "dependencies": [
     {
-      "ref": "__root_component__",
+      "ref": "@babel/runtime@7.18.3"
+    },
+    {
+      "ref": "@cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1",
       "dependsOn": [
         "@babel/runtime@7.18.3",
         "css-loader@6.7.1",
         "react-dom@18.2.0",
         "react@18.2.0"
       ]
-    },
-    {
-      "ref": "@babel/runtime@7.18.3"
     },
     {
       "ref": "css-loader@6.7.1"
@@ -5719,7 +5719,7 @@ exports[`integration functional: webpack5 with react18 generated xml file: dist/
         </component>
       </components>
     </tools>
-    <component type="application" bom-ref="__root_component__">
+    <component type="application" bom-ref="@cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1">
       <author>Jan Kowalleck</author>
       <group>@cyclonedx-webpack-plugin-tests</group>
       <name>example-webpack5-react18</name>
@@ -5903,13 +5903,13 @@ exports[`integration functional: webpack5 with react18 generated xml file: dist/
     </component>
   </components>
   <dependencies>
-    <dependency ref="__root_component__">
+    <dependency ref="@babel/runtime@7.18.3"/>
+    <dependency ref="@cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1">
       <dependency ref="@babel/runtime@7.18.3"/>
       <dependency ref="css-loader@6.7.1"/>
       <dependency ref="react-dom@18.2.0"/>
       <dependency ref="react@18.2.0"/>
     </dependency>
-    <dependency ref="@babel/runtime@7.18.3"/>
     <dependency ref="css-loader@6.7.1"/>
     <dependency ref="react-dom@18.2.0">
       <dependency ref="react@18.2.0"/>
@@ -6011,7 +6011,7 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.b
       "type": "application",
       "name": "example-webpack5-vue2",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-webpack-plugin-tests/example-webpack5-vue2@",
       "author": "Jan Kowalleck",
       "description": "example setup witch Vue2 in WebPack5",
       "licenses": [
@@ -6079,7 +6079,7 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.b
   ],
   "dependencies": [
     {
-      "ref": "__root_component__",
+      "ref": "@cyclonedx-webpack-plugin-tests/example-webpack5-vue2@",
       "dependsOn": [
         "vue@2.6.14"
       ]
@@ -6180,7 +6180,7 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.w
       "type": "application",
       "name": "example-webpack5-vue2",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-webpack-plugin-tests/example-webpack5-vue2@",
       "author": "Jan Kowalleck",
       "description": "example setup witch Vue2 in WebPack5",
       "licenses": [
@@ -6248,7 +6248,7 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.w
   ],
   "dependencies": [
     {
-      "ref": "__root_component__",
+      "ref": "@cyclonedx-webpack-plugin-tests/example-webpack5-vue2@",
       "dependsOn": [
         "vue@2.6.14"
       ]
@@ -6329,7 +6329,7 @@ exports[`integration functional: webpack5 with vue2 generated xml file: dist/.bo
         </component>
       </components>
     </tools>
-    <component type="application" bom-ref="__root_component__">
+    <component type="application" bom-ref="@cyclonedx-webpack-plugin-tests/example-webpack5-vue2@">
       <author>Jan Kowalleck</author>
       <group>@cyclonedx-webpack-plugin-tests</group>
       <name>example-webpack5-vue2</name>
@@ -6384,7 +6384,7 @@ exports[`integration functional: webpack5 with vue2 generated xml file: dist/.bo
     </component>
   </components>
   <dependencies>
-    <dependency ref="__root_component__">
+    <dependency ref="@cyclonedx-webpack-plugin-tests/example-webpack5-vue2@">
       <dependency ref="vue@2.6.14"/>
     </dependency>
     <dependency ref="vue@2.6.14"/>
@@ -6481,7 +6481,7 @@ exports[`integration functional: webpack5 with vue2 in yarn setup generated json
       "type": "application",
       "name": "example-webpack5-vue2-yarn",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-webpack-plugin-tests/example-webpack5-vue2-yarn@",
       "author": "Jan Kowalleck",
       "description": "example setup witch Vue2 in WebPack5 with yarn setup",
       "licenses": [
@@ -6549,7 +6549,7 @@ exports[`integration functional: webpack5 with vue2 in yarn setup generated json
   ],
   "dependencies": [
     {
-      "ref": "__root_component__",
+      "ref": "@cyclonedx-webpack-plugin-tests/example-webpack5-vue2-yarn@",
       "dependsOn": [
         "vue@2.7.16"
       ]
@@ -6650,7 +6650,7 @@ exports[`integration functional: webpack5 with vue2 in yarn setup generated json
       "type": "application",
       "name": "example-webpack5-vue2-yarn",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-webpack-plugin-tests/example-webpack5-vue2-yarn@",
       "author": "Jan Kowalleck",
       "description": "example setup witch Vue2 in WebPack5 with yarn setup",
       "licenses": [
@@ -6718,7 +6718,7 @@ exports[`integration functional: webpack5 with vue2 in yarn setup generated json
   ],
   "dependencies": [
     {
-      "ref": "__root_component__",
+      "ref": "@cyclonedx-webpack-plugin-tests/example-webpack5-vue2-yarn@",
       "dependsOn": [
         "vue@2.7.16"
       ]
@@ -6799,7 +6799,7 @@ exports[`integration functional: webpack5 with vue2 in yarn setup generated xml 
         </component>
       </components>
     </tools>
-    <component type="application" bom-ref="__root_component__">
+    <component type="application" bom-ref="@cyclonedx-webpack-plugin-tests/example-webpack5-vue2-yarn@">
       <author>Jan Kowalleck</author>
       <group>@cyclonedx-webpack-plugin-tests</group>
       <name>example-webpack5-vue2-yarn</name>
@@ -6854,7 +6854,7 @@ exports[`integration functional: webpack5 with vue2 in yarn setup generated xml 
     </component>
   </components>
   <dependencies>
-    <dependency ref="__root_component__">
+    <dependency ref="@cyclonedx-webpack-plugin-tests/example-webpack5-vue2-yarn@">
       <dependency ref="vue@2.7.16"/>
     </dependency>
     <dependency ref="vue@2.7.16"/>
@@ -6951,7 +6951,7 @@ exports[`integration functional: webpack5 with vue2-cli-service generated json f
       "type": "application",
       "name": "example-webpack5-vue2-cli",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli@",
       "description": "example setup witch Vue2 in WebPack5",
       "licenses": [
         {
@@ -7018,7 +7018,7 @@ exports[`integration functional: webpack5 with vue2-cli-service generated json f
   ],
   "dependencies": [
     {
-      "ref": "__root_component__",
+      "ref": "@cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli@",
       "dependsOn": [
         "vue@2.7.16"
       ]
@@ -7119,7 +7119,7 @@ exports[`integration functional: webpack5 with vue2-cli-service generated json f
       "type": "application",
       "name": "example-webpack5-vue2-cli",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli@",
       "description": "example setup witch Vue2 in WebPack5",
       "licenses": [
         {
@@ -7186,7 +7186,7 @@ exports[`integration functional: webpack5 with vue2-cli-service generated json f
   ],
   "dependencies": [
     {
-      "ref": "__root_component__",
+      "ref": "@cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli@",
       "dependsOn": [
         "vue@2.7.16"
       ]
@@ -7267,7 +7267,7 @@ exports[`integration functional: webpack5 with vue2-cli-service generated xml fi
         </component>
       </components>
     </tools>
-    <component type="application" bom-ref="__root_component__">
+    <component type="application" bom-ref="@cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli@">
       <group>@cyclonedx-webpack-plugin-tests</group>
       <name>example-webpack5-vue2-cli</name>
       <description>example setup witch Vue2 in WebPack5</description>
@@ -7321,7 +7321,7 @@ exports[`integration functional: webpack5 with vue2-cli-service generated xml fi
     </component>
   </components>
   <dependencies>
-    <dependency ref="__root_component__">
+    <dependency ref="@cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli@">
       <dependency ref="vue@2.7.16"/>
     </dependency>
     <dependency ref="vue@2.7.16"/>
@@ -7847,7 +7847,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "application",
       "name": "regression-issue1337",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-webpack-plugin-tests/regression-issue1337@",
       "author": "Jan Kowalleck",
       "description": "example setup for issue#1337",
       "licenses": [
@@ -8513,7 +8513,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
   ],
   "dependencies": [
     {
-      "ref": "__root_component__",
+      "ref": "@cyclonedx-webpack-plugin-tests/regression-issue1337@",
       "dependsOn": [
         "esprima@4.0.1",
         "libphonenumber-js@1.11.16",
@@ -8677,7 +8677,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
       "type": "application",
       "name": "regression-issue1337",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-webpack-plugin-tests/regression-issue1337@",
       "author": "Jan Kowalleck",
       "description": "example setup for issue#1337",
       "licenses": [
@@ -9343,7 +9343,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
   ],
   "dependencies": [
     {
-      "ref": "__root_component__",
+      "ref": "@cyclonedx-webpack-plugin-tests/regression-issue1337@",
       "dependsOn": [
         "esprima@4.0.1",
         "libphonenumber-js@1.11.16",
@@ -9487,7 +9487,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
         </component>
       </components>
     </tools>
-    <component type="application" bom-ref="__root_component__">
+    <component type="application" bom-ref="@cyclonedx-webpack-plugin-tests/regression-issue1337@">
       <author>Jan Kowalleck</author>
       <group>@cyclonedx-webpack-plugin-tests</group>
       <name>regression-issue1337</name>
@@ -9960,7 +9960,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
     </component>
   </components>
   <dependencies>
-    <dependency ref="__root_component__">
+    <dependency ref="@cyclonedx-webpack-plugin-tests/regression-issue1337@">
       <dependency ref="esprima@4.0.1"/>
       <dependency ref="libphonenumber-js@1.11.16"/>
       <dependency ref="through@2.3.8"/>
@@ -10090,7 +10090,7 @@ exports[`integration regression: ignore folder \`LICENSES\` generated json file:
       "type": "application",
       "name": "regression-issue1384",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-webpack-plugin-tests/regression-issue1384@",
       "description": "example setup with properly configured \`rootComponentBuildSystem\`",
       "licenses": [
         {
@@ -10186,7 +10186,7 @@ exports[`integration regression: ignore folder \`LICENSES\` generated json file:
   ],
   "dependencies": [
     {
-      "ref": "__root_component__",
+      "ref": "@cyclonedx-webpack-plugin-tests/regression-issue1384@",
       "dependsOn": [
         "@db-ui/base@0.29.2"
       ]
@@ -10287,7 +10287,7 @@ exports[`integration regression: ignore folder \`LICENSES\` generated json file:
       "type": "application",
       "name": "regression-issue1384",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-webpack-plugin-tests/regression-issue1384@",
       "description": "example setup with properly configured \`rootComponentBuildSystem\`",
       "licenses": [
         {
@@ -10383,7 +10383,7 @@ exports[`integration regression: ignore folder \`LICENSES\` generated json file:
   ],
   "dependencies": [
     {
-      "ref": "__root_component__",
+      "ref": "@cyclonedx-webpack-plugin-tests/regression-issue1384@",
       "dependsOn": [
         "@db-ui/base@0.29.2"
       ]
@@ -10464,7 +10464,7 @@ exports[`integration regression: ignore folder \`LICENSES\` generated xml file: 
         </component>
       </components>
     </tools>
-    <component type="application" bom-ref="__root_component__">
+    <component type="application" bom-ref="@cyclonedx-webpack-plugin-tests/regression-issue1384@">
       <group>@cyclonedx-webpack-plugin-tests</group>
       <name>regression-issue1384</name>
       <description>example setup with properly configured \`rootComponentBuildSystem\`</description>
@@ -10535,7 +10535,7 @@ exports[`integration regression: ignore folder \`LICENSES\` generated xml file: 
     </component>
   </components>
   <dependencies>
-    <dependency ref="__root_component__">
+    <dependency ref="@cyclonedx-webpack-plugin-tests/regression-issue1384@">
       <dependency ref="@db-ui/base@0.29.2"/>
     </dependency>
     <dependency ref="@db-ui/base@0.29.2"/>
@@ -10632,7 +10632,7 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
       "type": "application",
       "name": "regression-issue745",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-webpack-plugin-tests/regression-issue745@",
       "author": "Jan Kowalleck",
       "description": "example setup for issue#745",
       "licenses": [
@@ -11074,12 +11074,6 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
   ],
   "dependencies": [
     {
-      "ref": "__root_component__",
-      "dependsOn": [
-        "@apollo/client@3.7.10"
-      ]
-    },
-    {
       "ref": "@apollo/client@3.7.10",
       "dependsOn": [
         "@wry/context@0.7.0",
@@ -11093,6 +11087,12 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
         "ts-invariant@0.10.3",
         "tslib@2.5.0",
         "zen-observable-ts@1.2.5"
+      ]
+    },
+    {
+      "ref": "@cyclonedx-webpack-plugin-tests/regression-issue745@",
+      "dependsOn": [
+        "@apollo/client@3.7.10"
       ]
     },
     {
@@ -11232,7 +11232,7 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
       "type": "application",
       "name": "regression-issue745",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-webpack-plugin-tests/regression-issue745@",
       "author": "Jan Kowalleck",
       "description": "example setup for issue#745",
       "licenses": [
@@ -11674,12 +11674,6 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
   ],
   "dependencies": [
     {
-      "ref": "__root_component__",
-      "dependsOn": [
-        "@apollo/client@3.7.10"
-      ]
-    },
-    {
       "ref": "@apollo/client@3.7.10",
       "dependsOn": [
         "@wry/context@0.7.0",
@@ -11693,6 +11687,12 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
         "ts-invariant@0.10.3",
         "tslib@2.5.0",
         "zen-observable-ts@1.2.5"
+      ]
+    },
+    {
+      "ref": "@cyclonedx-webpack-plugin-tests/regression-issue745@",
+      "dependsOn": [
+        "@apollo/client@3.7.10"
       ]
     },
     {
@@ -11812,7 +11812,7 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
         </component>
       </components>
     </tools>
-    <component type="application" bom-ref="__root_component__">
+    <component type="application" bom-ref="@cyclonedx-webpack-plugin-tests/regression-issue745@">
       <author>Jan Kowalleck</author>
       <group>@cyclonedx-webpack-plugin-tests</group>
       <name>regression-issue745</name>
@@ -12153,9 +12153,6 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
     </component>
   </components>
   <dependencies>
-    <dependency ref="__root_component__">
-      <dependency ref="@apollo/client@3.7.10"/>
-    </dependency>
     <dependency ref="@apollo/client@3.7.10">
       <dependency ref="@wry/context@0.7.0"/>
       <dependency ref="@wry/equality@0.5.3"/>
@@ -12168,6 +12165,9 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
       <dependency ref="ts-invariant@0.10.3"/>
       <dependency ref="tslib@2.5.0"/>
       <dependency ref="zen-observable-ts@1.2.5"/>
+    </dependency>
+    <dependency ref="@cyclonedx-webpack-plugin-tests/regression-issue745@">
+      <dependency ref="@apollo/client@3.7.10"/>
     </dependency>
     <dependency ref="@wry/context@0.7.0"/>
     <dependency ref="@wry/equality@0.5.3"/>
@@ -12281,7 +12281,7 @@ exports[`integration regression: verify enhanced package.json finder generated j
       "type": "application",
       "name": "regression-issue1284",
       "group": "@cyclonedx-weboack-plugin-tests",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-weboack-plugin-tests/regression-issue1284@",
       "description": "example to verify issue1284"
     }
   },
@@ -12357,7 +12357,7 @@ exports[`integration regression: verify enhanced package.json finder generated j
   ],
   "dependencies": [
     {
-      "ref": "__root_component__",
+      "ref": "@cyclonedx-weboack-plugin-tests/regression-issue1284@",
       "dependsOn": [
         "libphonenumber-js@1.11.3",
         "luxon@3.4.4"
@@ -12462,7 +12462,7 @@ exports[`integration regression: verify enhanced package.json finder generated j
       "type": "application",
       "name": "regression-issue1284",
       "group": "@cyclonedx-weboack-plugin-tests",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-weboack-plugin-tests/regression-issue1284@",
       "description": "example to verify issue1284"
     }
   },
@@ -12538,7 +12538,7 @@ exports[`integration regression: verify enhanced package.json finder generated j
   ],
   "dependencies": [
     {
-      "ref": "__root_component__",
+      "ref": "@cyclonedx-weboack-plugin-tests/regression-issue1284@",
       "dependsOn": [
         "libphonenumber-js@1.11.3",
         "luxon@3.4.4"
@@ -12623,7 +12623,7 @@ exports[`integration regression: verify enhanced package.json finder generated x
         </component>
       </components>
     </tools>
-    <component type="application" bom-ref="__root_component__">
+    <component type="application" bom-ref="@cyclonedx-weboack-plugin-tests/regression-issue1284@">
       <group>@cyclonedx-weboack-plugin-tests</group>
       <name>regression-issue1284</name>
       <description>example to verify issue1284</description>
@@ -12684,7 +12684,7 @@ exports[`integration regression: verify enhanced package.json finder generated x
     </component>
   </components>
   <dependencies>
-    <dependency ref="__root_component__">
+    <dependency ref="@cyclonedx-weboack-plugin-tests/regression-issue1284@">
       <dependency ref="libphonenumber-js@1.11.3"/>
       <dependency ref="luxon@3.4.4"/>
     </dependency>
@@ -12783,7 +12783,7 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
       "type": "application",
       "name": "regression-issue1284-yarn",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-webpack-plugin-tests/regression-issue1284-yarn@",
       "description": "example to verify issue1284 with yarn"
     }
   },
@@ -12859,7 +12859,7 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
   ],
   "dependencies": [
     {
-      "ref": "__root_component__",
+      "ref": "@cyclonedx-webpack-plugin-tests/regression-issue1284-yarn@",
       "dependsOn": [
         "libphonenumber-js@1.11.3",
         "luxon@3.4.4"
@@ -12964,7 +12964,7 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
       "type": "application",
       "name": "regression-issue1284-yarn",
       "group": "@cyclonedx-webpack-plugin-tests",
-      "bom-ref": "__root_component__",
+      "bom-ref": "@cyclonedx-webpack-plugin-tests/regression-issue1284-yarn@",
       "description": "example to verify issue1284 with yarn"
     }
   },
@@ -13040,7 +13040,7 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
   ],
   "dependencies": [
     {
-      "ref": "__root_component__",
+      "ref": "@cyclonedx-webpack-plugin-tests/regression-issue1284-yarn@",
       "dependsOn": [
         "libphonenumber-js@1.11.3",
         "luxon@3.4.4"
@@ -13125,7 +13125,7 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
         </component>
       </components>
     </tools>
-    <component type="application" bom-ref="__root_component__">
+    <component type="application" bom-ref="@cyclonedx-webpack-plugin-tests/regression-issue1284-yarn@">
       <group>@cyclonedx-webpack-plugin-tests</group>
       <name>regression-issue1284-yarn</name>
       <description>example to verify issue1284 with yarn</description>
@@ -13186,7 +13186,7 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
     </component>
   </components>
   <dependencies>
-    <dependency ref="__root_component__">
+    <dependency ref="@cyclonedx-webpack-plugin-tests/regression-issue1284-yarn@">
       <dependency ref="libphonenumber-js@1.11.3"/>
       <dependency ref="luxon@3.4.4"/>
     </dependency>
