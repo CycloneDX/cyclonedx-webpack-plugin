@@ -35,7 +35,7 @@ env:
   REPORTS_DIR: CI_reports
   PACKED_DIR: CI_packed
   PACKED_ARTIFACT: packed
-  NODE_ACTIVE_LTS: "22"
+  NODE_ACTIVE_LTS: "24"  # https://nodejs.org/en/about/releases/
 
 jobs:
   bump:
@@ -49,12 +49,6 @@ jobs:
     permissions:
       contents: write  # needed for git push
     steps:
-      - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
-        # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v6
-        with:
-          node-version: ${{ env.NODE_ACTIVE_LTS }}
-          package-manager-cache: false
       - name: Checkout code
         # see https://github.com/actions/checkout
         uses: actions/checkout@v6
@@ -64,13 +58,17 @@ jobs:
           set -eux
           git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git config --local user.name "${GITHUB_ACTOR}"
+      - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+          package-manager-cache: false
       ## ! no npm build at the moment
       - name: bump VERSION
         id: bump
         run: |
           set -eux
-          git status
-          git diff
           COMMIT_SIG="Signed-off-by: $(git config user.name) <$(git config user.email)>"
           VERSION="$(npm version "$NPMV_NEWVERSION" --message "$NPMV_MESSAGE"$'\n\n'"$COMMIT_SIG" --preid "$NPMV_PREID")"
           echo "::debug::new version = $VERSION"
@@ -82,22 +80,19 @@ jobs:
           NPMV_NEWVERSION: ${{ github.event.inputs.newversion }}
           NPMV_MESSAGE: ${{ github.event.inputs.commitMessage }}
           NPMV_PREID: ${{ github.event.inputs.preid }}
-      - name: show error logs
-        if: ${{ failure() }}
-        run: cat /home/runner/.npm/_logs/*.log
       - name: git push back
         run: git push --follow-tags
 
-  publish-package:
+  publish-NPMJS:
     needs:
       - "bump"
-    name: publish package
+    name: publish NPMJS
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
       id-token: write  # Enables provenance signing via OIDC
     env:
-      PACKAGE_RELEASE_TAG: ${{ github.event.inputs.prerelease == 'true' && 'unstable-prerelease' || 'latest' }}
+      NPMJS_RELEASE_TAG: ${{ github.event.inputs.prerelease == 'true' && 'unstable-prerelease' || 'latest' }}
     steps:
       - name: Checkout code
         # see https://github.com/actions/checkout
@@ -117,7 +112,7 @@ jobs:
       - name: setup project
         run: |
           npm install --ignore-scripts --include=optional --loglevel=silly
-      - name: setup tools
+      - name: install tools
         run: |
           echo "::group::install code-style deps"
           npm run -- dev-setup:tools:code-style --ignore-scripts --loglevel=silly
@@ -126,25 +121,20 @@ jobs:
           npm run -- dev-setup:tools:test-dependencies --ignore-scripts --loglevel=silly
           echo "::endgroup::"
       # no explicit npm build. if a build is required, it should be configured as prepublish/prepublishOnly script of npm.
-      - name: login to registries
-        run: |
-          npm config set "//registry.npmjs.org/:_authToken=$NPM_TOKEN"
+      - name: login to NPMJS
+        run: npm config set "//registry.npmjs.org/:_authToken=$NPMJS_AUTH_TOKEN"
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: publish to NPMJS as "${{ env.PACKAGE_RELEASE_TAG }}"
+          NPMJS_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: publish to NPMJS as "${{ env.NPMJS_RELEASE_TAG }}"
         run: >
           npm publish
-          --@cyclonedx:registry='https://registry.npmjs.org'
           --provenance
-          --access public 
-          --tag "$PACKAGE_RELEASE_TAG"
+          --access public
+          --tag "$NPMJS_RELEASE_TAG"
       - name: pack release result
         run: |
           mkdir -p "$PACKED_DIR"
           npm pack --pack-destination "$PACKED_DIR"
-      - name: show error logs
-        if: ${{ failure() }}
-        run: cat /home/runner/.npm/_logs/*.log
       - name: artifact release result
         # see https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v6
@@ -156,7 +146,7 @@ jobs:
   release-GH:
     needs:
       - "bump"
-      - "publish-package"
+      - "publish-NPMJS"
     name: publish GitHub
     runs-on: ubuntu-latest
     timeout-minutes: 30
