@@ -135,15 +135,16 @@ export function normalizePackageManifest (data: any, warn?: normalizePackageData
   }
 }
 
-// @ts-ignore // TODO
-function sha256(data: BinaryLike): string  {
+function sha256hex(data: BinaryLike): string  {
   return createHash('sha256').update(data).digest('hex')
 }
+
+const spawRequiresShell = process.platform === "win32"
 
 // region relative paths
 
 // TODO use `yarn config get virtualFolder` result
-const YarnBerryVirtualCacheRE = /^.*[/\\].yarn[/\\]__virtual__[/\\][^/\\]+[/\\]\d[/\\].yarn[/\\]berry[/\\]cache[/\\]/
+const YarnBerryVirtualCacheRE = /^.*[/\\]__virtual__[/\\][^/\\]+[/\\]\d[/\\].yarn[/\\]berry[/\\]cache[/\\]/
 
 const _YarnCacheFolders = new Map<string, string | null | undefined>()
 function getYarnCacheFolder(cwd: string): string | null {
@@ -154,17 +155,19 @@ function getYarnCacheFolder(cwd: string): string | null {
     const sr2 = spawnSync('yarn', ['config', 'get', 'cacheFolder'], {
       stdio: ['ignore', 'pipe', 'ignore'],
       encoding: 'utf-8',
-      cwd
+      cwd,
+      shell: spawRequiresShell,
     })
     if (sr2.status === 0) {
       cf = sr2.stdout.trim()
     } else {
       // yarn 1
       const sr1 = spawnSync('yarn', ['cache', 'dir'], {
-        stdio: ['ignore', 'pipe', 'ignore'],
-        encoding: 'utf-8',
-        cwd
-      })
+          stdio: ['ignore', 'pipe', 'ignore'],
+          encoding: 'utf-8',
+          cwd,
+          shell: spawRequiresShell,
+        })
       if (sr1.status === 0) {
         cf = sr1.stdout.trim()
       }
@@ -183,10 +186,11 @@ function getBunCacheFolder(cwd: string): string | null {
   if (undefined === cf) {
     cf = ''
     const sr = spawnSync('bun', ['pm', 'cache'], {
-      stdio: ['ignore', 'pipe', 'ignore'],
-      encoding: 'utf-8',
-      cwd
-    })
+        stdio: ['ignore', 'pipe', 'ignore'],
+        encoding: 'utf-8',
+        cwd,
+        shell: spawRequiresShell,
+      })
     if (sr.status === 0) {
       cf = sr.stdout.trim()
     }
@@ -201,7 +205,7 @@ function getBunCacheFolder(cwd: string): string | null {
 function mkRelativePath(absRoot: string, absPath: string): string {
   const ybvcf = YarnBerryVirtualCacheRE.exec(absPath)?.[0]
   if (ybvcf !== undefined) {
-    return `yarnCache:${absPath.slice(ybvcf.length)}`
+    return `yarnVBCache:${absPath.slice(ybvcf.length)}`
   }
 
   const ycf = getYarnCacheFolder(absRoot)
@@ -218,9 +222,7 @@ function mkRelativePath(absRoot: string, absPath: string): string {
 }
 
 export function mkRelativePathReproducibleHash(absRoot: string, absPath: string): string {
-  return ( // sha256( // TODO
-    mkRelativePath(absRoot, absPath).replace(sep, '/')
-  )
+  return sha256hex(mkRelativePath(absRoot, absPath).replaceAll(sep, '/'))
 }
 
 // endregion relative paths
