@@ -135,6 +135,7 @@ export function normalizePackageManifest (data: any, warn?: normalizePackageData
   }
 }
 
+// @ts-ignore // TODO
 function sha256(data: BinaryLike): string  {
   return createHash('sha256').update(data).digest('hex')
 }
@@ -217,7 +218,7 @@ function mkRelativePath(absRoot: string, absPath: string): string {
 }
 
 export function mkRelativePathReproducibleHash(absRoot: string, absPath: string): string {
-  return sha256(
+  return ( // sha256( // TODO
     mkRelativePath(absRoot, absPath).replace(sep, '/')
   )
 }
