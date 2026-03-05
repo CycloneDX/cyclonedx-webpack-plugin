@@ -141,6 +141,7 @@ function sha256(data: BinaryLike): string  {
 
 // region relative paths
 
+// TODO use `yarn config get virtualFolder` result
 const YarnBerryVirtualCacheRE = /^.*[/\\].yarn[/\\]__virtual__[/\\][^/\\]+[/\\]\d[/\\].yarn[/\\]berry[/\\]cache[/\\]/
 
 const _YarnCacheFolders = new Map<string, string | null | undefined>()
