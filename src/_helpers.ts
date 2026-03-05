@@ -144,7 +144,7 @@ const spawRequiresShell = process.platform === "win32"
 // region relative paths
 
 // TODO use `yarn config get virtualFolder` result
-const YarnBerryVirtualCacheRE = /^.*[/\\]__virtual__[/\\][^/\\]+[/\\]\d[/\\].yarn[/\\]berry[/\\]cache[/\\]/
+const YarnBerryVirtualCacheRE = /^.*[/\\]__virtual__[/\\][^/\\]+[/\\]\d[/\\]\.yarn[/\\]berry[/\\]cache[/\\]/
 
 const _YarnCacheFolders = new Map<string, string | null | undefined>()
 function getYarnCacheFolder(cwd: string): string | null {
