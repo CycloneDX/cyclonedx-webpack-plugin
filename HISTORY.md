@@ -8,9 +8,10 @@ All notable changes to this project will be documented in this file.
 
 * Fixed
   * Reproducible BomRef values (via [#1511])
-  * Properly generate PackageURLs for private packages (via [#])
+  * Properly generate PackageURLs for private packages (via [#1514])
 
 [#1511]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1511
+[#1514]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1514
 
 ## 5.3.0 - 2026-03-04
 
