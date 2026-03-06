@@ -28,10 +28,7 @@ import {isString} from "./_helpers";
 export class PackageUrlFactory {
 
   makeFromPackageJson(packageJson: normalizePackageData.Package): PackageURL | undefined {
-    if ( packageJson.private === true ) {
-      // Per PackageUrl spec, private packages do not have one.
-      return undefined
-    }
+    // !REMINDER: even private packages may have a PURL
 
     let name: string = packageJson.name
     let namespace: string | undefined = undefined
