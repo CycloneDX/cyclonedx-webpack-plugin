@@ -101,6 +101,7 @@ exports[`integration feature: component evidence generated json file: dist/.bom/
           }
         }
       ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/feature-issue676@0.0.0",
       "externalReferences": [
         {
           "url": "git+ssh://git@gitlab.example.com/demos/feature-issue676",
@@ -751,6 +752,7 @@ exports[`integration feature: component evidence generated json file: dist/.well
           }
         }
       ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/feature-issue676@0.0.0",
       "externalReferences": [
         {
           "url": "git+ssh://git@gitlab.example.com/demos/feature-issue676",
@@ -1380,6 +1382,7 @@ exports[`integration feature: component evidence generated xml file: dist/.bom/b
           <id>Apache-2.0</id>
         </license>
       </licenses>
+      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/feature-issue676@0.0.0</purl>
       <externalReferences>
         <reference type="vcs">
           <url>git+ssh://git@gitlab.example.com/demos/feature-issue676</url>
@@ -1857,6 +1860,7 @@ exports[`integration feature: root component BuildSystem generated json file: di
           }
         }
       ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/feature-issue1344?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git%23tests%2Fintegration%2Ffeature-issue1344",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/actions",
@@ -1990,6 +1994,7 @@ exports[`integration feature: root component BuildSystem generated json file: di
           }
         }
       ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/feature-issue1344?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git%23tests%2Fintegration%2Ffeature-issue1344",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/actions",
@@ -2102,6 +2107,7 @@ exports[`integration feature: root component BuildSystem generated xml file: dis
           <id>Apache-2.0</id>
         </license>
       </licenses>
+      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/feature-issue1344?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git%23tests%2Fintegration%2Ffeature-issue1344</purl>
       <externalReferences>
         <reference type="build-system">
           <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/actions</url>
@@ -2546,6 +2552,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
           }
         }
       ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -2957,6 +2964,7 @@ exports[`integration functional: webpack5 with angular13 generated json file: di
           }
         }
       ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -3347,6 +3355,7 @@ exports[`integration functional: webpack5 with angular13 generated xml file: dis
           <id>Apache-2.0</id>
         </license>
       </licenses>
+      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular13?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
@@ -3679,6 +3688,7 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
           }
         }
       ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0",
       "externalReferences": [
         {
           "url": "git+ssh://git@gitlab.example.com/demos/webpack5-angular17",
@@ -4170,6 +4180,7 @@ exports[`integration functional: webpack5 with angular17 generated json file: di
           }
         }
       ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0",
       "externalReferences": [
         {
           "url": "git+ssh://git@gitlab.example.com/demos/webpack5-angular17",
@@ -4640,6 +4651,7 @@ exports[`integration functional: webpack5 with angular17 generated xml file: dis
           <id>Apache-2.0</id>
         </license>
       </licenses>
+      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-angular17@0.0.0</purl>
       <externalReferences>
         <reference type="vcs">
           <url>git+ssh://git@gitlab.example.com/demos/webpack5-angular17</url>
@@ -5031,6 +5043,7 @@ exports[`integration functional: webpack5 with react18 generated json file: dist
           }
         }
       ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git%23tests%2Fintegration%2Fwebpack5-react18",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -5391,6 +5404,7 @@ exports[`integration functional: webpack5 with react18 generated json file: dist
           }
         }
       ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git%23tests%2Fintegration%2Fwebpack5-react18",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -5730,6 +5744,7 @@ exports[`integration functional: webpack5 with react18 generated xml file: dist/
           <id>Apache-2.0</id>
         </license>
       </licenses>
+      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-react18@0.0.1?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git%23tests%2Fintegration%2Fwebpack5-react18</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
@@ -6022,6 +6037,7 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.b
           }
         }
       ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git%23tests%2Fintegration%2Fwebpack5-vue2",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -6191,6 +6207,7 @@ exports[`integration functional: webpack5 with vue2 generated json file: dist/.w
           }
         }
       ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git%23tests%2Fintegration%2Fwebpack5-vue2",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -6339,6 +6356,7 @@ exports[`integration functional: webpack5 with vue2 generated xml file: dist/.bo
           <id>Apache-2.0</id>
         </license>
       </licenses>
+      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2?vcs_url=git%2Bssh%3A%2F%2Fgit%40github.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git%23tests%2Fintegration%2Fwebpack5-vue2</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
@@ -6492,6 +6510,7 @@ exports[`integration functional: webpack5 with vue2 in yarn setup generated json
           }
         }
       ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-yarn?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git%23tests%2Fintegration%2Fwebpack5-vue2-yarn",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -6661,6 +6680,7 @@ exports[`integration functional: webpack5 with vue2 in yarn setup generated json
           }
         }
       ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-yarn?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git%23tests%2Fintegration%2Fwebpack5-vue2-yarn",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -6809,6 +6829,7 @@ exports[`integration functional: webpack5 with vue2 in yarn setup generated xml 
           <id>Apache-2.0</id>
         </license>
       </licenses>
+      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-yarn?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git%23tests%2Fintegration%2Fwebpack5-vue2-yarn</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
@@ -6961,6 +6982,7 @@ exports[`integration functional: webpack5 with vue2-cli-service generated json f
           }
         }
       ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git%23tests%2Fintegration%2Fwebpack5-vue2-cli-service",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -7129,6 +7151,7 @@ exports[`integration functional: webpack5 with vue2-cli-service generated json f
           }
         }
       ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git%23tests%2Fintegration%2Fwebpack5-vue2-cli-service",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -7276,6 +7299,7 @@ exports[`integration functional: webpack5 with vue2-cli-service generated xml fi
           <id>Apache-2.0</id>
         </license>
       </licenses>
+      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/example-webpack5-vue2-cli?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git%23tests%2Fintegration%2Fwebpack5-vue2-cli-service</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
@@ -7858,6 +7882,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git%23tests%2Fintegration%2Fregression-issue1337",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -8688,6 +8713,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           }
         }
       ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git%23tests%2Fintegration%2Fregression-issue1337",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -9497,6 +9523,7 @@ exports[`integration regression: find license evidence like \`LICENSE.MIT\` gene
           <id>Apache-2.0</id>
         </license>
       </licenses>
+      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1337?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git%23tests%2Fintegration%2Fregression-issue1337</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
@@ -10100,6 +10127,7 @@ exports[`integration regression: ignore folder \`LICENSES\` generated json file:
           }
         }
       ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1384?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git%23tests%2Fintegration%2Fregression-issue1384",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -10297,6 +10325,7 @@ exports[`integration regression: ignore folder \`LICENSES\` generated json file:
           }
         }
       ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1384?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git%23tests%2Fintegration%2Fregression-issue1384",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -10473,6 +10502,7 @@ exports[`integration regression: ignore folder \`LICENSES\` generated xml file: 
           <id>Apache-2.0</id>
         </license>
       </licenses>
+      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1384?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git%23tests%2Fintegration%2Fregression-issue1384</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
@@ -10643,6 +10673,7 @@ exports[`integration regression: issue#745 generated json file: dist/.bom/bom.js
           }
         }
       ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue745?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git%23tests%2Fintegration%2Fregression-issue745",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -11243,6 +11274,7 @@ exports[`integration regression: issue#745 generated json file: dist/.well-known
           }
         }
       ],
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue745?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git%23tests%2Fintegration%2Fregression-issue745",
       "externalReferences": [
         {
           "url": "https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues",
@@ -11822,6 +11854,7 @@ exports[`integration regression: issue#745 generated xml file: dist/.bom/bom.xml
           <id>Apache-2.0</id>
         </license>
       </licenses>
+      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue745?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FCycloneDX%2Fcyclonedx-webpack-plugin.git%23tests%2Fintegration%2Fregression-issue745</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/CycloneDX/cyclonedx-webpack-plugin/issues</url>
@@ -12282,7 +12315,8 @@ exports[`integration regression: verify enhanced package.json finder generated j
       "name": "regression-issue1284",
       "group": "@cyclonedx-weboack-plugin-tests",
       "bom-ref": "7ae45ad102eab3b6d7e7896acd08c427a9b25b346470d7bc6507b6481575d519",
-      "description": "example to verify issue1284"
+      "description": "example to verify issue1284",
+      "purl": "pkg:npm/%40cyclonedx-weboack-plugin-tests/regression-issue1284"
     }
   },
   "components": [
@@ -12463,7 +12497,8 @@ exports[`integration regression: verify enhanced package.json finder generated j
       "name": "regression-issue1284",
       "group": "@cyclonedx-weboack-plugin-tests",
       "bom-ref": "7ae45ad102eab3b6d7e7896acd08c427a9b25b346470d7bc6507b6481575d519",
-      "description": "example to verify issue1284"
+      "description": "example to verify issue1284",
+      "purl": "pkg:npm/%40cyclonedx-weboack-plugin-tests/regression-issue1284"
     }
   },
   "components": [
@@ -12627,6 +12662,7 @@ exports[`integration regression: verify enhanced package.json finder generated x
       <group>@cyclonedx-weboack-plugin-tests</group>
       <name>regression-issue1284</name>
       <description>example to verify issue1284</description>
+      <purl>pkg:npm/%40cyclonedx-weboack-plugin-tests/regression-issue1284</purl>
     </component>
   </metadata>
   <components>
@@ -12784,7 +12820,8 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
       "name": "regression-issue1284-yarn",
       "group": "@cyclonedx-webpack-plugin-tests",
       "bom-ref": "7ae45ad102eab3b6d7e7896acd08c427a9b25b346470d7bc6507b6481575d519",
-      "description": "example to verify issue1284 with yarn"
+      "description": "example to verify issue1284 with yarn",
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1284-yarn"
     }
   },
   "components": [
@@ -12965,7 +13002,8 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
       "name": "regression-issue1284-yarn",
       "group": "@cyclonedx-webpack-plugin-tests",
       "bom-ref": "7ae45ad102eab3b6d7e7896acd08c427a9b25b346470d7bc6507b6481575d519",
-      "description": "example to verify issue1284 with yarn"
+      "description": "example to verify issue1284 with yarn",
+      "purl": "pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1284-yarn"
     }
   },
   "components": [
@@ -13129,6 +13167,7 @@ exports[`integration regression: verify enhanced package.json finder with yarn p
       <group>@cyclonedx-webpack-plugin-tests</group>
       <name>regression-issue1284-yarn</name>
       <description>example to verify issue1284 with yarn</description>
+      <purl>pkg:npm/%40cyclonedx-webpack-plugin-tests/regression-issue1284-yarn</purl>
     </component>
   </metadata>
   <components>

@@ -7,7 +7,8 @@ All notable changes to this project will be documented in this file.
 <!-- unreleased changes go here -->
 
 * Fixed
-  * Reproducible BomRef values (via [#1511]) 
+  * Reproducible BomRef values (via [#1511])
+  * Properly generate PackageURLs for private packages (via [#])
 
 [#1511]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1511
 
