@@ -17,8 +17,11 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
+import { spawnSync } from "node:child_process";
+import type { BinaryLike} from "node:crypto";
+import { createHash } from "node:crypto";
 import { existsSync, readFileSync } from 'node:fs'
-import { dirname, isAbsolute, join, sep } from 'node:path'
+import { dirname, isAbsolute, join, relative, resolve, sep } from 'node:path'
 
 import normalizePackageData from 'normalize-package-data'
 
@@ -132,3 +135,94 @@ export function normalizePackageManifest (data: any, warn?: normalizePackageData
   }
 }
 
+function sha256hex(data: BinaryLike): string  {
+  return createHash('sha256').update(data).digest('hex')
+}
+
+const spawRequiresShell = process.platform === "win32"
+
+// region relative paths
+
+// TODO use `yarn config get virtualFolder` result
+const YarnBerryVirtualCacheRE = /^.*[/\\]__virtual__[/\\][^/\\]+[/\\]\d[/\\]\.yarn[/\\]berry[/\\]cache[/\\]/
+
+const _YarnCacheFolders = new Map<string, string | null | undefined>()
+function getYarnCacheFolder(cwd: string): string | null {
+  let cf = _YarnCacheFolders.get(cwd)
+  if (undefined === cf) {
+    cf = ''
+    // yarn 2+
+    const sr2 = spawnSync('yarn', ['config', 'get', 'cacheFolder'], {
+      stdio: ['ignore', 'pipe', 'ignore'],
+      encoding: 'utf-8',
+      cwd,
+      shell: spawRequiresShell,
+    })
+    if (sr2.status === 0) {
+      cf = sr2.stdout.trim()
+    } else {
+      // yarn 1
+      const sr1 = spawnSync('yarn', ['cache', 'dir'], {
+          stdio: ['ignore', 'pipe', 'ignore'],
+          encoding: 'utf-8',
+          cwd,
+          shell: spawRequiresShell,
+        })
+      if (sr1.status === 0) {
+        cf = sr1.stdout.trim()
+      }
+    }
+    cf = cf.length > 0
+      ? `${resolve(cf)}${sep}`
+      : null
+    _YarnCacheFolders.set(cwd, cf)
+  }
+  return cf
+}
+
+const _BunCacheFolders = new Map<string, string | null | undefined>()
+function getBunCacheFolder(cwd: string): string | null {
+  let cf = _BunCacheFolders.get(cwd)
+  if (undefined === cf) {
+    cf = ''
+    const sr = spawnSync('bun', ['pm', 'cache'], {
+        stdio: ['ignore', 'pipe', 'ignore'],
+        encoding: 'utf-8',
+        cwd,
+        shell: spawRequiresShell,
+      })
+    if (sr.status === 0) {
+      cf = sr.stdout.trim()
+    }
+    cf = cf.length > 0
+      ? `${resolve(cf)}${sep}`
+      : null
+    _BunCacheFolders.set(cwd, cf)
+  }
+  return cf
+}
+
+function mkRelativePath(absRoot: string, absPath: string): string {
+  const ybvcf = YarnBerryVirtualCacheRE.exec(absPath)?.[0]
+  if (ybvcf !== undefined) {
+    return `yarnVBCache:${absPath.slice(ybvcf.length)}`
+  }
+
+  const ycf = getYarnCacheFolder(absRoot)
+  if (ycf !== null && absPath.startsWith(ycf)) {
+    return `yarnCache:${absPath.slice(ycf.length)}`
+  }
+
+  const bcf = getBunCacheFolder(absRoot)
+  if (bcf !== null && absPath.startsWith(bcf)) {
+    return `bunCache:${absPath.slice(bcf.length)}`
+  }
+
+  return relative(absRoot, absPath)
+}
+
+export function mkRelativePathReproducibleHash(absRoot: string, absPath: string): string {
+  return sha256hex(mkRelativePath(absRoot, absPath).replaceAll(sep, '/'))
+}
+
+// endregion relative paths

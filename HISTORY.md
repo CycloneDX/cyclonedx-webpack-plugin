@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Fixed
+  * Reproducible BomRef values (via [#1511]) 
+
+[#1511]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1511
+
 ## 5.3.0 - 2026-03-04
 
 * Fixed

@@ -34,13 +34,12 @@ import spdxExpressionParse from "spdx-expression-parse"
 import type { Compiler } from 'webpack'
 import { Compilation, sources, version as WEBPACK_VERSION } from 'webpack'
 
-import type { PackageDescription } from './_helpers'
-import {
-  getPackageConfig,
+import type { PackageDescription} from './_helpers';
+import {  getPackageConfig,
   iterableSome,
   loadJsonFile,
-  normalizePackageManifest
-} from './_helpers'
+  mkRelativePathReproducibleHash,
+  normalizePackageManifest} from './_helpers'
 import { Extractor } from './extractor'
 import { PackageUrlFactory } from './factories'
 
@@ -259,8 +258,7 @@ export class CycloneDxWebpackPlugin {
       }
     }
 
-    const rcPath = getPackageConfig(compilation.compiler.context)?.path
-      ?? compilation.compiler.context
+    const compilerContext = compilation.compiler.context
 
     compilation.hooks.afterOptimizeTree.tap(
       pluginName,
@@ -275,12 +273,21 @@ export class CycloneDxWebpackPlugin {
 
         thisLogger.log('generating components...')
         const components = extractor.generateComponents(modules, this.collectEvidence, thisLogger.getChildLogger('Extractor'))
-        const rcComponentDetected = components.get(rcPath)
-        if ( undefined !== rcComponentDetected ) {
+        if ( this.reproducibleResults ) {
+          components.forEach((component, pkgPath) => {
+            /* eslint-disable-next-line no-param-reassign -- ack */
+            component.bomRef.value = mkRelativePathReproducibleHash(compilerContext, pkgPath)
+          })
+        }
+
+        const rcPath = getPackageConfig(compilerContext)?.path
+        const rcComponentDetected = rcPath === undefined ? undefined : components.get(rcPath)
+        if (undefined !== rcComponentDetected ) {
           if (this.rootComponentAutodetect) {
             thisLogger.debug('set bom.metadata.component', rcComponentDetected)
             bom.metadata.component = rcComponentDetected
-            components.delete(rcPath)
+            /* eslint-disable-next-line @typescript-eslint/no-non-null-assertion -- ack */
+            components.delete(rcPath!)
           } else {
             const rcComponent = cdxComponentBuilder.makeComponent({
               name: this.rootComponentName,
@@ -295,13 +302,15 @@ export class CycloneDxWebpackPlugin {
               }
               thisLogger.debug('add to bom.metadata.component', rcComponentDetected)
               bom.metadata.component = rcComponent
-              components.delete(rcPath)
+              /* eslint-disable-next-line @typescript-eslint/no-non-null-assertion -- ack */
+              components.delete(rcPath!)
             }
           }
         }
+
         for (const component of components.values()) {
-            thisLogger.debug('add to bom.components', component)
-            bom.components.add(component)
+          thisLogger.debug('add to bom.components', component)
+          bom.components.add(component)
         }
         thisLogger.log('generated components.')
 
@@ -420,11 +429,12 @@ export class CycloneDxWebpackPlugin {
     }
 
     const rComponent = bom.metadata.component
-    if (rComponent !== undefined) {
+    if (undefined !== rComponent) {
       this.#addRootComponentExtRefs(rComponent, logger)
       /* eslint-disable-next-line  @typescript-eslint/no-unsafe-type-assertion -- ack */
       rComponent.type = this.rootComponentType as Component['type']
-      rComponent.bomRef.value ??= '__root_component__'
+      /* eslint-disable-next-line  @typescript-eslint/prefer-nullish-coalescing -- intended for empty strings */
+      rComponent.bomRef.value ||= '__root_component__'
     }
     /* eslint-enable no-param-reassign */
   }

@@ -17,7 +17,7 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { dirname } from 'node:path'
+import {dirname} from 'node:path'
 
 import type { Builders as FromNodePackageJsonBuilders } from '@cyclonedx/cyclonedx-library/Contrib/FromNodePackageJson'
 import type { Utils as LicenseUtils } from '@cyclonedx/cyclonedx-library/Contrib/License'
@@ -27,7 +27,7 @@ import { ComponentEvidence, LicenseRepository, NamedLicense } from '@cyclonedx/c
 import type normalizePackageData from "normalize-package-data";
 import type { Compilation, Module } from 'webpack'
 
-import type { PackageDescription } from './_helpers'
+import type { PackageDescription} from './_helpers'
 import {
   getPackageConfig,
   isNonNullable,
