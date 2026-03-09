@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 5.3.1 - 2026-03-09
+
 * Fixed
   * Reproducible BomRef values (via [#1511])
   * Properly generate PackageURLs for private packages (via [#1514])
