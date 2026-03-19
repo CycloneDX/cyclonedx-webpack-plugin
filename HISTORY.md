@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+* Docs
+  * Usage with Vue (via [#1519])
+
+[#1519]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1519
+
 ## 5.3.1 - 2026-03-09
 
 * Fixed
