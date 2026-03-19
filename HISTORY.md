@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
+## 5.3.2 - 2026-03-19
+
 * Docs
   * Usage with Vue (via [#1519])
 
