@@ -126,7 +126,7 @@ See an example here: [integration with React18/webpack5](https://github.com/Cycl
 ### Use with Vue
 
 _Vue_ uses _webpack_ under the hood. Therefore, it is possible to integrate this plugin.  
-See an example here: [integration with Vue2/webpack5](https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/_testbeds/webpack5-vue2).
+See an example here: [integration with Vue2/webpack5](https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/_testbeds/webpack5-vue2-cli-service).
 
 ## Internals
 
