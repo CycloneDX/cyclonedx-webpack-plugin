@@ -123,6 +123,11 @@ See an example here: [integration with Angular17/webpack5](https://github.com/Cy
 _React_ uses _webpack_ under the hood. Therefore, it is possible to integrate this plugin.  
 See an example here: [integration with React18/webpack5](https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/_testbeds/webpack5-react18).
 
+### Use with Vue
+
+_Vue_ uses _webpack_ under the hood. Therefore, it is possible to integrate this plugin.  
+See an example here: [integration with Vue2/webpack5](https://github.com/CycloneDX/cyclonedx-webpack-plugin/tree/master/tests/_testbeds/webpack5-vue2).
+
 ## Internals
 
 This _webpack_ plugin utilizes the [CycloneDX library][CycloneDX-javascript-library] to generate the actual data structures.
