@@ -46,7 +46,7 @@ jobs:
         run: npm run build-dev
       - name: artifact build result
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: dist
           path: dist
@@ -89,7 +89,7 @@ jobs:
           eslint-report: ${{ env.REPORTS_DIR }}/eslint.json
       - name: artifact eslint result
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         if: ${{ failure() }}
         with:
           name: ${{ env.STANDARD_REPORTS_ARTIFACT }}
@@ -182,7 +182,7 @@ jobs:
       - name: artifact npm errors
         if: ${{ failure() }}
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: 'npm-errors_${{ matrix.os }}_node${{ matrix.node-version }}'
           path: '/home/runner/.npm/_logs/*.log'
@@ -202,7 +202,7 @@ jobs:
       - name: artifact test reports
         if: ${{ ! cancelled() }}
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: '${{ env.TESTS_REPORTS_ARTIFACT }}_${{ matrix.os }}_node${{ matrix.node-version }}'
           path: ${{ env.REPORTS_DIR }}
