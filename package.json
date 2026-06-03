@@ -99,6 +99,9 @@
     "typescript": "5.9.3",
     "webpack": "^5"
   },
+  "overrides": {
+    "yargs": ">=17.7.2 && <19"
+  },
   "types": "./dist/plugin.d.ts",
   "main": "./dist/plugin.js",
   "exports": "./dist/plugin.js",
