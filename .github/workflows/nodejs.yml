@@ -136,14 +136,14 @@ jobs:
         node-version:
           # action based on https://github.com/actions/node-versions/releases
           # see also: https://nodejs.org/en/about/previous-releases
-          - "25"      # Current
+          - "26"      # Current
           - "24"      # active LTS
           - "22"
           - "20"
           - "20.18.0" # lowest supported
-        include:
-          - node-version: "25"
-            experimental: true
+        # include:
+        #  - node-version: "27"
+        #    experimental: true
     continue-on-error: ${{ matrix.experimental == true }}
     steps:
       - name: Checkout
@@ -155,11 +155,26 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           package-manager-cache: false
-      - name: enable yarn
-        if: "matrix.node-version != '14.0.0'"  # node14 has broken corepack
-        run: |-
+      - name: Setup Yarn
+        shell: bash
+        run: |
+          set -eux
+          npm uninstall -g yarn
           corepack enable yarn
+          case "$NODE_VERSION" in
+            '14' | '16')
+              corepack prepare --activate yarn@3.8.7
+              ;;
+            '18')
+              corepack prepare --activate yarn@4.0.0
+              ;;
+            *)
+              corepack install --global yarn@stable
+              ;;
+          esac
           yarn --version
+        env:
+          NODE_VERSION: ${{ matrix.node-version }}
         working-directory: ..  # prevent evaluation of package.json
       - name: install project
         shell: bash
