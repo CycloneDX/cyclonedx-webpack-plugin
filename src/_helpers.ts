@@ -135,7 +135,7 @@ export function normalizePackageManifest (data: any, warn?: normalizePackageData
   }
 }
 
-function sha256hex(data: BinaryLike): string  {
+function sha256hex(data: string): string  {
   return createHash('sha256').update(data).digest('hex')
 }
 
