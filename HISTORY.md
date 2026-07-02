@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file.
 <!-- unreleased changes go here -->
 
 * Fixed
-    * Fix tool detection in yarn envs (via [#1568])
+  * Fix tool detection in yarn envs (via [#1568])
 
 [#1568]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1568
 
