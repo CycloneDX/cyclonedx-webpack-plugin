@@ -34,11 +34,13 @@ import type { Compiler } from 'webpack'
 import { Compilation, sources, version as WEBPACK_VERSION } from 'webpack'
 
 import type { PackageDescription} from './_helpers';
-import {  getPackageConfig,
+import {
+  getPackageConfig,
   iterableSome,
   loadJsonFile,
   mkRelativePathReproducibleHash,
-  normalizePackageManifest} from './_helpers'
+  normalizePackageManifest
+} from './_helpers'
 import { Extractor } from './extractor'
 import { PackageUrlFactory } from './factories'
 
