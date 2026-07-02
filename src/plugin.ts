@@ -17,7 +17,6 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { existsSync } from 'node:fs'
 import { join as joinPath, resolve } from 'node:path'
 
 import { Utils as BomUtils } from '@cyclonedx/cyclonedx-library/Contrib/Bom'
@@ -442,33 +441,33 @@ export class CycloneDxWebpackPlugin {
   * #makeToolCs (builder: FromNodePackageJsonBuilders.ComponentBuilder, logger: WebpackLogger): Generator<Component> {
     const packageJsonPaths: Array<[string, ComponentType]> = [
       // this plugin is an optional enhancement, not a standalone application -- use as `Library`
-      [resolve(module.path, '..', 'package.json'), ComponentType.Library]
+      [resolve(module.path, '..', 'package.json'), ComponentType.Library],
     ]
 
     const libs = [
-      '@cyclonedx/cyclonedx-library'
-    ].map(s => s.split('/', 2))
-    const nodeModulePaths = require.resolve.paths('__some_none-native_package__') ?? []
-    /* eslint-disable no-labels -- technically needed */
-    libsLoop:
+      '@cyclonedx/cyclonedx-library',
+    ]
     for (const lib of libs) {
-      for (const nodeModulePath of nodeModulePaths) {
-        const packageJsonPath = resolve(nodeModulePath, ...lib, 'package.json')
-        if (existsSync(packageJsonPath)) {
-          packageJsonPaths.push([packageJsonPath, ComponentType.Library])
-          continue libsLoop
-        }
+      logger.debug('try resolving manifest path for tool/lib', lib)
+      try {
+        packageJsonPaths.push([
+          require.resolve(`${lib}/package.json`),
+          ComponentType.Library
+        ])
+      } catch (err) {
+        logger.debug('failed resolving manifest for', lib, 'with error:', err)
       }
     }
-    /* eslint-enable no-labels */
 
     for (const [packageJsonPath, cType] of packageJsonPaths) {
-      logger.log('try to build new Tool from PkgPath', packageJsonPath)
+      logger.info('try building new Tool from PkgPath', packageJsonPath)
       /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- expected */
       const packageJson: PackageDescription['packageJson'] = loadJsonFile(packageJsonPath) ?? {}
       normalizePackageManifest(
         packageJson,
-        w => { logger.debug('normalizePackageJson from PkgPath', packageJsonPath, 'caused:', w) }
+        w => {
+          logger.debug('normalizePackageJson from PkgPath', packageJsonPath, 'caused:', w)
+        }
       )
       const tool = builder.makeComponent(packageJson, cType)
       if (tool !== undefined) {
