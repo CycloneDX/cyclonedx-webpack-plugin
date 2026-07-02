@@ -22,7 +22,7 @@ permissions: {}
 
 env:
   REPORTS_DIR: CI_reports
-  NODE_ACTIVE_LTS: "22" # https://nodejs.org/en/about/releases/
+  NODE_ACTIVE_LTS: "24" # https://nodejs.org/en/about/releases/
   TESTS_REPORTS_ARTIFACT: tests-reports
 
 jobs:
