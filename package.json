@@ -92,7 +92,7 @@
     "@types/node": "ts5.8",
     "@types/normalize-package-data": "^2.4.4",
     "@types/spdx-expression-parse": "^3.0.5",
-    "c8": "^11",
+    "c8": "^12",
     "jest": "30.3.0",
     "jest-junit": "16.0.0",
     "npm-run-all2": "^8.0.1",
