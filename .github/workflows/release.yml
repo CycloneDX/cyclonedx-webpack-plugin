@@ -82,8 +82,18 @@ jobs:
           NPMV_NEWVERSION: ${{ github.event.inputs.newversion }}
           NPMV_MESSAGE: ${{ github.event.inputs.commitMessage }}
           NPMV_PREID: ${{ github.event.inputs.preid }}
-      - name: git push back
-        run: git push --follow-tags
+      - name: Push commit + annotated tags
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          set +x
+          echo "::add-mask::$GITHUB_TOKEN"
+          AUTH_B64="$(printf "x-access-token:%s" "$GITHUB_TOKEN" | base64 | tr -d '\n')"
+          echo "::add-mask::$AUTH_B64"
+          git -c http.https://github.com/.extraheader="AUTHORIZATION: basic $AUTH_B64" \
+            push --follow-tags "https://github.com/${GITHUB_REPOSITORY}.git" "HEAD:${GITHUB_REF_NAME}"
 
   publish-NPMJS:
     needs:
@@ -163,7 +173,7 @@ jobs:
           path: ${{ env.ASSETS_DIR }}
       - name: Create Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TAG_NAME: ${{ needs.bump.outputs.version }}
           RELEASE_NAME: ${{ needs.bump.outputs.version_plain }}
           PRERELEASE: ${{ github.event.inputs.prerelease }}
