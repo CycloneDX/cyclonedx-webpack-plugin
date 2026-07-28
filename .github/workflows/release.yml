@@ -51,7 +51,9 @@ jobs:
     steps:
       - name: Checkout code
         # see https://github.com/actions/checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
       - name: Configure Git
         # needed for push back of changes
         run: |
@@ -60,7 +62,7 @@ jobs:
           git config --local user.name "${GITHUB_ACTOR}"
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           package-manager-cache: false
@@ -80,8 +82,18 @@ jobs:
           NPMV_NEWVERSION: ${{ github.event.inputs.newversion }}
           NPMV_MESSAGE: ${{ github.event.inputs.commitMessage }}
           NPMV_PREID: ${{ github.event.inputs.preid }}
-      - name: git push back
-        run: git push --follow-tags
+      - name: Push commit + annotated tags
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          set +x
+          echo "::add-mask::$GITHUB_TOKEN"
+          AUTH_B64="$(printf "x-access-token:%s" "$GITHUB_TOKEN" | base64 | tr -d '\n')"
+          echo "::add-mask::$AUTH_B64"
+          git -c http.https://github.com/.extraheader="AUTHORIZATION: basic $AUTH_B64" \
+            push --follow-tags "https://github.com/${GITHUB_REPOSITORY}.git" "HEAD:${GITHUB_REF_NAME}"
 
   publish-NPMJS:
     needs:
@@ -96,12 +108,13 @@ jobs:
     steps:
       - name: Checkout code
         # see https://github.com/actions/checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           ref: ${{ needs.bump.outputs.version }}
+          persist-credentials: false
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           package-manager-cache: false
@@ -134,7 +147,7 @@ jobs:
           npm pack --pack-destination "$PACKED_DIR"
       - name: artifact release result
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
         with:
           name: ${{ env.PACKED_ARTIFACT }}
           path: ${{ env.PACKED_DIR }}/
@@ -154,19 +167,29 @@ jobs:
     steps:
       - name: fetch release result
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
         with:
           name: ${{ env.PACKED_ARTIFACT }}
           path: ${{ env.ASSETS_DIR }}
       - name: Create Release
-        id: release
-        # see https://github.com/softprops/action-gh-release
-        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name:   ${{ needs.bump.outputs.version }}
-          name:       ${{ needs.bump.outputs.version_plain }}
-          prerelease: ${{ github.event.inputs.prerelease }}
-          files:      '${{ env.ASSETS_DIR }}/*'
-          target_commitish: ${{ github.head_ref || github.ref_name }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ needs.bump.outputs.version }}
+          TITLE: ${{ needs.bump.outputs.version_plain }}
+          TARGET: ${{ github.head_ref || github.ref_name }}
+          PRERELEASE: ${{ github.event.inputs.prerelease }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          args=(
+            "$TAG"
+            "${ASSETS_DIR}"/*
+            --repo "${GITHUB_REPOSITORY}"
+            --title "$TITLE"
+            --target "$TARGET"
+            --verify-tag
+          )
+          if [ "$PRERELEASE" = "true" ]; then
+            args+=(--prerelease)
+          fi
+          gh release create "${args[@]}"
