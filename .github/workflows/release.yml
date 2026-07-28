@@ -93,7 +93,7 @@ jobs:
           AUTH_B64="$(printf "x-access-token:%s" "$GITHUB_TOKEN" | base64 | tr -d '\n')"
           echo "::add-mask::$AUTH_B64"
           git -c http.https://github.com/.extraheader="AUTHORIZATION: basic $AUTH_B64" \
-            push --follow-tags "https://github.com/${GITHUB_REPOSITORY}.git" "HEAD:${GITHUB_REF_NAME}"
+            push --follow-tags "https://github.com/${GITHUB_REPOSITORY}.git"
 
   publish-NPMJS:
     needs:
