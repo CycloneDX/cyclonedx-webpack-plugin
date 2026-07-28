@@ -93,8 +93,8 @@
     "@types/normalize-package-data": "^2.4.4",
     "@types/spdx-expression-parse": "^3.0.5",
     "c8": "^11",
-    "jest": "30.3.0",
-    "jest-junit": "16.0.0",
+    "jest": "30.4.2",
+    "jest-junit": "17.0.0",
     "npm-run-all2": "^8.0.1",
     "typescript": "5.9.3",
     "webpack": "^5"
