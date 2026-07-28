@@ -186,7 +186,7 @@ jobs:
         working-directory: ..  # prevent evaluation of package.json
       - name: install project
         shell: bash
-        run: |  # zizmor: ignore[adhoc-packages]
+        run: |  # zizmor: ignore[adhoc-packages] -- packages are already locked, but we dont want to alter manifest
           set -ex
           dev_requirements='c8 jest jest-junit imurmurhash fast-glob'
           npm i --ignore-scripts --omit=peer --omit=dev --only=prod --production --loglevel=silly
