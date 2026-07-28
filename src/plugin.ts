@@ -277,7 +277,7 @@ export class CycloneDxWebpackPlugin {
         if ( this.reproducibleResults ) {
           components.forEach((component, pkgPath) => {
             /* eslint-disable-next-line no-param-reassign -- ack */
-            component.bomRef.value = mkRelativePathReproducibleHash(compilerContext, pkgPath)
+            component.bomRef.value += `#${mkRelativePathReproducibleHash(compilerContext, pkgPath)}`
           })
         }
 
