@@ -51,7 +51,7 @@ jobs:
     steps:
       - name: Checkout code
         # see https://github.com/actions/checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           persist-credentials: false
       - name: Configure Git
@@ -62,7 +62,7 @@ jobs:
           git config --local user.name "${GITHUB_ACTOR}"
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           package-manager-cache: false
@@ -98,13 +98,13 @@ jobs:
     steps:
       - name: Checkout code
         # see https://github.com/actions/checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           ref: ${{ needs.bump.outputs.version }}
           persist-credentials: false
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
           package-manager-cache: false
@@ -137,7 +137,7 @@ jobs:
           npm pack --pack-destination "$PACKED_DIR"
       - name: artifact release result
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
         with:
           name: ${{ env.PACKED_ARTIFACT }}
           path: ${{ env.PACKED_DIR }}/
@@ -157,7 +157,7 @@ jobs:
     steps:
       - name: fetch release result
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
         with:
           name: ${{ env.PACKED_ARTIFACT }}
           path: ${{ env.ASSETS_DIR }}
