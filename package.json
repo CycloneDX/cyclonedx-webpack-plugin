@@ -1,6 +1,6 @@
 {
   "name": "@cyclonedx/webpack-plugin",
-  "version": "5.3.2",
+  "version": "5.3.3-rc.4",
   "description": "Creates CycloneDX Software Bill of Materials (SBoM) from webpack projects",
   "license": "Apache-2.0",
   "copyright": "Copyright OWASP Foundation",
@@ -125,5 +125,7 @@
     "outputDirectory": "reports/jest",
     "outputName": "tests.junit.xml"
   },
-  "packageManager": "yarn@4.17.0+sha512.c2957de2f9025ab14d63b24d0d8be1f1655810e22c341042c27f7ecd017b180ec12db73d69ac366d71b304ef9f069349ce462de96f04f8f1da317f4f762c95ae"
+  "allowScripts": {
+    "libxmljs2@0.37.0": true
+  }
 }

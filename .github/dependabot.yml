@@ -9,6 +9,8 @@ updates:
     schedule:
       interval: 'weekly'
       day: 'saturday'
+    cooldown:
+      default-days: 7
     allow:
       - dependency-type: 'all'
     versioning-strategy: 'auto'
@@ -107,6 +109,8 @@ updates:
     schedule:
       interval: 'weekly'
       day: 'saturday'
+    cooldown:
+      default-days: 7
     labels: [ 'dependencies' ]
     commit-message:
       prefix: 'chore'   ## prefix maximum string length of 15
