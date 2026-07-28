@@ -159,14 +159,24 @@ jobs:
           name: ${{ env.PACKED_ARTIFACT }}
           path: ${{ env.ASSETS_DIR }}
       - name: Create Release
-        id: release
-        # see https://github.com/softprops/action-gh-release
-        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name:   ${{ needs.bump.outputs.version }}
-          name:       ${{ needs.bump.outputs.version_plain }}
-          prerelease: ${{ github.event.inputs.prerelease }}
-          files:      '${{ env.ASSETS_DIR }}/*'
-          target_commitish: ${{ github.head_ref || github.ref_name }}
+          TAG_NAME: ${{ needs.bump.outputs.version }}
+          RELEASE_NAME: ${{ needs.bump.outputs.version_plain }}
+          PRERELEASE: ${{ github.event.inputs.prerelease }}
+          TARGET_COMMITISH: ${{ github.head_ref || github.ref_name }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # Optional flag
+          prerelease_flag=""
+          if [[ "${PRERELEASE}" == "true" ]]; then
+            prerelease_flag="--prerelease"
+          fi
+
+          gh release create "${TAG_NAME}" \
+            "${ASSETS_DIR}"/* \
+            --title "${RELEASE_NAME}" \
+            --target "${TARGET_COMMITISH}" \
+            ${prerelease_flag}
