@@ -10,8 +10,10 @@ All notable changes to this project will be documented in this file.
 
 * Fixed
   * Fix tool detection in yarn envs (via [#1568])
+  * Reproducible BomRef values (via [#1583])
 
 [#1568]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1568
+[#1583]: https://github.com/CycloneDX/cyclonedx-webpack-plugin/pull/1583
 
 ## 5.3.2 - 2026-03-19
 
