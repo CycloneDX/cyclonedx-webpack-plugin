@@ -3,9 +3,9 @@
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
   "version": 1,
-  "serialNumber": "urn:uuid:ee85ecbb-4a14-4bde-ae64-8d565f67c2b0",
+  "serialNumber": "urn:uuid:489a1666-ed27-4c15-8ed4-e1d62788c8b3",
   "metadata": {
-    "timestamp": "2025-11-13T08:40:24.402Z",
+    "timestamp": "2026-08-11T09:35:49.659Z",
     "lifecycles": [
       {
         "phase": "build"
@@ -16,13 +16,13 @@
         {
           "type": "application",
           "name": "webpack",
-          "version": "5.102.1"
+          "version": "5.109.1"
         },
         {
           "type": "library",
           "name": "webpack-plugin",
           "group": "@cyclonedx",
-          "version": "5.2.3",
+          "version": "5.3.3",
           "author": "Jan Kowalleck",
           "description": "Creates CycloneDX Software Bill of Materials (SBoM) from webpack projects",
           "licenses": [
@@ -54,7 +54,7 @@
           "type": "library",
           "name": "cyclonedx-library",
           "group": "@cyclonedx",
-          "version": "9.2.0",
+          "version": "10.1.0",
           "author": "Jan Kowalleck",
           "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
           "licenses": [
@@ -88,7 +88,7 @@
       "type": "application",
       "name": "simple",
       "version": "0.1.0-dev",
-      "bom-ref": "pkg:npm/simple@0.1.0-dev",
+      "bom-ref": "simple@0.1.0-dev",
       "description": "demo",
       "purl": "pkg:npm/simple@0.1.0-dev",
       "evidence": {}
@@ -98,8 +98,8 @@
     {
       "type": "library",
       "name": "bootstrap",
-      "version": "5.3.0",
-      "bom-ref": "pkg:npm/bootstrap@5.3.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ftwbs%2Fbootstrap.git",
+      "version": "5.3.8",
+      "bom-ref": "bootstrap@5.3.8",
       "author": "The Bootstrap Authors",
       "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
       "licenses": [
@@ -110,7 +110,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/bootstrap@5.3.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ftwbs%2Fbootstrap.git",
+      "purl": "pkg:npm/bootstrap@5.3.8?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ftwbs%2Fbootstrap.git",
       "externalReferences": [
         {
           "url": "git+https://github.com/twbs/bootstrap.git",
@@ -134,7 +134,7 @@
             "license": {
               "name": "file: LICENSE",
               "text": {
-                "content": "VGhlIE1JVCBMaWNlbnNlIChNSVQpCgpDb3B5cmlnaHQgKGMpIDIwMTEtMjAyMyBUaGUgQm9vdHN0cmFwIEF1dGhvcnMKClBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHkKb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgIlNvZnR3YXJlIiksIHRvIGRlYWwKaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0cwp0byB1c2UsIGNvcHksIG1vZGlmeSwgbWVyZ2UsIHB1Ymxpc2gsIGRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsCmNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpcwpmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOgoKVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUgaW5jbHVkZWQgaW4KYWxsIGNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuCgpUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgIkFTIElTIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUyBPUgpJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSwKRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFCkFVVEhPUlMgT1IgQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVIKTElBQklMSVRZLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSwKT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgU09GVFdBUkUgT1IgVEhFIFVTRSBPUiBPVEhFUiBERUFMSU5HUyBJTgpUSEUgU09GVFdBUkUuCg==",
+                "content": "VGhlIE1JVCBMaWNlbnNlIChNSVQpCgpDb3B5cmlnaHQgKGMpIDIwMTEtMjAyNSBUaGUgQm9vdHN0cmFwIEF1dGhvcnMKClBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHkKb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgIlNvZnR3YXJlIiksIHRvIGRlYWwKaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0cwp0byB1c2UsIGNvcHksIG1vZGlmeSwgbWVyZ2UsIHB1Ymxpc2gsIGRpc3RyaWJ1dGUsIHN1YmxpY2Vuc2UsIGFuZC9vciBzZWxsCmNvcGllcyBvZiB0aGUgU29mdHdhcmUsIGFuZCB0byBwZXJtaXQgcGVyc29ucyB0byB3aG9tIHRoZSBTb2Z0d2FyZSBpcwpmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOgoKVGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUgaW5jbHVkZWQgaW4KYWxsIGNvcGllcyBvciBzdWJzdGFudGlhbCBwb3J0aW9ucyBvZiB0aGUgU29mdHdhcmUuCgpUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgIkFTIElTIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUyBPUgpJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSwKRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVC4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFCkFVVEhPUlMgT1IgQ09QWVJJR0hUIEhPTERFUlMgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVIKTElBQklMSVRZLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSwKT1VUIE9GIE9SIElOIENPTk5FQ1RJT04gV0lUSCBUSEUgU09GVFdBUkUgT1IgVEhFIFVTRSBPUiBPVEhFUiBERUFMSU5HUyBJTgpUSEUgU09GVFdBUkUuCg==",
                 "contentType": "text/plain",
                 "encoding": "base64"
               }
@@ -148,7 +148,7 @@
       "name": "core",
       "group": "@popperjs",
       "version": "2.11.8",
-      "bom-ref": "pkg:npm/%40popperjs/core@2.11.8?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fpopperjs%2Fpopper-core.git",
+      "bom-ref": "@popperjs/core@2.11.8",
       "author": "Federico Zivolo",
       "description": "Tooltip and Popover Positioning Engine",
       "licenses": [
@@ -195,19 +195,19 @@
   ],
   "dependencies": [
     {
-      "ref": "pkg:npm/simple@0.1.0-dev",
+      "ref": "simple@0.1.0-dev",
       "dependsOn": [
-        "pkg:npm/bootstrap@5.3.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ftwbs%2Fbootstrap.git"
+        "bootstrap@5.3.8"
       ]
     },
     {
-      "ref": "pkg:npm/bootstrap@5.3.0?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ftwbs%2Fbootstrap.git",
+      "ref": "bootstrap@5.3.8",
       "dependsOn": [
-        "pkg:npm/%40popperjs/core@2.11.8?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fpopperjs%2Fpopper-core.git"
+        "@popperjs/core@2.11.8"
       ]
     },
     {
-      "ref": "pkg:npm/%40popperjs/core@2.11.8?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Fpopperjs%2Fpopper-core.git"
+      "ref": "@popperjs/core@2.11.8"
     }
   ]
 }
