@@ -124,6 +124,8 @@ jobs:
         run: npm run test:dependencies
 
   build:
+    needs:
+      - "bump"
     name: build
     runs-on: ubuntu-latest
     timeout-minutes: 30
