@@ -35,6 +35,8 @@ env:
   REPORTS_DIR: CI_reports
   PACKED_DIR: CI_packed
   PACKED_ARTIFACT: packed
+  BUILD_DIR: dist
+  BUILD_ARTIFACT: build
   NODE_ACTIVE_LTS: "24"  # https://nodejs.org/en/about/releases/
 
 jobs:
@@ -94,17 +96,68 @@ jobs:
           echo "::add-mask::$AUTH_B64"
           git -c http.https://github.com/.extraheader="AUTHORIZATION: basic $AUTH_B64" \
             push --follow-tags "https://github.com/${GITHUB_REPOSITORY}.git" "HEAD:${GITHUB_REF_NAME}"
-
-  publish-NPMJS:
-    needs:
-      - "bump"
-    name: publish NPMJS
+  dep-test:
+    name: Dependency test
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    permissions:
-      id-token: write  # Enables provenance signing via OIDC
-    env:
-      NPMJS_RELEASE_TAG: ${{ github.event.inputs.prerelease == 'true' && 'unstable-prerelease' || 'latest' }}
+    steps:
+      - name: Checkout code
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ needs.bump.outputs.version }}
+          persist-credentials: false
+      - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+          package-manager-cache: false
+      - name: install tools
+        run: >
+          npm run -- 
+          dev-setup:tools:test-dependencies 
+          --ignore-scripts 
+          --loglevel=silly
+      - name: test deps
+        run: npm run test:dependencies
+  build:
+    needs:
+      - "bump"
+    name: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout code
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ needs.bump.outputs.version }}
+          persist-credentials: false
+      - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+          package-manager-cache: false
+      - name: setup project
+        run: |
+          npm install --ignore-scripts --include=optional --loglevel=silly
+      - name: build
+        run: npm run build
+      - name: artifact build result
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: ${{ env.BUILD_ARTIFACT }}
+          path: ${{ env.BUILD_DIR }}/
+          if-no-files-found: error
+  quick-test:
+    needs:
+      - "build"
+    name: Quick Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: Checkout code
         # see https://github.com/actions/checkout
@@ -125,16 +178,48 @@ jobs:
       - name: setup project
         run: |
           npm install --ignore-scripts --include=optional --loglevel=silly
-      - name: install tools
-        run: |
-          echo "::group::install code-style deps"
-          npm run -- dev-setup:tools:code-style --ignore-scripts --loglevel=silly
-          echo "::endgroup::"
-          echo "::group::install test-dependencies deps"
-          npm run -- dev-setup:tools:test-dependencies --ignore-scripts --loglevel=silly
-          echo "::endgroup::"
-      # no explicit npm build. if a build is required, it should be configured as prepublish/prepublishOnly script of npm.
-      # no explicit npm build. if a build is required, it should be configured as prepublish/prepublishOnly script of npm.
+      - name: fetch release result
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: ${{ env.BUILD_ARTIFACT }}
+          path: ${{ env.BUILD_DIR }}
+      - name: setup tests
+        run: npm run setup-tests
+      - name: run tests
+        run: npm run test:jest
+  publish-NPMJS:
+    needs:
+      - "bump"
+      - "dep-test"
+      - "build"
+      - "quick-test"
+    name: publish NPMJS
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      id-token: write  # Enables provenance signing via OIDC
+    env:
+      NPMJS_RELEASE_TAG: ${{ github.event.inputs.prerelease == 'true' && 'unstable-prerelease' || 'latest' }}
+    steps:
+      - name: Checkout code
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ needs.bump.outputs.version }}
+          persist-credentials: false
+      - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: ${{ env.NODE_ACTIVE_LTS }}
+          package-manager-cache: false
+      - name: fetch release result
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: ${{ env.BUILD_ARTIFACT }}
+          path: ${{ env.BUILD_DIR }}
       - name: publish to NPMJS as "${{ env.NPMJS_RELEASE_TAG }}"
         run: >
           npm publish
@@ -152,7 +237,6 @@ jobs:
           name: ${{ env.PACKED_ARTIFACT }}
           path: ${{ env.PACKED_DIR }}/
           if-no-files-found: error
-
   release-GH:
     needs:
       - "bump"

@@ -1,6 +1,6 @@
 {
   "name": "@cyclonedx/webpack-plugin",
-  "version": "5.3.3-rc.4",
+  "version": "5.3.3-rc.7",
   "description": "Creates CycloneDX Software Bill of Materials (SBoM) from webpack projects",
   "license": "Apache-2.0",
   "copyright": "Copyright OWASP Foundation",
@@ -108,8 +108,7 @@
     "dev-setup:tools:code-style": "npm --prefix tools/code-style install",
     "dev-setup:tools:test-dependencies": "npm --prefix tools/test-dependencies install",
     "prepublish": "npm run build",
-    "prepublishOnly": "run-s -lc build setup-tests test",
-    "prebuild": "node -r fs -e 'fs.rmSync(\"dist\",{recursive:true,force:true})'",
+    "prebuild": "node -r fs -e \"fs.rmSync('dist',{recursive:true,force:true})\"",
     "build": "tsc -b ./tsconfig.json",
     "build-dev": "npm run -- build --sourceMap",
     "setup-tests": "node tests/setup.js",
