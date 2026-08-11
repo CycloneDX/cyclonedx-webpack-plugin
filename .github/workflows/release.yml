@@ -36,7 +36,7 @@ env:
   PACKED_DIR: CI_packed
   PACKED_ARTIFACT: packed
   BUILD_DIR: dist
-  build_ARTIFACT: build
+  BUILD_ARTIFACT: build
   NODE_ACTIVE_LTS: "24"  # https://nodejs.org/en/about/releases/
 
 jobs:
