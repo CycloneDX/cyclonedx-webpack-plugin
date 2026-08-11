@@ -96,7 +96,6 @@ jobs:
           echo "::add-mask::$AUTH_B64"
           git -c http.https://github.com/.extraheader="AUTHORIZATION: basic $AUTH_B64" \
             push --follow-tags "https://github.com/${GITHUB_REPOSITORY}.git" "HEAD:${GITHUB_REF_NAME}"
-
   dep-test:
     name: Dependency test
     runs-on: ubuntu-latest
@@ -122,7 +121,6 @@ jobs:
           --loglevel=silly
       - name: test deps
         run: npm run test:dependencies
-
   build:
     needs:
       - "bump"
