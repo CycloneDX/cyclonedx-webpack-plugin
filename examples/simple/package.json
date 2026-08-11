@@ -15,7 +15,7 @@
     "webpack-cli": "^5"
   },
   "scripts": {
-    "prebuild": "node -r fs -e 'fs.rmSync(\"dist\",{recursive:true,force:true})'",
+    "prebuild": "node -r fs -e \"fs.rmSync('dist',{recursive:true,force:true})\"",
     "build": "webpack build"
   }
 }
