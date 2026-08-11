@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 
 <!-- unreleased changes go here -->
 
-## 5.3.3 - 2026-10-11
+## 5.3.3 - 2026-08-11
 
 * Fixed
   * Fix tool detection in yarn envs (via [#1568])
