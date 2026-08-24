@@ -95,7 +95,7 @@
     "c8": "^11",
     "jest": "30.4.2",
     "jest-junit": "17.0.0",
-    "npm-run-all2": "^8.0.1",
+    "npm-run-all2": "^9.0.3",
     "typescript": "5.9.3",
     "webpack": "^5"
   },
